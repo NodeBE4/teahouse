@@ -9,6 +9,8 @@ let feedxUrls = {
   '想做教育家的Klaus': 'https://www.youtube.com/feeds/videos.xml?playlist_id=UUZ4NwvuGYgFyjnRRJekdnHw',
   '書齋夜話': 'https://www.youtube.com/feeds/videos.xml?playlist_id=UUhRE0pMeij_O5FqWrSKBF-Q',
   '温相说党史': 'https://www.youtube.com/feeds/videos.xml?playlist_id=UUGtvPQxpuRrXeryEWxQkAkA',
+  '羅文好公民':'https://www.youtube.com/feeds/videos.xml?playlist_id=UUr25xDGzTxeic8W_6mIZbug',
+  '柴Sean你說':'https://www.youtube.com/feeds/videos.xml?playlist_id=UUV6AJqWMOIYnfbsK8niM55Q',
 }
 
 async function fetchArticles(site) {
