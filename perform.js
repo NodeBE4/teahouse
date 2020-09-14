@@ -11,6 +11,7 @@ let feedxUrls = {
   '温相说党史': 'https://www.youtube.com/feeds/videos.xml?playlist_id=UUGtvPQxpuRrXeryEWxQkAkA',
   '羅文好公民':'https://www.youtube.com/feeds/videos.xml?playlist_id=UUr25xDGzTxeic8W_6mIZbug',
   '柴Sean你說':'https://www.youtube.com/feeds/videos.xml?playlist_id=UUV6AJqWMOIYnfbsK8niM55Q',
+  '阳光卫视': 'http://www.youtube.com/feeds/videos.xml?playlist_id=PL1Flk3ukUUwYdm_N5gJj4b6t5hdQzbnNd',
 }
 
 async function fetchArticles(site) {
