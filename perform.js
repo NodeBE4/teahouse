@@ -12,6 +12,7 @@ let feedxUrls = {
   '羅文好公民':'https://www.youtube.com/feeds/videos.xml?playlist_id=UUr25xDGzTxeic8W_6mIZbug',
   '柴Sean你說':'https://www.youtube.com/feeds/videos.xml?playlist_id=UUV6AJqWMOIYnfbsK8niM55Q',
   '阳光卫视': 'http://www.youtube.com/feeds/videos.xml?playlist_id=PL1Flk3ukUUwYdm_N5gJj4b6t5hdQzbnNd',
+  '方舟子': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUgTxdmY7L0I5MKWrrf0Ejtg',
 }
 
 async function fetchArticles(site) {
