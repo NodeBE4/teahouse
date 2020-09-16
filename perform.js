@@ -14,6 +14,7 @@ let feedxUrls = {
   '阳光卫视': 'http://www.youtube.com/feeds/videos.xml?playlist_id=PL1Flk3ukUUwYdm_N5gJj4b6t5hdQzbnNd',
   '方舟子': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUgTxdmY7L0I5MKWrrf0Ejtg',
   '崔永元': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUAq_xQV8pJ2Q_KOszzaYPBg',
+  '李永乐': 'http://www.youtube.com/feeds/videos.xml?playlist_id=UUSs4A6HYKmHA2MG_0z-F0xw',
 }
 
 async function fetchArticles(site) {
