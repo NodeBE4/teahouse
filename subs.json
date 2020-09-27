@@ -50,5 +50,13 @@
     {
         "site": "李永乐",
         "url": "http://www.youtube.com/feeds/videos.xml?playlist_id=UUSs4A6HYKmHA2MG_0z-F0xw"
+    },
+    {
+        "site": "Matters",
+        "url": "https://rsshub.app/matters/author/mafang"
+    },
+    {
+        "site": "Matters",
+        "url": "https://rsshub.app/matters/author/tianguowawa"
     }
 ]
