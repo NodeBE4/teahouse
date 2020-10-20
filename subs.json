@@ -62,5 +62,9 @@
     {
         "site": "老虎庙",
         "url": "http://www.youtube.com/feeds/videos.xml?playlist_id=UUQJUrIqTE6FgzQAglGmXKXg"
-    }
+    },
+    {
+        "site": "Matters",
+        "url": "https://rsshub.app/matters/author/KMnese"
+    }    
 ]
