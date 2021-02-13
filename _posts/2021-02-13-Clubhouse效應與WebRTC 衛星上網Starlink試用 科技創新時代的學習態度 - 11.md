@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Clubhouse效應與WebRTC 衛星上網Starlink試用 科技創新時代的學習態度 - 11/02/21 「技安的未來世界」"
+date: 2021-02-13T09:00:14.000Z
+author: 城寨 Singjai
+from: https://www.youtube.com/watch?v=ActHcibT8Vo
+tags: [ 城寨 ]
+categories: [ 城寨 ]
+---
+<!--1613206814000-->
+[Clubhouse效應與WebRTC 衛星上網Starlink試用 科技創新時代的學習態度 - 11/02/21 「技安的未來世界」](https://www.youtube.com/watch?v=ActHcibT8Vo)
+------
+
+<div>
+「技安的未來世界」主持：劉細良嘉賓：Bonnie題目：《Clubhouse效應與WebRTC 衛星上網Starlink試用 科技創新時代的學習態度》逢星期六 5:00 ~ 6:00 pm（逢星期四 8:00 ~ 9:00 pm Patreon首播）支持城寨Patreonhttps://www.patreon.com/kowloonsingjai
+</div>
