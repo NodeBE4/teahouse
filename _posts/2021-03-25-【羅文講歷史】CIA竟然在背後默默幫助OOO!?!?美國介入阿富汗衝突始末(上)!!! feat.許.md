@@ -1,0 +1,16 @@
+---
+layout: post
+title: "【羅文講歷史】CIA竟然在背後默默幫助OOO!?!?美國介入阿富汗衝突始末(上)!!! feat.許劍虹"
+date: 2021-03-25T10:00:15.000Z
+author: 羅文好公民
+from: https://www.youtube.com/watch?v=2s4jaZVf6oM
+tags: [ 羅文好公民 ]
+categories: [ 羅文好公民 ]
+---
+<!--1616666415000-->
+[【羅文講歷史】CIA竟然在背後默默幫助OOO!?!?美國介入阿富汗衝突始末(上)!!! feat.許劍虹](https://www.youtube.com/watch?v=2s4jaZVf6oM)
+------
+
+<div>
+#阿富汗 #美國 #國際下集連結:https://youtu.be/1jXvQLswIeQ想要成為羅文好公民頻道的會員並獲得相關獎勵嗎？想要觀看會員專屬影片嗎？請點以下連結查看詳細說明喔！https://www.youtube.com/channel/UCr25xDGzTxeic8W_6mIZbug/join►羅文快速記憶系列影片：https://reurl.cc/jld8M►羅文快樂學習系列影片：https://reurl.cc/ZXnja►羅文大學學什麼系列影片：https://reurl.cc/ZeZXW►羅文三分鐘學會系列影片：https://reurl.cc/qkDgn►羅文三分鐘開箱系列影片：https://reurl.cc/WD43y►羅文三分鐘開好書系列影片：https://reurl.cc/zAyea►羅文好公民FB(趕快來按讚)：https://reurl.cc/1eQom►羅文IG(請追蹤)：https://reurl.cc/a1l93
+</div>
