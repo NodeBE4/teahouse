@@ -80,6 +80,10 @@
         "url": "http://www.youtube.com/feeds/videos.xml?playlist_id=UUtp4XB_Ns3_KpVH_IfkeMHQ"
     },
     {
+        "site": "好青年荼毒室",
+        "url": "http://www.youtube.com/feeds/videos.xml?playlist_id=UUljo-rxFnc2gl9l8NhhJ66Q"
+    },
+    {
         "site": "馬世芳",
         "url": "https://medium.com/feed/@mafang"
     },
@@ -174,6 +178,10 @@
     {
         "site": "Matters",
         "url": "https://rsshubapp-nodebe4.vercel.app/matters/author/reprily"
+    },
+    {
+        "site": "Matters",
+        "url": "https://rsshubapp-nodebe4.vercel.app/matters/author/Arashi_On"
     },
     {
         "site": "Matters",
