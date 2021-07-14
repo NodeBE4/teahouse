@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>我為何將告別Alian電台：兼為所有被欺負的「乙方」請命 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+我為何將告別Alian電台：兼為所有被欺負的「乙方」請命
+——
+" />
+    <meta property="og:description" content="
+我為何將告別Alian電台：兼為所有被欺負的「乙方」請命
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="我為何將告別Alian電台：兼為所有被欺負的「乙方」請命" />
+    <meta property="twitter:title" content="我為何將告別Alian電台：兼為所有被欺負的「乙方」請命" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5737)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmedium.com%2F%25E6%2588%2591%25E6%2598%25AF%25E9%25A6%25AC%25E4%25B8%2596%25E8%258A%25B3%2F%25E6%2588%2591%25E7%2582%25BA%25E4%25BD%2595%25E5%25B0%2587%25E5%2591%258A%25E5%2588%25A5alian%25E9%259B%25BB%25E5%258F%25B0-%25E5%2585%25BC%25E7%2582%25BA%25E6%2589%2580%25E6%259C%2589%25E8%25A2%25AB%25E6%25AC%25BA%25E8%25B2%25A0%25E7%259A%2584-%25E4%25B9%2599%25E6%2596%25B9-%25E8%25AB%258B%25E5%2591%25BD-6eb42c0ef13a%3Fsource%3Drss-b26efb5c6c3e------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://medium.com/%E6%88%91%E6%98%AF%E9%A6%AC%E4%B8%96%E8%8A%B3/%E6%88%91%E7%82%BA%E4%BD%95%E5%B0%87%E5%91%8A%E5%88%A5alian%E9%9B%BB%E5%8F%B0-%E5%85%BC%E7%82%BA%E6%89%80%E6%9C%89%E8%A2%AB%E6%AC%BA%E8%B2%A0%E7%9A%84-%E4%B9%99%E6%96%B9-%E8%AB%8B%E5%91%BD-6eb42c0ef13a?source=rss-b26efb5c6c3e------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://medium.com/%E6%88%91%E6%98%AF%E9%A6%AC%E4%B8%96%E8%8A%B3/%E6%88%91%E7%82%BA%E4%BD%95%E5%B0%87%E5%91%8A%E5%88%A5alian%E9%9B%BB%E5%8F%B0-%E5%85%BC%E7%82%BA%E6%89%80%E6%9C%89%E8%A2%AB%E6%AC%BA%E8%B2%A0%E7%9A%84-%E4%B9%99%E6%96%B9-%E8%AB%8B%E5%91%BD-6eb42c0ef13a?source=rss-b26efb5c6c3e------2&text=我為何將告別Alian電台：兼為所有被欺負的「乙方」請命&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://medium.com/%E6%88%91%E6%98%AF%E9%A6%AC%E4%B8%96%E8%8A%B3/%E6%88%91%E7%82%BA%E4%BD%95%E5%B0%87%E5%91%8A%E5%88%A5alian%E9%9B%BB%E5%8F%B0-%E5%85%BC%E7%82%BA%E6%89%80%E6%9C%89%E8%A2%AB%E6%AC%BA%E8%B2%A0%E7%9A%84-%E4%B9%99%E6%96%B9-%E8%AB%8B%E5%91%BD-6eb42c0ef13a?source=rss-b26efb5c6c3e------2&title=我為何將告別Alian電台：兼為所有被欺負的「乙方」請命" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://medium.com/%E6%88%91%E6%98%AF%E9%A6%AC%E4%B8%96%E8%8A%B3/%E6%88%91%E7%82%BA%E4%BD%95%E5%B0%87%E5%91%8A%E5%88%A5alian%E9%9B%BB%E5%8F%B0-%E5%85%BC%E7%82%BA%E6%89%80%E6%9C%89%E8%A2%AB%E6%AC%BA%E8%B2%A0%E7%9A%84-%E4%B9%99%E6%96%B9-%E8%AB%8B%E5%91%BD-6eb42c0ef13a?source=rss-b26efb5c6c3e------2&title=我為何將告別Alian電台：兼為所有被欺負的「乙方」請命" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=我為何將告別Alian電台：兼為所有被欺負的「乙方」請命&body=
+我為何將告別Alian電台：兼為所有被欺負的「乙方」請命
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://medium.com/%E6%88%91%E6%98%AF%E9%A6%AC%E4%B8%96%E8%8A%B3/%E6%88%91%E7%82%BA%E4%BD%95%E5%B0%87%E5%91%8A%E5%88%A5alian%E9%9B%BB%E5%8F%B0-%E5%85%BC%E7%82%BA%E6%89%80%E6%9C%89%E8%A2%AB%E6%AC%BA%E8%B2%A0%E7%9A%84-%E4%B9%99%E6%96%B9-%E8%AB%8B%E5%91%BD-6eb42c0ef13a?source=rss-b26efb5c6c3e------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://medium.com/%E6%88%91%E6%98%AF%E9%A6%AC%E4%B8%96%E8%8A%B3/%E6%88%91%E7%82%BA%E4%BD%95%E5%B0%87%E5%91%8A%E5%88%A5alian%E9%9B%BB%E5%8F%B0-%E5%85%BC%E7%82%BA%E6%89%80%E6%9C%89%E8%A2%AB%E6%AC%BA%E8%B2%A0%E7%9A%84-%E4%B9%99%E6%96%B9-%E8%AB%8B%E5%91%BD-6eb42c0ef13a?source=rss-b26efb5c6c3e------2&title=我為何將告別Alian電台：兼為所有被欺負的「乙方」請命&caption=
+我為何將告別Alian電台：兼為所有被欺負的「乙方」請命
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=我為何將告別Alian電台：兼為所有被欺負的「乙方」請命&url=https://medium.com/%E6%88%91%E6%98%AF%E9%A6%AC%E4%B8%96%E8%8A%B3/%E6%88%91%E7%82%BA%E4%BD%95%E5%B0%87%E5%91%8A%E5%88%A5alian%E9%9B%BB%E5%8F%B0-%E5%85%BC%E7%82%BA%E6%89%80%E6%9C%89%E8%A2%AB%E6%AC%BA%E8%B2%A0%E7%9A%84-%E4%B9%99%E6%96%B9-%E8%AB%8B%E5%91%BD-6eb42c0ef13a?source=rss-b26efb5c6c3e------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>我為何將告別Alian電台：兼為所有被欺負的「乙方」請命</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2020-11-25
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#馬世芳">
+          馬世芳
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://medium.com/%E6%88%91%E6%98%AF%E9%A6%AC%E4%B8%96%E8%8A%B3/%E6%88%91%E7%82%BA%E4%BD%95%E5%B0%87%E5%91%8A%E5%88%A5alian%E9%9B%BB%E5%8F%B0-%E5%85%BC%E7%82%BA%E6%89%80%E6%9C%89%E8%A2%AB%E6%AC%BA%E8%B2%A0%E7%9A%84-%E4%B9%99%E6%96%B9-%E8%AB%8B%E5%91%BD-6eb42c0ef13a?source=rss-b26efb5c6c3e------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="馬世芳的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#馬世芳 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1606314243000-->
+<p><a href="https://medium.com/%E6%88%91%E6%98%AF%E9%A6%AC%E4%B8%96%E8%8A%B3/%E6%88%91%E7%82%BA%E4%BD%95%E5%B0%87%E5%91%8A%E5%88%A5alian%E9%9B%BB%E5%8F%B0-%E5%85%BC%E7%82%BA%E6%89%80%E6%9C%89%E8%A2%AB%E6%AC%BA%E8%B2%A0%E7%9A%84-%E4%B9%99%E6%96%B9-%E8%AB%8B%E5%91%BD-6eb42c0ef13a?source=rss-b26efb5c6c3e------2">我為何將告別Alian電台：兼為所有被欺負的「乙方」請命</a>
+——</p>
+
+<div>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*6PJQ-0QT4wcrkfUT4JtncA.jpeg" />
+  </figure>
+  <p><strong>我將在12/29播畢今年最後一集「耳朵借我」節目之後，結束在Alian原住民族廣播電台三年零四個月、總共350集節目的主持工作，告別這家電台。</strong></p>
+  <p>儘管萬般不捨，實在無可奈何。簡單講：我被迫只能在「放棄節目著作權」和「離開電台」兩條路中選一條。</p>
+  <p>我不能接受電台方面要求「完全擁有」我的節目著作財產權，並要我「放棄行使著作人格權」。</p>
+  <p>我做了一些功課，才發現不只廣播人經常被這則形同「賣身契」的條款欺負，這惡劣的條文也在公部門、法人組織、各種民間單位的採購合約和委製合約中屢見不鮮。除了廣播、電視，也遍及平面設計、攝影、電影、音樂、策展……，有太多創作人被迫吞忍，簽下這則不平等條約。</p>
+  <p>說實話，若是像我這樣，做了三十多年廣播，獎也拿過不少，仍然無法替自己爭取合理的權利，其他廣播同行的處境就更艱難了。</p>
+  <p>明年我就五十歲了。我輩人活到這歲數，有許多朋友都站在社會的關鍵位置上，有聲望、有影響力、也有改變現狀的權力。我們是不是可以藉這個機會，好好檢討一下這種長年的陋習，讓後來者可以多受一些尊重？</p>
+  <p>既然已經決定告別這個電台，現在就不只是我和Alian原住民族廣播電台之間的問題，而是所有被迫<strong>「讓出著作財產權」</strong>和<strong>「放棄行使著作人格權」</strong>的「乙方」的事了。</p>
+  <p>這惡劣至極的不平等條約，早該徹底檢討。</p>
+  <p>剩下的事情，就是把今年最後幾集節目好好做完，以及寫下這篇文章，交代一下事件始末。文章很長，要耐心看。</p>
+  <h3 id="section">那一則欺負人的條文</h3>
+  <p>十月初，電台組長（一位勤懇認真的青年，之前是我的節目企製）告訴我：往年我和電台的主持合約是「逐年議約」，2021年開始，主管電台的「原住民族文化事業基金會」（下文簡稱基金會）決定每個節目都要改為「標案」方式採購。也就是說，我將從電台約聘的主持人，變成「投標廠商」。</p>
+  <p>沒關係，既然所有節目都得這麼辦，那就這麼辦吧，寫標案就是了。要是評審委員覺得有別的投標節目更適合，我也沒話說。</p>
+  <p>但組長接下來說的這件事，才是重點：基金會高層主管翻閱過去的主持合約，注意到我的合約有一條：</p>
+  <p><strong>「乙方（就是我）製作節目之著作權與相關智慧財產權歸甲乙雙方共同擁有（假方是基金會），乙方如以本節目內容為基礎另行彙編出版文字作品，須先知會甲方相關出版內容，該作品著作權歸乙方所有，甲方擁有優先出版權。如出版有聲作品或以有聲形式與其他影音平台延伸合作，乙方得支付甲方一定比例之權利金，其比例與金額由甲乙雙方另行書面約定之。」</strong></p>
+  <p>用白話文再說一次：節目版權是我和電台共有，我若要拿節目內容出書，要先跟電台說一聲，電台有優先出版的權利，但書的版權是我的。若有影音平台或友台要採購這個節目放在他們那邊播出，至於權利金收入，我和電台各分多少，怎麼分，到時候再談。</p>
+  <p>我在2017年寫下這則條文，是參考我之前在News98主持「音樂五四三」節目和電台方的合作模式。事實上，我自己覺得比較合理的版權協議，應該是「節目著作權歸我方所有，由我方授權予電台播出。」但當時原民電台盛情邀約，創台經理廖偉凡大哥承諾絕不干涉我的節目內容。我也願意用這樣的方式，為彼此多留一點兒空間。</p>
+  <p>2017年8月電台開播，到2020總共簽了四份年約，都沿用這個條款。但十月初組長告訴我：基金會希望統一採用制式採購合約：</p>
+  <p><strong>「乙方（就是我）因履行契約所完成之著作，其著作財產權之全部於著作完成之同時讓與甲方（基金會），乙方放棄行使著作人格權。」</strong></p>
+  <p>這條的意思大概是說：我的節目著作財產權「完全歸基金會所有」，未來若有其他影音平台、友台或海外電台要採購這個節目，或是出版社有意將節目內容整理成文字出版，我不但分不到一毛錢的權利金和版稅，連是否同意合作、和誰合作、合作的形式和內容如何，我都完全沒有置喙餘地。</p>
+  <p>此外，不得行使著作人格權，表示以後我不得主張這是「我的節目」。說得極端一點：理論上，基金會可以任意把「耳朵借我」的內容零割改作、剪掉我的口白，另取一個節目名稱播出，我都不可以有意見。</p>
+  <p>我完全無法接受。</p>
+  <h3 id="section-1">沒機會向高層長官面陳的說帖</h3>
+  <p>組長轉述主管審閱舊合約的意見：為什麼電視台的節目採購合約都可以這麼簽，廣播節目的合約卻不能統一照辦？</p>
+  <p>我說：電視和廣播是兩回事，況且我覺得電視節目那樣簽也未必公平。電視節目牽涉多方專業創意的投入，以及多人團隊的合作。我的廣播節目是由我一人獨力企劃、製作、主持、後製完成，怎麼會是同一件事呢。</p>
+  <p>我還說：基金會長官多半是電視背景出身，對廣播的狀況未必熟悉，我願意當面和長官說明，若有必要，我也可以親自和董事長、執行長、董事會報告。假如長官對於原本的合約條文有什麼疑慮，也都可以討論。</p>
+  <p>我補充道：若長官對於「電台節目版權非由基金會獨有」可能會產生什麼弊端（雖然我不太確定會是什麼），也不妨一條一條列出來，寫進合約裡，彼此也就有了約束和保障。實在不需要用到這樣「賣身契」式的條文，對基金會也沒有什麼好處。</p>
+  <p>據我所知，許多主持人簽約並沒有細看條文，也不知道自己的權利就這樣被簽掉了。也可能礙於情面，或怕被貼「不合作」標籤，只能吞忍。大家都簽這種約，並不表示大家都認為這個「放棄著作權」條文是合理的。</p>
+  <p>那天之後，大概過了三個星期，我終於在10月29日和基金會副理、經理（等於電台的台長）見上了面，把上面的意見又再講了一次。</p>
+  <p>我說：我並不是要求基金會為我這個主持人「網開一面」，期待「差別待遇」。假如長官也同意我的主張言之成理，合約內容確有不公平處，何不一次解決，訂立對主持人更公平、更有彈性、更有保障的合約？</p>
+  <p>何況，採購法從未規定「甲方」一定要擁有「乙方」的著作權，一切都可以在合情、合理、合法的狀況下，找到雙贏的解方。</p>
+  <p>經理和副理答應我會轉達給更上層的長官（據我所知，也就是董事長、執行長和副執行長）做進一步的討論。我也再說了一次：隨時願意向長官當面報告，希望他們慎重考慮，建立非營利法人組織經營媒體的典範。</p>
+  <p>我一直等了25天。沒有任何一位長官跟我聯繫，當然也沒有人要我去跟誰報告說明。組長說高層開會有提及此事，但我始終沒有收到正式回應。</p>
+  <p>和經理、副理見面之後第22天，11月20日，明年度的電台節目勞務採購案陸續上網公告，契約書內容仍是「乙方因履行契約所完成之著作，其著作財產權之全部於著作完成之同時讓與甲方，乙方放棄行使著作人格權。」</p>
+  <p>他們顯然並不考慮我還在等候回覆，就直接照原方案走了。誠然，上網公告的案子尚未包括我的節目時段，但我心裡有數，他們不會單獨為一個節目另開特例的，那也不是我的初衷。</p>
+  <p>直到11月23日，在我屢次追問之後，組長終於回電：長官請他轉告，版權問題「一切按照基金會的規定」。也就是說，他們不會更改合約。當然，也沒有任何一位長官願意親自跟我說明他們決定的理由。</p>
+  <p>事已至此，顯然沒有轉圜的餘地了。我決定不參與明年這個節目時段的投標，離開Alian電台。</p>
+  <h3 id="section-2"><strong>你的節目不是你的節目</strong></h3>
+  <p>在等待長官回應的漫長時光裡，我也問了幾位在公營民營電台服務的廣播同行，他們的合約都是怎麼簽的？我自己是中央廣播電台的董事，我也順便問了總台長張正，碰到這種狀況，央廣又是怎麼處理？</p>
+  <p>蒐集到的回覆大抵如此：公營電台的合約，大多都是「著作財產權之全部於著作完成之同時讓與甲方，乙方放棄行使著作人格權」，但有時也有彈性條款，比方讓主持人可以在非營利前提下把節目放到自己的podcast頻道。民營電台則幾乎都沒有和主持人簽約，全憑口頭默契。至於央廣，基本上也是用那個慣行條款，但張正總台長說：版權歸屬原則並非鐵板一塊，和主持人還是可以看狀況談條件的。</p>
+  <p>有同行一直到我問這個問題，翻出合約仔細研讀，才發現節目的著作權已經不是自己的了。有一位同行簽了這樣的約，節目被電台賣到海外，收到的權利金一分錢也沒有給他。</p>
+  <p>也有同行說：我用電台的錄音室和器材錄節目，他們付我主持費，節目版權不就該是電台的嗎？</p>
+  <p><strong>現在我可以明確地告訴大家：你製播的廣播節目，著作權原本就是你的，和你用誰的器材、在什麼場地錄製，毫無關係。</strong></p>
+  <p><strong>如果電台和你並沒有簽訂合約，那麼你的節目著作權，就還是你的。電台付你主持費，不等於他們擁有你的節目版權。</strong></p>
+  <p><strong>除非你簽了約，讓出著作財產權、放棄行使著作人格權，你的節目才不是你的。</strong></p>
+  <h3 id="section-3">結語：一個即將失業的播音員</h3>
+  <p>我沒想到終有一天，自己終於也差點兒變成了那個被欺負的「乙方」。</p>
+  <p>我想為歷來所有被欺負的「乙方」，向資方、向採購方、向有權力的「甲方」呼籲：請徹底檢討這個不平等的欺負人的條款，重新訂立符合實情、也符合公平合理原則的權利歸屬條約。</p>
+  <p>2021年開始，我將暫別廣播圈：這是我退伍迄今25年來，第一次沒節目可做。</p>
+  <p>而我也知道，因為說了這些話，又不願意簽那樣的合約，自己或許會被全國公營電台列為拒絕往來戶。</p>
+  <p>即使如此，我還是要說：不合理、不公平的事，就應該改。</p>
+  <p><strong>只有更多「甲方」願意正視這個問題，善待「乙方」，讓「乙方」能有起碼的，公平合理的權利，這個國家才有可能朝進步文明的方向前進。</strong></p>
+  <p>至於我自己，我想會先休息一陣子吧。要是有什麼工作機會，也很歡迎介紹給我。</p>
+  <h3 id="one-lastthing">one last thing…</h3>
+  <p>最後，明年的廣播金鐘獎，我是不可能報名了。乾脆在這邊厚著臉皮先把感謝詞講一下：</p>
+  <p>謝謝我的歷任節目企製：小高、巫巴克、妞可，他們都是勤勞認真又聰明的好青年。謝謝協助空中現場mini live器材設定的工程部同事們。謝謝每一位掏心掏肺的來賓，願意讓我用兩小時的時間深入你們的生命。謝謝每一位專心聽著這個節目的朋友，沒有你們就沒有我。</p>
+  <p>三十多年前，有個剛考上大學的十八歲小伙子第一次當DJ，面對麥克風，緊張得語無倫次。我想謝謝那個小毛頭：他一直快樂地做廣播，竟然不知不覺做了大半輩子。我想，我應該沒有辜負他吧。</p>
+  <p>2020/11/25 台北家中</p>
+  <iframe src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fbutton.like.co%2Fin%2Fembed%2Fmafang-matters%2Fbutton&amp;display_name=LikeCoin&amp;url=https%3A%2F%2Fbutton.like.co%2Fmafang-matters&amp;image=https%3A%2F%2Fstorage.googleapis.com%2Flikecoin-foundation.appspot.com%2Flikecoin_store_user_mafang-matters_main%3FGoogleAccessId%3Dfirebase-adminsdk-eyzut%2540likecoin-foundation.iam.gserviceaccount.com%26Expires%3D2430403200%26Signature%3DohBvv87Vmt6420uFXK16Ddt0uhMFm6kXaHTdu%252BJ1VgtwoV63hTysygrivzQxvzLvh2ZLGDkPvXSd1OAsxAHfDY7grRC9kXahXg2QyHFMNwjN4ijjoni8VseBf2Cl8udc%252BP%252F22oltvA1y7E3zaujmqkkS0KY3PZZZbjZJs27M4koA0X4fI2FW135s%252FlvF8CD5LrWDVdgACahElTF70JGTsR9gK%252BR4RA9MDarBRQ%252BMUUT8smhoyeZZe%252B79JjwRA7Fg%252FTXKZCBXEEnwzkLEnIMCiQ6x1EjqOnccdeP%252BbqRzSWvDZkC1YOFbQ0n0%252Fk3ILKcq4ydAGsw1KUxYiu8YjJkDFw%253D%253D&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=like" width="485" height="212" frameborder="0" scrolling="no">
+<a href="https://medium.com/media/f1d7cbaf838f928bb1851783d77671b6/href">https://medium.com/media/f1d7cbaf838f928bb1851783d77671b6/href</a>
+  </iframe>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=6eb42c0ef13a" width="1" height="1" alt="" />  <hr />
+  <p><a href="https://medium.com/%E6%88%91%E6%98%AF%E9%A6%AC%E4%B8%96%E8%8A%B3/%E6%88%91%E7%82%BA%E4%BD%95%E5%B0%87%E5%91%8A%E5%88%A5alian%E9%9B%BB%E5%8F%B0-%E5%85%BC%E7%82%BA%E6%89%80%E6%9C%89%E8%A2%AB%E6%AC%BA%E8%B2%A0%E7%9A%84-%E4%B9%99%E6%96%B9-%E8%AB%8B%E5%91%BD-6eb42c0ef13a">我為何將告別Alian電台：兼為所有被欺負的「乙方」請命</a> was originally published in <a href="https://medium.com/%E6%88%91%E6%98%AF%E9%A6%AC%E4%B8%96%E8%8A%B3">耳目江湖</a> on Medium, where people are continuing the conversation by highlighting and responding to this story.</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#馬世芳 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2021-06-20/%E5%85%AC%E5%91%8A-%E9%83%A8%E8%90%BD%E6%A0%BC%E9%81%B7%E8%87%B3-%E6%96%B9%E6%A0%BC%E5%AD%90-%E6%AD%A4%E5%9C%B0%E5%81%9C%E6%AD%A2%E6%9B%B4%E6%96%B0-%E9%99%84%E7%B6%B2%E5%9D%80/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2020-09-23/9-22-%E8%80%B3%E6%9C%B5%E5%80%9F%E6%88%91-%E6%96%BD%E6%96%87%E5%BD%AC-%E6%AD%A6%E9%9B%84%E8%AB%87-%E7%B7%8A%E4%BE%86%E5%8E%BB-%E5%8F%B0%E7%81%A3%E9%9F%B3%E6%A8%82%E5%9C%B0%E7%90%86%E9%9B%9C%E8%AA%8C/">最早</a>--</span>
+    
+      <li>
+        <time>2020-11-30</time>
+        <a href="https://nodebe4.github.io/teahouse/2020-11-30/11-30-%E8%80%B3%E6%9C%B5%E5%80%9F%E6%88%91-%E8%A8%B1%E5%90%AB%E5%85%89%E8%AB%87-%E5%BE%9E%E5%A4%9C%E6%99%9A%E9%96%8B%E5%A7%8B%E5%BE%9E%E5%A4%9C%E6%99%9A%E7%B5%90%E6%9D%9F/">
+          11/30 耳朵借我：許含光談《從夜晚開始從夜晚結束》
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2020-11-26</time>
+        <a href="https://nodebe4.github.io/teahouse/2020-11-26/%E5%9B%9E%E6%87%89%E5%8E%9F%E4%BD%8F%E6%B0%91%E6%97%8F%E6%96%87%E5%8C%96%E4%BA%8B%E6%A5%AD%E5%9F%BA%E9%87%91%E6%9C%83%E8%81%B2%E6%98%8E%E7%A8%BF/">
+          回應原住民族文化事業基金會聲明稿
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2020-11-24</time>
+        <a href="https://nodebe4.github.io/teahouse/2020-11-24/%E8%8A%B1%E5%B0%91%E4%B8%8D%E6%84%81%E6%B2%92%E9%A1%8F%E8%89%B2-%E6%88%91%E6%8A%8A%E6%A8%B9%E8%91%89%E9%83%BD%E6%9F%93%E7%B4%85/">
+          花少不愁沒顏色，我把樹葉都染紅
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2020-11-24</time>
+        <a href="https://nodebe4.github.io/teahouse/2020-11-24/11-24-%E8%80%B3%E6%9C%B5%E5%80%9F%E6%88%91-%E9%99%B3%E6%98%87%E8%AB%87-%E6%9C%AB%E6%97%A5%E9%81%BA%E7%B7%92-%E5%92%8C%E9%80%99%E8%A9%B2%E7%B3%9F%E7%9A%842020%E5%B9%B4/">
+          11/24 耳朵借我：陳昇談《末日遺緒》和這該糟的2020年
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2020-11-25/%E5%AD%AB%E5%A4%A7%E5%8D%88%E6%9C%80%E6%96%B0%E7%99%BC%E5%B1%95-%E6%9C%89%E9%97%9C%E7%95%B6%E5%B1%80%E4%BB%8D%E4%B8%8D%E8%83%BD%E4%B8%80%E6%AD%A5%E5%88%B0%E4%BD%8D%E6%B2%BB%E7%BD%AA-%E5%8F%AF%E8%83%BD%E8%A6%81%E5%B0%8B%E6%89%BE%E6%96%B0%E7%9A%84%E7%BD%AA%E5%90%8D-%E5%A6%BB%E5%AD%90-%E5%85%A9%E5%80%8B%E5%85%92%E5%AA%B3%E5%8F%8A%E9%9B%86%E5%9C%98%E8%B2%A1%E5%8B%99%E7%B8%BD%E7%AE%A1%E8%A2%AB%E7%B9%BC%E7%BA%8C%E6%8B%98/">
+            前一篇：孫大午最新發展：有關當局仍不能一步到位治罪　可能要尋找新的罪名　妻子、兩個兒媳及集團財務總管被繼續拘留　音訊全無
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2020-11-25/%E6%B8%A9%E7%9B%B8%E8%AF%B4%E5%85%9A%E5%8F%B2-%E5%BC%80%E6%92%AD%E4%B8%A4%E5%91%A8%E5%B9%B4-%E6%84%9F%E8%B0%A2%E6%9C%8B%E5%8F%8B%E4%BB%AC%E7%9A%84%E9%BC%93%E5%8A%B1%E5%92%8C%E6%94%AF%E6%8C%81/">
+            後一篇：《温相说党史》开播两周年，感谢朋友们的鼓励和支持
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2020-11-25/%E5%AD%AB%E5%A4%A7%E5%8D%88%E6%9C%80%E6%96%B0%E7%99%BC%E5%B1%95-%E6%9C%89%E9%97%9C%E7%95%B6%E5%B1%80%E4%BB%8D%E4%B8%8D%E8%83%BD%E4%B8%80%E6%AD%A5%E5%88%B0%E4%BD%8D%E6%B2%BB%E7%BD%AA-%E5%8F%AF%E8%83%BD%E8%A6%81%E5%B0%8B%E6%89%BE%E6%96%B0%E7%9A%84%E7%BD%AA%E5%90%8D-%E5%A6%BB%E5%AD%90-%E5%85%A9%E5%80%8B%E5%85%92%E5%AA%B3%E5%8F%8A%E9%9B%86%E5%9C%98%E8%B2%A1%E5%8B%99%E7%B8%BD%E7%AE%A1%E8%A2%AB%E7%B9%BC%E7%BA%8C%E6%8B%98/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2020-11-25/%E6%B8%A9%E7%9B%B8%E8%AF%B4%E5%85%9A%E5%8F%B2-%E5%BC%80%E6%92%AD%E4%B8%A4%E5%91%A8%E5%B9%B4-%E6%84%9F%E8%B0%A2%E6%9C%8B%E5%8F%8B%E4%BB%AC%E7%9A%84%E9%BC%93%E5%8A%B1%E5%92%8C%E6%94%AF%E6%8C%81/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2020-11-26/%E5%9B%9E%E6%87%89%E5%8E%9F%E4%BD%8F%E6%B0%91%E6%97%8F%E6%96%87%E5%8C%96%E4%BA%8B%E6%A5%AD%E5%9F%BA%E9%87%91%E6%9C%83%E8%81%B2%E6%98%8E%E7%A8%BF/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2020-11-24/%E8%8A%B1%E5%B0%91%E4%B8%8D%E6%84%81%E6%B2%92%E9%A1%8F%E8%89%B2-%E6%88%91%E6%8A%8A%E6%A8%B9%E8%91%89%E9%83%BD%E6%9F%93%E7%B4%85/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2020-11-25/%E5%AD%AB%E5%A4%A7%E5%8D%88%E6%9C%80%E6%96%B0%E7%99%BC%E5%B1%95-%E6%9C%89%E9%97%9C%E7%95%B6%E5%B1%80%E4%BB%8D%E4%B8%8D%E8%83%BD%E4%B8%80%E6%AD%A5%E5%88%B0%E4%BD%8D%E6%B2%BB%E7%BD%AA-%E5%8F%AF%E8%83%BD%E8%A6%81%E5%B0%8B%E6%89%BE%E6%96%B0%E7%9A%84%E7%BD%AA%E5%90%8D-%E5%A6%BB%E5%AD%90-%E5%85%A9%E5%80%8B%E5%85%92%E5%AA%B3%E5%8F%8A%E9%9B%86%E5%9C%98%E8%B2%A1%E5%8B%99%E7%B8%BD%E7%AE%A1%E8%A2%AB%E7%B9%BC%E7%BA%8C%E6%8B%98/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2020-11-25/%E6%B8%A9%E7%9B%B8%E8%AF%B4%E5%85%9A%E5%8F%B2-%E5%BC%80%E6%92%AD%E4%B8%A4%E5%91%A8%E5%B9%B4-%E6%84%9F%E8%B0%A2%E6%9C%8B%E5%8F%8B%E4%BB%AC%E7%9A%84%E9%BC%93%E5%8A%B1%E5%92%8C%E6%94%AF%E6%8C%81/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<馬世芳>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2020-11-26/%E5%9B%9E%E6%87%89%E5%8E%9F%E4%BD%8F%E6%B0%91%E6%97%8F%E6%96%87%E5%8C%96%E4%BA%8B%E6%A5%AD%E5%9F%BA%E9%87%91%E6%9C%83%E8%81%B2%E6%98%8E%E7%A8%BF/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<馬世芳>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2020-11-24/%E8%8A%B1%E5%B0%91%E4%B8%8D%E6%84%81%E6%B2%92%E9%A1%8F%E8%89%B2-%E6%88%91%E6%8A%8A%E6%A8%B9%E8%91%89%E9%83%BD%E6%9F%93%E7%B4%85/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

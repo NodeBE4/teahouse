@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>民主的黑鏡：社交媒體的暗黑威脅 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+民主的黑鏡：社交媒體的暗黑威脅
+——
+" />
+    <meta property="og:description" content="
+民主的黑鏡：社交媒體的暗黑威脅
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="民主的黑鏡：社交媒體的暗黑威脅" />
+    <meta property="twitter:title" content="民主的黑鏡：社交媒體的暗黑威脅" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5737)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmedium.com%2F%40soundfury%2F%25E6%25B0%2591%25E4%25B8%25BB%25E7%259A%2584%25E9%25BB%2591%25E9%258F%25A1-%25E7%25A4%25BE%25E4%25BA%25A4%25E5%25AA%2592%25E9%25AB%2594%25E7%259A%2584%25E6%259A%2597%25E9%25BB%2591%25E5%25A8%2581%25E8%2584%2585-3d486b12f918%3Fsource%3Drss-37ea7441b075------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://medium.com/@soundfury/%E6%B0%91%E4%B8%BB%E7%9A%84%E9%BB%91%E9%8F%A1-%E7%A4%BE%E4%BA%A4%E5%AA%92%E9%AB%94%E7%9A%84%E6%9A%97%E9%BB%91%E5%A8%81%E8%84%85-3d486b12f918?source=rss-37ea7441b075------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://medium.com/@soundfury/%E6%B0%91%E4%B8%BB%E7%9A%84%E9%BB%91%E9%8F%A1-%E7%A4%BE%E4%BA%A4%E5%AA%92%E9%AB%94%E7%9A%84%E6%9A%97%E9%BB%91%E5%A8%81%E8%84%85-3d486b12f918?source=rss-37ea7441b075------2&text=民主的黑鏡：社交媒體的暗黑威脅&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://medium.com/@soundfury/%E6%B0%91%E4%B8%BB%E7%9A%84%E9%BB%91%E9%8F%A1-%E7%A4%BE%E4%BA%A4%E5%AA%92%E9%AB%94%E7%9A%84%E6%9A%97%E9%BB%91%E5%A8%81%E8%84%85-3d486b12f918?source=rss-37ea7441b075------2&title=民主的黑鏡：社交媒體的暗黑威脅" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://medium.com/@soundfury/%E6%B0%91%E4%B8%BB%E7%9A%84%E9%BB%91%E9%8F%A1-%E7%A4%BE%E4%BA%A4%E5%AA%92%E9%AB%94%E7%9A%84%E6%9A%97%E9%BB%91%E5%A8%81%E8%84%85-3d486b12f918?source=rss-37ea7441b075------2&title=民主的黑鏡：社交媒體的暗黑威脅" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=民主的黑鏡：社交媒體的暗黑威脅&body=
+民主的黑鏡：社交媒體的暗黑威脅
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://medium.com/@soundfury/%E6%B0%91%E4%B8%BB%E7%9A%84%E9%BB%91%E9%8F%A1-%E7%A4%BE%E4%BA%A4%E5%AA%92%E9%AB%94%E7%9A%84%E6%9A%97%E9%BB%91%E5%A8%81%E8%84%85-3d486b12f918?source=rss-37ea7441b075------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://medium.com/@soundfury/%E6%B0%91%E4%B8%BB%E7%9A%84%E9%BB%91%E9%8F%A1-%E7%A4%BE%E4%BA%A4%E5%AA%92%E9%AB%94%E7%9A%84%E6%9A%97%E9%BB%91%E5%A8%81%E8%84%85-3d486b12f918?source=rss-37ea7441b075------2&title=民主的黑鏡：社交媒體的暗黑威脅&caption=
+民主的黑鏡：社交媒體的暗黑威脅
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=民主的黑鏡：社交媒體的暗黑威脅&url=https://medium.com/@soundfury/%E6%B0%91%E4%B8%BB%E7%9A%84%E9%BB%91%E9%8F%A1-%E7%A4%BE%E4%BA%A4%E5%AA%92%E9%AB%94%E7%9A%84%E6%9A%97%E9%BB%91%E5%A8%81%E8%84%85-3d486b12f918?source=rss-37ea7441b075------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>民主的黑鏡：社交媒體的暗黑威脅</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2019-07-24
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#soundfury">
+          soundfury
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://medium.com/@soundfury/%E6%B0%91%E4%B8%BB%E7%9A%84%E9%BB%91%E9%8F%A1-%E7%A4%BE%E4%BA%A4%E5%AA%92%E9%AB%94%E7%9A%84%E6%9A%97%E9%BB%91%E5%A8%81%E8%84%85-3d486b12f918?source=rss-37ea7441b075------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="soundfury的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#soundfury 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1563946748000-->
+<p><a href="https://medium.com/@soundfury/%E6%B0%91%E4%B8%BB%E7%9A%84%E9%BB%91%E9%8F%A1-%E7%A4%BE%E4%BA%A4%E5%AA%92%E9%AB%94%E7%9A%84%E6%9A%97%E9%BB%91%E5%A8%81%E8%84%85-3d486b12f918?source=rss-37ea7441b075------2">民主的黑鏡：社交媒體的暗黑威脅</a>
+——</p>
+
+<div>
+  <p>民主的黑鏡：社交媒體的暗黑威脅</p>
+  <p>1.</p>
+  <p>整整三十年前的1989年，有人說，「極權主義的巨人將會被大衛般的晶片所扳倒」。[1]</p>
+  <p>這人是美國總統雷根。「我相信」，他說，「比起軍隊，比起外交，比起民主國家最好的意圖，通訊革命將是世界歷史所見過達到人類自由最偉大的力量。」</p>
+  <p>幾個月後，柏林圍牆倒塌。然後很快地，蘇聯瓦解了。</p>
+  <p>「歷史終結了」，學者法蘭西斯福山(Francis Fukuyama)宣稱。</p>
+  <p>這看似是一句偉大預言，其實反映了那個時代普遍的樂觀主義。在更稍早幾年的1984 年，蘋果電腦播出廣告傳遞一個訊息：有了麥金塔電腦，1984不會再是歐威爾的1984。意思是科技是人類解放和追求自由的工具。</p>
+  <p>到了九十年代中期，這樣的樂觀情緒更為強烈。1995年出版的名著「Being Digital」就認為在新的數位時代，舊時代的集中化權威和官僚體制將會瓦解，企業、產業和國家體制都會被徹底改變。</p>
+  <p>在二十一世紀，當世界剛開始進入社交媒體時代，人們看到2011年的阿拉伯之春到佔領華爾街，臉書和推特如何推動了民眾革命。二十世紀末的想像成為現實。</p>
+  <p>左翼社會思想大師Manuel Castells在著作《憤怒與希望的網絡》（Networks of Outrage and Hope)中樂觀地說：「一切都是從網路上的社會網絡開始的，因為這是自主的空間，他們超越了過去一直壟斷通訊管道的政府和企業的控制。藉由在網路的自由公共空間分享悲傷與希望，透過彼此連結，透過對不同計畫的想像，原本具有不同觀點或組織屬性的個人，形成了網絡。他們聚在一起，從而克服了恐懼──這是那些權力得以延續和再生產的主要情緒。從網路上的安全空間，不同年紀和條件的人們開始去佔領都市空間，即使彼此不認識，但他們有共同的目標，相信他們有權利可以書寫歷史──他們的歷史。」</p>
+  <p>只是，從1989到2019的三十年後的現在，這種樂觀與天真似乎只會被嘲笑了[2]。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*B20iJa5ghaD-CzOytuCehQ.jpeg" />
+  </figure>
+  <p>2.</p>
+  <p>當世界在過去十年完全被社交媒體的空間與時間所改變，尤其是隨著科技與人工智慧的進展，西方民主也出現巨大的崩塌：民主國家的公民對於既有政治體制與政黨越來越失去信任與認同，並導致右翼民粹主義和強人興起。2016年川普當選和英國脫歐後，更讓多本西方著作悲觀地宣稱民主已經終結或、民主將死，或者自由主義衰敗，甚至認為西方文明出現了危機[3]。</p>
+  <p>一如在當代人類生活所有層面，科技既帶來了新的希望與可能，也造成黑暗與威脅，如今人們開始認識到：</p>
+  <p>我們以為可以成為自我表達的大平台，如今成為傳播謊言與仇恨的工具，同溫層相濡以沫的部落。</p>
+  <p>我們以為可以掀推倒威權的武器，如今成為獨裁者控制人民的厲害武器。</p>
+  <p>我們以為可以讓世界更好的人工智慧，卻使我們自願放棄做出更多決定。</p>
+  <p>2–1</p>
+  <p>社交媒體時代對民主的傷害中最被注意到的是部落化和所謂的過濾泡泡(filter bubble)現象。</p>
+  <p>的確，過去單一的、穩定的認同日益碎裂化，任何人都可以在網路上找到一小群興趣相投的社群。差異當然是件好事，民主制度就是要在差異中尋找共同點，建立對話與共識。但過去的代議民主是建立在一套穩定的利益代表制度上，不論是政黨、工會或教會，但現在越來越多人不覺得這些機制可以代表他們[4]，傳統代議政治因而失去支柱，開始裂解。</p>
+  <p>其結果是社會越來越極化與對立，溝通越來越困難，且個人認同更為原子化 — — 這些選民更容易對體制反感、更容易被情緒動員[5]。</p>
+  <p>2–2</p>
+  <p>另一方面，社交媒體帶來了「注意力經濟」（attention economy）的高潮。諾貝爾經濟學者Herbert Simon很早就說：「當資訊非常豐盛的時候，注意力就會變成一種稀有資源。」</p>
+  <p>美國知名網路科技法律學者Tim Wu在《注意力商人》(The Attention Merchants)一書中提出，從十九世紀開始的每一種新媒體形式，都成為廣告商攫取我們的注意力並轉為賺錢的工具。在數位時代，電腦、網路和手機更是無時無刻地攫取我們的注意力。臉書的創辦總裁帕克Sean Parker就公開反省過他們造的孽：「這些應用程式，尤其是臉書，背後的設計思維就是：我們要如何盡可能佔據你的時間和注意力。這意味者我們要不斷地給用戶一點多巴胺的刺激……」。</p>
+  <p>這與民主何干？</p>
+  <p>注意力經濟會侵蝕人們記憶、思考、決定的能力，而這些這正是民主的基礎 — — 因為個人是理性的、可以思辨的，並有反思性的。</p>
+  <p>另一方面，政客透過推特或臉書發表直接而簡單的言論，或面對傳統媒體但用吸引眼球的語言，都可以大量攫取注意力。他們愛跟網紅來往，或自己成為網紅。</p>
+  <p>於是，政治語言變得越來越幼稚，公共討論變得越來越稀薄。</p>
+  <p>2–3</p>
+  <p>本質上，現代代議民主和數位時代的科技完全是不同時代的產物：前者誕生於民族國家與層級化的時代，是為了解決那個政治秩序的問題，但後者的本質是去中心化的和非地理性的。</p>
+  <p>民主的互動是緩慢的、思辨的、需要耐性的，但網路世界的互動是立即的、直覺的和情緒的。</p>
+  <p>尤其，正如政治理論家大衛朗西曼(David Runciman)說，「代議民主的目的原是對抗我們的認知偏見。他給即時滿足設立障礙，減慢做決定的過程。美國的創立者竭盡所能，確保人民的政治衝動會得到被設計用來糾正他們偏見的機構之過濾。這就是為什麼代議民主會那麼讓人挫折。它極少讓人心滿意足，因為這不是他的原意。」[6]</p>
+  <p>代議民主體制宣稱自己是民主，但在現實中，政客和官僚都距離人民太遠，不可能做到完美的回應(responsive)與問責(accountable)。數位時代的網民更會感到政府太過於遲鈍、太沒有回應能力，因此對於體制更不信任。</p>
+  <p>其結果是，我們越來越厭惡傳統政治的虛假性，渴望更貨真價實的東西，而網路上的經驗似乎提供了這種真實感與即時性。「代議民主憧憬它不可能擁有的東西。我們永遠受到誘惑，想要封閉存在政治中的缺口：讓它變得更加真實、更加有反應和更加完整。數位科技大大增加了這些誘惑。」大衛朗西曼說。</p>
+  <p>簡言之：「社交網路讓代議民主看起像假貨。」</p>
+  <p>但真貨是什麼？</p>
+  <p>網路世界很容易成為一個如幾世紀前思想家霍布斯說的人和人赤裸對抗的狀態。朗西曼說，「單純民主本來就是一種可怕的東西」，可能會變成多數人的暴政 — — 多數人會覺得自己有權利把他們的憤怒與挫折感發洩在少數人身上。因此，網路世界「是我們擁有的東西中最接近古代世界民主的一種：浮躁、暴力和授權。」</p>
+  <p>社交媒體時代所製造出的對虛擬真實的渴求，也產生對政治人物的新想望：越是新鮮、直接的語言和形象，越能讓選民覺得彷彿很真誠。</p>
+  <p>因此，民粹主義成為數位時代民主的自然體現：因為他是直接的、情緒性的、拒絕複雜答案的。</p>
+  <p>總之，社交媒體的快速互動讓代議民主像是類比時代的恐龍，注意力經濟的時代讓有「梗」的人受到最大注目，部落化讓選民更原子化且更封閉，以及後真相時代的虛偽話術與網路的操控讓選民更難有充分和完整的資訊 — — 這一切都導致民眾對傳統政治菁英和無感、對代議民主不信任、對嚴肅的公共討論感到厭倦。民粹主義型態網紅成為這個時代的最大政治受益者。</p>
+  <p>3.</p>
+  <p>上述所說是社交媒體如何弱化代議民主，製造民粹主義強人興起的沃土。但科技對於民主的另一個威脅在於操控人的心靈。</p>
+  <p>當然，幾百年來，各種政治修辭、宣傳與廣告，都是要操縱人心，但是從來沒有像當前的科技、網路與人工智慧，可以如此有效、如此深入。掌握這些科技工具和大數據，設定演算法，就可以操控人們的情緒與偏好，知道我們最深的恐懼與喜悅。</p>
+  <p>這是對民主前提的根本挑戰。因為民主的根基是個人具有自由意志，基於理性或情感，對自己的生活做出決定，大到國家公共政策，小到社區、家庭和個人。這是為何民主有一種獨特的道德價值(moral value)。</p>
+  <p>但現在，自由成為假象，人們其實越來越是在一個被設定框架下的不自由選擇，越來越是被AI以及背後掌握的人所操控。</p>
+  <p>但更嚴重的是，我們不只是在不覺知的情況下被操弄，而是自己放棄了主動選擇，因為我們相信演算法可以幫我們做出更好的決定：不論是讓spotify和netflix幫忙選擇要聽的音樂和要看的電影，或讓系統幫你開車。</p>
+  <p>當我們越來越仰賴這些方便的工具，最終會失去什麼？而接下來我們還會把什麼交給電腦？</p>
+  <p>會不會有一天有人主張，AI可以有效搜集與整理候選人資料，可以幫選民做出更多智慧的判斷，因此不用讓這麼多非理性的選民來決定民主的未來？[7]</p>
+  <p>這聽起來不離譜，但一旦民主被AI支配，人的意義在哪？</p>
+  <p>4.</p>
+  <p>AI革命更讓人擔心的影響在於徹底改變民主和獨裁兩種體制的能力。</p>
+  <p>作家哈拉瑞(Yuval Noah Harari) 在著作《二十一世紀的21堂課》說，過去民主的重大優勢在於處理資訊的能力，因為資訊的處理是分散或去中央化的，所以決策者和選民對於政策後果、市場運作和官員表現都可以有更多的資訊和回饋。相對的，獨裁體制的特色就是將資訊與權力大量集中，但二十世紀的科技並無能力有效地處理這些資訊，因此獨裁體制往往會做不有效的決策。這個資訊處理問題在共產主義中的計劃經濟尤其嚴重，這是蘇聯會最終垮台的主因之一。</p>
+  <p>諾貝爾獎經濟學家亞瑪蒂森（Amatya Sen）曾提過一個經典理論：此前常認為饑荒是天然災害問題，但在歷史上，民主體制下其實沒有出現過大規模飢荒（他特別比較印度和中國），其原因就在於民主的資訊反饋機制可以對執政者提出災難發生的早期警告。</p>
+  <p>這就是民主的好處。</p>
+  <p>但AI可能將會改變這個對比，因為AI發展可以讓巨量的資訊被集中而快速地處理，尤其機器學習的邏輯就是更多資料會讓其變得更快速、更強大，而由於獨裁體制更不在乎個人隱私和個人權利去收集個人資料，因此更能發產出強大的AI。（李開復也用類似的邏輯強調中國相對於美國在發展AI方面的優勢）。</p>
+  <p>因此哈拉瑞說，「二十世紀威權體制的主要缺陷 — — 集所有權力和資訊於一身 — — 可能會在二十一世紀成為他們的主要優勢。」</p>
+  <p>5.</p>
+  <p>顯然，既有的民主已衰老，這個數位時代需要民主的更新。但在人們找到民主新想像的出路前，民粹主義看到了空隙，填補上了缺乏活力的民主。</p>
+  <p>這是現在進行式。</p>
+  <p>未來的黑鏡噩夢可能更不只如此，而會是一個有民主外殼，卻實際上被一小撮菁英掌握的人工智慧機器所控制的社會；更讓人憂心的是，大多數人可能會接受這個情況，願意逃避做更多選擇。</p>
+  <p>我們以為人類是機器的主人，但最終會不會是相反？</p>
+  <p>我們該怎麼辦？</p>
+  <p>哈拉瑞說的好，與其花費大量資源在發展機器人工智慧，為何我們不投資資源在發展人類心智上？否則很快地，機器會越來越聰明，人類卻越來越愚笨，只剩情緒。</p>
+  <p>而我相信，要讓人類心智更成熟、複雜、有創造力，我們需要更重視、更普及人文精神和文化創作，因為這些領域是關於人性本質，是人類獨有的特質，是人類未來之所繫。[8]</p>
+  <p>[1]引自Fred Turner, “Machine Politics”. The Atlantic January 2019.</p>
+  <p>[2]關於網路與科技早期的夢想是如何受到嬉皮時代的自由與解放理念所影響，可以參考我的新書《想像力的革命：1960年代的烏托邦追尋》。</p>
+  <p>[3]僅僅是這兩年翻譯成中文的著作就有《民主會怎麼結束》、《民主國家如何死亡》、《西方的命運》等。</p>
+  <p>[4]政黨的衰落從七十年代就開始，因為社會經濟轉型，包括世俗化和去工業化，但過去十年，社交媒體加速了這個過程。</p>
+  <p>[5]偉大的政治哲學家漢娜鄂蘭相信極權主義的根源就是原子化的個人。</p>
+  <p>[6]大衛朗西曼，《民主會怎麼結束》（立緒出版，2019）</p>
+  <p>[7]這是「人類大歷史」、「人類大命運」著名的作家哈拉瑞(Yuval Noah Harari)在著作《二十一世紀的21堂課》中所提出的問題。</p>
+  <p>[8]見知名生物理論學家愛德華威爾森著作《人類存在的意義》談人文學科的意義。</p>
+  <p>本文刊登於數位時代2019年7月號</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=3d486b12f918" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#soundfury 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2021-05-22/%E5%89%8D%E5%BE%80%E6%88%91%E5%80%91%E6%9C%AA%E6%9B%BE%E7%9F%A5%E6%9B%89%E7%9A%84%E5%8F%B0%E7%81%A3%E6%AD%B7%E5%8F%B2/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2019-05-11/%E7%BE%8E%E5%9C%8B%E9%9B%BB%E8%A6%96%E5%8F%B2%E4%B8%8A%E6%9C%80%E4%BB%A4%E4%BA%BA%E9%9B%A3%E5%BF%98%E7%9A%84%E8%BE%AF%E8%AB%96/">最早</a>--</span>
+    
+      <li>
+        <time>2019-08-18</time>
+        <a href="https://nodebe4.github.io/teahouse/2019-08-18/%E8%83%A1%E5%A3%AB%E6%89%98-%E5%BE%9E%E5%8F%8D%E5%8F%9B%E7%9A%84%E7%83%8F%E6%89%98%E9%82%A6%E5%88%B0%E7%83%8F%E6%89%98%E9%82%A6%E7%9A%84%E5%8F%8D%E5%8F%9B/">
+          胡士托：從反叛的烏托邦到烏托邦的反叛
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2019-08-05</time>
+        <a href="https://nodebe4.github.io/teahouse/2019-08-05/%E7%B4%84%E7%BF%B0%E8%97%8D%E5%84%82%E5%A6%82%E4%BD%95%E6%88%90%E7%82%BA%E5%9C%8B%E5%AE%B6%E7%9A%84%E6%95%B5%E4%BA%BA-1/">
+          約翰藍儂如何成為國家的敵人[1]
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2019-07-15</time>
+        <a href="https://nodebe4.github.io/teahouse/2019-07-15/%E5%8F%B0%E7%81%A3%E7%9A%84%E9%81%8E%E5%8E%BB%E8%88%87%E6%9C%AA%E4%BE%86%E7%9A%84%E6%88%B0%E7%88%AD/">
+          台灣的過去與未來的戰爭
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2019-07-14</time>
+        <a href="https://nodebe4.github.io/teahouse/2019-07-14/%E8%AE%93%E7%A4%BE%E6%9C%83%E4%B8%BB%E7%BE%A9%E5%86%8D%E6%AC%A1%E9%85%B7%E8%B5%B7%E4%BE%86/">
+          讓社會主義再次酷起來
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2019-07-15/%E5%8F%B0%E7%81%A3%E7%9A%84%E9%81%8E%E5%8E%BB%E8%88%87%E6%9C%AA%E4%BE%86%E7%9A%84%E6%88%B0%E7%88%AD/">
+            前一篇：台灣的過去與未來的戰爭
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2019-08-05/%E7%B4%84%E7%BF%B0%E8%97%8D%E5%84%82%E5%A6%82%E4%BD%95%E6%88%90%E7%82%BA%E5%9C%8B%E5%AE%B6%E7%9A%84%E6%95%B5%E4%BA%BA-1/">
+            後一篇：約翰藍儂如何成為國家的敵人[1]
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2019-07-15/%E5%8F%B0%E7%81%A3%E7%9A%84%E9%81%8E%E5%8E%BB%E8%88%87%E6%9C%AA%E4%BE%86%E7%9A%84%E6%88%B0%E7%88%AD/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2019-08-05/%E7%B4%84%E7%BF%B0%E8%97%8D%E5%84%82%E5%A6%82%E4%BD%95%E6%88%90%E7%82%BA%E5%9C%8B%E5%AE%B6%E7%9A%84%E6%95%B5%E4%BA%BA-1/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2019-08-05/%E7%B4%84%E7%BF%B0%E8%97%8D%E5%84%82%E5%A6%82%E4%BD%95%E6%88%90%E7%82%BA%E5%9C%8B%E5%AE%B6%E7%9A%84%E6%95%B5%E4%BA%BA-1/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2019-07-15/%E5%8F%B0%E7%81%A3%E7%9A%84%E9%81%8E%E5%8E%BB%E8%88%87%E6%9C%AA%E4%BE%86%E7%9A%84%E6%88%B0%E7%88%AD/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2019-07-15/%E5%8F%B0%E7%81%A3%E7%9A%84%E9%81%8E%E5%8E%BB%E8%88%87%E6%9C%AA%E4%BE%86%E7%9A%84%E6%88%B0%E7%88%AD/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2019-08-05/%E7%B4%84%E7%BF%B0%E8%97%8D%E5%84%82%E5%A6%82%E4%BD%95%E6%88%90%E7%82%BA%E5%9C%8B%E5%AE%B6%E7%9A%84%E6%95%B5%E4%BA%BA-1/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<soundfury>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2019-08-05/%E7%B4%84%E7%BF%B0%E8%97%8D%E5%84%82%E5%A6%82%E4%BD%95%E6%88%90%E7%82%BA%E5%9C%8B%E5%AE%B6%E7%9A%84%E6%95%B5%E4%BA%BA-1/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<soundfury>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2019-07-15/%E5%8F%B0%E7%81%A3%E7%9A%84%E9%81%8E%E5%8E%BB%E8%88%87%E6%9C%AA%E4%BE%86%E7%9A%84%E6%88%B0%E7%88%AD/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

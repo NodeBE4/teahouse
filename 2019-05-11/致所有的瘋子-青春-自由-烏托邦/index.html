@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>致所有的瘋子：青春、自由、烏托邦 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+致所有的瘋子：青春、自由、烏托邦
+——
+" />
+    <meta property="og:description" content="
+致所有的瘋子：青春、自由、烏托邦
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="致所有的瘋子：青春、自由、烏托邦" />
+    <meta property="twitter:title" content="致所有的瘋子：青春、自由、烏托邦" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5737)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmedium.com%2F%40soundfury%2F%25E8%2587%25B4%25E6%2589%2580%25E6%259C%2589%25E7%259A%2584%25E7%2598%258B%25E5%25AD%2590-%25E9%259D%2592%25E6%2598%25A5-%25E8%2587%25AA%25E7%2594%25B1-%25E7%2583%258F%25E6%2589%2598%25E9%2582%25A6-becce6fd985d%3Fsource%3Drss-37ea7441b075------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://medium.com/@soundfury/%E8%87%B4%E6%89%80%E6%9C%89%E7%9A%84%E7%98%8B%E5%AD%90-%E9%9D%92%E6%98%A5-%E8%87%AA%E7%94%B1-%E7%83%8F%E6%89%98%E9%82%A6-becce6fd985d?source=rss-37ea7441b075------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://medium.com/@soundfury/%E8%87%B4%E6%89%80%E6%9C%89%E7%9A%84%E7%98%8B%E5%AD%90-%E9%9D%92%E6%98%A5-%E8%87%AA%E7%94%B1-%E7%83%8F%E6%89%98%E9%82%A6-becce6fd985d?source=rss-37ea7441b075------2&text=致所有的瘋子：青春、自由、烏托邦&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://medium.com/@soundfury/%E8%87%B4%E6%89%80%E6%9C%89%E7%9A%84%E7%98%8B%E5%AD%90-%E9%9D%92%E6%98%A5-%E8%87%AA%E7%94%B1-%E7%83%8F%E6%89%98%E9%82%A6-becce6fd985d?source=rss-37ea7441b075------2&title=致所有的瘋子：青春、自由、烏托邦" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://medium.com/@soundfury/%E8%87%B4%E6%89%80%E6%9C%89%E7%9A%84%E7%98%8B%E5%AD%90-%E9%9D%92%E6%98%A5-%E8%87%AA%E7%94%B1-%E7%83%8F%E6%89%98%E9%82%A6-becce6fd985d?source=rss-37ea7441b075------2&title=致所有的瘋子：青春、自由、烏托邦" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=致所有的瘋子：青春、自由、烏托邦&body=
+致所有的瘋子：青春、自由、烏托邦
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://medium.com/@soundfury/%E8%87%B4%E6%89%80%E6%9C%89%E7%9A%84%E7%98%8B%E5%AD%90-%E9%9D%92%E6%98%A5-%E8%87%AA%E7%94%B1-%E7%83%8F%E6%89%98%E9%82%A6-becce6fd985d?source=rss-37ea7441b075------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://medium.com/@soundfury/%E8%87%B4%E6%89%80%E6%9C%89%E7%9A%84%E7%98%8B%E5%AD%90-%E9%9D%92%E6%98%A5-%E8%87%AA%E7%94%B1-%E7%83%8F%E6%89%98%E9%82%A6-becce6fd985d?source=rss-37ea7441b075------2&title=致所有的瘋子：青春、自由、烏托邦&caption=
+致所有的瘋子：青春、自由、烏托邦
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=致所有的瘋子：青春、自由、烏托邦&url=https://medium.com/@soundfury/%E8%87%B4%E6%89%80%E6%9C%89%E7%9A%84%E7%98%8B%E5%AD%90-%E9%9D%92%E6%98%A5-%E8%87%AA%E7%94%B1-%E7%83%8F%E6%89%98%E9%82%A6-becce6fd985d?source=rss-37ea7441b075------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>致所有的瘋子：青春、自由、烏托邦</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2019-05-11
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#soundfury">
+          soundfury
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://medium.com/@soundfury/%E8%87%B4%E6%89%80%E6%9C%89%E7%9A%84%E7%98%8B%E5%AD%90-%E9%9D%92%E6%98%A5-%E8%87%AA%E7%94%B1-%E7%83%8F%E6%89%98%E9%82%A6-becce6fd985d?source=rss-37ea7441b075------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="soundfury的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#soundfury 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1557562267000-->
+<p><a href="https://medium.com/@soundfury/%E8%87%B4%E6%89%80%E6%9C%89%E7%9A%84%E7%98%8B%E5%AD%90-%E9%9D%92%E6%98%A5-%E8%87%AA%E7%94%B1-%E7%83%8F%E6%89%98%E9%82%A6-becce6fd985d?source=rss-37ea7441b075------2">致所有的瘋子：青春、自由、烏托邦</a>
+——</p>
+
+<div>
+  <p>六十年代的美國政治、社會與文化風暴，如同台灣八十年代的政治、社會與文化風暴，是我的青春啟蒙。</p>
+  <p>在九十年代的開端，十八歲的我開始重新認識世界的今日與昨日。彼時的我開始參與學生運動，對於此前不同世代青年如何獻身於運動與革命充滿了熱情，奮力地去挖掘歷史，想要在一張張關於過去的書頁上看到通往未來人生的指引。</p>
+  <p>當我讀到《當代雜誌》第二、三期的六十年代封面故事，看完南方朔講述六十年代學運的專書《憤怒之愛》，整個內心世界開始崩塌，然後重建。</p>
+  <p>那是二十世紀最激情而反叛的年代，是想像力解放的年代，沒有一個年輕人不會被震動。</p>
+  <p>然而，我在遙遠的西方六十年代，看到的是遠方的美麗與瘋狂，是浪漫的召喚，但回首台灣歷史，當我看到從戰後知識青年被消失與殺害，到比我早幾年入學的學長姊們因為校園抗議與社會抗爭被記過被處分，讓我在黑夜中不斷流下眼淚。</p>
+  <p>這是屬於我所生長的島嶼的悲傷。</p>
+  <p>有為青年理當用青春與熱血去加入前人的行列，投入社會改造。二十歲我的如此相信。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*QXJsJNa-MBTc5KV8e0HTcw.jpeg" />
+  </figure>
+  <p>2.</p>
+  <p>十年之後，我在紐約哥倫比亞大學攻讀政治學博士，經常去一家燈光昏暗的店叫「匈牙利咖啡店」。學長說，68年哥大師生罷課時，他們會來這裡上課。</p>
+  <p>選擇來哥大念書，很大原因之一是我對68年的哥大學生佔領運動充滿了浪漫的想像。當然，2002年的紐約可能不是1968年的紐約了，那些反叛的煙硝似乎已全然散去。不過，我入學一年後，2003年美國開始伊拉克戰爭，校園出現六十年代以後最大的反戰聲浪，一個新的抗議時代又開始了。</p>
+  <p>除了哥大，我當然也去了格林威治村和下東區，考察艾倫金斯堡和傑克凱魯亞克在那裡留下的寫著詩歌的餅乾屑，去了東十一街那棟地下氣象人意外炸死自己的美麗公寓，現場聽了來自那個時代的歌聲如狄倫和尼爾楊。我甚至見到了幾位六十年代英美最重要的學運領袖：如今的哥大教授Todd Gitlin（我在一個大雪之夜去聽他談當代左翼政治），仍然活躍的左翼知識份子Tom Hayden（我在Strand Bookstore聽他講〈休倫港宣言〉四十週年），和英國新左派大將Tariq Ali（我在蘇活的一家獨立書店聽他回首68年學運）。</p>
+  <p>其實，所有關於當代的討論，從藝術、電影、音樂到政治，都不可能迴避六十年代的喧嘩與騷動。</p>
+  <p>（在那家昏暗的咖啡店，我寫下第一本書《聲音與憤怒：搖滾樂可以改變世界嗎？》，當然故事就是從六十年代開始。）</p>
+  <p>3.</p>
+  <p>六十年代並不真的那麼遙遠，也從來不曾離開我們。</p>
+  <p>種族平等，女性主義，迷你裙，避孕藥，環境保護，和平反戰，同志平權、嬉皮，性靈追尋，普普藝術，2001太空漫遊，實驗電影，搖滾樂，另類媒體…..</p>
+  <p>你可以寫下無數個那個時代的關鍵字，而每個字都深深塑造了這個世界的樣貌。</p>
+  <p>我們都是六十年代之子。</p>
+  <p>不過，雖然這段歷史對我們影響如此巨大而幽遠，在中文世界卻極少被完整書寫。對我來說，這是一本搏鬥了二十多年的書。我一直希望能找到時光穿梭機進入那個時代，去寫它的瘋狂、荒誕、勇氣，以及對當代我們的啟示。</p>
+  <p>2007年出版的《反叛的凝視》書中開始了這個嘗試，有人說那本書為台灣讀者補了一堂遲到太久的課。</p>
+  <p>《想像力的革命：1960年代的烏托邦追尋》是一個更大的企圖。我書寫了那個時代十五則迷人故事，這裡既有大時代的歷史分析，也有個人的青春生命。</p>
+  <p>60年代初期是青年理想主義試圖去界定一個世代的改革議程，伴隨著黑人民權運動和反戰運動的前進，經過嬉皮文化的誕生與死亡、青年反文化的蔓延，到了六十年代末期，是絕望與憤怒的蔓延，革命和暴力的出現。</p>
+  <p>但六十年代的尾聲不盡然是理想的告別，許多新的價值被提出，許多新的種子被種下，例如1969年的石牆運動成為同志運動的先聲，1968年創辦的《全球型錄》深深影響了史蒂夫賈伯斯和許多科技先行者對科技文化的理解。</p>
+  <p>1960 年代是人類史上第一次，年輕人有機會可以決定自己的未來，而他們真的創造了許多新的可能。</p>
+  <p>那真是一個瘋狂的時代 — — 但一如六零年代之子賈伯斯在蘋果電腦廣告中說，「只有瘋狂到相信自己可以改變世界的人，才能真的改變世界」。</p>
+  <p>一整個世代瘋狂的文青、知青、憤青、不甘於乖乖被主流規範的人、不願意被體制決定命運的人，想要追求自由意義的人，用歌聲與文字衝擊著思想，用抗議和炸彈撼動著體制，用想像力去解放這個世界。他們要追求的是政治的、文化的、生活的烏托邦：不論那是一個搖滾的胡士托國度（Woodstock nation），一個愛與花朵的嬉皮公社，一個沒有戰爭的和平世界，或是一個種族平等、性別平等、人人可以做自己的許諾之地。</p>
+  <p>當然，那個烏托邦遠遠還沒有實現，如今看來甚至顯得天真和傻勁，但難道我們就只能變得世故守舊，選擇背向前往理想世界的航道嗎？我想，只要我們願意去打開想像力，去冒險走向那些人少的小徑，去抵抗壓迫與不義，去相信另一種世界是可能的，那麼我們已經在路上了。</p>
+  <p>不論你是青春正盛，或者已然告別青春，讓我們在這條路上彼此相伴，一起同行，當一個相信世界可以被改變的瘋子。</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=becce6fd985d" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#soundfury 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2021-05-22/%E5%89%8D%E5%BE%80%E6%88%91%E5%80%91%E6%9C%AA%E6%9B%BE%E7%9F%A5%E6%9B%89%E7%9A%84%E5%8F%B0%E7%81%A3%E6%AD%B7%E5%8F%B2/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2019-05-11/%E7%BE%8E%E5%9C%8B%E9%9B%BB%E8%A6%96%E5%8F%B2%E4%B8%8A%E6%9C%80%E4%BB%A4%E4%BA%BA%E9%9B%A3%E5%BF%98%E7%9A%84%E8%BE%AF%E8%AB%96/">最早</a>--</span>
+    
+      <li>
+        <time>2019-07-15</time>
+        <a href="https://nodebe4.github.io/teahouse/2019-07-15/%E5%8F%B0%E7%81%A3%E7%9A%84%E9%81%8E%E5%8E%BB%E8%88%87%E6%9C%AA%E4%BE%86%E7%9A%84%E6%88%B0%E7%88%AD/">
+          台灣的過去與未來的戰爭
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2019-07-14</time>
+        <a href="https://nodebe4.github.io/teahouse/2019-07-14/%E8%AE%93%E7%A4%BE%E6%9C%83%E4%B8%BB%E7%BE%A9%E5%86%8D%E6%AC%A1%E9%85%B7%E8%B5%B7%E4%BE%86/">
+          讓社會主義再次酷起來
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2019-05-11</time>
+        <a href="https://nodebe4.github.io/teahouse/2019-05-11/%E7%BE%8E%E5%9C%8B%E9%9B%BB%E8%A6%96%E5%8F%B2%E4%B8%8A%E6%9C%80%E4%BB%A4%E4%BA%BA%E9%9B%A3%E5%BF%98%E7%9A%84%E8%BE%AF%E8%AB%96/">
+          美國電視史上最令人難忘的辯論
+        </a>
+      </li>
+    
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2019-05-11/%E7%BE%8E%E5%9C%8B%E9%9B%BB%E8%A6%96%E5%8F%B2%E4%B8%8A%E6%9C%80%E4%BB%A4%E4%BA%BA%E9%9B%A3%E5%BF%98%E7%9A%84%E8%BE%AF%E8%AB%96/">
+            前一篇：美國電視史上最令人難忘的辯論
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2019-07-14/%E8%AE%93%E7%A4%BE%E6%9C%83%E4%B8%BB%E7%BE%A9%E5%86%8D%E6%AC%A1%E9%85%B7%E8%B5%B7%E4%BE%86/">
+            後一篇：讓社會主義再次酷起來
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2019-05-11/%E7%BE%8E%E5%9C%8B%E9%9B%BB%E8%A6%96%E5%8F%B2%E4%B8%8A%E6%9C%80%E4%BB%A4%E4%BA%BA%E9%9B%A3%E5%BF%98%E7%9A%84%E8%BE%AF%E8%AB%96/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2019-07-14/%E8%AE%93%E7%A4%BE%E6%9C%83%E4%B8%BB%E7%BE%A9%E5%86%8D%E6%AC%A1%E9%85%B7%E8%B5%B7%E4%BE%86/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2019-07-14/%E8%AE%93%E7%A4%BE%E6%9C%83%E4%B8%BB%E7%BE%A9%E5%86%8D%E6%AC%A1%E9%85%B7%E8%B5%B7%E4%BE%86/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2019-05-11/%E7%BE%8E%E5%9C%8B%E9%9B%BB%E8%A6%96%E5%8F%B2%E4%B8%8A%E6%9C%80%E4%BB%A4%E4%BA%BA%E9%9B%A3%E5%BF%98%E7%9A%84%E8%BE%AF%E8%AB%96/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2019-05-11/%E7%BE%8E%E5%9C%8B%E9%9B%BB%E8%A6%96%E5%8F%B2%E4%B8%8A%E6%9C%80%E4%BB%A4%E4%BA%BA%E9%9B%A3%E5%BF%98%E7%9A%84%E8%BE%AF%E8%AB%96/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2019-07-14/%E8%AE%93%E7%A4%BE%E6%9C%83%E4%B8%BB%E7%BE%A9%E5%86%8D%E6%AC%A1%E9%85%B7%E8%B5%B7%E4%BE%86/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<soundfury>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2019-07-14/%E8%AE%93%E7%A4%BE%E6%9C%83%E4%B8%BB%E7%BE%A9%E5%86%8D%E6%AC%A1%E9%85%B7%E8%B5%B7%E4%BE%86/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<soundfury>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2019-05-11/%E7%BE%8E%E5%9C%8B%E9%9B%BB%E8%A6%96%E5%8F%B2%E4%B8%8A%E6%9C%80%E4%BB%A4%E4%BA%BA%E9%9B%A3%E5%BF%98%E7%9A%84%E8%BE%AF%E8%AB%96/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
