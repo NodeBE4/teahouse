@@ -1,0 +1,16 @@
+---
+layout: post
+title: "【當年今日】音樂才女Amy Winehouse逝世十週年  透過三位攝影師作品來懷緬她"
+date: 2021-07-23T03:26:25.000Z
+author: 顯影PhotogStory
+from: https://matters.news/@PhotogStory/%E7%95%B6%E5%B9%B4%E4%BB%8A%E6%97%A5-%E9%9F%B3%E6%A8%82%E6%89%8D%E5%A5%B3amy-winehouse%E9%80%9D%E4%B8%96%E5%8D%81%E9%80%B1%E5%B9%B4-%E9%80%8F%E9%81%8E%E4%B8%89%E4%BD%8D%E6%94%9D%E5%BD%B1%E5%B8%AB%E4%BD%9C%E5%93%81%E4%BE%86%E6%87%B7%E7%B7%AC%E5%A5%B9-bafyreiaummhltqbmy6vgfzv6oapqb2ajpkhisngfmgxpqiy5n554avytly
+tags: [ Matters ]
+categories: [ Matters ]
+---
+<!--1627010785000-->
+[【當年今日】音樂才女Amy Winehouse逝世十週年  透過三位攝影師作品來懷緬她](https://matters.news/@PhotogStory/%E7%95%B6%E5%B9%B4%E4%BB%8A%E6%97%A5-%E9%9F%B3%E6%A8%82%E6%89%8D%E5%A5%B3amy-winehouse%E9%80%9D%E4%B8%96%E5%8D%81%E9%80%B1%E5%B9%B4-%E9%80%8F%E9%81%8E%E4%B8%89%E4%BD%8D%E6%94%9D%E5%BD%B1%E5%B8%AB%E4%BD%9C%E5%93%81%E4%BE%86%E6%87%B7%E7%B7%AC%E5%A5%B9-bafyreiaummhltqbmy6vgfzv6oapqb2ajpkhisngfmgxpqiy5n554avytly)
+------
+
+<div>
+<figure class="image"><img src="https://assets.matters.news/embed/8ace41ba-5075-4614-9fd9-b5498b49b381.jpeg" data-asset-id="8ace41ba-5075-4614-9fd9-b5498b49b381" referrerpolicy="no-referrer"><figcaption><span>Amy Winehouse by Terry Richardson (圖片由貝浩登畫廊提供)</span></figcaption></figure><p>2007年，<a href="https://matters.news/@PhotogStory/%E8%BA%AB%E9%AB%94%E8%88%87%E6%80%A7%E9%AD%85%E5%8A%9B%E4%B9%8B%E5%85%AB-%E6%99%82%E5%B0%9A%E6%94%9D%E5%BD%B1%E7%95%8C%E7%9A%84%E5%A3%9E%E5%AD%A9%E5%AD%90terry-richardson-%E5%BE%9Eporn-chic%E5%88%B0%E6%80%A7%E9%86%9C%E8%81%9E-bafyreifiqj3vj2vnfj4rhgmsrabdqxyewjjf3c2q3xxzuobigwhldvmak4" target="_blank">Terry Richardson</a>為美國音樂雜誌《SPIN》拍攝Amy Winehouse，熟悉攝影師的人，都知道他是位放浪形骸的壞孩子。他形容當Amy拿著一瓶威士忌與男友Blake Fielder-Civil出現時，雙方已準備拍攝一些特別的畫面，攝影師原本建議她嘗試砸爛結他，然而卻被Amy拒絕了，然後說music is precious，這一點很值得人欣賞。Terry Richardson回憶當日用一整日時間拍攝，拍攝她的紋身、她和男友親吻的畫面，Amy還抱起公雞，而攝影師最喜歡的一張，是Amy與小雞對望/對唱的照片。</p><figure class="image"><img src="https://assets.matters.news/embed/1df01bc8-8e57-4b7c-9cfa-30477dc6e6a7.jpeg" data-asset-id="1df01bc8-8e57-4b7c-9cfa-30477dc6e6a7" referrerpolicy="no-referrer"><figcaption><span>Amy Winehouse by Terry O’Neill (圖片由Picture This Gallery提供)</span></figcaption></figure><p>2008年，前南非總統曼德拉在倫敦Hyde Park舉行九十歲慶祝活動，英國攝影師Terry O’Neill在現場拍攝前來祝賀曼德拉的名人，Amy Winehouse正是其中一位表演嘉賓。他覺得Amy非常有天賦，也非常喜歡她的聲音，第二張專輯《Back to Black》更成為英國21世紀銷量最好的第二名，可惜世人更關注她濫藥酗酒的新聞。</p><p>實際上，Amy不時要前往康復中心，當日她正是從康復中心前往現場表演，表演完之後亦會回去。據Terry憶述，當時只有數分鐘拍攝時間，他讓Amy自然地站着叉腰，很快地拍攝數張照片，效果非常自然率真，Terry也非常喜歡。(圖片由Picture This Gallery提供)</p><figure class="image"><img src="https://assets.matters.news/embed/0eff57d3-5de3-4721-85b9-28af3fa0a613.jpeg" data-asset-id="0eff57d3-5de3-4721-85b9-28af3fa0a613" referrerpolicy="no-referrer"><figcaption><span>Amy Winehouse by Ard Gelinck (From  https://www.instagram.com/ardgelinck/)</span></figcaption></figure><p>荷蘭平面設計師Ard Gelinck在2017年前開始創作「Then & Now」系列，利用Photoshop將名人的舊照片與近照合併在同一畫面，來個穿越時空的合照，讓人不禁感慨歲月的痕跡。這系列作品至今已有好幾百張照片，在網絡上大受歡迎，其IG追隨者現時也逾29萬。 </p><p>Ard Gelinck說創作對象通常是隨機挑選的，有時則以名人生日為靈感，尤其是流行音樂歌手，當中也有多位過去十年逝世的熟悉面孔，如Amy Winehouse、David Bowie、Prince及George Michael等，令人緬懷這些巨星的殞落。在Amy Winehouse的照片中，還出現她兒時身穿芭蕾舞裙的照片，這與她後來全身紋身、高聳的蜂窩頭髮型形象形成對比，而陪伴她成長的習慣，是她很喜歡穿上粉紅色的芭蕾舞鞋。</p><p> ·顯影IG(雙語內容): <a href="https://www.instagram.com/photogstory/" target="_blank">https://www.instagram.com/photogstory/</a></p><p> </p>
+</div>
