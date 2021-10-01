@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Dennis Stock捕捉優雅與迷惘——《阿飛正傳》不羈影星James Dean"
+date: 2021-10-01T04:50:33.000Z
+author: 顯影PhotogStory
+from: https://matters.news/@PhotogStory/dennis-stock%E6%8D%95%E6%8D%89%E5%84%AA%E9%9B%85%E8%88%87%E8%BF%B7%E6%83%98-%E9%98%BF%E9%A3%9B%E6%AD%A3%E5%82%B3-%E4%B8%8D%E7%BE%88%E5%BD%B1%E6%98%9Fjames-dean-bafyreihzjtvrhysqsuaidccqj6wkv4aeeav3zrousvhvyodwi2fs5eh7mq
+tags: [ Matters ]
+categories: [ Matters ]
+---
+<!--1633063833000-->
+[Dennis Stock捕捉優雅與迷惘——《阿飛正傳》不羈影星James Dean](https://matters.news/@PhotogStory/dennis-stock%E6%8D%95%E6%8D%89%E5%84%AA%E9%9B%85%E8%88%87%E8%BF%B7%E6%83%98-%E9%98%BF%E9%A3%9B%E6%AD%A3%E5%82%B3-%E4%B8%8D%E7%BE%88%E5%BD%B1%E6%98%9Fjames-dean-bafyreihzjtvrhysqsuaidccqj6wkv4aeeav3zrousvhvyodwi2fs5eh7mq)
+------
+
+<div>
+<figure class="image"><img src="https://assets.matters.news/embed/e1de3449-3705-4281-8df9-3bcc38ec6e19.jpeg" data-asset-id="e1de3449-3705-4281-8df9-3bcc38ec6e19" referrerpolicy="no-referrer"><figcaption><span></span></figcaption></figure><p>攝影師與明星，往往有千絲萬縷的關係，互惠互利，也可成為知己。2015年上映的電影《捕捉占士甸》（Life），講述美國攝影師Dennis Stock（1928－2010）與一代不羈影星占士甸（James Dean，1931-1955）的故事。1955年，Dennis憑藉一輯拍攝占士甸的照片成名，之後也拍攝過Louis Armstrong等爵士歌手、夢露及Audrey Hepburn等名人；記錄過1960年代的嬉皮士運動，也為建築物與自然風光留下倩影。從影近60年，風格多變，人們最念念不忘的，仍是他與占士甸的回憶。</p><figure class="image"><img src="https://assets.matters.news/embed/479e2253-2b0c-4f73-852d-c291eebf7e22.jpeg" data-asset-id="479e2253-2b0c-4f73-852d-c291eebf7e22" referrerpolicy="no-referrer"><figcaption><span></span></figcaption></figure><p>Dennis生於經濟大蕭條時期的紐約，兒時家中經濟拮据，經常搬家，甚至住過沒暖水的公寓。十九歲時加入海軍服役，四年後回到紐約，曾在學校跟隨著名攝影師Berenice Abbott短暫學習攝影，之後也曾擔任另一著名攝影師Gjon Mili學徒。1951年，他憑藉一系列拍攝當地東德移民圖片故事，贏得《Life》雜誌舉辦的年輕攝影師獎項，之後更獲攝影師Robert Capa邀請，成為著名攝影通訊社Magnum Photos的合作會員。浮浮沉沉幾年，曾在巴黎拍攝，後來到洛杉磯荷里活拍攝名人生活，卻一直找不到方向，直到遇見占士甸，一個改變他一生的演員。</p><figure class="image"><img src="https://assets.matters.news/embed/df256f8c-7c9e-4e6c-b2f8-bfbb8d8a5c4e.jpeg" data-asset-id="df256f8c-7c9e-4e6c-b2f8-bfbb8d8a5c4e" referrerpolicy="no-referrer"><figcaption><span></span></figcaption></figure><p>占士甸是那個時代的icon，發生車禍身亡時僅24歲，生前拍過三部電影，絕對是天妒英才。憑藉不羈的造型，他在影迷心中留下的印象至今不滅，當中尤以1955年Dennis Stock拍攝的形象最廣為人知。當時占士甸剛拍攝完首部電影《East of Eden》，Dennis認識他時電影仍未上映，看完首映後，他覺得這位年輕演員會一舉成名。Dennis生活捉襟見肘，長期與妻兒分離，攝影生涯也迷茫，極需一個機會來證明自己。占士甸也很迷惘，雖然離成功一步之遙，卻無法確定自己想要甚麼，兜兜轉轉下，最終還是接受Dennis邀請。</p><figure class="image"><img src="https://assets.matters.news/embed/85a50224-dacc-45a8-9225-5c6834ff0a80.jpeg" data-asset-id="85a50224-dacc-45a8-9225-5c6834ff0a80" referrerpolicy="no-referrer"><figcaption><span></span></figcaption></figure><p>在紐約時代廣場前，占士甸穿着外套、口中咬着香煙，在微雨中緩步前行，Dennis在他前面邊走邊拍攝，造就出那個經典的不羈形象。之後也有幾個攝影師拍攝過占士甸，不過Dennis是唯一一個與他一齊踏足家鄉拍攝的攝影師，那批作品與時代廣場的照片一同登在《Life》雜誌，獲得很好迴響。</p><figure class="image"><img src="https://assets.matters.news/embed/8a6fe356-6a7c-4aef-b0eb-090ef83e3e2c.jpeg" data-asset-id="8a6fe356-6a7c-4aef-b0eb-090ef83e3e2c" referrerpolicy="no-referrer"><figcaption><span></span></figcaption></figure><p>照片改寫兩人命運，但軌跡卻截然不同，占士甸因車禍命赴黃泉，僅留下不羈象徵為後世所傳頌，Dennis則平步青雲，繼續探索不同的題材，拍攝過Louis Armstrong、Billie Holiday、Mike Davis等爵士音樂家，也在加州、新墨西哥州等地記錄方興未艾的嬉皮士運動。他也是彩色攝影的先行者之一，晚年的他仍繼續不停探索，拍攝許多自然風景的彩色照片，對拍攝建築物及花朵也甚有研究。</p><p>·歡迎追蹤「顯影」IG（<a href="https://www.instagram.com/photogstory/" target="_blank">https://www.instagram.com/photogstory/</a>）及透過Payme（ <a href="http://payme.hsbc/photogstory" target="_blank">payme.hsbc/photogstory</a> ）支持「顯影」繼續攝影寫作。</p>
+</div>
