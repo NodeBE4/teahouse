@@ -121,6 +121,7 @@ exclude:
   - debug.sh
   - perform.js
   - package*
+  - archived
 
 feed:
   posts_limit: 100
