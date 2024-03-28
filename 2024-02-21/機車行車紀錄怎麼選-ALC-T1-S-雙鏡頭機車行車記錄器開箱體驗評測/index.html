@@ -1,0 +1,3750 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>機車行車紀錄怎麼選？ALC T1-S 雙鏡頭機車行車記錄器開箱體驗評測 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+機車行車紀錄怎麼選？ALC T1-S 雙鏡頭機車行車記錄器開箱體驗評測
+——
+" />
+    <meta property="og:description" content="
+機車行車紀錄怎麼選？ALC T1-S 雙鏡頭機車行車記錄器開箱體驗評測
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="機車行車紀錄怎麼選？ALC T1-S 雙鏡頭機車行車記錄器開箱體驗評測" />
+    <meta property="twitter:title" content="機車行車紀錄怎麼選？ALC T1-S 雙鏡頭機車行車記錄器開箱體驗評測" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (3568)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40penfarming%2F%25E6%25A9%259F%25E8%25BB%258A%25E8%25A1%258C%25E8%25BB%258A%25E7%25B4%2580%25E9%258C%2584%25E6%2580%258E%25E9%25BA%25BC%25E9%2581%25B8-alc-t1-s-%25E9%259B%2599%25E9%258F%25A1%25E9%25A0%25AD%25E6%25A9%259F%25E8%25BB%258A%25E8%25A1%258C%25E8%25BB%258A%25E8%25A8%2598%25E9%258C%2584%25E5%2599%25A8%25E9%2596%258B%25E7%25AE%25B1%25E9%25AB%2594%25E9%25A9%2597%25E8%25A9%2595%25E6%25B8%25AC-bafybeiez47fes37zrj5uoc2rikn57f45k7kvfo7tbasyuzmho2vr36gdci" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@penfarming/%E6%A9%9F%E8%BB%8A%E8%A1%8C%E8%BB%8A%E7%B4%80%E9%8C%84%E6%80%8E%E9%BA%BC%E9%81%B8-alc-t1-s-%E9%9B%99%E9%8F%A1%E9%A0%AD%E6%A9%9F%E8%BB%8A%E8%A1%8C%E8%BB%8A%E8%A8%98%E9%8C%84%E5%99%A8%E9%96%8B%E7%AE%B1%E9%AB%94%E9%A9%97%E8%A9%95%E6%B8%AC-bafybeiez47fes37zrj5uoc2rikn57f45k7kvfo7tbasyuzmho2vr36gdci" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@penfarming/%E6%A9%9F%E8%BB%8A%E8%A1%8C%E8%BB%8A%E7%B4%80%E9%8C%84%E6%80%8E%E9%BA%BC%E9%81%B8-alc-t1-s-%E9%9B%99%E9%8F%A1%E9%A0%AD%E6%A9%9F%E8%BB%8A%E8%A1%8C%E8%BB%8A%E8%A8%98%E9%8C%84%E5%99%A8%E9%96%8B%E7%AE%B1%E9%AB%94%E9%A9%97%E8%A9%95%E6%B8%AC-bafybeiez47fes37zrj5uoc2rikn57f45k7kvfo7tbasyuzmho2vr36gdci&text=機車行車紀錄怎麼選？ALC T1-S 雙鏡頭機車行車記錄器開箱體驗評測&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@penfarming/%E6%A9%9F%E8%BB%8A%E8%A1%8C%E8%BB%8A%E7%B4%80%E9%8C%84%E6%80%8E%E9%BA%BC%E9%81%B8-alc-t1-s-%E9%9B%99%E9%8F%A1%E9%A0%AD%E6%A9%9F%E8%BB%8A%E8%A1%8C%E8%BB%8A%E8%A8%98%E9%8C%84%E5%99%A8%E9%96%8B%E7%AE%B1%E9%AB%94%E9%A9%97%E8%A9%95%E6%B8%AC-bafybeiez47fes37zrj5uoc2rikn57f45k7kvfo7tbasyuzmho2vr36gdci&title=機車行車紀錄怎麼選？ALC T1-S 雙鏡頭機車行車記錄器開箱體驗評測" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@penfarming/%E6%A9%9F%E8%BB%8A%E8%A1%8C%E8%BB%8A%E7%B4%80%E9%8C%84%E6%80%8E%E9%BA%BC%E9%81%B8-alc-t1-s-%E9%9B%99%E9%8F%A1%E9%A0%AD%E6%A9%9F%E8%BB%8A%E8%A1%8C%E8%BB%8A%E8%A8%98%E9%8C%84%E5%99%A8%E9%96%8B%E7%AE%B1%E9%AB%94%E9%A9%97%E8%A9%95%E6%B8%AC-bafybeiez47fes37zrj5uoc2rikn57f45k7kvfo7tbasyuzmho2vr36gdci&title=機車行車紀錄怎麼選？ALC T1-S 雙鏡頭機車行車記錄器開箱體驗評測" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=機車行車紀錄怎麼選？ALC T1-S 雙鏡頭機車行車記錄器開箱體驗評測&body=
+機車行車紀錄怎麼選？ALC T1-S 雙鏡頭機車行車記錄器開箱體驗評測
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@penfarming/%E6%A9%9F%E8%BB%8A%E8%A1%8C%E8%BB%8A%E7%B4%80%E9%8C%84%E6%80%8E%E9%BA%BC%E9%81%B8-alc-t1-s-%E9%9B%99%E9%8F%A1%E9%A0%AD%E6%A9%9F%E8%BB%8A%E8%A1%8C%E8%BB%8A%E8%A8%98%E9%8C%84%E5%99%A8%E9%96%8B%E7%AE%B1%E9%AB%94%E9%A9%97%E8%A9%95%E6%B8%AC-bafybeiez47fes37zrj5uoc2rikn57f45k7kvfo7tbasyuzmho2vr36gdci" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@penfarming/%E6%A9%9F%E8%BB%8A%E8%A1%8C%E8%BB%8A%E7%B4%80%E9%8C%84%E6%80%8E%E9%BA%BC%E9%81%B8-alc-t1-s-%E9%9B%99%E9%8F%A1%E9%A0%AD%E6%A9%9F%E8%BB%8A%E8%A1%8C%E8%BB%8A%E8%A8%98%E9%8C%84%E5%99%A8%E9%96%8B%E7%AE%B1%E9%AB%94%E9%A9%97%E8%A9%95%E6%B8%AC-bafybeiez47fes37zrj5uoc2rikn57f45k7kvfo7tbasyuzmho2vr36gdci&title=機車行車紀錄怎麼選？ALC T1-S 雙鏡頭機車行車記錄器開箱體驗評測&caption=
+機車行車紀錄怎麼選？ALC T1-S 雙鏡頭機車行車記錄器開箱體驗評測
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=機車行車紀錄怎麼選？ALC T1-S 雙鏡頭機車行車記錄器開箱體驗評測&url=https://matters.news/@penfarming/%E6%A9%9F%E8%BB%8A%E8%A1%8C%E8%BB%8A%E7%B4%80%E9%8C%84%E6%80%8E%E9%BA%BC%E9%81%B8-alc-t1-s-%E9%9B%99%E9%8F%A1%E9%A0%AD%E6%A9%9F%E8%BB%8A%E8%A1%8C%E8%BB%8A%E8%A8%98%E9%8C%84%E5%99%A8%E9%96%8B%E7%AE%B1%E9%AB%94%E9%A9%97%E8%A9%95%E6%B8%AC-bafybeiez47fes37zrj5uoc2rikn57f45k7kvfo7tbasyuzmho2vr36gdci" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>機車行車紀錄怎麼選？ALC T1-S 雙鏡頭機車行車記錄器開箱體驗評測</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2024-02-21
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 閱讀筆耕</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@penfarming/%E6%A9%9F%E8%BB%8A%E8%A1%8C%E8%BB%8A%E7%B4%80%E9%8C%84%E6%80%8E%E9%BA%BC%E9%81%B8-alc-t1-s-%E9%9B%99%E9%8F%A1%E9%A0%AD%E6%A9%9F%E8%BB%8A%E8%A1%8C%E8%BB%8A%E8%A8%98%E9%8C%84%E5%99%A8%E9%96%8B%E7%AE%B1%E9%AB%94%E9%A9%97%E8%A9%95%E6%B8%AC-bafybeiez47fes37zrj5uoc2rikn57f45k7kvfo7tbasyuzmho2vr36gdci" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1708495484000-->
+<p><a href="https://matters.news/@penfarming/%E6%A9%9F%E8%BB%8A%E8%A1%8C%E8%BB%8A%E7%B4%80%E9%8C%84%E6%80%8E%E9%BA%BC%E9%81%B8-alc-t1-s-%E9%9B%99%E9%8F%A1%E9%A0%AD%E6%A9%9F%E8%BB%8A%E8%A1%8C%E8%BB%8A%E8%A8%98%E9%8C%84%E5%99%A8%E9%96%8B%E7%AE%B1%E9%AB%94%E9%A9%97%E8%A9%95%E6%B8%AC-bafybeiez47fes37zrj5uoc2rikn57f45k7kvfo7tbasyuzmho2vr36gdci">機車行車紀錄怎麼選？ALC T1-S 雙鏡頭機車行車記錄器開箱體驗評測</a>
+——</p>
+
+<div>
+  <p>身為一名「穿梭城市、穿越牛熊」的創作者，平常會使用電動機車／滑板車進行短程移動；關於行車的風險管理，我認為除了防衛性駕駛，還有兩件事要跟進，第一個步驟是蒐證，第二個步驟是車險。<strong>除了「預防」（防衛性駕駛）外，也要佈局「治療」（蒐證＋車險）的準備措施</strong>。</p>
+  <p>感謝 <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.secufirst.com.tw/">ALC 天鉞電子</a> 公司捎來了他們家的行車記錄器產品，這款工具可捕捉舉證資料，<strong>讓車險在發揮「損害填補」功能時，背後得到良好的支持</strong>。</p>
+  <p>本文一開始會介紹 ALC 天鉞電子是什麼來頭，並分享一些關於機車行車記錄器選購上的看法，最後實際對「<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.secufirst.com.tw/products/t1-s-%E9%9B%99%E9%8F%A1%E9%A0%AD%E6%A9%9F%E8%BB%8A%E8%A1%8C%E8%BB%8A%E8%A8%98%E9%8C%84%E5%99%A8">ALC T1-S 雙鏡頭機車行車記錄器</a>」進行開箱體驗。</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/50d24c7a-9823-4bf8-a68d-523e8023dc9c.png/public" referrerpolicy="no-referrer" />    <figcaption>
+天鉞電子 ALC T1-S 雙鏡頭機車行車記錄器
+    </figcaption>
+  </figure>
+  <hr />
+  <h2 id="alc-"><strong>ALC 天鉞電子是什麼？</strong></h2>
+  <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.secufirst.com.tw/">ALC 天鉞電子</a> 成立於1992 年，是一間深耕於「安防系統、智能家居」領域超過 20 年的上櫃公司（股票代碼：5251）。除了在台灣市場的業務，其產品銷售網路遍布歐洲、北美和日本等地。天鉞電子擁有兩個自有品牌系列：</p>
+  <ol>
+    <li>
+      <p><strong>SecuFirst 品牌</strong><br />SecuFirst 可以理解為一切與「住、在內」安全有關的產品線，例如數位無線居家影音監視器、數位無線監視錄影機、智慧型網路攝影機、智能電子門鎖等系列等。</p>
+    </li>
+    <li>
+      <p><strong>ALC 品牌</strong><br />ALC 是天鉞電子最新一代的自有品牌，品牌視覺元素變得更鮮明、更年輕，而且名稱也更好唸、更好記；想把是把基於 SecuFirst 中的攝影鏡頭技術獨立拿出來運用，並拓展至更多領域，例如行車記錄器等「行、在外」的應用。</p>
+    </li>
+  </ol>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/d0bd3d89-3739-460c-96e9-8e9f3e60af0f.png/public" referrerpolicy="no-referrer" />    <figcaption>
+天鉞電子兩大產品線：SecuFirst 和 ALC
+    </figcaption>
+  </figure>
+  <p>而今天我們要開箱體驗的產品，是天鉞電子 ALC 品牌「行車記錄器」分類底下的「T1-S 雙鏡頭機車行車記錄器」。</p>
+  <hr />
+  <h2 id="alc-t1-s-"><strong>機車行車記錄器怎麼選？ALC T1-S 合格嗎？</strong></h2>
+  <p>在等待「ALC T1-S 雙鏡頭機車行車記錄器」寄送的這段空檔，我有幸與天鉞電子的商品業務部主管 Aaron Chung 本人交流；多年前，他從基層門市開始歷練，一路站上至今天的職位，新品牌 ALC 的概念、視覺元素、生產流程以及市場通路的開拓，都是他一手打造。</p>
+  <p>我也把握機會向他請益：站在消費者角度來看，購買一款機車行車紀錄器時，應該注意哪些事項？以下是 Aaron 的建議，並且也納入 ALC 的產品設計考量。</p>
+  <h3 id="alc-t1-s--1"><strong>≣ ALC T1-S 產品設計考量點一：貼合眼睛視線</strong></h3>
+  <p>有些人選擇把機車行車記錄器嵌在「車身」上，但 Aaron 認為這樣子不太理想，他建議機車行車記錄器一定要安裝在「安全帽」上，理由有二。</p>
+  <p>第ㄧ，假設通勤過程中，左／右側蠻大的角度出現重要畫面，因為轉頭比轉車身來的容易，你才能更<strong>即時地</strong>捕捉必要的關鍵影像。</p>
+  <p>第二，如果機車行車記錄器嵌在車身上，距離眼睛視線較遠，你可能較難捕捉到<strong>眼見即得</strong>的情況，導致實際錄影與肉眼觀察時的畫面，存在一定的落差。</p>
+  <blockquote>
+    <p>「我建議大家把 ALC T1-S 裝在安全帽的左右兩側，其次是裝在頭頂上（很像哆拉 A 夢竹蜻蜓 XD），這是為了貼合眼睛的視線。」Aaron 說道。</p>
+  </blockquote>
+  <p>　</p>
+  <h3 id="alc-t1-s--2"><strong>≣ ALC T1-S 產品設計考量點二：可調整傾斜度</strong></h3>
+  <p>確定了 ALC T1-S 必須裝在安全帽以後，Aaron 進一步思考產品的靈活性。</p>
+  <p>順著這思路，Aaron 讓機車行車記錄器可以快速自由拆裝，並且測試了數十種與機子連接的支架，除了壓力測試材質是否耐用，他還重視支架一定要有「轉軸」。</p>
+  <blockquote>
+    <p>「因為母座一旦貼在帽子上就不太容易改動，所以讓消費者可以透過轉軸來調整 ALC T1-S 的拍攝角度，提高容錯率。」這是 Aaron 的想法。</p>
+  </blockquote>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/a7f5a7d0-5314-42f6-96c1-c090df729dc4.png/public" referrerpolicy="no-referrer" />    <figcaption>
+天鉞電子 ALC T1-S 雙鏡頭機車行車記錄器配件一覽
+    </figcaption>
+  </figure>
+  <h3 id="alc-t1-s--3"><strong>≣ ALC T1-S 產品設計考量點三：客製化的體驗</strong></h3>
+  <p>市面上很多與行車記錄器連接的 App 都是外包給第三方公司的「公版」，除了介面缺乏繁體中文顯示外，也不能打造「客製化」的使用者體驗。有鑑於此，Aaron 決定 ALC 產品線必須有自己的獨立 ALC Cam 手機應用程式。</p>
+  <p>為大家附上 ALC Cam 的下載點（<a target="_blank" rel="noopener noreferrer nofollow" href="https://apps.apple.com/tw/app/alc-cam/id6461349589">Apple</a>／<a target="_blank" rel="noopener noreferrer nofollow" href="https://play.google.com/store/apps/details?id=com.vidure.alccam">Android</a>）。</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/ef2453b1-2890-432b-aa1d-36adb3470a54.png/public" referrerpolicy="no-referrer" />    <figcaption>
+天鉞電子 ALC T1-S 雙鏡頭機車行車記錄器 App
+    </figcaption>
+  </figure>
+  <hr />
+  <h2 id="alc-t1-s--4"><strong>ALC T1-S 雙鏡頭機車行車記錄器開箱體驗</strong></h2>
+  <p>先附上幾張 ALC T1-S 的產品實拍圖，從外盒包裝到內容物一覽：</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/0b2441f4-9f0f-48f1-956e-6f85a204a4c4.jpeg/public" referrerpolicy="no-referrer" />    <figcaption>
+ALC T1-S 雙鏡頭機車行車記錄器本體：外盒
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/c13bba7a-2300-436e-ba18-62e7e48dc802.jpeg/public" referrerpolicy="no-referrer" />    <figcaption>
+ALC T1-S 雙鏡頭機車行車記錄器本體：開箱拆封
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/9eb11ec9-9daa-4762-8bff-22d9117901e8.jpeg/public" referrerpolicy="no-referrer" />    <figcaption>
+ALC T1-S 雙鏡頭機車行車記錄器本體：內容物一覽
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/abb2e8af-8dd6-48ed-b503-801cfa0480b8.jpeg/public" referrerpolicy="no-referrer" />    <figcaption>
+ALC T1-S 雙鏡頭機車行車記錄器：本體
+    </figcaption>
+  </figure>
+  <h3 id="alc-t1-s--5"><strong>≣ ALC T1-S 組裝說明／教學</strong></h3>
+  <p>參照天鉞電子為 ALC T1-S 錄製的組裝教學影片，輕鬆 DIY 搞定！</p>
+  <figure class="embed embed-video" data-provider="youtube">
+    <div class="iframe-container">
+      <iframe src="https://www.youtube.com/embed/O8GZngFVitA?rel=0" loading="lazy" allowfullscreen="" frameborder="0"></iframe>
+    </div>
+    <figcaption></figcaption>
+  </figure>
+  <h3 id="alc-t1-s--6"><strong>≣ ALC T1-S 實際體驗</strong></h3>
+  <p>ALC T1-S 的操作是簡單的，最常用的功能就這些了：</p>
+  <ul>
+    <li>
+      <p>和一般 3C 產品一樣，<strong>長壓電源鍵</strong>是開／關機。</p>
+    </li>
+    <li>
+      <p>開機後自動進行錄影（藍燈慢閃），<strong>短按一下電源鍵</strong>停止錄影（藍燈恆亮），短按一下又開始錄影。</p>
+    </li>
+    <li>
+      <p>停止錄影的狀態下，<strong>短按兩下電源鍵</strong>開啟 WiFi 連線（綠燈恆亮），這是當你想要讓專屬 ALC Cam App 連接行車記錄器、查看錄影影片時才會啟用。</p>
+    </li>
+  </ul>
+  <p>不過那「<strong>短按兩下</strong>」按得太快或太慢都不成，要稍微適應（練習）抓最甜蜜點的間隔頻率。後來 Aaron 跟我說可以去官網的「<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.secufirst.com.tw/pages/%E6%89%8B%E5%86%8A%E8%BB%9F%E9%AB%94">手冊／軟體</a>」專區下載並更新韌體，更新完「<strong>短按兩下</strong>」的判定會變得比較寬鬆，更容易與手機 App 做配對。</p>
+  <p>＊</p>
+  <p>實際上路錄製一段畫面，我嵌入 ALC T1-S 的位置落在安全帽右側和視線差不多的高度，可以看到畫質是相當清楚的。</p>
+  <p>由於有廣角的關係，影像邊緣的弧度變形是正常的情況，所以如果看到左右兩側出現不得了的畫面，轉頭總是比轉車身容易，更能<strong>即時地</strong>捕捉必要的關鍵影像。</p>
+  <figure class="embed embed-video" data-provider="youtube">
+    <div class="iframe-container">
+      <iframe src="https://www.youtube.com/embed/?rel=0" loading="lazy" allowfullscreen="" frameborder="0"></iframe>
+    </div>
+    <figcaption>
+ALC T1-S 雙鏡頭機車行車記錄器實拍測試
+    </figcaption>
+  </figure>
+  <hr />
+  <h2 id="alc-t1-s--7"><strong>ALC T1-S 雙鏡頭機車行車記錄器特色回顧</strong></h2>
+  <p>ALC T1-S 是台灣上櫃公司天鉞電子所開發的機車行車記錄器，該公司鑽研攝影鏡頭技術領域已經超過 20 年有餘：</p>
+  <ul>
+    <li>
+      <p>台灣上櫃 ╳ 客服暢通，一年免費維修保固。</p>
+    </li>
+    <li>
+      <p>高續航力 ╳ 大容量 2000mAh 電池，充飽連續錄四小時；支援行動充電邊充邊錄。</p>
+    </li>
+    <li>
+      <p>循環錄影 ╳ 自動刪除最早的不鎖定影像，騰出空間記錄；碰撞鎖檔。</p>
+    </li>
+    <li>
+      <p>前後雙鏡 ╳ IP65 防潑水＋1080P 高畫質＋30FPS 高動態錄影。</p>
+    </li>
+    <li>
+      <p>廣角錄製 ╳ 140 度大廣角，視線輕鬆覆蓋三車道</p>
+    </li>
+    <li>
+      <p>快速拆裝 ╳ 搭配 3M 膠，拆裝不傷帽；重量 118 克，輕巧好攜帶。</p>
+    </li>
+    <li>
+      <p>手機連結 ╳ WiFi 連線免拔卡，隨時看、隨身看。</p>
+    </li>
+    <li>
+      <p>生活紀錄 ╳ 登山／健行／機車／自行車都能用。</p>
+    </li>
+  </ul>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/af730679-6a77-4262-9244-c765e6138196.png/public" referrerpolicy="no-referrer" />    <figcaption>
+天鉞電子 ALC T1-S 雙鏡頭機車行車記錄器六大特性
+    </figcaption>
+  </figure>
+  <hr />
+  <blockquote>
+    <p>🌱 免費訂閱【<strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://creatoreconomyimo.substack.com/">創作者經濟 IMO</a></strong>】電子報。<br />電子報是以 Heptabase 編輯，<a target="_blank" rel="noopener noreferrer nofollow" href="https://get.heptabase.com/imo">免費試用 7 天</a>，和我們一起寫下 IMO。</p>
+  </blockquote>
+  <blockquote>
+    <p>🌱 加入<strong>【<a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.news/~penfarming">中書神經系統</a>】</strong>圍爐，專題 <a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.news/@penfarming/%E9%96%B1%E8%AE%80%E7%AD%86%E8%80%95-2021-%E5%9C%8D%E7%88%90%E6%AA%A2%E8%A8%8E-2022-%E5%B1%95%E6%9C%9B%E8%88%87%E5%AF%A6%E8%B8%90-bafyreibgwdmctf2bmhq4bufkyuepmgkvh5mhsxxm5bbjnltdw2b5h2jnsy">#寫作的反思</a> 與 <a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.news/tags/VGFnOjcwNTk2">#爐內真心話</a> 連載中。</p>
+  </blockquote>
+  <blockquote>
+    <p>🌱 我在其它平台出沒【<strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.facebook.com/penfarming">Meta</a></strong>｜<strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://twitter.com/leo7283">X</a></strong>｜<strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://liker.social/@Penfarning">Liker Social</a></strong>｜<strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.news/@penfarming">Matters</a></strong>｜<strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://medium.com/%E9%96%B1%E8%AE%80%E7%AD%86%E8%80%95">Medium</a></strong>｜<strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://vocus.cc/penfarming/home">vocus</a></strong> 】<br />合作聯繫：penfarming.writer@gmail.com</p>
+  </blockquote>
+  <blockquote>
+    <p>🌱 我的教學文與邀請連結</p>
+    <p><strong>註冊幣安</strong>｜<a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.town/@penfarming/442941-%E6%96%B0%E8%88%8A%E6%88%B6%E9%83%BD%E6%9C%89-%E5%B9%A3%E5%AE%89%E6%8A%BD-%E9%9B%BB%E5%8B%95%E6%BB%91%E6%9D%BF%E8%BB%8A-%E9%99%AA%E4%BD%A0%E7%A9%BF%E8%B6%8A%E7%89%9B%E7%86%8A-ft-%E5%B9%A3%E5%AE%89%E9%96%8B%E6%88%B6%E6%95%99%E5%AD%B8-bafybeifkgprrruqdsnnccfcrtcgvr4uqjguxgy44cl4hhl75txqhol5fyu">幣安開戶＋實名認證教學</a>。<strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://presearch.org/signup?rid=3090491"><br /></a>註冊 Presearch </strong>｜<a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.news/@penfarming/%E9%96%B1%E8%AE%80%E7%AD%86%E8%80%95-%E4%B8%80%E8%88%89%E4%B8%89%E5%BE%97%E7%9A%84-presearch-%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97-%E9%99%84%E6%95%99%E5%AD%B8-bafyreiec7mjtpjcy6bre3fgn7k53pmapqtnbziksneu6pamuvjqnbhcg5y">一舉三得的 search to earn 使用心得</a>。</p>
+  </blockquote>
+  <p></p>
+  <p></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-03-28/IMO-%E4%BA%BA%E7%89%A9%E8%AA%8C-%E7%AC%AC%E4%B8%80%E5%AD%A3-%E8%AA%AA%E6%9B%B8%E6%91%A9%E5%A4%A9%E8%BC%AA-%E9%80%9F%E8%A8%98/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2024-02-25</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-02-25/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-IMO-%E9%80%B1%E5%A0%B1-33-%E7%B6%B2%E5%8F%8B%E9%A9%9A%E5%91%86%E7%9B%B4%E5%91%BC%E9%AC%BC%E6%95%85%E4%BA%8B-%E4%BB%A5%E9%A6%AC%E5%85%A7%E5%88%A9%E7%BE%8E%E8%AA%9E%E4%BA%8B%E4%BB%B6%E5%95%9F%E7%A4%BA%E9%8C%84/">
+          創作者經濟 IMO 📣 週報 #33｜網友驚呆直呼鬼故事！以馬內利美語事件啟示錄
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-02-22</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-02-22/%E8%AE%93%E4%BA%BA%E4%B8%80%E6%90%9C%E5%B0%8B%E5%B0%B1%E6%89%BE%E5%88%B0%E4%BD%A0-%E8%AE%80%E5%BE%8C%E6%84%9F-%E5%9B%9B%E5%80%8B%E9%97%9C%E6%96%BC-%E5%AF%AB%E4%BD%9C-%E7%9A%84%E6%94%B6%E7%A9%AB/">
+          《讓人一搜尋就找到你》讀後感：四個關於「寫作」的收穫
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-02-20</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-02-20/AI-+-Web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-3-ChatGPT-%E7%B7%A8%E5%AF%AB%E6%8F%90%E7%A4%BA%E8%A9%9E%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%AD%96%E7%95%A5/">
+          AI + Web3 公益課筆記 #3｜ChatGPT 編寫提示詞的基本策略
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-02-18</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-02-18/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-IMO-%E9%80%B1%E5%A0%B1-32-%E7%B6%B2%E7%B4%85%E4%BD%9C%E5%AE%B6%E9%81%8A%E6%AD%90%E7%82%8E%E4%B8%8A%E4%BA%8B%E4%BB%B6%E7%B0%BF/">
+          創作者經濟 IMO 📣 週報 #32｜網紅作家遊歐炎上事件簿！
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2024-02-20/%E5%8F%B0%E5%8D%97%E8%A1%97%E8%A8%AA-%E5%8F%B0%E7%81%A3%E6%98%AF%E4%B8%AD%E5%9C%8B%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86%E5%97%8E-%E6%88%91%E6%98%AF%E6%9F%B3%E5%82%91%E5%85%8B-%E6%9F%B3%E6%9D%B0%E5%85%8B-%E5%8F%B0%E7%81%A3-%E4%B8%AD%E5%9C%8B-%E5%85%A9%E5%B2%B8/">
+            前一篇：（台南街訪）台灣是中國的一部分嗎？ #我是柳傑克 #柳杰克 #台灣 #中國 #兩岸
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2024-02-21/%E6%9B%B8%E9%BD%8B%E5%A4%9C%E8%A9%B1-Live-Stream/">
+            後一篇：書齋夜話 Live Stream
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2024-02-20/%E5%8F%B0%E5%8D%97%E8%A1%97%E8%A8%AA-%E5%8F%B0%E7%81%A3%E6%98%AF%E4%B8%AD%E5%9C%8B%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86%E5%97%8E-%E6%88%91%E6%98%AF%E6%9F%B3%E5%82%91%E5%85%8B-%E6%9F%B3%E6%9D%B0%E5%85%8B-%E5%8F%B0%E7%81%A3-%E4%B8%AD%E5%9C%8B-%E5%85%A9%E5%B2%B8/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2024-02-21/%E6%9B%B8%E9%BD%8B%E5%A4%9C%E8%A9%B1-Live-Stream/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2024-02-22/%E8%AE%93%E4%BA%BA%E4%B8%80%E6%90%9C%E5%B0%8B%E5%B0%B1%E6%89%BE%E5%88%B0%E4%BD%A0-%E8%AE%80%E5%BE%8C%E6%84%9F-%E5%9B%9B%E5%80%8B%E9%97%9C%E6%96%BC-%E5%AF%AB%E4%BD%9C-%E7%9A%84%E6%94%B6%E7%A9%AB/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2024-02-20/AI-+-Web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-3-ChatGPT-%E7%B7%A8%E5%AF%AB%E6%8F%90%E7%A4%BA%E8%A9%9E%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%AD%96%E7%95%A5/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2024-02-20/%E5%8F%B0%E5%8D%97%E8%A1%97%E8%A8%AA-%E5%8F%B0%E7%81%A3%E6%98%AF%E4%B8%AD%E5%9C%8B%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86%E5%97%8E-%E6%88%91%E6%98%AF%E6%9F%B3%E5%82%91%E5%85%8B-%E6%9F%B3%E6%9D%B0%E5%85%8B-%E5%8F%B0%E7%81%A3-%E4%B8%AD%E5%9C%8B-%E5%85%A9%E5%B2%B8/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2024-02-21/%E6%9B%B8%E9%BD%8B%E5%A4%9C%E8%A9%B1-Live-Stream/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2024-02-22/%E8%AE%93%E4%BA%BA%E4%B8%80%E6%90%9C%E5%B0%8B%E5%B0%B1%E6%89%BE%E5%88%B0%E4%BD%A0-%E8%AE%80%E5%BE%8C%E6%84%9F-%E5%9B%9B%E5%80%8B%E9%97%9C%E6%96%BC-%E5%AF%AB%E4%BD%9C-%E7%9A%84%E6%94%B6%E7%A9%AB/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2024-02-20/AI-+-Web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-3-ChatGPT-%E7%B7%A8%E5%AF%AB%E6%8F%90%E7%A4%BA%E8%A9%9E%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%AD%96%E7%95%A5/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

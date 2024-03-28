@@ -1,0 +1,3755 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>IMO 人物誌 @Lewis：AI 與語言學習的交融！創作者自定義化學習新體驗 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+IMO 人物誌 @Lewis：AI 與語言學習的交融！創作者自定義化學習新體驗
+——
+" />
+    <meta property="og:description" content="
+IMO 人物誌 @Lewis：AI 與語言學習的交融！創作者自定義化學習新體驗
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="IMO 人物誌 @Lewis：AI 與語言學習的交融！創作者自定義化學習新體驗" />
+    <meta property="twitter:title" content="IMO 人物誌 @Lewis：AI 與語言學習的交融！創作者自定義化學習新體驗" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (3568)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40penfarming%2Fimo-%25E4%25BA%25BA%25E7%2589%25A9%25E8%25AA%258C-lewis-ai-%25E8%2588%2587%25E8%25AA%259E%25E8%25A8%2580%25E5%25AD%25B8%25E7%25BF%2592%25E7%259A%2584%25E4%25BA%25A4%25E8%259E%258D-%25E5%2589%25B5%25E4%25BD%259C%25E8%2580%2585%25E8%2587%25AA%25E5%25AE%259A%25E7%25BE%25A9%25E5%258C%2596%25E5%25AD%25B8%25E7%25BF%2592%25E6%2596%25B0%25E9%25AB%2594%25E9%25A9%2597-bafybeic4ztlzxyhtnckyzd36qzh5zinw36b6nyvcebpsycu6gfk7nhstp4" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@penfarming/imo-%E4%BA%BA%E7%89%A9%E8%AA%8C-lewis-ai-%E8%88%87%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92%E7%9A%84%E4%BA%A4%E8%9E%8D-%E5%89%B5%E4%BD%9C%E8%80%85%E8%87%AA%E5%AE%9A%E7%BE%A9%E5%8C%96%E5%AD%B8%E7%BF%92%E6%96%B0%E9%AB%94%E9%A9%97-bafybeic4ztlzxyhtnckyzd36qzh5zinw36b6nyvcebpsycu6gfk7nhstp4" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@penfarming/imo-%E4%BA%BA%E7%89%A9%E8%AA%8C-lewis-ai-%E8%88%87%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92%E7%9A%84%E4%BA%A4%E8%9E%8D-%E5%89%B5%E4%BD%9C%E8%80%85%E8%87%AA%E5%AE%9A%E7%BE%A9%E5%8C%96%E5%AD%B8%E7%BF%92%E6%96%B0%E9%AB%94%E9%A9%97-bafybeic4ztlzxyhtnckyzd36qzh5zinw36b6nyvcebpsycu6gfk7nhstp4&text=IMO 人物誌 @Lewis：AI 與語言學習的交融！創作者自定義化學習新體驗&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@penfarming/imo-%E4%BA%BA%E7%89%A9%E8%AA%8C-lewis-ai-%E8%88%87%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92%E7%9A%84%E4%BA%A4%E8%9E%8D-%E5%89%B5%E4%BD%9C%E8%80%85%E8%87%AA%E5%AE%9A%E7%BE%A9%E5%8C%96%E5%AD%B8%E7%BF%92%E6%96%B0%E9%AB%94%E9%A9%97-bafybeic4ztlzxyhtnckyzd36qzh5zinw36b6nyvcebpsycu6gfk7nhstp4&title=IMO 人物誌 @Lewis：AI 與語言學習的交融！創作者自定義化學習新體驗" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@penfarming/imo-%E4%BA%BA%E7%89%A9%E8%AA%8C-lewis-ai-%E8%88%87%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92%E7%9A%84%E4%BA%A4%E8%9E%8D-%E5%89%B5%E4%BD%9C%E8%80%85%E8%87%AA%E5%AE%9A%E7%BE%A9%E5%8C%96%E5%AD%B8%E7%BF%92%E6%96%B0%E9%AB%94%E9%A9%97-bafybeic4ztlzxyhtnckyzd36qzh5zinw36b6nyvcebpsycu6gfk7nhstp4&title=IMO 人物誌 @Lewis：AI 與語言學習的交融！創作者自定義化學習新體驗" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=IMO 人物誌 @Lewis：AI 與語言學習的交融！創作者自定義化學習新體驗&body=
+IMO 人物誌 @Lewis：AI 與語言學習的交融！創作者自定義化學習新體驗
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@penfarming/imo-%E4%BA%BA%E7%89%A9%E8%AA%8C-lewis-ai-%E8%88%87%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92%E7%9A%84%E4%BA%A4%E8%9E%8D-%E5%89%B5%E4%BD%9C%E8%80%85%E8%87%AA%E5%AE%9A%E7%BE%A9%E5%8C%96%E5%AD%B8%E7%BF%92%E6%96%B0%E9%AB%94%E9%A9%97-bafybeic4ztlzxyhtnckyzd36qzh5zinw36b6nyvcebpsycu6gfk7nhstp4" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@penfarming/imo-%E4%BA%BA%E7%89%A9%E8%AA%8C-lewis-ai-%E8%88%87%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92%E7%9A%84%E4%BA%A4%E8%9E%8D-%E5%89%B5%E4%BD%9C%E8%80%85%E8%87%AA%E5%AE%9A%E7%BE%A9%E5%8C%96%E5%AD%B8%E7%BF%92%E6%96%B0%E9%AB%94%E9%A9%97-bafybeic4ztlzxyhtnckyzd36qzh5zinw36b6nyvcebpsycu6gfk7nhstp4&title=IMO 人物誌 @Lewis：AI 與語言學習的交融！創作者自定義化學習新體驗&caption=
+IMO 人物誌 @Lewis：AI 與語言學習的交融！創作者自定義化學習新體驗
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=IMO 人物誌 @Lewis：AI 與語言學習的交融！創作者自定義化學習新體驗&url=https://matters.news/@penfarming/imo-%E4%BA%BA%E7%89%A9%E8%AA%8C-lewis-ai-%E8%88%87%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92%E7%9A%84%E4%BA%A4%E8%9E%8D-%E5%89%B5%E4%BD%9C%E8%80%85%E8%87%AA%E5%AE%9A%E7%BE%A9%E5%8C%96%E5%AD%B8%E7%BF%92%E6%96%B0%E9%AB%94%E9%A9%97-bafybeic4ztlzxyhtnckyzd36qzh5zinw36b6nyvcebpsycu6gfk7nhstp4" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>IMO 人物誌 @Lewis：AI 與語言學習的交融！創作者自定義化學習新體驗</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2023-12-13
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 閱讀筆耕</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@penfarming/imo-%E4%BA%BA%E7%89%A9%E8%AA%8C-lewis-ai-%E8%88%87%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92%E7%9A%84%E4%BA%A4%E8%9E%8D-%E5%89%B5%E4%BD%9C%E8%80%85%E8%87%AA%E5%AE%9A%E7%BE%A9%E5%8C%96%E5%AD%B8%E7%BF%92%E6%96%B0%E9%AB%94%E9%A9%97-bafybeic4ztlzxyhtnckyzd36qzh5zinw36b6nyvcebpsycu6gfk7nhstp4" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1702521865000-->
+<p><a href="https://matters.news/@penfarming/imo-%E4%BA%BA%E7%89%A9%E8%AA%8C-lewis-ai-%E8%88%87%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92%E7%9A%84%E4%BA%A4%E8%9E%8D-%E5%89%B5%E4%BD%9C%E8%80%85%E8%87%AA%E5%AE%9A%E7%BE%A9%E5%8C%96%E5%AD%B8%E7%BF%92%E6%96%B0%E9%AB%94%E9%A9%97-bafybeic4ztlzxyhtnckyzd36qzh5zinw36b6nyvcebpsycu6gfk7nhstp4">IMO 人物誌 @Lewis：AI 與語言學習的交融！創作者自定義化學習新體驗</a>
+——</p>
+
+<div>
+  <p>新的一期《創作者經濟 IMO》語音活動，我們邀請到商務英語培訓師 Lewis。</p>
+  <p>從小到大都在台灣土生土長的 Lewis，擁有「英國劍橋大學」英語教學能力認證和「多益認證」滿分的亮眼成績。從事英語培訓超過 20 年的他，最能深刻瞭解台灣職場人士的學習需求與痛點。</p>
+  <p>面對AI浪潮席捲而來，許多原本看似無可取代的工作（包含語言相關）全部面臨洗牌。Lewis 非但不害怕，反而更努力鑽研如何從中獲得更大的語言學習綜效，並將這份用心與信念投入課程中，造福莘莘學子。</p>
+  <p>究竟，Lewis 是如何讓 AI 成為創作者最得力的語言學習小幫手呢？</p>
+  <p>本次活動的主持人是 <a target="_blank" rel="noopener noreferrer nofollow" href="https://creatoreconomyimo.substack.com/@hugo700">@雨果．Hugo</a>，並由 <a target="_blank" rel="noopener noreferrer nofollow" href="https://creatoreconomyimo.substack.com/@penfarming">@閱讀筆耕</a> 即時文字紀錄，讓我們以文字一起來重溫現場。</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/32c020cd-e02c-4ae9-a3a0-75d85bc43f3f.jpeg/public" referrerpolicy="no-referrer" />    <figcaption>
+創作者經濟 IMO 人物誌｜AI 與語言學習的交融！創作者自定義化學習新體驗
+    </figcaption>
+  </figure>
+  <ul>
+    <li>
+      <p>👉 訂閱【創作者經濟 IMO】<a target="_blank" rel="noopener noreferrer nofollow" href="https://creatoreconomyimo.substack.com/">電子報</a> 👈</p>
+    </li>
+    <li>
+      <p>👉 收藏本文的 <a target="_blank" rel="noopener noreferrer nofollow" href="https://liker.land/like1xpkwcv48jqdxym26m8f5wjqa3e7dytq3zr733e?referrer=like1xpkwcv48jqdxym26m8f5wjqa3e7dytq3zr733e">Writing NFT</a> 版本 👈</p>
+    </li>
+    <li>
+      <p>👉 電子報是以 Heptabase 編輯，<a target="_blank" rel="noopener noreferrer nofollow" href="https://get.heptabase.com/imo">免費試用 7 天</a>，和我們一起寫下 IMO 👈</p>
+    </li>
+  </ul>
+  <hr />
+  <h2 id="lewis-"><strong>❏ 認識 </strong>Lewis 的職業</h2>
+  <h3 id="lewis--1">１・Lewis 的英語學習歷程</h3>
+  <p>Lewis 的學習旅程令人印象深刻，他起初是在「沒有網路」的年代開始學習英文，主要依賴錄音帶作為學習媒介，而後才逐步演變到與多數人使用一樣的教材和學習資源。</p>
+  <p>　</p>
+  <h3 id="section">２・<strong>什麼是商務英語培訓師？跟一般老師有甚麼不同？目前服務的內容包含哪些？</strong></h3>
+  <p>商務英語培訓師（Business English Trainer）俗稱「職場英語教練」，主要教授對象是成人，尤其是指導上班族。Lewis 的授課資歷已經超過 21 年有餘。</p>
+  <p>相較於一般老師，主要的差異體現在兩方面：</p>
+  <ul>
+    <li>
+      <p><strong>重視實務面</strong>Lewis 曾在貿易公司、外商公司任職，從中累積豐富的英語使用經驗。<strong>這些經驗讓他能夠更貼近職場實際需求</strong>，理解並應用英語在不同產業／領域的真實情境中。　</p>
+    </li>
+    <li>
+      <p><strong>有實際目標</strong>Lewis 的服務範疇特別迎合專業人士和企業內訓需求，<strong>提供客製化、著重達成實際目標</strong>——不單只是為了考試分數——的教學服務。例如針對「廠房生產線」或「醫院研討會」等專業場景，量身打造專屬的英文教學課程。</p>
+    </li>
+  </ul>
+  <p>說到這邊，或許你會好奇，面對眾多不同領域的客戶時，如果有些領域非常冷門，應該怎麼處理呢？</p>
+  <blockquote>
+    <p>「儘管領域各有不同，但在表達基本邏輯時仍有共通之處，例如闡述因果關係或描述步驟順序。只要收集並掌握某個領域『專有名詞』的發音與意義，便能大致理解七至八成的內容。」Lewis 解釋道。</p>
+  </blockquote>
+  <hr />
+  <h2 id="ai-"><strong>❏ 聊聊 AI 與語言學習的新體驗</strong></h2>
+  <h3 id="section-1">３・您覺得學好英語有甚麼關鍵？</h3>
+  <p><strong>第一，擁有明確的學習目標。</strong></p>
+  <p>舉例說明，對於海產出口商來說，他的目標可能是為了拓展產品通路；對於一位脊椎外科醫師而言，可能是希望用英文清晰地表達手術技術和經驗。總之，設定明確的目標有助於確定學習的重點，指引著前進的方向。</p>
+  <p><strong>第二，擁有成長型心態。</strong></p>
+  <p>相對於固定型心態，成長型心態相信「能力是可以發展的」，意味著能夠從錯誤中學習並不斷進步。</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/4850d104-a469-4cdb-9bb1-d82dc765a40d.jpeg/public" referrerpolicy="no-referrer" />    <figcaption>
+圖片來源：《心態致勝》書中插圖
+    </figcaption>
+  </figure>
+  <blockquote>
+    <p>「錯誤不代表失敗！失敗是不認錯，不改過，相同的錯誤犯了第二次。」雨果・Hugo 回應。</p>
+  </blockquote>
+  <p>　</p>
+  <h3 id="ai--ai-">４・你觀察到 AI 出現後，學好一門語言的方式與 AI 問世前有很大的差異嗎？</h3>
+  <p>AI 的出現帶來了學習方式的巨大轉變，<strong>化被動為主動</strong>。</p>
+  <p>在 AI 出現以前，我們只能「<strong>被動」</strong>接收別人製作的內容，像是書籍、美劇或播客等。但是隨著 AI 的問世，我們有了能夠「<strong>主動」</strong>製作客製化教材的機會。</p>
+  <p>以先前提到的脊椎外科醫師為例，在 AI 問世之前，要找到完全契合他「<strong>職業、需求、難度（CEFR 等級）</strong>」的教材相當困難，他只能從市面上找到的教材來湊合；然而有了 AI 後，這位醫師能夠向 AI 制定具體條件，打造專屬於他的客製化情境，現在他能夠主動參與學習方式的設計，並且優化。</p>
+  <p>　　</p>
+  <h3 id="ai--1">５・你認為 AI 在幫助語言學習上最大的優勢是甚麼？</h3>
+  <p>AI 相較於真人講師更加突出的優勢：</p>
+  <ul>
+    <li>
+      <p>不受<strong>時間</strong>的限制，一天 24 小時，隨時隨地待命。</p>
+    </li>
+    <li>
+      <p>不受<strong>次數</strong>的限制，你可以反覆問同樣的問題，不用擔心感到不好意思。</p>
+    </li>
+    <li>
+      <p>針對你想學習的領域，迅速地整理出相關<strong>單字</strong>、常用<strong>句子</strong>。</p>
+    </li>
+    <li>
+      <p>搭配情境，協助用戶更高效掌握<strong>文法</strong>。</p>
+    </li>
+  </ul>
+  <p>這些優勢節省了不少時間，讓你可以更專注於「<strong>好好開口學講話</strong>」的練習。相較過往許多人把心力放在單字和文法，現在有了更多餘裕去操練口語表達能力。</p>
+  <p><strong>【閱讀筆耕 🙋 IMO】</strong></p>
+  <p>分享一段驅動 ChatGPT 整理英文單字的 Prompt 用例。</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>為以下單詞提供資訊：ambitious・詞根或前綴 ・詞性 ・重音 ・音標 ・中文意思 ・同義詞 ・搭配詞 ・語體 ・範例句子（使用口語英語）</code></pre></div>  </div>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/b9c46493-543e-410c-a617-b34ca73c8948.jpeg/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <p>　　　　</p>
+  <h3 id="chatgpt-"><strong>６・我在網路上看到一篇討論 ChatGPT 翻譯成本更少、效率更好的文章，你對此事的看法？這會對於需要第二外語的相關產業的結構帶來很大的改變嗎？</strong></h3>
+  <ul>
+    <li>
+      <p>編按：《<a target="_blank" rel="noopener noreferrer nofollow" href="https://ckxpress.com/chatgpt-on-translation/">ChatGPT vs 專業翻譯：品質相若，效率千倍，成本十萬分之一</a>》</p>
+    </li>
+    <li>
+      <p>編按：《<a target="_blank" rel="noopener noreferrer nofollow" href="https://p-articles.com/heteroglossia/3685.html">GPT-4 翻譯成本幾何級數下降，作家董啟章：「不駕馭它，就是我們被它駕馭」</a>》</p>
+    </li>
+  </ul>
+  <p>先思考兩件事實。</p>
+  <p>第一，AI 翻譯品質上比谷歌好、速度上比人工快，確實是打破了許多傳統方法的能力邊界。</p>
+  <p>第二，AI 的主要母語是英語，<strong>所以「中翻英」的品質不錯</strong>，但是在「英翻中」方面仍需要多觀察，尤其是訓練 AI 的繁體中文資料相對稀少的情況下。</p>
+  <p>接下來，思考為什麼我們需要翻譯，這是觀點。</p>
+  <p>透過翻譯，讓我們更容易理解一篇文章。當面對這些新資訊的「輸入」時，更攸關的是我們如何「輸出」這些經過咀嚼的內容？有哪些新新的想法蹦出來了？你可以利用 AI 將自己的反思翻譯成文字或口語，分享給更多人。</p>
+  <blockquote>
+    <p>「日本精神科醫師樺澤紫苑在他的著作《<a target="_blank" rel="noopener noreferrer nofollow" href="http://moo.im/a/048wzD">最高學以致用法</a>》中提到，自我成長的關鍵在於輸出＞輸入，經實證研究，兩者黃金比例為 7：3。」Lewis 說道。</p>
+  </blockquote>
+  <p>因此，這對於依賴第二外語的產業，尤其是翻譯一職，AI 確實帶來重大變革。但不變的是，如何運用這些翻譯後的內容，以更有意義的方式輸出。</p>
+  <p>終究，將「表達想法」視為最終目標，而翻譯只是加速實現這目標的手段之一。</p>
+  <p>　</p>
+  <h3 id="ai--ai--1"><strong>７・</strong>AI 工具琳瑯滿目，像是大型語言模型、圖像生成模型、即時翻譯技術（臉部表情、唇形都可以配合）等，目前你有使用過哪些 AI 工具幫助自己打造更好地英語學習體驗？</h3>
+  <p>Lewis 目前只有使用 ChatGPT，因為他的使用情境相當單純，只需要文字和語音就足夠了；比起工具的挑選，<strong>Lewis 更看重明確的學習目標</strong>，例如想要提升閱讀國外文章的速度。</p>
+  <p>近期，谷歌／推特等公司也紛紛推出許多 AI 工具，不管這些工具再怎樣琳瑯滿目，我們還是得回歸到學習目標本身。<strong>工具學得少但精通，對學習效果更有幫助</strong>。</p>
+  <p>　</p>
+  <h3 id="ai--2"><strong>８・</strong>你認為 AI 工具對「教學者」帶來哪些影響？</h3>
+  <p>在 Lewis 指導的學員中，有些人本身也是英文教學者。確實，AI 在某些方面（像是單字和文法教學）取代了他們的部分工作。不過，這也為教學帶來更多創意和互動的可能性，老師能更深入地投入於與學生的互動和討論上。</p>
+  <p>運用 AI 打造生動活潑的教材，激勵與學生更多互動。例如，討論近期很夯的《進擊的巨人》結局，請 GPT 設計三個問題，便可撐起一小時的討論。這些彼此都感興趣的話題可以自然地啟動對話，不拘束於單字或文法的限制。</p>
+  <ul>
+    <li>
+      <p>延伸閱讀：第 22 期週報策展《<a target="_blank" rel="noopener noreferrer nofollow" href="https://creatoreconomyimo.substack.com/p/charlie-munge">從厭惡巨人到「厭人」——《進擊的巨人》全劇終後感</a>》。</p>
+    </li>
+  </ul>
+  <p>　</p>
+  <h3 id="ai--3"><strong>９・</strong>你認為 AI 工具對「學習者」帶來哪些影響？</h3>
+  <p>可分為「成人、學生、小朋友」幾個構面探討，以下是一些使用情境建議：</p>
+  <ul>
+    <li>
+      <p>苦惱英文繪本貴鬆鬆以及該怎麼挑？家長可以請 GPT 創造一些簡單的童話故事，陪伴<strong>小朋友</strong>一起唸。</p>
+    </li>
+    <li>
+      <p>使用 GPT 作為家教／助教，協助整理課本中的單字和文法，<strong>學生</strong>就可以超前部署學習，不用受限於學校的進度表，並在遇到疑義時帶到學校去請教老師。</p>
+    </li>
+    <li>
+      <p><strong>成人</strong>在準備進修考試（如托福、多益等）時，利用 GPT 列出常見單字和重要片語，能夠顯著提升學習效率。</p>
+    </li>
+  </ul>
+  <p>　　</p>
+  <h3 id="ai--4"><strong>１０・</strong>如何善用 AI 工具自定義語言學習需求？能不能給我們一些可以立刻實行的方法？</h3>
+  <p>過去，學習英語常依賴學校或補習班提供的教材。現在有了 AI 工具，我們可以主動出擊，這是重新思考英語學習「需求」的絕佳時機。</p>
+  <ol>
+    <li>
+      <p><strong>專業領域</strong>目的性導向。比方說，請 AI 列出景觀設計（或其他領域）最常使用的 50 個單字，以及它們的意思。　</p>
+    </li>
+    <li>
+      <p><strong>興趣</strong>沒有實質目的，回歸興趣也是可以的。例如，請 AI 介紹某部 Netflix 劇集的故事元素，再從中挑出你感興趣的主題相關單字，也能用作日後聊天素材。　</p>
+    </li>
+    <li>
+      <p><strong>日常生活</strong>以日常生活中常見的事物為學習素材。像是請 AI 幫忙解釋早餐店的飯糰，揣摩該如何用英語向老外介紹這類台灣在地食物。</p>
+    </li>
+  </ol>
+  <hr />
+  <h2 id="qa-">❏ 社群 QA 時間</h2>
+  <p>⠀<br />⠀</p>
+  <p>👉 <a target="_blank" rel="noopener noreferrer nofollow" href="https://creatoreconomyimo.substack.com/p/lewis">閱讀更多話題討論</a> 👈</p>
+  <p>⠀<br />⠀</p>
+  <p></p>
+  <blockquote>
+    <p>用 70% 比重輸出，練習寫出來和說出來，學習成效會比較好。<br />　<br />——商務英語培訓師 Lewis</p>
+  </blockquote>
+  <p></p>
+  <ul>
+    <li>
+      <p>👉 訂閱【創作者經濟 IMO】<a target="_blank" rel="noopener noreferrer nofollow" href="https://creatoreconomyimo.substack.com/">電子報</a> 👈</p>
+    </li>
+    <li>
+      <p>👉 收藏本文的 <a target="_blank" rel="noopener noreferrer nofollow" href="https://liker.land/like1xpkwcv48jqdxym26m8f5wjqa3e7dytq3zr733e?referrer=like1xpkwcv48jqdxym26m8f5wjqa3e7dytq3zr733e">Writing NFT</a> 版本 👈</p>
+    </li>
+    <li>
+      <p>👉 電子報是以 Heptabase 編輯，<a target="_blank" rel="noopener noreferrer nofollow" href="https://get.heptabase.com/imo">免費試用 7 天</a>，和我們一起寫下 IMO 👈</p>
+    </li>
+  </ul>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-03-28/IMO-%E4%BA%BA%E7%89%A9%E8%AA%8C-%E7%AC%AC%E4%B8%80%E5%AD%A3-%E8%AA%AA%E6%9B%B8%E6%91%A9%E5%A4%A9%E8%BC%AA-%E9%80%9F%E8%A8%98/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2023-12-17</time>
+        <a href="https://nodebe4.github.io/teahouse/2023-12-17/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-IMO-%E9%80%B1%E5%A0%B1-24-%E9%AD%94%E9%AC%BC%E8%97%8F%E5%9C%A8%E7%B4%B0%E7%AF%80%E8%A3%A1-%E5%89%B5%E4%BD%9C%E8%80%85%E7%9A%84-%E7%B4%B0%E7%AF%80%E5%8A%9B/">
+          創作者經濟 IMO 📣 週報 #24｜魔鬼藏在細節裡，創作者的「細節力」！
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-12-16</time>
+        <a href="https://nodebe4.github.io/teahouse/2023-12-16/SEO%E7%99%BD%E8%A9%B1%E6%96%87-%E7%8D%B2%E5%BE%97-SEO-%E4%B8%AD%E7%9A%84-%E5%88%BA-%E4%B9%9F%E6%98%AF%E5%AF%AB%E4%BD%9C%E8%80%85%E7%9A%84%E8%81%96%E6%9D%AF/">
+          《SEO白話文》獲得 SEO 中的「刺」，也是寫作者的聖杯
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-12-13</time>
+        <a href="https://nodebe4.github.io/teahouse/2023-12-13/%E9%96%B1%E8%AE%80%E7%AD%86%E8%80%95-%E7%B4%AF%E9%80%B2%E5%BC%8F%E6%91%98%E8%A6%81%E6%B3%95%E5%9C%A8-Heptabase-%E8%A3%A1%E5%A6%82%E4%BD%95%E5%AF%A6%E4%BD%9C/">
+          閱讀筆耕｜累進式摘要法在 Heptabase 裡如何實作？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-12-10</time>
+        <a href="https://nodebe4.github.io/teahouse/2023-12-10/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-IMO-%E9%80%B1%E5%A0%B1-23-%E9%96%B1%E8%AE%80%E9%80%80%E5%B1%85%E6%AC%A1%E6%96%87%E5%8C%96-%E6%BC%AB%E8%AB%87%E6%8A%96%E9%9F%B3%E8%87%B4%E5%91%BD%E5%90%B8%E5%BC%95%E5%8A%9B/">
+          創作者經濟 IMO 📣 週報 #23｜閱讀退居次文化？漫談抖音致命吸引力
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2023-12-13/%E4%B8%AD%E5%9C%8B%E6%9C%83%E6%AD%A5%E6%97%A5%E6%9C%AC%E7%9A%84-%E5%BE%8C%E5%A1%B5-%E5%97%8E-%E8%80%81%E6%A5%8A%E5%B8%B6%E4%BD%A0%E8%B5%B0%E8%AE%80%E6%98%8E%E6%B2%BB%E7%B6%AD%E6%96%B0-%E4%B8%AD%E5%9C%8B%E6%AD%B7%E5%8F%B2-%E6%97%A5%E6%9C%AC%E6%AD%B7%E5%8F%B2-%E6%B4%8B%E5%8B%99%E9%81%8B%E5%8B%95-%E6%98%8E%E6%B2%BB%E7%B6%AD%E6%96%B0-%E4%B8%AD%E6%97%A5%E9%97%9C%E4%BF%82-%E8%96%A9/">
+            前一篇：中國會步日本的「後塵」嗎？老楊帶你走讀明治維新｜中國歷史｜日本歷史｜洋務運動｜明治維新｜中日關係｜薩摩人｜清朝末期｜日本現代化｜長崎事件｜馬關條約｜中國學者｜日本留學生｜工業革命｜中國新聞週刊
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2023-12-13/%E8%AA%9E%E8%A8%80%E4%B8%8D%E5%8F%AA%E6%98%AF%E5%B7%A5%E5%85%B7-%E5%B9%B4%E8%BC%95%E4%BA%BA-%E4%BD%A0%E7%82%BA%E4%BB%80%E9%BA%BC%E6%87%89%E8%A9%B2%E5%AD%B8%E5%8F%A4%E6%96%87/">
+            後一篇：語言不只是工具！年輕人，你為什麼應該學古文。
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2023-12-13/%E4%B8%AD%E5%9C%8B%E6%9C%83%E6%AD%A5%E6%97%A5%E6%9C%AC%E7%9A%84-%E5%BE%8C%E5%A1%B5-%E5%97%8E-%E8%80%81%E6%A5%8A%E5%B8%B6%E4%BD%A0%E8%B5%B0%E8%AE%80%E6%98%8E%E6%B2%BB%E7%B6%AD%E6%96%B0-%E4%B8%AD%E5%9C%8B%E6%AD%B7%E5%8F%B2-%E6%97%A5%E6%9C%AC%E6%AD%B7%E5%8F%B2-%E6%B4%8B%E5%8B%99%E9%81%8B%E5%8B%95-%E6%98%8E%E6%B2%BB%E7%B6%AD%E6%96%B0-%E4%B8%AD%E6%97%A5%E9%97%9C%E4%BF%82-%E8%96%A9/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2023-12-13/%E8%AA%9E%E8%A8%80%E4%B8%8D%E5%8F%AA%E6%98%AF%E5%B7%A5%E5%85%B7-%E5%B9%B4%E8%BC%95%E4%BA%BA-%E4%BD%A0%E7%82%BA%E4%BB%80%E9%BA%BC%E6%87%89%E8%A9%B2%E5%AD%B8%E5%8F%A4%E6%96%87/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2023-12-16/SEO%E7%99%BD%E8%A9%B1%E6%96%87-%E7%8D%B2%E5%BE%97-SEO-%E4%B8%AD%E7%9A%84-%E5%88%BA-%E4%B9%9F%E6%98%AF%E5%AF%AB%E4%BD%9C%E8%80%85%E7%9A%84%E8%81%96%E6%9D%AF/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2023-12-13/%E9%96%B1%E8%AE%80%E7%AD%86%E8%80%95-%E7%B4%AF%E9%80%B2%E5%BC%8F%E6%91%98%E8%A6%81%E6%B3%95%E5%9C%A8-Heptabase-%E8%A3%A1%E5%A6%82%E4%BD%95%E5%AF%A6%E4%BD%9C/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2023-12-13/%E4%B8%AD%E5%9C%8B%E6%9C%83%E6%AD%A5%E6%97%A5%E6%9C%AC%E7%9A%84-%E5%BE%8C%E5%A1%B5-%E5%97%8E-%E8%80%81%E6%A5%8A%E5%B8%B6%E4%BD%A0%E8%B5%B0%E8%AE%80%E6%98%8E%E6%B2%BB%E7%B6%AD%E6%96%B0-%E4%B8%AD%E5%9C%8B%E6%AD%B7%E5%8F%B2-%E6%97%A5%E6%9C%AC%E6%AD%B7%E5%8F%B2-%E6%B4%8B%E5%8B%99%E9%81%8B%E5%8B%95-%E6%98%8E%E6%B2%BB%E7%B6%AD%E6%96%B0-%E4%B8%AD%E6%97%A5%E9%97%9C%E4%BF%82-%E8%96%A9/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2023-12-13/%E8%AA%9E%E8%A8%80%E4%B8%8D%E5%8F%AA%E6%98%AF%E5%B7%A5%E5%85%B7-%E5%B9%B4%E8%BC%95%E4%BA%BA-%E4%BD%A0%E7%82%BA%E4%BB%80%E9%BA%BC%E6%87%89%E8%A9%B2%E5%AD%B8%E5%8F%A4%E6%96%87/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2023-12-16/SEO%E7%99%BD%E8%A9%B1%E6%96%87-%E7%8D%B2%E5%BE%97-SEO-%E4%B8%AD%E7%9A%84-%E5%88%BA-%E4%B9%9F%E6%98%AF%E5%AF%AB%E4%BD%9C%E8%80%85%E7%9A%84%E8%81%96%E6%9D%AF/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2023-12-13/%E9%96%B1%E8%AE%80%E7%AD%86%E8%80%95-%E7%B4%AF%E9%80%B2%E5%BC%8F%E6%91%98%E8%A6%81%E6%B3%95%E5%9C%A8-Heptabase-%E8%A3%A1%E5%A6%82%E4%BD%95%E5%AF%A6%E4%BD%9C/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

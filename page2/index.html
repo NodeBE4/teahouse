@@ -1,0 +1,2136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="杂谈闲聊">
+    <meta property="og:description" content="杂谈闲聊" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (3568)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fnodebe4.github.io%2Fteahouse%2Fpage2%2F" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://nodebe4.github.io/teahouse/page2/" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://nodebe4.github.io/teahouse/page2/&text=茶馆-杂谈闲聊&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://nodebe4.github.io/teahouse/page2/&title=茶馆-杂谈闲聊" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://nodebe4.github.io/teahouse/page2/&title=茶馆-杂谈闲聊" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=茶馆-杂谈闲聊&body=" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://nodebe4.github.io/teahouse/page2/" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://nodebe4.github.io/teahouse/page2/&title=茶馆-杂谈闲聊&caption=&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=茶馆-杂谈闲聊&url=https://nodebe4.github.io/teahouse/page2/" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+<ul class="archive">
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-26/%E6%B5%B7%E5%A4%96%E8%BC%BF%E8%AB%96%E6%B3%A8%E6%84%8F%E5%88%B0%E8%BF%91%E6%9C%9F%E4%B8%AD%E5%9C%8B%E5%9F%BA%E5%B1%A4%E6%83%A1%E6%80%A7%E4%BA%8B%E6%95%85%E5%A2%9E%E5%A4%9A%E7%8F%BE%E8%B1%A1-%E8%83%A1%E9%8C%AB%E9%80%B2%E7%A4%BA%E8%AD%A6-%E8%A1%A8%E6%98%8E%E4%BB%96%E4%B9%9F%E6%B3%A8%E6%84%8F%E5%88%B0%E5%8D%B1%E9%9A%AA%E5%9B%A0%E7%B4%A0%E7%9A%84%E6%98%8E%E9%A1%AF%E5%A2%9E%E5%8A%A0-%E4%B8%8D%E5%88%A9%E6%96%BC%E6%94%BF%E6%B2%BB/">
+      
+        海外輿論注意到近期中國基層惡性事故增多現象，胡錫進示警，表明他也注意到危險因素的明顯增加，不利於政治穩定｜公職人員降薪｜中國公務員｜中國社會｜內卷｜中國經濟｜青年失業率｜中國經濟危機｜中國兩會｜黨中央
+      </a>
+      <time>2024-03-26</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#老楊到處說" class="tag">
+        老楊到處說
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=oegGYyFsgFY" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-26/%E5%A4%B1%E6%95%97%E7%9A%84%E5%8B%9D%E5%88%A9%E8%80%85/">
+      
+        失敗的勝利者
+      </a>
+      <time>2024-03-26</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#李天豪" class="tag">
+        李天豪
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=zJKImMb0RwU" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-26/%E8%83%8C%E6%99%AF-%E6%B3%95%E5%9B%BD%E5%A4%A7%E9%9D%A9%E5%91%BD%E7%9A%84%E9%85%9D%E9%85%BF-%E4%B8%8D%E5%B9%B3%E7%AD%89%E7%9A%84%E7%A4%BE%E4%BC%9A%E7%BB%93%E6%9E%84-%E5%8F%91%E5%B1%95%E8%BF%87%E7%A8%8B-%E5%B7%B4%E5%A3%AB%E5%BA%95%E7%8B%B1%E7%9A%84%E9%A3%8E%E6%9A%B4-%E9%9D%A9%E5%91%BD%E7%9A%84%E7%87%83%E7%82%B9-%E5%90%8E%E6%9E%9C%E5%BD%B1%E5%93%8D-%E5%90%9B%E4%B8%BB%E5%88%B6%E7%9A%84%E7%BB%88/">
+      
+        背景：法国大革命的酝酿，不平等的社会结构；发展过程：巴士底狱的风暴，革命的燃点；后果影响：君主制的终结，共和理念的兴起：歷史事件20240326
+      </a>
+      <time>2024-03-26</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#明鏡歷史台" class="tag">
+        明鏡歷史台
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=a29NXWQjp9U" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-26/%E9%BB%91%E5%A4%9C%E4%B8%AD%E7%9A%84%E5%85%89%E8%8A%92-%E6%9F%8F%E6%9E%97%E9%9A%A7%E9%81%93%E8%A1%8C%E5%8A%A8%E7%9A%84%E7%A7%98%E5%AF%86%E6%95%85%E4%BA%8B-%E5%86%B0%E5%B7%9D%E4%B8%8B%E7%9A%84%E6%9A%97%E6%B5%81-%E5%8D%97%E6%9E%81%E6%9D%A1%E7%BA%A6%E4%B8%8E%E5%86%B7%E6%88%98%E5%A4%96%E4%BA%A4-%E5%B9%BD%E7%81%B5%E8%88%B0%E9%98%9F-%E5%86%B7%E6%88%98%E6%B5%B7/">
+      
+        黑夜中的光芒 - 柏林隧道行动的秘密故事；冰川下的暗流 - 南极条约与冷战外交；幽灵舰队 - 冷战海上的无声对峙：冰与火之战：冷战历史20240326
+      </a>
+      <time>2024-03-26</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#明鏡歷史台" class="tag">
+        明鏡歷史台
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=1oJLFt8CNHc" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-26/%E5%A3%B9%E9%80%B1%E5%9F%8E%E5%AF%A8%E6%96%B0%E8%81%9E-%E7%94%B1%E8%88%88%E5%85%A5-%E7%BE%8E%E9%8A%80%E6%A3%84%E9%95%B7%E6%B1%9F%E4%B8%AD%E5%BF%83-%E5%85%A8%E7%90%83%E5%B9%B8%E7%A6%8F%E6%8C%87%E6%95%B8%E8%A1%B0%E9%81%8E%E4%BF%84%E7%BE%85%E6%96%AF-%E8%87%AA%E5%B7%B1%E5%8F%8B%E8%B3%87%E6%9C%AC%E4%B8%BB%E7%BE%A9-%E6%81%86%E5%A4%A7%E9%80%A0%E5%81%87%E6%95%B8%E7%94%B1%E4%BE%86%E5%B7%B3%E4%B9%85/">
+      
+        壹週城寨新聞 ：由興入⋯美銀棄長江中心／全球幸福指數衰過俄羅斯／自己友資本主義：恆大造假數由來巳久／美帝亡我之心不死之彭博唱衰香港Ibanker ／香港紅五類系列：華潤中旅招商局職員變區議員
+      </a>
+      <time>2024-03-26</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 城寨 Singjai</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#城寨" class="tag">
+        城寨
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=g7MZZACgLPA" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-26/%E6%97%B6%E4%BA%8B%E5%A4%A7%E5%AE%B6%E8%B0%88-%E4%B9%A0%E8%BF%91%E5%B9%B3%E4%BA%B2%E8%87%AA%E5%87%BA%E9%A9%AC-%E5%A4%96%E8%B5%84%E5%87%BA%E9%80%83%E8%83%BD%E6%AD%A2%E6%AD%A5/">
+      
+        时事大家谈：习近平亲自出马 外资出逃能止步？
+      </a>
+      <time>2024-03-26</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 美国之音中文网</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#时事大家谈" class="tag">
+        时事大家谈
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=VjN2fxBC--Q" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-26/%E6%97%B6%E4%BA%8B%E5%A4%A7%E5%AE%B6%E8%B0%88-%E6%80%BB%E4%B9%A6%E8%AE%B0%E5%86%8D%E6%99%92%E4%B9%A6%E5%8D%95-%E5%A6%82%E4%BD%95%E8%AF%BB%E6%87%82%E4%B9%A0%E8%BF%91%E5%B9%B3/">
+      
+        时事大家谈：总书记再晒书单 如何读懂习近平？
+      </a>
+      <time>2024-03-26</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 美国之音中文网</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#时事大家谈" class="tag">
+        时事大家谈
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=-QPX3PpbrXU" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-26/%E5%89%8D%E5%8D%97%E8%8F%AF%E6%97%A9%E5%A0%B1%E7%B8%BD%E7%B7%A8%E8%BC%AF%E7%8E%8B%E5%90%91%E5%81%89%E7%99%BC%E5%95%8F-23%E6%A2%9D%E7%AB%8B%E6%B3%95%E5%BE%8C-%E9%A6%99%E6%B8%AF%E5%AA%92%E9%AB%94%E9%82%84%E5%8F%AF%E4%BB%A5%E6%89%B9%E8%A9%95%E4%B8%AD%E5%9C%8B%E5%85%B1%E7%94%A2%E9%BB%A8%E5%92%8C%E4%B8%AD%E5%A4%AE%E6%94%BF%E5%BA%9C%E5%97%8E-%E6%B2%92%E6%9C%89%E4%BB%BB%E4%BD%95%E6%89%B9%E8%A9%95%E7%9B%A3%E7%9D%A3/">
+      
+        前南華早報總編輯王向偉發問：23條立法後，香港媒體還可以批評中國共產黨和中央政府嗎？沒有任何批評監督聲音的媒體存在，香港會很快就失去曾經的活力和生命力。香港全方位功能性萎縮是民族復興事業最大的損失
+      </a>
+      <time>2024-03-26</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#老楊到處說" class="tag">
+        老楊到處說
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=bTt5ajmhSj0" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-26/%E5%A5%AA%E5%91%BDLoudzone-26-Mar-2024/">
+      
+        奪命Loudzone 26 Mar 2024
+      </a>
+      <time>2024-03-26</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 城寨 Singjai</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#城寨" class="tag">
+        城寨
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=1_8GujHFS6Y" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-26/%E5%BA%B7%E5%BE%B7%E6%89%B9%E5%88%A4%E5%93%B2%E5%AD%A6%E7%AC%AC-26%E8%AE%B2-%E8%B0%8C%E6%B4%AA%E6%9E%9C%E4%B8%BB%E8%AE%B2/">
+      
+        康德批判哲学第 26讲（谌洪果主讲）
+      </a>
+      <time>2024-03-26</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 老虎庙 · 虎侃</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#老虎庙" class="tag">
+        老虎庙
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=MaFUYyABTYY" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-26/03-26-%E6%97%B6%E4%BA%8B%E5%A4%A7%E5%AE%B6%E8%B0%88-%E4%B9%A0%E8%BF%91%E5%B9%B3%E4%BA%B2%E8%87%AA%E5%87%BA%E9%A9%AC-%E5%A4%96%E8%B5%84%E5%87%BA%E9%80%83%E8%83%BD%E6%AD%A2%E6%AD%A5-%E6%80%BB%E4%B9%A6%E8%AE%B0%E5%86%8D%E6%99%92%E4%B9%A6%E5%8D%95-%E5%A6%82%E4%BD%95%E8%AF%BB%E6%87%82%E4%B9%A0%E8%BF%91%E5%B9%B3/">
+      
+        03/26【时事大家谈】习近平亲自出马 外资出逃能止步？总书记再晒书单 如何读懂习近平？
+      </a>
+      <time>2024-03-26</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 美国之音中文网</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#时事大家谈" class="tag">
+        时事大家谈
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=WACcg98l74c" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-26/2491-%E8%80%81%E6%AF%9B%E5%88%9A%E8%B5%B7%E5%BA%8A%E5%B0%B1%E8%A1%A8%E6%80%81%E4%BA%86-%E6%88%91%E8%A6%81%E5%90%83%E7%86%8A%E6%8E%8C-%E8%80%81%E6%AF%9B%E9%80%81%E7%BB%99%E8%83%A1%E5%BF%97%E6%98%8E%E7%86%8A%E6%8E%8C-%E6%9E%97%E5%BD%AA%E5%9C%A8-%E7%86%8A%E6%8E%8C-%E4%B8%AD%E7%9C%8B%E5%87%BA%E4%BA%86-%E6%94%BF%E5%8F%98/">
+      
+        （2491）老毛刚起床就表态了：“我要吃熊掌”！老毛送给胡志明熊掌，林彪在“熊掌”中看出了“政变”！朱德在抗战最艰难的时候都配有三个厨师！越南两任国家主席先后辞职的背后折射出越南劳动党的文化传承
+      </a>
+      <time>2024-03-26</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#温相说党史" class="tag">
+        温相说党史
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=_iGSLASavWE" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-26/%E4%BB%8A%E6%97%A5%E8%AE%80%E5%A0%B1%E6%99%82%E9%96%93-%E8%8E%AB%E6%96%AF%E7%A7%91%E8%A5%B2%E6%93%8A-%E5%80%9F%E6%A9%9F%E5%8D%87%E7%B4%9A%E5%B0%8D%E7%83%8F%E4%BD%9C%E6%88%B0-%E7%BE%8E%E5%9C%8B%E7%82%BA%E5%AE%89%E7%90%86%E6%9C%83%E5%8A%A0%E6%B2%99%E7%AB%8B%E5%8D%B3%E5%81%9C%E7%81%AB%E6%B1%BA%E8%AD%B0%E6%A1%88-%E9%96%8B%E7%B6%A0%E7%87%88-%E7%BF%92%E8%BF%91%E5%B9%B3%E5%8F%96%E4%BB%A3%E6%9D%8E%E5%BC%B7/">
+      
+        今日讀報時間-莫斯科襲擊，借機升級對烏作戰-美國為安理會加沙立即停火決議案「開綠燈」-習近平取代李強會見西方大老闆？ -美國起訴中國駭客-金門撞船事件餘波-馬英九訪陸｜新質生產力｜中國經濟｜蘋果手機｜
+      </a>
+      <time>2024-03-26</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#老楊到處說" class="tag">
+        老楊到處說
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=Ki2xfYKxihQ" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-26/%E5%82%91%E5%85%8B%E5%B0%8F%E9%85%92%E9%A4%A8-%E7%9C%8B%E4%B8%89%E9%AB%94-%E5%8F%AA%E7%9C%8B%E5%88%B0%E6%96%87%E9%9D%A9-%E4%BD%A0%E5%A4%AALow%E4%BA%86/">
+      
+        （傑克小酒館） 看三體，只看到文革。你太Low了！
+      </a>
+      <time>2024-03-26</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 我是柳傑克</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#柳傑克" class="tag">
+        柳傑克
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=w5vbFDU6kDw" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-26/%E6%96%87%E5%8C%96%E8%9E%8D%E5%90%88-%E5%A4%9A%E6%B0%91%E6%97%8F%E7%9A%84%E5%92%8C%E8%B0%90%E5%85%B1%E7%94%9F-%E8%89%BA%E6%9C%AF%E4%B8%8E%E5%BB%BA%E7%AD%91-%E7%8B%AC%E7%89%B9%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%BE%89%E7%85%8C%E6%97%B6%E4%BB%A3-%E6%95%99%E8%82%B2%E4%B8%8E%E6%99%BA%E6%85%A7-%E7%9F%A5%E8%AF%86%E7%9A%84%E4%BC%A0%E6%89%BF%E4%B8%8E%E5%8F%91%E5%B1%95-%E5%B8%9D%E5%9B%BD%E5%85%B4%E8%A1%B0/">
+      
+        文化融合：多民族的和谐共生；艺术与建筑：独特风格的辉煌时代；教育与智慧：知识的传承与发展：帝国兴衰：世界历史上的伟大帝国20240326
+      </a>
+      <time>2024-03-26</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#明鏡歷史台" class="tag">
+        明鏡歷史台
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=U18Q64gZI4o" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-26/%E4%BF%84%E7%BD%97%E6%96%AF%E5%B8%9D%E5%9B%BD%E7%9A%84%E6%89%A9%E5%BC%A0-%E5%BD%BC%E5%BE%97%E5%A4%A7%E5%B8%9D%E7%9A%84%E6%94%B9%E9%9D%A9-%E4%BF%84%E7%BD%97%E6%96%AF%E8%81%94%E9%82%A6-%E5%85%A8%E7%90%83%E6%94%BF%E6%B2%BB%E8%88%9E%E5%8F%B0%E7%9A%84%E5%8F%82%E4%B8%8E%E8%80%85-%E5%9C%B0%E7%BC%98%E6%94%BF%E6%B2%BB%E4%B8%8E%E8%B5%84%E6%BA%90%E4%B8%B0%E5%AF%8C-%E4%BF%84%E7%BD%97%E6%96%AF%E7%9A%84%E5%85%B4%E8%A1%B0/">
+      
+        俄罗斯帝国的扩张：彼得大帝的改革；俄罗斯联邦：全球政治舞台的参与者；地缘政治与资源丰富：俄罗斯的兴衰分析：诸国简史10分钟20240326
+      </a>
+      <time>2024-03-26</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#明鏡歷史台" class="tag">
+        明鏡歷史台
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=xm3KxJPr0eI" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-25/Battle-%E5%A4%A7%E9%99%B8%E5%A6%B9%E5%AD%90vs%E6%B9%96%E5%8D%97%E7%B6%B2%E5%8F%8B-%E5%A6%B9%E5%AD%90-%E4%B8%AD%E5%9C%8B%E4%B8%8D%E5%A5%BD%E7%9A%84%E5%9C%B0%E6%96%B9-%E6%86%91%E4%BB%80%E9%BA%BC%E4%B8%8D%E8%83%BD%E6%89%B9%E8%A9%95-%E6%B9%96%E5%8D%97%E4%BD%AC-%E4%BD%A0%E6%97%A2%E7%84%B6%E8%A6%BA%E5%BE%97%E4%B8%AD%E5%9C%8B%E5%B7%AE/">
+      
+        Battle！大陸妹子vs湖南網友。妹子：中國不好的地方，憑什麼不能批評？湖南佬：你既然覺得中國差，為什麼不潤？
+      </a>
+      <time>2024-03-25</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 我是柳傑克</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#柳傑克" class="tag">
+        柳傑克
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=zk9OMyLt7Z4" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-25/%E9%81%B8%E6%93%87%E8%86%BD%E6%80%AF%E7%9A%84%E6%B2%89%E9%BB%98%E8%83%8C%E5%8F%9B%E4%BA%86%E4%BD%BF%E5%91%BD-%E7%B2%BE%E8%8F%AF%E7%89%87%E6%AE%B5-%E6%94%BB%E6%93%8A%E6%80%A7%E6%B0%91%E7%B2%B9%E4%B8%BB%E7%BE%A9%E5%B8%AD%E6%8D%B2%E8%80%8C%E4%BE%86-%E7%95%B6%E5%B1%80%E4%BD%9C%E5%A3%81%E4%B8%8A%E8%A7%80%E6%89%80%E6%AC%B2%E4%BD%95%E7%82%BA-%E7%95%B6%E5%B1%80%E5%B0%8D%E9%87%9D%E5%B0%8D%E6%B0%91%E7%87%9F%E4%BC%81%E6%A5%AD/">
+      
+        選擇膽怯的沉默背叛了使命-精華片段-攻擊性民粹主義席捲而來，當局作壁上觀所欲何為？當局對針對民營企業的網暴現象不聞不問｜農夫山泉｜公關危機｜鐘睒睒｜中國網絡暴力｜中國企業｜中國媒體｜莫言｜毛星火
+      </a>
+      <time>2024-03-25</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#老楊到處說" class="tag">
+        老楊到處說
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=WenmjyO_gbQ" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-25/%E7%9C%BE%E8%AA%AA%E7%B4%9B%E7%B4%9C%E8%8E%AB%E6%96%AF%E7%A7%91%E6%81%90%E8%A5%B2%E4%BA%8B%E4%BB%B6-%E4%BF%84%E7%BE%85%E6%96%AF%E7%9A%84%E7%9B%AE%E6%A8%99%E6%8C%87%E5%90%91%E7%83%8F%E5%85%8B%E8%98%AD%E4%B9%8B%E5%BE%8C-%E9%82%84%E6%9C%83%E6%9C%89%E9%80%B2%E4%B8%80%E6%AD%A5%E6%88%B0%E7%88%AD%E5%8D%87%E7%B4%9A%E8%88%89%E6%8E%AA-%E6%99%AE%E4%BA%AC-%E4%BF%84%E7%BE%85%E6%96%AF%E5%A4%A7%E9%81%B8-%E6%AD%8C%E5%8A%87/">
+      
+        眾說紛紜莫斯科恐襲事件，俄羅斯的目標指向烏克蘭之後，還會有進一步戰爭升級舉措？普京｜俄羅斯大選｜歌劇院｜俄烏戰爭｜烏克蘭｜伊斯蘭國｜特別軍事行動｜戰爭狀態｜中國民間輿論
+      </a>
+      <time>2024-03-25</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#老楊到處說" class="tag">
+        老楊到處說
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=upbF8ZMR6sM" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-25/%E8%83%8C%E6%99%AF-%E5%90%AF%E8%92%99%E8%BF%90%E5%8A%A8%E7%9A%84%E5%85%89%E8%BE%89-%E7%90%86%E6%80%A7%E7%9A%84%E5%91%BC%E5%94%A4-%E5%8F%91%E5%B1%95%E8%BF%87%E7%A8%8B-%E7%BE%8E%E5%9B%BD%E9%9D%A9%E5%91%BD%E7%9A%84%E7%81%AB%E8%8A%B1-%E8%87%AA%E7%94%B1%E7%9A%84%E8%BF%BD%E6%B1%82-%E5%90%8E%E6%9E%9C%E5%BD%B1%E5%93%8D-%E6%B0%91%E4%B8%BB%E6%80%9D%E6%83%B3%E7%9A%84%E4%BC%A0%E6%92%AD-%E6%96%B0/">
+      
+        背景：启蒙运动的光辉，理性的呼唤；发展过程：美国革命的火花，自由的追求；后果影响：民主思想的传播，新世界的开端：歷史事件20240325
+      </a>
+      <time>2024-03-25</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#明鏡歷史台" class="tag">
+        明鏡歷史台
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=KZDxtqqe9Pk" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-25/%E8%8D%92%E9%87%8E%E4%B8%AD%E7%9A%84%E5%85%89%E8%8A%92-%E7%8E%9B%E4%B8%BD-%E5%AE%89%E5%AE%81%E7%9A%84%E6%97%A9%E5%B9%B4%E6%8E%A2%E9%99%A9-%E5%8C%96%E7%9F%B3%E7%8C%8E%E4%BA%BA%E7%9A%84%E4%BC%A0%E5%A5%87-%E7%8E%9B%E4%B8%BD-%E5%AE%89%E5%AE%81%E7%9A%84%E5%8F%91%E7%8E%B0-%E7%A7%91%E5%AD%A6%E7%9A%84%E5%90%AF%E8%92%99%E8%80%85-%E7%8E%9B%E4%B8%BD-%E5%AE%89%E5%AE%81%E7%9A%84%E9%81%97%E4%BA%A7/">
+      
+        荒野中的光芒：玛丽·安宁的早年探险；化石猎人的传奇：玛丽·安宁的发现；科学的启蒙者：玛丽·安宁的遗产：传奇女性20240325
+      </a>
+      <time>2024-03-25</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#明鏡歷史台" class="tag">
+        明鏡歷史台
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=dBhOoBUBlTw" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-25/%E6%AD%BB%E4%BA%A1-%E7%A8%8E%E6%94%B6%E5%92%8C%E6%B2%A1%E6%94%B6%E6%88%91%E4%BB%AC%E8%BE%9B%E8%8B%A6%E8%B5%9A%E6%9D%A5%E7%9A%84%E8%B4%A2%E4%BA%A7-%E6%96%B0%E7%9A%84%E7%A8%8E%E6%94%B6%E8%A7%84%E5%88%99-%E4%BB%A5%E5%8F%8A3%E6%9C%8825%E6%97%A5%E7%BB%99%E7%BC%96%E8%BE%91%E7%9A%84%E5%85%B6%E4%BB%96%E4%BF%A1%E4%BB%B6-%E5%8F%AA%E6%9C%89%E4%BA%94%E6%89%80%E6%BE%B3%E5%A4%A7%E5%88%A9/">
+      
+        “死亡、税收和没收我们辛苦赚来的财产。”新的税收规则，以及3月25日给编辑的其他信件；只有五所澳大利亚大学询问他们的学生有关种族主义的问题。学生和专家表示这还不够；历史学家研究了巫术以及暴力在几个世纪
+      </a>
+      <time>2024-03-25</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#明鏡歷史台" class="tag">
+        明鏡歷史台
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=mBNh-MQF2U4" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-25/%E6%82%AC%E5%B4%96%E4%B8%8A%E7%9A%84%E5%AF%B9%E5%86%B3-%E6%99%BA%E5%88%A9%E6%94%BF%E5%8F%98%E4%B8%8E%E8%B6%85%E7%BA%A7%E5%A4%A7%E5%9B%BD%E7%9A%84%E5%BD%B1%E5%AD%90-%E6%98%9F%E7%A9%BA%E4%B8%8B%E7%9A%84%E5%AF%B9%E8%AF%9D-%E5%86%B7%E6%88%98%E6%97%B6%E6%9C%9F%E7%9A%84%E5%A4%AA%E7%A9%BA%E5%90%88%E4%BD%9C-%E7%96%BE%E9%A3%8E%E4%B8%AD%E7%9A%84%E7%81%AB%E7%A7%8D/">
+      
+        悬崖上的对决 - 智利政变与超级大国的影子；星空下的对话 - 冷战时期的太空合作；疾风中的火种 - 非洲解放运动与冷战格局：冰与火之战：冷战历史20240325
+      </a>
+      <time>2024-03-25</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#明鏡歷史台" class="tag">
+        明鏡歷史台
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=lwixorSaQlk" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-25/%E6%97%B6%E4%BA%8B%E5%A4%A7%E5%AE%B6%E8%B0%88-%E9%82%AA%E6%81%B6%E8%BD%B4%E5%BF%83-%E6%B8%90%E6%88%90%E8%A5%BF%E6%96%B9%E5%85%B1%E8%AF%86-%E4%B8%AD%E5%9B%BD%E5%8A%A0%E5%85%A5%E9%98%B5%E8%90%A5%E5%AF%B9%E6%8A%97/">
+      
+        时事大家谈：“邪恶轴心”渐成西方共识，中国加入阵营对抗？
+      </a>
+      <time>2024-03-25</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 美国之音中文网</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#时事大家谈" class="tag">
+        时事大家谈
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=LnFAke-8IIQ" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-25/%E6%97%B6%E4%BA%8B%E5%A4%A7%E5%AE%B6%E8%B0%88-%E7%BA%A2%E4%BA%8C%E4%BB%A3%E9%80%80%E5%BD%B9%E4%B8%8A%E5%B0%86%E4%BC%A0%E9%81%AD%E9%87%8D%E5%88%A4-%E4%B9%A0%E8%BF%91%E5%B9%B3%E6%9D%80%E9%B8%A1%E5%84%86%E7%8C%B4/">
+      
+        时事大家谈：红二代退役上将传遭重判，习近平杀鸡儆猴？
+      </a>
+      <time>2024-03-25</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 美国之音中文网</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#时事大家谈" class="tag">
+        时事大家谈
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=MrXD0Kfc2j8" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-25/23%E6%A2%9D-%E5%9C%8B%E9%9A%9B%E9%87%91%E8%9E%8D%E4%B8%AD%E5%BF%83%E6%9C%80%E9%9C%80%E8%A6%81%E7%9A%84%E4%BF%A1%E6%81%AF%E8%87%AA%E7%94%B1%E6%B5%81%E9%80%9A-%E6%96%B0%E8%81%9E%E8%87%AA%E7%94%B1-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1%E6%98%AF%E5%90%A6%E6%9C%83%E5%87%BA%E7%8F%BE%E6%9B%B4%E6%98%8E%E9%A1%AF%E7%9A%84%E5%80%92%E9%80%80-%E6%84%9B%E5%9C%8B%E8%80%85%E5%B0%88%E6%94%BF-%E8%82%86/">
+      
+        23條：國際金融中心最需要的信息自由流通，新聞自由，言論自由是否會出現更明顯的倒退？「愛國者專政」肆無忌憚的提出，是危險的政治信號｜港區國安法｜中國經濟｜中英聯合聲明｜香港回歸｜李家超｜特別行政區
+      </a>
+      <time>2024-03-25</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#老楊到處說" class="tag">
+        老楊到處說
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=Q686VzUNK1Y" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-25/%E8%99%8E%E4%BE%83-508-%E5%9B%9B%E5%8D%81%E4%BA%8C%E5%B9%B4%E5%90%8E%E5%A4%A7%E5%B7%B4%E5%B1%B1%E4%B8%AD%E7%9B%B8%E9%81%87/">
+      
+        虎侃 508 四十二年后大巴山中相遇
+      </a>
+      <time>2024-03-25</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 老虎庙 · 虎侃</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#老虎庙" class="tag">
+        老虎庙
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=dxJqSNG6gFM" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-25/%E5%9F%8E%E5%AF%A8-Singjai-is-live/">
+      
+        城寨 Singjai is live
+      </a>
+      <time>2024-03-25</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 城寨 Singjai</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#城寨" class="tag">
+        城寨
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=5NcSBdUBYgU" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-25/3-25-%E6%97%B6%E4%BA%8B%E5%A4%A7%E5%AE%B6%E8%B0%88-%E7%BA%A2%E4%BA%8C%E4%BB%A3%E9%80%80%E5%BD%B9%E4%B8%8A%E5%B0%86%E4%BC%A0%E9%81%AD%E9%87%8D%E5%88%A4-%E4%B9%A0%E8%BF%91%E5%B9%B3%E6%9D%80%E9%B8%A1%E5%84%86%E7%8C%B4-%E9%82%AA%E6%81%B6%E8%BD%B4%E5%BF%83-%E6%B8%90%E6%88%90%E8%A5%BF%E6%96%B9%E5%85%B1%E8%AF%86-%E4%B8%AD%E5%9B%BD%E5%8A%A0%E5%85%A5%E9%98%B5%E8%90%A5/">
+      
+        3/25【时事大家谈】红二代退役上将传遭重判，习近平杀鸡儆猴？“邪恶轴心”渐成西方共识，中国加入阵营对抗？
+      </a>
+      <time>2024-03-25</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 美国之音中文网</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#时事大家谈" class="tag">
+        时事大家谈
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=ls_I45iOb5A" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-25/%E4%BB%8A%E6%97%A5%E8%AE%80%E5%A0%B1%E6%99%82%E9%96%93-%E4%B8%AD%E5%9C%8B%E7%99%BC%E5%B1%95%E9%AB%98%E5%B1%A4%E8%AB%96%E5%A3%87%E9%96%8B%E5%B9%95-%E6%9D%8E%E5%BC%B7-%E6%96%B0%E7%94%A2%E6%A5%AD%E6%B3%A8%E6%B4%BB%E5%8A%9B-%E8%80%B6%E5%80%AB%E6%96%99%E4%B8%8B%E6%9C%88%E8%A8%AA%E8%8F%AF-%E8%8E%AB%E6%96%AF%E7%A7%91%E8%A5%B2%E6%93%8A%E6%A1%88-%E7%BF%92%E8%BF%91%E5%B9%B3%E7%9A%84%E5%A4%B1%E8%B9%A4%E8%80%85/">
+      
+        今日讀報時間-中國發展高層論壇開幕，李強：新產業注活力-耶倫料下月訪華-莫斯科襲擊案-習近平的失蹤者：前空軍上將劉亞洲傳判無期徒刑-香港23條正式生效 多國更新旅遊警示｜中國經濟｜國安法｜中美關係
+      </a>
+      <time>2024-03-25</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#老楊到處說" class="tag">
+        老楊到處說
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=GoBd-pzhEd8" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-25/%E6%96%B9%E8%88%9F%E5%AD%90%E7%A7%91%E6%99%AE-%E9%97%B4%E6%AD%87%E6%96%AD%E9%A3%9F%E8%83%BD%E5%A2%9E%E5%8A%A0%E5%BF%83%E8%84%8F%E7%97%85%E6%AD%BB%E4%BA%A1%E9%A3%8E%E9%99%A9%E5%90%97/">
+      
+        方舟子科普：间歇断食能增加心脏病死亡风险吗？
+      </a>
+      <time>2024-03-25</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 方舟子官方频道 Fang Zhouzi - Official Channel</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#方舟子" class="tag">
+        方舟子
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=sdzriXW5jfY" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-25/2490-%E9%87%91%E6%AD%A3%E6%97%A5%E5%90%91%E6%B1%9F%E6%B3%BD%E6%B0%91%E6%8F%90%E5%87%BA-%E4%B8%9C%E5%8C%97%E6%98%AF%E6%9C%9D%E9%B2%9C%E7%9A%84-%E9%BB%8E%E7%AC%8B%E5%90%91%E8%80%81%E6%AF%9B%E6%8F%90%E5%87%BA-%E4%BA%91%E5%8D%97%E5%B9%BF%E8%A5%BF%E9%A9%BB%E5%86%9B%E8%A6%81%E8%B7%9F%E6%88%91%E4%BB%AC%E5%95%86%E9%87%8F-%E9%87%91%E6%97%A5%E6%88%90%E5%90%91/">
+      
+        （2490）金正日向江泽民提出“东北是朝鲜的”！黎笋向老毛提出“云南广西驻军要跟我们商量”！金日成向周恩来提出“你去找美国帮我们解困”！谁才能拯救我们中国？凡是打着“救中国”旗号的“国产货”都是骗子！
+      </a>
+      <time>2024-03-25</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#温相说党史" class="tag">
+        温相说党史
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=gqKMiGqPRGE" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-25/%E6%B3%95%E5%9B%BD%E5%A4%A7%E9%9D%A9%E5%91%BD-%E8%87%AA%E7%94%B1-%E5%B9%B3%E7%AD%89-%E5%8D%9A%E7%88%B1%E7%9A%84%E5%91%BC%E5%A3%B0-%E6%B3%95%E5%85%B0%E8%A5%BF%E5%85%B1%E5%92%8C%E5%9B%BD-%E5%85%A8%E7%90%83%E6%94%BF%E6%B2%BB%E4%B8%8E%E6%96%87%E5%8C%96%E5%BD%B1%E5%93%8D%E5%8A%9B-%E5%90%AF%E8%92%99%E8%BF%90%E5%8A%A8%E4%B8%8E%E7%A4%BE%E4%BC%9A%E5%8F%98%E9%9D%A9-%E6%B3%95%E5%9B%BD%E7%9A%84%E5%85%B4/">
+      
+        法国大革命：自由、平等、博爱的呼声；法兰西共和国：全球政治与文化影响力；启蒙运动与社会变革：法国的兴衰分析：诸国简史10分钟20240325
+      </a>
+      <time>2024-03-25</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#明鏡歷史台" class="tag">
+        明鏡歷史台
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=WOKj9dRfdJo" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-24/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-IMO-%E9%80%B1%E5%A0%B1-37-%E8%8E%8A%E5%AD%90%E6%87%82%E4%BD%A0%E7%9A%84%E7%9F%A5%E8%AD%98%E7%84%A6%E6%85%AE/">
+      
+        創作者經濟 IMO 📣 週報 #37｜莊子懂你的知識焦慮！
+      </a>
+      <time>2024-03-24</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 閱讀筆耕</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#Matters" class="tag">
+        Matters
+      </a>
+      
+
+      
+      <a href="https://matters.news/@penfarming/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-imo-%E9%80%B1%E5%A0%B1-37-%E8%8E%8A%E5%AD%90%E6%87%82%E4%BD%A0%E7%9A%84%E7%9F%A5%E8%AD%98%E7%84%A6%E6%85%AE-bafybeifnbs4aoyybxw3744lfxhjbd3ilyyofbqythbmpdfywo6wk42ni6e" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-24/%E9%81%B8%E6%93%87%E6%80%A7%E9%81%BA%E5%BF%98%E7%9A%84%E6%83%A1%E6%9E%9C-%E7%B2%BE%E8%8F%AF%E7%89%87%E6%AE%B5-%E4%BF%84%E7%BE%85%E6%96%AF%E7%B4%80%E5%BF%B5%E7%8F%8D%E5%AF%B6%E5%B3%B6%E4%BA%8B%E4%BB%B655%E9%80%B1%E5%B9%B4-%E5%B1%85%E7%84%B6%E6%9C%89%E5%A4%A7%E9%99%B8%E7%B6%B2%E5%8F%8B%E4%B8%80%E7%89%87%E5%8F%AB%E5%A5%BD-%E4%B8%AD%E4%BF%84%E9%97%9C%E4%BF%82%E7%9C%9F%E7%9A%84%E5%8F%AF%E4%BB%A5%E5%90%88/">
+      
+        選擇性遺忘的惡果-精華片段-俄羅斯紀念珍寶島事件55週年，居然有大陸網友一片叫好，中俄關係真的可以合作無上限？俄羅斯紀念｜珍寶島事件｜中蘇邊境｜冷戰歷史｜中俄關係｜國際地緣政治格局｜中美關係｜達瓦利是
+      </a>
+      <time>2024-03-24</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#老楊到處說" class="tag">
+        老楊到處說
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=L7hjKForbZQ" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-24/(%E6%96%B0%E7%AB%B9%E5%A4%A7%E5%AD%B8%E6%95%99%E6%8E%88)%E5%8F%B0%E7%81%A3%E7%9A%84%E5%A5%BD%E6%8A%80%E8%A1%93%E9%83%BD%E8%A2%AB%E8%B3%A4%E8%B3%A3%E7%B5%A6%E7%BE%8E%E5%9C%8B-%E6%88%91%E5%80%91%E7%9A%84%E6%95%B5%E5%9C%8B-%E4%B8%8D%E6%87%89%E8%A9%B2%E4%BE%B7%E9%99%90%E6%96%BC%E4%B8%AD%E5%9C%8B-%E7%BE%8E%E5%9C%8B%E4%B9%9F%E6%98%AF%E6%88%91%E5%80%91%E7%9A%84%E6%95%B5%E5%9C%8B-%E6%88%91%E5%80%91%E8%87%AA/">
+      
+        (新竹大學教授)台灣的好技術都被賤賣給美國。我們的敵國，不應該侷限於中國，美國也是我們的敵國。我們自己的台奸也很多。
+      </a>
+      <time>2024-03-24</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 我是柳傑克</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#柳傑克" class="tag">
+        柳傑克
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=ge8AKDF1URY" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-24/(%E6%96%B0%E5%8C%97%E6%88%B0%E7%A5%9E)%E6%9C%80%E8%BF%91%E8%B2%B7%E4%BA%86%E4%B8%80%E5%8F%B0%E5%B7%A5%E7%A8%8B%E8%BB%8A-%E5%81%9A%E5%B7%A5%E8%B6%85%E7%B2%BE%E7%BE%8E-%E5%8E%9F%E4%BE%86%E6%98%AF%E4%BE%86%E8%87%AA%E6%B7%B1%E5%9C%B3%E7%9A%84%E5%85%AC%E5%8F%B8-%E4%B8%AD%E5%9C%8B%E8%A3%BD%E9%80%A0-%E5%93%81%E8%B3%AA%E8%B6%8A%E4%BE%86%E8%B6%8A%E5%A5%BD-%E9%A1%9B%E8%A6%86%E4%BA%86%E6%88%91%E7%9A%84/">
+      
+        (新北戰神)最近買了一台工程車，做工超精美。原來是來自深圳的公司。中國製造，品質越來越好，顛覆了我的觀念。
+      </a>
+      <time>2024-03-24</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 我是柳傑克</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#柳傑克" class="tag">
+        柳傑克
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=I8dS102H8u4" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-24/%E6%96%87%E6%98%8E%E5%AE%A2%E5%8E%85-%E8%AE%A8%E8%AE%BA%E5%A6%82%E4%BD%95%E4%B8%AD%E6%96%AD%E6%9A%B4%E5%8A%9B%E9%93%BE%E6%9D%A1/">
+      
+        【文明客厅】讨论如何中断暴力链条
+      </a>
+      <time>2024-03-24</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#文明客厅周孝正" class="tag">
+        文明客厅周孝正
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=8-eyjUhfCac" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-24/%E8%83%8C%E6%99%AF-%E6%96%87%E5%8C%96%E5%86%B2%E7%AA%81%E4%B8%8E%E8%B4%B8%E6%98%93%E5%88%A9%E7%9B%8A-%E9%B8%A6%E7%89%87%E7%9A%84%E9%98%B4%E5%BD%B1-%E5%8F%91%E5%B1%95%E8%BF%87%E7%A8%8B-%E6%9E%97%E5%88%99%E5%BE%90%E7%9A%84%E7%A6%81%E7%83%9F%E4%BB%A4-%E9%B8%A6%E7%89%87%E6%88%98%E4%BA%89%E7%9A%84%E7%88%86%E5%8F%91-%E5%90%8E%E6%9E%9C%E5%BD%B1%E5%93%8D-%E4%B8%8D%E5%B9%B3%E7%AD%89%E6%9D%A1%E7%BA%A6/">
+      
+        背景：文化冲突与贸易利益，鸦片的阴影；发展过程：林则徐的禁烟令，鸦片战争的爆发；后果影响：不平等条约的签订，近代中国的苦难开端：歷史事件20240324
+      </a>
+      <time>2024-03-24</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#明鏡歷史台" class="tag">
+        明鏡歷史台
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=8C9F17cT25c" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-24/%E9%BB%91%E6%9A%97%E7%9A%84%E4%BA%A4%E5%93%8D-%E6%A0%B8%E6%BD%9C%E8%89%87%E7%9A%84%E6%B5%B7%E5%BA%95%E5%AF%B9%E5%B3%99-%E7%A0%B4%E5%86%B0%E8%80%85%E7%9A%84%E8%BD%A8%E8%BF%B9-%E5%8C%97%E6%9E%81%E7%A7%91%E8%80%83%E4%B8%8E%E5%86%B7%E6%88%98%E8%A7%92%E5%8A%9B-%E5%B9%95%E5%90%8E%E7%9A%84%E7%BB%87%E7%BD%91%E8%80%85-%E5%86%B7%E6%88%98%E4%B8%8B%E7%9A%84%E5%9B%BD/">
+      
+        黑暗的交响 - 核潜艇的海底对峙；破冰者的轨迹 - 北极科考与冷战角力；幕后的织网者 - 冷战下的国际间谍网络：冰与火之战：冷战历史20240324
+      </a>
+      <time>2024-03-24</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#明鏡歷史台" class="tag">
+        明鏡歷史台
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=fHcJiy_HiOA" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-24/2489-%E8%80%81%E6%AF%9B%E6%9C%8D%E8%BD%AF%E4%BA%86-%E6%A0%B8%E6%89%93%E5%87%BB-%E4%B8%AD%E5%9B%BD%E8%A2%AB%E6%8C%89%E4%B8%8B%E4%BA%86-%E6%9A%82%E5%81%9C%E9%94%AE-%E8%8B%8F%E5%85%B1%E9%AB%98%E5%B1%82%E5%A4%A7%E6%B4%97%E7%89%8C-%E5%87%A1%E6%98%AF%E6%89%93%E7%9D%80-%E6%95%91%E4%B8%AD%E5%9B%BD-%E6%97%97%E5%8F%B7%E7%9A%84/">
+      
+        （2489）老毛服软了！“核打击”中国被按下了“暂停键”！苏共高层大洗牌！凡是打着“救中国”旗号的“国产货”大多是骗子！怎么看“能够拯救中国的通常是境外势力”？越南和朝鲜两位“小兄弟”帮了中国一个大忙
+      </a>
+      <time>2024-03-24</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#温相说党史" class="tag">
+        温相说党史
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=a0U3HHnFgSs" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-24/AI-+-Web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-7-%E6%AF%94%E7%89%B9%E5%B9%A3-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E6%A6%82%E8%A6%BD/">
+      
+        AI + Web3 公益課筆記 #7｜比特幣、以太坊概覽
+      </a>
+      <time>2024-03-24</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 閱讀筆耕</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#Matters" class="tag">
+        Matters
+      </a>
+      
+
+      
+      <a href="https://matters.news/@penfarming/ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-7-%E6%AF%94%E7%89%B9%E5%B9%A3-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E6%A6%82%E8%A6%BD-bafybeigrkk6mbtoblyqngb27kwc6kpkc65foruiari2lhucqykhuuou3lm" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-24/%E5%BA%B7%E5%BE%B7%E6%89%B9%E5%88%A4%E5%93%B2%E5%AD%A6%E7%AC%AC-25%E8%AE%B2-%E8%B0%8C%E6%B4%AA%E6%9E%9C%E4%B8%BB%E8%AE%B2/">
+      
+        康德批判哲学第 25讲（谌洪果主讲）
+      </a>
+      <time>2024-03-24</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 老虎庙 · 虎侃</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#老虎庙" class="tag">
+        老虎庙
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=bX-JmDlP7Zg" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-24/%E5%BB%A3%E5%B7%9E%E5%8F%B8%E6%A9%9F-%E5%8F%B0%E7%81%A3%E4%BA%BA%E5%88%A5%E8%B7%9F%E9%A6%99%E6%B8%AF%E4%B8%80%E6%A8%A3-%E5%88%B0%E5%BE%8C%E6%82%94%E7%9A%84%E6%99%82%E5%80%99%E5%B7%B2%E7%B6%93%E4%BE%86%E4%B8%8D%E5%8F%8A%E4%BA%86-%E6%88%91%E6%98%AF%E6%9F%B3%E5%82%91%E5%85%8B-%E6%9F%B3%E6%9D%B0%E5%85%8B-%E4%B8%AD%E5%9C%8B-%E5%85%A9%E5%B2%B8/">
+      
+        廣州司機：台灣人別跟香港一樣，到後悔的時候已經來不及了！ #我是柳傑克 #柳杰克 #中國 #兩岸 #台灣
+      </a>
+      <time>2024-03-24</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 我是柳傑克</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#柳傑克" class="tag">
+        柳傑克
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=Oqyv1PN1VZI" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-24/%E4%B8%AD%E5%9C%8B%E6%98%AF%E6%95%B5%E5%9C%8B-%E8%88%87%E6%95%B5%E4%BA%BA%E8%A6%81%E5%92%8C%E5%B9%B3%E7%9B%B8%E8%99%95-%E4%B8%AD%E5%9C%8B%E6%98%AF%E6%95%B5%E5%9C%8B-%E6%95%B5%E5%9C%8B%E7%9A%84%E6%9D%B1%E8%A5%BF%E7%9C%9F%E5%A5%BD%E7%94%A8-%E5%A1%94%E7%B6%A0%E7%8F%AD-%E6%97%A2%E8%A6%81%E5%8F%88%E8%A6%81/">
+      
+        中國是敵國，與敵人要和平相處；中國是敵國，敵國的東西真好用！塔綠班，既要又要。
+      </a>
+      <time>2024-03-24</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 我是柳傑克</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#柳傑克" class="tag">
+        柳傑克
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=QVyivi_sQhk" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-24/Singjai-Stand-Up/">
+      
+        Singjai Stand Up
+      </a>
+      <time>2024-03-24</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 城寨 Singjai</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#城寨" class="tag">
+        城寨
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=iupa1C6O7p4" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-24/%E8%A5%BF%E7%8F%AD%E7%89%99%E5%B8%9D%E5%9B%BD%E7%9A%84%E5%85%A8%E7%9B%9B%E6%97%B6%E6%9C%9F-%E6%B5%B7%E4%B8%8A%E5%B8%9D%E5%9B%BD%E7%9A%84%E6%9E%84%E5%BB%BA-%E8%A5%BF%E7%8F%AD%E7%89%99%E7%8E%8B%E5%9B%BD-%E6%AC%A7%E6%B4%B2%E7%9A%84%E6%96%87%E5%8C%96%E4%B8%8E%E7%BB%8F%E6%B5%8E%E4%BA%A4%E6%B1%87-%E6%8E%A2%E7%B4%A2%E4%B8%8E%E5%BE%81%E6%9C%8D-%E8%A5%BF%E7%8F%AD%E7%89%99%E7%9A%84%E5%8E%86%E5%8F%B2%E5%85%B4%E8%A1%B0/">
+      
+        西班牙帝国的全盛时期：海上帝国的构建；西班牙王国：欧洲的文化与经济交汇；探索与征服：西班牙的历史兴衰：诸国简史10分钟20240324
+      </a>
+      <time>2024-03-24</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#明鏡歷史台" class="tag">
+        明鏡歷史台
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=AvhVxQYS12Y" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-24/%E7%81%AB%E7%84%B0%E4%B8%8E%E5%86%B0%E9%9B%AA-%E8%8A%AC%E5%85%B0%E5%86%AC%E5%AD%A3%E6%88%98%E4%BA%89%E7%9A%84%E7%94%9F%E5%AD%98%E4%B9%8B%E6%88%98-%E9%BB%91%E6%9A%97%E4%B8%AD%E7%9A%84%E5%85%89%E8%8A%92-%E5%8D%8E%E6%B2%99%E8%B5%B7%E4%B9%89%E4%B8%8E%E6%B3%A2%E5%85%B0%E4%BA%BA%E7%9A%84%E6%8A%B5%E6%8A%97-%E5%A4%A9%E7%A9%BA%E4%B9%8B%E6%88%98-%E8%8B%B1%E5%9B%BD%E7%9A%87%E5%AE%B6%E7%A9%BA%E5%86%9B%E5%AF%B9%E6%8A%97/">
+      
+        火焰与冰雪：芬兰冬季战争的生存之战；黑暗中的光芒：华沙起义与波兰人的抵抗；天空之战：英国皇家空军对抗纳粹德国的斗争：战争史纵深剖析：世界历史上的军事演变20240324
+      </a>
+      <time>2024-03-24</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#明鏡歷史台" class="tag">
+        明鏡歷史台
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=wcd14x0gcw8" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-24/%E6%97%B6%E9%97%B4%E7%AB%99%E5%9C%A8%E5%93%AA%E4%B8%80%E8%BE%B9-%E5%8F%B0%E6%B5%B7%E5%8D%B1%E6%9C%BA%E7%9A%84%E7%8E%B0%E7%8A%B6%E4%B8%8E%E5%B1%95%E6%9C%9B/">
+      
+        时间站在哪一边——台海危机的现状与展望
+      </a>
+      <time>2024-03-24</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 胡平</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#Matters" class="tag">
+        Matters
+      </a>
+      
+
+      
+      <a href="https://matters.news/@xhbzqhd/%E6%97%B6%E9%97%B4%E7%AB%99%E5%9C%A8%E5%93%AA%E4%B8%80%E8%BE%B9-%E5%8F%B0%E6%B5%B7%E5%8D%B1%E6%9C%BA%E7%9A%84%E7%8E%B0%E7%8A%B6%E4%B8%8E%E5%B1%95%E6%9C%9B-bafybeighikblubbiwj72ajrzybd5hnh2m34nagaphzrk2jl5j4b4zte6ge" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/teahouse/2024-03-23/(%E5%B8%B8%E5%B7%9E%E7%B6%B2%E5%8F%8B)%E7%95%B6%E4%B8%80%E5%80%8B%E7%90%86%E6%80%A7%E7%9A%84%E5%9C%98%E9%AB%94%E8%88%87%E4%B8%8D%E7%90%86%E6%80%A7%E7%9A%84%E5%9C%98%E9%AB%94%E7%AB%B6%E7%88%AD-%E4%B8%8D%E7%90%86%E6%80%A7%E7%9A%84%E8%B4%8F-%E5%9C%98%E7%B5%90%E5%A4%A7%E6%96%BC%E7%90%86%E6%80%A7/">
+      
+        (常州網友)當一個理性的團體與不理性的團體競爭，不理性的贏。團結大於理性！
+      </a>
+      <time>2024-03-23</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 我是柳傑克</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/teahouse/categories/#柳傑克" class="tag">
+        柳傑克
+      </a>
+      
+
+      
+      <a href="https://www.youtube.com/watch?v=EKFz9E9s-j8" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+
+</ul>
+
+<div class="pagination">
+  
+    <span class="prev">
+      <a href="/teahouse/" class="prev">
+        上一页
+      </a>
+    </span>
+  
+  
+    <span class="next">
+      <a href="/teahouse/page3/" class="next">
+        下一页
+      </a>
+    </span>
+  
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    <a class="fab-action fab-action-1" title="上一页(热键 &#8594;)" href="/teahouse/">
+      <i>上</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一页(热键 &#8592;)" href="/teahouse/page3/">
+      <i>下</i>
+    </a>
+    
+    
+    
+    
+    
+  </div>
+</div>
+
+
+  <script>
+  /* post pagination keyboard shortcuts */
+  document.body.onkeyup = function(e){
+    if (e.keyCode == '37') { window.location = '/teahouse/'; } // left arrow key
+    if (e.keyCode == '39') { window.location = '/teahouse/page3/'; } // right arrow key
+  };
+  </script>
+
+</div>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

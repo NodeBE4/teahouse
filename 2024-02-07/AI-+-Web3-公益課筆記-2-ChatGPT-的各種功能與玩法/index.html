@@ -1,0 +1,3868 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>AI + Web3 公益課筆記 #2｜ChatGPT 的各種功能與玩法 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+AI + Web3 公益課筆記 #2｜ChatGPT 的各種功能與玩法
+——
+" />
+    <meta property="og:description" content="
+AI + Web3 公益課筆記 #2｜ChatGPT 的各種功能與玩法
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="AI + Web3 公益課筆記 #2｜ChatGPT 的各種功能與玩法" />
+    <meta property="twitter:title" content="AI + Web3 公益課筆記 #2｜ChatGPT 的各種功能與玩法" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (3568)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40penfarming%2Fai-web3-%25E5%2585%25AC%25E7%259B%258A%25E8%25AA%25B2%25E7%25AD%2586%25E8%25A8%2598-2-chat-gpt-%25E7%259A%2584%25E5%2590%2584%25E7%25A8%25AE%25E5%258A%259F%25E8%2583%25BD%25E8%2588%2587%25E7%258E%25A9%25E6%25B3%2595-bafybeif5ikltwtyts2repfhtw3auzh75gwyia7vqneoajlntnbmdxgzn6e" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@penfarming/ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-2-chat-gpt-%E7%9A%84%E5%90%84%E7%A8%AE%E5%8A%9F%E8%83%BD%E8%88%87%E7%8E%A9%E6%B3%95-bafybeif5ikltwtyts2repfhtw3auzh75gwyia7vqneoajlntnbmdxgzn6e" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@penfarming/ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-2-chat-gpt-%E7%9A%84%E5%90%84%E7%A8%AE%E5%8A%9F%E8%83%BD%E8%88%87%E7%8E%A9%E6%B3%95-bafybeif5ikltwtyts2repfhtw3auzh75gwyia7vqneoajlntnbmdxgzn6e&text=AI + Web3 公益課筆記 #2｜ChatGPT 的各種功能與玩法&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@penfarming/ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-2-chat-gpt-%E7%9A%84%E5%90%84%E7%A8%AE%E5%8A%9F%E8%83%BD%E8%88%87%E7%8E%A9%E6%B3%95-bafybeif5ikltwtyts2repfhtw3auzh75gwyia7vqneoajlntnbmdxgzn6e&title=AI + Web3 公益課筆記 #2｜ChatGPT 的各種功能與玩法" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@penfarming/ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-2-chat-gpt-%E7%9A%84%E5%90%84%E7%A8%AE%E5%8A%9F%E8%83%BD%E8%88%87%E7%8E%A9%E6%B3%95-bafybeif5ikltwtyts2repfhtw3auzh75gwyia7vqneoajlntnbmdxgzn6e&title=AI + Web3 公益課筆記 #2｜ChatGPT 的各種功能與玩法" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=AI + Web3 公益課筆記 #2｜ChatGPT 的各種功能與玩法&body=
+AI + Web3 公益課筆記 #2｜ChatGPT 的各種功能與玩法
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@penfarming/ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-2-chat-gpt-%E7%9A%84%E5%90%84%E7%A8%AE%E5%8A%9F%E8%83%BD%E8%88%87%E7%8E%A9%E6%B3%95-bafybeif5ikltwtyts2repfhtw3auzh75gwyia7vqneoajlntnbmdxgzn6e" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@penfarming/ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-2-chat-gpt-%E7%9A%84%E5%90%84%E7%A8%AE%E5%8A%9F%E8%83%BD%E8%88%87%E7%8E%A9%E6%B3%95-bafybeif5ikltwtyts2repfhtw3auzh75gwyia7vqneoajlntnbmdxgzn6e&title=AI + Web3 公益課筆記 #2｜ChatGPT 的各種功能與玩法&caption=
+AI + Web3 公益課筆記 #2｜ChatGPT 的各種功能與玩法
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=AI + Web3 公益課筆記 #2｜ChatGPT 的各種功能與玩法&url=https://matters.news/@penfarming/ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-2-chat-gpt-%E7%9A%84%E5%90%84%E7%A8%AE%E5%8A%9F%E8%83%BD%E8%88%87%E7%8E%A9%E6%B3%95-bafybeif5ikltwtyts2repfhtw3auzh75gwyia7vqneoajlntnbmdxgzn6e" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>AI + Web3 公益課筆記 #2｜ChatGPT 的各種功能與玩法</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2024-02-07
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 閱讀筆耕</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@penfarming/ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-2-chat-gpt-%E7%9A%84%E5%90%84%E7%A8%AE%E5%8A%9F%E8%83%BD%E8%88%87%E7%8E%A9%E6%B3%95-bafybeif5ikltwtyts2repfhtw3auzh75gwyia7vqneoajlntnbmdxgzn6e" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1707361087000-->
+<p><a href="https://matters.news/@penfarming/ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-2-chat-gpt-%E7%9A%84%E5%90%84%E7%A8%AE%E5%8A%9F%E8%83%BD%E8%88%87%E7%8E%A9%E6%B3%95-bafybeif5ikltwtyts2repfhtw3auzh75gwyia7vqneoajlntnbmdxgzn6e">AI + Web3 公益課筆記 #2｜ChatGPT 的各種功能與玩法</a>
+——</p>
+
+<div>
+  <p>2024.02.04</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/fd2bc33b-c14e-4fc1-9646-1ccee2ab0f3c.png/public" referrerpolicy="no-referrer" />    <figcaption>
+AI + Web3 公益課
+    </figcaption>
+  </figure>
+  <hr />
+  <h2 id="section">▇  <strong>人物訪談（嘉賓：孟岩）</strong></h2>
+  <h3 id="section-1">▍產業心路歷程</h3>
+  <ul>
+    <li>
+      <p>代幣標準 ERC-3525 設計者。</p>
+    </li>
+  </ul>
+  <blockquote>
+    <p>💡外部資料補充⚡️<br />ERC-3525 是一個新的以太坊通證標準，由 Solv Protocol 團隊提出和設計⋯⋯定義了一個新的資產類別——半同質化代幣（SFT），即 Semi-Fungible Token，顧名思義，是介於 FT和 NFT 之間。<br />⠀<br />FT 和 NFT 已經可以用來標記現實生活中的一切資產，雖然確實如此，但效率太低，因為有太多的資產「有差別，但差別不大」⋯⋯這是 SFT 想要解決的問題。[1]</p>
+  </blockquote>
+  <ul>
+    <li>
+      <p>2015 年，在 IBM 商業戰略改變的情境下，開始學習區塊鏈上的知識。</p>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <p>2017 年，從 IBM 離職，專精投入區塊鏈領域。</p>
+      <ul>
+        <li>
+          <p><strong>教育步道培訓</strong><br />提出 Token Economic（通證經濟）的一些原則。</p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p><strong>DeFi 賽道 Solv Protocol</strong><br />市場上缺少一種適合表達「票據」的資產，一開始定位為金融 NFT，最終探索出來為半同質化代幣（SFT）的升級版。</p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p><strong>RWA</strong><br />與三個國家的央行、國際組織（世界銀行）建立合作關係，開發一些服務實體經濟領域的應用。</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <blockquote>
+    <p>💡外部資料補充⚡️<br />Token 翻譯成「通證」會比「代幣」來的理想。</p>
+    <p>⠀<br />通證是覆蓋比較大的超集合，除了轉帳，還多了質押（stake）、委託（delegate）、燒毀（burn）等用途。<br />⠀<br />代幣是覆蓋比較小的子集合，只有轉帳的概念。<br />⠀<br />社群通證的金錢性固然比不上反映一般商品價值而且歷史悠久的法定貨幣，但反過來也擁有諸多過往無法想像的優勢，<strong>最明顯的是精準地反映和承載社群所重視的價值，把抽象的價值化為具體的行動清單（actionable items）</strong>，讓體現核心價值不只流於遙不可及的願景，產出階段性成果，過程變得比較有趣 [2]。</p>
+  </blockquote>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/6a9af4c5-c0d5-4f1b-9f5d-f3fe5c24f71b.png/public" referrerpolicy="no-referrer" />    <figcaption>
+圖片來源：高重建《區塊鏈社會學》
+    </figcaption>
+  </figure>
+  <p>　</p>
+  <h3 id="section-2">▍怎麼樣看待區塊鏈產業週期？</h3>
+  <ul>
+    <li>
+      <p>「<strong>Web3 支付／穩定幣支付</strong>」能否站穩腳步，落地應用於實體經濟，是區塊鏈產業爆發的關鍵⋯⋯希望這一次邁入牛市後，能掙脫「進三步退兩步」的四年興衰週期，走一個比較長期的上升趨勢。</p>
+    </li>
+    <li>
+      <p>「<strong>Web3 支付／穩定幣支付</strong>」的特性</p>
+      <ul>
+        <li>
+          <p>跨越 Web2 信任邊界，並解決其高費用、低效用等問題。</p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>不僅僅是只有「轉帳」，還能帶有「交易」性質——把我們早習以為常的收執聯、發票、先買後付、分期支付、團購等應用場景都帶進 Web3 裡。</p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>終身不丟交易紀錄，儲存在區塊鏈上面⋯⋯像這樣的新型態應用，會像電子郵件般，逐漸滲入我們的生活。</p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>在非洲，已經被積極地採用。</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <p>　　</p>
+  <h3 id="section-3">▍看好什麼賽道？</h3>
+  <ul>
+    <li>
+      <p>看好 ZK（零知識證明）技術與發展。ZK 可以讓很多原本只能在區塊鏈上做的事情，被解放出來。</p>
+      <ul>
+        <li>
+          <p>有望靠著 ZK 解決隱私保護與監管的問題。</p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>這是一個把「1000 萬億美元」級別的資金體量，搬運到鏈上的大工程。</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <p>　　</p>
+  <h3 id="web3-">▍給 Web3 開發者／投資人的建議</h3>
+  <ol>
+    <li>
+      <p>個人短期主義（賭性）vs 長期構建，兩者必須區分清楚。</p>
+    </li>
+    <li>
+      <p>人窮還得多讀書，學習一些基礎知識（例：經濟學、英文），長期必能帶來回報與價值。</p>
+    </li>
+    <li>
+      <p>敬畏「原則」，要相信你所做的每一件事情是有後果（代價）的。</p>
+    </li>
+  </ol>
+  <hr />
+  <h2 id="section-4">▇  主題大綱（講師：陳財貓）</h2>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/63428e2a-71df-4182-b097-5eb0dac3fe4d.png/public" referrerpolicy="no-referrer" />    <figcaption>
+主題大綱
+    </figcaption>
+  </figure>
+  <hr />
+  <h2 id="chatgpt-">▇  主題：ChatGPT 的各種功能與玩法</h2>
+  <h3 id="chatgpt--1">▍<strong>ChatGPT 的內建功能</strong></h3>
+  <ul>
+    <li>
+      <p>三種內建功能（Code Interpreter、Web Browsing、Dall-E）原本是分開的，後來合併了。</p>
+    </li>
+    <li>
+      <p>Code Interpreter 與我們的生活最息息相關。</p>
+    </li>
+    <li>
+      <p>OpenAI 聯合創辦人 <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.bilibili.com/video/BV1MP411X7g8/?share_source=copy_web&amp;t=657">Greg Brockman TED 演說 10:58</a> 示範了 Code Interpreter 具備讀取檔案、自動撰寫 Python 程式的能力，因此可以讓它幫你分析資料、製作報表、修改圖片、製作幻燈片、清理資料集等。</p>
+    </li>
+    <li>
+      <p>Code Interpreter 運作原理像是一個「沙盒」，為其中搭載 200 多個軟件包的執行，提供了一個隔離環境，產出成果。</p>
+    </li>
+  </ul>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/f58a62d0-e466-4f6f-8270-e3032bddadf3.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <ul>
+    <li>
+      <p>Web Browsing 上網功能對於緩解「<a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.town/@penfarming/514124-ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-1-%E5%A4%A7%E5%9E%8B%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B%E6%98%AF%E4%BB%80%E9%BA%BC-bafybeia32tconosnjoh2p7g77fai47zfbsmm6mikfqkjw7ighu7strlfuq">幻覺（hallucination）</a>」問題是有幫助的。</p>
+    </li>
+    <li>
+      <p>Dall-E 專門用於生成 AI 圖像，以填補 ChatGPT 中只能輸入及生成文字的限制，在第四堂課做更深入介紹。</p>
+    </li>
+  </ul>
+  <hr />
+  <h3 id="gpts">▍<strong>GPTs</strong></h3>
+  <ul>
+    <li>
+      <p>GPTs 是被封裝來為單一場景服務的 Agent，稍後會進一步解說 Agent 的概念。</p>
+    </li>
+    <li>
+      <p>對話式的 GPTs 創建流程，不用寫程式碼。</p>
+    </li>
+    <li>
+      <p>GPTs 的三個元素：</p>
+      <ul>
+        <li>
+          <p><strong>Instructions</strong><br />給 GPTs 的指令／指南，指導模型「完成特定任務或遵循特定流程」的規則。</p>
+        </li>
+        <li>
+          <p><strong>Actions</strong><br />GPTs 執行的動作或操作，能與外部 API 的串接，例如標記其他 GPTs 協同作用。</p>
+        </li>
+        <li>
+          <p><strong>Knowledge</strong><br />GPTs 擁有或可造訪的資料庫。</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <hr />
+  <h3 id="agent">▍<strong>Agent（智能體）</strong></h3>
+  <ul>
+    <li>
+      <p>Agent 翻譯成「智能體」會比「代理人」來的理想。</p>
+    </li>
+  </ul>
+  <blockquote>
+    <p>💡外部資料補充⚡️<br />Agent一詞源於拉丁語的「Agere」，意為「to do」。在大語言模型（LLM）的語境裡，Agent 指的是具備自主理解、規劃決策和執行複雜任務的智能體。[3]</p>
+  </blockquote>
+  <ul>
+    <li>
+      <p>比喻：人在道路上開車，看到貓突然竄出，於是踩了煞車。</p>
+      <ul>
+        <li>
+          <p>人 → 智能體</p>
+        </li>
+        <li>
+          <p>世界 → 環境（道路）</p>
+        </li>
+        <li>
+          <p>眼睛 → 傳感器</p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>腳 → 執行器（讓人可以作用於這個世界）</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/7a8f9d91-0bba-40db-9d64-64ce831edf42.png/public" referrerpolicy="no-referrer" />    <figcaption>
+Agent 是什麼
+    </figcaption>
+  </figure>
+  <ul>
+    <li>
+      <p>Agent 的組成：</p>
+      <ul>
+        <li>
+          <p><strong>Planing（規劃）</strong><br />將大任務分解為更小、更易管理的子目標。<br />能從過去的行動自我批評和反思，對未來的步驟進行改良。</p>
+        </li>
+        <li>
+          <p><strong>Memory（記憶）</strong><br />包括短期記憶和長期記憶，後者通常利用 <a target="_blank" rel="noopener noreferrer nofollow" href="https://aws.amazon.com/tw/what-is/vector-databases/">外部向量儲存</a> 和快速檢索來實現。</p>
+        </li>
+        <li>
+          <p><strong>Tools（工具）</strong><br />智能體能使用的資源，以及學會調用外部 API 的能力，為了獲取模型權重中不足的額外資料。</p>
+        </li>
+        <li>
+          <p><strong>Action （行動）</strong></p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/f0889dda-d50d-421d-9144-e69b4a5020fc.png/public" referrerpolicy="no-referrer" />    <figcaption>
+Agent 的組成
+    </figcaption>
+  </figure>
+  <hr />
+  <h3 id="rag">▍<strong>RAG（檢索增強生成）</strong></h3>
+  <ul>
+    <li>
+      <p>RAG（Retrieval-Augmented Generation）</p>
+    </li>
+  </ul>
+  <blockquote>
+    <p>💡外部資料補充⚡️<br />法官與法庭助理的比喻 [4]。<br />⠀<br />當某個案件特別硬核，需要特殊專業知識時，法官會派遣法庭助理到法律圖書館，尋找可以引用的先例和特定案例。<br />⠀</p>
+    <p>同理，大語言模型就像是一位法官，可以「判決」我們的各種呈堂文本。但為了提供引用來源的權威答案，該模型需要助手——RAG——進行若干研究。</p>
+  </blockquote>
+  <ul>
+    <li>
+      <p>大語言模型受到其預訓練（Pre-trained）數據的限制，缺乏對最新事件的了解，透過 RAG 從外部資料庫來源「<strong>檢索」</strong>最新文檔，然後將它們作為上下文訊息，輸入到一個「<strong>生成</strong>」模型裡（例：Transforme<a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.town/@penfarming/514124-ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-1-%E5%A4%A7%E5%9E%8B%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B%E6%98%AF%E4%BB%80%E9%BA%BC-bafybeia32tconosnjoh2p7g77fai47zfbsmm6mikfqkjw7ighu7strlfuq">r</a> 模型），以求更準確、豐富地響應我們的要求。</p>
+    </li>
+    <li>
+      <p>對於緩解「<a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.town/@penfarming/514124-ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-1-%E5%A4%A7%E5%9E%8B%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B%E6%98%AF%E4%BB%80%E9%BA%BC-bafybeia32tconosnjoh2p7g77fai47zfbsmm6mikfqkjw7ighu7strlfuq">有限的上下文窗口（Context Window）</a>」、「<a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.town/@penfarming/514124-ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-1-%E5%A4%A7%E5%9E%8B%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B%E6%98%AF%E4%BB%80%E9%BA%BC-bafybeia32tconosnjoh2p7g77fai47zfbsmm6mikfqkjw7ighu7strlfuq">幻覺（hallucination）</a>」問題皆有幫助。</p>
+    </li>
+  </ul>
+  <hr />
+  <h3 id="embedding-">▍Embedding 是什麼？</h3>
+  <ul>
+    <li>
+      <p><strong>將單詞、句子或文檔（壓縮後）映射為一個固定大小的向量表示</strong>。</p>
+    </li>
+    <li>
+      <p>這些向量表示能夠捕捉到詞句的語義和語境，使得計算機可以處理自然語言數據。</p>
+    </li>
+    <li>
+      <p>比喻：Openbook 開卷考試要讓 GPT 偷看的一張又一張小紙條（因為 book 的上下文不夠用，所以打小抄，需要用到時把小抄抽出來，方便隨時看）。</p>
+    </li>
+  </ul>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/67d3b9e6-e85f-4044-90c1-414f07294c20.png/public" referrerpolicy="no-referrer" />    <figcaption>
+RAG 實例，過程中使用到 Embedding 技術
+    </figcaption>
+  </figure>
+  <hr />
+  <h2 id="section-5">▇  課後心得</h2>
+  <p>這一講我覺得挺有收穫的部分，是對於幾個單詞（Token、Agent、RAG⋯⋯）有了更深一層的的理解⋯⋯我把 RAG 的精神落實在這篇筆記裡，事後素材整理、發現其中有某些環節想得還不是很通透時，我會向「外部」查找一些資料，引述（quote）至內容裡，並放上註腳。</p>
+  <p>其它印象深刻的點，是區塊鏈 BUIDL 大佬孟岩給我們的三條建議，特別是第一條（短期主義 vs 長期構建）可以說是最本質性的東西：在投資路上的長期建構是「HODL」、在學習路上的長期建構是一磚一瓦「底層知識」、面臨人生抉擇的長期構建得基於「原則」。</p>
+  <p>那什麼是「原則」呢？我想可以從 Ray Dalio《Principles: Life and Work》裡找到最棒的闡釋，<strong>真正的原則必須以自然法則與真理站在同一邊</strong>，是放諸四海皆準的美德，像公正、仁慈、正直、誠信、品質等能夠以自然法則相結合的才是真正的原則。</p>
+  <hr />
+  <h2 id="section-6">▇  參考資料</h2>
+  <p>[1] <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.blocktempo.com/what-is-erc3525-token-and-who-made-it/">讀懂 ERC-3525「半同質化代幣」是什麼？</a></p>
+  <p>[2] 高重建《區塊鏈社會學》第三章第三節</p>
+  <p>[3] <a target="_blank" rel="noopener noreferrer nofollow" href="https://zhuanlan.zhihu.com/p/659386520">Agent：AI 智能体的介绍</a></p>
+  <p>[4] <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.ithome.com.tw/pr/159861">什麼是檢索增強生成？</a></p>
+  <p></p>
+  <p></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-03-28/IMO-%E4%BA%BA%E7%89%A9%E8%AA%8C-%E7%AC%AC%E4%B8%80%E5%AD%A3-%E8%AA%AA%E6%9B%B8%E6%91%A9%E5%A4%A9%E8%BC%AA-%E9%80%9F%E8%A8%98/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2024-02-13</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-02-13/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-IMO-%E4%BA%BA%E7%89%A9%E8%AA%8C-%E4%B8%8B%E7%8F%AD%E5%BE%8C%E7%9A%84%E5%AF%AB%E4%BD%9C%E6%99%82%E5%85%89-%E5%B0%8F%E8%AA%AA%E5%AE%B6%E6%B2%90%E8%AC%99%E5%B0%88%E8%A8%AA/">
+          創作者經濟 IMO 人物誌｜下班後的寫作時光，小說家沐謙專訪
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-02-11</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-02-11/%E8%A9%AD%E7%95%AB%E9%80%A3%E7%AF%87-%E8%A6%96%E8%A6%BA%E5%8C%96-%E5%90%8C%E6%AD%A5%E7%8E%87-%E5%B8%B6%E5%85%A5%E6%84%9F%E6%BB%BF%E9%BB%9E/">
+          《詭畫連篇》視覺化、同步率、帶入感滿點！
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-02-06</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-02-06/%E7%B4%84%E6%9C%83-%E9%9A%B1%E7%A7%81%E4%B8%80%E6%AC%A1%E5%88%B0%E4%BD%8D%E7%9A%84-SocialFi-%E4%BA%A4%E5%8F%8B%E5%B9%B3%E5%8F%B0-Pumpkin-%E7%94%A8-Superlike-%E6%94%AF%E6%8C%81%E4%BD%A0%E5%BF%83%E5%84%80/">
+          約會、隱私一次到位的 SocialFi 交友平台 Pumpkin，用 Superlike 支持你心儀的對象
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-02-06</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-02-06/%E5%90%8E%E4%BA%8C%E5%8D%81%E5%A4%A7%E6%97%B6%E4%BB%A3%E4%B9%8B%E6%9D%82%E8%B0%88-%E4%B8%89-%E6%97%A2%E6%97%A0%E4%BF%A1%E4%BB%BB-%E4%BD%95%E6%9D%A5%E4%BF%A1%E5%BF%83/">
+          后二十大时代之杂谈（三）既无信任，何来信心？
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2024-02-07/%E5%85%AD%E9%80%A3%E8%B7%8C%E5%BE%8CA%E8%82%A1%E5%8F%8D%E5%BD%88-%E7%BF%92%E8%BF%91%E5%B9%B3%E8%A6%AA%E8%87%AA%E9%81%8E%E5%95%8F%E9%87%91%E8%9E%8D%E5%B8%82%E5%A0%B4-%E6%B5%B7%E5%A4%96%E5%AA%92%E9%AB%94%E5%95%8F-%E4%B8%AD%E5%9C%8B%E8%82%A1%E6%B0%91%E8%83%BD%E5%90%A6%E9%81%8E%E5%80%8B%E5%AE%89%E5%BF%83%E5%B9%B4-%E4%B8%AD%E5%85%B1%E4%B8%AD%E5%A4%AE%E5%9C%8B%E5%8B%99%E9%99%A2-%E5%90%B3%E6%B8%85%E5%90%8C/">
+            前一篇：六連跌後A股反彈，習近平親自過問金融市場，海外媒體問，中國股民能否過個安心年？中共中央國務院｜吳清同志｜中國證券監督管理委員｜黨委書記｜中國金融｜中國經濟｜中國股市｜中國企業家｜中國外資｜改革開放
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2024-02-07/%E8%AE%93%E4%BA%BA%E6%90%96%E9%A0%AD%E5%98%86%E6%81%AF%E7%9A%84%E8%A1%A8%E7%8F%BE-%E7%B2%BE%E8%8F%AF%E7%89%87%E6%AE%B5-%E7%89%B9%E9%A6%96%E6%9D%8E%E5%AE%B6%E8%B6%85%E5%B0%8D%E7%AB%8B%E6%B3%95%E6%9C%83%E8%AD%B0%E5%93%A1%E8%AC%9D%E5%81%89%E4%BF%8A%E7%9A%84%E5%8F%8D%E5%94%87%E7%9B%B8%E8%AD%8F-%E4%B8%8A%E7%B6%B1%E4%B8%8A%E7%B7%9A-%E6%B0%91%E9%96%93%E8%BC%BF%E8%AB%96%E5%91%8A%E8%AA%A1%E6%9D%8E%E5%AE%B6%E8%B6%85/">
+            後一篇：讓人搖頭嘆息的表現-精華片段-特首李家超對立法會議員謝偉俊的反唇相譏，上綱上線，民間輿論告誡李家超，擇善者而從之，其不善者而改之，這是從政之道｜特區政府｜行政長官｜特首答問會｜國安法｜新聞自由
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2024-02-07/%E5%85%AD%E9%80%A3%E8%B7%8C%E5%BE%8CA%E8%82%A1%E5%8F%8D%E5%BD%88-%E7%BF%92%E8%BF%91%E5%B9%B3%E8%A6%AA%E8%87%AA%E9%81%8E%E5%95%8F%E9%87%91%E8%9E%8D%E5%B8%82%E5%A0%B4-%E6%B5%B7%E5%A4%96%E5%AA%92%E9%AB%94%E5%95%8F-%E4%B8%AD%E5%9C%8B%E8%82%A1%E6%B0%91%E8%83%BD%E5%90%A6%E9%81%8E%E5%80%8B%E5%AE%89%E5%BF%83%E5%B9%B4-%E4%B8%AD%E5%85%B1%E4%B8%AD%E5%A4%AE%E5%9C%8B%E5%8B%99%E9%99%A2-%E5%90%B3%E6%B8%85%E5%90%8C/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2024-02-07/%E8%AE%93%E4%BA%BA%E6%90%96%E9%A0%AD%E5%98%86%E6%81%AF%E7%9A%84%E8%A1%A8%E7%8F%BE-%E7%B2%BE%E8%8F%AF%E7%89%87%E6%AE%B5-%E7%89%B9%E9%A6%96%E6%9D%8E%E5%AE%B6%E8%B6%85%E5%B0%8D%E7%AB%8B%E6%B3%95%E6%9C%83%E8%AD%B0%E5%93%A1%E8%AC%9D%E5%81%89%E4%BF%8A%E7%9A%84%E5%8F%8D%E5%94%87%E7%9B%B8%E8%AD%8F-%E4%B8%8A%E7%B6%B1%E4%B8%8A%E7%B7%9A-%E6%B0%91%E9%96%93%E8%BC%BF%E8%AB%96%E5%91%8A%E8%AA%A1%E6%9D%8E%E5%AE%B6%E8%B6%85/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2024-02-11/%E8%A9%AD%E7%95%AB%E9%80%A3%E7%AF%87-%E8%A6%96%E8%A6%BA%E5%8C%96-%E5%90%8C%E6%AD%A5%E7%8E%87-%E5%B8%B6%E5%85%A5%E6%84%9F%E6%BB%BF%E9%BB%9E/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2024-02-06/%E7%B4%84%E6%9C%83-%E9%9A%B1%E7%A7%81%E4%B8%80%E6%AC%A1%E5%88%B0%E4%BD%8D%E7%9A%84-SocialFi-%E4%BA%A4%E5%8F%8B%E5%B9%B3%E5%8F%B0-Pumpkin-%E7%94%A8-Superlike-%E6%94%AF%E6%8C%81%E4%BD%A0%E5%BF%83%E5%84%80/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2024-02-07/%E5%85%AD%E9%80%A3%E8%B7%8C%E5%BE%8CA%E8%82%A1%E5%8F%8D%E5%BD%88-%E7%BF%92%E8%BF%91%E5%B9%B3%E8%A6%AA%E8%87%AA%E9%81%8E%E5%95%8F%E9%87%91%E8%9E%8D%E5%B8%82%E5%A0%B4-%E6%B5%B7%E5%A4%96%E5%AA%92%E9%AB%94%E5%95%8F-%E4%B8%AD%E5%9C%8B%E8%82%A1%E6%B0%91%E8%83%BD%E5%90%A6%E9%81%8E%E5%80%8B%E5%AE%89%E5%BF%83%E5%B9%B4-%E4%B8%AD%E5%85%B1%E4%B8%AD%E5%A4%AE%E5%9C%8B%E5%8B%99%E9%99%A2-%E5%90%B3%E6%B8%85%E5%90%8C/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2024-02-07/%E8%AE%93%E4%BA%BA%E6%90%96%E9%A0%AD%E5%98%86%E6%81%AF%E7%9A%84%E8%A1%A8%E7%8F%BE-%E7%B2%BE%E8%8F%AF%E7%89%87%E6%AE%B5-%E7%89%B9%E9%A6%96%E6%9D%8E%E5%AE%B6%E8%B6%85%E5%B0%8D%E7%AB%8B%E6%B3%95%E6%9C%83%E8%AD%B0%E5%93%A1%E8%AC%9D%E5%81%89%E4%BF%8A%E7%9A%84%E5%8F%8D%E5%94%87%E7%9B%B8%E8%AD%8F-%E4%B8%8A%E7%B6%B1%E4%B8%8A%E7%B7%9A-%E6%B0%91%E9%96%93%E8%BC%BF%E8%AB%96%E5%91%8A%E8%AA%A1%E6%9D%8E%E5%AE%B6%E8%B6%85/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2024-02-11/%E8%A9%AD%E7%95%AB%E9%80%A3%E7%AF%87-%E8%A6%96%E8%A6%BA%E5%8C%96-%E5%90%8C%E6%AD%A5%E7%8E%87-%E5%B8%B6%E5%85%A5%E6%84%9F%E6%BB%BF%E9%BB%9E/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2024-02-06/%E7%B4%84%E6%9C%83-%E9%9A%B1%E7%A7%81%E4%B8%80%E6%AC%A1%E5%88%B0%E4%BD%8D%E7%9A%84-SocialFi-%E4%BA%A4%E5%8F%8B%E5%B9%B3%E5%8F%B0-Pumpkin-%E7%94%A8-Superlike-%E6%94%AF%E6%8C%81%E4%BD%A0%E5%BF%83%E5%84%80/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
