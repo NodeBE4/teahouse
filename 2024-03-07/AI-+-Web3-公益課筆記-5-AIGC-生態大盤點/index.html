@@ -1,0 +1,3987 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>AI + Web3 公益課筆記 #5｜AIGC 生態大盤點 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+AI + Web3 公益課筆記 #5｜AIGC 生態大盤點
+——
+" />
+    <meta property="og:description" content="
+AI + Web3 公益課筆記 #5｜AIGC 生態大盤點
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="AI + Web3 公益課筆記 #5｜AIGC 生態大盤點" />
+    <meta property="twitter:title" content="AI + Web3 公益課筆記 #5｜AIGC 生態大盤點" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (3334)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40penfarming%2Fai-web3-%25E5%2585%25AC%25E7%259B%258A%25E8%25AA%25B2%25E7%25AD%2586%25E8%25A8%2598-5-aigc-%25E7%2594%259F%25E6%2585%258B%25E5%25A4%25A7%25E7%259B%25A4%25E9%25BB%259E-bafybeiajhuylmg73vhuwokoj2dmpq24h4rprsdbwaq5onryjfggqrfwrgq" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@penfarming/ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-5-aigc-%E7%94%9F%E6%85%8B%E5%A4%A7%E7%9B%A4%E9%BB%9E-bafybeiajhuylmg73vhuwokoj2dmpq24h4rprsdbwaq5onryjfggqrfwrgq" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@penfarming/ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-5-aigc-%E7%94%9F%E6%85%8B%E5%A4%A7%E7%9B%A4%E9%BB%9E-bafybeiajhuylmg73vhuwokoj2dmpq24h4rprsdbwaq5onryjfggqrfwrgq&text=AI + Web3 公益課筆記 #5｜AIGC 生態大盤點&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@penfarming/ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-5-aigc-%E7%94%9F%E6%85%8B%E5%A4%A7%E7%9B%A4%E9%BB%9E-bafybeiajhuylmg73vhuwokoj2dmpq24h4rprsdbwaq5onryjfggqrfwrgq&title=AI + Web3 公益課筆記 #5｜AIGC 生態大盤點" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@penfarming/ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-5-aigc-%E7%94%9F%E6%85%8B%E5%A4%A7%E7%9B%A4%E9%BB%9E-bafybeiajhuylmg73vhuwokoj2dmpq24h4rprsdbwaq5onryjfggqrfwrgq&title=AI + Web3 公益課筆記 #5｜AIGC 生態大盤點" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=AI + Web3 公益課筆記 #5｜AIGC 生態大盤點&body=
+AI + Web3 公益課筆記 #5｜AIGC 生態大盤點
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@penfarming/ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-5-aigc-%E7%94%9F%E6%85%8B%E5%A4%A7%E7%9B%A4%E9%BB%9E-bafybeiajhuylmg73vhuwokoj2dmpq24h4rprsdbwaq5onryjfggqrfwrgq" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@penfarming/ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-5-aigc-%E7%94%9F%E6%85%8B%E5%A4%A7%E7%9B%A4%E9%BB%9E-bafybeiajhuylmg73vhuwokoj2dmpq24h4rprsdbwaq5onryjfggqrfwrgq&title=AI + Web3 公益課筆記 #5｜AIGC 生態大盤點&caption=
+AI + Web3 公益課筆記 #5｜AIGC 生態大盤點
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=AI + Web3 公益課筆記 #5｜AIGC 生態大盤點&url=https://matters.news/@penfarming/ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-5-aigc-%E7%94%9F%E6%85%8B%E5%A4%A7%E7%9B%A4%E9%BB%9E-bafybeiajhuylmg73vhuwokoj2dmpq24h4rprsdbwaq5onryjfggqrfwrgq" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>AI + Web3 公益課筆記 #5｜AIGC 生態大盤點</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2024-03-07
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 閱讀筆耕</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@penfarming/ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-5-aigc-%E7%94%9F%E6%85%8B%E5%A4%A7%E7%9B%A4%E9%BB%9E-bafybeiajhuylmg73vhuwokoj2dmpq24h4rprsdbwaq5onryjfggqrfwrgq" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1709865043000-->
+<p><a href="https://matters.news/@penfarming/ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-5-aigc-%E7%94%9F%E6%85%8B%E5%A4%A7%E7%9B%A4%E9%BB%9E-bafybeiajhuylmg73vhuwokoj2dmpq24h4rprsdbwaq5onryjfggqrfwrgq">AI + Web3 公益課筆記 #5｜AIGC 生態大盤點</a>
+——</p>
+
+<div>
+  <p>2024.03.03</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/d360339a-a259-4dce-b094-073610b14869.png/public" referrerpolicy="no-referrer" />    <figcaption>
+AI + Web3 公益課筆記 #5
+    </figcaption>
+  </figure>
+  <h3 id="uweb-">▇  開場嘉賓（UWEB 方軍）</h3>
+  <h3 id="section"> ▍<strong>背景</strong></h3>
+  <ul>
+    <li>
+      <p>資深區塊鏈 KOL、技術專家、快知實驗室合夥人、Uweb 教育合夥人。<br />　</p>
+    </li>
+  </ul>
+  <h3 id="ai--web3-"> ▍AI 與 Web3 結合，主要湧現在哪些場景？</h3>
+  <ul>
+    <li>
+      <p><strong>參與交易、個人化服務、爭議解決、去中心化加強。</strong></p>
+    </li>
+    <li>
+      <p>引用 Vitalik 討論這兩個領域之間的交互（備註：文章中把區塊鏈描述為創建「遊戲」的平台），分為四大類：</p>
+    </li>
+  </ul>
+  <blockquote>
+    <ol>
+      <li>
+        <p><strong>人工智慧作為遊戲中的玩家（最高生存能力）：</strong>人工智慧參與的機制中，激勵的最終來源來自於人類輸入的協議；</p>
+      </li>
+      <li>
+        <p><strong>人工智慧作為遊戲介面（潛力巨大，但也存在風險）：</strong>人工智慧幫助用戶了解周圍的加密世界，並確保他們的行為（即簽名訊息和交易）符合他們的意圖，並且不會被欺騙或被騙；</p>
+      </li>
+      <li>
+        <p><strong>人工智慧作為遊戲規則（非常小心）：</strong>區塊鏈、 DAO 和直接調用人工智慧的類似機制。例如「人工智慧評審」；</p>
+      </li>
+      <li>
+        <p><strong>人工智慧作為遊戲的目標（長期但有趣）：</strong>設計區塊鏈、 DAO 和類似機制，目標是建立和維護可用於其他目的的人工智慧，使用加密貨幣來更好地激勵培訓或防止人工智慧洩露隱私數據或被濫用。</p>
+      </li>
+    </ol>
+  </blockquote>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/c7975254-ab26-4c4d-83ad-7af19da01322.webp/public" referrerpolicy="no-referrer" />    <figcaption>
+加密貨幣和 AI 之間，最有成效的交叉點是什麼？
+    </figcaption>
+  </figure>
+  <p>延伸閱讀：<a target="_blank" rel="noopener noreferrer nofollow" href="https://blockcast.it/2024/01/31/vitalik-buterin-warmed-up-on-the-potential-intersection-between-ai-and-crypto/">Vitalik 最新撰文：加密貨幣和 AI 之間，最有成效的交叉點是什麼？</a></p>
+  <ul>
+    <li>
+      <p>不急著一定要馬上侷限 AI 只能幹什麼事情， 應該放眼於更廣泛的範疇，這種宏觀視野有助於推動 AI 模型的進步與精進。<br />　</p>
+    </li>
+  </ul>
+  <h3 id="ai-"> ▍一般人如何從 AI 找到切入點？</h3>
+  <ul>
+    <li>
+      <p><strong>思考將業務流程中的特定環節利用 AI 進行優化</strong>，從而有效節約人力資源。</p>
+    </li>
+    <li>
+      <p>例子一｜希望把影片變成文章，又長又完整地梳理出來，可以靠 AI 一系列「流程化處理」的識別、解讀，最後化為一篇圖文並茂、結構清晰的長文。</p>
+    </li>
+    <li>
+      <p>例子二｜不僅覆蓋大河道，有 AI 的輔助允許進行更精細的「單體」投研。這在牛市期間尤其有用，一堆新項目雨後春筍但個人時間和精力有限，讓 AI 幫忙有效地篩選和分析。<br />　　</p>
+    </li>
+  </ul>
+  <h3 id="ai--1"> ▍使用 AI 做投研時</h3>
+  <ul>
+    <li>
+      <p>痛點ㄧ｜AI 找到的資料不是最好的，要小心網路上品質低劣的 AI 文。</p>
+    </li>
+    <li>
+      <p>痛點二｜AI 的分析也是模模糊糊，短話長說。</p>
+    </li>
+    <li>
+      <p>實戰ㄧ｜將投研中的信息分析拆成「<strong>四步框架</strong>」，並用 AI 進行投研輔助。</p>
+      <ul>
+        <li>
+          <p>❶ 信息篩選 → ❷ 學習知識 → ❸ 解讀信息 → ❹ 總結判斷。</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/ea21d2dc-d58a-4cf7-9de7-4630eab05061.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <ul>
+    <li>
+      <p>實戰二｜養成向 AI「<strong>高效提問</strong>」的核心素養。</p>
+      <ul>
+        <li>
+          <p>使用「 ICDO 結構化提示語模板」（I see, DO!）（我明白了，做吧！）</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/3e84a53a-b6ac-4bcc-8785-fcd6fa2c05cf.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <ul>
+    <li>
+      <p>實戰三｜啟動你的「<strong>老闆模式</strong>」和 AI 員工互動。</p>
+      <ul>
+        <li>
+          <p>高品質資料：確保你的員工不是讀了一堆垃圾。</p>
+        </li>
+        <li>
+          <p>針對性問題：我有自己的解讀，我聽完你的報告後有一些質疑（批判性思維，提出反對意見請 AI 質疑），激發創意，延伸出更多思考方向。</p>
+        </li>
+        <li>
+          <p>交互式提問：不懂就問，各種問題持續問下去。</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/d5bfb85b-bcac-499a-b429-b02376a01c75.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <hr />
+  <h2 id="aigc-">▇ 正課：AIGC 生態大盤點（講師：陳財貓）</h2>
+  <h3 id="section-1"> ▍01 開源與閉源</h3>
+  <ul>
+    <li>
+      <p>如果你希望利用別人開發的 AI 工具，並將它們構建在你自己的產品中，你需要：</p>
+      <ul>
+        <li>
+          <p>弄清楚這是開源還是閉源（決定了你是否能部署在本地，還是只能調用）？</p>
+        </li>
+        <li>
+          <p>如果是開源，那麼它遵守什麼樣的開源協議條款？</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>開源軟體（open source sofeware）是「開放原始碼」的軟體</p>
+      <ul>
+        <li>
+          <p>原始碼：就像製作某種咖哩的各種原材料，以及使用原材料製作咖哩的食譜。</p>
+        </li>
+        <li>
+          <p>軟體：就像製作好的咖哩。你很難把它直接還原成原材料，也不知道到底是用什麼做的、怎麼做的。</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/0b9e6cd4-0e9d-411c-adab-07c33878a102.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/aa2ec11b-a60a-4847-b1ac-10ef95b54799.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <ul>
+    <li>
+      <p>開源協議就是「你使用開源軟體仍須遵守一些額外條款」，例如 <a target="_blank" rel="noopener noreferrer nofollow" href="https://zh.wikipedia.org/zh-tw/MIT%E8%A8%B1%E5%8F%AF%E8%AD%89">MIT License</a>、<a target="_blank" rel="noopener noreferrer nofollow" href="https://zh.wikipedia.org/wiki/GNU%E9%80%9A%E7%94%A8%E5%85%AC%E5%85%B1%E8%AE%B8%E5%8F%AF%E8%AF%81">GPL License</a> 等等。</p>
+    </li>
+  </ul>
+  <hr />
+  <p>人工生成製成內容（AI Generated Content, AIGC）涵蓋這些組成部分：</p>
+  <h3 id="llm"> ▍02 生文：<a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.town/@penfarming/514124-ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-1-%E5%A4%A7%E5%9E%8B%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B%E6%98%AF%E4%BB%80%E9%BA%BC-bafybeia32tconosnjoh2p7g77fai47zfbsmm6mikfqkjw7ighu7strlfuq">大語言模型（LLM）</a></h3>
+  <p>這邊僅節錄四個專案</p>
+  <ul>
+    <li>
+      <p><strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://chat.openai.com/">GPT</a></strong><br />OpenAI 研發的大語言模型，付費版的 GPT 4 輾壓其他對手，免費版的 GPT 3.5 樹立一個威嚇，要讓對手賺不到錢。</p>
+    </li>
+    <li>
+      <p><strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://claude.ai/login?returnTo=%2F">Claude</a></strong><br />Anthropic 開發的大語言模型，對談時比較有「人味」，主打安全；2024 年 3 月 4 日推出最新的「Claude 3」模型，聲稱其性能、推理、計算能力超越 OpenAI 的 GPT-4 和 Google 的 Gemini Ultra。</p>
+    </li>
+    <li>
+      <p><strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://gemini.google.com/?hl=zh-TW">Google Gemini</a></strong><br />去年底 Google 推出要和 GPT-4 一較長短的大語言模型，兩個月後迭代至「Gemini 1.5 Pro」版本，<a target="_blank" rel="noopener noreferrer nofollow" href="https://tw.news.yahoo.com/%E8%B0%B7%E6%AD%8Cgemini-%E5%A4%AA%E6%94%BF%E6%B2%BB%E6%AD%A3%E7%A2%BA%E8%80%8C%E6%8C%A8%E8%BD%9F-ai%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA%E8%AE%8A-%E8%A6%BA%E9%9D%92-%E6%98%AF%E5%81%B6%E7%84%B6%E6%88%96%E4%BA%BA%E7%82%BA%E7%9A%84-093001995.html">卻因太政治正確而挨轟</a>，緊急暫停人物圖像生成功能。</p>
+    </li>
+  </ul>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/9dae9763-9614-4c4f-81b6-fbb19c871afa.png/public" referrerpolicy="no-referrer" />    <figcaption>
+Gemini 生成的「美國國父華盛頓」變成了頭戴白色假髮、身穿陸軍制服的黑人形象
+    </figcaption>
+  </figure>
+  <blockquote>
+    <p>過度追求迎合用戶價值的模型訓練方式（例如：模型對於提示詞 how can I kill all python processes... 中的 kill 反應過頭了），會產生「<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.bilibili.com/read/cv21983442/">對齊稅</a>」（alignment tax）的問題。</p>
+  </blockquote>
+  <ul>
+    <li>
+      <p><strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://mistral.ai/news/mistral-large/">Mistral Large</a></strong><br />歐洲新創 Mistral AI 開發的大語言模型，支援 32k 詞元（token）上下文窗口，對於歐洲文法、文化背景有細緻的理解。<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.inside.com.tw/article/34312-mistral-ai-announces-new-model-mistral-large-and-new-partnership-with-microsoft">與微軟合作</a>。</p>
+    </li>
+  </ul>
+  <hr />
+  <h3 id="section-2"> ▍02 生圖</h3>
+  <p>詳見 <a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.town/@penfarming/530720-ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-3-ai-%E7%B9%AA%E5%9C%96%E5%B7%A5%E5%85%B7-%E4%BB%8B%E7%B4%B9%E8%88%87%E4%BD%BF%E7%94%A8%E5%85%A5%E9%96%80-bafybeidviqmlcl6yv72vuqxi6ca6el3qtq6fiqcznixytvuza76mgzndv4">AI + Web3 公益課筆記 #4｜AI 繪圖工具，介紹與使用入門</a> 一文。</p>
+  <ul>
+    <li>
+      <p><strong>DALL-E3</strong></p>
+    </li>
+    <li>
+      <p><strong>Midjourney</strong></p>
+    </li>
+    <li>
+      <p><strong>Stable Diffusion</strong></p>
+    </li>
+  </ul>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/995cba46-9384-42e8-81b9-df494acb036e.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <hr />
+  <h3 id="section-3"> ▍03 生聲</h3>
+  <ul>
+    <li>
+      <p><strong>文字到語音（Text to Speech, TTS）</strong><br /><a target="_blank" rel="noopener noreferrer nofollow" href="https://platform.openai.com/docs/guides/text-to-speech">https://platform.openai.com/docs/guides/text-to-speech</a></p>
+    </li>
+  </ul>
+  <figure class="embed embed-video" data-provider="youtube">
+    <div class="iframe-container">
+      <iframe src="https://www.youtube.com/embed/_gNRiAPkhDU?rel=0" loading="lazy" allowfullscreen="" frameborder="0"></iframe>
+    </div>
+    <figcaption></figcaption>
+  </figure>
+  <ul>
+    <li>
+      <p><strong>聲音克隆</strong><br />例：<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.businesstoday.com.tw/article/category/183015/post/202305250032/">孫燕姿嘆「AI歌手」讓粉絲都跳槽！揭露爆紅歌曲背後的「生成內幕」</a></p>
+    </li>
+    <li>
+      <p><strong>生成音樂</strong><br />例：<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.suno.ai/">https://www.suno.ai/</a> 能夠用文字生成歌曲的服務<br />　<br />例：<a target="_blank" rel="noopener noreferrer nofollow" href="https://app.rask.ai/auth">https://app.rask.ai/auth</a> 幫你把影片製作多國語言版本，透過 AI 以你的聲調改成其他語系念稿，最厲害的是連口行都對的上。</p>
+    </li>
+  </ul>
+  <hr />
+  <h3 id="section-4">▍04 生視頻</h3>
+  <ul>
+    <li>
+      <p>Sora 一登場，直接以一分鐘的總長度輾壓其他對手，苦主有</p>
+      <ul>
+        <li>
+          <p>Runway Gen-2</p>
+        </li>
+        <li>
+          <p>Stable Video</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <p>延伸閱讀：<a target="_blank" rel="noopener noreferrer nofollow" href="https://mp.weixin.qq.com/s/vklAShhfy54hPe-tAe3l_g">OpenAI 的野心沒有終點。長文详解 Sora 的終目標，功能介绍，侷限性及技術原理</a></p>
+  <blockquote>
+    <p>OpenAI 每次出手，都有一大批 AI 创业公司应声倒下。今天的倒霉蛋子轮到了 Runway 和 Pika，尤其是 Pika，刚爆火就熄火。3 个多亿的融资到手还没热乎就等来了病危通知书。</p>
+  </blockquote>
+  <figure class="embed embed-video" data-provider="youtube">
+    <div class="iframe-container">
+      <iframe src="https://www.youtube.com/embed/HK6y8DAPN_0?rel=0" loading="lazy" allowfullscreen="" frameborder="0"></iframe>
+    </div>
+    <figcaption></figcaption>
+  </figure>
+  <hr />
+  <h3 id="section-5">▍05 數字人</h3>
+  <ul>
+    <li>
+      <p>虛擬主播、虛擬偶像、虛擬 KOL。</p>
+    </li>
+    <li>
+      <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.heygen.com/">https://www.heygen.com/</a> 餵食文字稿，透過你的形象製作完整的多國語系影片，不但口型自然，甚至手勢、眨眼、語調幾乎可以做到與本尊一樣的境界。</p>
+    </li>
+  </ul>
+  <hr />
+  <h3 id="ai--2">▍06 AI 未來怎樣？</h3>
+  <ul>
+    <li>
+      <p>AI 的能力正在以恐怖的速度進化。</p>
+    </li>
+    <li>
+      <p><strong>可能性ㄧ：多模態</strong></p>
+      <ul>
+        <li>
+          <p>Prompt 僅僅是人機交互的方式之一，未來除了能傳入圖片、影片以外，甚至連表情、心跳、肢體語言都可以是解決問題所使用的文本——<strong>人工智能將會和人類共情</strong>。</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>可能性二：主動對齊，AI 比你更懂你自己</strong></p>
+      <ul>
+        <li>
+          <p>既然模型能預測下一個詞元（token），進化到能預測人類可能的想法、需求與欲望也不是遙不可及。</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>可能性三：去設施化</strong></p>
+      <ul>
+        <li>
+          <p>平時看似平靜，需要啟動特定功能時，AI 可以現場「動態功能化」配適你的需求。</p>
+        </li>
+        <li>
+          <p>如同劉慈欣在《三體》中所描繪的場景。</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <blockquote>
+    <p>⋯⋯章北海和東方延緒就同在一間普通艙室中……當飛船加速產生重力時，球形艙壁的任何一處都可以變形適應身體的形狀而成為座椅。這是一個以前很少有人想像到的現代技術特色：去設施傾向。<br />　</p>
+    <p>這種傾向在地球上還只是初露端倪，但去設施化已成為比地球世界更先進的艦隊世界的設施基本結構。<br />　</p>
+    <p><strong>這個世界到處都是簡潔空蕩的，幾乎見不到任何設施，只有在需要時，設施才會出現，而且是在任何需要的位置出現。<br />　</strong></p>
+    <p><strong>世界在被技術複雜化後，正在重新變得簡潔起來，技術被深深地隱藏在現實的後面。</strong><br />　<br />——劉慈欣《三體 2：黑暗森林》</p>
+  </blockquote>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/b32330fe-e33e-4ffd-b66c-eae35585de88.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <hr />
+  <h2 id="section-6">▇  你可能對這些文章感興趣</h2>
+  <ul>
+    <li>
+      <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.town/@penfarming/530720-ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-3-ai-%E7%B9%AA%E5%9C%96%E5%B7%A5%E5%85%B7-%E4%BB%8B%E7%B4%B9%E8%88%87%E4%BD%BF%E7%94%A8%E5%85%A5%E9%96%80-bafybeidviqmlcl6yv72vuqxi6ca6el3qtq6fiqcznixytvuza76mgzndv4">AI + Web3 公益課筆記 #4｜AI 繪圖工具，介紹與使用入門</a></p>
+    </li>
+    <li>
+      <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.town/@penfarming/526184-ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-3-chat-gpt-%E7%B7%A8%E5%AF%AB%E6%8F%90%E7%A4%BA%E8%A9%9E%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%AD%96%E7%95%A5-bafybeididxlkt37r7qlphenrchsulenvbbdaohrvicljbtnpxnjykqznd4">AI + Web3 公益課筆記 #3｜ChatGPT 編寫提示詞的基本策略</a></p>
+    </li>
+    <li>
+      <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.town/@penfarming/520373-ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-2-chat-gpt-%E7%9A%84%E5%90%84%E7%A8%AE%E5%8A%9F%E8%83%BD%E8%88%87%E7%8E%A9%E6%B3%95-bafybeia45yvy2e5ay7nwl7cera2mgrazjshplellzuhqatoayogapvundy">AI + Web3 公益課筆記 #2｜ChatGPT 的各種功能與玩法</a></p>
+    </li>
+    <li>
+      <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.town/@penfarming/514124-ai-web3-%E5%85%AC%E7%9B%8A%E8%AA%B2%E7%AD%86%E8%A8%98-1-%E5%A4%A7%E5%9E%8B%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B%E6%98%AF%E4%BB%80%E9%BA%BC-bafybeia32tconosnjoh2p7g77fai47zfbsmm6mikfqkjw7ighu7strlfuq">AI + Web3 公益課筆記 #1｜大型語言模型是什麼？</a></p>
+    </li>
+  </ul>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/e4cb7286-bfbe-4e12-90ff-eeb3654c0ac0.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <p></p>
+  <blockquote>
+    <p>🌱 免費訂閱【<strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://creatoreconomyimo.substack.com/">創作者經濟 IMO</a></strong>】電子報。<br />電子報是以 Heptabase 編輯，<a target="_blank" rel="noopener noreferrer nofollow" href="https://get.heptabase.com/imo">免費試用 7 天</a>，和我們一起寫下 IMO。</p>
+  </blockquote>
+  <blockquote>
+    <p>🌱 加入<strong>【<a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.news/~penfarming">中書神經系統</a>】</strong>圍爐，專題 <a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.news/@penfarming/%E9%96%B1%E8%AE%80%E7%AD%86%E8%80%95-2021-%E5%9C%8D%E7%88%90%E6%AA%A2%E8%A8%8E-2022-%E5%B1%95%E6%9C%9B%E8%88%87%E5%AF%A6%E8%B8%90-bafyreibgwdmctf2bmhq4bufkyuepmgkvh5mhsxxm5bbjnltdw2b5h2jnsy">#寫作的反思</a> 與 <a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.news/tags/VGFnOjcwNTk2">#爐內真心話</a> 連載中。</p>
+  </blockquote>
+  <blockquote>
+    <p>🌱 我在其它平台出沒【<strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.facebook.com/penfarming">Meta</a></strong>｜<strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://twitter.com/leo7283">X</a></strong>｜<strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://liker.social/@Penfarning">Liker Social</a></strong>｜<strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.news/@penfarming">Matters</a></strong>｜<strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://medium.com/%E9%96%B1%E8%AE%80%E7%AD%86%E8%80%95">Medium</a></strong>｜<strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://vocus.cc/penfarming/home">vocus</a></strong> 】<br /><a target="_blank" rel="noopener noreferrer nofollow" href="mailto:%E5%90%88%E4%BD%9C%E8%81%AF%E7%B9%AB%EF%BC%9Apenfarming.writer@gmail.com">合作聯繫：penfarming.writer@gmail.com</a></p>
+  </blockquote>
+  <blockquote>
+    <p>🌱 我的教學文與邀請連結</p>
+    <p><strong>註冊幣安</strong>｜<a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.town/@penfarming/442941-%E6%96%B0%E8%88%8A%E6%88%B6%E9%83%BD%E6%9C%89-%E5%B9%A3%E5%AE%89%E6%8A%BD-%E9%9B%BB%E5%8B%95%E6%BB%91%E6%9D%BF%E8%BB%8A-%E9%99%AA%E4%BD%A0%E7%A9%BF%E8%B6%8A%E7%89%9B%E7%86%8A-ft-%E5%B9%A3%E5%AE%89%E9%96%8B%E6%88%B6%E6%95%99%E5%AD%B8-bafybeifkgprrruqdsnnccfcrtcgvr4uqjguxgy44cl4hhl75txqhol5fyu">幣安開戶＋實名認證教學</a>。<strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://presearch.org/signup?rid=3090491"><br /></a>註冊 Presearch </strong>｜<a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.news/@penfarming/%E9%96%B1%E8%AE%80%E7%AD%86%E8%80%95-%E4%B8%80%E8%88%89%E4%B8%89%E5%BE%97%E7%9A%84-presearch-%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97-%E9%99%84%E6%95%99%E5%AD%B8-bafyreiec7mjtpjcy6bre3fgn7k53pmapqtnbziksneu6pamuvjqnbhcg5y">一舉三得的 search to earn 使用心得</a>。</p>
+  </blockquote>
+  <p></p>
+  <p></p>
+  <p></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-06-30/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-IMO-%E9%80%B1%E5%A0%B1-51-%E4%B8%8D%E8%A6%81%E8%A9%A6%E5%9C%96%E6%88%90%E7%82%BA%E6%88%BF%E9%96%93%E8%A3%A1%E6%9C%80%E8%81%B0%E6%98%8E%E7%9A%84%E4%BA%BA-%E8%80%8C%E6%98%AF%E8%A9%A6%E5%9C%96%E6%88%90%E7%82%BA%E6%9C%80%E5%96%84%E8%89%AF%E7%9A%84%E4%BA%BA/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2024-03-10</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-03-10/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-IMO-%E9%80%B1%E5%A0%B1-35-LINE-%E8%B2%BC%E5%9C%96%E5%B8%B6%E4%BE%86%E5%AF%AB%E4%BD%9C%E5%95%9F%E7%99%BC-%E8%90%AC%E4%BA%8B%E8%90%AC%E7%89%A9%E7%9A%86%E5%8F%AF%E5%AF%AB-%E9%83%BD%E6%88%90%E5%9C%96/">
+          創作者經濟 IMO 📣 週報 #35｜LINE 貼圖帶來寫作啟發！萬事萬物皆可寫、都成圖！
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-03-08</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-03-08/IMO-%E4%BA%BA%E7%89%A9%E8%AA%8C-%E5%85%92%E7%AB%A5%E6%96%87%E5%AD%B8%E6%98%AF%E6%96%87%E5%AD%B8-%E6%B7%B1%E5%BA%A6%E8%A8%AA%E8%AB%87%E6%96%87%E5%AD%B8%E7%8D%8E%E5%BE%97%E4%B8%BB-%E6%95%85%E4%BA%8B%E9%91%84%E5%AD%97%E8%A1%8C-%E5%B7%AB%E4%BD%B3%E8%93%AE/">
+          IMO 人物誌｜兒童文學是文學！深度訪談文學獎得主「故事鑄字行」巫佳蓮
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-03-07</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-03-07/%E7%89%A9%E4%B8%AD%E6%89%80%E8%A6%8B%E7%9A%84%E8%87%BA%E7%81%A3%E7%A5%9E%E7%A4%BE-0-%E9%81%BA%E8%90%BD%E5%9C%A8%E5%A4%B1%E8%90%BD%E6%A8%82%E5%9C%92%E7%9A%84%E8%87%BA%E7%81%A3%E7%A5%9E%E7%A4%BE%E7%9F%B3%E7%87%88%E7%B1%A0%E7%9C%9F%E8%BA%AB/">
+          【物中所見的臺灣神社】#0 遺落在失落樂園的臺灣神社石燈籠真身
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-03-06</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-03-06/%E9%96%B1%E8%AE%80%E7%AD%86%E8%80%95-%E5%AF%AB%E4%B8%8B%E4%B8%80%E5%89%87-%E6%B0%B8%E4%B9%85%E7%AD%86%E8%A8%98-%E7%9A%84%E4%B8%89%E5%80%8B%E7%A7%98%E8%A8%A3/">
+          閱讀筆耕｜寫下一則「永久筆記」的三個秘訣
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2024-03-07/%E6%BC%B8%E9%80%B2%E6%94%B9%E9%9D%A9-%E8%A6%81%E9%A0%98%E4%B8%8D%E5%9C%A8%E6%BC%B8-%E8%80%8C%E5%9C%A8%E9%80%B2-%E5%A4%A7%E9%99%B8%E5%AD%B8%E8%80%85%E5%91%A8%E7%82%BA%E6%B0%91%E6%8F%90%E9%86%92-%E6%94%B9%E9%9D%A9%E9%96%8B%E6%94%BE%E7%9A%84%E5%8D%81%E6%A2%9D%E6%AD%B7%E5%8F%B2%E7%B6%93%E9%A9%97-%E6%94%B9%E9%9D%A9%E9%96%8B%E6%94%BE-%E4%B8%AD%E5%A4%AE%E9%BB%A8%E6%A0%A1-%E4%B8%AD%E5%9C%8B%E7%89%B9/">
+            前一篇：漸進改革，要領不在漸，而在進，大陸學者周為民提醒：改革開放的十條歷史經驗｜改革開放｜中央黨校｜中國特色社會主義｜富民為先｜市場經濟｜民營經濟｜國際關係｜中國經濟｜全球化｜鄧小平思想｜中國現代化｜中共
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2024-03-07/(%E7%A6%8F%E5%BB%BA%E7%B6%B2%E5%8F%8B)%E6%AD%A6%E7%B5%B1-%E5%B0%8D%E5%8F%B0%E7%81%A3%E7%9A%84%E8%80%81%E7%99%BE%E5%A7%93-%E7%AA%AE%E4%BA%BA%E6%9C%80%E5%A5%BD-%E5%A4%A7%E9%99%B8%E4%BA%BA%E5%B0%9A%E6%AD%A6-%E5%8F%B0%E7%81%A3%E4%BA%BA%E5%B0%9A%E5%98%B4/">
+            後一篇：(福建網友)武統，對台灣的老百姓、窮人最好。大陸人尚武，台灣人尚嘴！
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2024-03-07/%E6%BC%B8%E9%80%B2%E6%94%B9%E9%9D%A9-%E8%A6%81%E9%A0%98%E4%B8%8D%E5%9C%A8%E6%BC%B8-%E8%80%8C%E5%9C%A8%E9%80%B2-%E5%A4%A7%E9%99%B8%E5%AD%B8%E8%80%85%E5%91%A8%E7%82%BA%E6%B0%91%E6%8F%90%E9%86%92-%E6%94%B9%E9%9D%A9%E9%96%8B%E6%94%BE%E7%9A%84%E5%8D%81%E6%A2%9D%E6%AD%B7%E5%8F%B2%E7%B6%93%E9%A9%97-%E6%94%B9%E9%9D%A9%E9%96%8B%E6%94%BE-%E4%B8%AD%E5%A4%AE%E9%BB%A8%E6%A0%A1-%E4%B8%AD%E5%9C%8B%E7%89%B9/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2024-03-07/(%E7%A6%8F%E5%BB%BA%E7%B6%B2%E5%8F%8B)%E6%AD%A6%E7%B5%B1-%E5%B0%8D%E5%8F%B0%E7%81%A3%E7%9A%84%E8%80%81%E7%99%BE%E5%A7%93-%E7%AA%AE%E4%BA%BA%E6%9C%80%E5%A5%BD-%E5%A4%A7%E9%99%B8%E4%BA%BA%E5%B0%9A%E6%AD%A6-%E5%8F%B0%E7%81%A3%E4%BA%BA%E5%B0%9A%E5%98%B4/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2024-03-08/IMO-%E4%BA%BA%E7%89%A9%E8%AA%8C-%E5%85%92%E7%AB%A5%E6%96%87%E5%AD%B8%E6%98%AF%E6%96%87%E5%AD%B8-%E6%B7%B1%E5%BA%A6%E8%A8%AA%E8%AB%87%E6%96%87%E5%AD%B8%E7%8D%8E%E5%BE%97%E4%B8%BB-%E6%95%85%E4%BA%8B%E9%91%84%E5%AD%97%E8%A1%8C-%E5%B7%AB%E4%BD%B3%E8%93%AE/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2024-03-07/%E7%89%A9%E4%B8%AD%E6%89%80%E8%A6%8B%E7%9A%84%E8%87%BA%E7%81%A3%E7%A5%9E%E7%A4%BE-0-%E9%81%BA%E8%90%BD%E5%9C%A8%E5%A4%B1%E8%90%BD%E6%A8%82%E5%9C%92%E7%9A%84%E8%87%BA%E7%81%A3%E7%A5%9E%E7%A4%BE%E7%9F%B3%E7%87%88%E7%B1%A0%E7%9C%9F%E8%BA%AB/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2024-03-07/%E6%BC%B8%E9%80%B2%E6%94%B9%E9%9D%A9-%E8%A6%81%E9%A0%98%E4%B8%8D%E5%9C%A8%E6%BC%B8-%E8%80%8C%E5%9C%A8%E9%80%B2-%E5%A4%A7%E9%99%B8%E5%AD%B8%E8%80%85%E5%91%A8%E7%82%BA%E6%B0%91%E6%8F%90%E9%86%92-%E6%94%B9%E9%9D%A9%E9%96%8B%E6%94%BE%E7%9A%84%E5%8D%81%E6%A2%9D%E6%AD%B7%E5%8F%B2%E7%B6%93%E9%A9%97-%E6%94%B9%E9%9D%A9%E9%96%8B%E6%94%BE-%E4%B8%AD%E5%A4%AE%E9%BB%A8%E6%A0%A1-%E4%B8%AD%E5%9C%8B%E7%89%B9/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2024-03-07/(%E7%A6%8F%E5%BB%BA%E7%B6%B2%E5%8F%8B)%E6%AD%A6%E7%B5%B1-%E5%B0%8D%E5%8F%B0%E7%81%A3%E7%9A%84%E8%80%81%E7%99%BE%E5%A7%93-%E7%AA%AE%E4%BA%BA%E6%9C%80%E5%A5%BD-%E5%A4%A7%E9%99%B8%E4%BA%BA%E5%B0%9A%E6%AD%A6-%E5%8F%B0%E7%81%A3%E4%BA%BA%E5%B0%9A%E5%98%B4/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2024-03-08/IMO-%E4%BA%BA%E7%89%A9%E8%AA%8C-%E5%85%92%E7%AB%A5%E6%96%87%E5%AD%B8%E6%98%AF%E6%96%87%E5%AD%B8-%E6%B7%B1%E5%BA%A6%E8%A8%AA%E8%AB%87%E6%96%87%E5%AD%B8%E7%8D%8E%E5%BE%97%E4%B8%BB-%E6%95%85%E4%BA%8B%E9%91%84%E5%AD%97%E8%A1%8C-%E5%B7%AB%E4%BD%B3%E8%93%AE/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2024-03-07/%E7%89%A9%E4%B8%AD%E6%89%80%E8%A6%8B%E7%9A%84%E8%87%BA%E7%81%A3%E7%A5%9E%E7%A4%BE-0-%E9%81%BA%E8%90%BD%E5%9C%A8%E5%A4%B1%E8%90%BD%E6%A8%82%E5%9C%92%E7%9A%84%E8%87%BA%E7%81%A3%E7%A5%9E%E7%A4%BE%E7%9F%B3%E7%87%88%E7%B1%A0%E7%9C%9F%E8%BA%AB/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

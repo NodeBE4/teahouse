@@ -1,0 +1,3783 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>郭兆凡：母亲节，聊聊 “看见” 与 “看不见” – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+郭兆凡：母亲节，聊聊 “看见” 与 “看不见”
+——
+" />
+    <meta property="og:description" content="
+郭兆凡：母亲节，聊聊 “看见” 与 “看不见”
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="郭兆凡：母亲节，聊聊 “看见” 与 “看不见”" />
+    <meta property="twitter:title" content="郭兆凡：母亲节，聊聊 “看见” 与 “看不见”" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (3334)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40plancedu%2F%25E9%2583%25AD%25E5%2585%2586%25E5%2587%25A1-%25E6%25AF%258D%25E4%25BA%25B2%25E8%258A%2582-%25E8%2581%258A%25E8%2581%258A-%25E7%259C%258B%25E8%25A7%2581-%25E4%25B8%258E-%25E7%259C%258B%25E4%25B8%258D%25E8%25A7%2581-bafybeicqmxx2nipaz454b4nh3g4pdhbngbl5x3y6d25svjr7pfke35iko4" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@plancedu/%E9%83%AD%E5%85%86%E5%87%A1-%E6%AF%8D%E4%BA%B2%E8%8A%82-%E8%81%8A%E8%81%8A-%E7%9C%8B%E8%A7%81-%E4%B8%8E-%E7%9C%8B%E4%B8%8D%E8%A7%81-bafybeicqmxx2nipaz454b4nh3g4pdhbngbl5x3y6d25svjr7pfke35iko4" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@plancedu/%E9%83%AD%E5%85%86%E5%87%A1-%E6%AF%8D%E4%BA%B2%E8%8A%82-%E8%81%8A%E8%81%8A-%E7%9C%8B%E8%A7%81-%E4%B8%8E-%E7%9C%8B%E4%B8%8D%E8%A7%81-bafybeicqmxx2nipaz454b4nh3g4pdhbngbl5x3y6d25svjr7pfke35iko4&text=郭兆凡：母亲节，聊聊 “看见” 与 “看不见”&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@plancedu/%E9%83%AD%E5%85%86%E5%87%A1-%E6%AF%8D%E4%BA%B2%E8%8A%82-%E8%81%8A%E8%81%8A-%E7%9C%8B%E8%A7%81-%E4%B8%8E-%E7%9C%8B%E4%B8%8D%E8%A7%81-bafybeicqmxx2nipaz454b4nh3g4pdhbngbl5x3y6d25svjr7pfke35iko4&title=郭兆凡：母亲节，聊聊 “看见” 与 “看不见”" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@plancedu/%E9%83%AD%E5%85%86%E5%87%A1-%E6%AF%8D%E4%BA%B2%E8%8A%82-%E8%81%8A%E8%81%8A-%E7%9C%8B%E8%A7%81-%E4%B8%8E-%E7%9C%8B%E4%B8%8D%E8%A7%81-bafybeicqmxx2nipaz454b4nh3g4pdhbngbl5x3y6d25svjr7pfke35iko4&title=郭兆凡：母亲节，聊聊 “看见” 与 “看不见”" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=郭兆凡：母亲节，聊聊 “看见” 与 “看不见”&body=
+郭兆凡：母亲节，聊聊 “看见” 与 “看不见”
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@plancedu/%E9%83%AD%E5%85%86%E5%87%A1-%E6%AF%8D%E4%BA%B2%E8%8A%82-%E8%81%8A%E8%81%8A-%E7%9C%8B%E8%A7%81-%E4%B8%8E-%E7%9C%8B%E4%B8%8D%E8%A7%81-bafybeicqmxx2nipaz454b4nh3g4pdhbngbl5x3y6d25svjr7pfke35iko4" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@plancedu/%E9%83%AD%E5%85%86%E5%87%A1-%E6%AF%8D%E4%BA%B2%E8%8A%82-%E8%81%8A%E8%81%8A-%E7%9C%8B%E8%A7%81-%E4%B8%8E-%E7%9C%8B%E4%B8%8D%E8%A7%81-bafybeicqmxx2nipaz454b4nh3g4pdhbngbl5x3y6d25svjr7pfke35iko4&title=郭兆凡：母亲节，聊聊 “看见” 与 “看不见”&caption=
+郭兆凡：母亲节，聊聊 “看见” 与 “看不见”
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=郭兆凡：母亲节，聊聊 “看见” 与 “看不见”&url=https://matters.news/@plancedu/%E9%83%AD%E5%85%86%E5%87%A1-%E6%AF%8D%E4%BA%B2%E8%8A%82-%E8%81%8A%E8%81%8A-%E7%9C%8B%E8%A7%81-%E4%B8%8E-%E7%9C%8B%E4%B8%8D%E8%A7%81-bafybeicqmxx2nipaz454b4nh3g4pdhbngbl5x3y6d25svjr7pfke35iko4" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>郭兆凡：母亲节，聊聊 “看见” 与 “看不见”</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2024-05-11
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: C计划</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@plancedu/%E9%83%AD%E5%85%86%E5%87%A1-%E6%AF%8D%E4%BA%B2%E8%8A%82-%E8%81%8A%E8%81%8A-%E7%9C%8B%E8%A7%81-%E4%B8%8E-%E7%9C%8B%E4%B8%8D%E8%A7%81-bafybeicqmxx2nipaz454b4nh3g4pdhbngbl5x3y6d25svjr7pfke35iko4" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1715437876000-->
+<p><a href="https://matters.news/@plancedu/%E9%83%AD%E5%85%86%E5%87%A1-%E6%AF%8D%E4%BA%B2%E8%8A%82-%E8%81%8A%E8%81%8A-%E7%9C%8B%E8%A7%81-%E4%B8%8E-%E7%9C%8B%E4%B8%8D%E8%A7%81-bafybeicqmxx2nipaz454b4nh3g4pdhbngbl5x3y6d25svjr7pfke35iko4">郭兆凡：母亲节，聊聊 “看见” 与 “看不见”</a>
+——</p>
+
+<div>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/157cd2f2-65c7-4e72-b92b-50ff8aba29e3.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <p>作者：郭兆凡 C计划联合创始人，毕业于清华大学和英国伦敦政治经济学院，Tedx演讲嘉宾，腾讯、清华等特邀培训师，曾任职21世纪教育研究院、高盛集团，深耕教育创新领域10年， 《学会提问》导读专家，专业培养儿童和成人的理性思考、批判性思考能力</p>
+  <hr />
+  <p>设想这样一个夫妻间的小争执。</p>
+  <p>你回到家，先生去做饭，你陪孩子玩了半个小时。之后你困得不行了，就在沙发上躺了十分钟，先生从厨房出来，看见你在沙发上睡觉，估计心里就有点气，说，“饭做好了，你去摆摆碗筷餐具吧。”</p>
+  <p>“我困得不行了，想再睡个五分钟。”</p>
+  <p>“到吃饭时间了呀！快点快点。”</p>
+  <p>你拖着疲惫的身子，起来去拿了餐具，坐下一起吃饭，又困又委屈，吃饭时一句话没说。</p>
+  <p>晚上把孩子哄睡后，你和先生说，“我后来挺不开心的，我今天真的特别困，在开车去接你俩的路上，我差点都睡着了。一回来陪他玩了那么久，我就想迷瞪15分钟就好了。当你希望我拿餐具吃饭的时候，我如果要立刻起来去做，是非常非常难受的。”</p>
+  <p>“我不知道你困得开车时都要睡着了，前一天你还是应该早点睡觉啊。”</p>
+  <p>“关键是，晚饭前那时候的我，就是非常困。如果你不舒服、很困，告诉我不想吃饭想睡一会儿，我拉你起来说必须吃饭，你会有什么感受呢？我并不是经常在吃饭的时候躺着睡觉吧。其实我当时也说了我很困的。下次这种情况，如果你说，‘你大概需要睡多久？或者你要不要回房间去睡，我们给你留点吃的？’那我会特别的感激。”</p>
+  <p>“我明白了。对不起啊。”</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/d40b317a-9d0d-4f87-941b-5ad74e58e3f3.png/public" referrerpolicy="no-referrer" />    <figcaption>
+/NYT/
+    </figcaption>
+  </figure>
+  <p>从这件小事，我想说的是两个字：<strong>看见</strong>。人与人之间，彼此看见，有时候并不容易。</p>
+  <p>母亲节，在这篇文章中，我想说的是，<strong>希望丈夫能看见妻子，母亲能看见自己，社会能看见母亲，父母能看见孩子——看见，是关系的基础，是改变的起点，是好的生活的前提。</strong></p>
+  <h2 id="section"><strong>1.看见什么？</strong></h2>
+  <p>我觉得这四点特别重要：</p>
+  <blockquote>
+    <p><strong>● </strong>看见作为人的整体状态<br /><strong>● </strong>看见做了的、做得好的<br /><strong>● </strong>看见当下的负面情绪<br /><strong>● </strong>看见身体与精神的需要</p>
+  </blockquote>
+  <p><strong>为什么要看见这些？</strong></p>
+  <p>人的整体状态如果不好，可能勉强把事情做了，质量却不高，更谈不上学习、成长或经营关系；<strong>看见那些“做了的事”，而不是“没做的事”，人才更能觉得被理解，有信心，有动力</strong>；研究发现，接纳和面对负面情绪的时刻，是人与人建立好的关系的“黄金时刻”；身体和精神的需要特别容易被忽视，但也是决定了人幸福感的基础和关键。</p>
+  <p><strong>很多母亲的“抱怨”，持续在被忽视。看见，是不容易的。</strong></p>
+  <p>就像开头的故事，你开车时就没怎么说话，状态是低迷的，但这是不容易被察觉的；即使很累，你还是先陪孩子玩了半小时，但这可能看起来是你份内的事，是不费力的，更容易被看到的是你没有做饭；你表达了负面情绪，累、困，但是被“<strong>到吃饭时间了</strong>”这道理给堵回去了；<strong>你身体的需要是睡一会儿，精神需要放松，但你那时的难受可能无法被共情和理解。</strong></p>
+  <p>这样的片段，在有的家庭可能是常态。</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/a692ee93-8723-4dc5-b76f-1f7c1ae7693a.png/public" referrerpolicy="no-referrer" />    <figcaption>
+/NYT/
+    </figcaption>
+  </figure>
+  <p><strong>很多职场母亲，常年处在高压状态下，积攒了很多负面情绪。</strong>她们没有自己的休闲时间，白天职场工作忙碌，回家要开始第二轮班，照顾家人起居、辅导孩子学习。她们可能面临母职惩罚，在职场遭受不公，在家庭中，她们做了很多事，但丈夫可能依然会抱怨，“<strong>你没把孩子教好</strong>”，“<strong>你没把家里收拾好</strong>”，“<strong>别人家的妈妈不都是这样吗，能有多少事，有什么好抱怨的</strong>。”</p>
+  <p><strong>很多全职母亲，常年处在迷茫和压抑的状态下，照顾全家人的饮食起居、孩子的学习生活、为全家人提供情绪价值，全年无休，没有下班时间，也没有劳动报酬。</strong>她们可能放弃了自己热爱的事业，想重回职场又面临困难。她们可能在经济中处于弱势，无法满足自己的需要，慢慢怀疑生活的意义。她们可能被挑剔，“<strong>整天在家也不知道忙什么，这点事都做不好</strong>”。</p>
+  <p>这些现象，很多人看在眼里，却看不见。</p>
+  <p><strong>看见是什么意思呢？</strong></p>
+  <blockquote>
+    <p>是要能认可它们存在（不以任何形式否认）；<br />是要能表达出看见和认可；<br />是要意识到它们的重要性。</p>
+  </blockquote>
+  <p><strong>在看见的基础上，尽可能去关心、安慰、共情、支持、分担和帮助。</strong></p>
+  <p>而看不见、否认的形式有很多种：</p>
+  <p>例如，丈夫可能对妻子说：</p>
+  <blockquote>
+    <p><strong>命令</strong>：“（别说其他没用的）<strong>现在赶紧去做饭。</strong>”<br /><strong>警告</strong>：“<strong>你再抱怨我就不回这个家了！</strong>”<br /><strong>说教</strong>：“<strong>你有情绪就会影响到全家人，孩子也没法好好学习呀。</strong>”<br /><strong>解释</strong>：“<strong>我又不知道你的情况</strong>，你是说了一遍，但是我当时在忙啊。”<br /><strong>建议</strong>：“<strong>你太紧张了！</strong>不要想太多，放轻松。”<br /><strong>指责</strong>：“孩子作业写错了，你都没看出来吗？<strong>你是怎么做妈妈的，有没有用心陪伴孩子啊，晚上在家你就别看手机了。</strong>”<br /><strong>嘲笑</strong>：“你还想再去工作？<strong>你知道职场压力有多大，竞争有多激烈吗？</strong>”<br /><strong>转移</strong>：“别再说了，来来回回不就是你很累嘛，<strong>要不今晚不做饭了，出去吃一顿行了吧。</strong>”</p>
+  </blockquote>
+  <p><strong>要看见，意味着我们要倾听，要观察，要关心。</strong></p>
+  <p><strong>表达看见，丈夫可以说：</strong></p>
+  <ul>
+    <li>
+      <p>“你最近好像情绪都不高，看起来很疲劳，你感觉怎么样？想和我说说吗？“</p>
+    </li>
+    <li>
+      <p>“是我有点想当然了，我想告诉你，我看到你做了很多事，例如XXXX，你真的太辛苦了。（抱抱）我保证会更多分担。“</p>
+    </li>
+    <li>
+      <p>“我理解你觉得很委屈。我收回我刚才对话，等你心情好一些的时候，我们一起讨论一下怎么帮孩子提高作业效率，后面我也一起参与。“</p>
+    </li>
+    <li>
+      <p>“谢谢你能告诉我，很抱歉我一直没有足够重视。你现在想休息吗？今天晚上后面的事情我来处理吧。”</p>
+    </li>
+  </ul>
+  <p>哪怕现状一时无法改变，仅仅表达看见、表达共情，都很有价值。</p>
+  <h2 id="section-1"><strong>2.为何看不见？</strong></h2>
+  <p>我想人大都会认可，人的整体状态，<strong>更好的是有松弛感</strong>，而不是长期紧张、压力大；<strong>更好的是有好奇心、探索欲</strong>，而不是对什么都无所谓、感到无意义；<strong>更好的是有调节能力，即使沮丧也能缓解</strong>，而不是持续陷入负面情绪；<strong>更好的是真实、坦诚的</strong>，而不是总在“扮演”、“伪装”。</p>
+  <p>但为什么母亲很容易被漠视？</p>
+  <p><strong>首先，丈夫，一般作为父权制社会处于更强势地位的人，可能受到很多观念和思维方式的影响，所以会“看不见”。当然，妻子可能也有这些观念。</strong></p>
+  <p><strong>● 性别刻板印象和关于“责任”的叙事</strong>：认为家事和育儿是母亲的责任，责任范围内的事做得好是理所应当的，没做好要被批评</p>
+  <p><strong>●</strong> <strong>混淆“实然”和“应然”，或盲目从众</strong>：认为大家都如此，所以不值一提，普遍存在的就应该或只能被接受</p>
+  <p><strong>● 充满打压或指责的文化</strong>：指出错误才能使人进步、解决问题，而做得好的不需要说，要避免人骄傲</p>
+  <p><strong>● 重视物质、轻视精神</strong>：认为精神是虚无缥缈、难以衡量的，过于看重物质的价值，认为自己赚钱提供了物质基础，就已经完成了家庭责任</p>
+  <p><strong>● 对“负面情绪”污名化</strong>：崇尚“正能量”和“男子气概”，认为负面情绪是不好的、软弱的，应该被压制、被规避</p>
+  <p><strong>● 厌女文化</strong>：女性可能被认为是婆婆妈妈的、表达不清晰的、情绪化的、爱抱怨的，所以女性的表达常常不被充分的重视和聆听</p>
+  <p><strong>其次，上面的观念，很大程度也是由社会结构和文化决定的。</strong>社会层面，普遍轻视家庭事务的价值，缺乏促进性别平等的政策、对母亲的支持性政策，缺乏能让男女双方都能兼顾生活的工作环境。整个社会，没有看见母亲，正视她们的困境。</p>
+  <p><strong>最后，有人可能要说，母亲有更多表达自己需要和感受的责任，她们应该尽力用更温和的方式表达，尽力改变自己的状态，尽力满足自己的需要</strong>（例如，对自己好一些，学会放手）<strong>。</strong></p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/772dafdb-e2df-4e11-b542-62f95cb58e45.png/public" referrerpolicy="no-referrer" />    <figcaption>
+/NYT/
+    </figcaption>
+  </figure>
+  <p>责任，常常暗含着指责。 如果大环境不改变，如果处于强势地位的男性不改变，靠母亲自己改变现状是很困难的。</p>
+  <p><strong>一层是现实层面的困难</strong>，没有时间；</p>
+  <p><strong>一层是精神层面的困难</strong>，这需要巨大的情绪劳动，面对大量冲突和沟通，对个体的要求高得不合理。</p>
+  <p>当然，在有些情况下，作为母亲，我们可以“选择”。看见我们的能动性、潜能和力量，<strong>作为母亲，先选择看见自己。看见自己的整体状态、肯定自己做了的事情、接纳自己的负面情绪、尽可能选择满足自己的身体与精神需要。</strong></p>
+  <p><strong>我们可以选择看见自己，对自己说上面那些话，成为自己最后的堡垒。</strong></p>
+  <h2 id="section-2"><strong>3.如何看见孩子？</strong></h2>
+  <p>但愿，社会能看见母亲，丈夫能看见妻子，母亲能看见自己。</p>
+  <p>最后我想说说，<strong>希望整个社会，所有父母，我们能看见孩子。</strong>很多情况下，他们是更加弱势的。</p>
+  <p>开头场景，可能是很多家庭中孩子的常态。无论孩子多累、多难受，他们被赋予了很多“责任”，他们的时间被各种标签打满了：<strong>上学时间、做作业时间、吃饭时间、课外班时间、运动时间、睡觉时间……</strong>能跟随他们当下状态、情绪和需要自主调整的时间，少之又少。</p>
+  <p><strong>作为母亲，我渴望被看见，我也会问自己，我能否看见孩子？</strong></p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/037e36ee-9976-4685-9638-543fb36c31e3.png/public" referrerpolicy="no-referrer" />    <figcaption>
+/NYT/
+    </figcaption>
+  </figure>
+  <p>很多孩子，长期缺乏睡眠，处在焦虑、压抑和无意义感的状态里。学会的、答对了题目不会被看见，老师家长盯着他们没掌握好的地方批评指责，他们积累了很多负面情绪，身体上休息和运动的需要得不到满足，精神上被安慰、被理解、放松、玩耍和获得意义感的需要更不被重视。很多孩子每一天在老师和家长的指挥下，完成一件又一件的事情，不动脑、不走心，慢慢被异化了。</p>
+  <p>当我们用了这些表达，可能都在否定孩子：</p>
+  <blockquote>
+    <p><strong>命令</strong>：“什么累不累的，赶紧去做作业去。”<br /><strong>警告</strong>：“再说的话，这一周都不许玩ipad。”<br /><strong>说教</strong>：“现在不好好学习，考不上高中怎么办，你要去干苦力吗？你知道社会竞争多激烈，多少人失业吗？”<br /><strong>解释</strong>：“我也很忙很累，我又要工作、又要照顾家不辛苦吗，我哪能知道你的想法。”<br /><strong>建议</strong>：“爸妈又没有要求你要考第几名，你不要想太多，放轻松一些。”<br /><strong>指责</strong>：“就这么点作业你看你做了多久了！怎么就不能专心点、用心点，这个题目我讲过几遍了？你就是态度的问题，态度好了我就不相信你学不会！”<br /><strong>嘲笑</strong>：“就你这分数和排名，还好意思高兴呢？你脸皮也太厚了吧，我以前考不到90分都要哭的。”<br /><strong>转移</strong>：“哪个学生不辛苦啊！今天赶紧把作业做完，周末带你去游乐园行了吧。”</p>
+  </blockquote>
+  <p>看见，同样需要倾听、观察、关心。</p>
+  <p><strong>我们或许可以这样说和做：</strong></p>
+  <p>“这学期的作业好像比上学期更多了，你最近看起来挺累的，你感觉怎么样？让我抱抱你，和我说说好吗？”（关注整体状态）</p>
+  <p>“哇，你今天的作业有一大半都做对了，而且还写了一些细节，我觉得你写的很认真、我看得出你努力写得很工整了，咱们不用和别人比较，我看得到你的进步。”（关注做得好的部分）</p>
+  <p>“你觉得很委屈是不是，最近我看你有不懂的地方都及时在问，分数反而没有上次高，你知道，分数并不能说明所有的事情，但是又确实能从老师和同学那里感受到压力。老师或者同学说了你什么吗？能和我说说吗？”（关注负面情绪）</p>
+  <p>“我知道你很想快点把作业做完，但现在已经很晚了，我看得出来你太困了，真的需要休息了，现在做效率也不高了。明天我会和老师解释的。周末咱们找个时间，我帮你一起分析一下，看怎么能用更少的时间把作业做完，你觉得怎么样？可能几个月后你会发现自己从容很多，我知道这个过程不容易，我会陪你，咱们一点点来。”（关注身体和精神需求）</p>
+  <p><strong>哪怕我们无法改变教育体系、学校的教学方式、老师布置的作业量，我们依然能让孩子知道，这世界上有一个人，在尽全力看见他、理解他、与他共情，他并不孤单。</strong></p>
+  <p>我也希望，这世界上能有人，看见母亲、理解母亲、与母亲共情，是伴侣、是社会的制度、是我们自己。</p>
+  <hr />
+  <p><strong>附：情绪清单</strong></p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/303b3b77-bbb6-4970-93bf-bed27dbfb8dc.jpeg/public" referrerpolicy="no-referrer" />    <figcaption>
+积极情绪
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/d8d98cfa-1332-47c6-a5c1-e38e5f57a318.jpeg/public" referrerpolicy="no-referrer" />    <figcaption>
+消极情绪
+    </figcaption>
+  </figure>
+  <p>如果想让孩子一一</p>
+  <p>懂阅读，爱思考，善沟通</p>
+  <p>会选择，负责任</p>
+  <p>欢迎评论和私信预约我们的体验课程吧。</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-06-30/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-IMO-%E9%80%B1%E5%A0%B1-51-%E4%B8%8D%E8%A6%81%E8%A9%A6%E5%9C%96%E6%88%90%E7%82%BA%E6%88%BF%E9%96%93%E8%A3%A1%E6%9C%80%E8%81%B0%E6%98%8E%E7%9A%84%E4%BA%BA-%E8%80%8C%E6%98%AF%E8%A9%A6%E5%9C%96%E6%88%90%E7%82%BA%E6%9C%80%E5%96%84%E8%89%AF%E7%9A%84%E4%BA%BA/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2024-05-12</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-05-12/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-IMO-%E9%80%B1%E5%A0%B1-44-%E7%B6%B2%E7%AB%99-vs-%E7%A4%BE%E7%BE%A4-vs-%E9%9B%BB%E5%AD%90%E5%A0%B1-%E9%81%B8%E8%AA%B0%E7%95%B6%E8%B5%B7%E5%AE%B6%E5%8E%9D/">
+          創作者經濟 IMO 📣 週報 #44｜網站 vs 社群 vs 電子報⋯⋯選誰當起家厝？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-05-12</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-05-12/%E7%9A%84%E5%93%A5-2/">
+          的哥（2）
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-05-11</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-05-11/%E9%83%AD%E5%85%86%E5%87%A1-%E5%BD%93%E9%98%85%E8%AF%BB%E6%88%90%E4%B8%BA-%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F-%E6%98%AF%E4%B8%80%E7%A7%8D%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BD%93%E9%AA%8C/">
+          郭兆凡：当阅读成为“生活方式”，是一种怎样的体验？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-05-11</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-05-11/%E4%B9%A6%E5%8D%95%E5%8F%91%E5%B8%83-%E5%B0%8F%E5%AD%A6%E7%94%9F1-6%E5%B9%B4%E7%BA%A7&%E5%88%9D%E4%B8%AD%E9%98%B6%E6%AE%B5%E5%88%86%E7%BA%A7%E9%98%85%E8%AF%BB%E4%B9%A6%E7%9B%AE-C%E8%AE%A1%E5%88%922024%E7%89%88/">
+          书单发布 | 小学生1-6年级&初中阶段分级阅读书目（C计划2024版）
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2024-05-11/%E9%83%AD%E5%85%86%E5%87%A1-%E5%BD%93%E9%98%85%E8%AF%BB%E6%88%90%E4%B8%BA-%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F-%E6%98%AF%E4%B8%80%E7%A7%8D%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BD%93%E9%AA%8C/">
+            前一篇：郭兆凡：当阅读成为“生活方式”，是一种怎样的体验？
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2024-05-11/%E6%BD%9C%E6%B0%B4%E8%89%87%E7%9A%84%E7%A7%98%E5%AF%86-%E6%A0%B8%E6%BD%9C%E8%89%87%E5%9C%A8%E5%86%B7%E6%88%98%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2-%E6%98%9F%E9%99%85%E8%AE%AF%E6%81%AF-%E5%86%B7%E6%88%98%E4%B8%AD%E7%9A%84%E5%A4%96%E5%A4%AA%E7%A9%BA%E9%80%9A%E4%BF%A1%E5%B0%9D%E8%AF%95-%E5%B9%BB%E5%BD%B1%E5%B7%A5%E7%A8%8B-%E9%9A%90%E5%BD%A2%E9%A3%9E%E6%9C%BA/">
+            後一篇：潜水艇的秘密 - 核潜艇在冷战中的角色；星际讯息 - 冷战中的外太空通信尝试；幻影工程 - 隐形飞机的诞生与影响：冰与火之战：冷战历史20240511
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2024-05-11/%E9%83%AD%E5%85%86%E5%87%A1-%E5%BD%93%E9%98%85%E8%AF%BB%E6%88%90%E4%B8%BA-%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F-%E6%98%AF%E4%B8%80%E7%A7%8D%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BD%93%E9%AA%8C/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2024-05-11/%E6%BD%9C%E6%B0%B4%E8%89%87%E7%9A%84%E7%A7%98%E5%AF%86-%E6%A0%B8%E6%BD%9C%E8%89%87%E5%9C%A8%E5%86%B7%E6%88%98%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2-%E6%98%9F%E9%99%85%E8%AE%AF%E6%81%AF-%E5%86%B7%E6%88%98%E4%B8%AD%E7%9A%84%E5%A4%96%E5%A4%AA%E7%A9%BA%E9%80%9A%E4%BF%A1%E5%B0%9D%E8%AF%95-%E5%B9%BB%E5%BD%B1%E5%B7%A5%E7%A8%8B-%E9%9A%90%E5%BD%A2%E9%A3%9E%E6%9C%BA/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2024-05-12/%E7%9A%84%E5%93%A5-2/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2024-05-11/%E9%83%AD%E5%85%86%E5%87%A1-%E5%BD%93%E9%98%85%E8%AF%BB%E6%88%90%E4%B8%BA-%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F-%E6%98%AF%E4%B8%80%E7%A7%8D%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BD%93%E9%AA%8C/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2024-05-11/%E9%83%AD%E5%85%86%E5%87%A1-%E5%BD%93%E9%98%85%E8%AF%BB%E6%88%90%E4%B8%BA-%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F-%E6%98%AF%E4%B8%80%E7%A7%8D%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BD%93%E9%AA%8C/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2024-05-11/%E6%BD%9C%E6%B0%B4%E8%89%87%E7%9A%84%E7%A7%98%E5%AF%86-%E6%A0%B8%E6%BD%9C%E8%89%87%E5%9C%A8%E5%86%B7%E6%88%98%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2-%E6%98%9F%E9%99%85%E8%AE%AF%E6%81%AF-%E5%86%B7%E6%88%98%E4%B8%AD%E7%9A%84%E5%A4%96%E5%A4%AA%E7%A9%BA%E9%80%9A%E4%BF%A1%E5%B0%9D%E8%AF%95-%E5%B9%BB%E5%BD%B1%E5%B7%A5%E7%A8%8B-%E9%9A%90%E5%BD%A2%E9%A3%9E%E6%9C%BA/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2024-05-12/%E7%9A%84%E5%93%A5-2/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2024-05-11/%E9%83%AD%E5%85%86%E5%87%A1-%E5%BD%93%E9%98%85%E8%AF%BB%E6%88%90%E4%B8%BA-%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F-%E6%98%AF%E4%B8%80%E7%A7%8D%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BD%93%E9%AA%8C/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
