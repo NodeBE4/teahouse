@@ -1,0 +1,3771 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>C计划8周年现场回顾：相互联结，彼此看见 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+C计划8周年现场回顾：相互联结，彼此看见
+——
+" />
+    <meta property="og:description" content="
+C计划8周年现场回顾：相互联结，彼此看见
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="C计划8周年现场回顾：相互联结，彼此看见" />
+    <meta property="twitter:title" content="C计划8周年现场回顾：相互联结，彼此看见" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (3140)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40plancedu%2Fc%25E8%25AE%25A1%25E5%2588%25928%25E5%2591%25A8%25E5%25B9%25B4%25E7%258E%25B0%25E5%259C%25BA%25E5%259B%259E%25E9%25A1%25BE-%25E7%259B%25B8%25E4%25BA%2592%25E8%2581%2594%25E7%25BB%2593-%25E5%25BD%25BC%25E6%25AD%25A4%25E7%259C%258B%25E8%25A7%2581-bafybeih3sdb2mrrgn7vt25gdoea6ia4f5v3skiznqb4ghgn5vivoflyzra" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@plancedu/c%E8%AE%A1%E5%88%928%E5%91%A8%E5%B9%B4%E7%8E%B0%E5%9C%BA%E5%9B%9E%E9%A1%BE-%E7%9B%B8%E4%BA%92%E8%81%94%E7%BB%93-%E5%BD%BC%E6%AD%A4%E7%9C%8B%E8%A7%81-bafybeih3sdb2mrrgn7vt25gdoea6ia4f5v3skiznqb4ghgn5vivoflyzra" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@plancedu/c%E8%AE%A1%E5%88%928%E5%91%A8%E5%B9%B4%E7%8E%B0%E5%9C%BA%E5%9B%9E%E9%A1%BE-%E7%9B%B8%E4%BA%92%E8%81%94%E7%BB%93-%E5%BD%BC%E6%AD%A4%E7%9C%8B%E8%A7%81-bafybeih3sdb2mrrgn7vt25gdoea6ia4f5v3skiznqb4ghgn5vivoflyzra&text=C计划8周年现场回顾：相互联结，彼此看见&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@plancedu/c%E8%AE%A1%E5%88%928%E5%91%A8%E5%B9%B4%E7%8E%B0%E5%9C%BA%E5%9B%9E%E9%A1%BE-%E7%9B%B8%E4%BA%92%E8%81%94%E7%BB%93-%E5%BD%BC%E6%AD%A4%E7%9C%8B%E8%A7%81-bafybeih3sdb2mrrgn7vt25gdoea6ia4f5v3skiznqb4ghgn5vivoflyzra&title=C计划8周年现场回顾：相互联结，彼此看见" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@plancedu/c%E8%AE%A1%E5%88%928%E5%91%A8%E5%B9%B4%E7%8E%B0%E5%9C%BA%E5%9B%9E%E9%A1%BE-%E7%9B%B8%E4%BA%92%E8%81%94%E7%BB%93-%E5%BD%BC%E6%AD%A4%E7%9C%8B%E8%A7%81-bafybeih3sdb2mrrgn7vt25gdoea6ia4f5v3skiznqb4ghgn5vivoflyzra&title=C计划8周年现场回顾：相互联结，彼此看见" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=C计划8周年现场回顾：相互联结，彼此看见&body=
+C计划8周年现场回顾：相互联结，彼此看见
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@plancedu/c%E8%AE%A1%E5%88%928%E5%91%A8%E5%B9%B4%E7%8E%B0%E5%9C%BA%E5%9B%9E%E9%A1%BE-%E7%9B%B8%E4%BA%92%E8%81%94%E7%BB%93-%E5%BD%BC%E6%AD%A4%E7%9C%8B%E8%A7%81-bafybeih3sdb2mrrgn7vt25gdoea6ia4f5v3skiznqb4ghgn5vivoflyzra" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@plancedu/c%E8%AE%A1%E5%88%928%E5%91%A8%E5%B9%B4%E7%8E%B0%E5%9C%BA%E5%9B%9E%E9%A1%BE-%E7%9B%B8%E4%BA%92%E8%81%94%E7%BB%93-%E5%BD%BC%E6%AD%A4%E7%9C%8B%E8%A7%81-bafybeih3sdb2mrrgn7vt25gdoea6ia4f5v3skiznqb4ghgn5vivoflyzra&title=C计划8周年现场回顾：相互联结，彼此看见&caption=
+C计划8周年现场回顾：相互联结，彼此看见
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=C计划8周年现场回顾：相互联结，彼此看见&url=https://matters.news/@plancedu/c%E8%AE%A1%E5%88%928%E5%91%A8%E5%B9%B4%E7%8E%B0%E5%9C%BA%E5%9B%9E%E9%A1%BE-%E7%9B%B8%E4%BA%92%E8%81%94%E7%BB%93-%E5%BD%BC%E6%AD%A4%E7%9C%8B%E8%A7%81-bafybeih3sdb2mrrgn7vt25gdoea6ia4f5v3skiznqb4ghgn5vivoflyzra" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>C计划8周年现场回顾：相互联结，彼此看见</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2024-08-27
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: C计划</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@plancedu/c%E8%AE%A1%E5%88%928%E5%91%A8%E5%B9%B4%E7%8E%B0%E5%9C%BA%E5%9B%9E%E9%A1%BE-%E7%9B%B8%E4%BA%92%E8%81%94%E7%BB%93-%E5%BD%BC%E6%AD%A4%E7%9C%8B%E8%A7%81-bafybeih3sdb2mrrgn7vt25gdoea6ia4f5v3skiznqb4ghgn5vivoflyzra" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1724809561000-->
+<p><a href="https://matters.news/@plancedu/c%E8%AE%A1%E5%88%928%E5%91%A8%E5%B9%B4%E7%8E%B0%E5%9C%BA%E5%9B%9E%E9%A1%BE-%E7%9B%B8%E4%BA%92%E8%81%94%E7%BB%93-%E5%BD%BC%E6%AD%A4%E7%9C%8B%E8%A7%81-bafybeih3sdb2mrrgn7vt25gdoea6ia4f5v3skiznqb4ghgn5vivoflyzra">C计划8周年现场回顾：相互联结，彼此看见</a>
+——</p>
+
+<div>
+  <p>8月17日，C计划成立8年来，举办的第一次大型见面会“<strong>Think&amp;Grow</strong>”在欢笑与泪水中落下了帷幕。</p>
+  <p><strong>C计划主创蓝方老师、叶明欣老师，方可成、犟爸、张良、徐莉四位嘉宾，还有亲爱的学员、家长朋友们</strong>敞开聊了一整天，应试的压力、学校的趣闻、C计划的轶事、人生的思考……</p>
+  <p><strong>思考、倾听、交流、联结。</strong></p>
+  <p><strong>每个人都有一种相互联结与彼此看见的感觉！</strong>我并不孤单，原来有那么多活生生的人怀揣着和我一样的理想——<strong>成为独立、自洽、丰富、内核稳定的人</strong>，大家多元但彼此包容，通过C计划凝聚在了一起，在时代的重压下共建了一块精神丰饶之地。</p>
+  <p><br /></p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/97437f5c-b807-4202-b15f-9d3d1a0b426b.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <h2 id="section"><strong>思考&amp;倾听</strong></h2>
+  <h3 id="section-1"><strong>倦怠社会，我们想培养怎样的人？</strong></h3>
+  <p>蓝方老师作了<strong>开幕演讲《倦怠社会，我们想培养怎样的人？》</strong>。</p>
+  <p><strong>如何看待“好学生心态”？</strong></p>
+  <p>通过外界的激励和正反馈前进，在一切顺利时自然觉得很舒服，然而当负反馈来袭时，焦虑、恐惧、混乱也不可避免，更重要的是，<strong>“好学生”失去了内驱力，成为了“空心人”。</strong></p>
+  <p>当代空心病的发病呈现低龄化，越来越多孩子存在<strong>“四无”问题</strong>：<strong>学习无动力、对真实世界无兴趣、社交无能力、对生命价值无感受。</strong></p>
+  <p><br /></p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/6a5d320c-4d2c-49b0-b765-96287ba39431.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <p><strong>应该怎么办？</strong></p>
+  <p>C计划的课堂上，通过阅读一本本经典书，我们引导孩子们：</p>
+  <p><strong>如何看待外界的评价？</strong>通过区分事实与观点，辨析观点的合理性，我们帮助孩子学会自主，不被他人的评判所左右。</p>
+  <p><strong>如何了解自己？</strong>通过识别情绪、接纳情绪、表达感受，我们帮助孩子看到情绪背后的需求。</p>
+  <p>经过这几年的教学，C计划帮助很多学员跳出了<strong>“好学生心态”</strong>，但如同<a target="_blank" rel="noopener noreferrer nofollow" href="https://mp.weixin.qq.com/s?__biz=MzU3MTU4MjA0OQ==&amp;mid=2247538879&amp;idx=1&amp;sn=07a21627c114d37d43d1eeb367c53cb8&amp;chksm=fcdfebb1cba862a77ddcad73fd66879acfe186d802c2463ab93c8bd7af2b3b44ec046ab7f8b3&amp;scene=21#wechat_redirect">蓝方老师在特稿</a>中提到的，这还不够。</p>
+  <p>在成立的第八个年头，C计划团队开始有了一点小小的“野心”：<strong>我们不仅希望把学员们培养成具有理性思考能力的人，更要培养成一个个能妥善处理与自己、与他人、与社会关系的，</strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://mp.weixin.qq.com/s?__biz=MzU3MTU4MjA0OQ==&amp;mid=2247537397&amp;idx=1&amp;sn=fb74a80fcaa3ea23a7d615c7f347d396&amp;chksm=fcdfe1fbcba868ed793ce465f33744fbd20f2192aa411911d073a91b82a91b6b37a28f84c396&amp;scene=21#wechat_redirect"><strong>完整的人</strong></a><strong>。</strong></p>
+  <p>让我们在未来见证，这片滋养的土壤，如何让一颗颗理性的种子，生根、发芽。</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/c7d1500e-6e11-46be-b8ef-41dbaa841fda.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <h3 id="section-2"><strong>年轻一代面临怎样的精神困境？</strong></h3>
+  <p><strong>圆桌论坛</strong>上，蓝方老师和<strong>方可成</strong>（新闻实验室发起人）、<strong>犟爸</strong>（父母基本功主理人）、<strong>张良</strong>（泉源课程研究中心主任）、<strong>徐莉</strong>（湖北省首届荆楚教育名家）四位嘉宾探讨了对于<strong>《年轻一代面临怎样的精神困境？面对困境，需要怎样的思维？》</strong>的见解。</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/977882ab-2873-4218-a6b6-948ab2a8c225.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <p><strong>原来有那么多关心孩子、关心教育的老师们！</strong>创立信息素养媒体、帮助家长建立育儿观、探索用科技赋能教育、投身一线的公立教育……是理性、多元的价值观将大家联结在了一起。</p>
+  <p><strong>方可成老师</strong>分享了他的故事与观察，那么多实验班、名校出来的学霸，就业的选择却是齐刷刷的金融机构；</p>
+  <p><strong>犟爸</strong>进一步分享，从马斯洛需求理论的角度，也许自己思考对别人、对社会有什么价值，是更能让人获得幸福的方式；</p>
+  <p><strong>张良老师</strong>的教学案例中，一名网瘾少年通过人生的规划分析，考上大学，开始追求想要的人生；</p>
+  <p><strong>徐莉老师</strong>分享了，太多人陷入精神困境的原因，可能是过于追求人的基本需求了，害怕没人喜欢、失去好奇心、做事无意义的问题也是因此而来。</p>
+  <h2 id="section-3"><strong>交流&amp;思考</strong></h2>
+  <h3 id="section-4"><strong>社会化过程中，我的困惑与思考</strong></h3>
+  <p><strong>低年级少年思辨谈</strong>上，学员们分享了好多有趣的故事，现场可开心啦：</p>
+  <p>为啥要在厕所里分享零食？这是对付学校除了去厕所不让学生出教室的妙计。</p>
+  <p>如何用C计划课上所学的说理方法，说服老师让同学们可以在课间玩牌？</p>
+  <p>成功“撺掇”妈妈入职C计划。</p>
+  <p>有学员思考到，虽然课间老师明文规定不让学生们跑跑跳跳，但每次老师一走大家就跑跑跳跳，这样的规则好像没有什么意义。</p>
+  <p>还有思考得更深入的学员：现在很多社会上的事情都带有“历史事件与当下行动”之间的混淆，以及以偏概全的谬误。而他认为历史最大的意义就是培养现代人的视野，更好地处理将要面对的一些事情。</p>
+  <p>……</p>
+  <p><br /></p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/a5811557-34c3-4363-a8e0-5fe45ff0be03.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <h3 id="section-5"><strong>内卷时代，我如何探索精神自由</strong></h3>
+  <p><strong>高年级少年思辨谈</strong>上，我们惊讶地发现，学长学姐们尽管有着公立学校、国际学校这样不同的背景，但都活得好自洽呀:</p>
+  <p>学长学姐们高中就做支教了！</p>
+  <p>即使在公立学校每天996的学习环境，有理性思维加持也可以很过得开心。</p>
+  <p>没有考上好的高中，但是也活得很充盈呀，人生是广袤的旷野。</p>
+  <p>只有C计划远远不够，学员们在内部已经创立了L计划、R计划、Y计划、Z计划……读书会、辩论赛，这里可不只有思辨课，还有丰富的活动呢。</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/db1267d8-7073-44d6-881b-4eb74c621b7c.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <h3 id="freetalk-"><strong>Free Talk 可以这样来</strong></h3>
+  <p>午休后的<strong>Free Talk</strong>上，由于上午的时光太过充实，很多有表达欲的家长和孩子都憋到这个环节进行分享了:</p>
+  <p>虽然因为学业太忙停过一段时间，但想到这里始终有一个可以自由表达自己的地方，还是回来享受课程了。这一次，是抱着“死忠粉”的定位来的。</p>
+  <p><strong>原来对C计划最高的评价是“课很好玩”？</strong></p>
+  <p>学员和老师相互诉苦：“上课的时候，让我这个‘E人’多发一会言嘛”“老师也很辛苦呀，已经那么努力地在回应你了！”</p>
+  <p>学员表示：欢迎大家加入C计划的魔幻小说讨论组，还有刘慈欣科幻小说讨论组哦！</p>
+  <p>马上有学员忍不住：“C计划推荐的书真的非常好看，比学校推荐的书好看100万倍！”还要补一句“没有对比就没有伤害”。</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/939982e2-0a34-47c7-a853-0f7663aa83bb.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <h2 id="section-6"><strong>交流&amp;联结</strong></h2>
+  <h3 id="section-7"><strong>家长眼中孩子的变化</strong></h3>
+  <p><strong>Mini Talk</strong>环节，家长们分享的<strong>《我和C计划的故事》</strong>把很多人都听哭了。</p>
+  <p>从创业者到全职妈妈，在剧烈的身份转变中，批判性思维帮助她重新思考自己是谁，通过一轮轮的提问，更深入地了解自己了。</p>
+  <p>虽然对于孩子的教育很迷茫，但C计划给自己很安心的感觉，不断有正反馈的路，方向总不会错吧。</p>
+  <p>不断让孩子上课的过程中，渐渐发现自己“辨不过孩子”了，“理屈词穷”之余只有满满的自豪感。</p>
+  <p>给姐姐报思辨课之后妹妹也想报，她们现在已经能共同讨论一些话题了！</p>
+  <p>妈妈报新闻课原来是为了给自己听？C计划真的是一家“家族企业”，一家人都能来上课！</p>
+  <p><br /></p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/3c7bf1a7-624e-4091-a7d6-8da9ddd48d86.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <h3 id="section-8"><strong>“家长，我们不孤单”</strong></h3>
+  <p>在<strong>父母交流坊</strong>中，很多家长相见恨晚，充分表达着那些困惑已久，但找不到探讨对象的问题。</p>
+  <p>热烈地讨论，真诚地分享，因为知道会有包容且多元的回应，不仅是学员和学员、老师之间，也有家长和家长、老师之间。</p>
+  <p>互相启发、促进思考，大家似乎找到了一种新的方式定义“情绪价值”。</p>
+  <p>此刻“不孤单”，因为每个人都能在这里充分交流，彼此联结。</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/15d61679-a9ef-44f5-baf7-1ebc543dbe6d.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <h2 id="section-9"><strong>交流&amp;联结</strong></h2>
+  <h3 id="section-10"><strong>眼里有光，心中有梦</strong></h3>
+  <p>在<strong>Mini Talk</strong>环节，学员们的眼里充满了“光”，来听听听他们的分享：</p>
+  <p>学员的赞美“如月之恒，如日之升。如南山之寿，不骞不崩。如松柏之茂，无不尔或承”，既是给C计划的，也是给每位学员最好的祝福呀！</p>
+  <p>从L4到L9的学习生涯，是一段从内向走往成熟的路，第一次尝试在课堂中发言，第一次参加活动……即使有段时间学业太过繁忙，寒暑假也会回来上课，听到这里，已经有老师开始抹眼泪了。</p>
+  <p>从比较“偏科”，到开始了解曾经不太喜欢的事物，发现新的世界，变得更加多元。</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/92f1e123-6a2d-4b89-b57b-e25da0d84f17.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <p><br /></p>
+  <h3 id="section-11"><strong>“孩子，玩转思辨力”</strong></h3>
+  <p>在<strong>学员工作坊</strong>中，这里遍布“有趣”和“开心”～</p>
+  <p>学员们“<strong>玩转思辨力</strong>”，以画荐书、设计未来城、表达困惑并交流回应、用信与未来的自己对话，不亦乐乎！</p>
+  <p>● 设计一副介绍画来推荐自己喜欢的C计划的书（第一组）</p>
+  <p>● 用白纸和废弃材料设计一座C型的“未来之城”（第二组）</p>
+  <p>● “请回答2024”，说出你的困惑，大家来回应！（第三组）</p>
+  <p>● 写给15年后的自己一份信，你会说什么？（第四组)</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/d92bc8b4-ede5-469f-af82-e2ebd3dcdbe0.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <h3 id="section-12"><strong>"学长学姐有话说”</strong></h3>
+  <h3 id="c"><strong>学完C计划后，孩子会有哪些改变</strong></h3>
+  <p><strong>《学长学姐有话说》</strong>是一场高年级学员的告白。作为叶明欣老师口中“硕果累累”的人，大家进行了非常多分享，也道出了想对C计划、对学弟学妹们说的话。</p>
+  <p>如果您最想了解上了C计划课程后，孩子会有哪些改变，那就绝不能错过这些“学长学姐”的表达，思维质量之高引得现场频频赞叹！</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/6a25aac1-5361-4266-9e4e-abff10aed967.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <h3 id="s"><strong>挑战30S</strong></h3>
+  <h3 id="section-13"><strong>即兴发言，说出你的真心话</strong></h3>
+  <p>此时，相信你已经觉得这场思辨嘉年华精彩纷呈了！但这个环节，让我们的“肾上腺素”飙升。</p>
+  <p>用不超过30S来表达今天自己的感受，来说一句你想说的话。</p>
+  <p>台下的人自动排上了一排，有家长、有学员，还有C计划的员工。每个人在这里真实、用心的表达自己，甚至不禁感动落泪。</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/5723a363-3a98-469e-b930-9831f510c929.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <p><br /></p>
+  <h3 id="section-14"><strong>构建精神内核，激发更多联结</strong></h3>
+  <p>最后，在C计划主创郭兆凡的美好寄语下，主创叶明欣上台发表结语“<a target="_blank" rel="noopener noreferrer nofollow" href="http://mp.weixin.qq.com/s?__biz=MzU3MTU4MjA0OQ==&amp;mid=2247539402&amp;idx=1&amp;sn=d625623037f6983e260e7eaa4207ef5c&amp;chksm=fcdfe9c4cba860d2e535fcd93c5183a23239e850c68063a93e3159d0e088249b8a273b3c066c&amp;scene=21#wechat_redirect"><strong>构建精神内核</strong></a>”，8周年的活动到此真的结束了！</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/ab1295f6-4763-4ab5-9850-03a774ad7333.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <p>志同道合的小众，在这里好像是常态。</p>
+  <p><strong>不论大环境变成什么样，原来真的有一群人在努力构建丰富的精神世界，大家都在探索着自己的路。</strong>我，并不孤单，我，心有期盼。</p>
+  <p>我们希望未来激发更多的联结，通过C计划产生更多可能性，为更多在这个时代痛苦、迷茫、失落的人，提供一片土壤，在这里成长出美妙的联结，将C计划一直做下去。</p>
+  <p>就像现场最多的一句祝福所说：<strong>提前祝C计划18周年快乐，80周年快乐，100周年快乐！<br /></strong></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-12-08/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-IMO-%E9%80%B1%E5%A0%B1-74-%E5%BE%9E-%E7%AE%A1%E7%90%86%E4%BB%96%E4%BA%BA-%E5%88%B0-%E5%B9%AB%E5%8A%A9%E4%BB%96%E4%BA%BA-%E7%9A%84%E6%80%9D%E7%B6%AD%E8%BD%89%E8%AE%8A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2024-08-29</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-08-29/%E9%96%B1%E8%AE%80%E7%AD%86%E8%80%95-%E4%B8%83%E5%80%8B%E5%88%87%E8%A7%92%E5%B8%B6%E4%BD%A0%E8%AA%8D%E8%AD%98-Telegram-%E8%88%87%E5%85%B6%E5%89%B5%E8%BE%A6%E4%BA%BA-Pavel-Durov/">
+          閱讀筆耕｜七個切角帶你認識 Telegram 與其創辦人 Pavel Durov
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-08-27</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-08-27/%E8%93%9D%E6%96%B9-%E5%80%A6%E6%80%A0%E7%A4%BE%E4%BC%9A-%E6%88%91%E4%BB%AC%E6%83%B3%E5%9F%B9%E5%85%BB%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BA%BA/">
+          蓝方：倦怠社会，我们想培养怎样的人？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-08-27</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-08-27/%E5%8F%B6%E6%98%8E%E6%AC%A3-8%E5%B9%B4%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BC%80%E5%A7%8B-%E4%B9%9F%E6%98%AF-(%E6%97%A0%E9%99%90)-%E7%9A%84%E5%B1%95%E6%9C%9B-C%E8%AE%A1%E5%88%92%E5%85%AB%E5%91%A8%E5%B9%B4%E7%89%B9%E7%A8%BF/">
+          叶明欣：8年是一个开始，也是∞ (无限) 的展望 ｜C计划八周年特稿
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-08-27</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-08-27/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-3-%E8%B5%B0%E8%A1%97%E4%BA%A4%E8%B0%88-%E8%A7%82%E6%99%AF%E9%81%90%E6%83%B3/">
+          梦中的巴黎（3）：走街交谈·观景遐想
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2024-08-27/%E5%8F%B6%E6%98%8E%E6%AC%A3-8%E5%B9%B4%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BC%80%E5%A7%8B-%E4%B9%9F%E6%98%AF-(%E6%97%A0%E9%99%90)-%E7%9A%84%E5%B1%95%E6%9C%9B-C%E8%AE%A1%E5%88%92%E5%85%AB%E5%91%A8%E5%B9%B4%E7%89%B9%E7%A8%BF/">
+            前一篇：叶明欣：8年是一个开始，也是∞ (无限) 的展望 ｜C计划八周年特稿
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2024-08-27/12%E6%AD%B2%E7%94%B7%E5%AD%A9%E9%81%9B%E7%8B%97%E7%99%BC%E7%8F%BE%E7%BE%85%E9%A6%AC%E9%87%91%E6%89%8B%E9%90%B2-%E5%AF%B6%E8%97%8F%E9%87%8D%E8%A6%8B%E5%A4%A9%E6%97%A5-%E5%9F%83%E5%8F%8A%E5%85%AC%E5%85%83%E5%89%8D6%E4%B8%96%E7%B4%80%E5%A4%A9%E6%96%87%E8%A7%80%E6%B8%AC%E7%AB%99-%E5%8F%A4%E4%BB%A3%E7%A7%91%E6%8A%80%E5%A5%87%E8%B7%A1%E9%87%8D%E7%8F%BE-%E8%92%99%E5%8F%A4%E5%B8%9D%E5%9C%8B%E5%89%8D/">
+            後一篇：12歲男孩遛狗發現羅馬金手鐲：寶藏重見天日；埃及公元前6世紀天文觀測站：古代科技奇跡重現；蒙古帝國前的歲月：精英墓葬揭示成吉思汗崛起前的風雲：歷史簡報20240827
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2024-08-27/%E5%8F%B6%E6%98%8E%E6%AC%A3-8%E5%B9%B4%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BC%80%E5%A7%8B-%E4%B9%9F%E6%98%AF-(%E6%97%A0%E9%99%90)-%E7%9A%84%E5%B1%95%E6%9C%9B-C%E8%AE%A1%E5%88%92%E5%85%AB%E5%91%A8%E5%B9%B4%E7%89%B9%E7%A8%BF/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2024-08-27/12%E6%AD%B2%E7%94%B7%E5%AD%A9%E9%81%9B%E7%8B%97%E7%99%BC%E7%8F%BE%E7%BE%85%E9%A6%AC%E9%87%91%E6%89%8B%E9%90%B2-%E5%AF%B6%E8%97%8F%E9%87%8D%E8%A6%8B%E5%A4%A9%E6%97%A5-%E5%9F%83%E5%8F%8A%E5%85%AC%E5%85%83%E5%89%8D6%E4%B8%96%E7%B4%80%E5%A4%A9%E6%96%87%E8%A7%80%E6%B8%AC%E7%AB%99-%E5%8F%A4%E4%BB%A3%E7%A7%91%E6%8A%80%E5%A5%87%E8%B7%A1%E9%87%8D%E7%8F%BE-%E8%92%99%E5%8F%A4%E5%B8%9D%E5%9C%8B%E5%89%8D/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2024-08-27/%E8%93%9D%E6%96%B9-%E5%80%A6%E6%80%A0%E7%A4%BE%E4%BC%9A-%E6%88%91%E4%BB%AC%E6%83%B3%E5%9F%B9%E5%85%BB%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BA%BA/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2024-08-27/%E5%8F%B6%E6%98%8E%E6%AC%A3-8%E5%B9%B4%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BC%80%E5%A7%8B-%E4%B9%9F%E6%98%AF-(%E6%97%A0%E9%99%90)-%E7%9A%84%E5%B1%95%E6%9C%9B-C%E8%AE%A1%E5%88%92%E5%85%AB%E5%91%A8%E5%B9%B4%E7%89%B9%E7%A8%BF/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2024-08-27/%E5%8F%B6%E6%98%8E%E6%AC%A3-8%E5%B9%B4%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BC%80%E5%A7%8B-%E4%B9%9F%E6%98%AF-(%E6%97%A0%E9%99%90)-%E7%9A%84%E5%B1%95%E6%9C%9B-C%E8%AE%A1%E5%88%92%E5%85%AB%E5%91%A8%E5%B9%B4%E7%89%B9%E7%A8%BF/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2024-08-27/12%E6%AD%B2%E7%94%B7%E5%AD%A9%E9%81%9B%E7%8B%97%E7%99%BC%E7%8F%BE%E7%BE%85%E9%A6%AC%E9%87%91%E6%89%8B%E9%90%B2-%E5%AF%B6%E8%97%8F%E9%87%8D%E8%A6%8B%E5%A4%A9%E6%97%A5-%E5%9F%83%E5%8F%8A%E5%85%AC%E5%85%83%E5%89%8D6%E4%B8%96%E7%B4%80%E5%A4%A9%E6%96%87%E8%A7%80%E6%B8%AC%E7%AB%99-%E5%8F%A4%E4%BB%A3%E7%A7%91%E6%8A%80%E5%A5%87%E8%B7%A1%E9%87%8D%E7%8F%BE-%E8%92%99%E5%8F%A4%E5%B8%9D%E5%9C%8B%E5%89%8D/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2024-08-27/%E8%93%9D%E6%96%B9-%E5%80%A6%E6%80%A0%E7%A4%BE%E4%BC%9A-%E6%88%91%E4%BB%AC%E6%83%B3%E5%9F%B9%E5%85%BB%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BA%BA/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2024-08-27/%E5%8F%B6%E6%98%8E%E6%AC%A3-8%E5%B9%B4%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BC%80%E5%A7%8B-%E4%B9%9F%E6%98%AF-(%E6%97%A0%E9%99%90)-%E7%9A%84%E5%B1%95%E6%9C%9B-C%E8%AE%A1%E5%88%92%E5%85%AB%E5%91%A8%E5%B9%B4%E7%89%B9%E7%A8%BF/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
