@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>以色列8200部隊第一次對外披露：以色列是如何竊聽整個世界的， – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+以色列8200部隊第一次對外披露：以色列是如何竊聽整個世界的，
+——
+" />
+    <meta property="og:description" content="
+以色列8200部隊第一次對外披露：以色列是如何竊聽整個世界的，
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="以色列8200部隊第一次對外披露：以色列是如何竊聽整個世界的，" />
+    <meta property="twitter:title" content="以色列8200部隊第一次對外披露：以色列是如何竊聽整個世界的，" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (3128)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DkR0rU6ILyJ0" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.youtube.com/watch?v=kR0rU6ILyJ0" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.youtube.com/watch?v=kR0rU6ILyJ0&text=以色列8200部隊第一次對外披露：以色列是如何竊聽整個世界的，&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.youtube.com/watch?v=kR0rU6ILyJ0&title=以色列8200部隊第一次對外披露：以色列是如何竊聽整個世界的，" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.youtube.com/watch?v=kR0rU6ILyJ0&title=以色列8200部隊第一次對外披露：以色列是如何竊聽整個世界的，" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=以色列8200部隊第一次對外披露：以色列是如何竊聽整個世界的，&body=
+以色列8200部隊第一次對外披露：以色列是如何竊聽整個世界的，
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.youtube.com/watch?v=kR0rU6ILyJ0" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.youtube.com/watch?v=kR0rU6ILyJ0&title=以色列8200部隊第一次對外披露：以色列是如何竊聽整個世界的，&caption=
+以色列8200部隊第一次對外披露：以色列是如何竊聽整個世界的，
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=以色列8200部隊第一次對外披露：以色列是如何竊聽整個世界的，&url=https://www.youtube.com/watch?v=kR0rU6ILyJ0" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>以色列8200部隊第一次對外披露：以色列是如何竊聽整個世界的，</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2024-12-08
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#老楊到處說">
+          老楊到處說
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.youtube.com/watch?v=kR0rU6ILyJ0" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="老楊到處說的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#老楊到處說 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+      <iframe id="player-kR0rU6ILyJ0" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/kR0rU6ILyJ0" frameborder="0" allowfullscreen></iframe>
+    
+    <!--1733698827000-->
+<p><a href="https://www.youtube.com/watch?v=kR0rU6ILyJ0">以色列8200部隊第一次對外披露：以色列是如何竊聽整個世界的，</a>
+——</p>
+
+<div>
+訂閱楊錦麟頻道，每天免費收看最新影片歡迎各位透過超級感謝支持我們的創作亦可通過PayPal支持我們：http://bit.ly/support-laoyang－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－華人社會大變將至，老楊堅持在亂局中繼續做好本份，為大家提供獨到而全面資訊，助大家一同分析時局，安身立命。為支持團隊運作，老楊特別為各位舊雨知音準備各種優秀產品，由頂級高山茶葉，到日常淺酎的紅白葡萄酒，一應俱全。最新推出老醬香白酒，百年在地窖藏，上思上想不上頭，懇請各方好友支持。歡迎掃二維碼添加微信諮詢：zhujiu30 或 微信qingtongtong100－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－#中國 #中国 #老楊到處說 #楊錦麟論時政 #楊錦麟“隔墙有耳”：以色列如何窃听世界？5月，国际刑事法院检察官办公室在社交网站X上发表了一份含糊其辞的声明，要求停止一切恐吓法院官员和试图“不当”影响他们的行为。虽然声明没有具体说明这些“不当”影响是什么，也没有明确提及以色列，但它是在美国和以色列官员批评国际刑事法院之后发布的，他们警告可能会影响法院成员的“后果”，此前国际刑事法院检察官英国卡里姆·汗要求对以色列领导人发出逮捕令，罪名是犯下罪行加沙地带的战争罪行。除了这些公开批评之外，刑事法院提到的“不当影响”可能指的是西方媒体此前披露的以色列利用其情报部门和特工监视国际刑事法院高级官员并拦截他们的通讯的情况，包括电话、信件和电子邮件，目的是勒索他们并扭曲他们的声誉，作为旨在挫败法院对以色列调查的情报行动的一部分。故事现在还没有开始有证据表明，以色列情报机构针对国际刑事法院官员的攻击并非始于时事，而是可以追溯到2015年，当时巴勒斯坦于4月正式加入法院后，占领国发起了一场有组织的行动，追查法院成员。当时，2012年至2021年间担任法院检察官的冈比亚法学家法图·本苏达决定对巴勒斯坦被占领土局势展开初步调查，并对加沙和西方国家所犯下的“犯罪嫌疑”进行初步评估银行，这引起了以色列的担忧，担心其一些官员和士兵会受到起诉。初步调查一开始，达和她的团队就多次发出警告，其中他们对以色列情报部门与他们的沟通以及以色列摩萨德前负责人约西·科恩试图招募本苏达表示担忧，他多次会见她，期间试图说服她不要继续调查，并改变方向“配合以色列的要求”。尽管科恩一开始的行为很友好，但当他意识到本苏达不会放弃进行调查并且不会轻易回应他的目的时，他很快就变成了恐吓。后来，他向她发出了隐晦的威胁，其中谈到了她的职业生涯、个人安全和家人的安全，以色列情报部门还积极监视本苏达及其家人的个人通讯，目的是获取可用于对付她的攻击性信息，包括她丈夫的秘密录音。与此同时，以色列情报部门经常窃听本苏达及其团队与巴勒斯坦人的电话，以色列总理内塔尼亚胡亲自监督了监视和窃听行动，并表达了对监听国际刑事法院官员电话的“近乎痴迷”的兴趣，而窃听信息被发送给司法部、外交部和战略事务部，以及一个由高级律师和外交官组成的秘密团队，以便利用它们并采取主动机制来确保法庭调查受到挫败。“飞马”：手机里的以色列耳朵！窃听活动不仅限于法院官员，还包括6个与国际刑事法院合作并发送材料证明占领侵犯巴勒斯坦人行为的非政府人权组织，其中包括Al-Haq、Al-Dameer等组织、Bisan和巴勒斯坦人权中心。调查显示，间谍活动导致以色列前国防部长本尼·甘茨意识到自己的名字出现在人权组织提交的文件中，因为他在2014年加沙战争期间担任参谋长，并在2021年担任国防部长，这导致他在2021年10月将他们列为恐怖组织。这些发现与保护人权捍卫者组织（FLD）与国际特赦组织安全实验室合作进行的研究结论一致，。除了允许访问短信和语音通话之外，“飞马”还可以向操作员提供存储在电话和联系人列表中的密码。它还使操作员能够控制手机的摄像头和麦克风，以及使用全球定位系统（GPS）跟踪手机的位置和移动。还有其他软件比“飞马”更危险！“飞马”并不是唯一一家由Circles公司开发的监控工具，该工具于2014年被以色列NSO集团以1.3亿美元收购。这里的新之处在于，Circles 产品以不同的方式工作，因为它们不需要破解手机，而是可以通过利用当地电信公司基础设施的漏洞进行间谍活动。这意味着在这种情况下，监控系统不会直接针对手机，而是通过渗透手机进行通信的网络进行间谍活动，占领军最有可能使用这种技术来拦截法图·本苏达和巴勒斯坦人之间的地面通信。这种复杂的间谍方法很难检测或验证，因为它不会在目标设备上留下任何痕迹。蜂窝电信公司在识别其基础设施上的该程序并消除它方面也面临着技术挑战，尽管扫描的使用已证实该程序在至少25个国家的本地电信网络上传播，这表明其广泛使用。虽然Circles申明其致力于根据特定的法律目的向民族国家销售其产品，例如使用它们来打击恐怖主义和犯罪，但专注于网络安全和人权且总部位于加拿大多伦多的“公民实验室”（Citizen Lab）指出，一些被确定为该公司客户的政府有利用数字技术侵犯人权和控制异见人士的历史。这方面的例子包括尼日利亚报纸《Premium》在2016年报道的内容，即尼日利亚两名州长获得了Circles计划并利用它来监视政治对手，以及卢旺达当局利用“飞马”攻击了3500名记者和政治活动人士，此外加纳也发生过类似事件，其政府与NSO集团合作，在2016年选举前利用“飞马”监视反对派人士。这些只是以色列系统性政策的例子，即与愿意的特工分享“电子压制技术”，以推进以色列的外交关系并克服围困和孤立的企图，这意味着以色列寻求通过用间谍软件取代专制政府来加强其外交关系并打击抵制运动。尽管成立于2010年的NSO集团被归类为私营公司，但这并不意味着它远离国家控制，而且其主要资金可能由精英情报单位8200部队提供，该单位专门从事网络安全，隶属于以色列军事情报部门（AMAN）。事实证明了这一点：该公司的两位创始人奥姆里·拉维（Omri Lavi）和沙莱夫·胡里奥（Shalev Hulio）曾在8200部队服役，与该集团目前的大多数员工一样。报告显示，NSO最有价值的员工是以色列军事情报高级网络武器培训项目的毕业生。对此，经济研究员兼支持巴勒斯坦正义犹太联盟（Jews for Justice for Palestinians）主任希尔·赫弗评论道：以色列“创造了一种勾结文化，其政府机构对私营军事监控公司视而不见”，为退休军官和前军事人员提供私人保安市场的第二份工作机会，目前私营部门超过80%的监控员工以前属于以色列情报部门，特别是网络安全部门8200部队。8200部队：以色列最长久的情报部门！尽管直到本世纪初才承认 8200 部队的存在，但有报道称，该部队的组建始于 20 世纪 30 年代，当时被称为“Shin Mim”（阿拉伯语：信息服务处），是为了窃听耶路撒冷的阿拉伯通信而创建的。1948年，该部队的代号为“兔子”，窃听巴勒斯坦人的电话仍然是其目标，但采用的是原始技术。到1960年，以色列陆军从美国购买了一台Philco计算机，恰逢计算机硬件和记录管理中心（称为Mamram）成立，这一计算机能力在1967年战争期间帮助拦截并破译了埃及和叙利亚的空中通讯。1973年是该部队历史上的一个转折点，10月，占领军在埃及前线遭遇了历史上最大的情报失败，此外，以色列军官阿莫斯·列文伯格被叙利亚人抓获，而且他在心理上无法抵抗调查人员。由于阿莫斯了解该部队的秘密，当他告诉叙利亚人以色列已经侵入叙利亚通讯电缆并窃听所有叙利亚军事广播时，他的供述对以色列情报部门造成了巨大伤害，包括叙利亚总统和师指挥官之间的通信，迫使当时的以色列参谋长和以色列陆军情报总监辞职。经历了1973年的冲击后，该部队开始改变其组织结构，并寻求新技术以增强其情报能力和国家安全，因此，8200部队成为军事机构的内部研发中心。媒体报道称，占领军获得的情报材料中有90%是通过8200部队的活动获得的，这使其与以色列其他情报机构相比处于非常突出的地位。2001年至2005年间担任该部队指挥官、现任以色列网络安全公司Berytech首席执行官的亚尔·科恩证实了这一点，他指出，“摩萨德或任何以色列安全情报机构的重大行动中，8200部队没有参与。”值得注意的是，尽管该部门因在多项黑客和间谍活动中取得成功而受到赞誉，但其享有盛誉的地位与以色列情报部门所有部门在2023年10月7日巴勒斯坦抵抗运动袭击期间遭受的失败相去甚远，这导致其领导人约西·沙利叶9月辞职。8200部队估计约有5000名员工，其前员工表示，这里的设计方式让他们能够自由行动和决策，而且里面的培训环境与初创公司非常相似，目的是获得更大的动力。该部队的总部位于巴勒斯坦南部内盖夫沙漠以西的乌里姆（Urim）军事基地，配备了成排的卫星天线，能够大规模拦截通信。乌里姆基地里还有什么？！“世界上最大的信号情报基地之一”，这是对乌里姆基地的描述，因为它可以对海底电缆进行黑客攻击并监控通过海底电缆传输的通信，特别是穿过地中海并连接以色列和欧洲的电缆，除了在巴勒斯坦领土内设有秘密监视单位外，它还在国外的以色列使馆大楼内设有秘密监听中心。乌里姆基地最初是为了监控通过Intelsat卫星传输的国际通信而创建的，后来扩展到包括拦截Inmarsat卫星上交换的海上通信的能力，然后瞄准了越来越多的区域卫星。因此，印度洋和大西洋之间弧线上的大多数卫星都是以色列基地的潜在目标。这里不言而喻地指出，由于监视和间谍活动领域的这些强大工具，巴勒斯坦人正在发生什么，因为人们通常注意到，占领者将被占领土的人口视为集体监视和控制工具的试验场，因此这被认为是在世界各地其他专制政权中宣传和推销其间谍产品的一种形式。据以色列《国土报》报道，针对巴勒斯坦人的监视行动是世界上规模最大的此类监视行动，包括监视媒体、社交媒体和整个人口，而占领依赖于多层技术，与“Mabat 2000”项目类似，这是一个由遍布西岸的复杂监控摄像头网络组成的安全系统，由以色列Mer Group开发，2015年拨款1526万美元，后来还通过面部识别系统对其进行了增强。这意味着监视已经超越了安全部门的概念，旨在加强种族隔离，其明确的存在增加了持续的恐惧和焦虑感。在一项有关监视行为对心理行为影响的研究中，耶路撒冷市谢赫·贾拉（Sheikh Jarrah）社区的妇女表示，她们睡觉时经常戴头巾，因为街道上监控摄像头的增加让她们感到缺乏隐私和焦虑。从更广泛的角度来看，以色列技术在全球的使用引起了专家的担忧，因为以色列可能通过使用其间谍技术来获取所有可用信息，即使这种使用是由其他国家的独立政府进行的，鉴于以色列是该技术的主要开发商，该技术保留了用户可能永远不知道的秘密，无论他有多强大或影响力。
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#老楊到處說 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-12-18/%E4%BD%99%E6%B1%9D%E4%BF%A1%E5%8F%88%E4%B8%80%E9%83%A8%E5%8A%9B%E4%BD%9C-%E9%99%B3%E4%BC%AF%E9%81%94%E5%B9%B4%E8%AD%9C-%E5%87%BA%E7%89%88-%E6%AC%A1%E6%95%B8%E5%A1%AB%E8%A3%9C%E4%BA%86%E4%B8%AD%E5%85%B1%E9%BB%A8%E5%8F%B2%E7%A0%94%E7%A9%B6%E4%B8%80%E5%80%8B%E7%A9%BA%E7%99%BD-%E4%B8%AD%E5%85%B1%E9%A0%AD%E8%99%9F%E7%90%86%E8%AB%96%E5%AE%B6%E7%9A%84%E8%B7%8C%E5%AE%95%E4%BA%BA%E7%94%9F%E9%A6%96%E6%AC%A1%E4%BB%A5/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2024-08-20/%E5%BE%9E%E8%8F%AF%E4%BA%BA%E8%8F%81%E8%8B%B1%E5%91%BD%E9%81%8B%E6%B2%88%E6%B5%AE%E7%9A%84%E6%AD%B7%E5%8F%B2%E6%B7%B1%E5%88%BB%E6%95%99%E8%A8%93-%E6%9C%89%E4%BA%BA%E5%BE%97%E5%87%BA%E7%B5%90%E8%AB%96-%E7%95%B6%E4%BB%8A%E4%B8%AD%E5%9C%8B%E7%B2%BE%E8%8B%B1%E9%9A%8E%E5%B1%A4%E7%9A%84%E7%8A%AC%E5%84%92%E5%88%A9%E5%B7%B1-%E6%98%AF%E4%B8%AD%E5%9C%8B%E7%B6%93%E6%BF%9F%E6%B0%91%E7%94%9F%E6%B2%88%E7%97%BE%E9%9B%A3%E8%A7%A3/">最早</a>--</span>
+    
+      <li>
+        <time>2024-12-09</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-12-09/%E5%B0%8D%E8%A9%B1%E6%98%93%E5%AF%8C%E8%B3%A2-%E5%BE%9E%E4%BA%BA%E5%8F%A3%E8%A6%96%E8%A7%92%E7%9C%8B%E4%B8%AD%E5%9C%8B%E7%B6%93%E6%BF%9F%E5%8F%8A%E4%B8%AD%E7%BE%8E%E8%B2%BF%E6%98%93%E6%88%B0-2024%E5%B9%B412%E6%9C%8811%E6%97%A5%E5%8C%97%E4%BA%AC%E6%99%82%E9%96%93%E4%B8%8A%E5%8D%8810%E9%BB%9E-%E7%BE%8E%E5%9C%8B%E4%B8%AD%E9%83%A8%E6%99%82%E9%96%93/">
+          對話易富賢 從人口視角看中國經濟及中美貿易戰 2024年12月11日北京時間上午10點（美國中部時間晚上八點） 敬請關注，歡迎互動交流
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-12-09</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-12-09/%E8%80%81%E6%A5%8A%E5%88%B0%E8%99%95%E8%AA%AA-%E6%AD%A3%E5%9C%A8%E7%9B%B4%E6%92%AD-%E6%95%98%E5%88%A9%E4%BA%9E%E6%94%BF%E5%B1%80%E9%80%86%E8%BD%89-%E9%98%BF%E8%96%A9%E5%BE%B7%E5%80%89%E7%9A%87%E5%87%BA%E8%B5%B0-%E9%81%BF%E9%9B%A3%E4%BF%84%E7%BE%85%E6%96%AF-%E5%BC%95%E7%99%BC%E4%BA%86%E7%B6%B2%E7%B5%A1%E4%B8%8A%E7%9A%84%E4%B8%80%E5%80%8B%E7%86%B1%E8%AD%B0%E8%A9%B1%E9%A1%8C-%E6%9D%AD%E5%B7%9E/">
+          「老楊到處說」正在直播！敘利亞政局逆轉，阿薩德倉皇出走，避難俄羅斯。引發了網絡上的一個熱議話題 杭州靈隱寺到底靈不靈 ？老楊即時分享點滴觀感
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-12-08</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-12-08/%E6%AD%B7%E5%8F%B2%E6%B2%88%E6%80%9D-%E6%9D%83%E8%B0%8B%E4%B8%8E%E6%96%97%E4%BA%89-%E4%B8%80%E4%BB%A3%E4%BA%BA%E7%9A%84%E8%8B%A6%E9%9A%BE-%E5%B0%8D%E6%B1%9F%E6%9C%B1%E5%B9%B4%E4%BB%A3-%E8%83%A1%E6%BA%AB%E5%B9%B4%E4%BB%A3%E5%85%85%E6%BB%BF%E7%B7%AC%E6%87%B7-%E5%B0%8D%E6%96%B0%E6%99%82%E4%BB%A3%E7%9A%84%E8%AB%B8%E5%A4%9A%E7%A8%AE%E7%A8%AE%E6%98%8E%E9%A1%AF%E8%A1%A8%E9%81%94%E5%87%BA%E4%B8%8D%E9%81%A9/">
+          歷史沈思 权谋与斗争：一代人的苦难  對江朱年代，胡溫年代充滿緬懷，對新時代的諸多種種明顯表達出不適應和不能苟同的立場態度，署名文章傳播甚廣 認為權謀和鬥爭，給中華民族實現偉大復興帶來阻礙和麻煩
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-12-07</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-12-07/%E9%98%BF%E6%8B%89%E4%BC%AF%E8%A6%96%E8%A7%92%E7%9C%8B%E4%B8%96%E7%95%8C-%E5%8D%8A%E5%B3%B6%E9%9B%BB%E8%A6%96%E5%8F%B0%E5%88%8A%E7%99%BC%E5%9F%83%E5%8F%8A%E4%BD%9C%E5%AE%B6-%E8%A8%98%E8%80%85%E9%A9%AC%E5%93%88%E8%8C%82%E5%BE%B7-%E8%8B%8F%E5%B0%94%E5%9D%A6%E6%96%87%E7%AB%A0-%E5%A6%82%E6%9E%9C%E4%B8%96%E7%95%8C%E7%A7%A9%E5%BA%8F%E6%94%B9%E5%8F%98%E5%B0%86%E5%8F%91%E7%94%9F%E4%BB%80%E4%B9%88/">
+          阿拉伯視角看世界 半島電視台刊發埃及作家，記者马哈茂德·苏尔坦文章：如果世界秩序改变将发生什么？
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2024-12-08/%E5%9F%8E%E5%AF%A8%E6%96%B0%E8%81%9E%E7%AA%81%E7%99%BCII-%E4%B8%AD%E6%9D%B1%E9%89%85%E8%AE%8A%E5%B7%B4%E6%B2%99%E7%88%BE%E5%80%92%E5%8F%B0-%E5%9C%9F%E8%80%B3%E5%85%B6%E6%88%90%E7%82%BA%E5%A4%A7%E8%B4%8F%E5%AE%B6%E5%B9%95%E5%BE%8C%E6%94%AF%E6%8C%81%E5%8F%9B%E8%BB%8D-%E8%A8%93%E7%B7%B4%E6%9C%80%E6%96%B0%E4%B8%8D%E5%B0%8D%E7%A8%B1%E6%88%B0%E6%B3%95-%E5%88%A9%E7%94%A8%E5%9C%9F%E8%80%B3/">
+            前一篇：城寨新聞突發II : 中東鉅變巴沙爾倒台 土耳其成為大贏家幕後支持叛軍 訓練最新不對稱戰法 利用土耳其無人機襲擊軍事據點 特種兵殲滅伊朗軍事顧問 科技信息戰擾敵 摧毀政府軍士氣 侵侵將與埃爾當安聯手
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2024-12-08/(%E7%A6%8F%E5%BB%BA%E7%B6%B2%E5%8F%8B)%E5%8F%B0%E7%81%A3%E4%BA%BA%E7%9C%9F%E9%9B%99%E6%A8%99-%E6%B0%91%E9%80%B2%E9%BB%A8%E8%8A%B1%E9%8C%A2%E8%B2%B7%E7%B6%B2%E7%B4%85%E5%8F%AF%E4%BB%A5-%E4%B8%AD%E5%85%B1%E5%B0%B1%E4%B8%8D%E8%A1%8C/">
+            後一篇：(福建網友)台灣人真雙標！民進黨花錢買網紅可以，中共就不行。
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2024-12-08/%E5%9F%8E%E5%AF%A8%E6%96%B0%E8%81%9E%E7%AA%81%E7%99%BCII-%E4%B8%AD%E6%9D%B1%E9%89%85%E8%AE%8A%E5%B7%B4%E6%B2%99%E7%88%BE%E5%80%92%E5%8F%B0-%E5%9C%9F%E8%80%B3%E5%85%B6%E6%88%90%E7%82%BA%E5%A4%A7%E8%B4%8F%E5%AE%B6%E5%B9%95%E5%BE%8C%E6%94%AF%E6%8C%81%E5%8F%9B%E8%BB%8D-%E8%A8%93%E7%B7%B4%E6%9C%80%E6%96%B0%E4%B8%8D%E5%B0%8D%E7%A8%B1%E6%88%B0%E6%B3%95-%E5%88%A9%E7%94%A8%E5%9C%9F%E8%80%B3/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2024-12-08/(%E7%A6%8F%E5%BB%BA%E7%B6%B2%E5%8F%8B)%E5%8F%B0%E7%81%A3%E4%BA%BA%E7%9C%9F%E9%9B%99%E6%A8%99-%E6%B0%91%E9%80%B2%E9%BB%A8%E8%8A%B1%E9%8C%A2%E8%B2%B7%E7%B6%B2%E7%B4%85%E5%8F%AF%E4%BB%A5-%E4%B8%AD%E5%85%B1%E5%B0%B1%E4%B8%8D%E8%A1%8C/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2024-12-09/%E8%80%81%E6%A5%8A%E5%88%B0%E8%99%95%E8%AA%AA-%E6%AD%A3%E5%9C%A8%E7%9B%B4%E6%92%AD-%E6%95%98%E5%88%A9%E4%BA%9E%E6%94%BF%E5%B1%80%E9%80%86%E8%BD%89-%E9%98%BF%E8%96%A9%E5%BE%B7%E5%80%89%E7%9A%87%E5%87%BA%E8%B5%B0-%E9%81%BF%E9%9B%A3%E4%BF%84%E7%BE%85%E6%96%AF-%E5%BC%95%E7%99%BC%E4%BA%86%E7%B6%B2%E7%B5%A1%E4%B8%8A%E7%9A%84%E4%B8%80%E5%80%8B%E7%86%B1%E8%AD%B0%E8%A9%B1%E9%A1%8C-%E6%9D%AD%E5%B7%9E/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2024-12-08/%E6%AD%B7%E5%8F%B2%E6%B2%88%E6%80%9D-%E6%9D%83%E8%B0%8B%E4%B8%8E%E6%96%97%E4%BA%89-%E4%B8%80%E4%BB%A3%E4%BA%BA%E7%9A%84%E8%8B%A6%E9%9A%BE-%E5%B0%8D%E6%B1%9F%E6%9C%B1%E5%B9%B4%E4%BB%A3-%E8%83%A1%E6%BA%AB%E5%B9%B4%E4%BB%A3%E5%85%85%E6%BB%BF%E7%B7%AC%E6%87%B7-%E5%B0%8D%E6%96%B0%E6%99%82%E4%BB%A3%E7%9A%84%E8%AB%B8%E5%A4%9A%E7%A8%AE%E7%A8%AE%E6%98%8E%E9%A1%AF%E8%A1%A8%E9%81%94%E5%87%BA%E4%B8%8D%E9%81%A9/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2024-12-08/%E5%9F%8E%E5%AF%A8%E6%96%B0%E8%81%9E%E7%AA%81%E7%99%BCII-%E4%B8%AD%E6%9D%B1%E9%89%85%E8%AE%8A%E5%B7%B4%E6%B2%99%E7%88%BE%E5%80%92%E5%8F%B0-%E5%9C%9F%E8%80%B3%E5%85%B6%E6%88%90%E7%82%BA%E5%A4%A7%E8%B4%8F%E5%AE%B6%E5%B9%95%E5%BE%8C%E6%94%AF%E6%8C%81%E5%8F%9B%E8%BB%8D-%E8%A8%93%E7%B7%B4%E6%9C%80%E6%96%B0%E4%B8%8D%E5%B0%8D%E7%A8%B1%E6%88%B0%E6%B3%95-%E5%88%A9%E7%94%A8%E5%9C%9F%E8%80%B3/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2024-12-08/(%E7%A6%8F%E5%BB%BA%E7%B6%B2%E5%8F%8B)%E5%8F%B0%E7%81%A3%E4%BA%BA%E7%9C%9F%E9%9B%99%E6%A8%99-%E6%B0%91%E9%80%B2%E9%BB%A8%E8%8A%B1%E9%8C%A2%E8%B2%B7%E7%B6%B2%E7%B4%85%E5%8F%AF%E4%BB%A5-%E4%B8%AD%E5%85%B1%E5%B0%B1%E4%B8%8D%E8%A1%8C/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<老楊到處說>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2024-12-09/%E8%80%81%E6%A5%8A%E5%88%B0%E8%99%95%E8%AA%AA-%E6%AD%A3%E5%9C%A8%E7%9B%B4%E6%92%AD-%E6%95%98%E5%88%A9%E4%BA%9E%E6%94%BF%E5%B1%80%E9%80%86%E8%BD%89-%E9%98%BF%E8%96%A9%E5%BE%B7%E5%80%89%E7%9A%87%E5%87%BA%E8%B5%B0-%E9%81%BF%E9%9B%A3%E4%BF%84%E7%BE%85%E6%96%AF-%E5%BC%95%E7%99%BC%E4%BA%86%E7%B6%B2%E7%B5%A1%E4%B8%8A%E7%9A%84%E4%B8%80%E5%80%8B%E7%86%B1%E8%AD%B0%E8%A9%B1%E9%A1%8C-%E6%9D%AD%E5%B7%9E/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<老楊到處說>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2024-12-08/%E6%AD%B7%E5%8F%B2%E6%B2%88%E6%80%9D-%E6%9D%83%E8%B0%8B%E4%B8%8E%E6%96%97%E4%BA%89-%E4%B8%80%E4%BB%A3%E4%BA%BA%E7%9A%84%E8%8B%A6%E9%9A%BE-%E5%B0%8D%E6%B1%9F%E6%9C%B1%E5%B9%B4%E4%BB%A3-%E8%83%A1%E6%BA%AB%E5%B9%B4%E4%BB%A3%E5%85%85%E6%BB%BF%E7%B7%AC%E6%87%B7-%E5%B0%8D%E6%96%B0%E6%99%82%E4%BB%A3%E7%9A%84%E8%AB%B8%E5%A4%9A%E7%A8%AE%E7%A8%AE%E6%98%8E%E9%A1%AF%E8%A1%A8%E9%81%94%E5%87%BA%E4%B8%8D%E9%81%A9/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
