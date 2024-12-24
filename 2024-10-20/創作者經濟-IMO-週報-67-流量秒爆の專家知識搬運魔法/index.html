@@ -1,0 +1,3886 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>創作者經濟 IMO 📣 週報 #67｜流量秒爆の專家知識搬運魔法 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+創作者經濟 IMO 📣 週報 #67｜流量秒爆の專家知識搬運魔法
+——
+" />
+    <meta property="og:description" content="
+創作者經濟 IMO 📣 週報 #67｜流量秒爆の專家知識搬運魔法
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="創作者經濟 IMO 📣 週報 #67｜流量秒爆の專家知識搬運魔法" />
+    <meta property="twitter:title" content="創作者經濟 IMO 📣 週報 #67｜流量秒爆の專家知識搬運魔法" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (3111)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40penfarming%2F%25E5%2589%25B5%25E4%25BD%259C%25E8%2580%2585%25E7%25B6%2593%25E6%25BF%259F-imo-%25E9%2580%25B1%25E5%25A0%25B1-67-%25E6%25B5%2581%25E9%2587%258F%25E7%25A7%2592%25E7%2588%2586%25E3%2581%25AE%25E5%25B0%2588%25E5%25AE%25B6%25E7%259F%25A5%25E8%25AD%2598%25E6%2590%25AC%25E9%2581%258B%25E9%25AD%2594%25E6%25B3%2595-bafybeih3x4skrndcopj7wsx45wct5y3e4xrqnfjgoadoa6yapoqqq4vikm" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@penfarming/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-imo-%E9%80%B1%E5%A0%B1-67-%E6%B5%81%E9%87%8F%E7%A7%92%E7%88%86%E3%81%AE%E5%B0%88%E5%AE%B6%E7%9F%A5%E8%AD%98%E6%90%AC%E9%81%8B%E9%AD%94%E6%B3%95-bafybeih3x4skrndcopj7wsx45wct5y3e4xrqnfjgoadoa6yapoqqq4vikm" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@penfarming/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-imo-%E9%80%B1%E5%A0%B1-67-%E6%B5%81%E9%87%8F%E7%A7%92%E7%88%86%E3%81%AE%E5%B0%88%E5%AE%B6%E7%9F%A5%E8%AD%98%E6%90%AC%E9%81%8B%E9%AD%94%E6%B3%95-bafybeih3x4skrndcopj7wsx45wct5y3e4xrqnfjgoadoa6yapoqqq4vikm&text=創作者經濟 IMO 📣 週報 #67｜流量秒爆の專家知識搬運魔法&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@penfarming/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-imo-%E9%80%B1%E5%A0%B1-67-%E6%B5%81%E9%87%8F%E7%A7%92%E7%88%86%E3%81%AE%E5%B0%88%E5%AE%B6%E7%9F%A5%E8%AD%98%E6%90%AC%E9%81%8B%E9%AD%94%E6%B3%95-bafybeih3x4skrndcopj7wsx45wct5y3e4xrqnfjgoadoa6yapoqqq4vikm&title=創作者經濟 IMO 📣 週報 #67｜流量秒爆の專家知識搬運魔法" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@penfarming/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-imo-%E9%80%B1%E5%A0%B1-67-%E6%B5%81%E9%87%8F%E7%A7%92%E7%88%86%E3%81%AE%E5%B0%88%E5%AE%B6%E7%9F%A5%E8%AD%98%E6%90%AC%E9%81%8B%E9%AD%94%E6%B3%95-bafybeih3x4skrndcopj7wsx45wct5y3e4xrqnfjgoadoa6yapoqqq4vikm&title=創作者經濟 IMO 📣 週報 #67｜流量秒爆の專家知識搬運魔法" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=創作者經濟 IMO 📣 週報 #67｜流量秒爆の專家知識搬運魔法&body=
+創作者經濟 IMO 📣 週報 #67｜流量秒爆の專家知識搬運魔法
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@penfarming/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-imo-%E9%80%B1%E5%A0%B1-67-%E6%B5%81%E9%87%8F%E7%A7%92%E7%88%86%E3%81%AE%E5%B0%88%E5%AE%B6%E7%9F%A5%E8%AD%98%E6%90%AC%E9%81%8B%E9%AD%94%E6%B3%95-bafybeih3x4skrndcopj7wsx45wct5y3e4xrqnfjgoadoa6yapoqqq4vikm" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@penfarming/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-imo-%E9%80%B1%E5%A0%B1-67-%E6%B5%81%E9%87%8F%E7%A7%92%E7%88%86%E3%81%AE%E5%B0%88%E5%AE%B6%E7%9F%A5%E8%AD%98%E6%90%AC%E9%81%8B%E9%AD%94%E6%B3%95-bafybeih3x4skrndcopj7wsx45wct5y3e4xrqnfjgoadoa6yapoqqq4vikm&title=創作者經濟 IMO 📣 週報 #67｜流量秒爆の專家知識搬運魔法&caption=
+創作者經濟 IMO 📣 週報 #67｜流量秒爆の專家知識搬運魔法
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=創作者經濟 IMO 📣 週報 #67｜流量秒爆の專家知識搬運魔法&url=https://matters.news/@penfarming/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-imo-%E9%80%B1%E5%A0%B1-67-%E6%B5%81%E9%87%8F%E7%A7%92%E7%88%86%E3%81%AE%E5%B0%88%E5%AE%B6%E7%9F%A5%E8%AD%98%E6%90%AC%E9%81%8B%E9%AD%94%E6%B3%95-bafybeih3x4skrndcopj7wsx45wct5y3e4xrqnfjgoadoa6yapoqqq4vikm" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>創作者經濟 IMO 📣 週報 #67｜流量秒爆の專家知識搬運魔法</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2024-10-20
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 閱讀筆耕</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@penfarming/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-imo-%E9%80%B1%E5%A0%B1-67-%E6%B5%81%E9%87%8F%E7%A7%92%E7%88%86%E3%81%AE%E5%B0%88%E5%AE%B6%E7%9F%A5%E8%AD%98%E6%90%AC%E9%81%8B%E9%AD%94%E6%B3%95-bafybeih3x4skrndcopj7wsx45wct5y3e4xrqnfjgoadoa6yapoqqq4vikm" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1729478694000-->
+<p><a href="https://matters.news/@penfarming/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-imo-%E9%80%B1%E5%A0%B1-67-%E6%B5%81%E9%87%8F%E7%A7%92%E7%88%86%E3%81%AE%E5%B0%88%E5%AE%B6%E7%9F%A5%E8%AD%98%E6%90%AC%E9%81%8B%E9%AD%94%E6%B3%95-bafybeih3x4skrndcopj7wsx45wct5y3e4xrqnfjgoadoa6yapoqqq4vikm">創作者經濟 IMO 📣 週報 #67｜流量秒爆の專家知識搬運魔法</a>
+——</p>
+
+<div>
+  <p>嗨！我是本週【創作者經濟 IMO】電子報的主編<a target="_blank" rel="noopener noreferrer nofollow" href="https://open.substack.com/users/27194762-hugo?utm_source=mentions">雨果．Hugo</a>，目前和閱讀筆耕每雙週輪值一次編輯，帶你一起回顧本週精選文章（每週一上午 6 點派報）。也歡迎大家一起來「<a target="_blank" rel="noopener noreferrer nofollow" href="https://discord.gg/49R9HAm4Ey">Matters 創作者經濟討論區</a>」即時交流。</p>
+  <ul>
+    <li>
+      <p>訂閱【創作者經濟 IMO】<a target="_blank" rel="noopener noreferrer nofollow" href="https://creatoreconomyimo.substack.com/">電子報</a>，每週一上午六點迎接創作美好時光。</p>
+    </li>
+    <li>
+      <p>電子報是以 Heptabase 編輯，<a target="_blank" rel="noopener noreferrer nofollow" href="https://get.heptabase.com/imo">免費試用 7 天</a>，和我們一起寫下 IMO。</p>
+    </li>
+    <li>
+      <p>瓦基「<a target="_blank" rel="noopener noreferrer nofollow" href="https://go.newsveg.tw/5q6ljt">卡片盒筆記實戰課</a>」從靈感捕捉到高效產出的知識管理系統，使用我們的折扣碼「IMOYU92」，額外享 92 折優惠！</p>
+    </li>
+  </ul>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/60984d58-fc03-4692-a83c-bbd64a6c6da6.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>這份電子報每週精選數則「Matters 創作者經濟討論區」的交流，鼓勵大家踴躍說出自己的觀點，所以取「IMO」（In My Opinion）作為名稱中的一部分。我們關注各種對「創作者經濟」有益的各種話題，例如創作技巧（不侷限於寫作）、心態及習慣養成、閱聽方法（輸入）、筆記方法（輸出）、文案、SEO、社群經營、數位行銷、數據分析、不同創作平台比較⋯⋯終而實現創作有價，結成「創作者經濟」的果實。</code></pre></div>  </div>
+  <p>這時代沒有人不想掌握流量，因為流量與財富幾乎可以畫上等號。</p>
+  <p>對於剛創業的我來說，非常需要掌握流量密碼讓手上的商品成功變現，很幸運地，在朋友的推薦下，有機會去上一堂完整的短影音變現課。</p>
+  <p>我承認，過去對於短影音不是那麼有好感，上完課後了解到，如果可以妥善運用，影片會匯聚大量訂閱者的關注，進而更有機會轉化成現金。然而，要在其他自媒體平臺上獲得同樣效果，卻要花上遠遠高出的成本與心力。</p>
+  <p>不可思議的是，一整天不到萬元的精實短影音變現落地課程，我居然跳脫短影音小白身份，能夠開始拍片、剪片、產片，這也歸功於課程助教讓學員問好問滿的服務。</p>
+  <p>而我從課程中最大的收穫是流量爆發的秘密在於要懂得<strong>借勢</strong>，這也恰好呼應了本週主題！</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/1970c516-c448-46f2-a10e-0a601b96b335.png/public" referrerpolicy="no-referrer" />    <figcaption>
+本週參加短影音變現班實況（台中場）
+    </figcaption>
+  </figure>
+  <hr />
+  <h2 id="section">❏ 本週焦點</h2>
+  <p>🔸 2024 臺灣文學獎金典獎年度大獎預測抽好禮<br />🔸 從誤傳變真傳，神級公關危機處理<br />🔸 只有興趣，沒有專業的主題，如何寫作？<br />🔸 沒有經驗能當 PM 嗎？<br />🔸 亞馬遜工作法——PRFAQ 逆向工作<br />🔹 如果和你一起躲過雨<br />🔹 一本探討我們情緒 、行為 、生活模式運轉機制的生物學書籍<br />🔧 為什麼筆記工具不會讓我們變得更聰明<br />🔧 Project Turntable 讓 2D 角色轉 3D<br />🌍 萬事萬物皆可賭！去中心化預測市場 Polymarket 是什麼？<br />🌍 Crypto AI：最令人興奮的重點敘事、佈局方式</p>
+  <hr />
+  <h2 id="section-1">❏ <a target="_blank" rel="noopener noreferrer nofollow" href="https://award.nmtl.gov.tw/information?uid=2&amp;pid=2201">2024 臺灣文學獎金典獎年度大獎預測抽好禮</a></h2>
+  <blockquote>
+    <p>一年一度的臺灣文學獎金典獎 30 本入圍名單已經公布了，每個人心中都有一本年度大獎好書，快來參加預測活動，把金典好禮通通帶回家！</p>
+    <p>【活動時間】：2024/10/14（一）～2024/10/30（三）</p>
+    <p>【抽獎 3 步驟】</p>
+    <p>1. 至「臺灣文學獎 Online 2024」粉絲專頁按讚</p>
+    <p>2. 公開分享活動貼文</p>
+    <p>3. 於活動貼文下留言並 tag 2位好友，寫下你心中預測的 2024 金典獎年度大獎得主與書名（查看 2024 金典獎入圍名單）</p>
+  </blockquote>
+  <hr />
+  <h2 id="by-">❏ <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.facebook.com/story.php?story_fbid=8572031186198122&amp;id=100001739775981&amp;rdid=8E0ruTTbi5BpsPSj">從誤傳變真傳，神級公關危機處理</a> by 許榮哲</h2>
+  <blockquote>
+    <p>齊柏林之子受邀到苗栗縣立圖書館演講，演講前卻收到承辦人誤傳 LINE 訊息給他：</p>
+    <p>「齊柏林導演的兒子 30 歲，靠老爸餘蔭就能吃一輩子。」</p>
+    <p>這是個意外，最後的結果慘不忍睹。</p>
+    <p>PTT 網友提出了一個漂亮的「轉彎」，承辦人發現<strong>誤傳</strong>之後，要立刻<strong>真傳</strong>：</p>
+    <p>「身為名人的小孩，常會遭受這類的無端批評與非議，是否可以請講師分享自身的經驗，與各位聽眾分享自己的努力奮鬥歷程。」</p>
+  </blockquote>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/c76425bc-8d32-48f5-8298-ac53c0ee418c.jpeg/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <h3 id="hugo-imo-">雨果・Hugo IMO 🙋：求證假訊息是現代人的必修課</h3>
+  <p>這個事件帶給我最大的警惕有二：</p>
+  <p>第一，就是要時時<strong>心存善念</strong>，並做到<strong>表裡如一</strong>，寧願當個真小人，也不要偽君子，因為一旦假面具被拆穿，人設也全面崩解了。</p>
+  <p>其次，<strong>傳送訊息前</strong>，最好能再三<strong>確認是否允當</strong>，因為這都會成為別人看待你的標籤。</p>
+  <p>另一方面，我其實會很好奇為什麼承辦人會講出這樣的話，會不會有什麼事情是我不知道的？</p>
+  <p>因此，我進一步去搜尋求證已故空拍導演<a target="_blank" rel="noopener noreferrer nofollow" href="https://zh.wikipedia.org/wiki/%E9%BD%8A%E6%9F%8F%E6%9E%97_%28%E8%87%BA%E7%81%A3%29">齊柏林</a>先生的經歷，除了佩服他的貢獻之外，也側面得知他為了完成空拍，留下一筆為數不小的債務。</p>
+  <p>承辦人所說的「齊柏林之子靠老爸餘蔭吃一輩子」，完全是子虛烏有。</p>
+  <p>齊柏林先生兒子齊廷洹真的非常有擔當，他是繼承父親的遺志，才會願意不計酬勞（公家機關演講費並不豐厚）去宣講環保教育。</p>
+  <p>生活中，我們也常常會接收到這類偏頗未經求證的假訊息。</p>
+  <p><strong>不以訊息中是否參雜情緒性字眼來判斷可信度，而是以事實來判定真偽</strong>，這是現代人必修的課題，更是需要修煉的智慧。</p>
+  <hr />
+  <h2 id="by-jemmy-ko">❏ <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.facebook.com/100018026172469/posts/1548177782459746/?rdid=N5QpZt3fTUFENnt3">只有興趣，沒有專業的主題，如何寫作？</a> by <strong>Jemmy Ko</strong></h2>
+  <blockquote>
+    <p>專業人士因為本身「有料」，只要肯寫，一出手就知道有沒有。</p>
+    <p>至於「寫興趣的」業餘人士，只要用對方法，也能寫出相同高度、甚至更強的作品。</p>
+    <p>最簡單的道理就是——直接把專家知識搬來寫，不就好了？</p>
+    <p>◍ 知識彙整：當個「內容整理者」<br />◍ 寫書摘<br />◍ 吸收專家的公開內容 → 寫作<br />◍ 專家故事<br />◍ 紀錄：「每日一篇，直到⋯⋯為止」<br />◍ 訪問專家：在專業領域，你比專家距離讀者更近<br />◍ 連線：把興趣和專業連起來（取交集，找定位）</p>
+  </blockquote>
+  <h3 id="hugo--imo">雨果・Hugo 🙋 IMO：流量爆發的秘密</h3>
+  <p>把專家知識搬來寫，乍聽之下沒有新意，但事實是專家的內容才是經過<strong>驗證的有料內容，對此我很有感觸。</strong></p>
+  <p>最近我為了加速事業成長去上相當有料的短影音課程，課程中認識不少在經營短影音的老闆，起初都喜歡採用自己構想內容拍攝短影音，最終發佈的流量卻低迷慘淡。</p>
+  <p>後來經過定位對標，同時去尋找在短影音取得卓越流量的同行<strong>專家</strong>，將他們流量爆炸的短影音內容<strong>原封不動照搬，結果流量瞬間以數百倍起跳，生意規模呈指數型成長。</strong></p>
+  <p><strong>把專家知識搬來寫（或搬來拍）</strong>這個邏輯，原來在自媒體界都是通用的。</p>
+  <blockquote>
+    <p>順帶一提，如果你本身也有經營生意項目想要變現，短影音目前正處於流量紅利期，是非常值得投資的工具。但流量爆發轉變現還需有專家領路，有機會歡迎加入我推薦的<a target="_blank" rel="noopener noreferrer nofollow" href="https://m1qbvp.1shop.tw/202411">短影音流量變現班</a>（推薦人請輸入【Hugo】）</p>
+  </blockquote>
+  <p><br /></p>
+  <h3 id="imo">閱讀筆耕 🙋 IMO：突破寫作心魔</h3>
+  <p><strong>關於帶給讀者「價值」這件事</strong>，呼應了第 40 期週報選文〈<a target="_blank" rel="noopener noreferrer nofollow" href="https://creatoreconomyimo.substack.com/p/matters-three-body-problem">資訊／知識的傳遞本來就有階層</a>〉，請不要因為覺得「不夠有料」而不敢寫下來和別人分享。</p>
+  <p>我們要破除「知識的詛咒」這層阻礙，<strong>沒有什麼主題是太 low 而不適合投入時間了解並分享的</strong>，市場上有更多「弱弱一問」的新手，正嗷嗷待哺，等著從你傳播的內容中得到價值。</p>
+  <p>BTW，關於「知識的詛咒」我之前寫了一張卡片盒筆記，也分享給你。</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/d3a27dcc-e963-4867-8a63-a19b89f71072.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <hr />
+  <h2 id="pm--by-miley-chen">❏ <a target="_blank" rel="noopener noreferrer nofollow" href="https://t-t.cool/blog/pm-ability-breakdown/">沒有經驗能當 PM 嗎？</a> by Miley Chen</h2>
+  <blockquote>
+    <p>只用經驗去判斷一個人的能力是種表面歸因錯誤（Superficial Attribution Error），真正重要的應該是透過經驗形成的「經驗知識」（Experiencial Knowledge）。</p>
+    <p>先建立結構化的領域知識，再透過實際經歷獲取經驗知識，並藉由成長動能放大加乘效果，是能力值增長的方式。</p>
+    <p>◍ 領域知識是前人經驗的統整；</p>
+    <p>◍ 經驗知識則是自身對於知識的實踐和適配；</p>
+    <p>◍ 我多能理解當下的情況、我多想知道背後的原因、我多能想像和接納全新的成功或失敗方式，這幾項成長動能分別對應到流動智力、好奇心、成長型思維。</p>
+    <p>沒有經驗能當 PM 嗎？我的答案是，若能擁有基本領域知識、足夠的成長動能、一點點小型專案而來的經驗知識，是可以的。</p>
+  </blockquote>
+  <h3 id="imo-">閱讀筆耕 IMO 🙋：<strong>這樣的軟實力很重要！</strong></h3>
+  <p>我所服務的「<a target="_blank" rel="noopener noreferrer nofollow" href="https://chainee.io/">鏈習生 Chainee</a>」新創，主力產品是線上課程，最懂一門課在做什麼的人莫過於負責它的 PM 了。</p>
+  <p>小公司的 PM 通常是個統稱（按：<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.managertoday.com.tw/articles/view/59756#pm%E7%94%A2%E5%93%81%E7%B6%93%E7%90%86">PM 是什麼意思、都在做什麼？圖解 5 種 PM 職位類型、工作內容</a>）。在我看來，優秀 PM 最需要具備的能力是<strong>「盤點資源，並有效組織跨部門溝通與合作」，這樣的軟實力很重要！</strong>猶如樂團的指揮家，確保每個人不是各自為政，而是協同成一個整體。</p>
+  <p>關於文中所提到的幾個面向，我的 take away 如下：</p>
+  <ul>
+    <li>
+      <p>成長動能 ▷ 很大程度上取決於<strong>心態的開放程度，這還挺攸關的</strong>，因為會牽涉到日後一個人的經驗知識能否運作良好；</p>
+    </li>
+    <li>
+      <p>經驗知識 ▷ <strong>有可能是一把雙面刃！</strong>傷到自己的一面是剛愎自用，反而會讓過去的經驗成為前進的阻礙；</p>
+    </li>
+    <li>
+      <p>領域知識 ▷ 不用太擔心！坊間有許多線上課程，能幫助 PM <strong>快速地、系統性地</strong>掌握各領域的基本概念，之後在進行跨部門協作時，便能使用彼此熟悉的「專業術語」精準對焦，達到有效溝通。</p>
+    </li>
+  </ul>
+  <p>我們家的 PM 也是「第一次做 PM 就上手」，吻合這篇文章的結論。</p>
+  <hr />
+  <h2 id="prfaq--by-alex-cheng">❏ <a target="_blank" rel="noopener noreferrer nofollow" href="https://medium.com/alexs-talking/%E4%BA%9E%E9%A6%AC%E9%81%9C%E5%B7%A5%E4%BD%9C%E6%B3%95-prfaq-%E9%80%86%E5%90%91%E5%B7%A5%E4%BD%9C-9b0b94a1c970">亞馬遜工作法——PRFAQ 逆向工作</a> by Alex Cheng</h2>
+  <blockquote>
+    <p>台灣人常見的終點是「賺錢」，亞馬遜認為的終點是「客戶的需求最終被滿足」，圍繞著「客戶至上」為前提，跟營收、跟成長率、跟每週應該做什麼事情都無關。</p>
+    <p>盡全力回答這 5 個問題：</p>
+    <p>1. Who is the Customer? 客戶是誰。</p>
+    <p>2. What is the customer problem or opportunity? 客戶的問題或機會是什麼？</p>
+    <p>3. What is the most important customer benefit? 最重要的客戶利益是什麼？</p>
+    <p>4. How do you know what customers need or want? 如何了解客戶需要（為麼什麼需要）或想要什麼？</p>
+    <p>5. What does the customer experience look like? 客戶體驗會是什麼樣子？</p>
+    <p>逆向工作要產出的其實是一份公關稿（PR）以及一份常見問答（FAQ）。</p>
+    <p>◍  用 PR 勾勒目標願景，必須包含：<br />▷ Customer Quote 客戶真言（最重要）<br />▷ Idea Summary 把你的點子簡述一下<br />▷ Headline 幫這份公關稿下標</p>
+    <p>◍ 讓 FAQ 擔任釐清的角色。想像全世界記者都想針對你新聞稿的內容提問，把這些最常見問題都寫好，把答案寫清楚，很像在說明澄清一些稿子當中沒有提及的細節。</p>
+  </blockquote>
+  <h3 id="imo--1">閱讀筆耕 IMO 🙋：用這套方法論去「審美」剖析</h3>
+  <p>之前我讀《<a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.town/a/6fl58v9jb1fq">普通人的財富自由之道</a>》，得知作者 John Lee 及 Dumas 在還沒推出產品／服務時，會花很多心力去描繪他的客戶對象，寫下大約 500 字篇幅的「化身」（avatar）描述，呼應了逆向工作要盡力回答的前 2 個問題。</p>
+  <p>而本文則繼續推進，擬定完「化身」我們還要做什麼事，那就是具體寫下 PRFAQ，學到這套方法論以後，我們在看一些海報、落地頁（Landing Page）、推薦文時，就可以有所本地去「審美」與剖析它們。</p>
+  <p>像是最近看到 SeeDAO 舉辦的總體經濟學公益課程活動，我就可以從 PRFAQ 的視角去確認「客戶是誰、點子簡述、客戶利益」都有做到位；至於「客戶真言」的部分可能受限於篇幅沒有出現在海報裡；而「下標」就蠻平鋪直述，有優化的空間。</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/982aa11d-b57c-4a54-9269-dba9c9508391.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <hr />
+  <h2 id="matters-">Matters 嗜讀者策展</h2>
+  <h2 id="by-silm">❏ <a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.town/a/ezvidywzoipj">如果和你一起躲過雨</a> by silm</h2>
+  <blockquote>
+    <p>陌生人也可以一起躲雨，但我總是最沉默的那個。</p>
+    <p>很多人會在香煙和香煙的對話裡，暫時成為說話的搭子，時間也就變得快起來。我則在一角屋檐下，聽著雨，抱著兩肘，想著還沒有做的事。</p>
+    <p>時間對我來說，只是一種背景的聲音，不專心聽的時候，聽不到；可用心聽了，似乎也只是一種浪費時光的焦躁。</p>
+    <p>在那些日子，時間不是我的，也不屬於誰，似乎只是一條平平無奇的小河，誰都可以來，誰都可以走。</p>
+  </blockquote>
+  <h3 id="anny-s--imo">Anny S 🙋 IMO：讀後感分享</h3>
+  <p>以如果開頭的句子都帶有遺憾，就像英文的 Could've, would've, should've 一樣。</p>
+  <p>如果和你一起躲過雨，會不會我們在屋簷下能夠肩併著肩，甚至唇對著唇？</p>
+  <p>過去的時光不會回來，但我們身處的現在開始到未來也並不可追溯，我想創造一個不會有如果發生的現在，你能不能和我一起？</p>
+  <p><br /></p>
+  <h2 id="by--1">❏ <a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.town/a/mhd56g1rlpa4">一本探討我們情緒 、行為 、生活模式運轉機制的生物學書籍：《我，為什麼會這樣》</a> by 維克斯</h2>
+  <blockquote>
+    <p>我們出生便受到遺傳的限制，我們以為一切都在我們的掌控中，卻發現我們能控制的東西其實不多，但努力去了解人體和大腦的運轉機制，我們更能理解人類為什麼會有那些情緒、想法和行為，從而進一步想出能真正改善的方式。</p>
+  </blockquote>
+  <h3 id="icebee321--imo">icebee321 🙋 IMO：把「先天和後天得到的牌」打好</h3>
+  <p>很認同文章推薦的書本，因為人先天就是被基因定下來的，特別是被遺傳病困擾，就好似抽了一手爛牌起步一樣，但並不是一直都會如此，因為在成長過程，你會得到新的卡牌，這些卡牌就是各種的經歷和知識，如果好好運動，爛牌也會有勝利的機會。</p>
+  <hr />
+  <h2 id="section-2">創作者與數位生活　</h2>
+  <h2 id="by--2">❏ <a target="_blank" rel="noopener noreferrer nofollow" href="https://x.com/nishuang/status/1698510711691817063">為什麼筆記工具不會讓我們變得更聰明</a> by 倪爽</h2>
+  <blockquote>
+    <p>每次記錄時，我都會即時處理資訊：</p>
+    <p>◍ 分級、分類、分組，方便日後再利用這些資訊。</p>
+    <p>◍ 儘量用自己的語言記錄，而不是單純儲存裸資訊，用自己的話強迫自己先理解資訊，避免中國小學生式的死記硬背。</p>
+    <p>◍ 多記錄思考的中間過程和結果。</p>
+    <p>◍ 將新資訊與舊資訊關聯起來</p>
+    <p>我相信所有的筆記、稍後再讀，都意味著再也不看了。與其挑戰人類天生的惰性，不如在獲取資訊時立即處理掉，讓它們變成自己的知識。</p>
+    <p>我們的目標不是做筆記，而是有效思考。</p>
+  </blockquote>
+  <h3 id="imo-1">閱讀筆耕 🙋 IMO：闡釋＋連結</h3>
+  <p>作者提到的「日後再利用、用自己的話、紀錄中間過程」等功夫，都可以用一個關鍵字來收束——<strong>闡釋</strong>；再者，把最新寫下的東西，與之前的產出關聯——<strong>連結</strong>。</p>
+  <p>闡釋與連結，正好呼應不久前我在「Q3 說書摩天輪」讀書會中，分享《<a target="_blank" rel="noopener noreferrer nofollow" href="https://creatoreconomyimo.substack.com/p/reading-club-s3-1">卡片盒筆記</a>》書中的核心觀念，大家參考看看。</p>
+  <blockquote>
+    <p><strong>我們的目標不是收集想法，而是產生想法。</strong></p>
+  </blockquote>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/6b24f86a-1f10-4016-a326-8009c98ee74b.webp/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <p><br /></p>
+  <h2 id="adobe--ai-project-turntable--2d--3d6--by-">❏ <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.bnext.com.tw/article/80943/adobe-max-sneaks-2024?openExternalBrowser=1&amp;utm_source=line&amp;utm_medium=message&amp;ldtag_cl=IYbXJlw3SmmEVUbDjOygFwAA_oa">Adobe 揭超炫 AI 實驗功能！Project Turntable 讓 2D 角色轉 3D，6 大黑科技有哪些？</a> by 數位時代</h2>
+  <blockquote>
+    <p>Adobe近年積極推進生成式 AI 功能，在 10 月 16 日舉辦的年度「Adobe MAX Sneaks」大會上，Adobe 宣布多項實驗性 AI 功能。</p>
+  </blockquote>
+  <hr />
+  <h2 id="web3">創作者經濟與 Web3</h2>
+  <h2 id="polymarket--by-">❏ <a target="_blank" rel="noopener noreferrer nofollow" href="https://chainee.io/what-is-polymarket/">萬事萬物皆可賭！去中心化預測市場 Polymarket 是什麼？</a> by 閱讀筆耕</h2>
+  <blockquote>
+    <p>隨著 2024 年美國總統大選的臨近，去中心化預測市場 Polymarket 成功進入主流媒體視野，《華爾街日報》與《新聞週刊》等媒體紛紛報導其賠率，並將其與傳統民調相提並論⋯⋯。</p>
+    <p>預測市場是什麼？預測市場的運作機制預測市場彌補傳統民調的不足預測市場 3 種類型去中心化預測市場 Polymarket 是什麼？Polymarket 在台灣禁止使用</p>
+  </blockquote>
+  <h3 id="imo-2">閱讀筆耕 🙋 IMO：可以見好就收，不用等到最後</h3>
+  <p>截稿前 Polymarket 上關於美國 2024 年大選「川普 vs 賀錦麗」賭盤最新戰況，川普大幅領先對手高達 20 多個百分點（ 61% vs 39%）⋯⋯和運動彩券不同，如果你是在兩位候選人數值陷入膠著（下圖紅線與藍線在 50% 左右糾纏）的情況下，買進看好川普的「彩票」，現在完全可以見好就收套現，不必等到「賽事」終了的那一刻。</p>
+  <p>因為台灣封鎖了 Polymarket 的網域，如果你也想參與這場賭盤，替代方案是透過<a target="_blank" rel="noopener noreferrer nofollow" href="https://chainee.io/pionex-overview/">派網交易所</a>，它也有舉辦一樣的預測押注活動。</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/7c71f9f6-fdb8-47b2-aa2f-aadf5a1404ad.webp/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <ul>
+    <li>
+      <p>延伸閱讀：<a target="_blank" rel="noopener noreferrer nofollow" href="https://chainee.io/what-is-dao/">DAO 是什麼？DAO 的 3 大特色、運作方式、優缺點介紹</a></p>
+    </li>
+  </ul>
+  <p><br /></p>
+  <h2 id="crypto-ai-bymax">❏ <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.maxcrypto.space/p/crypto-ai">Crypto AI：最令人興奮的重點敘事、佈局方式</a> by<br />Max的區塊鏈空間</h2>
+  <blockquote>
+    <p>Crypto AI （又叫做 Decentralized AI）指的是透過加密貨幣、區塊鏈作為底層結構打造的 AI 應用與生態系。這些被打造出來的生態系因為使用 Crypto 的關係，不但去中心化，也更為開放、透明、抗審查，解決了中心化 AI 遇到的種種問題。</p>
+    <p>AI 的訓練需要大量的算力、數據、人才、電力才能完成，似乎只有大型中心化公司才能做到，而 Crypto 的價值在於，他能夠充當「價值層」聚集世界各地的用戶資源，共同建設去中心化的 AI 生態系。</p>
+  </blockquote>
+  <hr />
+  <p>電子報的最末，要帶你回顧 10 月 5 日（六）由【創作者經濟 IMO】與【公益讀書會】聯名舉辦的「說書摩天輪」第三季線上語音活動，感謝<a target="_blank" rel="noopener noreferrer nofollow" href="https://open.substack.com/users/27194762-hugo?utm_source=mentions">雨果．Hugo</a>的發起與主持，有兩本書是當天的主角：</p>
+  <ol>
+    <li>
+      <p>《譯者即叛徒》（分享者：旅讀從心 Sammi）</p>
+    </li>
+    <li>
+      <p>《好好說話》（分享者：孫育芝 Daisy）</p>
+    </li>
+  </ol>
+  <p>讓我們以文字一起來重溫現場！</p>
+  <h2 id="imo--q3">❏ <a target="_blank" rel="noopener noreferrer nofollow" href="https://creatoreconomyimo.substack.com/p/reading-club-s3-2">IMO 人物誌｜說書摩天輪 Q3：譯者即叛徒、好好說話</a></h2>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/ccc82944-032c-4179-9b4a-3561fa6e45f7.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <blockquote>
+    <p>能靠的就靠，不能靠的就借<br />世界那麼大，總有一樣東西你可以借！<br /><br />——《社群時代，人人都該學的引爆流量法則》作者金槍大叔</p>
+  </blockquote>
+  <hr />
+  <h2 id="section-3">❏ 投資加密貨幣，懂這些就夠了！新課程募資期早鳥優惠價！</h2>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/5b65d9b1-b172-4442-a1ee-e9f02d1c58c1.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <ol>
+    <li>
+      <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://academy.chainee.io/courses/01/">投資加密貨幣，懂這些就夠了！從新手到穩健獲利的全方位幣圈入門課</a></p>
+    </li>
+  </ol>
+  <p>浩瀚的區塊鏈世界不是只有比特幣而已，如果你想要有系統地學習這些知識，並且不受人數、時間、場地（海外地區朋友敲碗已久）的限制，不妨研究看看（<a target="_blank" rel="noopener noreferrer nofollow" href="https://matters.town/a/fn8yvydzxedn">加密貨幣課程怎麼選？</a>），報名腦哥親授這門 100% 新手友善線上課程。</p>
+  <p><br /></p>
+  <ol start="2">
+    <li>
+      <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://academy.chainee.io/courses/02/">股票操盤人轉戰幣圈！ 精選 10 招實戰獲利策略</a></p>
+    </li>
+  </ol>
+  <p>另一門課重視實戰，由美國私募基金分析師領軍的專業幣圈投資顧問團隊「呢喃貓」手把手帶大家從已習得的知識基礎上，把一身的武功實際運用出來。</p>
+  <p><br /></p>
+  <ol start="3">
+    <li>
+      <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://chainee.io/courses/03/">聰明理財 x 精準投資 ｜ 揮別窮忙的 5 分鐘高效加密貨幣投資攻略</a></p>
+    </li>
+  </ol>
+  <p><strong>最新上線，募資超早鳥優惠價！</strong>這門課程專為忙碌的現代人設計，從個人風險評估到 3 大交易指標與量化工具，教你建立一套<a target="_blank" rel="noopener noreferrer nofollow" href="https://youtu.be/fLYUWcK9P8E?si=JFM3rXYWMuPO5Yzm">每天只花 5 分鐘</a>的加密貨幣理財系統，由知名理財專家亨利溫與資深交易員跳跳聯手授課。</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/97aa8536-1ca9-4388-8108-07a0e634b013.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <p>不論你是完全零基礎的投資小白，或是希望提升獲利能力的新手，都是最適合這些課程的學員；還可以在學員專屬 LINE 社群即時交流，閱讀筆耕也在群裡，歡迎前來與我相認喔！😊</p>
+  <p><strong>結帳時輸入【創作者經濟 IMO】專屬優惠碼「IMO300」，都可以折減 300 元，</strong>讓我們在 Web3 世界裡一起成長學習，還要獲利！💪</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-12-22/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-IMO-%E9%80%B1%E5%A0%B1-76-AI-%E6%B2%92%E5%B9%B9%E6%8E%89%E7%B7%A8%E8%BC%AF-%E5%8F%8D%E8%80%8C%E9%A4%8A%E6%B4%BB%E4%BA%86%E4%B8%80%E7%A5%A8%E4%BA%BA/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2024-10-26</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-10-26/%E9%96%B1%E8%AE%80%E7%AD%86%E8%80%95-%E8%B3%AA%E6%8A%BC%E6%98%AF%E4%BB%80%E9%BA%BC-%E4%BA%A4%E6%98%93%E6%89%80%E6%96%B0%E5%B9%A3%E6%8C%96%E7%A4%A6%E6%B4%BB%E5%8B%95-Launchpool-%E6%88%96-Jumpstart-%E7%AE%97%E6%98%AF%E8%B3%AA%E6%8A%BC%E5%97%8E/">
+          閱讀筆耕｜質押是什麼？交易所新幣挖礦活動 Launchpool 或 Jumpstart 算是質押嗎？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-10-23</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-10-23/IMO-%E4%BA%BA%E7%89%A9%E8%AA%8C-%E5%89%B5%E4%BD%9C%E8%80%85%E9%80%B2%E5%85%A5-Web3-%E4%B8%96%E7%95%8C-%E5%8D%80%E5%A1%8A%E9%8F%88%E6%98%AF%E4%BB%80%E9%BA%BC-%E5%8D%80%E5%A1%8A%E9%8F%88%E8%BD%89%E5%B8%B3%E6%80%8E%E9%BA%BC%E5%81%9A-%E5%AE%89%E5%85%A8%E5%97%8E/">
+          IMO 人物誌｜創作者進入 Web3 世界：區塊鏈是什麼？區塊鏈轉帳怎麼做、安全嗎？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-10-19</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-10-19/%E9%96%B1%E8%AE%80%E7%AD%86%E8%80%95-%E9%8F%88%E4%B8%8A%E8%B3%AD%E7%9B%A4-Polymarket-%E6%98%AF%E4%BB%80%E9%BA%BC/">
+          閱讀筆耕｜鏈上賭盤 Polymarket 是什麼？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-10-16</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-10-16/IMO-%E4%BA%BA%E7%89%A9%E8%AA%8C-%E8%AA%AA%E6%9B%B8%E6%91%A9%E5%A4%A9%E8%BC%AA-Q3-%E5%A0%B4%E6%AC%A1%E4%BA%8C-%E8%AD%AF%E8%80%85%E5%8D%B3%E5%8F%9B%E5%BE%92-%E5%A5%BD%E5%A5%BD%E8%AA%AA%E8%A9%B1/">
+          IMO 人物誌｜說書摩天輪 Q3 場次二：譯者即叛徒、好好說話
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2024-10-20/(%E5%82%91%E5%85%8B%E6%97%A9%E4%B8%8A%E5%A5%BD)%E6%B0%91%E4%B8%BB%E4%B8%80%E5%B8%B6%E4%B8%80%E8%B7%AF-%E5%8D%94%E5%8A%A9%E5%A4%AA%E5%B9%B3%E6%B4%8B%E5%8F%8B%E9%82%A6%E5%9F%BA%E7%A4%8E%E5%BB%BA%E8%A8%AD-%E5%8F%B0%E7%81%A3%E8%88%87%E7%BE%8E%E6%97%A5%E6%BE%B3%E8%A6%81%E5%90%88%E4%BD%9C%E6%8A%97%E4%B8%AD%E6%93%B4%E5%BC%B5/">
+            前一篇：(傑克早上好)民主一帶一路？協助太平洋友邦基礎建設，台灣與美日澳要合作抗中擴張。
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2024-10-20/%E6%A2%9D%E7%A2%BC%E7%9A%84%E6%AD%B7%E5%8F%B2%E8%88%87%E5%BD%B1%E9%9F%BF%E5%8A%9B%E6%8F%AD%E7%A7%98%E4%B8%8D%E5%AE%B9%E9%8C%AF%E9%81%8E-%E6%AD%B7%E5%8F%B2%E7%B0%A1%E5%A0%B120241020/">
+            後一篇：條碼的歷史與影響力揭秘不容錯過：歷史簡報20241020
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2024-10-20/(%E5%82%91%E5%85%8B%E6%97%A9%E4%B8%8A%E5%A5%BD)%E6%B0%91%E4%B8%BB%E4%B8%80%E5%B8%B6%E4%B8%80%E8%B7%AF-%E5%8D%94%E5%8A%A9%E5%A4%AA%E5%B9%B3%E6%B4%8B%E5%8F%8B%E9%82%A6%E5%9F%BA%E7%A4%8E%E5%BB%BA%E8%A8%AD-%E5%8F%B0%E7%81%A3%E8%88%87%E7%BE%8E%E6%97%A5%E6%BE%B3%E8%A6%81%E5%90%88%E4%BD%9C%E6%8A%97%E4%B8%AD%E6%93%B4%E5%BC%B5/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2024-10-20/%E6%A2%9D%E7%A2%BC%E7%9A%84%E6%AD%B7%E5%8F%B2%E8%88%87%E5%BD%B1%E9%9F%BF%E5%8A%9B%E6%8F%AD%E7%A7%98%E4%B8%8D%E5%AE%B9%E9%8C%AF%E9%81%8E-%E6%AD%B7%E5%8F%B2%E7%B0%A1%E5%A0%B120241020/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2024-10-23/IMO-%E4%BA%BA%E7%89%A9%E8%AA%8C-%E5%89%B5%E4%BD%9C%E8%80%85%E9%80%B2%E5%85%A5-Web3-%E4%B8%96%E7%95%8C-%E5%8D%80%E5%A1%8A%E9%8F%88%E6%98%AF%E4%BB%80%E9%BA%BC-%E5%8D%80%E5%A1%8A%E9%8F%88%E8%BD%89%E5%B8%B3%E6%80%8E%E9%BA%BC%E5%81%9A-%E5%AE%89%E5%85%A8%E5%97%8E/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2024-10-19/%E9%96%B1%E8%AE%80%E7%AD%86%E8%80%95-%E9%8F%88%E4%B8%8A%E8%B3%AD%E7%9B%A4-Polymarket-%E6%98%AF%E4%BB%80%E9%BA%BC/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2024-10-20/(%E5%82%91%E5%85%8B%E6%97%A9%E4%B8%8A%E5%A5%BD)%E6%B0%91%E4%B8%BB%E4%B8%80%E5%B8%B6%E4%B8%80%E8%B7%AF-%E5%8D%94%E5%8A%A9%E5%A4%AA%E5%B9%B3%E6%B4%8B%E5%8F%8B%E9%82%A6%E5%9F%BA%E7%A4%8E%E5%BB%BA%E8%A8%AD-%E5%8F%B0%E7%81%A3%E8%88%87%E7%BE%8E%E6%97%A5%E6%BE%B3%E8%A6%81%E5%90%88%E4%BD%9C%E6%8A%97%E4%B8%AD%E6%93%B4%E5%BC%B5/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2024-10-20/%E6%A2%9D%E7%A2%BC%E7%9A%84%E6%AD%B7%E5%8F%B2%E8%88%87%E5%BD%B1%E9%9F%BF%E5%8A%9B%E6%8F%AD%E7%A7%98%E4%B8%8D%E5%AE%B9%E9%8C%AF%E9%81%8E-%E6%AD%B7%E5%8F%B2%E7%B0%A1%E5%A0%B120241020/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2024-10-23/IMO-%E4%BA%BA%E7%89%A9%E8%AA%8C-%E5%89%B5%E4%BD%9C%E8%80%85%E9%80%B2%E5%85%A5-Web3-%E4%B8%96%E7%95%8C-%E5%8D%80%E5%A1%8A%E9%8F%88%E6%98%AF%E4%BB%80%E9%BA%BC-%E5%8D%80%E5%A1%8A%E9%8F%88%E8%BD%89%E5%B8%B3%E6%80%8E%E9%BA%BC%E5%81%9A-%E5%AE%89%E5%85%A8%E5%97%8E/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2024-10-19/%E9%96%B1%E8%AE%80%E7%AD%86%E8%80%95-%E9%8F%88%E4%B8%8A%E8%B3%AD%E7%9B%A4-Polymarket-%E6%98%AF%E4%BB%80%E9%BA%BC/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
