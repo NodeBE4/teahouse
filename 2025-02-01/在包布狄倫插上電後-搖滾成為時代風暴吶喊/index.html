@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>在包布狄倫插上電後，搖滾成為時代風暴吶喊 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+在包布狄倫插上電後，搖滾成為時代風暴吶喊
+——
+" />
+    <meta property="og:description" content="
+在包布狄倫插上電後，搖滾成為時代風暴吶喊
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="在包布狄倫插上電後，搖滾成為時代風暴吶喊" />
+    <meta property="twitter:title" content="在包布狄倫插上電後，搖滾成為時代風暴吶喊" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (3027)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fsoundfury.medium.com%2F%25E5%259C%25A8%25E5%258C%2585%25E5%25B8%2583%25E7%258B%2584%25E5%2580%25AB%25E6%258F%2592%25E4%25B8%258A%25E9%259B%25BB%25E5%25BE%258C-%25E6%2590%2596%25E6%25BB%25BE%25E6%2588%2590%25E7%2582%25BA%25E6%2599%2582%25E4%25BB%25A3%25E9%25A2%25A8%25E6%259A%25B4%25E5%2590%25B6%25E5%2596%258A-fa4be3a0cc84%3Fsource%3Drss-37ea7441b075------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://soundfury.medium.com/%E5%9C%A8%E5%8C%85%E5%B8%83%E7%8B%84%E5%80%AB%E6%8F%92%E4%B8%8A%E9%9B%BB%E5%BE%8C-%E6%90%96%E6%BB%BE%E6%88%90%E7%82%BA%E6%99%82%E4%BB%A3%E9%A2%A8%E6%9A%B4%E5%90%B6%E5%96%8A-fa4be3a0cc84?source=rss-37ea7441b075------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://soundfury.medium.com/%E5%9C%A8%E5%8C%85%E5%B8%83%E7%8B%84%E5%80%AB%E6%8F%92%E4%B8%8A%E9%9B%BB%E5%BE%8C-%E6%90%96%E6%BB%BE%E6%88%90%E7%82%BA%E6%99%82%E4%BB%A3%E9%A2%A8%E6%9A%B4%E5%90%B6%E5%96%8A-fa4be3a0cc84?source=rss-37ea7441b075------2&text=在包布狄倫插上電後，搖滾成為時代風暴吶喊&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://soundfury.medium.com/%E5%9C%A8%E5%8C%85%E5%B8%83%E7%8B%84%E5%80%AB%E6%8F%92%E4%B8%8A%E9%9B%BB%E5%BE%8C-%E6%90%96%E6%BB%BE%E6%88%90%E7%82%BA%E6%99%82%E4%BB%A3%E9%A2%A8%E6%9A%B4%E5%90%B6%E5%96%8A-fa4be3a0cc84?source=rss-37ea7441b075------2&title=在包布狄倫插上電後，搖滾成為時代風暴吶喊" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://soundfury.medium.com/%E5%9C%A8%E5%8C%85%E5%B8%83%E7%8B%84%E5%80%AB%E6%8F%92%E4%B8%8A%E9%9B%BB%E5%BE%8C-%E6%90%96%E6%BB%BE%E6%88%90%E7%82%BA%E6%99%82%E4%BB%A3%E9%A2%A8%E6%9A%B4%E5%90%B6%E5%96%8A-fa4be3a0cc84?source=rss-37ea7441b075------2&title=在包布狄倫插上電後，搖滾成為時代風暴吶喊" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=在包布狄倫插上電後，搖滾成為時代風暴吶喊&body=
+在包布狄倫插上電後，搖滾成為時代風暴吶喊
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://soundfury.medium.com/%E5%9C%A8%E5%8C%85%E5%B8%83%E7%8B%84%E5%80%AB%E6%8F%92%E4%B8%8A%E9%9B%BB%E5%BE%8C-%E6%90%96%E6%BB%BE%E6%88%90%E7%82%BA%E6%99%82%E4%BB%A3%E9%A2%A8%E6%9A%B4%E5%90%B6%E5%96%8A-fa4be3a0cc84?source=rss-37ea7441b075------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://soundfury.medium.com/%E5%9C%A8%E5%8C%85%E5%B8%83%E7%8B%84%E5%80%AB%E6%8F%92%E4%B8%8A%E9%9B%BB%E5%BE%8C-%E6%90%96%E6%BB%BE%E6%88%90%E7%82%BA%E6%99%82%E4%BB%A3%E9%A2%A8%E6%9A%B4%E5%90%B6%E5%96%8A-fa4be3a0cc84?source=rss-37ea7441b075------2&title=在包布狄倫插上電後，搖滾成為時代風暴吶喊&caption=
+在包布狄倫插上電後，搖滾成為時代風暴吶喊
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=在包布狄倫插上電後，搖滾成為時代風暴吶喊&url=https://soundfury.medium.com/%E5%9C%A8%E5%8C%85%E5%B8%83%E7%8B%84%E5%80%AB%E6%8F%92%E4%B8%8A%E9%9B%BB%E5%BE%8C-%E6%90%96%E6%BB%BE%E6%88%90%E7%82%BA%E6%99%82%E4%BB%A3%E9%A2%A8%E6%9A%B4%E5%90%B6%E5%96%8A-fa4be3a0cc84?source=rss-37ea7441b075------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>在包布狄倫插上電後，搖滾成為時代風暴吶喊</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2025-02-01
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#soundfury">
+          soundfury
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://soundfury.medium.com/%E5%9C%A8%E5%8C%85%E5%B8%83%E7%8B%84%E5%80%AB%E6%8F%92%E4%B8%8A%E9%9B%BB%E5%BE%8C-%E6%90%96%E6%BB%BE%E6%88%90%E7%82%BA%E6%99%82%E4%BB%A3%E9%A2%A8%E6%9A%B4%E5%90%B6%E5%96%8A-fa4be3a0cc84?source=rss-37ea7441b075------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="soundfury的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#soundfury 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1738472258000-->
+<p><a href="https://soundfury.medium.com/%E5%9C%A8%E5%8C%85%E5%B8%83%E7%8B%84%E5%80%AB%E6%8F%92%E4%B8%8A%E9%9B%BB%E5%BE%8C-%E6%90%96%E6%BB%BE%E6%88%90%E7%82%BA%E6%99%82%E4%BB%A3%E9%A2%A8%E6%9A%B4%E5%90%B6%E5%96%8A-fa4be3a0cc84?source=rss-37ea7441b075------2">在包布狄倫插上電後，搖滾成為時代風暴吶喊</a>
+——</p>
+
+<div>
+  <p>“He is not busy being born is busy dying.”</p>
+  <p>Bob Dylan</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*Ky3GD7PLj_Qmgu4tgBsMew.jpeg" />
+  </figure>
+  <p>1.</p>
+  <p>當狄倫（Bob Dylan）穿著皮夾克和皮靴，在1965年七月25日的新港(New Port)音樂節的傍晚將吉他插上電時，一整個時代的聲音被劃開：民歌復興運動的結束與搖滾時代的開啟。</p>
+  <p>雖然他在幾個月前已經發表了一張有電樂器、有搖滾風格的專輯<em>Bring it All back Home</em>，但沒有人預料到當這個民謠世界的國王在這個民謠舞台現身時，會是如此嶄新的形象，如此的風格。</p>
+  <p>沒有一個場合比新港民謠音樂節這個民謠復興的基地更能見證狄倫的歷程。1962年，民歌之后瓊拜雅把剛來到紐約的他介紹給民謠世界；63年，他已經被視為青年世代的代言人，黑白歌手前輩同輩大合唱他的〈飄在風中〉（Blowing in the Wind）；64年，他不再唱政治歌曲，被指控背叛抗議精神。</p>
+  <p>然後到了65年，他成為這個民謠世界中陌生而奇異的男子。底下觀眾狂噓他的演出，據說他的民謠前輩彼得席格（Pete Seeger）氣到要拿斧頭切斷音箱的電線。</p>
+  <p>狄倫沈靜地唱完第一首歌“Maggie Farm”後，開始唱起一首超過六分鐘的歌曲，一首後來被媒體選為搖滾史上第一名的歌曲：「Like a Rolling Stone」（像一個滾石）。</p>
+  <p>How does it feel, how does it feel?<br />To be on your own, with no direction home<br />Like a complete unknown, like a rolling stone</p>
+  <p>沒有比這首歌更能說明他當時的心境，因為他要獨自一人帶著整個世代開啟新的音樂想像，並進入六零年代後半期的黑暗、瘋狂與暴亂。</p>
+  <p>像進如一場完全的未知之境。</p>
+  <p>（所以這部新電影《巴布狄倫：搖滾詩人》原片名叫 <em>A Complete Unknown）</em>。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/258/1*Tj451iuzD6b9MV6hdM2O5g.jpeg" />
+  </figure>
+  <p>2.</p>
+  <p>從五零年代末開始，紐約的格林威治村成為民謠復興運動的基地。承繼著二十年前彼得席格等人的努力，民歌運動歌唱著現實的矛盾，關注著土地與人民。民謠也被視為具有一種「真誠性」(authenticity)，要尋找古老而失落已久的那個美國。歌手們具有強烈的使命感，要反對五零年代興起的大眾消費主義文化、抵抗商業主義的膚淺與流行，重新創造人們的團結，消解演出者和聆聽者之間的距離。民謠的真誠性體現在歌詞意識、演出風格、藝術目的，甚至素樸的服裝。他們的歌詞內容不是青少年的蒼白與綺夢，而是生活的困頓與無奈。</p>
+  <p>十九歲的狄倫懷抱著民謠之夢，從明尼蘇達搭乘灰狗巴士在1961年的冬日來到了紐約。</p>
+  <p>他到達紐約的這一天，在格林威治村的一棟公寓中，一群當時活躍的年輕作家包括蘇珊桑塔格、諾曼梅勒、詹姆士鮑德溫等正在聚會，討論「垮掉的一代」(beat generation)之死。因為他們認為垮掉的一代已經被商業主流所收編了，垮掉派（beatnik）已經淪為一種空洞的風格。</p>
+  <p>他們沒想到的是，如果此前「村子」的自由之火是垮掉的一代，現在則是抗議民歌，尤其很快地狄倫會結合起這兩個不同的音樂和文學傳統，開啟六十年代的新反叛文化。</p>
+  <p>在早期的一場咖啡店演出之後，紐約時報樂評形容尚未成名的他說：「他可以超越音樂類型邊界，他既是一個喜劇角色也是一個悲劇角色。」「狄倫先生從未說清楚他的出生地和從何而來，但比起他要往何處去的問題，那已經不重要。而這個關於未來的問題，很快就會清楚了。」</p>
+  <p>這是一個深富洞見的記者，一個過於準確的預言者。</p>
+  <p>關於狄倫的過去，他的確從來沒好好說清楚。他剛到紐約格林威治村時，曾說自己是一個棄兒、一個馬戲團長大的孩子，或是如同他偶像伍迪蓋瑟瑞(Woody Guthrie)一樣，是個四處流浪的歌手。</p>
+  <p>（除了虛構過去，日後他也將成為一名不斷戴上不同面具的魔術師，從舞台上耍寶的民謠歌手，到緊蹙眉頭的抗議歌手，到皮衣墨鏡的搖滾巨星，到虔誠的基督徒，或者一個隱世的神秘老頭。著名音樂評論人Greil Marcus說，「很少有歌手像狄倫那樣，在二十世紀的舞台上收集了如此多的面具。」[1]）</p>
+  <p>關於他的未來，則會與整個六十年代的時代精神，甚至整部音樂史，都緊密連結。</p>
+  <p>3.</p>
+  <p>他到村子的一年內就被傳奇製作人漢蒙(John Hammond)簽下唱片約，在1962年三月發行第一張專輯<em>Bob Dylan</em>，沒引起太大迴響。但次年的第二張專輯《自由自在的狄倫》(<em>The Freewheelin’ Bob Dylan)</em>，不僅重新定義了民謠，更掀起一個新時代與新世代的騷動，一如同年發表的學生宣言「休倫港宣言」[2]。</p>
+  <p>在接下來兩年間，他寫下一首又一首關於黑人民權運動，關於反戰，關於青年世代的困惑與焦慮，與渴望追求改變的歌曲。他不僅是最有影響力的民歌手，是抗議歌手的皇冠擁有者，更是一整個世代的代言人。</p>
+  <p>民歌復興運動反映出的是六零年代前期的朝氣與樂觀：那是年輕帥氣的甘迺迪總統的願景，也是1962 年新左派青年在「休倫港宣言」吶喊出對世界的想像，更是金恩博士所高喊的「我有一個夢」 — — 那個夢是受迫的黑人與進步白人手牽手一起為黑人自由而努力。在那個時代，人們相信只要不斷奮戰，「我們一定會勝利」(We Shall Overcome)。</p>
+  <p>1964年一月，狄倫發行新專輯《時代變了》(<em>The Times They Are A-Changing)</em>。 他緊蹙雙眉地唱道，時代正在變遷，沒有人可以擋住歷史前進的腳步。他警告政客和父母，一場戰爭正在進行，並且將撼動你們的牆壁，不要批評你不瞭解的東西，如果你不能伸出手幫忙，那就不要成為變遷的阻礙。</p>
+  <p>沒有任何文字與聲響的結合比這首歌更能詮釋那一年美國的火山爆發：那年夏天，民權運動組織者展開了「自由之夏」，北方大學生去南方參與民權運動；秋天，柏克萊大學被學生佔領，展開言論自由運動，八百多名學生被警察逮捕。同年，國會通過民權運動法案，金恩博士獲得諾貝爾和平獎。大量青年加入全國性學運組織SDS……</p>
+  <p>這張專輯是民歌運動作為一種政治與道德抗議力量的頂峰，然而，狄倫並不願意被迫戴上那些光鮮的皇冠與標籤，他甚至厭倦了那些道德使命，他只是想唱出自己的聲音。</p>
+  <p>1964年下半年，他發行了新專輯叫《鮑伯狄倫的另一面》 (<em>Another Side of Bob Dylan</em>)。唱出自己的心境：</p>
+  <p>「我只是一個平凡的、普通的人，</p>
+  <p>我像他一樣也像你一樣</p>
+  <p>我是所有人的兄弟和兒子</p>
+  <p>我和任何人都沒有差別</p>
+  <p>和我講話沒有任何用處</p>
+  <p>一如和你講話一樣」</p>
+  <p>（“I Shall Be Free №10”）</p>
+  <p>以及，</p>
+  <p>「我曾經是如此蒼老，而現在年輕多了」（“I was so much old then that I am younger than that now.”） （My Back Pages）</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/800/1*ggslct6awUOVyrs7MH8Z8Q.jpeg" />
+  </figure>
+  <p>4.</p>
+  <p>沒有一種文化能像搖滾樂能如此揭露與反映六十年代的文化精神：激情的、反叛的、思想的、敗德的、身體的。</p>
+  <p>搖滾樂誕生於五十年代，但一開始只是青少年的慾望躁動，是節奏強烈但歌詞簡單的娛樂。少年時期喜歡搖滾樂的狄倫說：「搖滾樂對我來說是不夠的。他們朗朗上口、有強烈的節奏，並且讓你很high，但是不夠嚴肅，不能現實地反映生活。當我接觸到民謠時，這是更為嚴肅的音樂。那些歌曲有更多沮喪、更多哀傷、更多對超自然的信仰，更深層的感受……生活太複雜了，以致搖滾樂不能反映出來。」</p>
+  <p>從1965年初到1966年夏天，狄倫遠離民謠世界，棄絕政治抗議，以不可思議的速度連續發行了三張「搖滾」專輯<em>Bringing It All Back Home</em>，<em>Highway 61 Revisited, Blonde on Blonde</em>，他把內心的困惑、世界的混亂和曖昧的囈語放置入他和樂隊建構起的繁複音樂舞台，讓搖滾樂從青少年的衝動轉變為更世故與深沈，更深刻與成熟的藝術形式[3]。</p>
+  <p>這是搖滾樂的全新重生。</p>
+  <p>其實在1965年，不只狄倫告別了舊的自己，美國也告別了六十年代前期的純真：反戰運動日益激烈，黑人抗爭更為暴烈：就在65年新港音樂節後的三週，洛杉磯瓦特區發生嚴重騷動，三十多人死亡。接下來幾年的美國充滿了血腥、謀殺、暴力，石塊與炸彈、絕望與憤怒。</p>
+  <p>更多人不能明白這個時代發生了什麼事，尤其是老的世代。</p>
+  <p>「因為某件事正在發生，但你不知道這是什麼，是吧，瓊斯先生？」狄倫在 (Ballad of A Thin Man)直指那狂亂與困惑。</p>
+  <p>他彷彿比所有人都早預見，即使早前的民歌能夠表達知識青年與民權運動的不滿，相信「一把吉他可以殺死一個法西斯主義者」[4]，但在六十年代後半，「飄在風中」的那股微風已經轉變成撼動一切的巨大暴風，必須要有能讓身體劇烈搖動的強大節奏，要能讓人迷幻到進入另一個次元的能量，才能回應時代的噪音 — — 那就意味著：搖滾樂。</p>
+  <p>就在那兩三年的暴風中開始重重響起的還有The Doors, Velvet Underground, The Who, Jimi Hendrix以及也變得更深沈的Beatles和Rolling Stones……於是搖滾樂在此時重生了。這代表了六十年代文化革命的深刻意義在於高雅文化和通俗文化的界線被打破了。</p>
+  <p>不過，當搖滾樂開始走向高峰，當暴力開始席捲世界後，狄倫卻在一年之後的1966年發生嚴重摩托車車禍，消失在人們視野中。有人懷疑，莫非他也如此前藍調大師Robert Johnson一樣，是和魔鬼交易來獲取無盡的音樂才華，因此被魔鬼暫時擄走了？畢竟，他才如此年輕卻能在短短幾年間出版每一張都精彩絕倫的經典專輯：先用抗議的時事歌曲帶人們走進燃燒的美國土地，而後又把所有人擄獲到一個充滿晦澀意象和神秘人物的超現實世界。</p>
+  <p>一個偉大創作者必然是一個冒險家，一個神秘的巫師：狄倫手上的吉他就是一個預知未來的水晶球，而他敏感的天線可以感受到正洶湧而來的震動，不論是六十年代前期的理想主義，或者後半的瘋狂與革命。</p>
+  <p>讓我們再次回到1965年七月那個夏日黃昏，去仔細凝視那個二十四歲青年的淡然神情，聆聽他和樂隊如何在一個充滿敵意的群眾前演奏「搖滾樂」，並讓我們尋找舞台上那個跨越兩種時代的密道……</p>
+  <p>[1]導演Todd Haynes曾拍攝一部關於他的電影「I’m not There」，找了七位演員來演他的不同變身，包括女演員凱特布蘭琪。</p>
+  <p>[2] 關於狄倫與抗議歌曲和那個時代，請見我的「時代的噪音：從狄倫到U2的抗議之聲」，印刻出版。</p>
+  <p>[3] 披頭四就是在聽見狄倫之後，也開始在65年做出更成熟、更實驗性的搖滾作品。</p>
+  <p>[4] 這是Woody Guthrie的名句，請見「時代的噪音」專文。</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=fa4be3a0cc84" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#soundfury 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2025-02-01/%E5%9C%A8%E5%8C%85%E5%B8%83%E7%8B%84%E5%80%AB%E6%8F%92%E4%B8%8A%E9%9B%BB%E5%BE%8C-%E6%90%96%E6%BB%BE%E6%88%90%E7%82%BA%E6%99%82%E4%BB%A3%E9%A2%A8%E6%9A%B4%E5%90%B6%E5%96%8A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2019-08-18/%E8%83%A1%E5%A3%AB%E6%89%98-%E5%BE%9E%E5%8F%8D%E5%8F%9B%E7%9A%84%E7%83%8F%E6%89%98%E9%82%A6%E5%88%B0%E7%83%8F%E6%89%98%E9%82%A6%E7%9A%84%E5%8F%8D%E5%8F%9B/">最早</a>--</span>
+    
+    
+    
+      <li>
+        <time>2022-05-20</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-05-20/%E5%9C%A8%E5%8A%A0%E6%B3%B0%E9%9A%86%E5%B0%BC%E4%BA%9E%E4%B9%8B%E5%BE%8C-%E4%BB%96%E6%88%90%E7%82%BA%E6%88%91%E5%80%91%E6%89%80%E7%86%9F%E6%82%89%E7%9A%84%E6%AD%90%E5%A8%81%E7%88%BE/">
+          在加泰隆尼亞之後，他成為我們所熟悉的歐威爾
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-12-25</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-12-25/%E7%93%8A%E8%BF%AA%E8%BF%AA%E5%AE%89-%E7%94%A8%E6%96%B0%E7%9A%84%E8%AA%9E%E8%A8%80%E5%AF%AB%E4%B8%8B%E4%B8%80%E6%95%B4%E5%80%8B%E6%99%82%E4%BB%A3%E7%9A%84%E6%83%85%E7%B7%92/">
+          瓊迪迪安：用新的語言寫下一整個時代的情緒
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2025-02-01/2024%E7%99%BC%E7%87%92%E5%BD%B1%E7%89%87-%E5%82%91%E5%85%8B%E8%A1%97%E8%A8%AA-(%E5%8F%B0%E5%A4%A7%E7%AF%87)%E4%BD%A0%E8%A6%BA%E5%BE%97%E7%BE%8E%E5%9C%8B%E6%98%AF%E4%B8%80%E5%80%8B%E8%87%AA%E7%94%B1%E7%9A%84%E5%9C%8B%E5%AE%B6%E5%97%8E/">
+            前一篇：2024發燒影片！（傑克街訪）(台大篇)你覺得美國是一個自由的國家嗎？
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2025-02-01/%E5%9F%8E%E5%AF%A8%E5%92%96%E5%95%A1%E5%AE%A4-2-2-2025-DeepSeek-%E7%88%AD%E8%AD%B0%E5%85%A7%E5%9C%B0%E6%8C%81%E7%BA%8C-%E8%83%A1%E9%8C%AB%E9%80%B2%E6%8C%87%E8%B2%AC%E5%85%A7%E5%9C%B0%E4%BA%BA%E6%89%B9%E8%A9%95%E6%AF%94%E7%BE%8E%E5%9C%8B%E4%BA%BA%E6%9B%B4%E5%87%B6/">
+            後一篇：城寨咖啡室： 2/2/2025: DeepSeek￼￼爭議內地持續 胡錫進指責內地人批評比美國人更凶狠 不理解中國科技創新的困難 迴避造假指控 中共將AI納入大外宣是內地科技界反感原因
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2025-02-01/2024%E7%99%BC%E7%87%92%E5%BD%B1%E7%89%87-%E5%82%91%E5%85%8B%E8%A1%97%E8%A8%AA-(%E5%8F%B0%E5%A4%A7%E7%AF%87)%E4%BD%A0%E8%A6%BA%E5%BE%97%E7%BE%8E%E5%9C%8B%E6%98%AF%E4%B8%80%E5%80%8B%E8%87%AA%E7%94%B1%E7%9A%84%E5%9C%8B%E5%AE%B6%E5%97%8E/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2025-02-01/%E5%9F%8E%E5%AF%A8%E5%92%96%E5%95%A1%E5%AE%A4-2-2-2025-DeepSeek-%E7%88%AD%E8%AD%B0%E5%85%A7%E5%9C%B0%E6%8C%81%E7%BA%8C-%E8%83%A1%E9%8C%AB%E9%80%B2%E6%8C%87%E8%B2%AC%E5%85%A7%E5%9C%B0%E4%BA%BA%E6%89%B9%E8%A9%95%E6%AF%94%E7%BE%8E%E5%9C%8B%E4%BA%BA%E6%9B%B4%E5%87%B6/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2022-05-20/%E5%9C%A8%E5%8A%A0%E6%B3%B0%E9%9A%86%E5%B0%BC%E4%BA%9E%E4%B9%8B%E5%BE%8C-%E4%BB%96%E6%88%90%E7%82%BA%E6%88%91%E5%80%91%E6%89%80%E7%86%9F%E6%82%89%E7%9A%84%E6%AD%90%E5%A8%81%E7%88%BE/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2025-02-01/2024%E7%99%BC%E7%87%92%E5%BD%B1%E7%89%87-%E5%82%91%E5%85%8B%E8%A1%97%E8%A8%AA-(%E5%8F%B0%E5%A4%A7%E7%AF%87)%E4%BD%A0%E8%A6%BA%E5%BE%97%E7%BE%8E%E5%9C%8B%E6%98%AF%E4%B8%80%E5%80%8B%E8%87%AA%E7%94%B1%E7%9A%84%E5%9C%8B%E5%AE%B6%E5%97%8E/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2025-02-01/%E5%9F%8E%E5%AF%A8%E5%92%96%E5%95%A1%E5%AE%A4-2-2-2025-DeepSeek-%E7%88%AD%E8%AD%B0%E5%85%A7%E5%9C%B0%E6%8C%81%E7%BA%8C-%E8%83%A1%E9%8C%AB%E9%80%B2%E6%8C%87%E8%B2%AC%E5%85%A7%E5%9C%B0%E4%BA%BA%E6%89%B9%E8%A9%95%E6%AF%94%E7%BE%8E%E5%9C%8B%E4%BA%BA%E6%9B%B4%E5%87%B6/">
+      <i>前</i>
+    </a>
+    
+    
+    
+    <a class="fab-action fab-action-4" title="<soundfury>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2022-05-20/%E5%9C%A8%E5%8A%A0%E6%B3%B0%E9%9A%86%E5%B0%BC%E4%BA%9E%E4%B9%8B%E5%BE%8C-%E4%BB%96%E6%88%90%E7%82%BA%E6%88%91%E5%80%91%E6%89%80%E7%86%9F%E6%82%89%E7%9A%84%E6%AD%90%E5%A8%81%E7%88%BE/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

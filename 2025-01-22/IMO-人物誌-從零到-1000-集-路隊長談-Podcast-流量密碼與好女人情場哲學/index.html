@@ -1,0 +1,3880 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>IMO 人物誌｜從零到 1000 集：路隊長談 Podcast 流量密碼與好女人情場哲學 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+IMO 人物誌｜從零到 1000 集：路隊長談 Podcast 流量密碼與好女人情場哲學
+——
+" />
+    <meta property="og:description" content="
+IMO 人物誌｜從零到 1000 集：路隊長談 Podcast 流量密碼與好女人情場哲學
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="IMO 人物誌｜從零到 1000 集：路隊長談 Podcast 流量密碼與好女人情場哲學" />
+    <meta property="twitter:title" content="IMO 人物誌｜從零到 1000 集：路隊長談 Podcast 流量密碼與好女人情場哲學" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (3027)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40penfarming%2Fimo-%25E4%25BA%25BA%25E7%2589%25A9%25E8%25AA%258C-%25E5%25BE%259E%25E9%259B%25B6%25E5%2588%25B0-1000-%25E9%259B%2586-%25E8%25B7%25AF%25E9%259A%258A%25E9%2595%25B7%25E8%25AB%2587-podcast-%25E6%25B5%2581%25E9%2587%258F%25E5%25AF%2586%25E7%25A2%25BC%25E8%2588%2587%25E5%25A5%25BD%25E5%25A5%25B3%25E4%25BA%25BA%25E6%2583%2585%25E5%25A0%25B4%25E5%2593%25B2%25E5%25AD%25B8-bafybeiftbsdgr7kg66pnvwhq2e3ze72f27sgmmvy5hj5a56j5zole6ieku" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@penfarming/imo-%E4%BA%BA%E7%89%A9%E8%AA%8C-%E5%BE%9E%E9%9B%B6%E5%88%B0-1000-%E9%9B%86-%E8%B7%AF%E9%9A%8A%E9%95%B7%E8%AB%87-podcast-%E6%B5%81%E9%87%8F%E5%AF%86%E7%A2%BC%E8%88%87%E5%A5%BD%E5%A5%B3%E4%BA%BA%E6%83%85%E5%A0%B4%E5%93%B2%E5%AD%B8-bafybeiftbsdgr7kg66pnvwhq2e3ze72f27sgmmvy5hj5a56j5zole6ieku" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@penfarming/imo-%E4%BA%BA%E7%89%A9%E8%AA%8C-%E5%BE%9E%E9%9B%B6%E5%88%B0-1000-%E9%9B%86-%E8%B7%AF%E9%9A%8A%E9%95%B7%E8%AB%87-podcast-%E6%B5%81%E9%87%8F%E5%AF%86%E7%A2%BC%E8%88%87%E5%A5%BD%E5%A5%B3%E4%BA%BA%E6%83%85%E5%A0%B4%E5%93%B2%E5%AD%B8-bafybeiftbsdgr7kg66pnvwhq2e3ze72f27sgmmvy5hj5a56j5zole6ieku&text=IMO 人物誌｜從零到 1000 集：路隊長談 Podcast 流量密碼與好女人情場哲學&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@penfarming/imo-%E4%BA%BA%E7%89%A9%E8%AA%8C-%E5%BE%9E%E9%9B%B6%E5%88%B0-1000-%E9%9B%86-%E8%B7%AF%E9%9A%8A%E9%95%B7%E8%AB%87-podcast-%E6%B5%81%E9%87%8F%E5%AF%86%E7%A2%BC%E8%88%87%E5%A5%BD%E5%A5%B3%E4%BA%BA%E6%83%85%E5%A0%B4%E5%93%B2%E5%AD%B8-bafybeiftbsdgr7kg66pnvwhq2e3ze72f27sgmmvy5hj5a56j5zole6ieku&title=IMO 人物誌｜從零到 1000 集：路隊長談 Podcast 流量密碼與好女人情場哲學" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@penfarming/imo-%E4%BA%BA%E7%89%A9%E8%AA%8C-%E5%BE%9E%E9%9B%B6%E5%88%B0-1000-%E9%9B%86-%E8%B7%AF%E9%9A%8A%E9%95%B7%E8%AB%87-podcast-%E6%B5%81%E9%87%8F%E5%AF%86%E7%A2%BC%E8%88%87%E5%A5%BD%E5%A5%B3%E4%BA%BA%E6%83%85%E5%A0%B4%E5%93%B2%E5%AD%B8-bafybeiftbsdgr7kg66pnvwhq2e3ze72f27sgmmvy5hj5a56j5zole6ieku&title=IMO 人物誌｜從零到 1000 集：路隊長談 Podcast 流量密碼與好女人情場哲學" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=IMO 人物誌｜從零到 1000 集：路隊長談 Podcast 流量密碼與好女人情場哲學&body=
+IMO 人物誌｜從零到 1000 集：路隊長談 Podcast 流量密碼與好女人情場哲學
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@penfarming/imo-%E4%BA%BA%E7%89%A9%E8%AA%8C-%E5%BE%9E%E9%9B%B6%E5%88%B0-1000-%E9%9B%86-%E8%B7%AF%E9%9A%8A%E9%95%B7%E8%AB%87-podcast-%E6%B5%81%E9%87%8F%E5%AF%86%E7%A2%BC%E8%88%87%E5%A5%BD%E5%A5%B3%E4%BA%BA%E6%83%85%E5%A0%B4%E5%93%B2%E5%AD%B8-bafybeiftbsdgr7kg66pnvwhq2e3ze72f27sgmmvy5hj5a56j5zole6ieku" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@penfarming/imo-%E4%BA%BA%E7%89%A9%E8%AA%8C-%E5%BE%9E%E9%9B%B6%E5%88%B0-1000-%E9%9B%86-%E8%B7%AF%E9%9A%8A%E9%95%B7%E8%AB%87-podcast-%E6%B5%81%E9%87%8F%E5%AF%86%E7%A2%BC%E8%88%87%E5%A5%BD%E5%A5%B3%E4%BA%BA%E6%83%85%E5%A0%B4%E5%93%B2%E5%AD%B8-bafybeiftbsdgr7kg66pnvwhq2e3ze72f27sgmmvy5hj5a56j5zole6ieku&title=IMO 人物誌｜從零到 1000 集：路隊長談 Podcast 流量密碼與好女人情場哲學&caption=
+IMO 人物誌｜從零到 1000 集：路隊長談 Podcast 流量密碼與好女人情場哲學
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=IMO 人物誌｜從零到 1000 集：路隊長談 Podcast 流量密碼與好女人情場哲學&url=https://matters.news/@penfarming/imo-%E4%BA%BA%E7%89%A9%E8%AA%8C-%E5%BE%9E%E9%9B%B6%E5%88%B0-1000-%E9%9B%86-%E8%B7%AF%E9%9A%8A%E9%95%B7%E8%AB%87-podcast-%E6%B5%81%E9%87%8F%E5%AF%86%E7%A2%BC%E8%88%87%E5%A5%BD%E5%A5%B3%E4%BA%BA%E6%83%85%E5%A0%B4%E5%93%B2%E5%AD%B8-bafybeiftbsdgr7kg66pnvwhq2e3ze72f27sgmmvy5hj5a56j5zole6ieku" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>IMO 人物誌｜從零到 1000 集：路隊長談 Podcast 流量密碼與好女人情場哲學</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2025-01-22
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 閱讀筆耕</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@penfarming/imo-%E4%BA%BA%E7%89%A9%E8%AA%8C-%E5%BE%9E%E9%9B%B6%E5%88%B0-1000-%E9%9B%86-%E8%B7%AF%E9%9A%8A%E9%95%B7%E8%AB%87-podcast-%E6%B5%81%E9%87%8F%E5%AF%86%E7%A2%BC%E8%88%87%E5%A5%BD%E5%A5%B3%E4%BA%BA%E6%83%85%E5%A0%B4%E5%93%B2%E5%AD%B8-bafybeiftbsdgr7kg66pnvwhq2e3ze72f27sgmmvy5hj5a56j5zole6ieku" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1737591702000-->
+<p><a href="https://matters.news/@penfarming/imo-%E4%BA%BA%E7%89%A9%E8%AA%8C-%E5%BE%9E%E9%9B%B6%E5%88%B0-1000-%E9%9B%86-%E8%B7%AF%E9%9A%8A%E9%95%B7%E8%AB%87-podcast-%E6%B5%81%E9%87%8F%E5%AF%86%E7%A2%BC%E8%88%87%E5%A5%BD%E5%A5%B3%E4%BA%BA%E6%83%85%E5%A0%B4%E5%93%B2%E5%AD%B8-bafybeiftbsdgr7kg66pnvwhq2e3ze72f27sgmmvy5hj5a56j5zole6ieku">IMO 人物誌｜從零到 1000 集：路隊長談 Podcast 流量密碼與好女人情場哲學</a>
+——</p>
+
+<div>
+  <p>最新一期「<a target="_blank" rel="noopener noreferrer nofollow" href="https://creatoreconomyimo.substack.com/t/meet">IMO 人物誌</a>」線上語音活動，很榮幸邀請到《<a target="_blank" rel="noopener noreferrer nofollow" href="https://goodwoman.tw/">好女人的情場攻略</a>》 Podcast 主持人路隊長，來分享經營 Podcast 的策略與好女人情場哲學！</p>
+  <p>主持人是雨果Hugo，閱讀筆耕Leo 負責紀錄，讓我們以文字一起來重溫現場。</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/fa7ee039-367a-49f8-96a1-30ad04c615cf.png/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <ul>
+    <li>
+      <p>訂閱【創作者經濟 IMO】<a target="_blank" rel="noopener noreferrer nofollow" href="https://creatoreconomyimo.substack.com/">電子報</a>，每週一上午六點迎接創作美好時光。</p>
+    </li>
+    <li>
+      <p>電子報是以 Heptabase 編輯，<a target="_blank" rel="noopener noreferrer nofollow" href="https://get.heptabase.com/imo">免費試用 7 天</a>，和我們一起寫下 IMO。</p>
+    </li>
+    <li>
+      <p>瓦基「<a target="_blank" rel="noopener noreferrer nofollow" href="https://go.newsveg.tw/5q6ljt">卡片盒筆記實戰課</a>」從靈感捕捉到高效產出的知識管理系統，使用我們的折扣碼「IMOYU92」，額外享 92 折優惠！</p>
+    </li>
+  </ul>
+  <hr />
+  <h2 id="podcast-">❏ 路隊長自我介紹：從金融業到 Podcast 領航者</h2>
+  <blockquote>
+    <p>「大家好，我是《好女人的情場攻略》Podcast 的主持人，大家都叫我路隊長！」</p>
+  </blockquote>
+  <p>回顧自己的職涯，路隊長一開始在金融業待了 6 年，後來踏上創業之路。</p>
+  <p>2016 年，他加入新創公司 <strong>「</strong>鐘點大師<strong>」</strong>，擔任共同創辦人，打造一個媒合自由工作者與消費者的平台。然而，這段創業旅程在 2019 年告一段落，最終因商業模式的挑戰無法持續經營。</p>
+  <p>儘管創業失敗，他並沒有氣餒，反而開始思考新的機會：</p>
+  <blockquote>
+    <p>「有沒有什麼創業方式，能用更小的資本開始？」</p>
+  </blockquote>
+  <p>當時，他試過寫作，但覺得太孤單；也考慮過做 YouTube，但發現要處理剪輯、燈光、表情管理等細節，門檻太高，讓他卻步。</p>
+  <p>直到 2020 年，他發現台灣的 Podcast 產業正在起飛，決定投入這個領域，創立了 <strong>《</strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://podcasts.apple.com/tw/podcast/%E5%A5%BD%E5%A5%B3%E4%BA%BA%E7%9A%84%E6%83%85%E5%A0%B4%E6%94%BB%E7%95%A5by%E8%B7%AF%E9%9A%8A%E9%95%B7/id1502072591">好女人的情場攻略</a><strong>》</strong>。<strong>這檔節目專注於兩性話題，如今已經走到第 6 年，累積 1500 多集，成為台灣 Podcast 界播放集數名列前茅的長青節目。</strong></p>
+  <p>來到 2022 年，路隊長出版了 <strong>《</strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://moo.im/a/2acivW"><strong>好女人的情場攻略：脫單必看的愛情避坑指南</strong></a><strong>》</strong>，幫助女性看清愛情本質，提升感情經營能力。這本書不僅強化了他在兩性領域的專業形象，也進一步擴大節目影響力，吸引更多讀者與聽眾關注。</p>
+  <hr />
+  <h2 id="section">❏ 創業不求人！路隊長的「一人公司」成功心法</h2>
+  <h3 id="podcast--1">1・過去你是網路新創的共同創辦人，而後轉往 Podcast 創作者發展。你覺得你比一般創作者更大的優勢是什麼？</h3>
+  <p>相較於一般創作者，路隊長認為，自己的最大優勢在於<strong>創業思維</strong>，尤其是 <strong>「</strong>以客戶需求為核心，解決問題<strong>」</strong> 的概念。這讓他經營 Podcast 的方式，與傳統創作者截然不同。</p>
+  <blockquote>
+    <p>「大部分創作者都是先做自己喜歡的內容，再期待市場買單。但我過去創業的經驗，讓我習慣<strong>從聽眾需求出發，反推內容設計</strong>。」</p>
+  </blockquote>
+  <p>路隊長解釋，這種方式讓節目更貼近受眾，真正解決他們的問題，而不是單純分享個人想法。這樣的策略不僅讓<strong>節目與聽眾的關係更緊密</strong>，也確保內容有價值，進而提升忠誠度。他舉例：</p>
+  <blockquote>
+    <p>「一般創作者可能只是談自己的感情觀，但我會直接從聽眾的困擾出發，設計實用的主題，例如『如何提升自信，吸引理想對象』或 『怎麼識破感情中的地雷』。」</p>
+  </blockquote>
+  <p>此外，這種商業導向的經營模式，也讓他比一般創作者更有策略。</p>
+  <blockquote>
+    <p>「我不靠業配、廣告收入，而是透過<strong>課程、社群經營、焦點團體</strong>，打造一個完整的生態系。」</p>
+  </blockquote>
+  <p>打從一開始，路隊長就確立方向——<strong>不只做內容，更要打造自己的產品</strong>（稍後詳談），讓 Podcast 成為能長期經營的品牌，而不只是單向輸出。</p>
+  <blockquote>
+    <p>創業思維 x 內容創作：路隊長的獨特優勢</p>
+  </blockquote>
+  <p><br /></p>
+  <h3 id="podcast--2">2・你是如何打造一個長青的 Podcast 節目？</h3>
+  <p>路隊長認為，想讓節目長久發展，關鍵在於<strong>選對主題、運用槓桿、有自己的產品</strong>。</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/9edcd934-4cea-45d3-902c-333ebaa54bd8.webp/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <h3 id="section-1"><strong>【選對主題，才能長長久久】</strong></h3>
+  <blockquote>
+    <p>「台灣市場不大，如果主題太冷門，很快就會遇到瓶頸。」</p>
+  </blockquote>
+  <p>因此，他選擇「愛情與兩性」這個覆蓋人群廣大，需求穩定且具長期價值的主題。</p>
+  <p>約翰．李．杜馬斯在 《<a target="_blank" rel="noopener noreferrer nofollow" href="https://creatoreconomyimo.substack.com/p/the-common-path-to-uncommon-success">普通人的財富自由之道</a>》 提到 「把利基市場縮到最小」，路隊長深感認同；因此，他進一步細分受眾，專注女性情感發展，而不是泛談感情議題，讓節目更聚焦、更有影響力。</p>
+  <blockquote>
+    <p>「感情話題永遠不會退燒，而女性比男性更願意投入時間和資源學習成長，這是一個更具延展性的市場。」</p>
+  </blockquote>
+  <p>延伸閱讀：<a target="_blank" rel="noopener noreferrer nofollow" href="https://creatoreconomyimo.substack.com/p/the-common-path-to-uncommon-success">《普通人的財富自由之道》說書分享會</a><br />　</p>
+  <h3 id="section-2"><strong>【用槓桿思維，快速放大影響力】</strong></h3>
+  <p>李笑來在《通往財務自由之路》中提到：「想獲得更大成就，就要學會運用槓桿。」這個概念，成為路隊長經營 Podcast 的核心策略之一。</p>
+  <ul>
+    <li>
+      <p><strong>多產出強曝光</strong><br />路隊長採用<strong>日更策略</strong>，快速累積內容與曝光。「剛開始沒有人認識我，所以我用高頻率更新來衝知名度。」他參考美國知名 Podcast 節目<strong>《</strong>火力全開的創業家<strong>》</strong>的做法，透過每天產出內容，提高平台上的能見度，吸引更多聽眾。</p>
+    </li>
+    <li>
+      <p><strong>受眾驅動成長</strong><br />除了內容，他還透過<strong>「一對一訪談」與「焦點團體」</strong> 深入了解聽眾需求，再反向設計節目。「別人是先創作，再期待市場接受；我則是先搞懂市場需求，再決定要做什麼內容。」這種方式讓他的節目更貼近受眾，提升節目價值與忠誠度。</p>
+    </li>
+    <li>
+      <p><strong>時間複利效應</strong><br />Podcast 具有長尾效應，突破傳統創作的時間限制。「錄一集節目，可能今天只有 100 人聽，但一年後可能有 10 萬人聽。」<strong>這種一次創作、長期發酵的模式</strong>，讓影響力隨著時間放大。<br />　</p>
+    </li>
+  </ul>
+  <h3 id="section-3"><strong>【有自己的產品，不靠業配也能賺錢】</strong></h3>
+  <p>許多 Podcast 主要依賴業配變現，但路隊長從一開始就確立：「我不只做內容，而且要有自己的產品，打造支撐品牌長期經營的商業模式。」這讓他的 Podcast 不只是單向輸出，而是建立了一個完整的生態系。</p>
+  <ul>
+    <li>
+      <p><strong>變現模式</strong><br />他把 Podcast 延伸出<strong>課程、社群經營、線下活動</strong>，像是 <strong>「100 天吸引理想伴侶工作坊」</strong>，不只幫助聽眾透過系統化學習提升愛情運勢，也為節目帶來穩定收入。</p>
+    </li>
+    <li>
+      <p><strong>鐵粉經濟</strong><br />遵循《連線》雜誌（WIRED）創辦人凱利（Kevin Kelly）提出的<strong>「1000 個鐵粉理論」</strong>，專注經營核心受眾，而非追求大眾市場。</p>
+    </li>
+  </ul>
+  <blockquote>
+    <p>「我不需要成為台灣最紅的 Podcast，只要擁有 1000 個願意付費支持的鐵粉，就能穩定經營下去。」</p>
+  </blockquote>
+  <p>如果擁有 1000 位忠實粉絲，每人每年願意為你的內容或產品付費 1 萬元，一年就能創造 1000 萬元，即使只有 100 個鐵粉，一年也有 100 萬元，對許多 Podcaster 來說，已經是一份穩定的收入來源。</p>
+  <blockquote>
+    <p>選對主題、運用槓桿、有自己的產品和「1000 個鐵粉」</p>
+  </blockquote>
+  <p><br /></p>
+  <h3 id="section-4">３・你的節目鎖定女性族群，但女性受眾其實有很多不同的類型。你是如何精準刻畫核心聽眾的？</h3>
+  <p>剛開始做節目時，路隊長並未特別鎖定受眾，前 100 集主要是邀請來賓聊感情與人際關係。但隨著聽眾增加，他開始透過<strong>臉書社團、LINE 官方帳號、電子報</strong>與聽眾互動，逐步掌握核心受眾的輪廓。</p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/9c83432c-2a76-43a2-b62d-22372ad972b4.webp/public" referrerpolicy="no-referrer" />    <figcaption></figcaption>
+  </figure>
+  <h3 id="section-5"><strong>【一對一訪談，直接聆聽聽眾需求】</strong></h3>
+  <p>為了更了解聽眾，路隊長開始進行一對一訪談，直接打電話私下詢問他們：</p>
+  <ul>
+    <li>
+      <p>你是怎麼發現這個節目的？</p>
+    </li>
+    <li>
+      <p>為什麼會開始收聽？</p>
+    </li>
+    <li>
+      <p>你最喜歡的集數是哪一集？為什麼？</p>
+    </li>
+    <li>
+      <p>你的感情狀況？目前最困擾的問題是什麼？</p>
+    </li>
+    <li>
+      <p>你希望我做哪些內容？</p>
+    </li>
+  </ul>
+  <p>訪談超過 100 人後，路隊長發現了一些共通點，以此勾勒出受眾們的輪廓：</p>
+  <p>👩 年齡多在 30～40 歲，以 單身或離婚女性 為主。<br />👩 職業穩定，多從事老師、公務員、科技業等工作。<br />👩 正在尋找感情方向，可能剛失戀，或對愛情沒自信。<br />👩 會參考塔羅、星座、心理測驗，尋求愛情建議。</p>
+  <p>這讓路隊長更加篤定，節目要專注在<strong>女性感情發展</strong>，而不是泛談戀愛議題。<br />　</p>
+  <h3 id="section-6"><strong>【焦點團體，邀請聽眾一起研發產品】</strong></h3>
+  <p>除了訪談，路隊長還舉辦<strong>小型焦點團體</strong>，每次邀請 <strong>8～10 位忠實聽眾</strong>，分享愛情經驗並提供節目建議。</p>
+  <p>他把這過程比喻為 <strong>「邀請聽眾一起研發產品」</strong>，透過這樣的交流，確保節目內容真正貼近受眾需求，讓聽眾不只是收聽者，更成為節目成長的一部分。<br />　</p>
+  <h3 id="section-7"><strong>【上節目，提升聽眾參與感】</strong></h3>
+  <p>邀請聽眾成為來賓，親身參與節目錄製。</p>
+  <p>許多聽眾都是<strong>人生第一次登上 Podcast</strong>，這種新鮮感讓他們更投入，也更享受這個過程。而且，這些來賓本身就是節目的忠實聽眾，透過親身參與，他們與節目的連結更深，歸屬感也大幅提升，進一步強化品牌忠誠度。</p>
+  <blockquote>
+    <p>讓聽眾不只是聽眾，而是節目的參與者與共創者</p>
+  </blockquote>
+  <p><br /></p>
+  <h3 id="podcast--3">４・如何將 Podcast 與多元產品（如課程與活動）結合，創造穩定的商業模式？</h3>
+  <p>路隊長的「行銷漏斗」最上層是透過 Podcast 內容<strong>建立信任</strong>，再引導聽眾進一步參與<strong>免費講座與付費課程</strong>，打造可持續的營收模式。</p>
+  <h3 id="podcast----"><strong>【Podcast → 免費講座 → 付費課程】</strong></h3>
+  <ol>
+    <li>
+      <p>在 Podcast 中邀請專家，分享感情經營技巧</p>
+    </li>
+    <li>
+      <p>引導有興趣的聽眾報名<strong>免費線上講座</strong></p>
+    </li>
+    <li>
+      <p>在講座中提供更深入的內容，並介紹進階課程</p>
+    </li>
+    <li>
+      <p>聽眾參加講座後，若覺得內容實用，就會購買<strong>完整付費課程</strong></p>
+    </li>
+  </ol>
+  <p>舉例來說，假設一場 Podcast 有 1 萬人收聽，可能會有 100 人報名免費講座，最終約 5～10 人購買課程。假設課程單價為 3 萬元，這樣一場講座的營收就能達到 15～30 萬元，且這個模式可以不斷循環運行，持續帶來穩定收益。<br />　</p>
+  <h3 id="section-8"><strong>【持續開發產品，打造多元變現模式】</strong></h3>
+  <p>除了課程，我也嘗試推出不同類型的產品，讓 Podcast 受眾有更多選擇，同時強化變現能力，例如：</p>
+  <ul>
+    <li>
+      <p><strong>不同價位的課程，滿足不同需求帶。</strong></p>
+    </li>
+    <li>
+      <p><strong>社群與會員計畫</strong> → 設計付費社群，讓學員之間互相交流、學習。</p>
+    </li>
+    <li>
+      <p><strong>商品銷售</strong> → 曾經推出「脫單魔法水晶蠟燭」，測試市場反應</p>
+    </li>
+  </ul>
+  <p>目前，課程是最主要的變現方式，而 Podcast 則是流量入口，吸引有興趣的聽眾，再透過各種產品提供更深入的價值，打造完整的商業生態。</p>
+  <blockquote>
+    <p>Podcast 不是終點，而是起點</p>
+  </blockquote>
+  <p><br /></p>
+  <h3 id="podcast--4">５・要衝 Podcast 節目的流量有什麼策略？</h3>
+  <ol>
+    <li>
+      <p><strong>選擇長期有市場的大主題</strong>，例如兩性話題，並進一步聚焦女性情感發展，打造清晰的品牌定位，讓節目更有辨識度。</p>
+    </li>
+    <li>
+      <p><strong>了解你的聽眾</strong>，透過一對一訪談或焦點團體，確保內容真正貼近他們，而不是只講自己想說的話。</p>
+    </li>
+    <li>
+      <p><strong>內容必須有價值感</strong>，能解決問題、帶來啟發或引起共鳴，提供聽眾他們真正想要的東西。</p>
+    </li>
+    <li>
+      <p><strong>上其他 Podcast 節目</strong>，互相導流增加曝光，讓更多潛在聽眾認識你，吸引新受眾加入收聽。</p>
+    </li>
+  </ol>
+  <p>路隊長坦言，<strong>Podcast 不只是內容輸出，更是一種表演</strong>，而主持能力確實與天分有關。他自認不像吳宗憲那樣擅長用娛樂效果吸引觀眾，因此選擇專注提供實用內容，精準回應聽眾需求。</p>
+  <blockquote>
+    <p>「這五年來，我訪問過超過 300 位來賓，發現有些人天生能侃侃而談 30 分鐘，說話充滿魅力；但有些人若沒有明確的提問，就很難深入分享。」</p>
+  </blockquote>
+  <p>他認為，<strong>聲音的感染力直接影響 Podcast 的收聽體驗</strong>，主持人的表現不僅靠技巧，天分同樣關鍵。</p>
+  <blockquote>
+    <p>Podcast 不只是內容輸出，更是一種表演</p>
+  </blockquote>
+  <p><br /></p>
+  <h3 id="section-9">６・節目裡討論情場議題時，有哪些內容或觀點是您特別想帶給聽眾的？</h3>
+  <p>路隊長訪談了數百位來賓，深入探討兩性話題，但他始終相信，<strong>「你是什麼樣的人，就會吸引什麼樣的人。」</strong> 這才是情場攻略的核心。</p>
+  <h3 id="section-10"><strong>【愛自己，才能擁有更好的感情】</strong></h3>
+  <p>比起各種戀愛技巧，<strong>個人的狀態、心理素質、自我價值感</strong>才是影響感情發展的關鍵。路隊長發現，許多聽眾的感情困擾，往往來自<strong>對自己不夠了解、不懂得愛自己</strong>，導致他們在關係中總是受傷，甚至無法建立真正親密的連結。<br />　</p>
+  <h3 id="section-11"><strong>【原生家庭的影響，比想像中更深】</strong></h3>
+  <p>不少聽眾<strong>不相信愛情、不信任異性，甚至害怕親密關係</strong>，這些信念往往來自原生家庭。有些人從小目睹父母爭吵，或是在成長過程中聽到 <strong>「男人不可靠」、「婚姻不幸福」</strong> 等負面訊息，這些潛意識中的觀念，無形中影響了他們的感情模式。</p>
+  <p>因此，節目不僅分享戀愛技巧，更深入探討<strong>自我價值、內在療癒，以及如何打破原生家庭的影響</strong>，幫助聽眾從根本改變，提升愛情運勢。<br />　</p>
+  <h3 id="section-12"><strong>【心法大於技法，但技巧也不能少】</strong></h3>
+  <p>路隊長強調，心態決定一切，但技巧仍然不可或缺，尤其對男性來說，主動表達（畢竟大部分時候女生期望男生要主動）、建立吸引力、提升溝通能力，仍然是關鍵要素。</p>
+  <p>節目除了分享實用的兩性互動技巧，更希望幫助聽眾<strong>提升自信、學會經營關係，從內在開始改變，吸引真正適合自己的對象</strong>。</p>
+  <blockquote>
+    <p>比起各種戀愛技巧，<br />個人的狀態、心理素質、自我價值感<br />才是影響感情發展的關鍵。</p>
+  </blockquote>
+  <p><br /></p>
+  <h3 id="section-13">７・對於《好女人的情場攻略》，未來有哪些發展計劃？是否會嘗試拓展到其他媒體形式或市場？</h3>
+  <h3 id="section-14">【拓展市場：將愛與成長帶向國際】</h3>
+  <p>《好女人的情場攻略》邁入第六年，已是台灣 Podcast 早期發展的重要代表。今年，節目核心課程 <strong>「100 天吸引理想伴侶工作坊」</strong> 正式拓展至馬來西亞，並已舉辦多場針對當地女性的線上直播課程。未來將持續深耕海外市場，讓更多女性受惠。<br />　</p>
+  <h3 id="section-15">【多媒體布局：從音頻到影像，擴大影響力】</h3>
+  <p>除了 Podcast，未來計劃擴展影像內容，讓節目從音頻延伸至視覺媒體，提升互動性與影響力。同時，也將舉辦更多線下活動，讓聽眾從線上走到線下，透過面對面交流，建立更緊密的社群連結。<br />　</p>
+  <h3 id="podcast--5">【公益行動：Podcast 不只是內容，更是一種影響力】</h3>
+  <p>路隊長近期透過節目發起公益募款，支持兒童教育，並成功舉辦首次公益演講，募得 <strong>10 萬元</strong>，號召聽眾一同參與。他認為，Podcast 不只是知識分享的平台，更是一股能凝聚社群、產生正向影響力的力量。</p>
+  <blockquote>
+    <p>真正的影響力<br />不止於播放次數<br />而是能改變多少人的人生</p>
+  </blockquote>
+  <p><br /></p>
+  <h3 id="section-16"><strong>８・最後一問，路隊長還有什麼要和大家說的話嗎？</strong></h3>
+  <p>給創作者：愛你的聽眾，而不是你的節目。</p>
+  <hr />
+  <h2 id="qa-">❏ 聽眾 Q＆A 時間</h2>
+  <h3 id="section-17"><strong>９・未來的節目會加入說書內容嗎？如何滿足知識型聽眾？</strong></h3>
+  <p>路隊長發現，許多女性對兩性相關書籍感興趣，但忙碌的生活讓完整閱讀變得困難。因此，他計劃在節目中邀請來賓分享<strong>兩性與自我成長書籍</strong>，幫助聽眾快速掌握重點，減少資訊焦慮。</p>
+  <p>市場上不論是 YouTube 還是 Podcast，這類內容的收聽率都相當不錯，未來將積極嘗試。<br />　</p>
+  <h3 id="section-18">１０・出書的契機是什麼？</h3>
+  <p>路隊長的出書經驗其實出乎意料，原本並沒有特別規劃。</p>
+  <p>節目成立三年後，某次與出版社合作訪談時，他在閒聊中隨口提到：「如果把節目累積的內容整理起來，應該很適合出書。」沒想到隔天，出版社就主動聯繫，邀請他洽談出版計劃，並迅速簽約。</p>
+  <p>這本書的誕生，來自於長期的內容累積與市場影響力。<strong>出版不只是夢想，而是當你的內容夠有價值，機會自然會找上門。</strong></p>
+  <hr />
+  <h2 id="section-19">❏ 語音回放</h2>
+  <p><a target="_blank" rel="noopener noreferrer nofollow" href="http://youtu.be/7GivNFjYl6M">youtu.be/7GivNFjYl6M</a></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2025-02-13/%E5%8D%A1%E7%89%87%E7%9B%92%E7%AD%86%E8%A8%98-ze9-%E5%8A%8D%E6%8C%87%E6%A0%B8%E5%BF%83-%E6%89%BE%E5%88%B0%E6%8E%A5%E9%BB%9E-%E8%9E%8D%E5%90%88%E5%85%A9%E5%80%8B%E6%96%87%E6%9C%AC%E5%AF%AB%E4%B8%8B%E4%B8%80%E5%BC%B5%E6%B0%B8%E4%B9%85%E7%AD%86%E8%A8%98/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2025-01-25</time>
+        <a href="https://nodebe4.github.io/teahouse/2025-01-25/%E8%84%B1%E5%8F%A3%E7%A7%80-%E6%98%AF%E5%B9%BD%E9%BB%98%E8%AE%BD%E5%88%BA%E8%BF%98%E6%98%AF%E5%8D%91%E9%84%99%E4%B8%8B%E6%B5%81/">
+          脱口秀：是幽默讽刺还是卑鄙下流？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2025-01-23</time>
+        <a href="https://nodebe4.github.io/teahouse/2025-01-23/%E9%A9%AC%E7%89%B9%E5%B8%82%E5%8F%AF%E5%96%9C%E5%8F%AF%E8%B4%BA%E7%9A%84%E6%88%90%E5%B0%B1-%E5%A3%AE%E4%B8%BE/">
+          马特市可喜可贺的成就·壮举
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2025-01-21</time>
+        <a href="https://nodebe4.github.io/teahouse/2025-01-21/%E5%AF%92%E5%86%AC-%E8%8D%B7%E8%8A%B1-%E7%8B%90%E7%8B%B8-%E6%AF%9B%E6%B3%BD%E4%B8%9C-%E4%B8%8D%E5%8F%AF%E6%80%9D%E8%AE%AE/">
+          寒冬·荷花·狐狸·毛泽东·不可思议
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2025-01-19</time>
+        <a href="https://nodebe4.github.io/teahouse/2025-01-19/%E5%89%B5%E4%BD%9C%E8%80%85%E7%B6%93%E6%BF%9F-IMO-%E9%80%B1%E5%A0%B1-80-%E5%B7%B4%E8%8F%B2%E7%89%B9-%E5%89%9B%E5%87%BA%E9%81%93-%E6%99%82%E7%9A%84%E6%8A%95%E8%B3%87%E6%96%B9%E5%BC%8F-%E5%B0%8D%E6%88%91%E5%80%91%E6%9B%B4%E5%85%B7%E5%80%9F%E9%91%92%E6%84%8F%E7%BE%A9/">
+          創作者經濟 IMO 📣 週報 #80｜巴菲特「剛出道」時的投資方式，對我們更具借鑒意義
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2025-01-22/%E6%B5%B7%E5%A4%96%E8%BC%BF%E8%AB%96%E9%A9%9A%E5%91%BC-%E7%89%B9%E6%9C%97%E6%99%AE%E9%A2%A8%E6%9A%B4%E4%BE%86%E4%BA%86-%E4%B8%8D%E5%8F%AF%E6%8A%97%E5%8A%9B%E5%9B%A0%E7%B4%A0%E9%81%B2%E6%97%A9%E5%88%B0%E4%BE%86-%E7%BE%8E%E5%9C%8B%E7%9A%84%E9%BB%83%E9%87%91%E6%99%82%E4%BB%A3%E5%88%B0%E4%BE%86-%E5%85%A8%E4%B8%96%E7%95%8C%E9%9C%80%E8%A6%81%E7%82%BA%E6%AD%A4%E4%BB%98%E5%87%BA%E5%A4%9A%E5%A4%A7%E7%9A%84%E4%BB%A3/">
+            前一篇：海外輿論驚呼 ：特朗普風暴來了。不可抗力因素遲早到來，美國的黃金時代到來，全世界需要為此付出多大的代價 ？
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2025-01-22/%E8%A2%AB%E9%81%BA%E6%A3%84%E7%9A%84%E5%8D%83%E5%B9%B4%E9%9B%95%E5%83%8F%E9%87%8D%E7%8F%BE%E6%AD%B7%E5%8F%B2%E7%9A%84%E8%BC%9D%E7%85%8C-%E6%AD%B7%E5%8F%B2%E7%B0%A1%E5%A0%B120250122/">
+            後一篇：被遺棄的千年雕像重現歷史的輝煌：歷史簡報20250122
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2025-01-22/%E6%B5%B7%E5%A4%96%E8%BC%BF%E8%AB%96%E9%A9%9A%E5%91%BC-%E7%89%B9%E6%9C%97%E6%99%AE%E9%A2%A8%E6%9A%B4%E4%BE%86%E4%BA%86-%E4%B8%8D%E5%8F%AF%E6%8A%97%E5%8A%9B%E5%9B%A0%E7%B4%A0%E9%81%B2%E6%97%A9%E5%88%B0%E4%BE%86-%E7%BE%8E%E5%9C%8B%E7%9A%84%E9%BB%83%E9%87%91%E6%99%82%E4%BB%A3%E5%88%B0%E4%BE%86-%E5%85%A8%E4%B8%96%E7%95%8C%E9%9C%80%E8%A6%81%E7%82%BA%E6%AD%A4%E4%BB%98%E5%87%BA%E5%A4%9A%E5%A4%A7%E7%9A%84%E4%BB%A3/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2025-01-22/%E8%A2%AB%E9%81%BA%E6%A3%84%E7%9A%84%E5%8D%83%E5%B9%B4%E9%9B%95%E5%83%8F%E9%87%8D%E7%8F%BE%E6%AD%B7%E5%8F%B2%E7%9A%84%E8%BC%9D%E7%85%8C-%E6%AD%B7%E5%8F%B2%E7%B0%A1%E5%A0%B120250122/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2025-01-23/%E9%A9%AC%E7%89%B9%E5%B8%82%E5%8F%AF%E5%96%9C%E5%8F%AF%E8%B4%BA%E7%9A%84%E6%88%90%E5%B0%B1-%E5%A3%AE%E4%B8%BE/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2025-01-21/%E5%AF%92%E5%86%AC-%E8%8D%B7%E8%8A%B1-%E7%8B%90%E7%8B%B8-%E6%AF%9B%E6%B3%BD%E4%B8%9C-%E4%B8%8D%E5%8F%AF%E6%80%9D%E8%AE%AE/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2025-01-22/%E6%B5%B7%E5%A4%96%E8%BC%BF%E8%AB%96%E9%A9%9A%E5%91%BC-%E7%89%B9%E6%9C%97%E6%99%AE%E9%A2%A8%E6%9A%B4%E4%BE%86%E4%BA%86-%E4%B8%8D%E5%8F%AF%E6%8A%97%E5%8A%9B%E5%9B%A0%E7%B4%A0%E9%81%B2%E6%97%A9%E5%88%B0%E4%BE%86-%E7%BE%8E%E5%9C%8B%E7%9A%84%E9%BB%83%E9%87%91%E6%99%82%E4%BB%A3%E5%88%B0%E4%BE%86-%E5%85%A8%E4%B8%96%E7%95%8C%E9%9C%80%E8%A6%81%E7%82%BA%E6%AD%A4%E4%BB%98%E5%87%BA%E5%A4%9A%E5%A4%A7%E7%9A%84%E4%BB%A3/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2025-01-22/%E8%A2%AB%E9%81%BA%E6%A3%84%E7%9A%84%E5%8D%83%E5%B9%B4%E9%9B%95%E5%83%8F%E9%87%8D%E7%8F%BE%E6%AD%B7%E5%8F%B2%E7%9A%84%E8%BC%9D%E7%85%8C-%E6%AD%B7%E5%8F%B2%E7%B0%A1%E5%A0%B120250122/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2025-01-23/%E9%A9%AC%E7%89%B9%E5%B8%82%E5%8F%AF%E5%96%9C%E5%8F%AF%E8%B4%BA%E7%9A%84%E6%88%90%E5%B0%B1-%E5%A3%AE%E4%B8%BE/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2025-01-21/%E5%AF%92%E5%86%AC-%E8%8D%B7%E8%8A%B1-%E7%8B%90%E7%8B%B8-%E6%AF%9B%E6%B3%BD%E4%B8%9C-%E4%B8%8D%E5%8F%AF%E6%80%9D%E8%AE%AE/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
