@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>用東方人的慣性思維看马斯克特朗普的密切关系能维持多久？他們會鬧掰嗎？ – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+用東方人的慣性思維看马斯克特朗普的密切关系能维持多久？他們會鬧掰嗎？
+——
+" />
+    <meta property="og:description" content="
+用東方人的慣性思維看马斯克特朗普的密切关系能维持多久？他們會鬧掰嗎？
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="用東方人的慣性思維看马斯克特朗普的密切关系能维持多久？他們會鬧掰嗎？" />
+    <meta property="twitter:title" content="用東方人的慣性思維看马斯克特朗普的密切关系能维持多久？他們會鬧掰嗎？" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (2528)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DtW-_vFTHav4" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.youtube.com/watch?v=tW-_vFTHav4" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.youtube.com/watch?v=tW-_vFTHav4&text=用東方人的慣性思維看马斯克特朗普的密切关系能维持多久？他們會鬧掰嗎？&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.youtube.com/watch?v=tW-_vFTHav4&title=用東方人的慣性思維看马斯克特朗普的密切关系能维持多久？他們會鬧掰嗎？" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.youtube.com/watch?v=tW-_vFTHav4&title=用東方人的慣性思維看马斯克特朗普的密切关系能维持多久？他們會鬧掰嗎？" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=用東方人的慣性思維看马斯克特朗普的密切关系能维持多久？他們會鬧掰嗎？&body=
+用東方人的慣性思維看马斯克特朗普的密切关系能维持多久？他們會鬧掰嗎？
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.youtube.com/watch?v=tW-_vFTHav4" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.youtube.com/watch?v=tW-_vFTHav4&title=用東方人的慣性思維看马斯克特朗普的密切关系能维持多久？他們會鬧掰嗎？&caption=
+用東方人的慣性思維看马斯克特朗普的密切关系能维持多久？他們會鬧掰嗎？
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=用東方人的慣性思維看马斯克特朗普的密切关系能维持多久？他們會鬧掰嗎？&url=https://www.youtube.com/watch?v=tW-_vFTHav4" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>用東方人的慣性思維看马斯克特朗普的密切关系能维持多久？他們會鬧掰嗎？</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2025-01-24
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#老楊到處說">
+          老楊到處說
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.youtube.com/watch?v=tW-_vFTHav4" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="老楊到處說的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#老楊到處說 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+      <iframe id="player-tW-_vFTHav4" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/tW-_vFTHav4" frameborder="0" allowfullscreen></iframe>
+    
+    <!--1737777644000-->
+<p><a href="https://www.youtube.com/watch?v=tW-_vFTHav4">用東方人的慣性思維看马斯克特朗普的密切关系能维持多久？他們會鬧掰嗎？</a>
+——</p>
+
+<div>
+訂閱楊錦麟頻道，每天免費收看最新影片歡迎各位透過超級感謝支持我們的創作亦可通過PayPal支持我們：http://bit.ly/support-laoyang－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－華人社會大變將至，老楊堅持在亂局中繼續做好本份，為大家提供獨到而全面資訊，助大家一同分析時局，安身立命。為支持團隊運作，老楊特別為各位舊雨知音準備各種優秀產品，由頂級高山茶葉，到日常淺酎的紅白葡萄酒，一應俱全。最新推出老醬香白酒，百年在地窖藏，上思上想不上頭，懇請各方好友支持。歡迎掃二維碼添加微信諮詢：zhujiu30 或 微信qingtongtong100－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－#中國 #中国 #老楊到處說 #楊錦麟論時政 #楊錦麟、陈士铭：马斯克特朗普的密切关系能维持多久？新加坡當地的評論員陳士銘在《聯合早報》1月24日發表文章《陈士铭：马斯克特朗普的密切关系能维持多久？》马斯克作为一个以自我利益为重的超级资本家，应该能充分认识到这样的密切关系未必能持久。他近期拼命通过陪伴特朗普，并以各种言行提升对方的影响力和权力，无非是想让大家觉得，是他让对方变得强大，好让对方看到自己的价值所在。中国政府考虑把TikTok卖给特斯拉创办人马斯克的传言最近引起轰动，也令他与美国总统特朗普的密切关系再度成为瞩目焦点。这个堪称异类的官商关系，已在美国和海外掀起千层浪，致使各界对他们的关系，比对一众白宫新官的名单还重视。只有梳理好他们看似多层面的关系，才能推测两人关系的前景以及进一步影响。彭博社独家报道TikTok在美关闭后的动向传言，之所以备受关注，主要是因为在之前TikTok濒临关闭威胁的后备选项中，马斯克的名字从没在任何一项中出现过。这个令他扮演程咬金角色的传言，无论最终属实与否，都再次验证他与特朗普的关系是多么受到重视，已被公认是解决特朗普上任所带来一系列挑战的其中一个重要管道。起码在现阶段而言，大家都相信两人的关系是牢固的，这在很大程度上是基于马斯克一路来对特朗普的庞大财力支持。去年7月特朗普遭遇枪击后，马斯克首度公开支持，一直到11月，总共花费超过2亿5000万美元（约3亿4300万新元）帮助特朗普胜选。媒体纷纷披露，为了能随时与特朗普接触，马斯克自大选前夕起至年底的大部分时间，就租住在特朗普海湖庄园的一处别墅小屋中，每晚租金高达2000美元。这样的鼎力支持及长时间近距离接触，是其他先后表态支持并极力讨好当选总统的大亨所无法匹比的。更重要的是，两人的关系已在美国内外产生强有力的影响，令大家无法忽略。马斯克受委为新创建的政府效率部（DOGE）联席主管，旨在精简政府部门和运作来削减政府预算，未来影响可大可小。他去年底在民主与共和两党为保持联邦政府部门运作而达成的预算协议之际，突然在自己拥有的社交媒体平台X表态说，预算案不应通过，特朗普过后应声附和，一度令预算案触礁，联邦政府差点停摆。本月初，两人还共同表示支持美国H1B签证引进科技人才，令不少支持特朗普的反移民阵营人士震惊并失望。在海外，特朗普和马斯克最近几周对待欧洲的言论，已经为欧美关系增添过去鲜有的紧张局面。一方面，特朗普扬言计划占领丹麦的格陵兰岛，另一方面，马斯克试图削弱英国和德国政府的民望，在德国下个月大选前，频频发贴和通过播客支持极右翼的选择党，并毫无根据地指责英国首相斯塔默“与10年前的儿童强奸团伙丑闻有关联”，还呼吁英国释放一名被监禁的极右翼活动分子。两人在对欧关系上展现出近乎唱双簧的姿态，已经令欧洲各国回应得团团转。必须指出的是，两人的密切关系并不意味他们在所有课题上都立场一致。马斯克对机器人技术的爱好几近狂热，就与持保留态度的特朗普成强烈对照。马斯克不时高度评价特斯拉工厂的全面自动化，并渴望展示特斯拉所开发的人形机器人Optimus。可是，特朗普也许考虑到广大蓝领支持者的感受，对机器人的广泛运用不表苟同。去年12月，他在社交平台撰文，谈到北美国际码头工人协会早前号召罢工，表达不满美国东岸和墨西哥湾沿岸码头推行自动化一事时说：“通过自动化所节省的资金，远不及美国工人所遭受的痛苦和伤害。”尽管意见不同，但目前没迹象显示他们的关系会出现裂痕，但日后是否还能这样牢不可破，则不好说了。许多分析认为，两人在对华政策上可能会因意见分歧而分道扬镳，但也有部分观点认为，恰恰因为特斯拉在华设有厂房，并着重当地电动车市场，马斯克可取代已逝世的基辛格，成为特朗普政府与中国政府之间沟通的最重要人物。因此，两人的关系以后非但不会转坏，反而因在中美关系上发挥缓冲角色，令马斯克成为特朗普看重的友好人物。要如何判断他们的未来关系发展，意见分歧的课题本身恐怕不是重要的考量因素，更多的是取决于两人就职后的默契度是否稳定，以及围绕两人的各方对他们关系的碰撞结果。一般认为，特朗普就职后，马斯克不太可能继续不受限制地接触他，毕竟出入白宫官邸比出入特朗普的私人庄园要麻烦得多。他们日后能否保持针对欧洲的默契度，也是个未知数。特朗普政府官员和各方支持者甚至反对阵营，显而易见都不希望两人关系继续密切下去。马斯克在中国的商业关系，已经引起特朗普支持者和美国政界对华鹰派人士的警觉和担忧。在所有特朗普委任的白宫官员中，相信没有一位喜见自己在极力争取总统的注意力和支持之际，遭到马斯克干扰。他们会如何削弱两人关系的密切程度，甚至令两人最终交恶，说不定会成为未来特朗普政府新闻的重大看点之一。马斯克作为一个以自我利益为重的超级资本家，应该能充分认识到这样的密切关系未必能持久。他近期拼命通过陪伴特朗普，并以各种言行提升对方的影响力和权力，无非是想让大家觉得，是他让对方变得强大，好让对方看到自己的价值所在，让这个关系更能经得起时间考验，稀释各种挑拨离间的破坏。至于将来是否真能如他所愿，则有待时间证明。
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#老楊到處說 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2025-03-02/%E5%A4%A7%E9%99%B8%E5%AD%B8%E8%80%85%E4%B8%81%E6%9D%B1%E5%88%86%E6%9E%90%E6%8C%87%E5%87%BA%E6%B3%BD%E8%BF%9E%E6%96%AF%E5%9F%BA%E5%9C%A8%E7%BE%8E%E4%B8%8E%E7%89%B9%E6%9C%97%E6%99%AE%E6%91%8A%E7%89%8C-%E4%B8%80%E7%AE%AD%E4%B8%89%E9%9B%95-%E5%B0%8D%E6%BE%A4%E9%80%A3%E6%96%AF%E7%9A%84%E7%B5%95%E5%9C%B0%E5%8F%8D%E6%94%BB-%E5%A4%96%E7%95%8C%E7%9A%84%E8%A9%95%E5%83%B9%E9%9B%9C%E9%99%B3-%E6%9C%89%E6%B2%92%E6%9C%89%E4%B8%80/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2024-11-29/%E7%BF%92%E8%BF%91%E5%B9%B3%E5%AB%A1%E7%B3%BB%E6%84%9B%E5%B0%87%E8%8B%97%E5%8D%8E%E7%BB%A7%E6%9D%8E%E5%B0%9A%E7%A6%8F%E4%B9%8B%E5%90%8E-%E6%88%90%E7%82%BA%E7%AC%AC%E4%BA%8C%E5%90%8D%E8%A2%AB%E5%A4%84%E5%88%86%E7%9A%84%E4%B8%AD%E5%85%B1%E4%BA%8C%E5%8D%81%E5%B1%8A%E4%B8%AD%E5%A4%AE%E5%86%9B%E5%A7%94%E5%A7%94%E5%91%98-%E4%BB%96%E8%A2%AB%E5%81%9C%E8%81%B7%E6%AA%A2%E6%9F%A5-%E7%84%A1%E8%AB%96%E5%A6%82%E4%BD%95-%E5%B7%B2/">最早</a>--</span>
+    
+      <li>
+        <time>2025-01-25</time>
+        <a href="https://nodebe4.github.io/teahouse/2025-01-25/%E4%BB%8A%E6%97%A5%E8%AE%80%E5%A0%B1%E6%99%82%E9%96%93-%E7%89%B9%E6%9C%97%E6%99%AE%E6%98%AF%E5%90%A6%E5%85%A9%E6%89%8B%E8%80%8D%E4%B8%AD%E5%9C%8B-%E4%B8%AD%E5%9C%8B%E5%B0%8D%E7%8C%9C%E4%B8%8D%E9%80%8F%E4%BB%A5%E5%8F%8A%E4%B8%8D%E5%8F%AF%E9%A0%90%E6%B8%AC%E7%9A%84%E7%89%B9%E6%9C%97%E6%99%AE%E5%A6%82%E4%BD%95%E9%9D%A2%E5%B0%8D-%E5%A6%82%E4%BD%95%E6%87%89%E5%B0%8D-%E6%98%AF%E7%BE%8E%E5%9C%8B%E6%9C%8D%E8%BB%9F/">
+          今日讀報時間 ，特朗普是否兩手耍中國，中國對猜不透以及不可預測的特朗普如何面對，如何應對？是美國服軟，知道中國不容易對付，或者特朗普還有什麼一刀致命的怪招？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2025-01-25</time>
+        <a href="https://nodebe4.github.io/teahouse/2025-01-25/%E8%80%81%E6%A5%8A%E9%80%B1%E4%B8%89%E7%9B%B4%E6%92%AD-%E7%89%B9%E6%9C%97%E6%99%AE%E5%87%BA%E6%89%8B%E4%B8%8D%E5%87%A1-%E7%B5%95%E9%9D%9E%E6%94%BF%E6%B2%BB%E7%B4%A0%E4%BA%BA%E7%AD%89%E9%96%92%E4%B9%8B%E8%BC%A9-%E8%88%87%E5%B0%8D%E6%89%8B%E5%92%8C%E7%9B%9F%E5%9C%8B%E5%8F%AB%E9%99%A3-%E7%BF%92%E8%BF%91%E5%B9%B3%E8%88%87%E6%99%AE%E4%BA%AC%E6%8A%B1%E5%9C%98%E5%8F%96%E6%9A%96-%E7%BE%8E%E5%9C%8B%E6%8F%90/">
+          老楊週三直播  特朗普出手不凡，絕非政治素人等閒之輩，與對手和盟國叫陣，習近平與普京抱團取暖，美國提前施壓，墨西哥灣改名沒商量，巴拿馬運河對準的是中國，北京以為特朗普是個交易員，凡可以交易的都能讓步？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2025-01-24</time>
+        <a href="https://nodebe4.github.io/teahouse/2025-01-24/%E4%BB%8A%E6%97%A5%E8%AE%80%E5%A0%B1%E6%99%82%E9%96%93-%E7%89%B9%E6%9C%97%E6%99%AE%E7%9A%84%E9%87%8D%E5%9E%8B%E6%AD%A6%E5%99%A8-%E9%97%9C%E7%A8%85+%E4%B8%8D%E5%8F%AF%E9%A0%90%E6%B8%AC%E6%80%A7-%E9%81%94%E6%B2%83%E6%96%AF%E4%B8%AD%E5%9C%8B%E7%BD%95%E8%A6%8B%E4%BD%8E%E8%AA%BF%E5%B1%95%E7%A4%BA%E8%BB%9F%E5%AF%A6%E5%8A%9B-%E7%B4%80%E6%80%9D%E9%81%93%E6%89%B9%E8%A9%95%E7%89%B9%E6%9C%97%E6%99%AE/">
+          今日讀報時間  特朗普的重型武器：關稅+不可預測性  達沃斯中國罕見低調展示軟實力，紀思道批評特朗普讓美國更脆弱，美國兩黨傾力終止中國最惠國待遇，中方獨立檢測福島海水未見異常  香港政府害怕民調？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2025-01-23</time>
+        <a href="https://nodebe4.github.io/teahouse/2025-01-23/%E7%BE%8E%E5%9B%BD%E4%B8%8E%E4%B8%96%E7%95%8C%E8%BF%8E%E5%89%A7%E5%8F%98-%E6%9C%AA%E6%9D%A5%E4%B8%A4%E5%B9%B4%E8%A7%81%E7%9C%9F%E7%AB%A0/">
+          美国与世界迎剧变 未来两年见真章
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2025-01-24/%E5%9F%8E%E5%AF%A8-Singjai-is-live/">
+            前一篇：城寨 Singjai is live
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2025-01-24/(%E8%98%87%E5%B7%9E%E5%A4%A7%E5%8F%94)%E6%96%B0%E7%96%86%E8%A2%AB%E5%B1%A0%E6%9D%91-%E6%88%91%E8%81%BD%E9%81%8E%E5%85%A9%E5%80%8B%E4%BA%BA%E8%AA%AA-%E6%98%8E%E9%A1%AF%E6%98%AF%E6%9C%89%E6%84%8F%E5%82%B3%E6%92%AD%E7%9A%84%E5%81%87%E6%B6%88%E6%81%AF-%E6%88%91%E5%8E%BB%E9%81%8E%E5%8F%B0%E7%81%A3-%E4%B8%8D%E5%B8%8C%E6%9C%9B%E5%85%A9%E5%B2%B8%E7%99%BC%E7%94%9F%E6%88%B0%E7%88%AD/">
+            後一篇：(蘇州大叔)新疆被屠村，我聽過兩個人說。明顯是有意傳播的假消息。我去過台灣，不希望兩岸發生戰爭。
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2025-01-24/%E5%9F%8E%E5%AF%A8-Singjai-is-live/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2025-01-24/(%E8%98%87%E5%B7%9E%E5%A4%A7%E5%8F%94)%E6%96%B0%E7%96%86%E8%A2%AB%E5%B1%A0%E6%9D%91-%E6%88%91%E8%81%BD%E9%81%8E%E5%85%A9%E5%80%8B%E4%BA%BA%E8%AA%AA-%E6%98%8E%E9%A1%AF%E6%98%AF%E6%9C%89%E6%84%8F%E5%82%B3%E6%92%AD%E7%9A%84%E5%81%87%E6%B6%88%E6%81%AF-%E6%88%91%E5%8E%BB%E9%81%8E%E5%8F%B0%E7%81%A3-%E4%B8%8D%E5%B8%8C%E6%9C%9B%E5%85%A9%E5%B2%B8%E7%99%BC%E7%94%9F%E6%88%B0%E7%88%AD/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2025-01-25/%E8%80%81%E6%A5%8A%E9%80%B1%E4%B8%89%E7%9B%B4%E6%92%AD-%E7%89%B9%E6%9C%97%E6%99%AE%E5%87%BA%E6%89%8B%E4%B8%8D%E5%87%A1-%E7%B5%95%E9%9D%9E%E6%94%BF%E6%B2%BB%E7%B4%A0%E4%BA%BA%E7%AD%89%E9%96%92%E4%B9%8B%E8%BC%A9-%E8%88%87%E5%B0%8D%E6%89%8B%E5%92%8C%E7%9B%9F%E5%9C%8B%E5%8F%AB%E9%99%A3-%E7%BF%92%E8%BF%91%E5%B9%B3%E8%88%87%E6%99%AE%E4%BA%AC%E6%8A%B1%E5%9C%98%E5%8F%96%E6%9A%96-%E7%BE%8E%E5%9C%8B%E6%8F%90/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2025-01-24/%E4%BB%8A%E6%97%A5%E8%AE%80%E5%A0%B1%E6%99%82%E9%96%93-%E7%89%B9%E6%9C%97%E6%99%AE%E7%9A%84%E9%87%8D%E5%9E%8B%E6%AD%A6%E5%99%A8-%E9%97%9C%E7%A8%85+%E4%B8%8D%E5%8F%AF%E9%A0%90%E6%B8%AC%E6%80%A7-%E9%81%94%E6%B2%83%E6%96%AF%E4%B8%AD%E5%9C%8B%E7%BD%95%E8%A6%8B%E4%BD%8E%E8%AA%BF%E5%B1%95%E7%A4%BA%E8%BB%9F%E5%AF%A6%E5%8A%9B-%E7%B4%80%E6%80%9D%E9%81%93%E6%89%B9%E8%A9%95%E7%89%B9%E6%9C%97%E6%99%AE/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2025-01-24/%E5%9F%8E%E5%AF%A8-Singjai-is-live/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2025-01-24/(%E8%98%87%E5%B7%9E%E5%A4%A7%E5%8F%94)%E6%96%B0%E7%96%86%E8%A2%AB%E5%B1%A0%E6%9D%91-%E6%88%91%E8%81%BD%E9%81%8E%E5%85%A9%E5%80%8B%E4%BA%BA%E8%AA%AA-%E6%98%8E%E9%A1%AF%E6%98%AF%E6%9C%89%E6%84%8F%E5%82%B3%E6%92%AD%E7%9A%84%E5%81%87%E6%B6%88%E6%81%AF-%E6%88%91%E5%8E%BB%E9%81%8E%E5%8F%B0%E7%81%A3-%E4%B8%8D%E5%B8%8C%E6%9C%9B%E5%85%A9%E5%B2%B8%E7%99%BC%E7%94%9F%E6%88%B0%E7%88%AD/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<老楊到處說>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2025-01-25/%E8%80%81%E6%A5%8A%E9%80%B1%E4%B8%89%E7%9B%B4%E6%92%AD-%E7%89%B9%E6%9C%97%E6%99%AE%E5%87%BA%E6%89%8B%E4%B8%8D%E5%87%A1-%E7%B5%95%E9%9D%9E%E6%94%BF%E6%B2%BB%E7%B4%A0%E4%BA%BA%E7%AD%89%E9%96%92%E4%B9%8B%E8%BC%A9-%E8%88%87%E5%B0%8D%E6%89%8B%E5%92%8C%E7%9B%9F%E5%9C%8B%E5%8F%AB%E9%99%A3-%E7%BF%92%E8%BF%91%E5%B9%B3%E8%88%87%E6%99%AE%E4%BA%AC%E6%8A%B1%E5%9C%98%E5%8F%96%E6%9A%96-%E7%BE%8E%E5%9C%8B%E6%8F%90/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<老楊到處說>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2025-01-24/%E4%BB%8A%E6%97%A5%E8%AE%80%E5%A0%B1%E6%99%82%E9%96%93-%E7%89%B9%E6%9C%97%E6%99%AE%E7%9A%84%E9%87%8D%E5%9E%8B%E6%AD%A6%E5%99%A8-%E9%97%9C%E7%A8%85+%E4%B8%8D%E5%8F%AF%E9%A0%90%E6%B8%AC%E6%80%A7-%E9%81%94%E6%B2%83%E6%96%AF%E4%B8%AD%E5%9C%8B%E7%BD%95%E8%A6%8B%E4%BD%8E%E8%AA%BF%E5%B1%95%E7%A4%BA%E8%BB%9F%E5%AF%A6%E5%8A%9B-%E7%B4%80%E6%80%9D%E9%81%93%E6%89%B9%E8%A9%95%E7%89%B9%E6%9C%97%E6%99%AE/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
