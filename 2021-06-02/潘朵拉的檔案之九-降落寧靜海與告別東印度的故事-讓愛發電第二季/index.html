@@ -1,0 +1,3468 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>潘朵拉的檔案之九｜降落寧靜海與告別東印度的故事（讓愛發電第二季） – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+潘朵拉的檔案之九｜降落寧靜海與告別東印度的故事（讓愛發電第二季）
+——
+" />
+    <meta property="og:description" content="
+潘朵拉的檔案之九｜降落寧靜海與告別東印度的故事（讓愛發電第二季）
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="潘朵拉的檔案之九｜降落寧靜海與告別東印度的故事（讓愛發電第二季）" />
+    <meta property="twitter:title" content="潘朵拉的檔案之九｜降落寧靜海與告別東印度的故事（讓愛發電第二季）" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40nepacidal%2F%25E6%25BD%2598%25E6%259C%25B5%25E6%258B%2589%25E7%259A%2584%25E6%25AA%2594%25E6%25A1%2588%25E4%25B9%258B%25E4%25B9%259D-%25E9%2599%258D%25E8%2590%25BD%25E5%25AF%25A7%25E9%259D%259C%25E6%25B5%25B7%25E8%2588%2587%25E5%2591%258A%25E5%2588%25A5%25E6%259D%25B1%25E5%258D%25B0%25E5%25BA%25A6%25E7%259A%2584%25E6%2595%2585%25E4%25BA%258B-%25E8%25AE%2593%25E6%2584%259B%25E7%2599%25BC%25E9%259B%25BB%25E7%25AC%25AC%25E4%25BA%258C%25E5%25AD%25A3-bafyreifzblvg2hcqt3zuz6l5al6qq5wxq3oumvqdsil2wpstj3tkzpdd7u" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@nepacidal/%E6%BD%98%E6%9C%B5%E6%8B%89%E7%9A%84%E6%AA%94%E6%A1%88%E4%B9%8B%E4%B9%9D-%E9%99%8D%E8%90%BD%E5%AF%A7%E9%9D%9C%E6%B5%B7%E8%88%87%E5%91%8A%E5%88%A5%E6%9D%B1%E5%8D%B0%E5%BA%A6%E7%9A%84%E6%95%85%E4%BA%8B-%E8%AE%93%E6%84%9B%E7%99%BC%E9%9B%BB%E7%AC%AC%E4%BA%8C%E5%AD%A3-bafyreifzblvg2hcqt3zuz6l5al6qq5wxq3oumvqdsil2wpstj3tkzpdd7u" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@nepacidal/%E6%BD%98%E6%9C%B5%E6%8B%89%E7%9A%84%E6%AA%94%E6%A1%88%E4%B9%8B%E4%B9%9D-%E9%99%8D%E8%90%BD%E5%AF%A7%E9%9D%9C%E6%B5%B7%E8%88%87%E5%91%8A%E5%88%A5%E6%9D%B1%E5%8D%B0%E5%BA%A6%E7%9A%84%E6%95%85%E4%BA%8B-%E8%AE%93%E6%84%9B%E7%99%BC%E9%9B%BB%E7%AC%AC%E4%BA%8C%E5%AD%A3-bafyreifzblvg2hcqt3zuz6l5al6qq5wxq3oumvqdsil2wpstj3tkzpdd7u&text=潘朵拉的檔案之九｜降落寧靜海與告別東印度的故事（讓愛發電第二季）&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@nepacidal/%E6%BD%98%E6%9C%B5%E6%8B%89%E7%9A%84%E6%AA%94%E6%A1%88%E4%B9%8B%E4%B9%9D-%E9%99%8D%E8%90%BD%E5%AF%A7%E9%9D%9C%E6%B5%B7%E8%88%87%E5%91%8A%E5%88%A5%E6%9D%B1%E5%8D%B0%E5%BA%A6%E7%9A%84%E6%95%85%E4%BA%8B-%E8%AE%93%E6%84%9B%E7%99%BC%E9%9B%BB%E7%AC%AC%E4%BA%8C%E5%AD%A3-bafyreifzblvg2hcqt3zuz6l5al6qq5wxq3oumvqdsil2wpstj3tkzpdd7u&title=潘朵拉的檔案之九｜降落寧靜海與告別東印度的故事（讓愛發電第二季）" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@nepacidal/%E6%BD%98%E6%9C%B5%E6%8B%89%E7%9A%84%E6%AA%94%E6%A1%88%E4%B9%8B%E4%B9%9D-%E9%99%8D%E8%90%BD%E5%AF%A7%E9%9D%9C%E6%B5%B7%E8%88%87%E5%91%8A%E5%88%A5%E6%9D%B1%E5%8D%B0%E5%BA%A6%E7%9A%84%E6%95%85%E4%BA%8B-%E8%AE%93%E6%84%9B%E7%99%BC%E9%9B%BB%E7%AC%AC%E4%BA%8C%E5%AD%A3-bafyreifzblvg2hcqt3zuz6l5al6qq5wxq3oumvqdsil2wpstj3tkzpdd7u&title=潘朵拉的檔案之九｜降落寧靜海與告別東印度的故事（讓愛發電第二季）" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=潘朵拉的檔案之九｜降落寧靜海與告別東印度的故事（讓愛發電第二季）&body=
+潘朵拉的檔案之九｜降落寧靜海與告別東印度的故事（讓愛發電第二季）
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@nepacidal/%E6%BD%98%E6%9C%B5%E6%8B%89%E7%9A%84%E6%AA%94%E6%A1%88%E4%B9%8B%E4%B9%9D-%E9%99%8D%E8%90%BD%E5%AF%A7%E9%9D%9C%E6%B5%B7%E8%88%87%E5%91%8A%E5%88%A5%E6%9D%B1%E5%8D%B0%E5%BA%A6%E7%9A%84%E6%95%85%E4%BA%8B-%E8%AE%93%E6%84%9B%E7%99%BC%E9%9B%BB%E7%AC%AC%E4%BA%8C%E5%AD%A3-bafyreifzblvg2hcqt3zuz6l5al6qq5wxq3oumvqdsil2wpstj3tkzpdd7u" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@nepacidal/%E6%BD%98%E6%9C%B5%E6%8B%89%E7%9A%84%E6%AA%94%E6%A1%88%E4%B9%8B%E4%B9%9D-%E9%99%8D%E8%90%BD%E5%AF%A7%E9%9D%9C%E6%B5%B7%E8%88%87%E5%91%8A%E5%88%A5%E6%9D%B1%E5%8D%B0%E5%BA%A6%E7%9A%84%E6%95%85%E4%BA%8B-%E8%AE%93%E6%84%9B%E7%99%BC%E9%9B%BB%E7%AC%AC%E4%BA%8C%E5%AD%A3-bafyreifzblvg2hcqt3zuz6l5al6qq5wxq3oumvqdsil2wpstj3tkzpdd7u&title=潘朵拉的檔案之九｜降落寧靜海與告別東印度的故事（讓愛發電第二季）&caption=
+潘朵拉的檔案之九｜降落寧靜海與告別東印度的故事（讓愛發電第二季）
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=潘朵拉的檔案之九｜降落寧靜海與告別東印度的故事（讓愛發電第二季）&url=https://matters.news/@nepacidal/%E6%BD%98%E6%9C%B5%E6%8B%89%E7%9A%84%E6%AA%94%E6%A1%88%E4%B9%8B%E4%B9%9D-%E9%99%8D%E8%90%BD%E5%AF%A7%E9%9D%9C%E6%B5%B7%E8%88%87%E5%91%8A%E5%88%A5%E6%9D%B1%E5%8D%B0%E5%BA%A6%E7%9A%84%E6%95%85%E4%BA%8B-%E8%AE%93%E6%84%9B%E7%99%BC%E9%9B%BB%E7%AC%AC%E4%BA%8C%E5%AD%A3-bafyreifzblvg2hcqt3zuz6l5al6qq5wxq3oumvqdsil2wpstj3tkzpdd7u" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>潘朵拉的檔案之九｜降落寧靜海與告別東印度的故事（讓愛發電第二季）</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-06-02
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Nakao Eki</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@nepacidal/%E6%BD%98%E6%9C%B5%E6%8B%89%E7%9A%84%E6%AA%94%E6%A1%88%E4%B9%8B%E4%B9%9D-%E9%99%8D%E8%90%BD%E5%AF%A7%E9%9D%9C%E6%B5%B7%E8%88%87%E5%91%8A%E5%88%A5%E6%9D%B1%E5%8D%B0%E5%BA%A6%E7%9A%84%E6%95%85%E4%BA%8B-%E8%AE%93%E6%84%9B%E7%99%BC%E9%9B%BB%E7%AC%AC%E4%BA%8C%E5%AD%A3-bafyreifzblvg2hcqt3zuz6l5al6qq5wxq3oumvqdsil2wpstj3tkzpdd7u" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1622634153000-->
+<p><a href="https://matters.news/@nepacidal/%E6%BD%98%E6%9C%B5%E6%8B%89%E7%9A%84%E6%AA%94%E6%A1%88%E4%B9%8B%E4%B9%9D-%E9%99%8D%E8%90%BD%E5%AF%A7%E9%9D%9C%E6%B5%B7%E8%88%87%E5%91%8A%E5%88%A5%E6%9D%B1%E5%8D%B0%E5%BA%A6%E7%9A%84%E6%95%85%E4%BA%8B-%E8%AE%93%E6%84%9B%E7%99%BC%E9%9B%BB%E7%AC%AC%E4%BA%8C%E5%AD%A3-bafyreifzblvg2hcqt3zuz6l5al6qq5wxq3oumvqdsil2wpstj3tkzpdd7u">潘朵拉的檔案之九｜降落寧靜海與告別東印度的故事（讓愛發電第二季）</a>
+——</p>
+
+<div>
+  <p><strong>關於檔案的故事如何呈現？</strong>這是最近我和檔案學家<a href="https://www.uva.nl/profiel/j/e/k.j.p.f.m.jeurgens/k.j.p.f.m.jeurgens.html?cb" target="_blank">燕鴴什</a>有一搭沒一搭在討論的問題。燕鴴什寫慣了學術論文，從來沒寫過什麼散文，卻厚臉皮的向我提出挑戰：</p>
+  <p>「你能不用學術論文或議論文章的方式，來講述關於檔案、發人深省的故事嗎？」</p>
+  <p>「關於檔案、發人深省的故事？」我想了一下，「這讓我想到兩年前，兩個關於檔案的故事。這兩個故事本來彼此並不相干，但有一個人涉入兩者，於是從我的角度看來，兩者就有關了。」</p>
+  <p>「誰呀？」燕鴴什似乎想像不來，有點納悶，「故事從何說起呢？」</p>
+  <p>「就說半個世紀以前吧。」</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/45eff159-e333-4263-b43d-5a3f7a3a7ea5.jpeg" data-asset-id="45eff159-e333-4263-b43d-5a3f7a3a7ea5" referrerpolicy="no-referrer" />    <figcaption>
+<span>Universiteit Utrceht</span>
+    </figcaption>
+  </figure>
+  <h2 id="section">1969，冷戰，冒險，阿波羅 11 號</h2>
+  <p>1969 年 7 月 20 日，日後的檔案學家燕鴴什還是個小男孩，正跟父母一起在野地宿營，享受夏日時光。那時候整個西方世界最大的新聞就是<strong>美國人要登陸月球了</strong>。燕鴴什對此充滿好奇，但身在野地無法收看電視，只能從收音機聽到消息。</p>
+  <p>「不過我已經不記得收音機裡說什麼了。」燕鴴什說，「我只記得他們踏上了月球。至於什麼人類一大步之類的話，應該是後來才透過其他媒介轉變成我的記憶。」</p>
+  <p>五十年倏忽而過，到了 2019 年 7 月，當全世界都在等待慶祝阿波羅 11 號登月任務五十週年，燕鴴什卻抱怨他的學術生涯還沒結束。</p>
+  <p>「荷蘭把退休年齡調高到 67 歲了，我還有好幾年苦日子過呢。教書教書教書，開會開會開會⋯⋯」</p>
+  <p>同一時間，我們正一起追蹤歷史學家 Ben Feist 費盡千辛萬苦建立的「<strong>即時阿波羅</strong>」網站（<a href="https://apolloinrealtime.org/11/" target="_blank"><strong>Apollo 11 in Real Time</strong></a>）。他以當年阿波羅 11 號的影音文字資料編輯成一段與任務等長的影片，讓觀眾可以同步經歷五十年前太空人經歷的一切。</p>
+  <p>嚴格說起來，是我將那為期超過八天的任務從頭跟隨到尾，燕鴴什對天文話題其實興趣有限，只大致瀏覽「即時阿波羅」網站。他向來少用社交媒體，但特別在 Twitter 上介紹這個檔案資料運用的範例，可能是那年僅有的一次。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/7e9fcbd7-48a6-4000-9660-b01283f0667d.png" data-asset-id="7e9fcbd7-48a6-4000-9660-b01283f0667d" referrerpolicy="no-referrer" />    <figcaption>
+<span>Apollo 11 in Real Time</span>
+    </figcaption>
+  </figure>
+  <p>在那八天的時間裡，阿波羅 11 號的種種動靜就是我工作時的背景音樂。有時候很長的時間裡只有雜訊，沒有人聲，有時候太空人會聊天，有時候休士頓控制中心的人會交談，有時候聽得到電視轉播。有時候聽到控制中心和太空人之間交換冗長的數字和不明所以的縮寫。</p>
+  <p>晚上要睡覺時，我把電腦放在旁邊，音量調低，入睡前隱約聽見太空人在開玩笑，等我一覺醒來，電視轉播的旁白說，「剛剛醫生跟我們確認過數據，現在三位太空人都在熟睡當中。」數小時後太空人醒了，第一句話是：「休士頓，11 號。早安。」</p>
+  <p>總算跟隨他們進入月球軌道了，數小時後指令艙和登月艙分離，又過了相當時間登月艙才開始向月球表面下降。下降的過程當中，控制中心一度失去登月艙的訊號：「老鷹，我們收不到你。」停留在月球軌道上指令艙內的太空人柯林接口：「老鷹，休士頓收不到你們了。」阿姆斯壯則是冷靜的給了「喔」或「知道了」之類的回答。</p>
+  <p>總算在燃料耗盡前二十秒安全降落了。</p>
+  <p>「休士頓，這裡是寧靜海基地，老鷹降落了。」一段時間後他說，「休士頓，那個說我們會搞不清天南地北的人說對了，因為我們光是這裡面的問題就忙不完⋯⋯」</p>
+  <p>登月艙裡的太空人不像剪輯過的登月影片那樣，著陸後就慢慢攀下梯子。寧靜海和休士頓之間開始交換各種聽不懂的數據和縮寫名詞，這當中還有控制中心一下子解決不了的問題，「寧靜海，我們會在任務時間之前研究出來給你。」</p>
+  <p>雖然在月球表面停留了將近一天，阿姆斯壯和艾德林多數的時間都待在登月艙裡，真的用自己的腳站在月球表面的時間只有兩個半小時。他們再度進入登月艙後還要睡覺休息，醒來後就要準備升空。</p>
+  <p>駕駛指令艙環繞月球的柯林在這麼多年後回憶往事，說當時並不擔心登月艙無法平安降落，他擔心的是登月艙無法順利升空。他被問到，若登月艙無法升空會合，他得一個人返回地球，會是怎樣的情景。他回答：<strong>地獄一樣。</strong></p>
+  <p>艾德林不愧是稱職的登月艙駕駛，平安降落在崎嶇的寧靜海，也從寧靜海再度升空。離開寧靜海後，登月艙的呼號回復到「老鷹」。</p>
+  <blockquote>
+▼ 這張照片是指令艙內的柯林所攝。遠方的地球正是半月景象。NASA 在 2009 年為了慶祝阿波羅 11 號任務四十週年而公布這張照片。  </blockquote>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/9299df04-e7cf-4b43-aeb7-18cb2d62f0da.jpeg" data-asset-id="9299df04-e7cf-4b43-aeb7-18cb2d62f0da" referrerpolicy="no-referrer" />    <figcaption>
+<span>NASA APOD</span>
+    </figcaption>
+  </figure>
+  <p>返回地球的路途過半之後一切都很輕鬆。有一天，太空人起床後不久，休士頓控制中心說：「你們說想知道地面發生了什麼事，那我們念新聞給你們聽。」</p>
+  <p>艾德林想知道他家上次刈草是什麼時候，於是控制中心說，「OK，我們打電話去你家，stand by。」</p>
+  <p>然後一天過去，太空人又在預定的時間入睡。</p>
+  <p>任務時間第 189 小時 28 分鐘是預定要叫醒太空人的時間，那時太空船已經加速到超過時速一萬公里。休士頓控制中心說，某個程序可以省略，乾脆「到第 190 小時再叫醒他們」，但阿姆斯壯清爽的聲音就在此時傳來：「休士頓，11 號，早安。」</p>
+  <p>休士頓：「啊，矯正程序沒有必要，你們可以再睡一小時。」</p>
+  <p>阿姆斯壯：「噢，謝謝。」</p>
+  <p>終於，阿波羅 11 號的指令艙在任務時間第 195 小時重返大氣層，數分鐘後落入太平洋，不過打撈太空人的程序很繁雜，總共花了一小時左右才將太空人送到大黃蜂號航空母艦，在艦上等待的是尼克森總統。休士頓控制中心裡的眾人點起雪茄以為慶祝。</p>
+  <p>尼克森對三位太空人說了一大篇話，然後問他們願不願意參加辦在洛杉磯的國宴，「五十州的州長都會參加，還有各國駐美大使。你們願意來嗎？」</p>
+  <p>阿姆斯壯：「你要我們做什麼我們都會做，總統先生。」</p>
+  <p>尼克森還問太空人們是否知道這段期間地球上發生的事。</p>
+  <p>當然，阿姆斯壯說，休士頓都有唸新聞給我們聽。</p>
+  <p>真是圓滿的任務。</p>
+  <p><strong><em>Apollo 11, signing off.<br /></em>阿波羅 11 號，結束通訊。</strong></p>
+  <blockquote>
+▼ 阿波羅十一號指令艙落水。  </blockquote>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/87ade507-2967-4604-8804-208abc3c6cb6.jpeg" data-asset-id="87ade507-2967-4604-8804-208abc3c6cb6" referrerpolicy="no-referrer" />    <figcaption>
+<span>NASA</span>
+    </figcaption>
+  </figure>
+  <h2 id="section-1">2019，阿波羅 11 號任務結束五十年後</h2>
+  <p>老人提奧 94 歲，妻子過世後獨居在布拉邦的小村莊裡。雖然他看來十分健康開朗，但自今年初起就不知原因的變瘦，半年來瘦了超過十公斤，他自忖來日無多，於是跟痞子攝影師艾里安說：「我那過世的神父哥哥留下好幾本十九世紀出版的聖經，我想趁著還可以的時候料理後事，把聖經交到可靠的人手裡。」</p>
+  <p>「哎呀呀，」艾里安哈哈的笑，「我哥哥是檔案學家呢，你哥哥的書就送給我哥哥吧。」然後又不忘戲謔一句：「我哥哥雖然為人不怎麼可靠，處理檔案倒是可靠。」</p>
+  <p>艾里安的哥哥，檔案學家燕鴴什，就這樣回去他生長的布拉邦小村，拜訪老人提奧，叨擾了他的咖啡，參觀他花園裡收藏的印尼工藝品——其中包括一隻大蟒的蛇皮，猙獰的蛇頭還完好的連著處理得薄軟的蟒皮，捲成一大卷，放在一個陳舊的威士忌盒裡，偽裝成無害的烈酒，跟其他木製或陶器的裝飾品一起放在花園小屋的架子上。</p>
+  <p>「那是二戰時我在印尼弄來的。向一個獵蛇人買來。」老人提奧說，「我想現在這種東西最好不要拿出來。」</p>
+  <p>燕鴴什高興的接收了兩本又厚又重的聖經，對老人提奧千恩萬謝。話題繞著十九世紀荷蘭出版的聖經轉了一陣子，然後他注意到老人的桌上放著一本關於太空活動的書。</p>
+  <p>「您對太空有興趣嗎？」他指著書問老人提奧，又指向同行湊熱鬧的我，「他也對太空很感興趣。」</p>
+  <p>「是嗎？」老人提奧轉向我，「您這樣年輕，應該沒有在電視上看過一些重大太空活動的即時轉播吧？」</p>
+  <p>「比方說？」我呆了一下，「比方說阿波羅 11 號登陸月球嗎？那時我還沒出生呢，確實沒在電視上看過。但那些影片後來都能在網路上看到了，因此我也算是看過吧。」</p>
+  <p>「所以你相信人類有上過月球？」老人問。</p>
+  <p>「相信啊。」我回答。這樣的問題從這樣老的老人口中問出來真是令人訝異。</p>
+  <p>老人突然吁了一口長氣。「我已經 94 歲了，我曾經在二戰的印尼戰場上吃過日本人的苦頭，回到歐洲以後又聽說恐怖的納粹集中營⋯⋯我必須說，那實在是一個非常艱苦的年代。但就算經歷過戰爭的殘酷，又經歷印尼脫離荷蘭獨立的震撼，這世界上還是有些好事。人類踏上月球就是這樣的事。」</p>
+  <p>「我在收音機旁聽了美國人的轉播。雖然連畫面都沒有見到，但我從來沒有懷疑過那兩個人踏上了月球。我實在沒有想到，近年來居然有越來越多的年輕人主張登陸月球是一場騙局。他們說這一切科技是假的，一切都是騙人的宣傳。」</p>
+  <p>「那不可能是假的。」我說，「看登陸影片就知道。當時沒有能力拍攝出那樣的影片。那影片只可能是在月球上拍的。」</p>
+  <p>「其實我對登陸月球的本身沒有太大的興趣。」老人突然改變口風，「我關心的是年輕人的心態。」</p>
+  <p>「嗯？」</p>
+  <p>「人年輕的時候，不是應該充滿朝氣，懷抱理想嗎？我自己當年是這樣，艾里安他們是這樣，我想您應該也是吧？我實在不能理解，是怎樣充滿挫敗感的年輕人，要努力去否定前人累積的知識和獲致的成就？我感覺他們希望所有人都跟他們一樣不快樂。」</p>
+  <p>「也許這是西方世界的問題？」我小心的說，「據我所知這些反科學的言論主要來自歐美，在其他地方並不盛行。」</p>
+  <p>老人好像初次聽聞這樣的說法，顯然有點意外，不過馬上露出笑容，「如果只是西方人的問題，那就好多了。」他看我們都不懂他的意思，又追加一句：「西方不是全世界啊。」</p>
+  <p>「您不用太擔心。」我說，「那些人既然反科學，他們也不會投入科學的事業，科學事業依舊會在好手中繼續下去的。畢竟科學是歐洲的文化，我相信歐洲人會認真看待。」</p>
+  <p>「好手⋯⋯」老人被提醒了，又轉頭去看燕鴴什：「這兩本聖經請您好好保存，如果有什麼地方可以貢獻，請您以專家的身份作主。還有——等您像我這麼老了，<strong>請您務必在死前安排</strong>，把聖經交到適當的人手裡。」</p>
+  <p>我們在布拉邦的霏霏細雨中告辭，老人提奧送我們到花園門口，那厚重的木門帶有濃厚的中世紀風格。</p>
+  <p>「<strong>等您像我這麼老了</strong>，希望您還是一樣的相信人類付出的努力。」他對我說。</p>
+  <p>「是⋯⋯」我一時之間不知如何回答這樣的叮嚀，「我⋯⋯我會盡力。」</p>
+  <p>「也許現在的年輕人相信他們懂得比前人都多。不過<strong>沒有人不需要前人的經驗和指導</strong>。」老人關上門時還在叮嚀，又對我眨眼一笑：「那時候，要不是一個有經驗的爪哇人幫了我，我早就死在爪哇了。」</p>
+  <p>那一面之緣後不滿三個月，老人提奧安逝家中，享壽 94 歲。</p>
+  <p>他託付的兩本聖經，如今還在檔案學家燕鴴什的保存庫裡。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/6bfd1821-8cfa-4463-8150-9d5aee059552.jpeg" data-asset-id="6bfd1821-8cfa-4463-8150-9d5aee059552" referrerpolicy="no-referrer" />    <figcaption>
+<span>NASA</span>
+    </figcaption>
+  </figure>
+  <p>檔案學家燕鴴什聽完兩個故事，一時之間想不出什麼話來說。</p>
+  <p>「我還沒想到要怎麼處理那兩本聖經。」過了片刻之後他說，「但我已經答應他了，一定會在我死前有所安排。」</p>
+  <p>「夏至快到了，夏至過後一個月，又是登月紀念日了呢。」我提醒他。</p>
+  <p>「是啊，隔天就是我的生日了。」他若有所思地回答，「其實完全不干我的事，但總覺得好像送我生日禮物似的。」又補充說：「但自從見過提奧，又收下他的聖經，登陸月球不知道怎麼也變得有點感傷了。」</p>
+  <p>「對了，你知道他為什麼是在收音機旁聽了新聞？不是應該看電視嗎？」</p>
+  <p>「我哪知道？大概那天他也在露營吧。那是大家都在渡假的七月嘛。」</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2021-06-04</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-06-04/%E9%A6%99%E6%B8%AF-%E6%88%91%E7%84%A1%E6%B3%95%E5%84%9F%E9%82%84%E7%9A%84-%E4%B8%8D%E5%A4%9A%E4%B8%8D%E5%B0%91-%E9%A4%98%E4%B8%8B%E6%B2%89%E9%BB%98/">
+          香港｜我無法償還的……不多不少，餘下沉默
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-06-02</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-06-02/%E5%B0%8F%E5%AD%B8%E7%94%9F%E7%9A%84%E6%95%85%E4%BA%8B%E8%88%87%E9%AB%98%E7%B4%9A%E6%96%87%E5%AD%B8%E8%A7%A3%E8%AE%80/">
+          小學生的故事與高級文學解讀
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-06-02</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-06-02/%E5%B0%8D%E8%AB%87%E5%B7%A5%E6%AC%8A%E6%9C%83-%E8%81%B7%E5%A0%B4%E6%8A%91%E9%AC%B1%E7%97%87%E5%B7%A5%E5%82%B7%E7%B4%A2%E8%B3%A0%E6%A1%88-%E8%AA%B0%E7%82%BA%E5%8B%9E%E5%8B%95%E8%80%85%E7%9A%84%E7%B2%BE%E7%A5%9E%E5%81%A5%E5%BA%B7%E8%B2%A0%E8%B2%AC/">
+          對談工權會｜職場抑鬱症工傷索賠案：誰為勞動者的精神健康負責？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-06-01</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-06-01/%E8%BD%89%E8%BC%89%E6%96%87%E7%AB%A0-7-%E9%81%8E%E6%96%BC%E6%BC%AB%E9%95%B7%E7%9A%84%E5%86%AC%E5%A4%A9/">
+          轉載文章＃7  過於漫長的冬天
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2021-06-02/%E5%B0%8D%E8%AB%87%E5%B7%A5%E6%AC%8A%E6%9C%83-%E8%81%B7%E5%A0%B4%E6%8A%91%E9%AC%B1%E7%97%87%E5%B7%A5%E5%82%B7%E7%B4%A2%E8%B3%A0%E6%A1%88-%E8%AA%B0%E7%82%BA%E5%8B%9E%E5%8B%95%E8%80%85%E7%9A%84%E7%B2%BE%E7%A5%9E%E5%81%A5%E5%BA%B7%E8%B2%A0%E8%B2%AC/">
+            前一篇：對談工權會｜職場抑鬱症工傷索賠案：誰為勞動者的精神健康負責？
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2021-06-02/%E5%B0%8F%E5%AD%B8%E7%94%9F%E7%9A%84%E6%95%85%E4%BA%8B%E8%88%87%E9%AB%98%E7%B4%9A%E6%96%87%E5%AD%B8%E8%A7%A3%E8%AE%80/">
+            後一篇：小學生的故事與高級文學解讀
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2021-06-02/%E5%B0%8D%E8%AB%87%E5%B7%A5%E6%AC%8A%E6%9C%83-%E8%81%B7%E5%A0%B4%E6%8A%91%E9%AC%B1%E7%97%87%E5%B7%A5%E5%82%B7%E7%B4%A2%E8%B3%A0%E6%A1%88-%E8%AA%B0%E7%82%BA%E5%8B%9E%E5%8B%95%E8%80%85%E7%9A%84%E7%B2%BE%E7%A5%9E%E5%81%A5%E5%BA%B7%E8%B2%A0%E8%B2%AC/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2021-06-02/%E5%B0%8F%E5%AD%B8%E7%94%9F%E7%9A%84%E6%95%85%E4%BA%8B%E8%88%87%E9%AB%98%E7%B4%9A%E6%96%87%E5%AD%B8%E8%A7%A3%E8%AE%80/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2021-06-02/%E5%B0%8F%E5%AD%B8%E7%94%9F%E7%9A%84%E6%95%85%E4%BA%8B%E8%88%87%E9%AB%98%E7%B4%9A%E6%96%87%E5%AD%B8%E8%A7%A3%E8%AE%80/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2021-06-02/%E5%B0%8D%E8%AB%87%E5%B7%A5%E6%AC%8A%E6%9C%83-%E8%81%B7%E5%A0%B4%E6%8A%91%E9%AC%B1%E7%97%87%E5%B7%A5%E5%82%B7%E7%B4%A2%E8%B3%A0%E6%A1%88-%E8%AA%B0%E7%82%BA%E5%8B%9E%E5%8B%95%E8%80%85%E7%9A%84%E7%B2%BE%E7%A5%9E%E5%81%A5%E5%BA%B7%E8%B2%A0%E8%B2%AC/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2021-06-02/%E5%B0%8D%E8%AB%87%E5%B7%A5%E6%AC%8A%E6%9C%83-%E8%81%B7%E5%A0%B4%E6%8A%91%E9%AC%B1%E7%97%87%E5%B7%A5%E5%82%B7%E7%B4%A2%E8%B3%A0%E6%A1%88-%E8%AA%B0%E7%82%BA%E5%8B%9E%E5%8B%95%E8%80%85%E7%9A%84%E7%B2%BE%E7%A5%9E%E5%81%A5%E5%BA%B7%E8%B2%A0%E8%B2%AC/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2021-06-02/%E5%B0%8F%E5%AD%B8%E7%94%9F%E7%9A%84%E6%95%85%E4%BA%8B%E8%88%87%E9%AB%98%E7%B4%9A%E6%96%87%E5%AD%B8%E8%A7%A3%E8%AE%80/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2021-06-02/%E5%B0%8F%E5%AD%B8%E7%94%9F%E7%9A%84%E6%95%85%E4%BA%8B%E8%88%87%E9%AB%98%E7%B4%9A%E6%96%87%E5%AD%B8%E8%A7%A3%E8%AE%80/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2021-06-02/%E5%B0%8D%E8%AB%87%E5%B7%A5%E6%AC%8A%E6%9C%83-%E8%81%B7%E5%A0%B4%E6%8A%91%E9%AC%B1%E7%97%87%E5%B7%A5%E5%82%B7%E7%B4%A2%E8%B3%A0%E6%A1%88-%E8%AA%B0%E7%82%BA%E5%8B%9E%E5%8B%95%E8%80%85%E7%9A%84%E7%B2%BE%E7%A5%9E%E5%81%A5%E5%BA%B7%E8%B2%A0%E8%B2%AC/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>瓊迪迪安：用新的語言寫下一整個時代的情緒 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+瓊迪迪安：用新的語言寫下一整個時代的情緒
+——
+" />
+    <meta property="og:description" content="
+瓊迪迪安：用新的語言寫下一整個時代的情緒
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="瓊迪迪安：用新的語言寫下一整個時代的情緒" />
+    <meta property="twitter:title" content="瓊迪迪安：用新的語言寫下一整個時代的情緒" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fsoundfury.medium.com%2F%25E7%2593%258A%25E8%25BF%25AA%25E8%25BF%25AA%25E5%25AE%2589-%25E7%2594%25A8%25E6%2596%25B0%25E7%259A%2584%25E8%25AA%259E%25E8%25A8%2580%25E5%25AF%25AB%25E4%25B8%258B%25E4%25B8%2580%25E6%2595%25B4%25E5%2580%258B%25E6%2599%2582%25E4%25BB%25A3%25E7%259A%2584%25E6%2583%2585%25E7%25B7%2592-3136c3679a0a%3Fsource%3Drss-37ea7441b075------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://soundfury.medium.com/%E7%93%8A%E8%BF%AA%E8%BF%AA%E5%AE%89-%E7%94%A8%E6%96%B0%E7%9A%84%E8%AA%9E%E8%A8%80%E5%AF%AB%E4%B8%8B%E4%B8%80%E6%95%B4%E5%80%8B%E6%99%82%E4%BB%A3%E7%9A%84%E6%83%85%E7%B7%92-3136c3679a0a?source=rss-37ea7441b075------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://soundfury.medium.com/%E7%93%8A%E8%BF%AA%E8%BF%AA%E5%AE%89-%E7%94%A8%E6%96%B0%E7%9A%84%E8%AA%9E%E8%A8%80%E5%AF%AB%E4%B8%8B%E4%B8%80%E6%95%B4%E5%80%8B%E6%99%82%E4%BB%A3%E7%9A%84%E6%83%85%E7%B7%92-3136c3679a0a?source=rss-37ea7441b075------2&text=瓊迪迪安：用新的語言寫下一整個時代的情緒&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://soundfury.medium.com/%E7%93%8A%E8%BF%AA%E8%BF%AA%E5%AE%89-%E7%94%A8%E6%96%B0%E7%9A%84%E8%AA%9E%E8%A8%80%E5%AF%AB%E4%B8%8B%E4%B8%80%E6%95%B4%E5%80%8B%E6%99%82%E4%BB%A3%E7%9A%84%E6%83%85%E7%B7%92-3136c3679a0a?source=rss-37ea7441b075------2&title=瓊迪迪安：用新的語言寫下一整個時代的情緒" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://soundfury.medium.com/%E7%93%8A%E8%BF%AA%E8%BF%AA%E5%AE%89-%E7%94%A8%E6%96%B0%E7%9A%84%E8%AA%9E%E8%A8%80%E5%AF%AB%E4%B8%8B%E4%B8%80%E6%95%B4%E5%80%8B%E6%99%82%E4%BB%A3%E7%9A%84%E6%83%85%E7%B7%92-3136c3679a0a?source=rss-37ea7441b075------2&title=瓊迪迪安：用新的語言寫下一整個時代的情緒" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=瓊迪迪安：用新的語言寫下一整個時代的情緒&body=
+瓊迪迪安：用新的語言寫下一整個時代的情緒
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://soundfury.medium.com/%E7%93%8A%E8%BF%AA%E8%BF%AA%E5%AE%89-%E7%94%A8%E6%96%B0%E7%9A%84%E8%AA%9E%E8%A8%80%E5%AF%AB%E4%B8%8B%E4%B8%80%E6%95%B4%E5%80%8B%E6%99%82%E4%BB%A3%E7%9A%84%E6%83%85%E7%B7%92-3136c3679a0a?source=rss-37ea7441b075------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://soundfury.medium.com/%E7%93%8A%E8%BF%AA%E8%BF%AA%E5%AE%89-%E7%94%A8%E6%96%B0%E7%9A%84%E8%AA%9E%E8%A8%80%E5%AF%AB%E4%B8%8B%E4%B8%80%E6%95%B4%E5%80%8B%E6%99%82%E4%BB%A3%E7%9A%84%E6%83%85%E7%B7%92-3136c3679a0a?source=rss-37ea7441b075------2&title=瓊迪迪安：用新的語言寫下一整個時代的情緒&caption=
+瓊迪迪安：用新的語言寫下一整個時代的情緒
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=瓊迪迪安：用新的語言寫下一整個時代的情緒&url=https://soundfury.medium.com/%E7%93%8A%E8%BF%AA%E8%BF%AA%E5%AE%89-%E7%94%A8%E6%96%B0%E7%9A%84%E8%AA%9E%E8%A8%80%E5%AF%AB%E4%B8%8B%E4%B8%80%E6%95%B4%E5%80%8B%E6%99%82%E4%BB%A3%E7%9A%84%E6%83%85%E7%B7%92-3136c3679a0a?source=rss-37ea7441b075------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>瓊迪迪安：用新的語言寫下一整個時代的情緒</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-12-25
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#soundfury">
+          soundfury
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://soundfury.medium.com/%E7%93%8A%E8%BF%AA%E8%BF%AA%E5%AE%89-%E7%94%A8%E6%96%B0%E7%9A%84%E8%AA%9E%E8%A8%80%E5%AF%AB%E4%B8%8B%E4%B8%80%E6%95%B4%E5%80%8B%E6%99%82%E4%BB%A3%E7%9A%84%E6%83%85%E7%B7%92-3136c3679a0a?source=rss-37ea7441b075------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="soundfury的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#soundfury 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1640415589000-->
+<p><a href="https://soundfury.medium.com/%E7%93%8A%E8%BF%AA%E8%BF%AA%E5%AE%89-%E7%94%A8%E6%96%B0%E7%9A%84%E8%AA%9E%E8%A8%80%E5%AF%AB%E4%B8%8B%E4%B8%80%E6%95%B4%E5%80%8B%E6%99%82%E4%BB%A3%E7%9A%84%E6%83%85%E7%B7%92-3136c3679a0a?source=rss-37ea7441b075------2">瓊迪迪安：用新的語言寫下一整個時代的情緒</a>
+——</p>
+
+<div>
+  <p>瓊迪迪安：用新的語言寫下一整個時代的情緒</p>
+  <p>年輕時的她並不是明星，卻拍下許多極為迷人的作家照，彷彿她鄰居的那些荷里活明星。</p>
+  <p>將近80歲的她或許比不上那些老去明星的風采，卻成為高級時尚品牌Celine的廣告代言人。</p>
+  <p>她是過去半世紀美國最好的散文作家，最能用小說、散文和報道捕捉20世紀美國的文化、政治與集體情感，尤其是1960、70年代的不安與崩塌。</p>
+  <p>在1967年的成名文章之後，她的寫作從此改變新聞報道這門手藝，成為「新新聞主義」的先鋒。</p>
+  <p>她在這個世紀更成為一個文化icon，一則讓人難以捉摸的傳奇。</p>
+  <p>她是瓊迪迪安（Joan Didion）。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/930/1*33kONbcj6eq1dbPa40aArQ.jpeg" />
+  </figure>
+  <p><strong>一</strong></p>
+  <p>1967年的春夏之交，迪迪安和攝影記者來到舊金山的海特艾許伯里區（Haight-Ashbury）來報導嬉皮。這裏是全世界嬉皮的聖地，許多年輕人從各地頭戴着花朵來到這裏，追求愛與解放，還有迷幻藥。</p>
+  <p>彼時迪迪安三十出頭，是做雜誌記者的第11個年頭。她在這裏遇見了很多流浪的靈魂，看到世界的傾斜。</p>
+  <p>她在文章〈Slouching Towards Bethlehem〉一開始就引用葉慈（W.B. Yeats）的詩句：「事物正在崩解，中心不能維持。」接着以極為詩意的筆觸寫着那些在藥物中失落的嬉皮：「青少年從一個城市漂流到另一個城市，蛻下他們的過去和未來一如蛇的蛻皮……人們在失蹤……小孩在失蹤……父母在失蹤。」</p>
+  <p>這些文字所訴說的故事不只是那個地區、不只是嬉皮文化，而是整個美國道德的失序和文化的混亂，是個人和社會規範的崩塌。</p>
+  <p>文章最後，迪迪安寫她遇到一個五歲女孩蘇珊，而她媽媽讓這小女孩服用LSD（迷幻藥）。對她來說，這說明了一切。</p>
+  <p>不過，當迪迪安來到海特艾許伯里區，嬉皮文化確實已經走向尾聲了，這裏成為媒體窺探的奇觀、逃家少年的庇護所，並由彩色的愛轉為黑暗深淵。文章登出的9月時，嬉皮之死更幾乎已經是共識了。非常及時。</p>
+  <p>她的描寫沒有錯，但缺乏了對嬉皮文化之所以走到這個地步更深的分析，也對嬉皮精神只是偏狹的理解。或許，這部分來自於她對這種反文化的陌生，甚至敵意，部分來自於她來到此地的時間點。</p>
+  <p>但這篇文章開拓了一種嶄新的書寫方式。迪迪安非常融入那個場景，甚至讓人感覺她可能隨時被那個斑斕迷幻的萬花筒吸入，成為另一個漂流靈魂。這篇文章成為她最著名的作品，且在次年就結集其他報道文章出書，書名就叫《Slouching Towards Bethlehem》。</p>
+  <p>《紐約時報》（The New York Times）評論作者對此書的評價是：「迪迪安的第一本非虛構寫作文集呈現了這幾年美國最好的一些雜誌文章。既然楚門卡波帝（Truman Capote）說這種文類已經是一種藝術，也許這本書不應該只是被認為『僅僅是新聞報道』，而是展示了今日美國最好的散文。」</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*IYrS9KSkK6-kpL4z76ivCQ.jpeg" />
+  </figure>
+  <h3 id="section">二</h3>
+  <p>迪迪安在大學時，獲得《Vogue》雜誌的一個寫作比賽獎，因此在1956年搬去紐約開始雜誌編輯的工作。期間出了一本不太受注目的小說，但雜誌文章漸漸有影響力。</p>
+  <p>出生於共和黨家庭的她，在政治態度上也是傾向共和黨：她在1964年投給了極端保守的候選人高華德，她最喜歡的電影明星是西部片英雄約翰韋恩（John Wayne）。難怪她在1967年時討厭那些嬉皮。</p>
+  <p>在《Slouching Towards Bethlehem》之後，她愈來愈具影響力，並於1969年受邀在當時最具影響力之一的雜誌《生活》寫專欄。彼時越戰戰事升高，她跟編輯說想去越南採訪，但得到的回覆是，「不，有些男記者已經去了。」她很憤怒，以致於在她的第一篇專欄中寫一個很特別、很個人的主題，亦即宣告她和先生正考慮離婚。</p>
+  <p>1970年她出版第二本小說《Play It as It Lays》，在接下來的幾年，她和也是作家的先生合寫了四部電影的劇本，他們在加州的家，時時都有電影明星、媒體主管和作家一起喝酒談天的派對。他們是加州文化界的中心。</p>
+  <p>但在1970年代，她也愈來愈政治化，不再是如當時面對嬉皮那麼天真，那麼去政治化。</p>
+  <p>對迪迪安政治態度和寫作方向轉變的一個關鍵人物，是《紐約書評》的傳奇主編席維斯（Robert Silvers）。席維斯在1970年代初注意到迪迪安的文章，認為她是美國生活的極佳觀察者。迪迪安從1973年起開始幫這份美國最重要的思想性刊物寫文章，一開始是關於電影產業，後來是關於政治，一直寫到21世紀。</p>
+  <p>席維斯善於邀請作者寫他們自己也意想不到的題材。1982年，席維斯請迪迪安去中美洲的薩爾瓦多寫一篇關於當地政治的文章，這是她從未嘗試過的，文章很成功，後來出版成為一本暢銷書。1988年，席維斯邀請她去政黨代表大會採訪，迪迪安說不，因為她對美國政治沒什麼好說的，但他堅持。這讓迪迪安此後在《紐約書評》寫了多篇政治報道和評論，從布希到克林頓，再到小布希與歐巴馬，也結集出版了一本關於美國政治的書：《美國小說》（American Fiction, 2001）（但其實這是非虛構作品集）。</p>
+  <p>迪迪安的非虛構寫作以及散文成就的確是遠大於她的小說，無論是她寫1960年代的兩本文集（第二本叫《白色專輯》（The White Album）），或者她在70歲時大大暢銷的書：《奇想之年》（The Year of Magical Thinking, 2005） — — 這是她在丈夫猝死之後書寫自己悲傷與痛苦的書。</p>
+  <p>知名導演Cameron Crowe年輕時曾是《滾石》雜誌記者（就是電影《成名在望》（Almost Famous）中主角的原型），他說《滾石》創辦人Jann Wenner曾給了還是年輕記者的他一本《Slouching Towards Bethlehem》說，「這就是你現在在做的事的未來」。「我讀了一篇他寫Jim Morrison的文章就知道，這文章不只是關於Jim Morrison，而是關於加州的生活、天氣和存在。我懂了，我們需要更大的圖像。」</p>
+  <p>迪迪安不愛接受媒體訪問，卻頗喜歡談寫作這件事。</p>
+  <p>在1976年的文章《我為何寫作》（這標題當然是借自歐威爾（George Orwell））中，她說：「我寫作完全是為了要發現我在想什麼、我在看什麼，以及我眼前的事物意味着什麼。我想要什麼和我害怕什麼。」</p>
+  <p>而她最迷人的地方是句子的結構與節奏。「文法是我用耳朵演奏的鋼琴……我所知道關於文法的一切就是其無盡的力量。」</p>
+  <p>「你試圖使人們看見你看見的事，是強迫你的想法、你的圖像給他們。經常，你必須告訴別人你的夢境，你的噩夢，雖然沒有人想要知曉某人的夢，無論好壞，且沒有人想帶着別人的夢行走。然而，一個作家總是要引誘讀者傾聽他們的夢。」迪迪安接受《巴黎評論》訪問時表示</p>
+  <p>對她來說，她知道自己和新聞報道之間的距離。1987年她出版新書《邁阿密》，出版社在宣傳上說這是一本調查新聞報道的傑作，她堅決反對這樣的用語，她認為自己的寫作主要是觀察和反思，而不是挖掘出什麼大新聞。</p>
+  <p>2013年，奧巴馬總統在白宮頒發「國家人文勳章」給她，並且說，「幾十年來，她是美國政治和文化最尖銳和最被尊敬的觀察家。」</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/640/1*6Gjhpigj1vYsrh51ORUDQw.jpeg" />
+  </figure>
+  <p>三</p>
+  <p>「許多我認識的洛杉磯人認為1960年代在1969年8月9日這天突然結束了，結束在曼森謀殺案的故事像野火在這個城市中蔓延的那個時刻。」</p>
+  <p>迪迪安在第二本非虛構寫作集《白色專輯》（1979）如此寫道。這本書也是關於1960年代後期和1970年代的美國反文化。</p>
+  <p>事實上，在《Slouching Towards Bethlehem》之後，在1960年代的最後三年，整個世界愈來愈崩壞、暴力而血腥：1968年那年，馬丁路德金和甘迺迪先後被槍殺、黑權運動（Black Power）火燄熾熱燃燒。到了1969年，更發生了曼森家族殺人事件和滾石樂隊在阿特蒙（Altamont）的死亡事件。</p>
+  <p>《白色專輯》一書記錄了許多這些事件：曼森、黑豹黨、The Doors等等。更重要的是，這其中許多都是發生在加州，甚至洛杉磯，尤其她認識那些人，例如波蘭斯基被謀殺的太太Sharon Tate。這一切對她來說，太過震撼。</p>
+  <p>「我想像我的生活是單純而甜美的，有時確實是，但這座城市不斷出現怪事。」</p>
+  <p>迪迪安的心理和身體健康隨着時代而崩塌。1968年夏天，在一陣暈眩和惡心之後，她走進醫院做檢查。</p>
+  <p>「現在看起來，那個突如其來的暈眩和惡心對於1968年夏天，並非是不恰當的反應。」</p>
+  <p>正如她的寫作所展現出的，她不只是把自己放在故事場景，而是徹底融入那個時代的不安。</p>
+  <p>難怪她可以寫出一整個時代的情緒。</p>
+  <p>對迪迪安來說，她的內心深處還是住着一個記者魂，她要拼命從現實中去挖掘素材，去記錄那細微的一切，以說出那個更大的圖像。</p>
+  <p>「我們跟自己說故事，以不斷活下去。」</p>
+  <p>在一部關於她的紀錄片《Joan Didion: The Center Will Not Hold》中，導演（她的姪兒）問她，回到1967年，當她作為一個記者看到一個五歲女孩用LSD她是什麼感覺？她坐在沙發上停頓了一會，說：「這令人害怕，我想要叫救護車，我想要叫警察，我想要幫忙，我想要離開這鬼地方，回到我家去看我的兩歲女兒，緊緊地守護着她。」</p>
+  <p>但幾秒後，她又說：「讓我告訴你，這是金礦。如果你是一名記者，你就是為了這一刻而活。」</p>
+  <p>註：我在2019 年的書《想像力的革命：1960年代的烏托邦追尋》有一章寫她和新新聞主義寫作者。</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=3136c3679a0a" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#soundfury 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2022-05-20/%E5%9C%A8%E5%8A%A0%E6%B3%B0%E9%9A%86%E5%B0%BC%E4%BA%9E%E4%B9%8B%E5%BE%8C-%E4%BB%96%E6%88%90%E7%82%BA%E6%88%91%E5%80%91%E6%89%80%E7%86%9F%E6%82%89%E7%9A%84%E6%AD%90%E5%A8%81%E7%88%BE/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2019-08-18/%E8%83%A1%E5%A3%AB%E6%89%98-%E5%BE%9E%E5%8F%8D%E5%8F%9B%E7%9A%84%E7%83%8F%E6%89%98%E9%82%A6%E5%88%B0%E7%83%8F%E6%89%98%E9%82%A6%E7%9A%84%E5%8F%8D%E5%8F%9B/">最早</a>--</span>
+    
+    
+      <li>
+        <time>2022-05-20</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-05-20/%E5%9C%A8%E5%8A%A0%E6%B3%B0%E9%9A%86%E5%B0%BC%E4%BA%9E%E4%B9%8B%E5%BE%8C-%E4%BB%96%E6%88%90%E7%82%BA%E6%88%91%E5%80%91%E6%89%80%E7%86%9F%E6%82%89%E7%9A%84%E6%AD%90%E5%A8%81%E7%88%BE/">
+          在加泰隆尼亞之後，他成為我們所熟悉的歐威爾
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-08-07</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-08-07/%E7%8F%BE%E4%BB%A3%E8%8F%81%E8%8B%B1%E5%B7%B2%E7%B6%93%E6%88%90%E7%82%BA%E6%96%B0%E6%99%82%E4%BB%A3%E7%9A%84%E4%B8%96%E8%A5%B2%E8%B2%B4%E6%97%8F/">
+          現代菁英已經成為新時代的世襲貴族
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-05-22</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-05-22/%E5%89%8D%E5%BE%80%E6%88%91%E5%80%91%E6%9C%AA%E6%9B%BE%E7%9F%A5%E6%9B%89%E7%9A%84%E5%8F%B0%E7%81%A3%E6%AD%B7%E5%8F%B2/">
+          前往我們未曾知曉的台灣歷史
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2021-12-24/%E5%8C%97%E6%AD%90%E5%93%81%E7%89%8CARKET%E9%96%8B%E7%AE%B1-%EF%B8%8F%E7%89%87%E5%B0%BE%E8%AF%95%E7%A9%BF/">
+            前一篇：北歐品牌ARKET開箱❗️片尾试穿
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2021-12-26/%E8%AF%84%E6%AF%9B%E6%B3%BD%E4%B8%9C%E7%83%AD/">
+            後一篇：评毛泽东热
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2021-12-24/%E5%8C%97%E6%AD%90%E5%93%81%E7%89%8CARKET%E9%96%8B%E7%AE%B1-%EF%B8%8F%E7%89%87%E5%B0%BE%E8%AF%95%E7%A9%BF/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2021-12-26/%E8%AF%84%E6%AF%9B%E6%B3%BD%E4%B8%9C%E7%83%AD/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2022-05-20/%E5%9C%A8%E5%8A%A0%E6%B3%B0%E9%9A%86%E5%B0%BC%E4%BA%9E%E4%B9%8B%E5%BE%8C-%E4%BB%96%E6%88%90%E7%82%BA%E6%88%91%E5%80%91%E6%89%80%E7%86%9F%E6%82%89%E7%9A%84%E6%AD%90%E5%A8%81%E7%88%BE/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2021-08-07/%E7%8F%BE%E4%BB%A3%E8%8F%81%E8%8B%B1%E5%B7%B2%E7%B6%93%E6%88%90%E7%82%BA%E6%96%B0%E6%99%82%E4%BB%A3%E7%9A%84%E4%B8%96%E8%A5%B2%E8%B2%B4%E6%97%8F/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2021-12-24/%E5%8C%97%E6%AD%90%E5%93%81%E7%89%8CARKET%E9%96%8B%E7%AE%B1-%EF%B8%8F%E7%89%87%E5%B0%BE%E8%AF%95%E7%A9%BF/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2021-12-26/%E8%AF%84%E6%AF%9B%E6%B3%BD%E4%B8%9C%E7%83%AD/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<soundfury>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2022-05-20/%E5%9C%A8%E5%8A%A0%E6%B3%B0%E9%9A%86%E5%B0%BC%E4%BA%9E%E4%B9%8B%E5%BE%8C-%E4%BB%96%E6%88%90%E7%82%BA%E6%88%91%E5%80%91%E6%89%80%E7%86%9F%E6%82%89%E7%9A%84%E6%AD%90%E5%A8%81%E7%88%BE/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<soundfury>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2021-08-07/%E7%8F%BE%E4%BB%A3%E8%8F%81%E8%8B%B1%E5%B7%B2%E7%B6%93%E6%88%90%E7%82%BA%E6%96%B0%E6%99%82%E4%BB%A3%E7%9A%84%E4%B8%96%E8%A5%B2%E8%B2%B4%E6%97%8F/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

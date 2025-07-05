@@ -1,0 +1,3467 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>當年輕人舉起武器 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+當年輕人舉起武器
+——
+" />
+    <meta property="og:description" content="
+當年輕人舉起武器
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="當年輕人舉起武器" />
+    <meta property="twitter:title" content="當年輕人舉起武器" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40reprily%2F%25E7%2595%25B6%25E5%25B9%25B4%25E8%25BC%2595%25E4%25BA%25BA%25E8%2588%2589%25E8%25B5%25B7%25E6%25AD%25A6%25E5%2599%25A8-bafyreid6l44txeofkbujnsmoc6cvzybaysj46472n34up6w6uem5snc4ge" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@reprily/%E7%95%B6%E5%B9%B4%E8%BC%95%E4%BA%BA%E8%88%89%E8%B5%B7%E6%AD%A6%E5%99%A8-bafyreid6l44txeofkbujnsmoc6cvzybaysj46472n34up6w6uem5snc4ge" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@reprily/%E7%95%B6%E5%B9%B4%E8%BC%95%E4%BA%BA%E8%88%89%E8%B5%B7%E6%AD%A6%E5%99%A8-bafyreid6l44txeofkbujnsmoc6cvzybaysj46472n34up6w6uem5snc4ge&text=當年輕人舉起武器&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@reprily/%E7%95%B6%E5%B9%B4%E8%BC%95%E4%BA%BA%E8%88%89%E8%B5%B7%E6%AD%A6%E5%99%A8-bafyreid6l44txeofkbujnsmoc6cvzybaysj46472n34up6w6uem5snc4ge&title=當年輕人舉起武器" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@reprily/%E7%95%B6%E5%B9%B4%E8%BC%95%E4%BA%BA%E8%88%89%E8%B5%B7%E6%AD%A6%E5%99%A8-bafyreid6l44txeofkbujnsmoc6cvzybaysj46472n34up6w6uem5snc4ge&title=當年輕人舉起武器" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=當年輕人舉起武器&body=
+當年輕人舉起武器
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@reprily/%E7%95%B6%E5%B9%B4%E8%BC%95%E4%BA%BA%E8%88%89%E8%B5%B7%E6%AD%A6%E5%99%A8-bafyreid6l44txeofkbujnsmoc6cvzybaysj46472n34up6w6uem5snc4ge" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@reprily/%E7%95%B6%E5%B9%B4%E8%BC%95%E4%BA%BA%E8%88%89%E8%B5%B7%E6%AD%A6%E5%99%A8-bafyreid6l44txeofkbujnsmoc6cvzybaysj46472n34up6w6uem5snc4ge&title=當年輕人舉起武器&caption=
+當年輕人舉起武器
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=當年輕人舉起武器&url=https://matters.news/@reprily/%E7%95%B6%E5%B9%B4%E8%BC%95%E4%BA%BA%E8%88%89%E8%B5%B7%E6%AD%A6%E5%99%A8-bafyreid6l44txeofkbujnsmoc6cvzybaysj46472n34up6w6uem5snc4ge" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>當年輕人舉起武器</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-04-03
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 翁婉瑩</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@reprily/%E7%95%B6%E5%B9%B4%E8%BC%95%E4%BA%BA%E8%88%89%E8%B5%B7%E6%AD%A6%E5%99%A8-bafyreid6l44txeofkbujnsmoc6cvzybaysj46472n34up6w6uem5snc4ge" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1617470632000-->
+<p><a href="https://matters.news/@reprily/%E7%95%B6%E5%B9%B4%E8%BC%95%E4%BA%BA%E8%88%89%E8%B5%B7%E6%AD%A6%E5%99%A8-bafyreid6l44txeofkbujnsmoc6cvzybaysj46472n34up6w6uem5snc4ge">當年輕人舉起武器</a>
+——</p>
+
+<div>
+  <p>緬甸政治犯援助協會統計2月1日政變至3月29日，至少510位民眾死於軍方暴力鎮壓，2574人遭到拘留。</p>
+  <p>維安部隊在全國各地的抗議行動中使用實彈鎮壓，於都會區使用手榴彈，讓住宅區成為戰場。28日的仰光達威鎮（Tamwe Township），一位來自若開邦的28歲年輕工程師Shine Htet Aung，因為擔心傷及他人，徒手拾起手榴彈想丟回去時，炸彈爆炸身亡；當天軍方也在仰光昂萊鎮（Hlaing Township）使用手榴彈，造成一人手腕被炸斷。</p>
+  <p>曼德勒工人U Aye Ko在27日晚間擔任社區巡守時，遭維安部隊槍擊受傷，軍人將他拖進燃燒的輪胎堆中，同時槍擊恐嚇周遭的人不得救援，他在烈焰中哀嚎死去，留下碳化的遺骸與四名子女。因為沒有鄰居敢為他收屍，隔天早上某家慈善機構安置了他的遺體。</p>
+  <p>27日晚間，曼德勒皮吉達貢鎮（Pyigyidagun Township）的90多棟房屋發生大火，維安部隊開槍嚇阻嘗試救援的周遭居民。這場大火造成500多位民眾無家可歸。</p>
+  <p>維安部隊在群眾間製造驚懼的氛圍，但依舊無法阻止群眾走上街頭。</p>
+  <p>從2月和平抗爭、不合作運動以來，民眾面對維安部隊的武力，以沙袋輪胎堆起拒馬，到自製汽油彈，甚至以安全帽、強力橡皮繩製成「投石機」，讓汽油彈射得更遠。</p>
+  <p>緬甸民眾這方宛如中世紀戰場，面對的卻是軍方實彈、手榴彈、火箭筒乃至直昇機的機關槍。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/4bc99797-73e2-4e90-8058-ec9e9cc10295.jpeg" data-asset-id="4bc99797-73e2-4e90-8058-ec9e9cc10295" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/4305f5c1-a3a7-4503-b43a-686e030e8d27.jpeg" data-asset-id="4305f5c1-a3a7-4503-b43a-686e030e8d27" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/fb881318-d9e7-498d-a9fe-6f467b171eca.jpeg" data-asset-id="fb881318-d9e7-498d-a9fe-6f467b171eca" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/566862fa-fc2c-4e5a-8bef-94928c15fef4.jpeg" data-asset-id="566862fa-fc2c-4e5a-8bef-94928c15fef4" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>3月27日至29日，<a href="https://www.facebook.com/watch/?v=449102409700345" target="_blank">克倫邦帕本鎮（Hpapun）遭到多次空襲</a>，至少3人死亡，9人受傷，8000多人逃入森林，當地人的房屋遭到焚燬，數千人正橫越泰緬邊界的薩爾溫江，試圖進入泰國的難民營。當地克倫民族解放軍（Karen National Liberation Army, KNLA）人士表示，這是二十多年來從未有過的空襲攻擊。</p>
+  <p>克倫民族聯盟（Karen National Union, KNU）與KNLA在2012年與登盛政府簽署停火協議，2021年政變後，當地多次與緬甸國軍發生軍事衝突，而KNU與KNLA作為緬甸最古老的少數民族武裝組織（以下簡稱「民地武」），自政變後便有許多全民盟與政治人物逃往克倫邦。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/0b221710-0db3-42f0-a456-3ff173183603.jpeg" data-asset-id="0b221710-0db3-42f0-a456-3ff173183603" referrerpolicy="no-referrer" />    <figcaption>
+<span>因空襲逃入森林的克倫族民眾</span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <h2 id="section">前往邊境的年輕人</h2>
+  <p>軍人在往來仰光的高速公路上，逐一檢查、登記所有的客車與貨車。軍政府在3月23日表示，有10名仰光青年在前往克倫邦接受訓練的路上，遭到逮捕。</p>
+  <p>3月26日在台北就締學堂的座談上，參與者最踴躍的主題包括聯合國是否會以「R2P國家保護責任」介入緬甸、東南亞國協的態度，以及緬甸是否會出現反軍政、集合各民地武的「聯合軍隊」。</p>
+  <p>《The Irrawaddy》分析了緬甸平地區域年輕人對上述第三點的想法。</p>
+  <p>一是到邊界的民地武進行軍事訓練，組織軍隊反攻，改變當前的政治局勢；</p>
+  <p>二是所有的民地武集結，透過戰爭擊敗軍政府，建立真正的聯邦國家。</p>
+  <p>「我們無法透過和平抗議獲勝，軍政府無視人民對民主的呼籲，唯一的方法就是反擊軍政府。」目前在仰光醫科大學就讀的Ko Thi Ha（匿名）對《The Irrawaddy》說。</p>
+  <p>來自邊境少數民族區域的Ko Thi Ha正考慮返回家鄉，參與民地武學習基本軍事技能。</p>
+  <p>而現實是，他如果選擇武裝革命的道路，就無法繼續學業，不得不放棄成為醫生的夢想。</p>
+  <p>大學生如Ko Thi Ha，或是在緬甸中心區域成長的年輕人，此次政變崛起的25歲以下「Z世代」，離開家鄉，到邊境參與軍事訓練，是難以想像的決定，但似乎是面對軍政府殘酷的鎮壓，改變未來的選項之一。</p>
+  <h2 id="section-1">各民地武的態度</h2>
+  <p>代表全民盟的民間議會（CRPH）呼籲各民地武組織「聯合軍隊」，推翻軍政府。但CRPH的說法，已經被武力強大的克欽獨立軍（Kachin Independence Army）所否認。</p>
+  <p>翁山蘇姬執政期間與民地武的關係，在軍方制衡與她全國停火遠大夢想間，始終流於表面形式，全民盟政府與各民地武間的信任薄弱。且翁山蘇姬在政變後被軍方軟禁，無法證實CRPH的聯合軍隊訴求，是否符合翁山蘇姬的和平路線。</p>
+  <p>而克欽獨立軍的法律部門曾表示，CRPH對建立聯邦聯盟的說法，一直是口頭承諾，而沒有具體步驟。</p>
+  <p>緬甸境內有10個分別於2015年至2018年與政府簽署停火協議，他們組成 <a href="https://www.ncaseao.org/" target="_blank">NCA-S EAO</a>，即「簽署停火協議（NCA）的少數民族武裝組織（EAO）」。</p>
+  <p>分別為：克倫民族聯盟（The Karen National Union）、克倫民族解放軍（The Karen National Liberation Army）、阿拉干解放黨（The Arakan Liberation Party）、欽民族前線（The Chin National Front）、全緬甸學生民主陣線（The All Burma Students’ Democratic Front）、帕奧民族解放組織（The Pa-O National Liberation Organization）與南撣邦重建委員會（The Restoration Council of Shan State，即南撣邦軍）、新孟邦黨（The New Mon State Party）、拉祜民主聯盟（The Lahu Democratic Union）。</p>
+  <p>尚未簽署停火協議的8個主要民地武：</p>
+  <p>佤邦聯合軍（United Wa State Army）、克欽獨立軍、撣邦進步黨/撣邦軍（Shan State Army，又稱北撣邦軍）、民族民主聯合軍（National Democratic Alliance Army，又稱勐拉軍）、緬甸民族民主同盟軍（Myanmar National Democratic Alliance Army，又稱果敢同盟軍）、德昂民族解放軍（Ta’ang National Liberation Army）、阿拉干軍（Arakan Army）與克倫尼民族進步黨（Karenni National Progressive Party）。</p>
+  <p>位於在克耶邦的卡倫尼民族進步黨（KNPP）曾與政府簽署停火協議後三個月破裂，在2021年政變後雖然率先表態，但仍認為軍政府與CRPH可透過政治對話解決。</p>
+  <ul>
+    <li>軍力強大、資金充裕，未簽署和平協議，但沒有軍事衝突意願，未對軍事政變表達意見：佤邦聯合軍與勐拉軍。</li>
+    <li>具備武裝力量，未簽署停火協議的民地武：克欽獨立軍、果敢同盟軍、德昂民族解放軍與阿拉干軍。</li>
+  </ul>
+  <p>後三者於3月30日發布聯合聲明，若軍政府持續武力鎮壓，三同盟軍將進行軍事對抗。</p>
+  <p>克欽獨立軍自3月初克欽邦首府密支那的暴力鎮壓後，持續與緬甸國軍發生軍事衝突。截至3月28日，克欽獨立軍已佔領4個原本屬於緬軍的軍事基地。</p>
+  <ul>
+    <li>具備武裝力量，已簽署停火協議，反對軍事政變與鎮壓的民地武：克倫民族聯盟、克倫民族解放軍與南撣邦軍。</li>
+  </ul>
+  <p>克倫民族解放軍自2月以來，持續與緬軍發生衝突，襲擊軍事基地，不僅在截斷緬軍的陸路內地補給，也攔截緬軍自泰國購買的食用米與汽油，這些補給原本要橫越薩爾溫江與帕本鎮，最後3月23日撤回泰國，而泰國政府始終否認販售糧油給緬軍。</p>
+  <p>克倫民族解放軍的強硬行動，也是3月27日至29日帕本鎮遭空襲，民眾逃亡的原因之一。</p>
+  <p>「民眾對民地武的需求很容易想像，但民地武不太可能離開自己的基地，去攻擊其他城市。」一位經驗豐富的民地武指揮官對《The Irrawaddy》表示。</p>
+  <p>另一位來自中緬邊境民地武中校說，</p>
+  <div class="language-plaintext ql-syntax highlighter-rouge"><div class="highlight"><pre class="highlight"><code>「在某地進行短而快速的襲擊很容易，但是要控制大的地區範圍，不是想像中的簡單。戰爭不能用想像的，我們必須有實際可行的作為。」「而且我們若進攻緬軍，發動戰爭，我們自己這個邦的人民將首當其衝，而且在軍事與政治上都不會解決問題。」「若是要在緬甸的平地區域發動戰爭，平地區域為主的緬族青年必須自己組織軍隊，緬族必須為自己而戰。」他說。</code></pre></div>  </div>
+  <h2 id="section-2">財務、軍餉與彈藥</h2>
+  <p>《The Irrawaddy》指出建立聯合軍隊，反擊軍政府最實際的問題－財務、軍餉與彈藥。</p>
+  <p>就算都市的年輕人前往邊區，民地武願意傳授軍事技能，但仍必須面對每日開銷的食物與居住費用，建立軍隊與兵營更需要能支援彈藥軍火的長期財務戰略。</p>
+  <p>《The Irrawaddy》舉了阿拉干軍與全緬甸學生民主陣線為例。</p>
+  <p>來自克欽獨立軍位於中緬邊境總部拉咱（Lai Zar）的阿拉干軍，成立於2009年，在十年內從僅29人發展到7000多人的兵力，自2017年若開邦羅興亞難民事件爆發後，持續與緬甸國軍作戰，其善用網路社群號召若開年輕人，更自行訓練軍隊、購買與製造彈藥，包括步槍與防空武器，長時間募集資金，建立財務系統，以發展軍力。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/6341071a-9306-4df0-839d-2f79b0be5b5c.jpeg" data-asset-id="6341071a-9306-4df0-839d-2f79b0be5b5c" referrerpolicy="no-referrer" />    <figcaption>
+<span>阿拉干軍</span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>全緬甸學生民主陣線建立於1988年的8888民主運動，領導學運的學生逃往泰國、中國、印度與孟加拉邊境少數民族控制區域，堅持「與政治活動結合的武裝鬥爭」戰略，企圖在邊境學習軍事技巧後，回到平原地區推翻當時的軍政府。</p>
+  <p>但實際上他們從未如擁有武裝力量的民地武般，建立內部財政系統與彈藥軍火供給，直到現在一直是小型武裝組織，聲稱有武裝部隊的名義，但有些領導人實際上在國外生活。該組織曾發生內部鬥爭事件，導致成員死亡。</p>
+  <p>全緬甸學生民主陣線於2013年和緬甸政府簽署停火協議。</p>
+  <p>2021年的年輕人，正如1988年的88世代，走入邊境曠野，舉起武器，未來猶未可知。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/bc55c8e2-ce17-4f07-ab57-6272eab15005.jpeg" data-asset-id="bc55c8e2-ce17-4f07-ab57-6272eab15005" referrerpolicy="no-referrer" />    <figcaption>
+<span>謀劃奪回仰光的全緬甸學生民主陣線</span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>這個例子讓我想起紀錄片<a href="https://opinion.cw.com.tw/blog/profile/52/article/6867" target="_blank">《緬甸詩人的故事書》的主角之一貌昂賓</a>。</p>
+  <p>詩人貌昂賓在1962年奈溫政變後，參與民主運動而長期進出監獄；其子亦是1988年成立的全緬甸學生民主陣線成員，逃往泰緬邊界的叢林，與民地武合作，一起舉起槍桿子，而不是求學的筆。</p>
+  <p>來自緬甸城市的青年男女，與少數民族既合流又摩擦，最終嚴重生隙，分崩離析。年輕學子展開漫長的飄零，回不了故鄉，告別家人與大好前程，出逃歐美國家尋求庇護。</p>
+  <p>貌昂賓之子逃往北歐，離散20年的家庭，年邁的貌昂賓夫妻在2016年迎回中年的兒子，相對淚眼無盡，只剩下「你會再回來看我們嗎？」</p>
+  <p>「滿難的....。」</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/e0b80ae6-5759-455d-91ce-4db4b4f54f56.jpeg" data-asset-id="e0b80ae6-5759-455d-91ce-4db4b4f54f56" referrerpolicy="no-referrer" />    <figcaption>
+<span>貌昂賓夫妻在2018年先後過世。</span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>Photos from <a href="https://www.facebook.com/theirrawaddyburmese/?__cft__[0]=AZW8XmDW17A66-ywAZ2QvOsiFAkpzNZHztEhMGxh3hf_VaP-60uJWoSddJjvk6D1lBDFSYBZLviaXYT0Qm1lvgYyR6m7pOVw9Sq18SM60RaNEAOEub747KDsR7cbq-IBTsEL03d1EpSuABUkcCB9u7r-&amp;__tn__=kK-R" target="_blank">The Irrawaddy - Burmese Edition</a> <a href="https://www.facebook.com/frontiermyanmar.net/?__cft__[0]=AZW8XmDW17A66-ywAZ2QvOsiFAkpzNZHztEhMGxh3hf_VaP-60uJWoSddJjvk6D1lBDFSYBZLviaXYT0Qm1lvgYyR6m7pOVw9Sq18SM60RaNEAOEub747KDsR7cbq-IBTsEL03d1EpSuABUkcCB9u7r-&amp;__tn__=kK-R" target="_blank">Frontier Myanmar</a> <a href="https://www.facebook.com/Khaingbowin444/photos" target="_blank"> <strong>Khaingbowin_Arakan state</strong></a> 台灣遠流出版社</p>
+  <p><br /></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2021-04-05</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-04-05/%E6%AD%B7%E5%8F%B2%E6%95%99%E7%A7%91%E6%9B%B8%E6%B2%92%E6%95%99%E7%9A%84%E4%BA%8B-%E9%9B%99%E9%87%8D%E8%BA%AB%E4%BB%BD%E7%9A%84%E7%9F%9B%E7%9B%BE-%E5%85%A7%E8%92%99%E5%8F%A4%E5%8F%8D%E6%BC%A2%E8%AA%9E%E6%95%99%E5%AD%B8%E7%A4%BA%E5%A8%81-%E8%92%99%E5%8F%A4%E6%84%8F%E8%AD%98-%E4%B8%AD%E5%9C%8B%E8%AA%8D%E5%90%8C-%E5%BB%A3%E6%9D%B1%E8%A9%B1%E7%9A%84%E7%94%9F%E5%AD%98%E7%A9%BA%E9%96%93/">
+          【歷史教科書沒教的事】 雙重身份的矛盾：內蒙古反漢語教學示威｜ 蒙古意識｜中國認同｜廣東話的生存空間
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-04-03</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-04-03/%E7%95%B6%E6%88%B0%E5%9C%B0%E8%A8%98%E8%80%85%E9%80%B2%E5%85%A5%E6%AE%BA%E6%88%AE%E4%B9%8B%E5%9C%B0/">
+          當戰地記者進入殺戮之地
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-04-03</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-04-03/%E7%AB%99%E4%B8%8A%E8%A1%97%E9%A0%AD%E7%9A%84%E6%BC%94%E5%93%A1%E8%88%87%E5%B0%8E%E6%BC%94/">
+          站上街頭的演員與導演
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-04-03</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-04-03/%E7%B7%AC%E7%94%B8%E4%BA%BA%E6%B0%91%E7%9A%84%E6%B1%BA%E5%AE%9A-%E5%BE%8C%E6%94%BF%E8%AE%8A%E6%99%82%E6%9C%9F%E7%9A%84%E5%81%87%E8%A8%AD/">
+          緬甸人民的決定：後政變時期的假設
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2021-04-03/%E7%AB%99%E4%B8%8A%E8%A1%97%E9%A0%AD%E7%9A%84%E6%BC%94%E5%93%A1%E8%88%87%E5%B0%8E%E6%BC%94/">
+            前一篇：站上街頭的演員與導演
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2021-04-03/%E7%95%B6%E6%88%B0%E5%9C%B0%E8%A8%98%E8%80%85%E9%80%B2%E5%85%A5%E6%AE%BA%E6%88%AE%E4%B9%8B%E5%9C%B0/">
+            後一篇：當戰地記者進入殺戮之地
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2021-04-03/%E7%AB%99%E4%B8%8A%E8%A1%97%E9%A0%AD%E7%9A%84%E6%BC%94%E5%93%A1%E8%88%87%E5%B0%8E%E6%BC%94/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2021-04-03/%E7%95%B6%E6%88%B0%E5%9C%B0%E8%A8%98%E8%80%85%E9%80%B2%E5%85%A5%E6%AE%BA%E6%88%AE%E4%B9%8B%E5%9C%B0/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2021-04-03/%E7%95%B6%E6%88%B0%E5%9C%B0%E8%A8%98%E8%80%85%E9%80%B2%E5%85%A5%E6%AE%BA%E6%88%AE%E4%B9%8B%E5%9C%B0/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2021-04-03/%E7%AB%99%E4%B8%8A%E8%A1%97%E9%A0%AD%E7%9A%84%E6%BC%94%E5%93%A1%E8%88%87%E5%B0%8E%E6%BC%94/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2021-04-03/%E7%AB%99%E4%B8%8A%E8%A1%97%E9%A0%AD%E7%9A%84%E6%BC%94%E5%93%A1%E8%88%87%E5%B0%8E%E6%BC%94/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2021-04-03/%E7%95%B6%E6%88%B0%E5%9C%B0%E8%A8%98%E8%80%85%E9%80%B2%E5%85%A5%E6%AE%BA%E6%88%AE%E4%B9%8B%E5%9C%B0/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2021-04-03/%E7%95%B6%E6%88%B0%E5%9C%B0%E8%A8%98%E8%80%85%E9%80%B2%E5%85%A5%E6%AE%BA%E6%88%AE%E4%B9%8B%E5%9C%B0/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2021-04-03/%E7%AB%99%E4%B8%8A%E8%A1%97%E9%A0%AD%E7%9A%84%E6%BC%94%E5%93%A1%E8%88%87%E5%B0%8E%E6%BC%94/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
