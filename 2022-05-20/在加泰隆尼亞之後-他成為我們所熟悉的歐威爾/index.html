@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>在加泰隆尼亞之後，他成為我們所熟悉的歐威爾 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+在加泰隆尼亞之後，他成為我們所熟悉的歐威爾
+——
+" />
+    <meta property="og:description" content="
+在加泰隆尼亞之後，他成為我們所熟悉的歐威爾
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="在加泰隆尼亞之後，他成為我們所熟悉的歐威爾" />
+    <meta property="twitter:title" content="在加泰隆尼亞之後，他成為我們所熟悉的歐威爾" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fsoundfury.medium.com%2F%25E5%259C%25A8%25E5%258A%25A0%25E6%25B3%25B0%25E9%259A%2586%25E5%25B0%25BC%25E4%25BA%259E%25E4%25B9%258B%25E5%25BE%258C-%25E4%25BB%2596%25E6%2588%2590%25E7%2582%25BA%25E6%2588%2591%25E5%2580%2591%25E6%2589%2580%25E7%2586%259F%25E6%2582%2589%25E7%259A%2584%25E6%25AD%2590%25E5%25A8%2581%25E7%2588%25BE-82dc11118910%3Fsource%3Drss-37ea7441b075------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://soundfury.medium.com/%E5%9C%A8%E5%8A%A0%E6%B3%B0%E9%9A%86%E5%B0%BC%E4%BA%9E%E4%B9%8B%E5%BE%8C-%E4%BB%96%E6%88%90%E7%82%BA%E6%88%91%E5%80%91%E6%89%80%E7%86%9F%E6%82%89%E7%9A%84%E6%AD%90%E5%A8%81%E7%88%BE-82dc11118910?source=rss-37ea7441b075------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://soundfury.medium.com/%E5%9C%A8%E5%8A%A0%E6%B3%B0%E9%9A%86%E5%B0%BC%E4%BA%9E%E4%B9%8B%E5%BE%8C-%E4%BB%96%E6%88%90%E7%82%BA%E6%88%91%E5%80%91%E6%89%80%E7%86%9F%E6%82%89%E7%9A%84%E6%AD%90%E5%A8%81%E7%88%BE-82dc11118910?source=rss-37ea7441b075------2&text=在加泰隆尼亞之後，他成為我們所熟悉的歐威爾&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://soundfury.medium.com/%E5%9C%A8%E5%8A%A0%E6%B3%B0%E9%9A%86%E5%B0%BC%E4%BA%9E%E4%B9%8B%E5%BE%8C-%E4%BB%96%E6%88%90%E7%82%BA%E6%88%91%E5%80%91%E6%89%80%E7%86%9F%E6%82%89%E7%9A%84%E6%AD%90%E5%A8%81%E7%88%BE-82dc11118910?source=rss-37ea7441b075------2&title=在加泰隆尼亞之後，他成為我們所熟悉的歐威爾" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://soundfury.medium.com/%E5%9C%A8%E5%8A%A0%E6%B3%B0%E9%9A%86%E5%B0%BC%E4%BA%9E%E4%B9%8B%E5%BE%8C-%E4%BB%96%E6%88%90%E7%82%BA%E6%88%91%E5%80%91%E6%89%80%E7%86%9F%E6%82%89%E7%9A%84%E6%AD%90%E5%A8%81%E7%88%BE-82dc11118910?source=rss-37ea7441b075------2&title=在加泰隆尼亞之後，他成為我們所熟悉的歐威爾" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=在加泰隆尼亞之後，他成為我們所熟悉的歐威爾&body=
+在加泰隆尼亞之後，他成為我們所熟悉的歐威爾
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://soundfury.medium.com/%E5%9C%A8%E5%8A%A0%E6%B3%B0%E9%9A%86%E5%B0%BC%E4%BA%9E%E4%B9%8B%E5%BE%8C-%E4%BB%96%E6%88%90%E7%82%BA%E6%88%91%E5%80%91%E6%89%80%E7%86%9F%E6%82%89%E7%9A%84%E6%AD%90%E5%A8%81%E7%88%BE-82dc11118910?source=rss-37ea7441b075------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://soundfury.medium.com/%E5%9C%A8%E5%8A%A0%E6%B3%B0%E9%9A%86%E5%B0%BC%E4%BA%9E%E4%B9%8B%E5%BE%8C-%E4%BB%96%E6%88%90%E7%82%BA%E6%88%91%E5%80%91%E6%89%80%E7%86%9F%E6%82%89%E7%9A%84%E6%AD%90%E5%A8%81%E7%88%BE-82dc11118910?source=rss-37ea7441b075------2&title=在加泰隆尼亞之後，他成為我們所熟悉的歐威爾&caption=
+在加泰隆尼亞之後，他成為我們所熟悉的歐威爾
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=在加泰隆尼亞之後，他成為我們所熟悉的歐威爾&url=https://soundfury.medium.com/%E5%9C%A8%E5%8A%A0%E6%B3%B0%E9%9A%86%E5%B0%BC%E4%BA%9E%E4%B9%8B%E5%BE%8C-%E4%BB%96%E6%88%90%E7%82%BA%E6%88%91%E5%80%91%E6%89%80%E7%86%9F%E6%82%89%E7%9A%84%E6%AD%90%E5%A8%81%E7%88%BE-82dc11118910?source=rss-37ea7441b075------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>在加泰隆尼亞之後，他成為我們所熟悉的歐威爾</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-05-20
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#soundfury">
+          soundfury
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://soundfury.medium.com/%E5%9C%A8%E5%8A%A0%E6%B3%B0%E9%9A%86%E5%B0%BC%E4%BA%9E%E4%B9%8B%E5%BE%8C-%E4%BB%96%E6%88%90%E7%82%BA%E6%88%91%E5%80%91%E6%89%80%E7%86%9F%E6%82%89%E7%9A%84%E6%AD%90%E5%A8%81%E7%88%BE-82dc11118910?source=rss-37ea7441b075------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="soundfury的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#soundfury 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1653099887000-->
+<p><a href="https://soundfury.medium.com/%E5%9C%A8%E5%8A%A0%E6%B3%B0%E9%9A%86%E5%B0%BC%E4%BA%9E%E4%B9%8B%E5%BE%8C-%E4%BB%96%E6%88%90%E7%82%BA%E6%88%91%E5%80%91%E6%89%80%E7%86%9F%E6%82%89%E7%9A%84%E6%AD%90%E5%A8%81%E7%88%BE-82dc11118910?source=rss-37ea7441b075------2">在加泰隆尼亞之後，他成為我們所熟悉的歐威爾</a>
+——</p>
+
+<div>
+  <p>在加泰隆尼亞之後，他成為我們所熟悉的歐威爾</p>
+  <p>1.</p>
+  <p>喬治歐威爾無疑是二十世紀最有影響力的作家：不只是在文學世界，更是在政治世界，甚至是日常生活 — — 如今誰不知道「老大哥」這個字眼呢？「歐威爾式」（Orwellian）也成為一個描述可怕現實的現代語彙。有人說要理解二十世紀，不能不讀歐威爾 — — 因為二十世紀的主軸是冷戰，而歐威爾的《動物農莊》和《一九八四》犀利地呈現共產主義極權體制下的壓迫。但到了二十一世紀，不論是新的科技監控體制，或者2016年川普上台後對於事實的蔑視，《一九八四》的故事依然讓人警醒，依然是一個照亮世界的明燈。有哪一個文學作家有這種影響力？</p>
+  <p>不可思議的是，他對蘇聯式獨裁體制的洞見不是因為他曾經生活在其中 — — 除了緬甸，他一生住在英國；也不是因為他真的知曉共產主義極權體制下的恐怖 — — 他於1950年過世，而那時冷戰才剛剛開始。</p>
+  <p>文學家的想像力確實比現實更現實。</p>
+  <p>2.</p>
+  <p>歐威爾對共產主義的批判當然不是憑空而來，而主要是他來自參加西班牙內戰的親身經驗。</p>
+  <p>他早年在緬甸擔任警察，認識到帝國主義的壓迫。五年後回到英國，想做一個報導現實的記者，也寫虛構小說，並有強烈的左翼情懷，關注社會不平等。1933 年他以喬治歐威爾為筆名發表第一部作品《倫敦巴黎落魄記》，而後去考察考察碼頭工人生活，寫下《通往維根碼頭之路》，中間還發表幾本小說。</p>
+  <p>1936年，西班牙內戰爆發，各地的理想主義者紛紛來到這個美麗的國家，對抗佛朗哥的法西斯主義，包括作家海明威。尚未真正成名的歐威爾在1936年底來到巴塞隆納，起初只是抱著「為報社寫文章」的念頭，但一到當地就立刻加入民兵組織，「因為在當時、以及在那種氛圍下，加入民兵似乎是我想得到的唯一合理之舉。」他在《向加泰隆尼雅致敬》這本書中如此寫道。他加入的組織屬於馬克思主義統一工人黨，這個組織偏向托洛斯基派，不屬於蘇聯共產黨的共產國際。</p>
+  <p>他一開始看到的巴塞隆納似乎是一個微型的社會主義烏托邦：「大夥兒相信革命、相信未來，處處彌漫突然實現「自由平等」的感覺：大夥兒努力活得像個「人」，而非資本主義機器的小齒輪。」他寫道「 關於革命，有太多事我不明白，就某種程度而言我甚至不喜歡；但是在這裡，我立刻理解這是一種值得爭取並捍衛的狀態。」</p>
+  <p>然後他上前線幾個月，甚至被狙擊手一槍打穿他的喉嚨，幾乎喪命。五月回到巴塞隆納時，這裡已經不是幾個月前他以為的美好世界，而是蔓延著政治鬥爭。他目睹了共產黨如何以暴力和謊言摧毀他所屬的馬統工黨，逮捕他們的同志，抹黑他們屬於法西斯陣營，最後他和妻子被迫逃亡。</p>
+  <p>回到英國後，沒有左翼媒體願意刊登他關於真相的報導，且如同在巴塞隆納的共黨媒體，歐威爾發現英國的親共媒體也都在掩蓋事實，這對他打擊更大，並構成《一九八四》的核心：不論左翼或右翼媒體，事實都是可以被掌權者所改寫與重寫的。</p>
+  <p>他所見證的共產主義的恐怖、背叛與謊言是形成他後來政治態度的關鍵，也使得當彼時許多西方左翼知識份子還在對蘇共有幻想時，歐威爾就能洞察共產黨的極權本質。</p>
+  <p>3.</p>
+  <p>歐威爾的人生是一個難得的傳奇：少年時就讀菁英的伊頓中學，十八歲時去仍是英屬殖民地的緬甸擔任帝國警察，回到倫敦當過流浪漢，在巴黎當過洗碗工，參加西班牙內戰並中槍差點死亡，在BBC 電台工作過，又離開倫敦孤單地住在蘇格蘭的偏僻農莊，就在他的作家生涯要走上巔峰時死於肺結核，年僅四十六歲，而冷戰剛剛開啟，《動物農莊》和《一九八四》成為冷戰時期最重要的文學武器。</p>
+  <p>歐威爾是從西班牙回來立即寫下「向加泰隆尼亞致敬」這本書。這是他結合文學和報導的非虛構寫作，一方面是寫他在西班牙內戰的所見所得，文筆生動鮮明，帶著幽默感，另方面也提供了對當時的政治分析。而全書結構從一開始描述巴塞隆納的美好，到他幾個月後從戰場再回來時所親歷的暴力與追捕，彷彿是一本精心架構的小說（他描寫在巴塞隆納逃亡那段宛如一本政治驚險小說），我們既與他一起經歷局勢的轉變，也看見他個人內心與世界觀的轉變。</p>
+  <p>在西班牙內戰後，他從原本支持左翼的知識份子，變成共產主義的受害者，這沒有讓他放棄社會主義，只是更深刻理解到，不論是面對帝國主義、法西斯主義或共產主義，他都要抵抗權力的濫用，並致力於追求真實與捍衛自由，而打字機就是他的武器。</p>
+  <p>「西班牙內戰和1936–37年間的其它事件起了決定性作用。那以後我就知道自己到底想要什麼了。1936年後我所寫的每一行嚴肅的字，都在直接或間接地反對極權主義，並主張我所理解的民主社會主義」。歐威爾在後來的著名文章「我為何寫作」寫下。</p>
+  <p>幾年之後，他寫下《動物農莊》和《一九八四》，影響了整個世界，成為我們所熟知的喬治歐威爾。</p>
+  <p>＿＿＿＿＿＿＿＿＿＿＿</p>
+  <p>本文為喬治歐威爾《向加泰隆尼亞致敬》中文版導論。</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=82dc11118910" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#soundfury 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2022-05-20/%E5%9C%A8%E5%8A%A0%E6%B3%B0%E9%9A%86%E5%B0%BC%E4%BA%9E%E4%B9%8B%E5%BE%8C-%E4%BB%96%E6%88%90%E7%82%BA%E6%88%91%E5%80%91%E6%89%80%E7%86%9F%E6%82%89%E7%9A%84%E6%AD%90%E5%A8%81%E7%88%BE/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2019-08-18/%E8%83%A1%E5%A3%AB%E6%89%98-%E5%BE%9E%E5%8F%8D%E5%8F%9B%E7%9A%84%E7%83%8F%E6%89%98%E9%82%A6%E5%88%B0%E7%83%8F%E6%89%98%E9%82%A6%E7%9A%84%E5%8F%8D%E5%8F%9B/">最早</a>--</span>
+    
+    
+    
+      <li>
+        <time>2021-12-25</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-12-25/%E7%93%8A%E8%BF%AA%E8%BF%AA%E5%AE%89-%E7%94%A8%E6%96%B0%E7%9A%84%E8%AA%9E%E8%A8%80%E5%AF%AB%E4%B8%8B%E4%B8%80%E6%95%B4%E5%80%8B%E6%99%82%E4%BB%A3%E7%9A%84%E6%83%85%E7%B7%92/">
+          瓊迪迪安：用新的語言寫下一整個時代的情緒
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-08-07</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-08-07/%E7%8F%BE%E4%BB%A3%E8%8F%81%E8%8B%B1%E5%B7%B2%E7%B6%93%E6%88%90%E7%82%BA%E6%96%B0%E6%99%82%E4%BB%A3%E7%9A%84%E4%B8%96%E8%A5%B2%E8%B2%B4%E6%97%8F/">
+          現代菁英已經成為新時代的世襲貴族
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2022-05-20/%E9%98%B2%E7%96%AB%E7%9A%84%E6%A8%AA%E8%A1%8C%E4%B8%8E%E8%A8%80%E8%AF%B4%E7%9A%84%E5%9B%B0%E5%A2%83/">
+            前一篇：防疫的横行与言说的困境
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2022-05-28/%E8%BD%89%E8%BC%89-27-%E7%94%A8%E5%8F%8D%E8%85%90%E7%9A%84%E5%8A%9B%E5%BA%A6%E5%8F%8D%E5%AF%B9%E5%BD%A2%E5%BC%8F%E4%B8%BB%E4%B9%89%E5%92%8C%E6%9C%AC%E4%BD%8D%E4%B8%BB%E4%B9%89/">
+            後一篇：轉載#27 用反腐的力度反对形式主义和本位主义
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2022-05-20/%E9%98%B2%E7%96%AB%E7%9A%84%E6%A8%AA%E8%A1%8C%E4%B8%8E%E8%A8%80%E8%AF%B4%E7%9A%84%E5%9B%B0%E5%A2%83/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2022-05-28/%E8%BD%89%E8%BC%89-27-%E7%94%A8%E5%8F%8D%E8%85%90%E7%9A%84%E5%8A%9B%E5%BA%A6%E5%8F%8D%E5%AF%B9%E5%BD%A2%E5%BC%8F%E4%B8%BB%E4%B9%89%E5%92%8C%E6%9C%AC%E4%BD%8D%E4%B8%BB%E4%B9%89/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2021-12-25/%E7%93%8A%E8%BF%AA%E8%BF%AA%E5%AE%89-%E7%94%A8%E6%96%B0%E7%9A%84%E8%AA%9E%E8%A8%80%E5%AF%AB%E4%B8%8B%E4%B8%80%E6%95%B4%E5%80%8B%E6%99%82%E4%BB%A3%E7%9A%84%E6%83%85%E7%B7%92/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2022-05-20/%E9%98%B2%E7%96%AB%E7%9A%84%E6%A8%AA%E8%A1%8C%E4%B8%8E%E8%A8%80%E8%AF%B4%E7%9A%84%E5%9B%B0%E5%A2%83/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2022-05-28/%E8%BD%89%E8%BC%89-27-%E7%94%A8%E5%8F%8D%E8%85%90%E7%9A%84%E5%8A%9B%E5%BA%A6%E5%8F%8D%E5%AF%B9%E5%BD%A2%E5%BC%8F%E4%B8%BB%E4%B9%89%E5%92%8C%E6%9C%AC%E4%BD%8D%E4%B8%BB%E4%B9%89/">
+      <i>前</i>
+    </a>
+    
+    
+    
+    <a class="fab-action fab-action-4" title="<soundfury>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2021-12-25/%E7%93%8A%E8%BF%AA%E8%BF%AA%E5%AE%89-%E7%94%A8%E6%96%B0%E7%9A%84%E8%AA%9E%E8%A8%80%E5%AF%AB%E4%B8%8B%E4%B8%80%E6%95%B4%E5%80%8B%E6%99%82%E4%BB%A3%E7%9A%84%E6%83%85%E7%B7%92/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

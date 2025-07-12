@@ -1,0 +1,3485 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>“一颗柠檬戴着墨镜在沙滩上休息”-人工智能请创作 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+“一颗柠檬戴着墨镜在沙滩上休息”-人工智能请创作
+——
+" />
+    <meta property="og:description" content="
+“一颗柠檬戴着墨镜在沙滩上休息”-人工智能请创作
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="“一颗柠檬戴着墨镜在沙滩上休息”-人工智能请创作" />
+    <meta property="twitter:title" content="“一颗柠檬戴着墨镜在沙滩上休息”-人工智能请创作" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40DunesWorkshop%2F%25E4%25B8%2580%25E9%25A2%2597%25E6%259F%25A0%25E6%25AA%25AC%25E6%2588%25B4%25E7%259D%2580%25E5%25A2%25A8%25E9%2595%259C%25E5%259C%25A8%25E6%25B2%2599%25E6%25BB%25A9%25E4%25B8%258A%25E4%25BC%2591%25E6%2581%25AF-%25E4%25BA%25BA%25E5%25B7%25A5%25E6%2599%25BA%25E8%2583%25BD%25E8%25AF%25B7%25E5%2588%259B%25E4%25BD%259C-bafyreidwiu7h4q4vthgxcruqp35yge3viwyo5yqnqqv6rlimekm5oshw3a" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@DunesWorkshop/%E4%B8%80%E9%A2%97%E6%9F%A0%E6%AA%AC%E6%88%B4%E7%9D%80%E5%A2%A8%E9%95%9C%E5%9C%A8%E6%B2%99%E6%BB%A9%E4%B8%8A%E4%BC%91%E6%81%AF-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%AF%B7%E5%88%9B%E4%BD%9C-bafyreidwiu7h4q4vthgxcruqp35yge3viwyo5yqnqqv6rlimekm5oshw3a" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@DunesWorkshop/%E4%B8%80%E9%A2%97%E6%9F%A0%E6%AA%AC%E6%88%B4%E7%9D%80%E5%A2%A8%E9%95%9C%E5%9C%A8%E6%B2%99%E6%BB%A9%E4%B8%8A%E4%BC%91%E6%81%AF-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%AF%B7%E5%88%9B%E4%BD%9C-bafyreidwiu7h4q4vthgxcruqp35yge3viwyo5yqnqqv6rlimekm5oshw3a&text=“一颗柠檬戴着墨镜在沙滩上休息”-人工智能请创作&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@DunesWorkshop/%E4%B8%80%E9%A2%97%E6%9F%A0%E6%AA%AC%E6%88%B4%E7%9D%80%E5%A2%A8%E9%95%9C%E5%9C%A8%E6%B2%99%E6%BB%A9%E4%B8%8A%E4%BC%91%E6%81%AF-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%AF%B7%E5%88%9B%E4%BD%9C-bafyreidwiu7h4q4vthgxcruqp35yge3viwyo5yqnqqv6rlimekm5oshw3a&title=“一颗柠檬戴着墨镜在沙滩上休息”-人工智能请创作" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@DunesWorkshop/%E4%B8%80%E9%A2%97%E6%9F%A0%E6%AA%AC%E6%88%B4%E7%9D%80%E5%A2%A8%E9%95%9C%E5%9C%A8%E6%B2%99%E6%BB%A9%E4%B8%8A%E4%BC%91%E6%81%AF-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%AF%B7%E5%88%9B%E4%BD%9C-bafyreidwiu7h4q4vthgxcruqp35yge3viwyo5yqnqqv6rlimekm5oshw3a&title=“一颗柠檬戴着墨镜在沙滩上休息”-人工智能请创作" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=“一颗柠檬戴着墨镜在沙滩上休息”-人工智能请创作&body=
+“一颗柠檬戴着墨镜在沙滩上休息”-人工智能请创作
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@DunesWorkshop/%E4%B8%80%E9%A2%97%E6%9F%A0%E6%AA%AC%E6%88%B4%E7%9D%80%E5%A2%A8%E9%95%9C%E5%9C%A8%E6%B2%99%E6%BB%A9%E4%B8%8A%E4%BC%91%E6%81%AF-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%AF%B7%E5%88%9B%E4%BD%9C-bafyreidwiu7h4q4vthgxcruqp35yge3viwyo5yqnqqv6rlimekm5oshw3a" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@DunesWorkshop/%E4%B8%80%E9%A2%97%E6%9F%A0%E6%AA%AC%E6%88%B4%E7%9D%80%E5%A2%A8%E9%95%9C%E5%9C%A8%E6%B2%99%E6%BB%A9%E4%B8%8A%E4%BC%91%E6%81%AF-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%AF%B7%E5%88%9B%E4%BD%9C-bafyreidwiu7h4q4vthgxcruqp35yge3viwyo5yqnqqv6rlimekm5oshw3a&title=“一颗柠檬戴着墨镜在沙滩上休息”-人工智能请创作&caption=
+“一颗柠檬戴着墨镜在沙滩上休息”-人工智能请创作
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=“一颗柠檬戴着墨镜在沙滩上休息”-人工智能请创作&url=https://matters.news/@DunesWorkshop/%E4%B8%80%E9%A2%97%E6%9F%A0%E6%AA%AC%E6%88%B4%E7%9D%80%E5%A2%A8%E9%95%9C%E5%9C%A8%E6%B2%99%E6%BB%A9%E4%B8%8A%E4%BC%91%E6%81%AF-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%AF%B7%E5%88%9B%E4%BD%9C-bafyreidwiu7h4q4vthgxcruqp35yge3viwyo5yqnqqv6rlimekm5oshw3a" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>“一颗柠檬戴着墨镜在沙滩上休息”-人工智能请创作</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-07-16
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 沙丘研究所</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@DunesWorkshop/%E4%B8%80%E9%A2%97%E6%9F%A0%E6%AA%AC%E6%88%B4%E7%9D%80%E5%A2%A8%E9%95%9C%E5%9C%A8%E6%B2%99%E6%BB%A9%E4%B8%8A%E4%BC%91%E6%81%AF-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%AF%B7%E5%88%9B%E4%BD%9C-bafyreidwiu7h4q4vthgxcruqp35yge3viwyo5yqnqqv6rlimekm5oshw3a" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1657999215000-->
+<p><a href="https://matters.news/@DunesWorkshop/%E4%B8%80%E9%A2%97%E6%9F%A0%E6%AA%AC%E6%88%B4%E7%9D%80%E5%A2%A8%E9%95%9C%E5%9C%A8%E6%B2%99%E6%BB%A9%E4%B8%8A%E4%BC%91%E6%81%AF-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%AF%B7%E5%88%9B%E4%BD%9C-bafyreidwiu7h4q4vthgxcruqp35yge3viwyo5yqnqqv6rlimekm5oshw3a">“一颗柠檬戴着墨镜在沙滩上休息”-人工智能请创作</a>
+——</p>
+
+<div>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/73f1a3e8-2197-45f6-bfdb-73b931c1224d.png" data-asset-id="73f1a3e8-2197-45f6-bfdb-73b931c1224d" referrerpolicy="no-referrer" />    <figcaption>
+<span>作者/沙丘研究所</span>
+    </figcaption>
+  </figure>
+  <p>让我们聊聊最近大热的人工智能（AI）艺术创作。</p>
+  <p>在艾厂的人工智能国际论坛进行的五月底（以至后来的六月），还发生着另外一件颇相关的重要事件——两款主要的人工智能图像生成软件，DALL·E·2和Midjourney，都开始<strong>开放测试版的内部邀请</strong>。沙丘的成员也获得了Midjourney的邀请，进入了测试版的discord社群，得以观察到无数图像的生成、筛选与调校，也尝试了自己输入的提示词（prompt）以生成AI图像。</p>
+  <p>在预想当中，我们以为AI图像的生成界面是一个简洁的提示词输入框加上图像生成页——类似于谷歌图片搜索页面，只是“搜索结果”换成了“生成成果”。然而实际情况却是，<strong>所有Midjourney受邀的测试新人都将加入一个discord社群，这个大社群下又进一步细分出五十个“新人群”。</strong>当新人加入的时候，Midjourney的机器人（bot）将会首先自动在“通告群”中发出消息，指定某某新人到第XX号新人群中。</p>
+  <p>在这一“群聊”的机制中，用户将以适当格式输入提示词——譬如“一颗柠檬戴着墨镜，躺在沙滩上休息，摄影级真实风格”，而机器人将在约一分钟后，在群聊界面里回复依照提示词生成的四张AI图像，并在新消息中提及（@）新人。<strong>值得注意的是，这意味着所有用户要求的图像——不管是输入的提示词，还是生成出来的图像，都将对所有人可见。</strong></p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/a845205b-7fa7-4784-99c0-20ca48f00c7f.png" data-asset-id="a845205b-7fa7-4784-99c0-20ca48f00c7f" referrerpolicy="no-referrer" />    <figcaption>
+<span>Midjourney的Discord社群的截图。左侧是新人群的不同频道，右侧展示的图像的提示词是“消防员，1970年代拍立得风格”，图像下方的U1代表放大（upscale）第一张图，VI代表对第一张图做出进一步变种（variation），以此类推。图源：作者。</span>
+    </figcaption>
+  </figure>
+  <p>在这个基础上，用户可以进一步对得到的四张图像做挑选，要求对其中的某一个或某几个做出其他变种（variation），或者放大尺寸、增加分辨率（upscale）。有趣的是，正因为这些所有步骤都处在一个群聊的界面当中，<strong>所有用户都可以对其他用户要求的图像做挑选，而机器人会把这些要求一一回应，发布在群聊当中。</strong></p>
+  <p>我们对Midjourney团队选择的这样的交互/组织形式非常感兴趣。不得不承认，五十个接连不断滚动着新消息的群组十分有冲击力，庞大的信息量和不断增大的积累速率注定没有任何单个的人类大脑能跟得上——这样的机制一开始也让新人有些晕头转向。但适应以后，我们也大概体会到这种形式的妙处——我们仿佛置身于一个<strong>巨大的实验性公共艺术项目</strong>当中，这是单点的、以个体用户为中心的界面（譬如谷歌图片的搜索框）所不能比拟的。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/f39e7381-5668-4048-b574-0a1c33134cd7.jpeg" data-asset-id="f39e7381-5668-4048-b574-0a1c33134cd7" referrerpolicy="no-referrer" />    <figcaption>
+<span>同样的提示词：“一颗柠檬戴着墨镜，躺在沙滩上休息，摄影级真实风格。”左侧是Midjourney的生成图像，右侧是DALL·E·2的。图源：MattVideoProductions。</span>
+    </figcaption>
+  </figure>
+  <p>首先，这种像洪水或雪球一样不断向人滚来和涌来的图像量，或许也正是人工智能艺术想要向我们传达的一个重要特征——<strong>没有哪个人类艺术家或者人类艺术家团队，能够如此大量和快速地响应“客户”的要求，并不断产出不同变种，再进一步修改并放大，二十四小时无休无止。</strong></p>
+  <p>其次，这种群聊的机制也让输入者、观看者和AI机器人的身份变得史无前例地平等，并且边界模糊。<strong>这里没有作者和观众的二元对立，署名权也似乎无从说起</strong>——一张惊艳的图究竟是谁的作品？是最起初的提示词输入者吗？是AI机器人吗？是Midjourney团队的算法工程师吗？是中途帮忙选择变种或者要求增大尺寸的其他用户吗？这是多方协作、去中心化的过程。</p>
+  <p>第三，每个用户不断看到其他用户的提示词，也不断看到新的AI生成图，也构成了一个不断向其他人学习怎样更好地、更有创意地输入提示词的研讨会式的场所。另外，当看到其他人要求的图像出现，并从中筛选，本质上也是在帮Midjourney团队义务训练他们的算法。这些也引出了人类艺术家时期不曾有过的问题，<strong>在AI创作的往复沟通中，究竟谁是真正的受益者？架构者、输入者、筛选者、观众、机器之间，究竟谁在训练谁，谁又在向谁学习？</strong></p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/15735897-6e78-4dfe-bafe-2b71a5e90d42.jpeg" data-asset-id="15735897-6e78-4dfe-bafe-2b71a5e90d42" referrerpolicy="no-referrer" />    <figcaption>
+<span>提示词：“一个日本女人坐在榻榻米上，摄影级真实风格。”Midjourney的生成图像。图源：作者。</span>
+    </figcaption>
+  </figure>
+  <p><strong>事实上，这些问题在艾厂的2022艺术与人工智能国际论坛当中也多有提及。我们认为这是一个很好的机会和时间节点，写下我们自己的想法。</strong>艾厂的论坛以“人工想象力”为主题，由来自艺术、设计、文学、计算机科学和哲学领域的嘉宾对这一话题进行分享和探讨<a href="http://mp.weixin.qq.com/s?__biz=MzU3Mjk1ODAxOQ==&amp;mid=2247492452&amp;idx=1&amp;sn=60a70a38e6ee076355d855d9a1fd21a6&amp;chksm=fcca5748cbbdde5e559c6e186a37cbf7307870109cae055379912054e79a4600c66bc5de3e60&amp;scene=21#wechat_redirect" rel="noopener noreferrer" target="_blank">（关于论坛具体信息，点击这里跳转）</a>。沙丘研究所也受邀作为特别观察员参与。<strong>不过，就像是上述罗列的那样，我们对此并没有宣言式的观点，而是更想要用问题的形式分享一些我们正在思考的东西。</strong></p>
+  <p>在尝试了AI图像的内测之后，沙丘的成员以及我们在Media Lab的朋友都由衷发出这样的感叹：<strong>这样的技术革命对于图像和创作的影响，或许不会小于一百年前摄影技术对于绘画的冲击。</strong>正如本雅明在他著名的作品《机械复制时代的艺术作品》的开头引用了保罗·瓦莱里：</p>
+  <blockquote>
+世界正发展着的伟大的技术革新会改变艺术的全部表达技巧，由此必将<strong>影响到艺术创作本身</strong>，最终或许还会导致以最迷人的方式，<strong>改变艺术概念本身</strong>｡  </blockquote>
+  <p>对于本雅明来说，当时兴起的电影使艺术不再是脱离大众的收藏品，因为其本质本来就是大众的。而如今人工智能艺术平台似乎让每个人都成为了创作者。另一方面，对图像的重新定义似乎还将进一步重塑我们与世界的本质关系，毕竟视觉是人类感知世界的（最）主要渠道。<strong>正如电影中“摄像机”的位置为观者创造了一种全新的观察和共情的方式，人工智能艺术中的人工智能似乎也为我们提供了一种不同于人类创作的思考方式。</strong></p>
+  <h2 id="section"><strong>01 想象力和创造力是人类独有的吗？</strong></h2>
+  <p><strong>对于很多人来说，“人工”和“想象力”两个词注定是一组矛盾；“人工想象力”也根本就无法存在，没有比较和讨论的余地。</strong>“人工”一词指向“人造的”和“人造物（artifacts）”而与之相对，想象力似乎是人与生俱来的，是“自然的”而非被“制造”出来的。另外，想象力还通常被认为是人类独有的能力，它将我们与其他非人的“物”区分开来——不论是自然中的动植物，有机物和无机物，还是如工具和机器这样多样的人造物。</p>
+  <p><strong>这种主导性的观点尤其被人类中心主义所推崇，因为人们通过这种独特的创造力获得了主体性。</strong>在文艺复兴时期和英雄式的现代主义中，我们都可以看到许多“单独存在的天才（standalone genius）”。这些艺术家、建筑师、作家广为人知，天才的光环让他们区别于他们创作和生活中的协作者，他们的创作力是神秘的（或可以说是神圣的）——后人研究他们的生平、作品、创作过程和手法，但是他们的想象力和创造力则是先验或超验的，这样的能力宛如神降，仅属自身；这个神秘无穷的黑箱，他人无法刺透，更无法复制。也因这一点，这些天才的创作者作为个体，与同时代的其他人分离了出来，像是”单独存在“的。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/c063e379-c0b1-4ed3-860f-c89fd2ae6958.jpeg" data-asset-id="c063e379-c0b1-4ed3-860f-c89fd2ae6958" referrerpolicy="no-referrer" />    <figcaption>
+<span>提示词：“一只狐猴处在星丛图当中”Midjourney的生成图像。图源：作者。</span>
+    </figcaption>
+  </figure>
+  <p>然而，不论是以物为导向的存在论（Object-Oriented Ontology），还是后人类主义的艺术、设计、文学实践和哲学研究，都挑战着这种人类中心主义的观点。在论坛中，嘉宾们也从不同方面就这一观念进行了批判和思考。<strong>譬如在许煜的分享中，他通过解读康德，强调“想象”本身就具有“人工”的成分，因为图像形成（image formation）的过程总需要涉及“符号”等人工系统；而乔安娜·泽林斯卡也引用后人类主义学者克莱尔·科尔布鲁克的观点，批判将人类作为唯一的艺术创造者的想法。</strong></p>
+  <p>这一问题不仅是理解人工想象力的核心，也进一步成为对于人类想象力的反思。乔安娜·泽林斯卡在分享中展示了日本设计师菅野索和山口隆广设计的“无意义的绘画机器人（Senseless Drawing Bot）”所绘制的图像——这些图像既像是孩子的涂鸦，又和杰克逊·波洛克和塞·托姆布雷的艺术有着高度相似的特质。</p>
+  <p>对于乔安娜·泽林斯卡来说，与其将这一作品看作是对于人类涂鸦的一种模仿，它或许可以被理解为一种对于人类创造性为的重新思考——<strong>或许人类的创造力也并非来自人的理智和主体能动性。这些都使得“想象力是自然的而非人工制造的”这一命题变得不再稳定。</strong></p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/44d4cdb3-d95b-4a88-94e9-84f71b42b625.png" data-asset-id="44d4cdb3-d95b-4a88-94e9-84f71b42b625" referrerpolicy="no-referrer" />    <figcaption>
+<span>菅野索和山口隆广设计的“无意义的绘画机器人（Senseless Drawing Bot）”。图源：Yohei Yamakami 2011。</span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/072f576d-7e47-423d-9d15-c961f54cfe0a.png" data-asset-id="072f576d-7e47-423d-9d15-c961f54cfe0a" referrerpolicy="no-referrer" />    <figcaption>
+<span>塞·托姆布雷“酒神” 系列（2005），艺术评论家阿瑟•丹托（Arthur Danto）称这些画为“酒神式狂欢之作”，只有神才能达到如此酣醉之境。图源：Rob McKeever/Gagosian Gallery。</span>
+    </figcaption>
+  </figure>
+  <h2 id="section-1"><strong>02 署名权与自主性归属于谁？</strong></h2>
+  <p>如今，数字素养（digital literacy）几乎成为了新一代人类的必备。AI所生产的机械的、数字复制的图像材料，也给当今几乎耗尽了创造可能性的人类艺术家们提供了新的刺激和原材料。<strong>人工想象力既是自主的（autonomous），又是无处不在的（ubiquitous），它的美学令人目眩神迷。</strong></p>
+  <p>但开发者和艺术家们显然并不止步于将AI艺术视作一个可以不断扩展壮大的灵感库。我们也好奇，如果想象力并非人类独有的，那么<strong>人工智能是否能独立进行创作呢？</strong>在论坛中，我们看到多位艺术家、设计师分享人工智能作为共同进行创作者产生的作品，但一个仅由人工完成的艺术作品会是什么样的呢？</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/9dbcb6f5-2cef-45eb-9eee-8be491993687.jpeg" data-asset-id="9dbcb6f5-2cef-45eb-9eee-8be491993687" referrerpolicy="no-referrer" />    <figcaption>
+<span>提示词：“美国郊区住宅，1960年代拼贴广告风。”MIdjourney生成的图像。图源：作者。</span>
+    </figcaption>
+  </figure>
+  <p>这显然还很困难。人工智能来自于人，现有人工智能的想象与创造也全程由人类像父母呵护一般陪伴着全程。其中最让人工“署名权”成为问题的，在于首先，<strong>机器算法学习和训练的库仍由人来指定，而产出物亦由人来最后筛选。</strong>它仍需要人类的“处理”，才能被人类的双眼“消化”。</p>
+  <p>论坛上，刘宇昆讲述，他尝试利用AI学习自己的写作去创作新文本，却发现成果并不惊艳，甚至难以被借用。他只好大幅修改，加入很多自己的段落，最终发表了《五十件与人类合作的AI应该知道的事》（“50 Things Every AI Working with Humans Should Know”）。同理，算法通过分析推荐而产生的审美，直白且相似度高，有时又很跳脱。即便如此，不少设计师有意识地去收集这些图像，编辑整合成新的图集，作为自己创作的情绪板（moodboard）。</p>
+  <p><strong>除开我们在文章一开头提到的图像的生产，AI也可以进一步处理已有的图像，在某种风格内进行新的创作。</strong>它把图像创作者的风格变为一种滤镜，加在其他图像上。例如在AI艺术网站Dream中输入图像内容，选择“吉卜力风格”，新生成的图像就展现出相似的奇幻动画风格，而转换成超现实主义风格，则会出现类似于达利画作的图像。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/2fd2a74e-0ef1-4273-870a-3059197cffbf.png" data-asset-id="2fd2a74e-0ef1-4273-870a-3059197cffbf" referrerpolicy="no-referrer" />    <figcaption>
+<span>左侧：输入提示词“沙丘，吉卜力风格”后的结果；右侧：输入提示词“沙丘，超现实风格”后的结果。图源：作者。</span>
+    </figcaption>
+  </figure>
+  <p>用户提供命题，而AI作为产出者，生产了新的图像。抑或是用户提供内容，而AI把它放进别人风格的框架里，生产新的图像。<strong>那么AI在这个产出过程里的身份是作者还是工具？究竟谁才是这次创作的主语？AI，AI开发者，用户，还是艺术家本人？</strong></p>
+  <p>这不妨也诱使我们进一步想象：如果没有人对于人工智能进行训练、或对产出物进行筛选，也不仅考虑用AI处理已有的图像，它是否还能够产生某种更为“自主”的作品？这样的作品或许指向了一种<strong>更加不可知的想象力</strong>，成果或许也超出了人类的理解和欣赏范围。菲利普•迪克的《仿生人会梦见电子羊吗？》和莱姆的<a href="http://mp.weixin.qq.com/s?__biz=MzU3Mjk1ODAxOQ==&amp;mid=2247491216&amp;idx=1&amp;sn=792ae2775736b1722718039f9acf0c42&amp;chksm=fcc9aabccbbe23aab783ab0bc3a46252ef2e879421c89c3843d11eafca6a0bf0f6b75694398d&amp;scene=21#wechat_redirect" rel="noopener noreferrer" target="_blank">《索拉里斯星》（点击这里跳转）</a>为我们提供了这样的范式：对不可想象之物的想象。</p>
+  <h2 id="section-2"><strong>03 人工智能的量产是创作吗？</strong></h2>
+  <p>通过分析搜索到的大量图像数据，AI提取其中已有的艺术风格、物体形状、人物特征并进行整合和产出，全新的图像作品便诞生了。在我们加入的AI图像内测社群里，新的提示词和新的图像不断产生、受挑选并且迭代、发展，这使我们产生了一种强烈的感觉——<strong>与其说这是一种“制作（production）”，毋宁说它是一种伴随着无数变异和选择过程的“繁殖（reproduction）”。</strong></p>
+  <p>这些图像也模拟出一些现实世界中本不存在的创造物的形象。譬如我们可以在DALL-E、Midjourney或者其他AI图像生成软件中，叠加“扎哈·哈迪德”与“巴黎世家”（zaha hadid + balenciaga）这样各自风格强烈的建筑师和时尚品牌，从而获得一系列既有廓形剪裁，又具有光滑曲度的服装——一个将二者基因强势结合的奇异图像。这样九张或四张全新图像所构成的“图集（atlas）”恰好使它稳定地建立了一种新的创作话语权，就好像世界上真的有这么一位混血设计师一样。同理，我们可以混血食物和工具，建筑和艺术，绘画和摄影等等不同领域的词条，创造新的“人造物（artifacts）”。电子时代的图像现实，开始脱离我们的物理现实，自由繁衍。<strong>这些无限自主繁衍的新的图像，是人工智能创作的“作品”吗？</strong></p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/07fb23db-b4ff-46ef-a8e4-3035803e03eb.png" data-asset-id="07fb23db-b4ff-46ef-a8e4-3035803e03eb" referrerpolicy="no-referrer" />    <figcaption>
+<span>在DALL-E mini中使用“扎哈·哈迪德”与“巴黎世家”产生的九张图像。来源：huggingface。</span>
+    </figcaption>
+  </figure>
+  <p>确实，从我们传统的对艺术的理解来说，这种创作很容易被视为”再生产（reproduction）”。你可以说，它只是建立在可考的图像基础上，在已经树立强烈风格的作品中，进行了一番重塑和拼贴。</p>
+  <p>如果我们相信创作的出发点是想象力，是人类创作艺术的初心和本能，那当AI回收利用了一些已有的艺术作品，<strong>这种再生产也算是新的想象力吗？这是否只是一种对我们想象力的映射？而在这个问题的反面，如果我们认为AI所做的不是新的，我们又如何辩驳人类的想象物就是新的，而不是多种已有元素的再组合？</strong></p>
+  <h2 id="section-3"><strong>04 人工智能更擅长图像处理而非文字处理吗？</strong></h2>
+  <p>AI创作也许就像是人类创作的镜子，它的创作生命力具有危险的吸引力。</p>
+  <p><strong>这个镜子上常常还有另一个重要的东西——滤镜。事实上，“Filter”既有过滤器也有滤镜的意思，这两者对AI艺术来说都尤为关键。</strong>在摄影技术当中，我们熟知滤镜的使用——前期阶段，摄影师可以把不同色泽与反射度的偏振镜加在镜头前面，保证作品的光线效果符合预期；后期阶段，摄影师还可以通过诸如Lightroom这样的处理软件，为原片赋予更多不同风格的数字滤镜，诸如强调紫色和黄色的“赛博朋克风”或者降低饱和度且偏黄的“复古风”。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/a726260b-1778-4213-b019-195506334494.png" data-asset-id="a726260b-1778-4213-b019-195506334494" referrerpolicy="no-referrer" />    <figcaption>
+<span>利用AI技术将图像转为夜景效果的滤镜。图源：Cyanapse's Photorealistic Image Filters。</span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/27b11d3c-9945-454d-9d08-d3d73bb09cc8.png" data-asset-id="27b11d3c-9945-454d-9d08-d3d73bb09cc8" referrerpolicy="no-referrer" />    <figcaption>
+<span>电影 Delete My Photos，导演Dmitry Nikiforov使用了图像编辑器Prisma。图源：Delete My Photos。</span>
+    </figcaption>
+  </figure>
+  <p>通过添加“滤镜”，图像产生了强烈的气氛或感情，它很多时候也是让某一摄影师营造出个人风格，并迅速产生大众辨识度的关键元素。可以说，滤镜的添加已经改变了摄影师的创作方式。<strong>不过，在传统的滤镜（再）创作中，风格所带来的氛围和情绪很少可以独立于作品的内容存在，它像是一个主体之外锦上添花的附加物。</strong></p>
+  <p>这引导我们思考图像滤镜与文本风格的关系。一方面，艺术滤镜在图像前后期处理中已经非常常见。AI对已有图像进行滤镜处理也已经达到了相当成熟的程度——不只是明暗、白平衡和色彩的调整，AI可以对图像当中抽象的线条进行修改，对人和物的形态、笔触的使用都进行再组织。<strong>但另一方面，在文本当中似乎还很难运用滤镜。</strong></p>
+  <p>刘宇昆在分享中也提到，文本似乎很难通过人工智能生成和添加某种“风格滤镜”。或许现有的互联网生态已经完全由图像作为主导，所以对文本的处理不再是资本最青睐的领域，<strong>但在此处，我们同样好奇图像与文本之间风格化的内生差异。</strong>就像是图像有“吉卜力风”、“赛博朋克风”、“复古风”这样的说法，不同作家的文本和叙事显然也有其强烈的美学风格。譬如我们会说“莎士比亚式的（Shakespearean）”、“卡夫卡式的（kafkaesque）”或“奥威尔式的（Orwellian）”，但相比于热闹的图像滤镜市场，为某段文本添加风格的AI处理仍然非常少见。</p>
+  <p>我们或许可以做一些猜想：<strong>对于AI开发来说，相比于图像处理当中图像和滤镜的清楚叠加关系，文本的风格似乎不只是文本本身的附加物，而是本身就溶解在文本当中，无法简单剥离出来。</strong>卡夫卡式的风格并不完全因为作者喜好用某种特定的词语搭配，或者偏爱某种方言化的表达，而可以说，他营造出的那个世界，以及建立在其叙事上的人物的总体处境，构成了他那种独一无二的风格。相似地，奥威尔式的风格也不在于其遣词造句的特殊性，而在于他对某种极权主义体制的理解和描摹。如果AI要通过大量学习这样的文本，提取出“卡夫卡式的”或者“奥威尔式的”滤镜，可以方便地将之套用在用户给定的任意文本上，或许困难就在于，如何避免这样的处理停留在肤浅的字句模仿上而显得蹩脚。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/248fcdff-7aba-4546-8307-dd78333497f6.png" data-asset-id="248fcdff-7aba-4546-8307-dd78333497f6" referrerpolicy="no-referrer" />    <figcaption>
+<span>电影《一九八四》剧照。图源：《一九八四》。</span>
+    </figcaption>
+  </figure>
+  <p>但文学也并不是AI创作并未涉足的处女地。在文本当中，诗歌已经是相对成功使用AI和算法的创作。比较来看，虚构和非虚构的创作都要求作者把剧情或者思考缝合成一个可读的、前后有理的整体，但诗歌似乎可以免去AI对这一步骤的努力。<strong>通过拆解和重组一些词句，许多AI创作的诗歌会结合并不常见也并不常常并置在一起的意象，而其中的跳跃空间再度交还给人类阅读者的想象力来完成。这反而能够给人类作者带来别样的启发。</strong></p>
+  <p>不过，诗歌可能是在文字创作中更接近图像创作方式的一个媒介。我们仍然好奇AI将如何在文学领域中迈进：<strong>它是否能够像借助图像重塑我们看世界的方式一样，借助文字重塑我们讲述的方式？通过深度学习，AI是否能改善元素之间链条式的序列感，在讲故事的方面，拥有“莎士比亚式的（Shakespearean）”、“卡夫卡式的（kafkaesque）”或“奥威尔式的（Orwellian）”这样的滤镜？如果说AI毕竟更善于处理图像，那么电影、卡通、漫画或者图像小说的叙事是否会首先由AI掌握？</strong></p>
+  <p>关于文字和图像之间的关系，另一个值得思索的问题是我们开始创作的方式——我们介绍的几个主要的AI图像生成模型，仍然往往由一段人类输入的文字形式的提示词（prompt）开始，再由AI转换为图像。而这是否是一个最佳的，或者说最符合人性的方式？</p>
+  <p>我们知道，人类的图像创作很多时候是从一个简单的形态、一种模糊的感觉或者某个记忆中的行为片段开始的，它甚至无法形成清楚的文字描述，但画家、导演等的图像创造，正就从这种奇妙的朦胧中开始了。前文提到的塞·托姆布雷的作品就常给人带来一种下意识随手涂抹的感觉，他创作的开端接近一种先于语言甚至完整图像的自然的行为。现在的AI图像生成模型仍然把文字作为开端，这似乎也会为日后的艺术创作建构新的主流方式——<strong>但这只是一种理解，且非常工程师式的理解，而我们会否因此丧失对某种别样的想象力的想象？</strong>当然，目前也有通过绘制草图来生成图像的AI软件，然而我们更为好奇的是，基于文字和图像的更多元创作方式所能带来的新的作品。</p>
+  <p><br /></p>
+  <p><em>欢迎关注微信公众号“沙丘研究所”，我们会在那里更新第一手的原创内容。</em></p>
+  <p><em>也欢迎关注公众号“艾厂人工智能艺术中心”，文章中提及的论坛内容，其回放可以在艾厂人工智能艺术公众号 -&gt; 视频号（AiiiiiArtCenter）-&gt;直播回放中观看。</em></p>
+  <p><br /></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2022-07-17</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-07-17/%E5%9C%A8%E7%8E%89%E5%B1%B1%E8%88%87%E6%96%B0%E9%AB%98%E5%B1%B1%E4%B9%8B%E9%96%93-%E8%87%BA%E7%81%A3%E7%AC%AC%E4%B8%80%E9%AB%98%E5%B3%B0%E5%B7%AE%E9%BB%9E%E8%A2%AB%E5%8F%AB%E5%81%9A%E5%A4%A7%E5%8D%97%E5%B1%B1/">
+          在玉山與新高山之間：臺灣第一高峰差點被叫做大南山？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-07-17</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-07-17/%E6%9C%89%E9%97%9C%E5%8C%97%E7%BE%8E%E9%A4%A8-%E6%8E%98%E5%85%89%E8%80%8C%E8%A1%8C-%E6%B4%AA%E7%91%9E%E9%BA%9F-%E7%9A%84%E5%8F%B2%E6%96%99%E5%B1%95%E7%A4%BA%E8%88%87-%E9%87%8D%E8%A6%81%E4%BD%9C%E5%93%81/">
+          有關北美館「掘光而行：洪瑞麟」的史料展示與「重要作品」
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-07-14</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-07-14/%E5%8D%81%E5%80%8B%E4%B8%8D%E5%90%8C%E7%9A%84%E6%95%85%E4%BA%8B-%E5%8D%81%E6%AE%B5%E4%B8%8D%E5%90%8C%E7%9A%84%E6%AD%B7%E5%8F%B2/">
+          十個不同的故事，十段不同的歷史
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-07-08</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-07-08/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-%E4%B8%80%E5%A0%B4%E4%B8%8D%E5%90%8C%E7%9A%84%E6%88%B0%E7%88%AD-%E6%88%91%E5%80%91%E7%9A%84%E7%88%B6%E8%BC%A9-%E4%BA%8C-%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%B8%96%E7%95%8C%E5%A4%A7%E6%88%B0-%E5%BE%B7%E8%98%87%E6%88%B0%E7%88%AD-%E7%B4%8D%E7%B2%B9%E5%BE%B7%E5%9C%8B-%E6%88%B0%E7%88%AD%E7%9A%84%E5%8F%8D%E6%80%9D/">
+          【電影與現實】一場不同的戰爭：《我們的父輩》（二）｜第二次世界大戰｜德蘇戰爭｜納粹德國｜戰爭的反思
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2022-07-15/%E4%BD%A0%E4%B8%8D%E4%BA%86%E8%A7%A3%E7%9A%84%E6%97%A5%E6%9C%AC%E5%8F%B3%E7%BF%BC-%E5%BE%9E%E5%AE%89%E5%80%8D%E9%81%87%E5%88%BA%E5%88%B0%E5%8D%81%E9%87%8C%E9%95%B7%E8%A1%97%E9%80%81%E7%B8%BD%E7%90%86-%E6%97%A5%E6%9C%AC%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E4%BF%AE%E6%86%B2-%E6%97%A5%E6%9C%AC%E5%8F%B3%E6%B4%BE-%E6%97%A5%E6%9C%AC%E6%94%BF%E6%B2%BB%E5%88%B6%E5%BA%A6%E7%B0%A1%E5%8F%B2-%E7%91%AA%E5%8A%9B%E5%86%8D/">
+            前一篇：你不了解的日本右翼｜從安倍遇刺到十里長街送總理｜日本為什麼要修憲｜日本右派｜日本政治制度簡史｜瑪力再說
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2022-07-17/%E6%9C%89%E9%97%9C%E5%8C%97%E7%BE%8E%E9%A4%A8-%E6%8E%98%E5%85%89%E8%80%8C%E8%A1%8C-%E6%B4%AA%E7%91%9E%E9%BA%9F-%E7%9A%84%E5%8F%B2%E6%96%99%E5%B1%95%E7%A4%BA%E8%88%87-%E9%87%8D%E8%A6%81%E4%BD%9C%E5%93%81/">
+            後一篇：有關北美館「掘光而行：洪瑞麟」的史料展示與「重要作品」
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2022-07-15/%E4%BD%A0%E4%B8%8D%E4%BA%86%E8%A7%A3%E7%9A%84%E6%97%A5%E6%9C%AC%E5%8F%B3%E7%BF%BC-%E5%BE%9E%E5%AE%89%E5%80%8D%E9%81%87%E5%88%BA%E5%88%B0%E5%8D%81%E9%87%8C%E9%95%B7%E8%A1%97%E9%80%81%E7%B8%BD%E7%90%86-%E6%97%A5%E6%9C%AC%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E4%BF%AE%E6%86%B2-%E6%97%A5%E6%9C%AC%E5%8F%B3%E6%B4%BE-%E6%97%A5%E6%9C%AC%E6%94%BF%E6%B2%BB%E5%88%B6%E5%BA%A6%E7%B0%A1%E5%8F%B2-%E7%91%AA%E5%8A%9B%E5%86%8D/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2022-07-17/%E6%9C%89%E9%97%9C%E5%8C%97%E7%BE%8E%E9%A4%A8-%E6%8E%98%E5%85%89%E8%80%8C%E8%A1%8C-%E6%B4%AA%E7%91%9E%E9%BA%9F-%E7%9A%84%E5%8F%B2%E6%96%99%E5%B1%95%E7%A4%BA%E8%88%87-%E9%87%8D%E8%A6%81%E4%BD%9C%E5%93%81/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2022-07-17/%E6%9C%89%E9%97%9C%E5%8C%97%E7%BE%8E%E9%A4%A8-%E6%8E%98%E5%85%89%E8%80%8C%E8%A1%8C-%E6%B4%AA%E7%91%9E%E9%BA%9F-%E7%9A%84%E5%8F%B2%E6%96%99%E5%B1%95%E7%A4%BA%E8%88%87-%E9%87%8D%E8%A6%81%E4%BD%9C%E5%93%81/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2022-07-14/%E5%8D%81%E5%80%8B%E4%B8%8D%E5%90%8C%E7%9A%84%E6%95%85%E4%BA%8B-%E5%8D%81%E6%AE%B5%E4%B8%8D%E5%90%8C%E7%9A%84%E6%AD%B7%E5%8F%B2/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2022-07-15/%E4%BD%A0%E4%B8%8D%E4%BA%86%E8%A7%A3%E7%9A%84%E6%97%A5%E6%9C%AC%E5%8F%B3%E7%BF%BC-%E5%BE%9E%E5%AE%89%E5%80%8D%E9%81%87%E5%88%BA%E5%88%B0%E5%8D%81%E9%87%8C%E9%95%B7%E8%A1%97%E9%80%81%E7%B8%BD%E7%90%86-%E6%97%A5%E6%9C%AC%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E4%BF%AE%E6%86%B2-%E6%97%A5%E6%9C%AC%E5%8F%B3%E6%B4%BE-%E6%97%A5%E6%9C%AC%E6%94%BF%E6%B2%BB%E5%88%B6%E5%BA%A6%E7%B0%A1%E5%8F%B2-%E7%91%AA%E5%8A%9B%E5%86%8D/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2022-07-17/%E6%9C%89%E9%97%9C%E5%8C%97%E7%BE%8E%E9%A4%A8-%E6%8E%98%E5%85%89%E8%80%8C%E8%A1%8C-%E6%B4%AA%E7%91%9E%E9%BA%9F-%E7%9A%84%E5%8F%B2%E6%96%99%E5%B1%95%E7%A4%BA%E8%88%87-%E9%87%8D%E8%A6%81%E4%BD%9C%E5%93%81/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2022-07-17/%E6%9C%89%E9%97%9C%E5%8C%97%E7%BE%8E%E9%A4%A8-%E6%8E%98%E5%85%89%E8%80%8C%E8%A1%8C-%E6%B4%AA%E7%91%9E%E9%BA%9F-%E7%9A%84%E5%8F%B2%E6%96%99%E5%B1%95%E7%A4%BA%E8%88%87-%E9%87%8D%E8%A6%81%E4%BD%9C%E5%93%81/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2022-07-14/%E5%8D%81%E5%80%8B%E4%B8%8D%E5%90%8C%E7%9A%84%E6%95%85%E4%BA%8B-%E5%8D%81%E6%AE%B5%E4%B8%8D%E5%90%8C%E7%9A%84%E6%AD%B7%E5%8F%B2/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

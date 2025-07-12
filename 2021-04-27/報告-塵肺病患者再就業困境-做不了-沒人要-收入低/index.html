@@ -1,0 +1,3544 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>報告｜塵肺病患者再就業困境：做不了、沒人要、收入低 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+報告｜塵肺病患者再就業困境：做不了、沒人要、收入低
+——
+" />
+    <meta property="og:description" content="
+報告｜塵肺病患者再就業困境：做不了、沒人要、收入低
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="報告｜塵肺病患者再就業困境：做不了、沒人要、收入低" />
+    <meta property="twitter:title" content="報告｜塵肺病患者再就業困境：做不了、沒人要、收入低" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40LabourChina%2F%25E5%25A0%25B1%25E5%2591%258A-%25E5%25A1%25B5%25E8%2582%25BA%25E7%2597%2585%25E6%2582%25A3%25E8%2580%2585%25E5%2586%258D%25E5%25B0%25B1%25E6%25A5%25AD%25E5%259B%25B0%25E5%25A2%2583-%25E5%2581%259A%25E4%25B8%258D%25E4%25BA%2586-%25E6%25B2%2592%25E4%25BA%25BA%25E8%25A6%2581-%25E6%2594%25B6%25E5%2585%25A5%25E4%25BD%258E-bafyreifyabsg2y5mlloyeosthbqrveigzr5jlqvh4soqus6jwarssmckrm" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@LabourChina/%E5%A0%B1%E5%91%8A-%E5%A1%B5%E8%82%BA%E7%97%85%E6%82%A3%E8%80%85%E5%86%8D%E5%B0%B1%E6%A5%AD%E5%9B%B0%E5%A2%83-%E5%81%9A%E4%B8%8D%E4%BA%86-%E6%B2%92%E4%BA%BA%E8%A6%81-%E6%94%B6%E5%85%A5%E4%BD%8E-bafyreifyabsg2y5mlloyeosthbqrveigzr5jlqvh4soqus6jwarssmckrm" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@LabourChina/%E5%A0%B1%E5%91%8A-%E5%A1%B5%E8%82%BA%E7%97%85%E6%82%A3%E8%80%85%E5%86%8D%E5%B0%B1%E6%A5%AD%E5%9B%B0%E5%A2%83-%E5%81%9A%E4%B8%8D%E4%BA%86-%E6%B2%92%E4%BA%BA%E8%A6%81-%E6%94%B6%E5%85%A5%E4%BD%8E-bafyreifyabsg2y5mlloyeosthbqrveigzr5jlqvh4soqus6jwarssmckrm&text=報告｜塵肺病患者再就業困境：做不了、沒人要、收入低&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@LabourChina/%E5%A0%B1%E5%91%8A-%E5%A1%B5%E8%82%BA%E7%97%85%E6%82%A3%E8%80%85%E5%86%8D%E5%B0%B1%E6%A5%AD%E5%9B%B0%E5%A2%83-%E5%81%9A%E4%B8%8D%E4%BA%86-%E6%B2%92%E4%BA%BA%E8%A6%81-%E6%94%B6%E5%85%A5%E4%BD%8E-bafyreifyabsg2y5mlloyeosthbqrveigzr5jlqvh4soqus6jwarssmckrm&title=報告｜塵肺病患者再就業困境：做不了、沒人要、收入低" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@LabourChina/%E5%A0%B1%E5%91%8A-%E5%A1%B5%E8%82%BA%E7%97%85%E6%82%A3%E8%80%85%E5%86%8D%E5%B0%B1%E6%A5%AD%E5%9B%B0%E5%A2%83-%E5%81%9A%E4%B8%8D%E4%BA%86-%E6%B2%92%E4%BA%BA%E8%A6%81-%E6%94%B6%E5%85%A5%E4%BD%8E-bafyreifyabsg2y5mlloyeosthbqrveigzr5jlqvh4soqus6jwarssmckrm&title=報告｜塵肺病患者再就業困境：做不了、沒人要、收入低" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=報告｜塵肺病患者再就業困境：做不了、沒人要、收入低&body=
+報告｜塵肺病患者再就業困境：做不了、沒人要、收入低
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@LabourChina/%E5%A0%B1%E5%91%8A-%E5%A1%B5%E8%82%BA%E7%97%85%E6%82%A3%E8%80%85%E5%86%8D%E5%B0%B1%E6%A5%AD%E5%9B%B0%E5%A2%83-%E5%81%9A%E4%B8%8D%E4%BA%86-%E6%B2%92%E4%BA%BA%E8%A6%81-%E6%94%B6%E5%85%A5%E4%BD%8E-bafyreifyabsg2y5mlloyeosthbqrveigzr5jlqvh4soqus6jwarssmckrm" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@LabourChina/%E5%A0%B1%E5%91%8A-%E5%A1%B5%E8%82%BA%E7%97%85%E6%82%A3%E8%80%85%E5%86%8D%E5%B0%B1%E6%A5%AD%E5%9B%B0%E5%A2%83-%E5%81%9A%E4%B8%8D%E4%BA%86-%E6%B2%92%E4%BA%BA%E8%A6%81-%E6%94%B6%E5%85%A5%E4%BD%8E-bafyreifyabsg2y5mlloyeosthbqrveigzr5jlqvh4soqus6jwarssmckrm&title=報告｜塵肺病患者再就業困境：做不了、沒人要、收入低&caption=
+報告｜塵肺病患者再就業困境：做不了、沒人要、收入低
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=報告｜塵肺病患者再就業困境：做不了、沒人要、收入低&url=https://matters.news/@LabourChina/%E5%A0%B1%E5%91%8A-%E5%A1%B5%E8%82%BA%E7%97%85%E6%82%A3%E8%80%85%E5%86%8D%E5%B0%B1%E6%A5%AD%E5%9B%B0%E5%A2%83-%E5%81%9A%E4%B8%8D%E4%BA%86-%E6%B2%92%E4%BA%BA%E8%A6%81-%E6%94%B6%E5%85%A5%E4%BD%8E-bafyreifyabsg2y5mlloyeosthbqrveigzr5jlqvh4soqus6jwarssmckrm" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>報告｜塵肺病患者再就業困境：做不了、沒人要、收入低</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-04-27
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 中國勞動透視</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@LabourChina/%E5%A0%B1%E5%91%8A-%E5%A1%B5%E8%82%BA%E7%97%85%E6%82%A3%E8%80%85%E5%86%8D%E5%B0%B1%E6%A5%AD%E5%9B%B0%E5%A2%83-%E5%81%9A%E4%B8%8D%E4%BA%86-%E6%B2%92%E4%BA%BA%E8%A6%81-%E6%94%B6%E5%85%A5%E4%BD%8E-bafyreifyabsg2y5mlloyeosthbqrveigzr5jlqvh4soqus6jwarssmckrm" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1619579550000-->
+<p><a href="https://matters.news/@LabourChina/%E5%A0%B1%E5%91%8A-%E5%A1%B5%E8%82%BA%E7%97%85%E6%82%A3%E8%80%85%E5%86%8D%E5%B0%B1%E6%A5%AD%E5%9B%B0%E5%A2%83-%E5%81%9A%E4%B8%8D%E4%BA%86-%E6%B2%92%E4%BA%BA%E8%A6%81-%E6%94%B6%E5%85%A5%E4%BD%8E-bafyreifyabsg2y5mlloyeosthbqrveigzr5jlqvh4soqus6jwarssmckrm">報告｜塵肺病患者再就業困境：做不了、沒人要、收入低</a>
+——</p>
+
+<div>
+  <p>*本調查轉載自中國內地的一家勞工機構，該報告版權為原作者所有，未經其同意，請勿轉載。原報告標題為《塵肺病患者再就業狀況調查報告》。</p>
+  <p><br /></p>
+  <hr />
+  <h1 id="section">第一部分 前言</h1>
+  <h1 id="section-1">一、调查背景及目的</h1>
+  <p>我国尘肺病患者人数众多，根据相关文献，我国对尘肺病的预防工作可追溯至建国初期，曾于20世纪50年代末于全国范围内开展大规模的技术防尘降尘活动，并一度取得不错成效，1955年至1959年间的尘肺病例平均发病工龄是9.5年，到1985年至1986年间诊断的尘肺病例平均发病工龄延长到26.2年[1]。然而，随着经济的高速发展，尘肺病例重又呈迅速增长趋势。据悉，1998年至2007年我国共报告尘肺病例119948例，而2008年至2017年则报告260501例[2]，增长近1.5倍。</p>
+  <p>近几年来，国家和社会对尘肺病群体的生存状况、权益状况较为关注，但通过网络检索，可以看到这一群体仍面临较为严峻的生存困境。如何应对此困境是我们本次调查关注的方向，我们试图探讨尘肺患者在制度和社会提供的救济途径——尤其是以上途径难以向其提供充分保障的情况下——之外，是否仍有依靠自己应对困境的可能。</p>
+  <p>在分析尘肺患者再就业状况前，有必要对其再就业的必要性、迫切性以及可行性进行讨论。鉴于国内针对尘肺病人生存状况的调查报告较多，但针对这一群体再就业的需求与再就业情况方面的研究尚为空白，这里将结合此次调研，简要分析尘肺病的生存现状，再着重落围绕尘肺病群体再就业议题展开讨论。</p>
+  <h1 id="section-2">二、调查方式与样本情况</h1>
+  <p>此次调查的对象为罹患尘肺病的人群，以网络问卷的形式收集样本信息，共计回收有效问卷311份。由于网络问卷以微信推送形式到达受访者，受访者的地域范围受到一定限制，以河南和陕西居多，分别占比39%和36%。</p>
+  <p>下面是样本基本情况：</p>
+  <p>1.   性别比例：男女比例为99：1。</p>
+  <p>2.   年龄分布：受访者年龄分布以青壮年为主，其中65后与75后（即36周岁至55周岁人员）居多，分别占比30%、57%。</p>
+  <p>3.  户籍分布：河南与陕西居多，分别占比39%、36%，此数据应受调查方式限制，并非国内尘肺患者实际分布情况。</p>
+  <p>4.   婚姻状况：近九成为已婚者，占比89.1%。</p>
+  <p>5.   病情分布：尘肺Ⅰ期占比14%、Ⅱ期33%、Ⅲ期53%。</p>
+  <p>具体可参看下图表：</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/ddfc10d0-48d1-45cd-84e6-13861fcf33df.png" data-asset-id="ddfc10d0-48d1-45cd-84e6-13861fcf33df" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/a513d356-fc83-44c5-af17-bb0af3493c0d.png" data-asset-id="a513d356-fc83-44c5-af17-bb0af3493c0d" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p><strong>第二部分 报告正文</strong></p>
+  <p><strong>一、尘肺患者的劳动保障与社会救济</strong></p>
+  <p>众所周知，尘肺病的发生与不良的生产环境有着密不可分的关系，而用工单位提供何种生产环境、需要达到何种环境标准，以及对现行环境标准的实际履行情况如何又受到政策、法律、社会的制约和监督<strong>。</strong>因此，个体在发生尘肺病以后，必然存在相应责任主体，而责任主体则至少应当包括用人单位，和对用人单位的用工环境存在规范和监管职责的行政部门。</p>
+  <p>不难推想，责任主体如何回应尘肺病患者的需求，将直接、间接决定尘肺病患者的生活、治疗甚至生存状况，暂撇开身体状况不说，继而影响尘肺患者再就业的意向。</p>
+  <p>在这一部分，我们将从现行法律和政策角度，简述尘肺患者的救济途径以及责任主体的实际履行状况。</p>
+  <p>先来看尘肺病人有哪些劳动保障与社会救济途径：</p>
+  <p><strong>第一，工伤待遇救济。</strong>依据《工伤保险条例》等法律法规，尘肺作为典型的职业危害所致疾病，在中国向来被列入职业病名录，依法可认定为工伤，享受工伤待遇。根据相关规定，在工伤待遇中，尘肺病人一般可以享受90%以上医疗费报销，以及针对丧失劳动能力的程度给予不同的补偿待遇，例如伤残1至4级，退出工作岗位可享受伤残津贴待遇。该待遇是目前尘肺病患者可获得的保障最全面、力度最大的救济手段。</p>
+  <p><strong>第二，民事赔偿待遇。</strong>根据《职业病防治法》、与“人身损害赔偿”相关的法律法规等规定，职业病患者除享受工伤待遇外，依照有关民事法律，尚有获得赔偿的权利的，有权向用人单位提出赔偿要求。实践中，也确有尘肺病人通过以人身损害案由获得工伤待遇外其他赔偿的案例。这一手段可视为对“工伤待遇”的补充或无法享受“工伤待遇”后的救济途径。</p>
+  <p><strong>第三，其他社会救济。</strong>因尘肺议题具有集中化、且逐渐公众化的特征，不同地区针对尘肺病人的补偿政策也出现不同形式，或不同形式逐渐为公众看见。主要可归纳为医疗方面有新农合医疗报销、大病集中救治、部分地区的地方性尘肺补偿（如免费洗肺、免费医疗），生活补偿方面有低保、子女教育照顾、社会性救助等。</p>
+  <p>简单了解了针对尘肺病人的救济途径后，接下来参考此次调查，重点介绍以上救济途径是否足以解决尘肺病人的医疗和生活需求：</p>
+  <p><strong>1.工伤保险购买率仅10.9%，工伤待遇享受率低至15.2%，近85%尘肺患者未能享受《工伤保险条例》赋予的权益。</strong></p>
+  <p>我们在上面已经简单分析过，工伤待遇是现阶段尘肺病人可获得的保障最全面、力度最大的救济途径，但通过本次调研我们看到，受访者工伤待遇享受率仅15.2%，也即将近85%的尘肺病患者无法享受《工伤保险条例》等劳动法规赋予的医疗和生活救济权利。具体如下：</p>
+  <p>在针对“您是否被职业病鉴定机构认定为职业病”题目的303名有效反馈中，有73.3%的受访者表示其已被鉴定为职业病，但继续询问这73.3%受访者“最近一次被劳动能力鉴定委员会鉴定的劳动能力障碍等级”时，竟有高达六成的受访者表示“未鉴定”，也即在303名有效反馈的样本总量中，仅剩27.4%受访者获得了劳动能力鉴定结果，由此亦可合理推测前面73.3%表示被确认为职业病的受访者中，或存在混淆“职业病鉴定机构”与“就医医院”的情况。</p>
+  <p>根据下面图表可进一步看到，因为用人单位未依法为其“购买工伤保险”，导致至少10.9%尘肺患者虽有职业病确认书、并有劳动能力鉴定委员鉴定的工伤等级，依然未享受到工伤待遇。而全部可享受工伤待遇的受访者仅15.2%，值得说明的是，在全部享受到工伤待遇的受访者中，绝大多数未能获得全额救济。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/7d33d1ad-451d-4c28-819e-e0dc7e36230e.png" data-asset-id="7d33d1ad-451d-4c28-819e-e0dc7e36230e" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><strong>2.民事赔偿获得率仅3.5%，“职业病民事赔偿规定”未对尘肺患者发挥应有作用。</strong></p>
+  <p>通过本次调查获悉，在全部311名受访者中，仅11人表示享受过“残疾赔偿金（差额）”、“抚养费”、“精神损害抚慰金”，即民事赔偿的主要项目。可见，虽然《职业病防治法》、《民事侵权法》，以及地方性司法解释如广东省高院147号文件等法律法规，规定了职业病患者于工伤保险待遇以外，仍有获得民事赔偿的权利，但尘肺患者实际享受率却低至3.5%，相关规定未对其发挥应有作用。</p>
+  <p><strong>3.其他社会救济覆盖率不足、力度不够，无法保障尘肺患者生存。</strong></p>
+  <p>先来看两组图表：</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/7a2e765f-6734-474b-bc04-1a1d515b0fa3.png" data-asset-id="7a2e765f-6734-474b-bc04-1a1d515b0fa3" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/8c9f7fc9-102b-4d00-8684-8a6f0895d18b.png" data-asset-id="8c9f7fc9-102b-4d00-8684-8a6f0895d18b" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p>由上图可知<strong>，</strong>首先，无论是医疗救济还是生活救济，覆盖率均不足：约36%受访者治病无报销；50.6%无任何生活补助。</p>
+  <p>其次<strong>，</strong>除“工伤保险待遇”保障力度较大外，其他社会救济途径保障力度普遍不足，可谓杯水车薪：其中，医疗报销比例在70%以上的，新农合占33.9%、大病集中救治38.9%、其他42.8%；在生活补助方面，据反馈数据得知，在除“工伤保险待遇”和“民事赔偿”外的其他社会救济中，低保与各项社会补贴标准为每月50元，或每月500元。</p>
+  <p><strong>二、尘肺患者的生存现状</strong></p>
+  <p>通过上面的分析可知，虽然社会针对尘肺病人的救济途径不少，但整体来看，保障力度是非常不够的。接下来我们再从受访者的生存状况角度来呈现这一问题，进一步讨论尘肺病人再就业的必要性，或者说是被迫性。</p>
+  <p><strong>1. 入不敷出</strong></p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/e21fdb7b-ca09-43eb-af1b-963277a3ef86.png" data-asset-id="e21fdb7b-ca09-43eb-af1b-963277a3ef86" referrerpolicy="no-referrer" />    <figcaption>
+<span>图4 尘肺患者家庭开支项目统计表</span>
+    </figcaption>
+  </figure>
+  <p>从此次调查样本的基本情况中我们已经获悉，受访者中65后与75后（即36周岁至55周岁人员）占比87%，正处于上有老、下有小的人生阶段。与一般同龄人一样，他们普遍面临子女抚养及父母赡养的负担，分别占比77%和64%，但与一般人不一样的是尘肺患者高达89%尚有“医疗费”开支。</p>
+  <p>可能单从家庭开支项目不能看出尘肺病群体的家庭开支压力，我们再来看图5“尘肺患者家庭月开支分布图”，图6“尘肺患者家庭月收入分布图”，可见，尘肺患者家庭月支出在1500元以上的占比85%，而仅有约34%的家庭月收入超过1500元，令人感叹的是，高达47%的受访者家庭月收入为0。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/b1805dbd-4b77-4239-8faf-a46894dac3cd.png" data-asset-id="b1805dbd-4b77-4239-8faf-a46894dac3cd" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/3bb6af2a-55dc-45ec-a1cb-9cba36e797c2.png" data-asset-id="3bb6af2a-55dc-45ec-a1cb-9cba36e797c2" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><strong>2.近八成受访者对亲友背负债务。</strong></p>
+  <p>我们已经了解到，尘肺病群体普遍面临“入不敷出”的困境，势必导致负债率高的局面。根据调查，77.8%的受访者有对亲友的负债，另有约28.9%存在银行借贷。同时，在“负债情况”的“其他”选项中，不少受访者填上了“医药费”，令人唏嘘。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/b59691ce-4cc3-4945-bfce-c68bfe0f17ed.png" data-asset-id="b59691ce-4cc3-4945-bfce-c68bfe0f17ed" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/5cd696cb-91cf-4367-8836-8ee4779a5775.png" data-asset-id="5cd696cb-91cf-4367-8836-8ee4779a5775" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p>尘肺病群体高负债率的状况，也反过来证明了现有社会救济手段的不足，更从另一个侧面显示该群体自我救济能力、甚至家庭生存能力危机。</p>
+  <p><strong>三、尘肺患者再就业现状</strong></p>
+  <p><strong>1.再就业意向不大，病情越重，意向越低。</strong></p>
+  <p>在针对尘肺群体“工作意向”和“身体与心理状况”的题目中，分别使用了矩阵量表图的形式收集样本信息，以1-5表示描述的项目与受访者的实际情况相吻合的程度，程度等级分别为：1代表“非常不符合”、2代表“比较不符合”、3代表“一般”、4“比较符合”、5“非常符合”。</p>
+  <p>针对这两项调查题目，我们主要通过取平均值的形式来分析样本整理情况，同时，我们也会针对部分项目进行百分比分析。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/bb11f7be-7c01-41ca-b394-83d75f8a8a22.png" data-asset-id="bb11f7be-7c01-41ca-b394-83d75f8a8a22" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p>根据图7里“我需要工作”、“我希望去企业打工”、“我希望兼职”、“我希望自己开店（或创业）”四个项目的反馈情况可知，四项分值均在3左右且未超过3.3，即受访者在工作与否上持“中间态度”，至少可以理解为该群体并无较强的工作欲望。同时，对于尘肺叁期的患者群体来说，以上三项的分数普遍偏低，分别为2.7、2.5、2.3、2.6，已经偏向于“没有工作意向”。</p>
+  <p>那又是什么原因导致尘肺病群体再就业意向低迷呢？</p>
+  <p><strong>2.再就业两大难：做不了、没人要。</strong></p>
+  <p>我们继续从“尘肺患者工作意向”的题目中选出几项进一步讨论，如图8。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/5beb1c95-80d2-4972-84a6-0602298700af.png" data-asset-id="5beb1c95-80d2-4972-84a6-0602298700af" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p>由上图可知，46.9%的受访者在“患病后，有过多次找工作被拒的经历”，且基于患病的事实，至少53.7%的受访者表示其健康状况使自己无法继续工作、至少47.6%认为不存在适合尘肺病人的工作。最后，超过55.0%的受访者表示其很难找到工作，且40.8%认为工作不能解决其问题。可见，至少一半左右的尘肺患者对再就业的态度是悲观的，这种悲观情绪既来自于身体带来的“做不了”，也来自于身体带来的“没人要”。</p>
+  <p><strong>3.再就业录取率仅三成，“小时工”成最主要工作类型，过半再就业者仍面临职业危害。</strong></p>
+  <p>即使有一半左右对“再就业”持悲观态度的受访者，通过此次调研的统计数据，我们依然看到约47%受访者曾徘徊在“要不要再就业”的十字路口，参看图9：在所有受访者中，除53%明确表示“罹患尘肺后没有找工作的经历”外，其他受访者则明示找过工作（21%）或以其他形式考虑过工作问题（其他26%）。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/8852a788-55b2-40a3-ae41-c92f60aa10d7.png" data-asset-id="8852a788-55b2-40a3-ae41-c92f60aa10d7" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p>那么，这47%的受访者“再就业”之路走得如何呢，可以简单总结为以下几点：</p>
+  <p><strong>第一，录取率仅三成，“零工/小时工”占比54.2%</strong></p>
+  <p>在跳过165名“没有找工作经历”的受访者后，针对“找工作时有没有被录用过”题目，我们通过对剩余146名受访者的反馈统计获悉，仅31.5%曾被录用；</p>
+  <p>根据调查数据获悉，虽然受访者找工作录取率低，但在所有47%有就业意向的受访者中，仍有近一半在从事不同类型的工作，其中，54%从事工作为打零工或小时工。参看图10。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/884bd97b-6c42-414d-a891-fed155b21aec.png" data-asset-id="884bd97b-6c42-414d-a891-fed155b21aec" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><strong>第二，收入偏低：逾五成月收入低于2000元</strong></p>
+  <p>针对再就业者工资收入的统计发现，尘肺患者再就业后收入水平普遍较低，其中51.4%月收入水平为2000元以下，27.8%收入在2001元至3000元之间。参看图11。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/783634c9-f417-4428-9e94-14ee06c26c16.png" data-asset-id="783634c9-f417-4428-9e94-14ee06c26c16" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><strong>第三，或有二次职业危害风险：四成再就业者或面临粉尘/噪音危害</strong></p>
+  <p>针对目前有工作的受访者统计可知，作业中约9.7%接触大量粉尘、20.8%接触少量粉尘、11.1%接触噪音。</p>
+  <p><strong>4.身体状况是尘肺患者再就业的最大阻碍</strong></p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/41da858f-03a3-4958-b0f5-fb4dc357cd9f.png" data-asset-id="41da858f-03a3-4958-b0f5-fb4dc357cd9f" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p>如上图所示，在问及“如果您目前没有工作，请问是什么原因不工作”时，约82.6%受访者认为是身体状况不允许，另分别有40.2%、30.9%认为是“体检不合格”和“找不到工作”，再次论证再就业的两大阻力——“做不了”和“没人要”，而“做不了”成为最大阻碍。</p>
+  <p><br /></p>
+  <p><strong>第三部分：尾声</strong></p>
+  <p><strong>一、约22%尘肺患者徘徊于绝望边缘。</strong></p>
+  <p>讨论过尘肺病群体的劳动保障与社会救济、生存现状与再就业状况后，再来回看该群体的身体与心理状况，先来看图13、14。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/4c0f6f79-5d73-487e-bd57-ea8c11ef568c.png" data-asset-id="4c0f6f79-5d73-487e-bd57-ea8c11ef568c" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/81ba7f15-63c6-4287-91b0-08c75762b632.png" data-asset-id="81ba7f15-63c6-4287-91b0-08c75762b632" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p>由此可知，尘肺患者多存在咳嗽、胸痛、胃口差、难以从事体力劳动（走平路气短）等身体不适；以及失眠、闷闷不乐、发脾气、对病情难以接受和没有信心、对未来不报希望的心理困境。且以上状况与病情轻重关系不大。</p>
+  <p>而问及“您如何描述家庭经济状况带给您的压力”时，除1.3%受访者表示“可以承受”外，其余均为负面回应，并有约21.9%受访者表示“绝望”。</p>
+  <p><strong>二、再就业非出路。</strong></p>
+  <p>通过本次调查，我们小结如下：</p>
+  <p>首先，尘肺病作为百分百受职业环境危害所致疾病，本应由其责任主体承担救济责任，然而，劳动保障与社会救济制度虽然救济力度大，但覆盖率严重不足，作用难以发挥。导致尘肺患者普遍面临医疗与经济压力，生存状况堪忧。</p>
+  <p>虽然尘肺患者均存在健康状况问题，濒临丧失劳动能力或丧失工作动力，大多已不再就业，但迫于生存压力，仍有部分患者尝试再就业，而再就业却难上加难，存在“做不了和没人要”、“收入水平低”、“二次职业危害风险”等问题。</p>
+  <p>本次调查虽旨在研究尘肺患者的“再就业”状况，并试图探讨尘肺病患者自身是否具有应对生存困境的可能，但我们最终不得不作出这样的结论：至少在现阶段，再就业并非尘肺患者的理想生存出路。</p>
+  <p><br /></p>
+  <p>注：</p>
+  <p>[1] 中华人民共和国卫生部编.全国尘肺流行病学调查研究资料集（一九四九-一九八六）北京 北京医科大学协和医科大学联合出版社1992.9</p>
+  <p>[2] 刘旭，《<a href="http://news.jcrb.com/jxsw/201901/t20190113_1952385.html" target="_blank">全国报告患者达600万尘肺病因何高居职业病榜首</a>》，工人日报，2019.1.13</p>
+  <p><br /></p>
+  <hr />
+  <p><strong>關於我們</strong></p>
+  <p>中國勞動透視是一家關注中國勞工權益的香港非政府組織，成立於二零零五年六月，主力研究中國南方基層勞工的工作環境及勞動關係，致力爭取和維護勞工權益，推動中國勞動法的完善和執行。</p>
+  <p>網頁：<a href="https://www.lac.org.hk/" target="_blank">https://www.lac.org.hk/</a></p>
+  <p>Facebook：@<a href="https://www.facebook.com/LabourActionChina/" target="_blank">LabourActionChina</a></p>
+  <p>Email：lac@lac.hk.org</p>
+  <p>點擊<a href="https://lac.us17.list-manage.com/subscribe?u=36b5b651e1e0e38f726cba0e3&amp;id=427133f77e" target="_blank">此處</a>訂閱我們的英文單月刊Change</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2021-04-28</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-04-28/1927%E5%B9%B4%E8%87%BA%E7%81%A3%E7%BE%8E%E8%A1%93%E5%B1%95%E8%A6%BD%E6%9C%83%E8%88%872021%E5%B9%B4%E5%A5%88%E8%89%AF%E7%BE%8E%E6%99%BA%E7%89%B9%E5%B1%95%E7%9A%84%E5%B1%95%E8%A6%BD%E4%BA%BA%E6%BD%AE/">
+          1927年臺灣美術展覽會與2021年奈良美智特展的展覽人潮
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-04-28</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-04-28/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-%E6%88%91%E5%80%91%E6%B0%B8%E4%B8%8D%E6%8A%95%E9%99%8D-%E9%BB%91%E6%9A%97%E5%B0%8D%E5%B3%99-Darkest-Hour-%E6%9C%80%E9%BB%91%E6%9A%97%E7%9A%84%E6%99%82%E5%88%BB-%E8%AA%93%E6%AD%BB%E6%8D%8D%E8%A1%9B%E5%AE%B6%E5%9C%92/">
+          【電影與現實】我們永不投降：《黑暗對峙 / Darkest Hour》｜最黑暗的時刻｜誓死捍衛家園 ｜信念的力量｜英國首相邱吉爾｜納粹德國
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-04-27</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-04-27/%E6%AD%A5%E5%85%B5%E6%89%8B%E8%A8%9803-%E7%AD%8B%E8%86%9C%E7%82%8E-%E8%86%9D%E8%93%8B%E6%90%8D%E5%82%B7-%E5%A4%96%E8%B3%A3%E5%93%A1%E8%BA%AB%E4%B8%8A%E9%9A%B1%E8%94%BD%E7%9A%84%E7%A3%A8%E6%90%8D%E8%88%87%E7%96%BC%E7%97%9B/">
+          步兵手記03｜筋膜炎、膝蓋損傷，外賣員身上隱蔽的磨損與疼痛
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-04-26</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-04-26/%E9%A6%99%E6%B8%AF%E4%BA%BA%E5%BF%85%E9%A0%88%E8%A6%81%E7%9F%A5%E7%9A%84%E6%AD%B7%E5%8F%B2-%E6%B2%89%E5%86%A4%E5%BE%85%E9%9B%AA-%E9%99%B3%E5%BD%A5%E9%9C%96%E6%AD%BB%E4%BA%A1%E4%BA%8B%E4%BB%B6-%E8%B5%A4%E8%A3%B8%E6%B5%AE%E5%B1%8D-%E6%AD%BB%E5%9B%A0%E5%AD%98%E7%96%91-%E9%A6%99%E6%B8%AF%E5%8F%8D%E4%BF%AE%E4%BE%8B%E9%81%8B%E5%8B%95/">
+          【香港人必須要知的歷史】 沉冤待雪：陳彥霖死亡事件｜赤裸浮屍｜死因存疑｜香港反修例運動
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2021-04-27/%E6%AD%A5%E5%85%B5%E6%89%8B%E8%A8%9803-%E7%AD%8B%E8%86%9C%E7%82%8E-%E8%86%9D%E8%93%8B%E6%90%8D%E5%82%B7-%E5%A4%96%E8%B3%A3%E5%93%A1%E8%BA%AB%E4%B8%8A%E9%9A%B1%E8%94%BD%E7%9A%84%E7%A3%A8%E6%90%8D%E8%88%87%E7%96%BC%E7%97%9B/">
+            前一篇：步兵手記03｜筋膜炎、膝蓋損傷，外賣員身上隱蔽的磨損與疼痛
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2021-04-28/117-%E5%B4%94%E6%B0%B8%E5%85%83-%E6%96%B0%E9%94%90%E5%AF%BC%E6%BC%94%E8%AE%A1%E5%88%92-%E5%A4%A7%E5%B8%88%E8%AE%B2%E5%A0%82-%E7%8F%AD%E5%B0%BC%E7%89%B9-%E6%B2%83%E5%B0%94%E6%96%AF-%E7%94%B5%E5%BD%B1%E6%98%AF%E4%BB%80%E4%B9%88-%E5%BD%B1-%E6%9C%80%E7%BB%88%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88/">
+            後一篇：117、崔永元 · 新锐导演计划：大师讲堂： 班尼特 · 沃尔斯：“电影是什么？——影，最终不是什么类型，而是故事。”（2/3）
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2021-04-27/%E6%AD%A5%E5%85%B5%E6%89%8B%E8%A8%9803-%E7%AD%8B%E8%86%9C%E7%82%8E-%E8%86%9D%E8%93%8B%E6%90%8D%E5%82%B7-%E5%A4%96%E8%B3%A3%E5%93%A1%E8%BA%AB%E4%B8%8A%E9%9A%B1%E8%94%BD%E7%9A%84%E7%A3%A8%E6%90%8D%E8%88%87%E7%96%BC%E7%97%9B/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2021-04-28/117-%E5%B4%94%E6%B0%B8%E5%85%83-%E6%96%B0%E9%94%90%E5%AF%BC%E6%BC%94%E8%AE%A1%E5%88%92-%E5%A4%A7%E5%B8%88%E8%AE%B2%E5%A0%82-%E7%8F%AD%E5%B0%BC%E7%89%B9-%E6%B2%83%E5%B0%94%E6%96%AF-%E7%94%B5%E5%BD%B1%E6%98%AF%E4%BB%80%E4%B9%88-%E5%BD%B1-%E6%9C%80%E7%BB%88%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2021-04-28/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-%E6%88%91%E5%80%91%E6%B0%B8%E4%B8%8D%E6%8A%95%E9%99%8D-%E9%BB%91%E6%9A%97%E5%B0%8D%E5%B3%99-Darkest-Hour-%E6%9C%80%E9%BB%91%E6%9A%97%E7%9A%84%E6%99%82%E5%88%BB-%E8%AA%93%E6%AD%BB%E6%8D%8D%E8%A1%9B%E5%AE%B6%E5%9C%92/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2021-04-27/%E6%AD%A5%E5%85%B5%E6%89%8B%E8%A8%9803-%E7%AD%8B%E8%86%9C%E7%82%8E-%E8%86%9D%E8%93%8B%E6%90%8D%E5%82%B7-%E5%A4%96%E8%B3%A3%E5%93%A1%E8%BA%AB%E4%B8%8A%E9%9A%B1%E8%94%BD%E7%9A%84%E7%A3%A8%E6%90%8D%E8%88%87%E7%96%BC%E7%97%9B/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2021-04-27/%E6%AD%A5%E5%85%B5%E6%89%8B%E8%A8%9803-%E7%AD%8B%E8%86%9C%E7%82%8E-%E8%86%9D%E8%93%8B%E6%90%8D%E5%82%B7-%E5%A4%96%E8%B3%A3%E5%93%A1%E8%BA%AB%E4%B8%8A%E9%9A%B1%E8%94%BD%E7%9A%84%E7%A3%A8%E6%90%8D%E8%88%87%E7%96%BC%E7%97%9B/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2021-04-28/117-%E5%B4%94%E6%B0%B8%E5%85%83-%E6%96%B0%E9%94%90%E5%AF%BC%E6%BC%94%E8%AE%A1%E5%88%92-%E5%A4%A7%E5%B8%88%E8%AE%B2%E5%A0%82-%E7%8F%AD%E5%B0%BC%E7%89%B9-%E6%B2%83%E5%B0%94%E6%96%AF-%E7%94%B5%E5%BD%B1%E6%98%AF%E4%BB%80%E4%B9%88-%E5%BD%B1-%E6%9C%80%E7%BB%88%E4%B8%8D%E6%98%AF%E4%BB%80%E4%B9%88/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2021-04-28/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-%E6%88%91%E5%80%91%E6%B0%B8%E4%B8%8D%E6%8A%95%E9%99%8D-%E9%BB%91%E6%9A%97%E5%B0%8D%E5%B3%99-Darkest-Hour-%E6%9C%80%E9%BB%91%E6%9A%97%E7%9A%84%E6%99%82%E5%88%BB-%E8%AA%93%E6%AD%BB%E6%8D%8D%E8%A1%9B%E5%AE%B6%E5%9C%92/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2021-04-27/%E6%AD%A5%E5%85%B5%E6%89%8B%E8%A8%9803-%E7%AD%8B%E8%86%9C%E7%82%8E-%E8%86%9D%E8%93%8B%E6%90%8D%E5%82%B7-%E5%A4%96%E8%B3%A3%E5%93%A1%E8%BA%AB%E4%B8%8A%E9%9A%B1%E8%94%BD%E7%9A%84%E7%A3%A8%E6%90%8D%E8%88%87%E7%96%BC%E7%97%9B/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

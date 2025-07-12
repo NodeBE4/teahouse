@@ -1,0 +1,3550 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>5Mao| 言論自由、官方新聞與認知作戰 (下) – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+5Mao| 言論自由、官方新聞與認知作戰 (下)
+——
+" />
+    <meta property="og:description" content="
+5Mao| 言論自由、官方新聞與認知作戰 (下)
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="5Mao| 言論自由、官方新聞與認知作戰 (下)" />
+    <meta property="twitter:title" content="5Mao| 言論自由、官方新聞與認知作戰 (下)" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40KMnese%2F5-mao-%25E8%25A8%2580%25E8%25AB%2596%25E8%2587%25AA%25E7%2594%25B1-%25E5%25AE%2598%25E6%2596%25B9%25E6%2596%25B0%25E8%2581%259E%25E8%2588%2587%25E8%25AA%258D%25E7%259F%25A5%25E4%25BD%259C%25E6%2588%25B0-%25E4%25B8%258B-bafyreihu7w4i3rzxbajqj5vgusk3mkdjianol4xipa4tt4bl5x5pugnf7y" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@KMnese/5-mao-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1-%E5%AE%98%E6%96%B9%E6%96%B0%E8%81%9E%E8%88%87%E8%AA%8D%E7%9F%A5%E4%BD%9C%E6%88%B0-%E4%B8%8B-bafyreihu7w4i3rzxbajqj5vgusk3mkdjianol4xipa4tt4bl5x5pugnf7y" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@KMnese/5-mao-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1-%E5%AE%98%E6%96%B9%E6%96%B0%E8%81%9E%E8%88%87%E8%AA%8D%E7%9F%A5%E4%BD%9C%E6%88%B0-%E4%B8%8B-bafyreihu7w4i3rzxbajqj5vgusk3mkdjianol4xipa4tt4bl5x5pugnf7y&text=5Mao| 言論自由、官方新聞與認知作戰 (下)&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@KMnese/5-mao-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1-%E5%AE%98%E6%96%B9%E6%96%B0%E8%81%9E%E8%88%87%E8%AA%8D%E7%9F%A5%E4%BD%9C%E6%88%B0-%E4%B8%8B-bafyreihu7w4i3rzxbajqj5vgusk3mkdjianol4xipa4tt4bl5x5pugnf7y&title=5Mao| 言論自由、官方新聞與認知作戰 (下)" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@KMnese/5-mao-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1-%E5%AE%98%E6%96%B9%E6%96%B0%E8%81%9E%E8%88%87%E8%AA%8D%E7%9F%A5%E4%BD%9C%E6%88%B0-%E4%B8%8B-bafyreihu7w4i3rzxbajqj5vgusk3mkdjianol4xipa4tt4bl5x5pugnf7y&title=5Mao| 言論自由、官方新聞與認知作戰 (下)" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=5Mao| 言論自由、官方新聞與認知作戰 (下)&body=
+5Mao| 言論自由、官方新聞與認知作戰 (下)
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@KMnese/5-mao-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1-%E5%AE%98%E6%96%B9%E6%96%B0%E8%81%9E%E8%88%87%E8%AA%8D%E7%9F%A5%E4%BD%9C%E6%88%B0-%E4%B8%8B-bafyreihu7w4i3rzxbajqj5vgusk3mkdjianol4xipa4tt4bl5x5pugnf7y" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@KMnese/5-mao-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1-%E5%AE%98%E6%96%B9%E6%96%B0%E8%81%9E%E8%88%87%E8%AA%8D%E7%9F%A5%E4%BD%9C%E6%88%B0-%E4%B8%8B-bafyreihu7w4i3rzxbajqj5vgusk3mkdjianol4xipa4tt4bl5x5pugnf7y&title=5Mao| 言論自由、官方新聞與認知作戰 (下)&caption=
+5Mao| 言論自由、官方新聞與認知作戰 (下)
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=5Mao| 言論自由、官方新聞與認知作戰 (下)&url=https://matters.news/@KMnese/5-mao-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1-%E5%AE%98%E6%96%B9%E6%96%B0%E8%81%9E%E8%88%87%E8%AA%8D%E7%9F%A5%E4%BD%9C%E6%88%B0-%E4%B8%8B-bafyreihu7w4i3rzxbajqj5vgusk3mkdjianol4xipa4tt4bl5x5pugnf7y" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>5Mao| 言論自由、官方新聞與認知作戰 (下)</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-03-10
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 戰地島民KMnese</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@KMnese/5-mao-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1-%E5%AE%98%E6%96%B9%E6%96%B0%E8%81%9E%E8%88%87%E8%AA%8D%E7%9F%A5%E4%BD%9C%E6%88%B0-%E4%B8%8B-bafyreihu7w4i3rzxbajqj5vgusk3mkdjianol4xipa4tt4bl5x5pugnf7y" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1646915077000-->
+<p><a href="https://matters.news/@KMnese/5-mao-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1-%E5%AE%98%E6%96%B9%E6%96%B0%E8%81%9E%E8%88%87%E8%AA%8D%E7%9F%A5%E4%BD%9C%E6%88%B0-%E4%B8%8B-bafyreihu7w4i3rzxbajqj5vgusk3mkdjianol4xipa4tt4bl5x5pugnf7y">5Mao| 言論自由、官方新聞與認知作戰 (下)</a>
+——</p>
+
+<div>
+  <h2 id="section">前文提要</h2>
+  <p>在<a href="https://matters.news/@KMnese/5-mow-%E8%A8%80%E8%AB%96%E6%B1%A1%E6%9F%93-%E8%AB%87ptt-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1%E5%92%8C%E8%B3%87%E8%A8%8A%E6%88%B0-%E4%B8%8A-bafyreienyaftsy3s2pvm7wumo5u7s52d44ccwf4p3aunzlhuc3okytgnd4" rel="noopener noreferrer" target="_blank">上一篇文章</a>我提到了一些在俄烏戰開打之後，台灣的兩個論壇「PTT 八卦板」與「D卡」呈現的輿論怪象，我也提到若干反駁「言論自由不僅是想講什麼就講什麼」的指引，如：</p>
+  <p>👉 言論自由是你想講什麼就講什麼，但你要為你的言論負責<br />👉 言論自由是你想講什麼就講什麼，但別人也有想不想聽的自由<br />👉 言論自由是你想講什麼就講什麼，它的目的是促進討論溝通，會因權力關係調整。<strong><br /></strong></p>
+  <p>不過，上述這些都更適用於網路上對某些意見的爭論，我認為還沒涉及到言論自由最重要的面向：<strong>公權力與言論自由的關係。</strong></p>
+  <p><strong>我之前引伸台灣大法官許玉秀的話(註1)，是這樣寫的：</strong></p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/d5a7b590-b7fa-43c9-828b-d45407dbabda.jpeg" data-asset-id="d5a7b590-b7fa-43c9-828b-d45407dbabda" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p>如果以我2019年所寫的內容，對應在上篇文章裡對「支持俄國」的言論嗤之以鼻，是否相</p>
+  <p>互矛盾？</p>
+  <p>我在這篇文章先補充：人民發表的言論與政府/公權力傳播的言論的區別。</p>
+  <h2 id="section-1"><br /></h2>
+  <h2 id="section-2"><strong>👉 政治宣傳與言論自由的對立</strong></h2>
+  <p>如果就「自由的講才能自由的講」的主張，那麼言論自由環境裡，各種意見都該享有同等</p>
+  <p>的表達權利，人們也應儘量接受多元的意見。不過，針對開戰頭幾天突然大量發表在台灣</p>
+  <p>各個平台關於「親俄批烏、失敗主義和怯戰」的言論，就我所知沒有證據認定這是有計畫/</p>
+  <p>組織的傳播行為，所以這些言論自然享有表達自由，最多只是如開頭所列人們可選擇如何</p>
+  <p>看待特定意見。</p>
+  <p><br /></p>
+  <p>不過，支持俄羅斯的行動（或貶抑澤倫斯基、歸咎於烏克蘭）這類意見，多數人選擇拒聽</p>
+  <p>或排除於討論，除了是對極端言論的聽與溝通的自由外，<strong>另一層考量是言論的資訊來源有</strong></p>
+  <p><strong>可能是中共當局控制的新聞媒體。</strong></p>
+  <p>當判定言論與意見所享有的言論自由時，由政府/公權力主導的言論恰是最需限縮的一種。</p>
+  <p><br /></p>
+  <p>許大法官在釋憲理由中寫到：「自由的講才能自由的想」是用以論述政府、公權力對言論</p>
+  <p>的管理與影響應儘可能限縮，人民可以自由的講自由的想也有權不講維護自身尊嚴，而人</p>
+  <p>民的講或不講的對立面正是政府推廣的言論內容。<strong>面對當權者，人民僅有的武器之一就是</strong></p>
+  <p><strong>言論，人民表達自由才能批評政府，媒體有新聞自由得以監督當權者。</strong>所以，言論自由不</p>
+  <p>是保障「表達各種意見內容」的平等，而是確保最弱勢的人也能表達意見，反之政府/公權</p>
+  <p>力則無權管制言論。</p>
+  <hr />
+  <p>以上，大概就是我上篇文章沒寫完的部份。</p>
+  <p><strong>其實我想強調的是</strong>，<strong>中國的統治現況下其新聞與資訊都帶有公權力的指紋。因此，這些資</strong></p>
+  <p><strong>訊可能既是新聞也是宣傳。對言論自由的環境，中共發佈的「新聞、論述與主張」如果帶</strong></p>
+  <p><strong>有宣傳的疑慮，那本就不該被平等看待。</strong></p>
+  <hr />
+  <p>從上面的結語，我又進一步延伸到下面三個問題。</p>
+  <p><strong><br /></strong>👉<strong>中共的治理下，新聞與評論幾乎都受公權力干預與管理，在言論自由的空間裡該如何處<br class="smart" /> 理這些新聞？ </strong></p>
+  <p>👉<strong> 如果個人身處在言論管控的環境中，當他在言論自由的場域發言時，他的言論仍是獨立 <br class="smart" /> 的意見表達嗎？ 原因為何呢？</strong></p>
+  <p>👉<strong> 何謂</strong>「<strong>認知作戰」？ <br /> 政治主張是否能判斷有沒有認知作戰的疑慮？</strong></p>
+  <p>👉<strong> 認知作戰，訊息控制與國族建構……<br class="smart" /></strong></p>
+  <p>對於上述三個問題，我的困惑多於見解，下文嘗試回應一二希望有更多回應和討論。</p>
+  <p><br /></p>
+  <hr />
+  <h2 id="section-3">👉<strong>中共的治理現況下，新聞與評論幾乎都受公權力干預與管理。<br />   在言論自由的環境裡該如何對待這些新聞資訊？</strong></h2>
+  <p>第一個問題可能是我最提得出想法的問題。<br /></p>
+  <p>中共官方控制下產製的新聞、評論與論述帶有公權力的干預而必須差異化看待，不過，本</p>
+  <p>質上它仍是一種特定的意見與報導現實的資訊，因此，我們不應/不必管制或禁止這些新聞</p>
+  <p>資訊的傳播。</p>
+  <p>如果基於言論自由的價值，對這些新聞資訊反倒應採用「充分揭露」的作法。<br /></p>
+  <p>例如YouTube上新聞與節目若由國有/公有媒體製作，會附加該媒體的資訊，由中共官方機</p>
+  <p>構發佈的新聞與資訊也可循例用揭露、附加新聞資訊的來源資訊即可。</p>
+  <p><strong>當然，在同樣使用中文的台灣，中共官方在新聞與資訊的影響就更多元且更多模糊地帶，</strong></p>
+  <p><strong>但確定為官方來源的新聞資訊先作到充分揭露，此後，再討論如何界定公/私機構與標示標</strong></p>
+  <p><strong>準也不遲。</strong></p>
+  <p><br /></p>
+  <p>其實，充分揭露也適用於傳播近來的俄烏戰爭雙方傳播的戰爭資訊上。戰時宣傳一來有戰</p>
+  <p>爭的迷霧的侷限，二來雙方都可能揀選有利己方的資訊報導。</p>
+  <p><br /></p>
+  <p>這時，對兩方公佈的戰爭影片和詮釋當然都帶有一定的懷疑，若進一步由獨立媒體《基輔</p>
+  <p>獨立報》或各大報引用則可信度自然更高。相較於烏克蘭方面，俄國的資訊管制更嚴格，</p>
+  <p>因此俄國國內如《新報》這類獨立媒體的消息就更可貴。</p>
+  <p><br /></p>
+  <p><strong>西方已封鎖今日俄羅斯RT並限制俄國IP使用社交平台發佈訊息，對封禁《今日俄羅斯》的新聞，罵西方罔顧新聞自由、對此反對意見最牆的，是中國國內輿論。</strong></p>
+  <p><br /></p>
+  <hr />
+  <p><br /></p>
+  <h2 id="section-4">👉 <strong>在資訊管制的環境下的個人，他的言論仍可看作獨立的意見表達嗎？ 原因為何？<br /></strong></h2>
+  <p>這是我充滿疑惑的題目，</p>
+  <p>簡言之，小粉紅身在言論受控制的環境下，對於小粉紅發表的言論該怪這位小粉紅自己</p>
+  <p>嗎？相對地，小粉紅在牆外發表言論，他的言論又可看作獨立的個人意見表達嗎？</p>
+  <p><br /></p>
+  <p>在上篇文章用"5Mao"是因我在reddit發現，即使在英語論壇的英語用戶，也都熟悉並採用</p>
+  <p>"5Mao"特指中國某些群體(仔細看的話他們所稱5Mao，其實應是「小粉紅」)。<br /></p>
+  <p>但，小粉紅的言論算獨立的意見表達嗎？北韓的民意算不算民意？</p>
+  <p>我粗略的想法是，在言論控制下的個體，他的意見表達雖然屬於獨立的意見，但是這樣的</p>
+  <p>意見也是不完備的。如果小粉紅接受某種「補充資訊」的教育、理解溝通討論的基礎，這</p>
+  <p>時他的意見表達才足以稱為獨立的。</p>
+  <p>（可是上面的看法，又隱隱然否定了「如果中國現在實行民主選舉，最終能投出對的候選</p>
+  <p>人嗎？這好像又呼應了「中國不該太快實行民主，因為人民素質不夠高………」）</p>
+  <p><br /></p>
+  <hr />
+  <p><br /></p>
+  <h2 id="section-5">👉<strong> 什麼是認知作戰？<br class="smart" />   政治主張如何判斷是否有認知作戰的疑慮？<br class="smart" /></strong></h2>
+  <p>認知作戰是近年迅速興起的新穎詞彙，它包含長久以來針對心理狀態的戰爭場域（四面楚</p>
+  <p>歌就是一種心理戰），但是又融合當代的訊息技術環境才可以實施的技術條件。</p>
+  <p>簡言之，人的心智如同電腦，各類感官輸入資訊，經訊息處理，呈現於意識中如顯示於螢</p>
+  <p>幕，這個訊息處理的過程就是認知。認知作戰的目標是讓人們對現實情況抱持特定的意</p>
+  <p>識，並影響到實際行動的選擇，例如：讓人們兩岸開戰美國不會派兵援助，因此，一旦開</p>
+  <p>戰人們會傾向逃跑。</p>
+  <p>但是，如何造就「開戰時美國不會派兵援助台灣」的意識呢？它可能包含假的資訊、傳播</p>
+  <p>美國背信的例子、營造對美國的負面印象……從「訊息」到「訊息處理模式」乃至「呈現在</p>
+  <p>意識的思考框架」，都可以是認知戰的範圍。</p>
+  <p><br /></p>
+  <p>因為認知作戰包含數個層次、涉及不同領域，因此，延伸的問題是：</p>
+  <p><strong>政治主張都可能涉及認知作戰的某一環節，如何判斷政治主張是否有認知作戰的疑慮呢？</strong></p>
+  <p>台灣的兩黨政治裡，兩大陣營的主要差異在於對兩岸關係抱持的主張不同，而談到兩岸乃</p>
+  <p>至美中台關係的主張，無可避免涉及認知作戰的若干環節。</p>
+  <blockquote>
+<strong>於是，在藍綠對決的選戰中，綠營會指控對手的兩岸主張有認知作戰的疑慮，相對地，藍營的候選人會駁斥對手「只問立場，不問是非」……</strong>  </blockquote>
+  <p>若已熟悉台灣的選戰文化，應該會發現：</p>
+  <p><strong>政治主張是否有「認知作戰的疑慮」的確難以判斷，但是，在台灣選舉中這種「難以判</strong></p>
+  <p><strong>斷」的標籤一直都存在，只是當前採用「認知作戰」這個標籤。</strong></p>
+  <p>歷年來，綠營的指控包含<strong>「不愛台灣」、「親中」、「賣台」、「中共同路人」乃至「認</strong></p>
+  <p><strong>知作戰」</strong>，而藍營的反駁則從<strong>「煽動民族主義的民粹」、「只要喊愛台灣就會贏」乃至</strong></p>
+  <p><strong>「喊抗中保台就會贏」的批判。</strong></p>
+  <p><br /></p>
+  <p>我想特別說明的是，藍綠陣營就統獨主張彼此對立，雙方的辯論內容其實都差不多。</p>
+  <p>不過，統獨不只是台灣內部的政見差異，也該考量當時的中共、美國的態度。</p>
+  <p>在扁政府時代，兩岸關係的主張有較開放的論述空間，於是，當年得民進黨強調台灣/台灣</p>
+  <p>人的主體性，創造族群對立，就是比較激進的主張，相對地「擱置爭議」這類主張就顯得</p>
+  <p>更安定。</p>
+  <p>十餘年過去，民進黨同樣主張「台灣的主體性」，但是在習近平拋出「一國兩制台灣方</p>
+  <p>案」後，變相宣告兩岸的未來除「一國兩制」，好像就剩武力統一了。<br /></p>
+  <p>在此情況中，綠營強調台灣主體性，反倒變成相對穩定的政治主張，相對地藍營強調的九</p>
+  <p>二共識一中各表顯然已無可行性、近來的「親美友中」有缺乏中共的回應……而且，上述主</p>
+  <p>張都跟習近平提到的「一國兩制」不相容，更別說「一中同表」、「和平協議」這類改變</p>
+  <p>現狀的主張，就更不受歡迎了。</p>
+  <p><br /></p>
+  <p><strong>綜觀這二三十年，台灣最主要的民意一直是「維持現狀」，只是用哪個標籤表示「維持現</strong></p>
+  <p><strong>狀」的描述有所不同而已。</strong></p>
+  <hr />
+  <p><br /></p>
+  <h2 id="section-6">👉<strong> 認知作戰：從資訊控制與國族敘事談起……</strong></h2>
+  <p>上一題，我或許用比較戲謔的態度看待「認知作戰」，畢竟只是台灣藍綠對決的「相罵</p>
+  <p>本」，但是，認知作戰之於台灣的獨裁、民主和自由的差異，可能是個頗大但也值得慢慢</p>
+  <p>討論的議題。</p>
+  <p><strong>一來，這個問題必須先界定「認知作戰」究竟什麼程度可稱為「戰爭行為」，什麼程度就</strong></p>
+  <p><strong>僅指於「政治宣傳/表態」而已。</strong></p>
+  <p><strong>二來，什麼叫「對台灣發動的認知作戰」？他是確實的且的確發生的威脅嗎？</strong></p>
+  <p><strong>第三，心戰、政戰、認知戰、訊息戰與宣傳戰如何區分異同？</strong></p>
+  <p><strong>(我其實對上述三點我抱持質疑的態度，不過，留待下一文章我多讀一些資料後再下定論)</strong></p>
+  <p><br /></p>
+  <h2 id="section-7"><strong>其實從俄羅斯到中共，它們對內部言論的控制更能見到認知作戰的作用層面</strong></h2>
+  <p><br /></p>
+  <p>最近看到一則紐時的報導：</p>
+  <blockquote>
+<strong>在戰爭開始兩天後，一位烏克蘭女性收到俄國友人的簡訊祝她生日快樂。<br /><br />這時她發現，俄國國內，對俄軍在烏克蘭採取什麼「特別軍事行動」，俄國內部的資<br /><br />訊，與烏克蘭實際的現況，根本是兩個版本的現實……</strong>  </blockquote>
+  <p>資訊、媒體與詮釋幾乎等於控制不同版本的真實，雖然如今資訊傳播技術讓現場直播</p>
+  <p>的真實便於即時傳播與溝通，但是，對待同一個現實，卻高度受到「對現實的詮釋」所影</p>
+  <p>響而導致完全不同的結論。</p>
+  <p>面對這種將實際的真實，逐步變換為各種版本的新聞，這有目睹香港抗爭直播的許多人可能都見識到這些駭人的制造真實的過程：<br /></p>
+  <p><strong>在香港的抗爭中我們就多少次看見明明看著現場實時發生的情況，在事件發生當下，就出</strong></p>
+  <p><strong>現在訊息面不同的詮釋：「警察對學生開槍。」「警察開槍殺學生」、「警察朝學生的心</strong></p>
+  <p><strong>臟開槍」……再上升到虛擬面，「港警殺人」、「警察故意朝胸口開槍」、「警察會無緣無</strong></p>
+  <p><strong>故開槍嗎？」、「你確定那是學生？」………</strong></p>
+  <p><br /></p>
+  <p>最終，在牆內新聞、香港兩派媒體乃至國際媒體，<strong>對這個現場直播發生的事實，出現各種</strong></p>
+  <p><strong>版本的詮釋，引用同一事件的不同影像，選擇不同的描述焦點暗示不同的動機，甚至總結</strong></p>
+  <p><strong>為不同的是非判斷。</strong></p>
+  <hr />
+  <p><strong>情緒衝擊力順著認知偏誤捷徑使理性思考短路，也是認知戰的重要手段。</strong></p>
+  <p>這裡我能先舉的例子仍不是實際的作戰，而是中國與俄國相似的國族建構<br /></p>
+  <p><br /></p>
+  <p>此次，普亭發動軍事行動的理由，是：「反納粹」、「重回蘇聯勢力範圍」及「俄羅斯民</p>
+  <p>族的偉大復興」，這是分屬歷史時期的事件，背後的歷史脈絡自相矛盾，但是這三個理由</p>
+  <p>間儘管有諸多矛盾且難以對應到實際現實，但，這卻輕易的融合成一個統合概念。</p>
+  <p><br /></p>
+  <p>談到反對納粹份子具體是指稱「種族屠殺邪惡罪行」的惡人與仇恨、提到「蘇聯」一則代</p>
+  <p>表史達林曾在在二戰贏得的勝利，但是描述為「蘇聯原有勢力」同時連結到冷戰時蘇聯對</p>
+  <p>抗西方（美國）的敵對關係，最後，以高於二戰或蘇聯的更遙遠的帝國傳統強調「俄羅斯</p>
+  <p>民族的復興」統合上述兩個概念的內容，脫離歷史事實結合起來便是：</p>
+  <blockquote>
+<strong>現在有我們的族人正在遭受納粹份子的屠殺(具體明確的惡人與罪行)，因此我們(俄國<br /><br />人)要發動軍事行動去對抗這些惡人，我們(蘇俄)原本取得過戰爭的勝利(二戰)有廣大的<br /><br />勢力範圍，但西方對我們步步進逼(美國)我們必須抵抗，完成俄羅斯民族的復興。</strong><br />  </blockquote>
+  <p>我不懂俄文或許也不夠熟悉各時期的俄羅絲歷史準確含意為何，但是，根據隱喻的心理學</p>
+  <p>法則，普亭的國族敘事正是由以上的連結構成的：<br /></p>
+  <p><strong>具體的人、具體的惡人和惡行(烏東的新納粹傷人事件，未必確實但必然有新聞)，我們（代稱為共同體：俄國、蘇俄、蘇聯或俄羅斯族皆可混用)不能任憑敵人欺負，要對抗敵人(前一個敵人是納粹，後一個敵人轉換為美國/歐洲)、而綜上所述皆以「偉大的俄羅斯榮光」來概括以上所有「我們」對抗「敵人」因為他們犯下「惡行」。</strong><br /></p>
+  <p>從上述國族建構的訊息連結，顯然俄羅斯已經充分掌握不同程度的事實、不同形式的訊</p>
+  <p>息、可以化約的不同共同體，統合為一個完整的敘事。從心智科學的視角，這正是「認知</p>
+  <p>作戰」的主要模式。*</p>
+  <hr />
+  <p>附註：其實，認知作戰所採用的認知心理學知識並非為俄國獨有，在歐美的各種產品包裝、電視廣告、運動與娛樂產業同樣熟稔這些認知流暢性。</p>
+  <p><br /></p>
+  <p><strong>心血來潮延伸了四個問題，其實還沒有什麼有組織的見解，甚至知道好幾本相關的書都沒有看，如果哪些部份內容有誤歡迎留言告訴我。</strong></p>
+  <p><strong>不過，就因為在網上看到一些令人厭惡的留言，就因此寫了兩篇文章(而且內容還七零八落)，或許，我這就是被認知作戰了吧………</strong></p>
+  <p><br /></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2022-03-11</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-03-11/%E5%9C%8D%E7%88%90%E8%97%9D%E6%96%87-%E6%98%A5%E7%AF%80%E6%AA%94%E5%85%A7%E5%A4%96%E7%9A%84%E8%A7%80%E5%BD%B1/">
+          圍爐藝文| 春節檔內外的觀影
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-03-10</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-03-10/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-%E8%87%AA%E7%94%B1%E8%88%87%E5%B0%8A%E5%9A%B4-%E5%87%9C%E5%86%AC%E7%83%88%E7%81%AB-%E7%83%8F%E5%85%8B%E8%98%AD%E8%87%AA%E7%94%B1%E4%B9%8B%E6%88%B0-%E6%A9%99%E8%89%B2%E9%9D%A9%E5%91%BD-%E7%83%8F%E5%85%8B%E8%98%AD%E9%9D%A9%E5%91%BD-%E4%BA%9E%E5%8A%AA%E7%A7%91%E7%B6%AD%E5%A5%87-%E4%BF%84%E7%BE%85%E6%96%AF-%E9%A1%98/">
+          【電影與現實】自由與尊嚴：《凜冬烈火：烏克蘭自由之戰》｜橙色革命｜烏克蘭革命｜亞努科維奇｜俄羅斯｜願榮光歸烏克蘭
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-03-08</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-03-08/%E5%B2%9B%E5%B4%8E%E8%97%A4%E6%9D%91-%E6%97%A5%E6%9C%AC%E7%8E%B0%E4%BB%A3%E6%8A%92%E6%83%85%E8%AF%97%E7%9A%84%E5%85%88%E9%A9%B1/">
+          岛崎藤村·日本现代抒情诗的先驱
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-03-04</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-03-04/5Mow-%E8%A8%80%E8%AB%96%E6%B1%A1%E6%9F%93-%E8%AB%87PTT-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1%E5%92%8C%E8%B3%87%E8%A8%8A%E6%88%B0(%E4%B8%8A)/">
+          5Mow | 言論污染……談PTT、言論自由和資訊戰(上)
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2022-03-08/%E5%B2%9B%E5%B4%8E%E8%97%A4%E6%9D%91-%E6%97%A5%E6%9C%AC%E7%8E%B0%E4%BB%A3%E6%8A%92%E6%83%85%E8%AF%97%E7%9A%84%E5%85%88%E9%A9%B1/">
+            前一篇：岛崎藤村·日本现代抒情诗的先驱
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2022-03-10/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-%E8%87%AA%E7%94%B1%E8%88%87%E5%B0%8A%E5%9A%B4-%E5%87%9C%E5%86%AC%E7%83%88%E7%81%AB-%E7%83%8F%E5%85%8B%E8%98%AD%E8%87%AA%E7%94%B1%E4%B9%8B%E6%88%B0-%E6%A9%99%E8%89%B2%E9%9D%A9%E5%91%BD-%E7%83%8F%E5%85%8B%E8%98%AD%E9%9D%A9%E5%91%BD-%E4%BA%9E%E5%8A%AA%E7%A7%91%E7%B6%AD%E5%A5%87-%E4%BF%84%E7%BE%85%E6%96%AF-%E9%A1%98/">
+            後一篇：【電影與現實】自由與尊嚴：《凜冬烈火：烏克蘭自由之戰》｜橙色革命｜烏克蘭革命｜亞努科維奇｜俄羅斯｜願榮光歸烏克蘭
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2022-03-08/%E5%B2%9B%E5%B4%8E%E8%97%A4%E6%9D%91-%E6%97%A5%E6%9C%AC%E7%8E%B0%E4%BB%A3%E6%8A%92%E6%83%85%E8%AF%97%E7%9A%84%E5%85%88%E9%A9%B1/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2022-03-10/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-%E8%87%AA%E7%94%B1%E8%88%87%E5%B0%8A%E5%9A%B4-%E5%87%9C%E5%86%AC%E7%83%88%E7%81%AB-%E7%83%8F%E5%85%8B%E8%98%AD%E8%87%AA%E7%94%B1%E4%B9%8B%E6%88%B0-%E6%A9%99%E8%89%B2%E9%9D%A9%E5%91%BD-%E7%83%8F%E5%85%8B%E8%98%AD%E9%9D%A9%E5%91%BD-%E4%BA%9E%E5%8A%AA%E7%A7%91%E7%B6%AD%E5%A5%87-%E4%BF%84%E7%BE%85%E6%96%AF-%E9%A1%98/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2022-03-10/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-%E8%87%AA%E7%94%B1%E8%88%87%E5%B0%8A%E5%9A%B4-%E5%87%9C%E5%86%AC%E7%83%88%E7%81%AB-%E7%83%8F%E5%85%8B%E8%98%AD%E8%87%AA%E7%94%B1%E4%B9%8B%E6%88%B0-%E6%A9%99%E8%89%B2%E9%9D%A9%E5%91%BD-%E7%83%8F%E5%85%8B%E8%98%AD%E9%9D%A9%E5%91%BD-%E4%BA%9E%E5%8A%AA%E7%A7%91%E7%B6%AD%E5%A5%87-%E4%BF%84%E7%BE%85%E6%96%AF-%E9%A1%98/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2022-03-08/%E5%B2%9B%E5%B4%8E%E8%97%A4%E6%9D%91-%E6%97%A5%E6%9C%AC%E7%8E%B0%E4%BB%A3%E6%8A%92%E6%83%85%E8%AF%97%E7%9A%84%E5%85%88%E9%A9%B1/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2022-03-08/%E5%B2%9B%E5%B4%8E%E8%97%A4%E6%9D%91-%E6%97%A5%E6%9C%AC%E7%8E%B0%E4%BB%A3%E6%8A%92%E6%83%85%E8%AF%97%E7%9A%84%E5%85%88%E9%A9%B1/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2022-03-10/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-%E8%87%AA%E7%94%B1%E8%88%87%E5%B0%8A%E5%9A%B4-%E5%87%9C%E5%86%AC%E7%83%88%E7%81%AB-%E7%83%8F%E5%85%8B%E8%98%AD%E8%87%AA%E7%94%B1%E4%B9%8B%E6%88%B0-%E6%A9%99%E8%89%B2%E9%9D%A9%E5%91%BD-%E7%83%8F%E5%85%8B%E8%98%AD%E9%9D%A9%E5%91%BD-%E4%BA%9E%E5%8A%AA%E7%A7%91%E7%B6%AD%E5%A5%87-%E4%BF%84%E7%BE%85%E6%96%AF-%E9%A1%98/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2022-03-10/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-%E8%87%AA%E7%94%B1%E8%88%87%E5%B0%8A%E5%9A%B4-%E5%87%9C%E5%86%AC%E7%83%88%E7%81%AB-%E7%83%8F%E5%85%8B%E8%98%AD%E8%87%AA%E7%94%B1%E4%B9%8B%E6%88%B0-%E6%A9%99%E8%89%B2%E9%9D%A9%E5%91%BD-%E7%83%8F%E5%85%8B%E8%98%AD%E9%9D%A9%E5%91%BD-%E4%BA%9E%E5%8A%AA%E7%A7%91%E7%B6%AD%E5%A5%87-%E4%BF%84%E7%BE%85%E6%96%AF-%E9%A1%98/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2022-03-08/%E5%B2%9B%E5%B4%8E%E8%97%A4%E6%9D%91-%E6%97%A5%E6%9C%AC%E7%8E%B0%E4%BB%A3%E6%8A%92%E6%83%85%E8%AF%97%E7%9A%84%E5%85%88%E9%A9%B1/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

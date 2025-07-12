@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>現代菁英已經成為新時代的世襲貴族 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+現代菁英已經成為新時代的世襲貴族
+——
+" />
+    <meta property="og:description" content="
+現代菁英已經成為新時代的世襲貴族
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="現代菁英已經成為新時代的世襲貴族" />
+    <meta property="twitter:title" content="現代菁英已經成為新時代的世襲貴族" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fsoundfury.medium.com%2F%25E7%258F%25BE%25E4%25BB%25A3%25E8%258F%2581%25E8%258B%25B1%25E5%25B7%25B2%25E7%25B6%2593%25E6%2588%2590%25E7%2582%25BA%25E6%2596%25B0%25E6%2599%2582%25E4%25BB%25A3%25E7%259A%2584%25E4%25B8%2596%25E8%25A5%25B2%25E8%25B2%25B4%25E6%2597%258F-2ce804c8c45f%3Fsource%3Drss-37ea7441b075------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://soundfury.medium.com/%E7%8F%BE%E4%BB%A3%E8%8F%81%E8%8B%B1%E5%B7%B2%E7%B6%93%E6%88%90%E7%82%BA%E6%96%B0%E6%99%82%E4%BB%A3%E7%9A%84%E4%B8%96%E8%A5%B2%E8%B2%B4%E6%97%8F-2ce804c8c45f?source=rss-37ea7441b075------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://soundfury.medium.com/%E7%8F%BE%E4%BB%A3%E8%8F%81%E8%8B%B1%E5%B7%B2%E7%B6%93%E6%88%90%E7%82%BA%E6%96%B0%E6%99%82%E4%BB%A3%E7%9A%84%E4%B8%96%E8%A5%B2%E8%B2%B4%E6%97%8F-2ce804c8c45f?source=rss-37ea7441b075------2&text=現代菁英已經成為新時代的世襲貴族&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://soundfury.medium.com/%E7%8F%BE%E4%BB%A3%E8%8F%81%E8%8B%B1%E5%B7%B2%E7%B6%93%E6%88%90%E7%82%BA%E6%96%B0%E6%99%82%E4%BB%A3%E7%9A%84%E4%B8%96%E8%A5%B2%E8%B2%B4%E6%97%8F-2ce804c8c45f?source=rss-37ea7441b075------2&title=現代菁英已經成為新時代的世襲貴族" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://soundfury.medium.com/%E7%8F%BE%E4%BB%A3%E8%8F%81%E8%8B%B1%E5%B7%B2%E7%B6%93%E6%88%90%E7%82%BA%E6%96%B0%E6%99%82%E4%BB%A3%E7%9A%84%E4%B8%96%E8%A5%B2%E8%B2%B4%E6%97%8F-2ce804c8c45f?source=rss-37ea7441b075------2&title=現代菁英已經成為新時代的世襲貴族" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=現代菁英已經成為新時代的世襲貴族&body=
+現代菁英已經成為新時代的世襲貴族
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://soundfury.medium.com/%E7%8F%BE%E4%BB%A3%E8%8F%81%E8%8B%B1%E5%B7%B2%E7%B6%93%E6%88%90%E7%82%BA%E6%96%B0%E6%99%82%E4%BB%A3%E7%9A%84%E4%B8%96%E8%A5%B2%E8%B2%B4%E6%97%8F-2ce804c8c45f?source=rss-37ea7441b075------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://soundfury.medium.com/%E7%8F%BE%E4%BB%A3%E8%8F%81%E8%8B%B1%E5%B7%B2%E7%B6%93%E6%88%90%E7%82%BA%E6%96%B0%E6%99%82%E4%BB%A3%E7%9A%84%E4%B8%96%E8%A5%B2%E8%B2%B4%E6%97%8F-2ce804c8c45f?source=rss-37ea7441b075------2&title=現代菁英已經成為新時代的世襲貴族&caption=
+現代菁英已經成為新時代的世襲貴族
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=現代菁英已經成為新時代的世襲貴族&url=https://soundfury.medium.com/%E7%8F%BE%E4%BB%A3%E8%8F%81%E8%8B%B1%E5%B7%B2%E7%B6%93%E6%88%90%E7%82%BA%E6%96%B0%E6%99%82%E4%BB%A3%E7%9A%84%E4%B8%96%E8%A5%B2%E8%B2%B4%E6%97%8F-2ce804c8c45f?source=rss-37ea7441b075------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>現代菁英已經成為新時代的世襲貴族</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-08-07
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#soundfury">
+          soundfury
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://soundfury.medium.com/%E7%8F%BE%E4%BB%A3%E8%8F%81%E8%8B%B1%E5%B7%B2%E7%B6%93%E6%88%90%E7%82%BA%E6%96%B0%E6%99%82%E4%BB%A3%E7%9A%84%E4%B8%96%E8%A5%B2%E8%B2%B4%E6%97%8F-2ce804c8c45f?source=rss-37ea7441b075------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="soundfury的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#soundfury 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1628391285000-->
+<p><a href="https://soundfury.medium.com/%E7%8F%BE%E4%BB%A3%E8%8F%81%E8%8B%B1%E5%B7%B2%E7%B6%93%E6%88%90%E7%82%BA%E6%96%B0%E6%99%82%E4%BB%A3%E7%9A%84%E4%B8%96%E8%A5%B2%E8%B2%B4%E6%97%8F-2ce804c8c45f?source=rss-37ea7441b075------2">現代菁英已經成為新時代的世襲貴族</a>
+——</p>
+
+<div>
+  <p>現代菁英已經成為新時代的世襲貴族</p>
+  <p>1.</p>
+  <p>2015年，耶魯大學法律系教授丹尼爾･馬科維茨（Daniel Markovits）在法學院畢業典禮上演講。他本來想要警告畢業生，未來要抗拒利用自己的競爭優勢來謀取個人利益，要積極地為公眾利益服務。但他在寫稿時突然了解到，這群天之驕子所承繼的特權在為他們提供競爭優勢的同時，也為他們帶來磨難。</p>
+  <p>他跟學生說：「你們的生命被毀了」。</p>
+  <p>他說，你們的一生不斷地努力學習、工作，而未來必須繼續如此，如此才能維持你和你小孩在菁英階級中的位置，維持你的菁英性。你必須一直拼下去，「把自己用盡。」</p>
+  <p>然後，他寫了一本書批判這個菁英體制，英才制（meritocracy）。</p>
+  <p>對英才制的批判在這幾年是熱門議題，而且評論者就是來自這些菁英中的菁英學府。丹尼爾･馬科維茨是耶魯的法學博士（J.D.）、牛津的哲學博士，碩士是倫敦政經學院的計量經濟學，大學是耶魯大學數學學位。也是在這兩年，哈佛大學知名政治哲學家麥可桑德爾出版《成功的反思》（原書名英文直譯是《英才的暴政》）。桑德爾作為政治哲學者比較是從道德性的論述角度出發，馬科維茨在本書中則更是像一本政治經濟的批判，讓英才制的問題更殘酷地暴露出來。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*omTC4UdHNO5Szr3luhXBNA.jpeg" />
+  </figure>
+  <p>2.</p>
+  <p>在歷史上，先是世襲貴族統治世界，然後是土地和資本的掌握者成為統治者。到了二十世紀中期，美國的幾個主要菁英大學開放大門，讓更多成績優異的小孩得以進入窄門，菁英教育性質於是改變，企業也有了更多高級菁英可以用，「英才制」開始主導世界。</p>
+  <p>這看似是很大的進步：人人機會平等，可以透過好的教育，改變自己的命運，而不再是看血統與非自己掌握的因素。</p>
+  <p>但「英才制是虛假的」，馬科維茨說。如今的世界是一種「英才的不平等」，這些最頂尖才能、最努力的、和得到最好教育的人 — — 尤其集中在科技、金融、醫學和法律 — — 獲得極高的報酬、聲望與權力，成為這個世界的新菁英。用「英才制造成一種前所未見且獨樹一格的失衡情況，使得新鍍金時代大為失色。菁英們不僅是壟斷了所得、財富與權勢，同時也把持了產業、公共榮譽與個人尊嚴。菁英體制將中產階級排除在社經利益之外，同時還號召菁英們集體進行一場維護其階層的毀滅性競賽。」</p>
+  <p>當前世界的社會不平等是過去這十年最重要的議題，也有很多著述。但馬科維茨的獨特觀點在於，當年馬克思的階級不平等是無產階級與有產階級之間，法國學者皮卡提的超影響力著作「二十一世紀社會主義」也認為當前的不平等也是資本和勞動者，但馬科維茨認為，如今社會不平等的擴大，並非因為所得的來源由勞動轉向資本，而是所得由中產階級轉向英才菁英。</p>
+  <p>這一小撮菁英造成中產階級消失（亦即向下移動，成為馬克思分析的無產階級化），斷絕了他們的所得、權力與尊嚴，甚至讓許多中年白人因為用藥、酗酒出現「絕望的死亡」（death of despair）（他在這裡引述諾貝爾獎經濟學得主安格斯迪頓的研究。）而且，也如同桑德爾的分析，他指出這個中產階級的不滿、屈辱與憤怒導致了本土的民粹主義，支持川普上台。他認為美國民眾對專業階級的憎恨，勝過對創業家，甚至超級富豪世家。</p>
+  <p>不只如此，本書更指出這個菁英階層已經鞏固起一套新時代的世襲制：他們從小就花更多資源培養小孩，讓他們更聰明、更有競爭力，更能進入最好的學校（而這些學校從幼稚園到研究所都是極為昂貴）。根據研究，大部分常春藤學校和史丹佛、MIT等，來自全美前1%最富有家庭的學生超過全美收入後面二分之一的所有學生。而當這些年輕人拿到哈佛耶魯的文憑，他們幾乎就保證進入那個菁英階層。如此代代相傳，教育體制只是不斷再生產與深化社會既有的不平等。</p>
+  <p>而且這個現代貴族階層，如同古早時代，在每一方面都是和其他人區隔開來：從就讀學校、消費方式、通婚對象，和居住區域。至少在美國，這是一個全面分裂的世界。「這些差異不斷累積，最終導致菁英體制造成的分裂過於巨大難以聯繫，富人與一般大眾不相往來，相互之間也沒有同理心與同情心。」</p>
+  <p>但這並非一直都如此。戰後初期美國社會的相對平等，是一個以中產階級為主的富裕社會。在另一位哈佛政治系教授的著作《我們的孩子》（Our Kids，中文翻譯成《階級世代：窮小孩與富小孩的機會不平等》）中，也有非常深入的討論。本書一個鮮明的例子是柯林頓總統和小布希總統當年家庭背景很不相同，但他們的生活和機遇並沒有差異很大。</p>
+  <p>本書最獨特也許最爭議的觀點是，一如本文開頭作者對他的畢業生演講，他不是要批評這些菁英做錯了什麼，而是指出他們也是自我剝削的受害者。他說，「菁英工作場所例如科技業、銀行、律師事務所、顧問公司，甚至一些大型企業與其他的「白領鹽礦坑（salt mine，意謂極端辛苦與壓迫的工作場所）並無二致」。菁英的工作場所令人秏盡心力，而他們會發現自己越來越難自他們的工作中找到熱情與意義。舊時代下的傳統財富較能夠允許貴族階層表現自我，新財富（人力資本）卻是使得菁英失去自我。「菁英體制為菁英階層帶來心靈上的痛苦，使他們陷入存在性焦慮與深沈的異化之中。即使是再多的所得與再高的地位都無法減輕這樣的痛苦。」</p>
+  <p>但真的大多數超級精英都真的這麼痛苦？作者當然同情他的學生，但這卻可能減弱了他的主要論證。</p>
+  <p>雖然可能不是本書主要論點，但我認為他的論證所造成的嚴重後果是，這種英才制讓整個社會的價值因此遭到扭曲，因為「一個人若是想讓他自己或子女得到菁英級的收入，他所能選擇的工作範圍十分狹窄，主要是集中在金融、管理、律師與醫師。至於中產階級所從事的工作，例如教師、記者、公共服務，甚至工程師，每一百個工作中還不到一個，或者可以說是根本沒有，其薪資能夠與菁英相匹敵。」</p>
+  <p>在經濟學早有一種理論叫做「資源的詛咒」，亦即有天然資源如石油的國家，不會去用力發展經濟，因此造成嚴重不平等與發展的停滯。作者認為，現今的美國出現一種類似的狀況，只是他們的資源詛咒是人力資源的詛咒：「對人力資本的重視促使創新聚焦於利用超高技能人力資源的產業與工作 — — 金融業與菁英管理。這些產業都是著重於一小批菁英階層的財富與權勢上……他們相當於採掘產業，只不過他們的財富並非靠天然資源的開採，而是來自超高技能菁英的人力資本。」其結果是「不斷強化菁英的特權，同時也不斷打壓中產階級，使其邊緣化。長期以來造成為害資源豐富國家的病痛-社會與經濟的分層化、不民主的政治、貪污腐化，與成長低迷-勢將接踵而至。」</p>
+  <p>3.</p>
+  <p>英才制，原本應該是讓世界變得更公平，現在卻變成其原本所要對抗的一切：一個新的集中財富與特權的階級，而且是可以延續幾個世代的現代種姓制度。</p>
+  <p>這是一個「贏者全拿」的社會，但英才制的意識形態卻讓我們覺得這是公平的。作者說的兇狠：「英才制的不平等其實就是來自該體制本身的錯誤…..英才的傳統觀念實際上就是一種虛榮的意識形態，用來掩飾與洗白其優勢分配的不公。英才制不過只是寡頭鐵律的最新說法，它根本就是貴族體制的商業與共和版」。</p>
+  <p>本書強調的是，是英才制的成功，而非失敗，才造成了現在的不平等。該怎麼辦？</p>
+  <p>作者提出兩個解方，一個是教育應該更開放，另一個是讓中產階級的工作更回到經濟體制的中心。這兩個都不容易，但也不是不可能：美國確實是已開發國家中最不平等的國家，而他們可以透過制度改革不那麼極端。</p>
+  <p>其實，如果更仔細檢視本書論證，會發現作者或許合併了兩個面向。其一是英才制的意識型態，讓新時代的菁英以為成功是靠自己，出現了驕傲與缺乏同理心，這也是麥可桑德爾著重的面向。</p>
+  <p>本書作者批判更多的不平等其實是現在的高報酬的英才太集中於少數幾個領域，且不平等的差距太嚴重，所以造成本書所說的陷阱。這在美國又特別嚴重。</p>
+  <p>知名倫理學者彼得辛格（Peter Singer）說，我們需要承認人類有不同天份。「英才制本身並不會產生一個給予每個人利益同樣考慮機會的社會。所以唯有能給予這些不具有最高薪資工作的才能的人適當報酬 — — 事實上這些工作可能是對我們社會是更必要的，從教師、護士、警察到清潔人員 — — 英才制才是一個可接受的理想。沒有這些，英才制就不是一個理想，因為它讓不能從事這些高報酬工作的人，受到不合理的對待。」</p>
+  <p>的確，世界不可能是完全平等的，但至少可以別那麼不平等，可以讓更多不同的才能和價值得到合理回報，可以讓超級菁英們更尊重不同社會位置的人。</p>
+  <p>這樣的社會不是會更好一點嗎？</p>
+  <p>（本文為《菁英體制的陷阱》中文版導讀，時報出版社）</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=2ce804c8c45f" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#soundfury 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2022-05-20/%E5%9C%A8%E5%8A%A0%E6%B3%B0%E9%9A%86%E5%B0%BC%E4%BA%9E%E4%B9%8B%E5%BE%8C-%E4%BB%96%E6%88%90%E7%82%BA%E6%88%91%E5%80%91%E6%89%80%E7%86%9F%E6%82%89%E7%9A%84%E6%AD%90%E5%A8%81%E7%88%BE/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2019-08-18/%E8%83%A1%E5%A3%AB%E6%89%98-%E5%BE%9E%E5%8F%8D%E5%8F%9B%E7%9A%84%E7%83%8F%E6%89%98%E9%82%A6%E5%88%B0%E7%83%8F%E6%89%98%E9%82%A6%E7%9A%84%E5%8F%8D%E5%8F%9B/">最早</a>--</span>
+    
+      <li>
+        <time>2022-05-20</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-05-20/%E5%9C%A8%E5%8A%A0%E6%B3%B0%E9%9A%86%E5%B0%BC%E4%BA%9E%E4%B9%8B%E5%BE%8C-%E4%BB%96%E6%88%90%E7%82%BA%E6%88%91%E5%80%91%E6%89%80%E7%86%9F%E6%82%89%E7%9A%84%E6%AD%90%E5%A8%81%E7%88%BE/">
+          在加泰隆尼亞之後，他成為我們所熟悉的歐威爾
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-12-25</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-12-25/%E7%93%8A%E8%BF%AA%E8%BF%AA%E5%AE%89-%E7%94%A8%E6%96%B0%E7%9A%84%E8%AA%9E%E8%A8%80%E5%AF%AB%E4%B8%8B%E4%B8%80%E6%95%B4%E5%80%8B%E6%99%82%E4%BB%A3%E7%9A%84%E6%83%85%E7%B7%92/">
+          瓊迪迪安：用新的語言寫下一整個時代的情緒
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-05-22</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-05-22/%E5%89%8D%E5%BE%80%E6%88%91%E5%80%91%E6%9C%AA%E6%9B%BE%E7%9F%A5%E6%9B%89%E7%9A%84%E5%8F%B0%E7%81%A3%E6%AD%B7%E5%8F%B2/">
+          前往我們未曾知曉的台灣歷史
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-02-12</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-02-12/%E9%87%8D%E6%96%B0%E6%83%B3%E5%83%8F%E7%BE%8E%E9%BA%97%E6%96%B0%E4%B8%96%E7%95%8C/">
+          重新想像美麗新世界
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2021-08-07/%E4%B8%AD%E7%BE%8E%E8%A7%92%E5%8A%9B%E5%A5%A7%E9%81%8B%E7%8D%8E%E7%89%8C%E5%AF%B6%E5%BA%A7-%E4%B8%AD%E5%9C%8B%E9%9C%B8%E4%B8%BB%E5%9C%B0%E4%BD%8D%E5%B2%8C%E5%B2%8C%E5%8F%AF%E5%8D%B1/">
+            前一篇：中美角力奧運獎牌寶座，中國霸主地位岌岌可危？
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2021-08-07/%E8%A2%AB%E4%BE%AE%E8%BE%B1%E4%B8%8E%E8%A2%AB%E6%8D%9F%E5%AE%B3%E7%9A%84-%E6%B4%BE%E9%81%A3%E5%B7%A5%E4%B8%8E%E5%A4%96%E5%8C%85%E5%B7%A5%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/">
+            後一篇：被侮辱与被损害的：派遣工与外包工的前世今生
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2021-08-07/%E4%B8%AD%E7%BE%8E%E8%A7%92%E5%8A%9B%E5%A5%A7%E9%81%8B%E7%8D%8E%E7%89%8C%E5%AF%B6%E5%BA%A7-%E4%B8%AD%E5%9C%8B%E9%9C%B8%E4%B8%BB%E5%9C%B0%E4%BD%8D%E5%B2%8C%E5%B2%8C%E5%8F%AF%E5%8D%B1/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2021-08-07/%E8%A2%AB%E4%BE%AE%E8%BE%B1%E4%B8%8E%E8%A2%AB%E6%8D%9F%E5%AE%B3%E7%9A%84-%E6%B4%BE%E9%81%A3%E5%B7%A5%E4%B8%8E%E5%A4%96%E5%8C%85%E5%B7%A5%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2021-12-25/%E7%93%8A%E8%BF%AA%E8%BF%AA%E5%AE%89-%E7%94%A8%E6%96%B0%E7%9A%84%E8%AA%9E%E8%A8%80%E5%AF%AB%E4%B8%8B%E4%B8%80%E6%95%B4%E5%80%8B%E6%99%82%E4%BB%A3%E7%9A%84%E6%83%85%E7%B7%92/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2021-05-22/%E5%89%8D%E5%BE%80%E6%88%91%E5%80%91%E6%9C%AA%E6%9B%BE%E7%9F%A5%E6%9B%89%E7%9A%84%E5%8F%B0%E7%81%A3%E6%AD%B7%E5%8F%B2/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2021-08-07/%E4%B8%AD%E7%BE%8E%E8%A7%92%E5%8A%9B%E5%A5%A7%E9%81%8B%E7%8D%8E%E7%89%8C%E5%AF%B6%E5%BA%A7-%E4%B8%AD%E5%9C%8B%E9%9C%B8%E4%B8%BB%E5%9C%B0%E4%BD%8D%E5%B2%8C%E5%B2%8C%E5%8F%AF%E5%8D%B1/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2021-08-07/%E8%A2%AB%E4%BE%AE%E8%BE%B1%E4%B8%8E%E8%A2%AB%E6%8D%9F%E5%AE%B3%E7%9A%84-%E6%B4%BE%E9%81%A3%E5%B7%A5%E4%B8%8E%E5%A4%96%E5%8C%85%E5%B7%A5%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<soundfury>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2021-12-25/%E7%93%8A%E8%BF%AA%E8%BF%AA%E5%AE%89-%E7%94%A8%E6%96%B0%E7%9A%84%E8%AA%9E%E8%A8%80%E5%AF%AB%E4%B8%8B%E4%B8%80%E6%95%B4%E5%80%8B%E6%99%82%E4%BB%A3%E7%9A%84%E6%83%85%E7%B7%92/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<soundfury>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2021-05-22/%E5%89%8D%E5%BE%80%E6%88%91%E5%80%91%E6%9C%AA%E6%9B%BE%E7%9F%A5%E6%9B%89%E7%9A%84%E5%8F%B0%E7%81%A3%E6%AD%B7%E5%8F%B2/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

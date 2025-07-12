@@ -1,0 +1,3478 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>梦中的巴黎（4）：埃菲尔塔与塞纳河 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+梦中的巴黎（4）：埃菲尔塔与塞纳河
+——
+" />
+    <meta property="og:description" content="
+梦中的巴黎（4）：埃菲尔塔与塞纳河
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="梦中的巴黎（4）：埃菲尔塔与塞纳河" />
+    <meta property="twitter:title" content="梦中的巴黎（4）：埃菲尔塔与塞纳河" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40tsugaru_strait%2F%25E6%25A2%25A6%25E4%25B8%25AD%25E7%259A%2584%25E5%25B7%25B4%25E9%25BB%258E-4-%25E5%259F%2583%25E8%258F%25B2%25E5%25B0%2594%25E5%25A1%2594%25E4%25B8%258E%25E5%25A1%259E%25E7%25BA%25B3%25E6%25B2%25B3-bafybeiexddpfxiwgqcq5izkorf3mkv4nnueghrjlzihvlnetaxb764knpy" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-4-%E5%9F%83%E8%8F%B2%E5%B0%94%E5%A1%94%E4%B8%8E%E5%A1%9E%E7%BA%B3%E6%B2%B3-bafybeiexddpfxiwgqcq5izkorf3mkv4nnueghrjlzihvlnetaxb764knpy" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-4-%E5%9F%83%E8%8F%B2%E5%B0%94%E5%A1%94%E4%B8%8E%E5%A1%9E%E7%BA%B3%E6%B2%B3-bafybeiexddpfxiwgqcq5izkorf3mkv4nnueghrjlzihvlnetaxb764knpy&text=梦中的巴黎（4）：埃菲尔塔与塞纳河&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-4-%E5%9F%83%E8%8F%B2%E5%B0%94%E5%A1%94%E4%B8%8E%E5%A1%9E%E7%BA%B3%E6%B2%B3-bafybeiexddpfxiwgqcq5izkorf3mkv4nnueghrjlzihvlnetaxb764knpy&title=梦中的巴黎（4）：埃菲尔塔与塞纳河" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-4-%E5%9F%83%E8%8F%B2%E5%B0%94%E5%A1%94%E4%B8%8E%E5%A1%9E%E7%BA%B3%E6%B2%B3-bafybeiexddpfxiwgqcq5izkorf3mkv4nnueghrjlzihvlnetaxb764knpy&title=梦中的巴黎（4）：埃菲尔塔与塞纳河" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=梦中的巴黎（4）：埃菲尔塔与塞纳河&body=
+梦中的巴黎（4）：埃菲尔塔与塞纳河
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-4-%E5%9F%83%E8%8F%B2%E5%B0%94%E5%A1%94%E4%B8%8E%E5%A1%9E%E7%BA%B3%E6%B2%B3-bafybeiexddpfxiwgqcq5izkorf3mkv4nnueghrjlzihvlnetaxb764knpy" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-4-%E5%9F%83%E8%8F%B2%E5%B0%94%E5%A1%94%E4%B8%8E%E5%A1%9E%E7%BA%B3%E6%B2%B3-bafybeiexddpfxiwgqcq5izkorf3mkv4nnueghrjlzihvlnetaxb764knpy&title=梦中的巴黎（4）：埃菲尔塔与塞纳河&caption=
+梦中的巴黎（4）：埃菲尔塔与塞纳河
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=梦中的巴黎（4）：埃菲尔塔与塞纳河&url=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-4-%E5%9F%83%E8%8F%B2%E5%B0%94%E5%A1%94%E4%B8%8E%E5%A1%9E%E7%BA%B3%E6%B2%B3-bafybeiexddpfxiwgqcq5izkorf3mkv4nnueghrjlzihvlnetaxb764knpy" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>梦中的巴黎（4）：埃菲尔塔与塞纳河</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2024-09-29
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 津轻海峡</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-4-%E5%9F%83%E8%8F%B2%E5%B0%94%E5%A1%94%E4%B8%8E%E5%A1%9E%E7%BA%B3%E6%B2%B3-bafybeiexddpfxiwgqcq5izkorf3mkv4nnueghrjlzihvlnetaxb764knpy" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1727657981000-->
+<p><a href="https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-4-%E5%9F%83%E8%8F%B2%E5%B0%94%E5%A1%94%E4%B8%8E%E5%A1%9E%E7%BA%B3%E6%B2%B3-bafybeiexddpfxiwgqcq5izkorf3mkv4nnueghrjlzihvlnetaxb764knpy">梦中的巴黎（4）：埃菲尔塔与塞纳河</a>
+——</p>
+
+<div>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/4ae30f5f-79da-4aa2-98b4-e4aa2758f92b.jpeg/public" referrerpolicy="no-referrer" />    <figcaption>
+巴黎，人权广场（photow credit: 津轻海峡）
+    </figcaption>
+  </figure>
+  <p>埃菲尔铁塔，巴黎最显眼、最著名的地标，从人权广场望过去确实非常好看（后来发现，它无论从哪个角度看都好看）。</p>
+  <p>在电影和照片中不知见过多少次的埃菲尔铁塔，如今身临其境，亲眼看见，近在眼前了。</p>
+  <p>内心里问自己：它好看在哪里？居然一时拿不出什么像样的回答。</p>
+  <p>显然，以前从来没有认真想过这个问题。</p>
+  <p>什么景物、什么建筑、什么面孔、什么身段看上去好看，感觉它好看，说起来也是个哲学问题。审美永远是主观的，神秘的。即使是众人的、大多数人的眼光或感觉也主观的，神秘的。</p>
+  <p>遥想当年，埃菲尔铁塔刚刚建成时，甚至还没有动工兴建时，就被认为丑陋无比，煞风景。据说铁塔建成之后，著名小说家莫泊桑每天要在铁塔下的一家餐馆吃午餐，因为那里是全巴黎唯一可以避免看到丑陋无比的埃菲尔塔毁坏巴黎优美天际线的餐馆。直到今天，还是不断有人说它丑陋。</p>
+  <p>然而，自建成以来，埃菲尔铁塔逐渐赢得了众人的心，变成了人们心目中的美景，成了巴黎的摇钱树（除了埃菲尔铁塔之外，巴黎的摇钱树还有很多）。现在每年有700万游客参观它。</p>
+  <p>仔细瞭望、端详埃菲尔铁塔。琢磨它为什么好看。</p>
+  <p>应该说，它的好看一大部分是得益于周围建筑物和景色的衬托（铁塔附近以及整个巴黎市中心地区没有超高层楼房建筑），也显然有赖于、得益于它建成一个半世纪以来新闻图片、影视绘画以及文学作品对它的描述/塑造，使它在人们的心目中高大起来。</p>
+  <p>但艺术作品和新闻图片对地标建筑物高大的塑造也不可一概而论。</p>
+  <p>仍记得当初第一次去北京，晚上抵达北京火车站，搭乘公共汽车到动物园再转车投奔在北京西北的海淀区上大学的表哥。公共汽车经过天安门广场时，第一次看到夜色中的天安门城楼，惊讶于它的矮小，感觉它就是一个小城楼，徒有鼎鼎大名。</p>
+  <p>自那时以来，多次从天安门城楼下走过，越来越感觉到它高大（纯粹是尺寸上的高大，尤其是从它的门洞中走过时）。于是，在随后的一些年里时常想起当初的惊讶，不解当初为什么会觉得天安门城楼出乎意料地矮小。</p>
+  <p>但对天安门城楼高大的印象后来又有了一个意想不到的突转和彻底的反转——有一天，走到收费参观的天安门城楼上，俯瞰天安门广场，随即感觉好无聊，好乏味。</p>
+  <p>那世界第一的巨无霸广场看上去（看下去）毫无遮掩地单调，一看就不是供众人享用而设计的，感觉它乏味，小气，无人气，小鼻子小眼小家子气。</p>
+  <p>自从有了那个由居高临下的观感得来的心理反转之后，天安门城楼在这边心目中就彻底矮小下去，至今没能再高大起来。（是的，天安门城楼在我心目中的矮小也是由它的周边环境决定的。）</p>
+  <p>1980年代后期曾经见到一个中国大学生在中国民间言论平台上发表文章，创意性地提出把天安门广场改造开辟成一个露天集市，让民众可以到那里去摆摊，玩杂耍，做游戏，布展览，行表演，使它获得令人欣喜的活气，驱除它令人窒息的死气。</p>
+  <p>然而，在可见的将来，这种提议不太可能会成为现实。</p>
+  <p>将天安门广场由一个纯粹是用来展示帝王/统治者霸气的场地变成一个民众可以尽情尽兴享用的广场，这种转变看似就是一念之差的决策，但这种看似可以瞬间完成的思想转变和决策转变的前提必须是整个政治制度的彻底改变。这可比十万吨级的巨轮急转弯至少难十万倍还不止。</p>
+  <p>***</p>
+  <p>吃午餐的时候还是阳光灿烂。随着时间的推移，天空中的云逐渐增多，如今天空中的云更加密集起来。</p>
+  <p>阴云包围了蓝天，埃菲尔铁塔也给云影笼罩。但它依然好看，耐看。</p>
+  <p>看着它，继续思考北京与巴黎，好看与耐看的问题。所谓的好看和耐看并不是天然的，客观的，而是出自建构，出自心目的塑造，属于所谓的perceptual construction。</p>
+  <p>天安门与埃菲尔铁塔分别是中国首都和法国首都的地标，但两者在全世界游客心目中的分量和亲和力差异巨大。作为旅游城市，巴黎多少年来一直在全世界名列第一，北京则不知被巴黎甩在后面多少名。</p>
+  <p>虽然可以说有很多原因造成了这种差异，但以天安门广场、天安门城楼为代表的无视普通人需求的设计思路以及与之相配的人文和政治环境导致的无聊乏味、缺乏人气无疑是一个重要的原因。</p>
+  <p>站在人权广场上眺望埃菲尔铁塔，忍不住猜想来自世界各地的旅游者之所以对巴黎，对埃菲尔铁塔趋之若鹜，显然也是因为内心里对法国所宣扬的重视个人权利和尊严的理念感到亲切。</p>
+  <p>埃菲尔铁塔就是1889年为了纪念提出“自由、平等、博爱”的法国大革命100周年兴建的。法国大革命后来虽然出了很多差错，但“自由、平等、博爱”的理想/理念在不分国界的世人心目中依然跟埃菲尔铁塔一道屹立不倒，尽管有现在还是有很多人对这种理想、对埃菲尔铁塔看不上。</p>
+  <p>走过人权广场和由光滑的多色大理石铺成的特罗卡德罗广场，走到国立海洋博物馆和人类博物馆的尽头，沿着台阶下去。</p>
+  <p>一座庞大的青铜雕像（一个青年人和一头野牛）。铜像背后的人类博物馆高墙上，几排镀金的词句：</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Tout homme crée sans le savoir comme il respire, mais l'artiste se sent créer, son acte engage tout son être, sa peine bien aimée le fortifie.（所有的人都在不知不觉中创作，就像是呼吸，但艺术家则是有意识地创作，其行为牵涉其全部的存在，其挚爱的痛苦使他们坚强。）</code></pre></div>  </div>
+  <p>查互联网，得知这名句出自法国十九世纪末、二十世纪上半叶的著名诗人和文学批评家保尔·瓦莱里。</p>
+  <p>在国家级首善之区、国家级建筑物上如此抬高一个当代的文人及其话语，这种事大概也只有法国才做得出来。</p>
+  <p>这句话是典型的瓦莱里的文笔，句子总起来说不难懂，因为句法简单，规范，清晰（尽管有些文学技术的术语，如“其全部的存在”或许会令一些读者感觉晦涩）。然而，其中的“sa peine bien aimée/其挚爱的痛苦”之说令人感觉费解。</p>
+  <p>再查网，见瑞士的一个心理治疗咨询师发表的一则广告性博客贴文就就此提出了一个很有趣的解读：</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Mais pourquoi cette idée de « peine ?» On aimerait penser que Valéry utilise le mot peine simplement comme synonyme de travail, mais quel artiste considérerait sa vocation comme une « peine ? »</code></pre></div>  </div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>但为什么会有这个“痛苦”之说呢？人们或许可以认为，瓦莱里只是将“痛苦”这个词用作工作的同义词。但哪个艺术家会认为自己的职业是一种“痛苦”呢？ </code></pre></div>  </div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>On pense souvent aujourd’hui que la souffrance est le moteur principal de la création artistique. Quelle tristesse ! Si l’art a parfois une dimension psychothérapeutique et permet d’exprimer des misères refoulées, devenant ainsi instrument de guérison, si certains grands artistes ont effectivement beaucoup souffert dans leur vie, faut-il en déduire qu’il faut cultiver la souffrance ( « peine bien-aimée ») pour devenir ou rester un véritable artiste ? Forts de cette croyance, certains artistes pourraient se méfier de la pratique de la méditation qui dissout le stress et rend plus épanoui, plus équilibré : « vais-je perdre ma créativité si je renonce à ma souffrance ? »</code></pre></div>  </div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>今天人们常常认为苦难是艺术创作的主要动力。这是多么令人悲伤 ！假如艺术有时具有心理疗愈的维度，可以表达被压抑的痛苦，从而成为一种治愈的工具，假如某些大艺术家在其生活中确实遭受了很多痛苦，那么，人们是否应该由此推断，为了成为或继续是真正的艺术家，就必须养育痛苦（“挚爱的痛苦” ）？坚信这一信念的一些艺术家可能会对冥想练习持谨慎态度，冥想可以消除压力，使人更加充实、更加平衡：“如果我放弃痛苦，我会失去创造力吗？ </code></pre></div>  </div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cette crainte est sans fondement. Vincent Van Gogh par exemple a certes été malheureux, mais son art était probablement pour lui le moyen de transcender la souffrance — lorsqu’il peignait, il oubliait sa misère et s’ouvrait à une dimension plus profonde, plus universelle de lui-même. S’il avait été plus heureux, il n’en aurait pas été moins talentueux ; peut-être même aurait-il été encore meilleur. Devenir plus épanoui, plus créatif, plus ouvert au flot de la vie ne peut qu’aider l’artiste. Son œuvre deviendra l’expression de sa plénitude, de son harmonie, de ses perceptions plus riches et plus subtiles.</code></pre></div>  </div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>这种担心是没有根据的。例如，文森特·梵高当然不快乐，但他的艺术对他来说可能是超越痛苦的手段——当他绘画时，他忘记了自己的痛苦，并向自己敞开了一个更深邃、更宽广的维度。如果他更快乐，他的才华也不会减少。他也许会更好。变得更充实、更有创造力、对生活的流动更加开放，这只会有益于艺术家。艺术家的作品将表达出他的充实与和谐，表达出他的更丰富、更微妙的感知。（见，https://mtgeneve.wordpress.com/2012/01/17/paul-valery-et-la-creativite/）</code></pre></div>  </div>
+  <p>瓦莱里所谓的“挚爱的痛苦”之说貌似跟中国传统文论暗通。中国最伟大的史家和文章大家司马迁声言，好的作品都是作家在困苦中的“发愤”之作。宋代著名诗人和文章大家欧阳修则声言，“诗穷而后工”，意思是诗人在陷入穷困之后写出的诗才精致。</p>
+  <p>四点半快到了。在埃菲尔铁塔下的码头上游船游览塞纳河左右两岸风光的时间快到了。</p>
+  <p>和妹妹从人类博物馆东南头的台阶下去，穿过特罗卡德罗花园，过马路，走向耶纳桥（Pont d'Iéna），走向塞纳河对岸和埃菲尔铁塔。</p>
+  <p>特罗卡德罗花园隔着塞纳河跟埃菲尔铁塔遥遥相对的长长的喷泉水池已经被高高的施工脚手架围起来，似乎在搭建什么临时的设施，像是巴黎奥运会准备活动的一部分。</p>
+  <p>过桥。来到塞纳河另一边，埃菲尔铁塔脚下。</p>
+  <p>注意到桥头两边的两对雕像显然是刚刚清洗过，像是全新的。但它们不可能是全新的。</p>
+  <p>下河边台阶，走上河边道。宽阔的河边道很像是横穿芝加哥市区的河边道。说不定芝加哥的河边道就是仿照塞纳河的河边道修建的。</p>
+  <p>走到河边游船码头。一艘接一艘的游船，一时弄不清到底要上的是哪艘。</p>
+  <p>走到码头的尽头，还是没看到要上的船。</p>
+  <p>妹妹问河边一个游船服务人员，她预定的游船要在哪里上。那位先生给予指点。原来是刚才行走匆忙，走过了却没有注意到。</p>
+  <p>赶紧过去排队。已经有几十人在排队了。都是预订好船票的。</p>
+  <p>排队不一会儿，游船开始放人上船。妹妹拿出手机，展示购票的二维码给游船工作人员机器扫描。</p>
+  <p>挑选船头的一长椅上坐下。乘客当然清一色是来自世界各国的游客。</p>
+  <p>缆绳解开，船驶离泊位。船逆流而上，向先向东北，再向东驶去。塞纳河穿过巴黎市区的河段水流平缓，不知它流向的人看不出船是溯流还是顺流而动。</p>
+  <p>穿过一座又一座的桥。游船上有讲解。但面对目不暇接的周围景色很难专心去听。</p>
+  <p>过桥时看到有些桥拱下面镶嵌着方块石。心想：法国人真喜欢用石头，如此镶嵌的石头是否会脱落？重力加上桥面长年累月的过往汽车振动，石块怎么能不松动也不脱落？</p>
+  <p>注意到桥拱下的表面都是干燥的，没有没有水渗透的痕迹。华盛顿的桥则都有。今天走这里的地铁地下通道，似乎也没看到墙体或拱顶有水渗透的痕迹。华盛顿的地铁通道和站内则很多地方有，有些地方有些时候甚至要摆上一个大桶接水。</p>
+  <p>不知这种差异是华盛顿和巴黎的气候和地下水差异所致，还是土木工程建筑设计、技术或施工质量差异所致。</p>
+  <p>游船驶近又驶离亚历山大三世桥。桥头高塔有金碧辉煌的雕像，桥身也有许多雕塑装饰。亚历山大三世桥被认为是全世界最美的桥，是露天美术馆。俄罗斯的末代沙皇尼古拉二世19世纪末赠送给法国的礼物。（尼古拉二世1918年在被迫退位之后全家老少被苏维埃政权秘密处死。）</p>
+  <p>法国先前跟沙俄时代的俄罗斯是同盟，跟苏联也一度是同盟。巴黎地铁站有一站的名称是“斯大林格勒”。但法国先前也跟俄罗斯是死对头，拿破仑入侵俄罗斯，一度打到莫斯科城下。</p>
+  <p>俄罗斯一度非常崇尚法国文化，许多俄罗斯贵族法语说得比俄语还好，孩子的第一语言是法语而不是俄语。儿时的纳博科夫就是这样，以至于他父母要为他学说俄语费一番心思。但彼时的俄罗斯对法国也很警惕，俄罗斯有钱人家请的法语家庭教师大都不是来自法国，而是来自瑞士等讲法语的国家，因为俄罗斯怕法国的家庭教师会传播法国大革命的思想。</p>
+  <p>大作家列夫·托尔斯泰的俄语也非常好。在以拿破仑调遣大军攻打俄罗斯、直逼莫斯科的历史为背景的长篇小说《战争与和平》中，托尔斯泰笔下的俄罗斯上层社会人物在对话中使用法语讨论复杂的政治和历史问题，显示了他们的思想和语言的法国化。托尔斯泰不担心推翻帝制的革命思想会随着法语和法国教师传入俄罗斯吗？</p>
+  <p>看来法国人的革命思想还不是那么彻底。经过了那么多年，亚历山大三世桥名称仍在，桥也在，仍然得到不间断的维修维护，保持着当初的金碧辉煌。</p>
+  <p>协和广场，卢浮宫，法兰西岛，岛上的巴黎圣母院。</p>
+  <p>坐在船头甲板长椅上，左顾右盼。眼看着一个个地标建筑从眼前缓缓滑过。</p>
+  <p>先前看到报道说，2019年4月受到火灾大损害的巴黎圣母院的修复工程即将完工，要在8月的巴黎奥运会到来时完工。但眼下的大教堂外面还满是脚手架，看不出工程即将收尾的样子。</p>
+  <p>梦中的巴黎，梦中的塞纳河。置身其间，更感觉难以置信。昨天还在大西洋彼岸，现在就来到了塞纳河上。梦境的跨度都不会这么大。</p>
+  <p>河上游船和运输船来来往往。塞纳河显然至今依然是巴黎市区乃至从巴黎到大西洋出口之间的客运货运重要通道。</p>
+  <p>河边船停靠着很多船。不少船显然是船屋，里面有人住，甲板上养着盆栽植物。不知道这些船屋是怎么来的。肯定是有相当严格的控制措施。否则，用不了两天或一个星期，塞纳河这一段就会被船屋塞个水泄不通。</p>
+  <p>塞纳河两边的河边道墙壁都干干净净，先前覆盖着墙壁的涂鸦都清理了。不知怎么清理的，不知花了多少钱，不知如何阻止再有人涂鸦。涂鸦只需要几秒钟十几秒就可以完事。清理涂鸦并清理干净所需的时间要数倍、数十倍，费用怕是也得数倍、数十倍。</p>
+  <p>河面很干净，不见有任何垃圾。巴黎市发誓要借助巴黎奥运会的东风彻底整治塞纳河的污染。至少就市区河段而言，至少就垃圾清理而言，整治得相当见效。游船开行了很长时间，至少几公里的河段一直没看到漂浮的垃圾。显然，河面一直有人（有船）在清扫。巴黎为了奥运会也是拼了。</p>
+  <p>河边不见垂钓的人。不知是因为河里没有鱼，还是在市区禁止垂钓，或者是巴黎人不爱钓鱼。</p>
+  <p>游船驶过法兰西岛尽头，在不远处掉头折返。从岛的另一边折返。岛两边的水道是单行道。</p>
+  <p>夕阳西下。再度经过卢浮宫，经过亚历山大三世桥。一座座的桥。返回埃菲尔铁塔下的游船码头。</p>
+  <p>下船，上岸。</p>
+  <p>河边道上，有人在变戏法——三个不锈钢小杯子放在一块衬垫上，有一个杯子下面扣着一个球，变戏法的人不断拿起放再下杯子、显示再盖住球，然后倒腾挪动三个杯子，让过路人猜球在哪个杯子下。</p>
+  <p>十来个人在围观。围观者可以交钱竞猜——交50欧元給变戏法的人，要是猜中，变戏法的人就二话不说立即返还100欧元；交100欧元猜中，就会返还200欧元。要是猜不中，交的钱就是变戏法的人的了。</p>
+  <p>好奇，驻足观看。不断看到有人猜中，当场赚钱。也不断有人猜不中，交的钱就没有了。</p>
+  <p>觉得很容易看出球在哪个杯子下面，因为变戏法的人的手挪动得并不快，而且只是三个杯子，球在哪个下面很容易记住。</p>
+  <p>与此同时，内心里很清楚，这里面肯定有猫腻——变戏法的人肯定不傻，这世界上很傻的人不是很多，没有多少人会用这种迅捷的方式来丢钱或散财。</p>
+  <p>变戏法的人注意到这边的好奇与关注，招呼这边加入。</p>
+  <p>当然不会加入。这边只是好奇，只是喜欢看。可惜，法语口语不灵，表达不了这种简单的想法。</p>
+  <p>或许本来也不需要语言表达，表情与肢体动作已经是足够清楚和充分的表达。都说是说人心隔肚皮，其实在很多很多场合，人心是透明的。人心可以一目了然，一清二楚，毫无遮掩，无法遮掩，可以展示在人难以控制的面部表情和肢体动作中。</p>
+  <p>妹妹跟着爹爹看了不一会儿就开始督促爹爹走开，不要再看了。还好，她没教训爹爹说好奇心害死猫。</p>
+  <p>在妹妹越来越严厉的督促下恋恋不舍地走开。边走边心有不甘，跟妹妹说：我就是看看，怎么啦，爹爹又不是很傻，不会加入；多看一会儿怎么啦，多好玩哪，怕什么呀，光天化日之下，来来往往的人这么多，这里又是闹市区；出来玩，不就是要看这样的好玩的事嘛。</p>
+  <p>妹妹说：尽管人多，也不一定安全，因为你不知道那些人是什么人；就算是一般的过路客很多，你真要遇到什么麻烦，也不见得有人愿意挺身帮你；我学过这样的课程。</p>
+  <p>她这话说得稳妥老成，无懈可击，显然是有根有据有研究，让这边无从反驳或犟嘴。</p>
+  <p>和哥哥一样，妹妹在外总是小心谨慎。相对而言，这边也确实是太经常地喜欢铤而走险，让兄妹俩着急。今天又是让妹妹着急。</p>
+  <p>不知从哪年开始（好像是从小学高年级），兄妹俩跟这边角色颠倒反转，更经常地是教训者而不是被教训者，成了爹爹的监护人。爹爹在他们兄妹面前时常成为乖乖儿，对他们不得不服，因为他们确实是更谨慎，对很多事情懂得更多。</p>
+  <p>乐见他们更谨慎。也惊叹他们不知不觉间成了典型的美国好孩子，平时可以跟任何人礼数周到，说说笑笑，令人开心，但总是留心观察周围的人和事，对很多事情都独立的思考，有一番研究，到了需要争论的时候能拿出一套套的道理、事实、数据。</p>
+  <p>走上河边道的台阶，再上耶拿桥。桥上也有人在摆同样的变戏法的摊子。有人在围观。这次乖了，不要再驻足观看了。</p>
+  <p>沿着桥从塞纳河左岸向右岸走。途中，见一个变戏法的男子把变戏法用的垫子卷起来夹在腋下匆匆离去。估计是跟警察或什么执法部门人员打游击战，玩捉迷藏。</p>
+  <p>（后来在油管YouTube上看揭露这骗人把戏的视频得知，那种表面不光滑、有毛刺的垫子是那骗术不可或缺的重要道具。这种在街头行骗的把戏在欧洲国家许多城市流行，甚至在人们心目中秩序超好的瑞典城市也有。）</p>
+  <p>桥上也有人在摆小摊，卖埃菲尔铁塔模型之类的旅游纪念品。不知这些小贩是否有摆摊的执照。假如没执照，要是有什么执法部门的人来巡查，他们如何收摊。这种兜售纪念品的摊可不比变戏法的人的摊。变戏法的摊只要一块两尺见方的垫子，三个小杯子，一个小球。把垫子卷起来，小杯子和小球装进口袋，两三秒钟就可以动作完成走人。</p>
+  <p>诈骗乃至讹诈游客的人、群体、店家在很多旅游地、旅游城市包括在北京都有。</p>
+  <p>几年前在YouTube上看到一个西方男子制作的旅游节目视频，专门介绍北京天安门广场附近就有如此诈骗游客（主要是外国游客）的团伙和店家，其手法是由一个年轻女子出面，在街上跟一个单身的西方男游客用简单的英语搭讪，设法把他吸引到附近小街的一个酒吧，一起喝一杯饮料，吃一小盘花生米，然后就是一张天价的账单。游客要是不付账休想离开（很可能有拳脚伺候）。周围警察局知道有这样的坑人店家，但基本上不管不问。</p>
+  <p>诈骗/讹诈行为要肆虐到怎样的程度才会严重败坏一个旅游地的名声，对旅游业造成严重打击，才会引起地方当局的重视并进而采取取缔行动？</p>
+  <p>怎样才算是严重？对什么人严重，对什么事严重？</p>
+  <p>北京街头有女子招引游客进而诈骗的游戏，巴黎街头有用三个小碗扣小球诈骗游客的游戏。为什么会这种不同的诈骗手法？在交通无比方便、国际旅游、人员往来无比方便的今日世界，促成和阻碍一种诈骗方式在一个城市被引入和普及化的主要因素是什么？</p>
+  <p>无穷的好玩的问题。</p>
+  <p>妹妹又说饿了，要找地方吃饭。</p>
+  <p>跟她决定不在这附近找餐馆吃饭。塞纳河边，埃菲尔铁塔附近，这样的地方游客云集，人头涌涌，肯定是英语世界所谓的tourist trap，即汉语所谓的宰客地方。不要在这样的旅游游客集中的地方找餐馆吃饭。</p>
+  <p>决定返回旅馆那边的城区吃饭。今天在那边看到的餐馆太多了。整条整条街的餐馆。</p>
+  <p>返回地铁站途中，再经过人权广场。</p>
+  <p>斜阳从西边的云峰中钻出，照射在广场上。一个年轻的艺人在演奏吹奏乐。不断有三三两两的过往的人驻足观看。那演奏者似乎很享受自己的演奏，是为了乐趣而演奏，不像是为了谋生而不得不演奏。</p>
+  <p>看着演奏者，看着观众，心想这就是令人喜悦的人气了。天安门广场哪一天也能有这样的自由和人气，北京和巴黎就可以有一拼了。</p>
+  <p>遇到来时没看到或看到却没注意因而记不得的几个兜售旅游纪念品的小摊，摊主都是男子。其货色跟桥上的大同小异。猜想那些旅游纪念品的生产厂家大概都是中国的。</p>
+  <p>看着小摊，不禁悬想自己是否也可以来摆摊，体验一下小摊贩的生活。摆摊需要执照吗？被抓了后果严重吗？大概是不会很严重，鉴于这么多的人看似很随便地在这里摆摊。但真要是来摆摊，这里会不会有地头蛇，要缴付保护费？</p>
+  <p>要想获得最靠谱的答案，最佳途径大概只有以身试法尝试在这里摆摊。</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+    
+      <li>
+        <time>2024-10-09</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">
+          梦中的巴黎（5）：黄昏与夜晚
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-09-22</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-09-22/%E5%85%B3%E4%BA%8E%E9%A9%AC%E7%89%B9%E5%B8%82%E7%BB%9F%E6%88%98%E8%B4%B4%E7%9A%84%E7%A7%91%E6%99%AE/">
+          关于马特市统战贴的科普
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-09-14</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-09-14/%E5%B7%B4%E9%BB%8E%E4%B9%8B%E8%A1%8C%E4%BE%A7%E8%AE%B0-%E5%87%A1%E5%B0%94%E8%B5%9B%E6%96%87%E5%AD%A6%E4%B8%8E%E5%85%B6%E4%BB%96/">
+          巴黎之行侧记：凡尔赛文学与其他
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2024-09-22/%E5%85%B3%E4%BA%8E%E9%A9%AC%E7%89%B9%E5%B8%82%E7%BB%9F%E6%88%98%E8%B4%B4%E7%9A%84%E7%A7%91%E6%99%AE/">
+            前一篇：关于马特市统战贴的科普
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">
+            後一篇：梦中的巴黎（5）：黄昏与夜晚
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2024-09-22/%E5%85%B3%E4%BA%8E%E9%A9%AC%E7%89%B9%E5%B8%82%E7%BB%9F%E6%88%98%E8%B4%B4%E7%9A%84%E7%A7%91%E6%99%AE/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2024-09-22/%E5%85%B3%E4%BA%8E%E9%A9%AC%E7%89%B9%E5%B8%82%E7%BB%9F%E6%88%98%E8%B4%B4%E7%9A%84%E7%A7%91%E6%99%AE/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2024-09-22/%E5%85%B3%E4%BA%8E%E9%A9%AC%E7%89%B9%E5%B8%82%E7%BB%9F%E6%88%98%E8%B4%B4%E7%9A%84%E7%A7%91%E6%99%AE/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2024-09-22/%E5%85%B3%E4%BA%8E%E9%A9%AC%E7%89%B9%E5%B8%82%E7%BB%9F%E6%88%98%E8%B4%B4%E7%9A%84%E7%A7%91%E6%99%AE/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
