@@ -1,0 +1,3509 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>梦中的巴黎（3）：走街交谈·观景遐想 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+梦中的巴黎（3）：走街交谈·观景遐想
+——
+" />
+    <meta property="og:description" content="
+梦中的巴黎（3）：走街交谈·观景遐想
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="梦中的巴黎（3）：走街交谈·观景遐想" />
+    <meta property="twitter:title" content="梦中的巴黎（3）：走街交谈·观景遐想" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40tsugaru_strait%2F%25E6%25A2%25A6%25E4%25B8%25AD%25E7%259A%2584%25E5%25B7%25B4%25E9%25BB%258E-3-%25E8%25B5%25B0%25E8%25A1%2597%25E4%25BA%25A4%25E8%25B0%2588-%25E8%25A7%2582%25E6%2599%25AF%25E9%2581%2590%25E6%2583%25B3-bafybeickcbbcnsdvm4h3ifsxpfc7dwpgmy76hhx4rpou775j5lpbqf3jti" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-3-%E8%B5%B0%E8%A1%97%E4%BA%A4%E8%B0%88-%E8%A7%82%E6%99%AF%E9%81%90%E6%83%B3-bafybeickcbbcnsdvm4h3ifsxpfc7dwpgmy76hhx4rpou775j5lpbqf3jti" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-3-%E8%B5%B0%E8%A1%97%E4%BA%A4%E8%B0%88-%E8%A7%82%E6%99%AF%E9%81%90%E6%83%B3-bafybeickcbbcnsdvm4h3ifsxpfc7dwpgmy76hhx4rpou775j5lpbqf3jti&text=梦中的巴黎（3）：走街交谈·观景遐想&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-3-%E8%B5%B0%E8%A1%97%E4%BA%A4%E8%B0%88-%E8%A7%82%E6%99%AF%E9%81%90%E6%83%B3-bafybeickcbbcnsdvm4h3ifsxpfc7dwpgmy76hhx4rpou775j5lpbqf3jti&title=梦中的巴黎（3）：走街交谈·观景遐想" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-3-%E8%B5%B0%E8%A1%97%E4%BA%A4%E8%B0%88-%E8%A7%82%E6%99%AF%E9%81%90%E6%83%B3-bafybeickcbbcnsdvm4h3ifsxpfc7dwpgmy76hhx4rpou775j5lpbqf3jti&title=梦中的巴黎（3）：走街交谈·观景遐想" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=梦中的巴黎（3）：走街交谈·观景遐想&body=
+梦中的巴黎（3）：走街交谈·观景遐想
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-3-%E8%B5%B0%E8%A1%97%E4%BA%A4%E8%B0%88-%E8%A7%82%E6%99%AF%E9%81%90%E6%83%B3-bafybeickcbbcnsdvm4h3ifsxpfc7dwpgmy76hhx4rpou775j5lpbqf3jti" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-3-%E8%B5%B0%E8%A1%97%E4%BA%A4%E8%B0%88-%E8%A7%82%E6%99%AF%E9%81%90%E6%83%B3-bafybeickcbbcnsdvm4h3ifsxpfc7dwpgmy76hhx4rpou775j5lpbqf3jti&title=梦中的巴黎（3）：走街交谈·观景遐想&caption=
+梦中的巴黎（3）：走街交谈·观景遐想
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=梦中的巴黎（3）：走街交谈·观景遐想&url=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-3-%E8%B5%B0%E8%A1%97%E4%BA%A4%E8%B0%88-%E8%A7%82%E6%99%AF%E9%81%90%E6%83%B3-bafybeickcbbcnsdvm4h3ifsxpfc7dwpgmy76hhx4rpou775j5lpbqf3jti" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>梦中的巴黎（3）：走街交谈·观景遐想</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2024-08-27
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 津轻海峡</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-3-%E8%B5%B0%E8%A1%97%E4%BA%A4%E8%B0%88-%E8%A7%82%E6%99%AF%E9%81%90%E6%83%B3-bafybeickcbbcnsdvm4h3ifsxpfc7dwpgmy76hhx4rpou775j5lpbqf3jti" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1724800065000-->
+<p><a href="https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-3-%E8%B5%B0%E8%A1%97%E4%BA%A4%E8%B0%88-%E8%A7%82%E6%99%AF%E9%81%90%E6%83%B3-bafybeickcbbcnsdvm4h3ifsxpfc7dwpgmy76hhx4rpou775j5lpbqf3jti">梦中的巴黎（3）：走街交谈·观景遐想</a>
+——</p>
+
+<div>
+  <p><br /></p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/4a67da34-ca86-48b1-9fd5-aab67329bd46.jpeg/public" referrerpolicy="no-referrer" />    <figcaption>
+六月初的巴黎，清早时分的圣德尼门（photo credit：津轻海峡）
+    </figcaption>
+  </figure>
+  <p>从地铁站出来，阳光明媚，空气凉爽。六月初，美国已经是夏季了，但这里的感觉好似还是春季，户外活动最理想的天气。</p>
+  <p>走上马路，立即看到一座大约二十来米高的庞大建筑，像凯旋门一样的，上面有复杂的雕塑和深浮雕，横楣上一串金色的字母串，LUDOVICO MAGNO。</p>
+  <p>赶紧手机上网查，得知这确实是一座凯旋门，圣德尼门，Porte Saint Denis。那一串字符的意思是“献给路易大帝”，这凯旋门是十七、十八世纪有“太阳王”之称的法国国王路易十四（Louis XIV）下令修建的。</p>
+  <p>幸亏现在有互联网可以查。否则，谁猜得出LUDOVICO指的就是那个在位72年的国王路易十四。不要说出Ludovico和Louis拼写差别很大，就算是差别不大，也足以让人晕头转向。</p>
+  <p>至今中国还有无数的专业翻译和专业刊物弄不清楚Smithson和Smithsonian指的是同一个人，于是把由Smithson（史密森）这个人名变化而来的形容词Smithsonian翻译为“”史密森尼“，硬是把一个人变成了两个人，硬是生造出英语世界一个并不存在的人名。</p>
+  <p>读着手机显示的互联网上的解说，浮想联翩。</p>
+  <p>中国古人说，行千里路，读万卷书，意思好像是行路一里相当于读十卷书。行路和读书增进新知的功效是否可以如此换算不好说，但行路确实是益智又娱乐，可以是最好的寓教于乐。</p>
+  <p>向预订的旅馆走，这边抱怨看不到路标。这里的路标设置跟美国的不一样。美国那边路标多是独立的牌子。巴黎（以及伦敦、罗马）的路标多是附着在路口建筑物上的牌子，而且高度不一。初到巴黎，仍是沿用在美国养成的习惯寻找路标，当然看不到。</p>
+  <p>妹妹没看到路标，也没费力费心去搜寻街头路标。她直接拿着手机，用手机导航，说是走在正确的路上。</p>
+  <p>这边跟她是两代人，代沟明显，连行路找路的方式都大不一样。时代推移，这世界是年轻人的。不能不服。</p>
+  <p>由大路转上不那么大的路。道路两边多是商店，形形色色的商店——服装店，餐馆，日用品商店…。看样都不是面向旅游者而是面向当地人的。</p>
+  <p>在美国几乎见不到这样的居民区街边商店、餐馆。只是现在建的一些时髦的新居民区才有餐馆和服装店之类的商店，但不会有日用品商店。</p>
+  <p>道路狭窄，人行道更狭窄。许多路段的人行道只能一人通行。假如对面走来一个人，双方之一必须要让道。所谓的让道无非就是走到马路上，跟过往的车辆共享道路。这就使过往的车辆不得不放慢速度，司机要随时要盯着看路，看路上是否有行人。</p>
+  <p>一路走来，道路都干干净净。干净得令人意外。令人高兴的意外，a happy surprise。先前听到很多关于巴黎市容的传说，说是街道多垃圾，不留神动辄还随时会踩上狗屎。</p>
+  <p>转上一条岔道，旅馆就在眼前。临街的窗户像是书店的橱窗，里面摆着一些书。</p>
+  <p>接待员是一个胖胖的黑人女子。妹妹用法语跟她交涉，说自己已经网上预定了房间。女子用法语回应，说她的电脑系统确认房间预订无误。</p>
+  <p>看着妹妹说法语，跟接待员应答自如，笑颜明亮，感觉心旷神怡。巴黎的美称是La Ville Lumière，明亮之城。看着、听着她们俩说话，感觉她们就是巴黎的好广告。</p>
+  <p>她们的往来应答这边只能大致听懂一点。之所以只能听懂一点，一部分原因是这边法语听力不济（词汇有限，先前听和说法语的机会有限），另一部分原因是喜欢视觉观察，惯于思想跑野马。于是，即使是听到自己熟悉的词语也常常反应不过来，因为思绪还在跟野马一起奔跑。</p>
+  <p>动辄就跑野马是毛病，可能是源自基因。有其父必有其子。妹妹的哥哥也有这问题，而且问题十分明显。上小学的时候，哥哥坐在教室里好像总是在出神不听讲，让老师哭笑不得。</p>
+  <p>至今记得年轻漂亮的老师贝雅特丽齐（Beatrice）向这边投诉。早年当过老师的这边非常理解老师，也非常理解哥哥。但投诉归投诉，老师过后并没有把哥哥怎么样。美国学校的老师之宽容也是可爱。</p>
+  <p>幸亏老师宽容，哥哥就这样我行我素上完了小学，然后上中学，上大学。他这种自己琢磨事情不大听老师说什么的做派后来居然成了他自学能力超强的优势。</p>
+  <p>旅馆要到下午三点才能入住。妹妹问：可否把行李先寄存下，到点再回来入住。女子接待员说没问题。</p>
+  <p>感觉好轻松。住处得到确认，又放下了行李，心情轻松得简直要起飞。</p>
+  <p>妹妹说，今天还有整个一下午和晚上，要好好利用。她接着上网，利用旅馆的网络预订了4点30分乘游船游览塞纳河巴黎市中心地段的船票。这样接下来可以有足够的时间找餐馆吃午饭，还有足够的时间去塞纳河乘船处，顺便一路游览巴黎街市风光，不需要太赶。</p>
+  <p>妹妹忙着网上购买船票，这边趁机细看这旅馆的接待厅。小小的接待厅，一个书架挨着临街的大窗户，上面摆着一些英语和法语书，显然是让入住的客人可以随便拿到房间里读的书。</p>
+  <p>如此一来，这旅馆接待处从街上看就像是一个书店了。如此这般的店面装饰也真够别出心裁。大概只有法国人才想得出，才有这品味。巴黎到底是一个高雅的城市。</p>
+  <p>从旅馆出来，再走到街上。两手空空，自由自在，感觉太好了。</p>
+  <p>正是午餐时间。阳光明亮，走在巴黎的街道上，感觉犹如在美梦中梦游。</p>
+  <p>庞德的巴黎地铁站的短诗既是写实，也是一种梦境描绘。梦中的景色多是幽暗的，缺乏色彩的。眼前的美梦和实景则是明亮的，富有色彩的。</p>
+  <p>巴黎，梦寐中的城市，多少年来在书上、在音像作品中不知见过多少次的城市。如今就走在巴黎的街道上了，对这种好运感到难以置信。再想到接下来还有十天在法国，好惬意。美事的开头总是令人欣喜。</p>
+  <p>前面一条横街，人来人往，是来时没有走过的。</p>
+  <p>走过去看，果然很热闹，三五步就是一家餐馆。很多人坐在路边露天餐桌就坐，就餐，喝饮料，聊天。</p>
+  <p>一路走来，妹妹看中一家路边餐馆，决定就在那里吃午饭。</p>
+  <p>她上前与服务员打招呼，要一个两人桌，une table pour deux。服务员问要店里面的座位还是外面街边的。这么好的天，当然是要外面的。</p>
+  <p>在临街的一张两人桌坐下。云多起来。阳光时隐时现。两个座位一个在餐馆外的凉棚阴凉内，一个在阳光下。</p>
+  <p>妹妹调皮，冒充高姿态，要爹爹挑选座位。这边也以高姿态应对高姿态，高调展示高风亮节，说是要会晒到太阳的椅子，把荫凉地里的椅子让给她。这边不怕晒，而且也觉得阳光并不很热，况且还不断有清凉的风。</p>
+  <p>前后和马路对过都是餐馆。所有就餐的人都在从容不迫地一边喝饮料、就餐，一边悠闲地交谈，跟美国人在餐馆午餐多是匆忙完成任务一般截然不同。</p>
+  <p>观察就餐的人，有些人像是当地人，还有些人则明显是旅游者（随身带着背包或小包的人大都是旅游者）。即使是旅游者，到了这里也一个个都入乡随俗，享受悠闲的法国午餐。</p>
+  <p>妹妹向服务员要了une carafe d’eau，就是装在瓶子里的普通饮用水，自来水。</p>
+  <p>一个来星期前刚刚在教外语的应用Duolingo多邻国学法语学到的，说是在法国餐馆就餐，普通饮用水是不要钱的，假如不要普通饮用水，餐馆就会給汽水。汽水是要钱的。</p>
+  <p>水上来了。立即倒一杯品尝。巴黎自来水味道很不错。典型的英语世界所谓的sweet water，甜水，即没有任何异味的水。中国人的说法就是味道清凉甘甜的水。</p>
+  <p>三个服务员看上去都是20岁出头，一男两女，都身材苗条，进进出出，忙碌不停。做餐馆服务员绝对是个体力活儿。</p>
+  <p>引座员是小伙子。一个女服务员特别漂亮，个头高挑，肤色黝黑，大眼睛。两鬓分别垂着一缕深棕色的头发。这出众的相貌完全可以直接上时尚杂志或化妆品图册。</p>
+  <p>每次看到感觉特别漂亮、英俊的人都要忍不住遐想——她/他会成为一个明星嘛？太多的明星看上去也不过如此甚至还不如，怎么漂亮英俊得这么出众的人就没能成为明星呐？</p>
+  <p>好长时间自以为这种遐想纯粹是自己的瞎想。后来得知并不是，而是人同此心，心同此理，是社会大众共有的想法，共有的美好幻想和幻想投射。</p>
+  <p>早些时候，美国前总统特朗普在纽约上法庭成为一则全世界众人瞩目的美国政治新闻和社会新闻。但很多电视观众更加瞩目的是在那里担任法庭警卫的一个女子，其相貌和风度令他们着迷。</p>
+  <p>几年前（十几年前？），美国国务院礼宾司的一个名不见经传的年轻女官员随同高级官员在机场迎接一位到访的外国来宾，成千上万的电视观众也是对那年轻女子的相貌和风度着迷得不行，纷纷赞叹。当时在电视上看到那位年轻女子，也是跟观众一样感觉那女子的举手投足、一举一动都超迷人，尽管这边一向自以为是个不同流俗、不容易随大流的人。</p>
+  <p>审美可以既是极其个人的，也可以是极其大众的（用统计学可以轻易验证的）。而且，常常是捉摸不定，难以把控。人人都知道明星之美大都来自天然，但很多人不知道美也来自人工塑造、打造、加持、推销。人工之力能否成功也是捉摸不定，难以把控。一个最明显的例子是，中国影视演员景甜多年来得到超大力、超强力的人工之力加持，但她始终是票房毒药。</p>
+  <p>景甜始终扶不起来，于是众多论者就说她确实缺乏内在的魅力，能力，笨得要死，始终玩不转必要的和基础的演技，她就是个扶不起来的阿斗，是死狗撮不到墙上去。</p>
+  <p>然而，1955年后的张爱玲作为一个作家一直聪明得要死，文字技能超群，内在的魅力十足（张爱玲随便写个便条也可以文笔巧妙，光芒四射），但却始终没能再现“倾城之恋”出版时一时洛阳纸贵的那种辉煌。由此可知，美被大众看见并欣赏的过程是捉摸不定的，难以把控的。</p>
+  <p>纽约的那位法庭女警卫和美国国务院的那位低级官员至今依然默默无名，犹如1955年后的张爱玲。想到这里，猛然意识到，容貌之美在大多数时候是无用的，有用的是日复一日没什么靓丽可言的职业工作，如在法庭里外站岗，如随同高级官员迎来送往。</p>
+  <p>张爱玲1955年后之所以明显失落，是因为追求文学的靓丽是她的职业，但艺术创作（艺术之美的追求）是难以保证成功的冒险，而且永远是孤独的冒险。张爱玲的后半生可以说是不走运。但从其一生来看，她也是幸运的。她早早就出了名，享受到辉煌的成功的喜悦。古往今来成千上万的写手到死也没能得到她那样的成功和喜悦的一个小零头。</p>
+  <p>（关于美貌的价值和功用，《经济学人》杂志前几年发表一篇文章，其大意说是有经济学家进行了一番正式的调查研究，发现一个人相貌好的确可以得到明显的经济好处，大致相当于比长相一般的人多受了两年的正规教育。）</p>
+  <p>跟妹妹猜测那大眼睛服务员是什么族裔。她说，像是北非阿尔及利亚人。爹爹说是，也可能是摩洛哥人。法国一度统治阿尔及利亚和摩洛哥。</p>
+  <p>妹妹跟大眼睛服务员用法语点餐。她给这边点了一个洋葱汤，她自己要了一个土豆烧牛肉。</p>
+  <p>有妹妹在场，爹爹就全指望她、全听她的了。</p>
+  <p>妹妹说，喜欢吃法餐的人都说，到了法国一定要吃洋葱汤，因为各家餐馆的洋葱汤都不一样。</p>
+  <p>菜上来了。盛在石罐里在火上烧出来的洋葱汤基本上看不见汤，但里面的奶酪配新鲜的面包吃味道很好。在法国，面包永远是新鲜的。</p>
+  <p>妹妹也说她的土豆烧牛肉味道不错。她切一块给爹爹品尝。爹爹说，味道不错，但牛肉太筋道，咬不动。妹妹也是这感觉。但她的牙比爹爹的好，问题不大。那块牛肉块头很大，法国餐馆也真舍得给。</p>
+  <p>邻桌是一对上接近70岁的白人夫妇，跟这边用简单的英语交谈起来。主要是妹妹跟他们交谈，这边在一边倾听，观察。</p>
+  <p>妹妹是很会说话，话题总是多而轻松，转换自如，而且总是笑容可掬，令人感觉欣喜愉悦。</p>
+  <p>夫妇是斯洛文尼亚人，谈吐和举手投足看上去很有文化，很有教养。他们有个儿子在英国伦敦金融业界工作。他们刚刚去伦敦探望了儿子，返国途中顺道访问巴黎。</p>
+  <p>那位先生得知妹妹是头一次访问法国，告诫她在法国千万要小心。他以平静的、冷静的语调跟妹妹说，这里扒手多，他在法国被掏走一只手机；手机丢失了很麻烦，因为上面存储了很多信息；但也不必恐惧，只要小心就好；不可把要紧的东西放得太暴露，免得给小偷提供方便。</p>
+  <p>说着，先生的太太给这边展示她的小挎包，斜挎在肩膀上，包总是在她视野之内的前身。</p>
+  <p>妹妹问那位先生对特朗普怎么看。他说，特朗普可能引起战争，对全世界都不好；虽然斯洛文尼亚被认为是比较右倾，但还是比较担心特朗普。</p>
+  <p>这边提到特朗普的妻子梅拉尼娅是斯洛文尼亚人，问他们斯洛文尼亚人如何看梅拉尼娅？他们似乎没怎么回答这个问题。这边也不好意思太追问。这样的问题确实是令对方为难。</p>
+  <p>斯洛文尼亚夫妇离去之后，他们的桌子来了一个看样子七十来岁的男子，坐下，点了一份饮料，开始喝。</p>
+  <p>男子跟妹妹攀谈起来，先用法语，然后转换为流畅的英语。</p>
+  <p>原来他是法国人，在美国侨居40多年，在佛罗里达和加利福尼亚州都长期居住过，从事酒类进口生意。他说因为自己放纵，喝酒喝得太多，严重损害了肝，不得不收敛，这次回到法国，检查身体，各项指标都好了很多，令大夫感到吃惊。</p>
+  <p>这边和妹妹向他表示祝贺。</p>
+  <p>妹妹跟他说，她这是第一次来法国，跟爹爹来，除了访问巴黎之外，还要去马赛。妹妹接着突然要他猜猜看爹爹多大年纪了。这位先生说出一个年龄，妹妹告诉他爹爹的实际年龄。他表示大为惊讶。</p>
+  <p>妹妹的话风也够神，实在出人意料。怎么会这么说话。但看她跟这位先生有说有笑，也不得不佩服她谈话的艺术。艺术从来就是出人意料的。</p>
+  <p>这位先生从口袋掏出自己的公交车塑料磁卡给妹妹看，说比纸质的公交车票更方便（充值方便），也可以更便宜。他也指点妹妹在这里要小心扒手，尤其要躲避人群杂乱拥挤的地方，说有些地区和车站特别要小心，如北站（Gare du Nord），人群拥挤，人的成分比较杂。</p>
+  <p>来时乘坐机场火车进入巴黎市区的第一站就是北站。那里是各路公交车汇聚的咽喉。当时从那里走过，不明就里，并没有对那个车站特别在意。</p>
+  <p>这位先生接着也说，巴黎有很多好看的，可以好好欣赏，不必把自己弄得紧紧张张，只要多留心一点就好。</p>
+  <p>他侃侃而谈，妹妹和这边认真倾听。妹妹不时接他的话，跟他说话。他有说不完的话，超级能说。他显然感觉跟妹妹交谈很愉快。</p>
+  <p>都说是法国人不太愿意跟陌生人交谈，但这位先生显然是例外。</p>
+  <p>大概也是因为在美国生活了大半辈子，他已经很美国化了。美国人多半喜欢跟人交谈。而且按照一般的美国人的礼貌，要保持不断说话的状态，不能冷场。他这种说话方式完全是典型的美国人的做派。</p>
+  <p>与此同时，妹妹与人交谈总是令对方感觉如沐春风也是一种超绝的能力、才能。她对此也有清楚的自我意识，知道她的亲和力是她重要的资产和资本。</p>
+  <p>（她有一次跟爹爹笑说：公司有一个资深合伙人看着她主持了一次公司新员工聚会之后跟她说，“相信我，你以后要挣大钱；” 我也不知道我是不是能挣大钱，但这话让我觉得很中听；还有别的人也这么跟我说。）</p>
+  <p>吃完午餐，付款，跟这位先生道别。</p>
+  <p>旅馆入住的时间到了。顺畅地走回旅馆。在一个不熟悉的地方走路，走到要去的地方又没迷路总是给人一种可喜的成就感。</p>
+  <p>接待处又来了一个男接待员，也是非洲裔，瘦瘦的，风度翩翩，彬彬有礼。妹妹以法语跟他交涉。他有说有笑地用法语对答。他说巴黎规定的旅游税还需要补交。旅游税也是诸多城市应对过度旅游的一种手段。巴黎这个世界头号旅游城市征收旅游税也是理所应当。</p>
+  <p>原先那个胖胖的女接待员去把这边和妹妹的行李从寄存处拉出来。</p>
+  <p>事项交代完毕，可以入住了。男接待员给妹妹两个印有标记的啤酒瓶子铁盖，说凭这两个盖子可以在这旅馆附设的餐馆酒吧得到两份免费的饮料。</p>
+  <p>要入住的房间在另一个楼，就在小巷的另一边，二十来米外。这旅馆开设的酒吧和餐馆也在那边。</p>
+  <p>入住。很舒适的房间。把东西放下，妹妹说，要好好利用巴黎的这个下午；她的法国同事说到巴黎来，乘游船游览塞纳河绝对值得。</p>
+  <p>立即再出发，乘地铁，去游船码头。</p>
+  <p>向地铁站走。这边跟妹妹说：你跟他们说法语，我都听不懂，只能听出个别的单词。</p>
+  <p>妹妹说：我毕竟是学了6年法语嘛，但现在我也只是能说简单的句子；在这里你跟懂英语的法国人说法语，他们会礼貌地听你说，礼貌地跟你说两句，然后就转成英语了。</p>
+  <p>典型的妹妹说话方式，好似简单地陈述事实，但又是有意无意地给对方安慰和鼓励。她就是这样在不经意间透露出她惊人的成熟，大气，排场，超高的情商和智商。她说的话怎么推敲都无懈可击，但又听上去又那么自然而然，毫无设防，令人感觉可信，可亲，可爱。</p>
+  <p>刚才妹妹办理入住时跟那瘦服务员交谈，那位先生就是先跟她说法语，然后切换成英语。</p>
+  <p>这旅店的两位服务员都是非洲裔，法语英语都娴熟。法国吸收外来移民的能力和成就显然不错。</p>
+  <p>这里毕竟是巴黎市，巴黎中心地区。巴黎毕竟又是法国文化教育水平最高的城市，能说英语的人格外多，高素质的劳动力多。</p>
+  <p>去年在大西洋边相对小一些但也不算小的城市瑟堡和勒阿弗尔，能说英语的人就少多了。在那边多次遇到看上去机灵无比的年轻男女店员，即使是简单的英语一句也不会说。</p>
+  <p>仍记得当时一方面感到惊讶，一方面也意识到就民众不肯学外语而言，法国在西方国家当中跟美国有一拼，两边都有众多的人认为外语不需要，别的国家的人自然应当懂自家的语言。</p>
+  <p>一路跟妹妹说着话，一路跟着手机的指示走，走向地铁车站。</p>
+  <p>有了手机导航真是好。即使到一个从未去过的城市，无论要想去哪里去，手机导航都可以把公共交通或步行道路指点得一清二楚，从这条街走到那条街，往哪个方向走，到哪个路口向哪个方向转，是否走在正确的方向上，乘车向哪个方向去，到哪里下车，要坐多少站，需要再转什么车，上哪条线的车，一路经过什么车站，一切都有清楚的交代。</p>
+  <p>要是以前，出行到一个陌生的地方，只能凭借一张详细的地图站在大街上，自己端详方向，上了车要询问司机要到哪里下车，转车的车站在哪里。要是跟司机语言不通，就只能自己盯着看沿途的车站。要是看不到或看不清站牌，就要通过试错法（trial and error）最终找到自己要去的站。</p>
+  <p>在短短的10年里，人们的行路方式就发生了天翻地覆的重大变化，手机导航成为大众不可或缺的工具。要是哪天手机服务中断，不知要有多少万、多少百万人会陷入进退不得的困境。人寻找道路、识别方向、阅读地图的能力跟语言能力一样是用进废退，甚至退步到无影无踪，跟完全没有一样。</p>
+  <p>手机的使用令人脑力退化的事实已经确凿无疑。在手机时代之前，每个人都有能力记住三四个甚至十几个电话号码。有了手机电话号码储存和和搜索，人们能记住的电话号码的数字大大缩水，记忆力萎缩得令人吃惊。</p>
+  <p>走向地铁站途中，再经过圣德尼门。</p>
+  <p>阳光明亮，圣德尼门矗立在商业大街和居民区之中。四周人来人往，车来车往。路易十四的建筑仍矗立在人们的日常生活中。</p>
+  <p>看着街景，感觉彷佛又回到了罗马。</p>
+  <p>这种感觉显然也是路易十四所谋求的效果。这位显赫于几百年前的法兰西国王孜孜以求的就是在他之前的古罗马帝国盛极一时的那种辉煌。</p>
+  <p>抵达地铁站，进入地铁。</p>
+  <p>乘客还是很多，但还是不很拥挤。大概巴黎地铁的拥挤程度从来没有超过东京。但在巴黎呆的时间还不长，实际情况还不了解，说不好。</p>
+  <p>巴黎人衣着多是很得体。妹妹说，巴黎人显然香水和除味剂用得多，在人群拥挤的地方也闻不到难闻的体味。</p>
+  <p>很快抵达目的地站。出地铁站。又是熙攘的商业街。感觉巴黎到处都是熙攘的商业街。</p>
+  <p>天空中的云更多了。</p>
+  <p>循着手机指引，走不远就到了人权广场，Place Des Droits de L’Homme。巍峨壮观的埃菲尔铁塔就坐落在广场的下方，塞纳河彼岸不远处。<br />----------------</p>
+  <p><strong>附记1：</strong><br />路易十四在今日法国依然影响明显，像圣德尼门一样明显。</p>
+  <p>在维基百科英文、法文、日文和华文的路易十四词条中，英文词条的总括介绍可谓最扼要又全面：</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>路易十四（Louis-Dieudonné；1638 年 9 月 5 日 - 1715 年 9 月 1 日），也被称为路易大帝或太阳王，自 1643 年起直至 1715 年逝世为法国国王。他经核实的统治时间为 72 年 110 天，是所有君主中最长的。作为欧洲专制时代的标志性人物，路易十四的遗产广泛地表现为法国的殖民扩张、哈布斯堡王朝八十年战争的结束，以及他的建筑遗产（以聘请人制作的艺术品和建筑为标志）。他的排场、奢华的生活方式和繁复的修养形象为他赢得了持久的赞许。路易十四将法国建成近代早期民族国家的典范，并建立了一种持续几个世纪直至今天的文化威望。  </code></pre></div>  </div>
+  <p>上大学时只是在历史书上瞥见过路易十四，模模糊糊记得他在位72年，使法国成为世界强国。只是多年之后读了美国人威尔和阿里尔·杜兰特夫妇（Will and Ariel Durant）获得普利策奖的《文明的故事》，才对路易十四有了更深刻的印象。</p>
+  <p>《文明的故事》系列丛书第八卷，标题便是《路易十四的时代——巴斯卡、莫里哀、高乃伊、弥尔顿、彼得大帝、牛顿和斯宾诺莎时期的欧洲文明史：1648 - 1715》，显示了杜兰特夫妇把路易十四及其法国视为当时欧洲文明的中心。</p>
+  <p>路易十四在位期间，法国不仅国力强盛，王权强盛，而且也文学强盛。不但出产了莫里哀、高乃依、拉辛这样的大戏剧家，也出产了拉封丹（Jean de la Fontaine，1621- 1695）这样的善于以民众日常口语写诗体寓言及故事的作家，其作品富有智趣，自从问世直到今天一直是雅俗共赏，寓教于乐。杜兰特夫妇在其书中列出了一个完整的例子：</p>
+  <p><strong>La cigale et la fourmi </strong><br /><strong>知了与蚂蚁</strong></p>
+  <blockquote>
+    <p>La cigale, ayant chanté <br />知了唱歌<br />Tout l'été,  <br />唱了整个夏天，<br />Se trouva fort dépourvue<br />蓦然察觉粮绝<br />Quand la bise fut venue. <br />严冬来临。<br />Pas un seul petit morceau <br />连一星半点的<br />De mouche ou de vermisseau<br />苍蝇或虫子也没有<br />Elle alla crier famine <br />它就去邻居蚂蚁<br />Chez la fourmi sa voisine, <br />那里诉说饥荒，<br />La priant de lui prêter <br />恳求蚂蚁借给它<br />Quelque grain pour subsister <br />些许稻谷活命，<br />Jusqu'à la saison nouvelle.<br />好歹熬到来季。<br /> «Je vous paierai, lui dit-elle, <br />它说：”就求您了，<br />Avant l'août, foi d'animal, <br />在八月之前，以动物的诚信，<br />Intérêt et principal .»<br />连息带本偿还。” <br />La fourmi n'est pas prêteuse ; <br />蚂蚁不要出借；<br />C'est là son moindre défaut.<br />这是它最不起眼的缺陷。<br />«Que faisiez-vous au temps chaud ? <br />“天热时你在做什么哪？”<br />Dit-elle à cette emprunteuse. <br />它问这告借者。<br />Nuit et jour à tout venant <br />“我日夜对所有的来者<br />Je chantais, ne vous déplaise. - <br />唱歌，愿您别生气。”<br />Vous chantiez ? j'en suis fort aise. <br />“您唱歌呐？我很高兴。<br />Eh bien : dansez maintenant.»<br />哎，您这就跳舞吧。”</p>
+  </blockquote>
+  <p>拉封丹的文笔简练生动，脍炙人口。杜兰特夫妇介绍其文笔由来的文字跟拉封丹本尊也有一拼——“他从小在他挚爱的大自然中成长，爱上了田野，森林，树木，河流以及其中的所有居住者；他了解它们的习性，心怀同情揣测千百种动物的志向、忧惧、思想；下笔行文时，他只需让这些多足的哲学家们开口说话，于是，他就成了另一个伊索，使他的寓言嵌入千百万人的记忆。”</p>
+  <p>拉封丹令一代又一代人愉悦的文笔显示了他思想机敏，通晓事理，但他终生却不善理财。杜兰特夫妇写道，拉封丹寓言第一篇“知了与蚂蚁”是“无意中对他本人大咧咧的歌唱的一生的总结。”</p>
+  <p>作为一个影响力巨大的作家，拉封丹跟喜好结交和赞助艺术家的路易十四颇有交集。在路易十四的财政总管被拿下时，拉封丹犯颜向路易十四呼吁，为那总管说好话。杜兰特夫妇还写道，“路易十四反对把拉封丹选入法兰西学院，理由是这位诗人以其生活和所写的故事难以为人师表；最后他（1684年）松了口，说是拉封丹保证以后会规规矩矩。”</p>
+  <p>拉封丹也算是生在了一个好地方，好时代。假如换个时代，换个地方，他怕是要被杀掉或阉掉。与此同时，路易十四也算是个不能不令人刮目相看的历史人物。杜兰特夫妇对他的描写既含有明显的讽刺，也有微妙的赞许，构成了维基百科英文版所说的“持久的赞许”的一部分。</p>
+  <p><strong>附记2：</strong><br />把由Smithson（史密森）这个人名变化而来的形容词Smithsonian翻译为“”史密森尼“是一个错误，这一点还是有不少人感到困惑不解。音译怎么会错呐？把Smithsonian翻译为“史密森尼”，尽力贴近原文的发音，怎么就是错了呐？</p>
+  <p>这里有一个简单的解释。</p>
+  <p>比如说，Peru是一个国名，秘鲁。Peruvian则由国名Peru变来的形容词，意思是“秘鲁的”，“与秘鲁有关的”。因此，The Peruvian government必须翻译为“秘鲁（的）的政府”，不能音译为“秘鲁宛政府”。否则就是一个明显的错误。与此同时，The Peruvian people必须翻译为“秘鲁（的）人民”，不能翻译为“秘鲁宛人民”。</p>
+  <p>同理，有一个人叫Smithson/史密森，“Smithsonian”是由Smithson这个人名变来的，两者指的是同一个人。因此，The Smithsonian Institution的正确翻译为“史密森学会”，翻译为“史密森尼学会”就是个错误。而且，是个明显的错误，因为这世界上没有人叫Smithsonian（史密森尼）。</p>
+  <p>（史密森Smithson，英国19世纪一位姓的化学家和矿物学家，生前留下遗嘱把遗产赠送给美利坚合众国，“用于增进和传播人类的知识。” 美国政府用他的遗赠做本钱设立了国立美术馆、 博物馆总管机构，并用他的名称给该机构命名。The Smithsonian Institution/史密森学会这个名称由此而来。）</p>
+  <p>或许，这里还可以再举一个更为通俗易懂的例子——Taiwan，台湾，地名，由这地名变化而来的形容词是Taiwanese，意思是“台湾的”，“跟台湾相关的”，因此，the Taiwanese government的只能译为“台湾（的）政府”，不能译为“台湾尼兹（的）政府”，因为这世界上没有一个地方叫“台湾尼兹”。</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2024-09-12</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-09-12/%E5%B7%B4%E9%BB%8E%E4%B9%8B%E8%A1%8C%E4%BE%A7%E8%AE%B0-%E9%87%8D%E8%AF%BB%E6%A8%AA%E5%85%89%E5%88%A9%E4%B8%80/">
+          巴黎之行侧记：重读横光利一
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-09-08</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-09-08/%E9%A9%AC%E7%89%B9%E5%B8%82%E7%9A%84%E5%9E%83%E5%9C%BE-%E8%AE%A8%E8%AE%BA%E4%B8%8E%E8%A7%A3%E6%9E%90/">
+          马特市的垃圾：讨论与解析
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-08-24</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-08-24/%E6%80%9D%E8%80%83%E9%A9%AC%E7%89%B9%E5%B8%82%E5%9E%83%E5%9C%BE%E5%8C%96%E9%97%AE%E9%A2%98/">
+          思考马特市垃圾化问题
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-08-22</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-08-22/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-2-%E8%BF%9B%E5%85%A5%E5%9F%8E%E5%8C%BA/">
+          梦中的巴黎（2）：进入城区
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2024-08-24/%E6%80%9D%E8%80%83%E9%A9%AC%E7%89%B9%E5%B8%82%E5%9E%83%E5%9C%BE%E5%8C%96%E9%97%AE%E9%A2%98/">
+            前一篇：思考马特市垃圾化问题
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2024-09-08/%E9%A9%AC%E7%89%B9%E5%B8%82%E7%9A%84%E5%9E%83%E5%9C%BE-%E8%AE%A8%E8%AE%BA%E4%B8%8E%E8%A7%A3%E6%9E%90/">
+            後一篇：马特市的垃圾：讨论与解析
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2024-08-24/%E6%80%9D%E8%80%83%E9%A9%AC%E7%89%B9%E5%B8%82%E5%9E%83%E5%9C%BE%E5%8C%96%E9%97%AE%E9%A2%98/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2024-09-08/%E9%A9%AC%E7%89%B9%E5%B8%82%E7%9A%84%E5%9E%83%E5%9C%BE-%E8%AE%A8%E8%AE%BA%E4%B8%8E%E8%A7%A3%E6%9E%90/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2024-09-08/%E9%A9%AC%E7%89%B9%E5%B8%82%E7%9A%84%E5%9E%83%E5%9C%BE-%E8%AE%A8%E8%AE%BA%E4%B8%8E%E8%A7%A3%E6%9E%90/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2024-08-24/%E6%80%9D%E8%80%83%E9%A9%AC%E7%89%B9%E5%B8%82%E5%9E%83%E5%9C%BE%E5%8C%96%E9%97%AE%E9%A2%98/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2024-08-24/%E6%80%9D%E8%80%83%E9%A9%AC%E7%89%B9%E5%B8%82%E5%9E%83%E5%9C%BE%E5%8C%96%E9%97%AE%E9%A2%98/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2024-09-08/%E9%A9%AC%E7%89%B9%E5%B8%82%E7%9A%84%E5%9E%83%E5%9C%BE-%E8%AE%A8%E8%AE%BA%E4%B8%8E%E8%A7%A3%E6%9E%90/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2024-09-08/%E9%A9%AC%E7%89%B9%E5%B8%82%E7%9A%84%E5%9E%83%E5%9C%BE-%E8%AE%A8%E8%AE%BA%E4%B8%8E%E8%A7%A3%E6%9E%90/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2024-08-24/%E6%80%9D%E8%80%83%E9%A9%AC%E7%89%B9%E5%B8%82%E5%9E%83%E5%9C%BE%E5%8C%96%E9%97%AE%E9%A2%98/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

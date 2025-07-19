@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>第二十期回顾：女权主义者的一百条标准 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+第二十期回顾：女权主义者的一百条标准
+——
+" />
+    <meta property="og:description" content="
+第二十期回顾：女权主义者的一百条标准
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="第二十期回顾：女权主义者的一百条标准" />
+    <meta property="twitter:title" content="第二十期回顾：女权主义者的一百条标准" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40enlightenedy%2F%25E7%25AC%25AC%25E4%25BA%258C%25E5%258D%2581%25E6%259C%259F%25E5%259B%259E%25E9%25A1%25BE-%25E5%25A5%25B3%25E6%259D%2583%25E4%25B8%25BB%25E4%25B9%2589%25E8%2580%2585%25E7%259A%2584%25E4%25B8%2580%25E7%2599%25BE%25E6%259D%25A1%25E6%25A0%2587%25E5%2587%2586-bafyreiax32ut3fbody6yliqdwn4e4shgyllzh5sqwtcemayrd7oydq6f4u" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@enlightenedy/%E7%AC%AC%E4%BA%8C%E5%8D%81%E6%9C%9F%E5%9B%9E%E9%A1%BE-%E5%A5%B3%E6%9D%83%E4%B8%BB%E4%B9%89%E8%80%85%E7%9A%84%E4%B8%80%E7%99%BE%E6%9D%A1%E6%A0%87%E5%87%86-bafyreiax32ut3fbody6yliqdwn4e4shgyllzh5sqwtcemayrd7oydq6f4u" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@enlightenedy/%E7%AC%AC%E4%BA%8C%E5%8D%81%E6%9C%9F%E5%9B%9E%E9%A1%BE-%E5%A5%B3%E6%9D%83%E4%B8%BB%E4%B9%89%E8%80%85%E7%9A%84%E4%B8%80%E7%99%BE%E6%9D%A1%E6%A0%87%E5%87%86-bafyreiax32ut3fbody6yliqdwn4e4shgyllzh5sqwtcemayrd7oydq6f4u&text=第二十期回顾：女权主义者的一百条标准&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@enlightenedy/%E7%AC%AC%E4%BA%8C%E5%8D%81%E6%9C%9F%E5%9B%9E%E9%A1%BE-%E5%A5%B3%E6%9D%83%E4%B8%BB%E4%B9%89%E8%80%85%E7%9A%84%E4%B8%80%E7%99%BE%E6%9D%A1%E6%A0%87%E5%87%86-bafyreiax32ut3fbody6yliqdwn4e4shgyllzh5sqwtcemayrd7oydq6f4u&title=第二十期回顾：女权主义者的一百条标准" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@enlightenedy/%E7%AC%AC%E4%BA%8C%E5%8D%81%E6%9C%9F%E5%9B%9E%E9%A1%BE-%E5%A5%B3%E6%9D%83%E4%B8%BB%E4%B9%89%E8%80%85%E7%9A%84%E4%B8%80%E7%99%BE%E6%9D%A1%E6%A0%87%E5%87%86-bafyreiax32ut3fbody6yliqdwn4e4shgyllzh5sqwtcemayrd7oydq6f4u&title=第二十期回顾：女权主义者的一百条标准" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=第二十期回顾：女权主义者的一百条标准&body=
+第二十期回顾：女权主义者的一百条标准
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@enlightenedy/%E7%AC%AC%E4%BA%8C%E5%8D%81%E6%9C%9F%E5%9B%9E%E9%A1%BE-%E5%A5%B3%E6%9D%83%E4%B8%BB%E4%B9%89%E8%80%85%E7%9A%84%E4%B8%80%E7%99%BE%E6%9D%A1%E6%A0%87%E5%87%86-bafyreiax32ut3fbody6yliqdwn4e4shgyllzh5sqwtcemayrd7oydq6f4u" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@enlightenedy/%E7%AC%AC%E4%BA%8C%E5%8D%81%E6%9C%9F%E5%9B%9E%E9%A1%BE-%E5%A5%B3%E6%9D%83%E4%B8%BB%E4%B9%89%E8%80%85%E7%9A%84%E4%B8%80%E7%99%BE%E6%9D%A1%E6%A0%87%E5%87%86-bafyreiax32ut3fbody6yliqdwn4e4shgyllzh5sqwtcemayrd7oydq6f4u&title=第二十期回顾：女权主义者的一百条标准&caption=
+第二十期回顾：女权主义者的一百条标准
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=第二十期回顾：女权主义者的一百条标准&url=https://matters.news/@enlightenedy/%E7%AC%AC%E4%BA%8C%E5%8D%81%E6%9C%9F%E5%9B%9E%E9%A1%BE-%E5%A5%B3%E6%9D%83%E4%B8%BB%E4%B9%89%E8%80%85%E7%9A%84%E4%B8%80%E7%99%BE%E6%9D%A1%E6%A0%87%E5%87%86-bafyreiax32ut3fbody6yliqdwn4e4shgyllzh5sqwtcemayrd7oydq6f4u" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>第二十期回顾：女权主义者的一百条标准</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-10-04
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#好青年茶话会">
+          好青年茶话会
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@enlightenedy/%E7%AC%AC%E4%BA%8C%E5%8D%81%E6%9C%9F%E5%9B%9E%E9%A1%BE-%E5%A5%B3%E6%9D%83%E4%B8%BB%E4%B9%89%E8%80%85%E7%9A%84%E4%B8%80%E7%99%BE%E6%9D%A1%E6%A0%87%E5%87%86-bafyreiax32ut3fbody6yliqdwn4e4shgyllzh5sqwtcemayrd7oydq6f4u" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="好青年茶话会的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#好青年茶话会 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1664935307000-->
+<p><a href="https://matters.news/@enlightenedy/%E7%AC%AC%E4%BA%8C%E5%8D%81%E6%9C%9F%E5%9B%9E%E9%A1%BE-%E5%A5%B3%E6%9D%83%E4%B8%BB%E4%B9%89%E8%80%85%E7%9A%84%E4%B8%80%E7%99%BE%E6%9D%A1%E6%A0%87%E5%87%86-bafyreiax32ut3fbody6yliqdwn4e4shgyllzh5sqwtcemayrd7oydq6f4u">第二十期回顾：女权主义者的一百条标准</a>
+——</p>
+
+<div>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/1ccabbbb-a1db-4e7f-a43c-037e43edfea2.jpeg" data-asset-id="1ccabbbb-a1db-4e7f-a43c-037e43edfea2" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <div class="language-plaintext ql-syntax highlighter-rouge" spellcheck="false"><div class="highlight"><pre class="highlight"><code>这段时间，从高铁卫生巾，到《成为女性主义者，有什么用》，再到Jingyao诉刘强东性侵案，性别议题掀起的讨论再次出现了一次小高潮。有人可能会觉得这会不会导致“男女对立越来越厉害”，又或者加剧社群的撕裂。换个角度来看，话题的不断出圈，可能带来的是对于更多人的影响。被看见和被无视，是截然不同的两种局面。这一期回顾的标题当然是不准确的，女权主义者有标准，却未必有完全一致的标准。我们期待的，其实是不再有标准，也不需要成为女权主义者的一天。感谢每一位好青年的声音。</code></pre></div>  </div>
+  <p><br /></p>
+  <h2 id="chao"><strong><em>CHAO——</em></strong></h2>
+  <p>谁都可以结婚，除非在一个结婚犯法的地方；谁都可以不结婚，除非在一个不结婚犯法的地方。谁都可以成为女性主义者，除非在一个女性主义者犯法的地方；谁都可以拒绝成为女性主义者，除非在一个拒绝成为女性主义者犯法的地方。</p>
+  <p>婚姻有好处也有坏处，家庭是稳定也是限制。家庭对于男性和女性来说，都有更多的考量，保证家庭的稳定，尤其是有孩子的情况下，父亲和母亲成为自己最重要的身份。少女不再青春，少年不再放荡。人们都开始为了家庭操劳，守护婚姻和家庭，不让它被外界所叨扰。</p>
+  <p>而现在，我们有太多的焦虑。阶层、性别、地域、宗族，在西方还有宗教和种族，恩格斯所说，婚姻终将被人类所抛弃，但是如果我们真的把婚姻里面的各种意义全部拨丝抽茧，那么爱情也如韦伯所说，变得没有了意义。</p>
+  <p>我们都在为了自己的意义去做有意义的事，但很显然的，不同人所持有的意义也许并不会相同，甚至发生很大的冲突。所以我们逃离原生家庭，逃离职场PUA，逃离亲密关系的束缚，我们以为只要这样做，我们就能获得自由。</p>
+  <p>但林夕在《任我行》的歌词里写的：那時其實嚐盡真正自由，但又感到沒趣。</p>
+  <p>自启蒙运动以来，自由平等博爱便逐渐成为了我们追求的理想。我们的上两代人，推翻了地主农奴制，以为他们能够获得自由；上一代人抵抗了媒妁之言，选择自由恋爱，以为他们能够获得自由；而我们这一代，接受date和不婚，也以为我们能够获得自由。</p>
+  <p>頑童大了別再追問</p>
+  <p>可以任我走 怎麼到頭來又隨着大隊走</p>
+  <p>人群是那麼像羊群</p>
+  <p><br /></p>
+  <h2 id="section"><strong><em>番茄——</em></strong></h2>
+  <p>1.女性主义者们总在要平等，我就好奇了，她们是否想过女性之间如何获得平等吗？或者说她们在乎吗？</p>
+  <p>2.女权，如果大家把它都只当作权利，其实是最可以避免误会和取得共识的。权利，就是个体作出选择的自由。</p>
+  <p>好多事的争吵，是因为不同人在它背后加上了各自的意识形态，争论自己才可以代表他们救女性、救人类。</p>
+  <p>就像劳动者维权，就是字面意思，劳动者就是想维护自己权利，把该得的东西拿回来，不想谁代表自己或自己代表别人再掀起一场革命，再建一次国。谁也不想、也不应该付出高昂的代价去“拯救”别人，再造出一个共产党，而应该是每个人都去维护自己的权利，我们都好了，这个社会就好了。自始自终，我代表我，我维护自己的权利，做一个公民。</p>
+  <p>3.人们都可以称自己为女权，包括排跨的女性，如果这样都可以，女权还有“进步性”吗？</p>
+  <p>女权这个时候可能的操作，是把她们开除出去，说她们不是真女权，就像对待那些“婚驴”一样。悖论来了，把别人开除出去，还能说自己代表女性权益吗？这多像共产苏维埃内部的派系斗争，你死我活。人，女人，在做自己与做女性这个整体之间出现了分裂，难道为了争取自由却不得不拥抱专制？</p>
+  <p><br /></p>
+  <h2 id="clark"><strong><em>Clark成成——</em></strong></h2>
+  <p>­这文章写的真好，很真实也能感受到诚意，有思考也有反思，以人生和现实的经历，照进女权主义。她把自己比喻成上野千鹤子所说的投石人，说：发声可能会被误解、被攻击，但发声是一种责任。</p>
+  <p>女性并不是一种性别，而是一种处境。她老公尊重和顺从她的想法，活成了弱者，于是老公成为了女性。而她自己活成了一个中年男性的角色，文里提到她也想有时间就坐在车里，听听音乐舒缓心情，享受片刻的清净和安宁。</p>
+  <p>这让我想起了张爱玲说过的一段话：“人到中年的男人，时常会觉得孤独，因为他一睁开眼睛，周围都是要依靠他的人，却没有他可以依靠的人。作者深刻的体会到了这一点……</p>
+  <p>文里提到：在性别研究里，没人教你如何在现实里实践一种女性主义的恋爱和婚姻，对父权社会的批判和对婚姻制度的剖析，也没能教会我该如何在婚姻和家庭里过好自己的生活。</p>
+  <p>我是女权主义者，我很光荣，我觉醒了。作为一个女性主义者 应该怎么样怎么样，应该要让男性怎么样怎么样。</p>
+  <p>那么这个女权的标准是什么？是以自身为标准还是以社会为标准？又由谁来制定标准？</p>
+  <p>目标又是什么呢？活成女权主义应该有的样子吗，不管是职场、生活、婚姻还是家庭。如果你是文里的作者你能接受这样的生活吗，能接受这样的自己吗，能接受这样的老公吗？</p>
+  <p>有人会想，应该让老公边赚钱边带孩子。说实话，老公按老婆的要求，已经完全活成了家庭主夫。而且如果上班，那带孩子的时间根本没法固定，比如996、比如时常加班。最终压迫的其实不是别人，只有自己的家庭和父母。</p>
+  <p>所以我时常在想，我们的底气是什么，好像就是我们的家庭、我们的父母。</p>
+  <p>当然，作为女权主义者的其中一个流派，可以选择不结婚不生孩子。</p>
+  <p>只要这是自己真实想要的就好，无关外界其他任何的因素，人应该按自己想要的方式过一生。</p>
+  <p>但是也希望自己不要因为外界的任何因素，而影响自身的判断。比如人家说女权主义者应该怎么样，自己就觉得怎么样是对的。</p>
+  <p>这就像是文章里消费主义的整形美容，她们说只有整形美容你才能获得怎样的福利或者价值。那她们说的就是对的吗，自己会因为她们说就去整容，还是这是自己想要的才整容。</p>
+  <p>我对女权没有任何褒义或者贬义的看法，本身就是带着学习的态度，想的是最起码有些悲剧，不能发生在自己和自己家庭身上。</p>
+  <p>我对女权的理解：这是社会和时代的产物。</p>
+  <p>这本身是社会问题，不是个人问题。当然，更多的人可以拿女权当一种借口 一种宣泄。</p>
+  <p>一百个人受到一百种不公，他就可能产生一百种女权主义，这里女权指的不是女性，男性也一样，女权指的是不公。</p>
+  <p>需要区分的是对社会制度的不满，还是对个人的遭遇感到不满。当然，个人遭遇的问题，也可能就是这个社会制度的问题。</p>
+  <p>还是那句话：每个人都有按自己的方式而活的权利。如果这就是自己想要的，我相信它会获得别人的尊重，当然，就算别人不尊重 不理解，对你来说也应该无关紧要。</p>
+  <p>婚姻，我认为是相互关爱、相互成长、相互扶持、相互尊重、相互体谅、相互包容的过程，而不是你应该怎么样，我应该怎么样，当然沟通最重要。</p>
+  <p>当我们带着某种偏见的时候，本身的起点、过程和目的，可能就是带着偏见的。</p>
+  <p>所以我不认为有多少婚姻能跟文章里的夫妻一样，认可、尊重、理解、理性，时不时一起沟通 一起反思 一起协商解决方案。</p>
+  <p>毕竟，每个人都或多或少会带着偏见，可我们要做的是一起解决问题，而不是我要怎么样，你应该要怎么样。</p>
+  <p>这也是我理想的婚姻，这也是我理解的夫妻 本是一体，而不只是那种纯粹物质上的匹配。</p>
+  <p><br /></p>
+  <h2 id="section-1"><strong><em>­小王——</em></strong></h2>
+  <p>文章写得不错，表达了女权主义者在婚姻中的思考以及对生活的困惑和迷茫。文章作者身边的女权主义者几乎清一色不婚，并且有将作者“开除女权籍”的想法，作者也认为她们将自己视作“叛徒”。看完文章后，能将婚姻和女权主义者进行对立，就值得玩味了。</p>
+  <p>女权主义者为了表现自己的激进性、革命性，拼了命地想要摆脱社会性别中的女性，婚恋观上奉行不婚不育、经济社会地位则处于上层，有“岁月静好”的资本。她们“成功”地以生物学女性，拥有了社会性别中的男性性。为了表现自己的激进性、革命性，她们痛恨一切结婚养小孩的女性，怒斥她们是女权主义者队伍中的“叛徒”。</p>
+  <p>在我看来文章作者比起那些虚伪的“女权主义者”，更加进了一步。在人人都是奴隶的社会中，作者是一个深陷其中苦苦挣扎的奴隶，是一个被父权制所折磨的奴隶，但在她的心中已经埋下了抗争的种子。反而那些“岁月静好”的人，她们连叛徒都算不上，她们从一开始就是彻头彻尾的投机分子，是金牌御用奴隶，是为维护父权制喝彩叫好的奴隶！作者仍然对那种“岁月静好”的生活抱有幻想，不过我相信这会随着时间的推移和矛盾的发展而被自己打破的。</p>
+  <p>什么“极端女权”、“正常女权”、“新兴网络女权”、“平权派”，阶级是总纲，分析阶级社会中的社会现象必然从阶级出发。如今大部分的所谓“女权主义者”是资产阶级自由派下的一员。中国作为一个官僚专制垄断资产阶级国家，资产阶级自由派的女权主义者和他们有很大的矛盾，但同时又有一定程度上的合作。具体表现为：体制内的资产阶级自由派的女权主义者会在外网上宣传自己对于“六四”的不满以及对学生的同情，这明显与官僚专制垄断资产阶级是有冲突的。这样的“女权主义者”，毕竟是资产阶级，在剥削打压劳动者这一方面，和官僚专制垄断资产阶级的利益是一致的。所以作者会被“女权主义者”的同事所伤害。如果有必要，这样的“女权主义者”是可以用父权制来迫害其他人的，足见其虚伪！</p>
+  <p>而作者和她们的阶级立场已经不相同了，可以说她是一位脑力无产者，是无产阶级女权主义者。无产阶级的历史使命是推翻私有制，以此为前提，女权主义者的历史使命是松动资本主义和父权制之间的纽带，最终使得父权制无所依附而消亡。只要商品仍然在交换着，价值规律仍然在起作用，资产阶级法权仍然在每日地、每时每刻地、自发地维系着资本主义生产关系和滋生资产阶级，那么父权制仍然要在社会中存续，并散发着它的毒气。我坚信作者会有一天，从“自在”的阶级，变为“自为”的阶级。</p>
+  <p>建国的日子值得高兴，但又不需要太高兴，因为它不只是旧时代的终结，更是新的革命的开始。祝各位国庆快乐。</p>
+  <p><br /></p>
+  <h2 id="section-2"><strong><em>巴啦啦——</em></strong></h2>
+  <p>我同意婚育制度的确会给女性造成困境，但对于女权主义者是否可以结婚，或者是女权主义者是否可以这样可以那样之类的表达，我的观点是，女权主义应该是让女性能够更自由和智慧地做出任何她想做的选择，而不是反而规制了她可选择的空间，我觉得这也是有点背道而驰的。</p>
+  <p><br /></p>
+  <h2 id="section-3"><strong><em>星球冰——</em></strong></h2>
+  <p>一个人最应该拥有的生活就是自由而快乐的生活，这应该是所有人努力的目标，女权主义者也不过是一个人罢了，给自己加这么多烦恼焦虑和要求，只会离我们做人的方向越走越远。女权主义和女人都可以对自己少点要求和批判，多点放松和快乐，男人也一样。想结婚就结婚，想干嘛就干嘛，如果需要符合某种标准才能成为女权主义者，那是伪女权和自我规训，我宁可当一个快乐的傻瓜，也不要当一个装逼的伪女权主义者。</p>
+  <p><br /></p>
+  <h2 id="sophia"><strong><em>Sophia</em></strong></h2>
+  <p>最近没怎么上网，打开邮件的时候才知道这篇文章，很巧的是刚好刷到有位博主转发了，于是花了十几分钟读完了这篇文章。读完之后五味杂陈，理想和现实的差距真的很大。</p>
+  <p>我自认为我是女权主义者，我一直都在关注女权的相关信息。虽然我还没有学习系统的女权知识，比如波伏娃的《第二性》开了个头就没读了，比如上野千鹤子的《厌女》还没翻开过。但我深知女性争取权益的重要性，我深知女性需要觉醒。</p>
+  <p>我不知道何为合格的女权主义者，是有系统的理论知识？还是一举一动都在强调女权主义？世上有千千万万的女权主义者，有的刚刚觉醒还懵懵懂懂，有的已经在这个圈子里好几年了，不论出身，不论专业，不论性取向，大家都是为了争取更好的权益，所以我认为成为女权主义者没有什么标准，只不过大家的目的相同罢了。</p>
+  <p>由于我本人性取向的缘故，对结婚和生育没有太大的想法。但正如文章末尾提到“上野千鹤子老师所说：如果没有人扔石头，平静的水面就不会翻起波浪。只要翻起了波浪，被影响到的人就可以在各自擅长的领域把它传播下去。” 没有矛盾和抗争就没有进步，总有人要踏出第一步，去探索去实践。所以结婚和生育仅看个人态度，每个人遇到的问题各不相同，只有挣扎才能前进，就在充满问题的生活中继续抗争下去吧。（可能会懈怠，但想要巨大的进步是需要时间累计的，慢慢来吧）</p>
+  <p><br /></p>
+  <blockquote>
+­文末有话说：  </blockquote>
+  <div class="language-plaintext ql-syntax highlighter-rouge" spellcheck="false"><div class="highlight"><pre class="highlight"><code>这一期本身其实是有预设的，指的是我们并不认为“女权主义不该结婚”是一个正确或者错误的观点，正如Clark成成提到的，这就是当前女权主义者的其中一个流派。所以我们本身是期待会有不同流派的女权主义者表达自己的想法，并非是要认同彼此，只是希望可以互相增进一些理解。社会运动中的路线之争并不是新鲜事，远到唐宋、近到清末，无论是欧美还是港台、大陆，又或者环保、LGBTQI+等等不同议题，有时候阵营内部的分歧、对立甚至比外部要“惨烈”（参考“欲攘外，先安内……”）。但归根到底，我们终究还是会走到同一条路上的。无论是上个世纪还是前几年我们都看到了这样的实践。所以不要畏惧分歧，但也要尽量拥抱彼此，一起努力吧。另外，有朋友给了一个很棒的反馈，希望我们可以有一些温和的话题，有时严肃表达太多也会有压力。确实如此，听一位朋友说过一句话，叫“不要做生活干枯的革命者”，我们固然要关注公共议题，要坚持发声，但也更希望我们的生活不止于此。那么，期待下一期吧！再次感谢每一位好青年~</code></pre></div>  </div>
+  <p><br /></p>
+  <blockquote>
+这里是好青年茶话会，我们会每周定期向大家发起一场讨论，并最终呈现给大家。如果你希望加入这场讨论，可以通过以下链接订阅我们的邮件：  </blockquote>
+  <p><a href="https://www.esurveyspro.com/Survey.aspx?id=d1adce36-5715-4007-adf5-abec5da35c8c" rel="noopener noreferrer" target="_blank">https://www.eSurveysPro.com/Survey.aspx?id=d1adce36-5715-4007-adf5-abec5da35c8c</a></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#好青年茶话会 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2022-12-28/%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%BA%94%E6%9C%9F-2022-%E6%88%91%E4%BB%AC%E7%BB%8F%E5%8E%86%E4%BA%86%E6%80%8E%E6%A0%B7%E7%9A%84%E4%B8%80%E5%B9%B4/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2022-09-30/%E7%AC%AC%E4%BA%8C%E5%8D%81%E6%9C%9F-%E5%A5%B3%E6%9D%83%E4%B8%BB%E4%B9%89%E8%80%85%E5%8F%AF%E4%BB%A5%E7%BB%93%E5%A9%9A%E5%90%97/">最早</a>--</span>
+    
+      <li>
+        <time>2022-10-14</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-10-14/%E5%8F%B7%E5%A4%96%E7%AC%AC%E4%BA%94%E6%9C%9F-%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%8B%87%E6%95%A2%E4%B8%8D%E5%BA%94%E8%AF%A5%E6%B2%A1%E6%9C%89%E5%9B%9E%E5%BA%94/">
+          号外第五期——“一个人的勇敢不应该没有回应”？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-10-11</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-10-11/%E5%8F%B7%E5%A4%96%E7%AC%AC%E5%9B%9B%E6%9C%9F-%E4%B8%AD%E5%9B%BD%E5%93%AD%E5%A2%99-%E6%9D%8E%E6%96%87%E4%BA%AE%E5%8C%BB%E7%94%9F%E7%9A%84%E7%95%99%E8%A8%80%E6%9D%BF/">
+          号外第四期：“中国哭墙”，李文亮医生的留言板
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-09-30</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-09-30/%E7%AC%AC%E4%BA%8C%E5%8D%81%E6%9C%9F-%E5%A5%B3%E6%9D%83%E4%B8%BB%E4%B9%89%E8%80%85%E5%8F%AF%E4%BB%A5%E7%BB%93%E5%A9%9A%E5%90%97/">
+          第二十期：女权主义者可以结婚吗？
+        </a>
+      </li>
+    
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2022-10-04/%E9%80%9F%E8%A9%95-UABB-2022/">
+            前一篇：速評 UABB 2022
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2022-10-05/%E8%87%BA%E5%8C%97%E5%9C%8B%E7%AB%8B%E6%95%85%E5%AE%AE%E5%8D%9A%E7%89%A9%E9%99%A2-%E9%81%BF%E6%9A%91%E5%B1%B1%E8%8E%8A-%E6%B8%85%E5%B8%9D%E5%9C%8B%E5%A4%9A%E5%85%83%E7%B5%B1%E6%B2%BB%E7%9A%84%E7%B8%AE%E5%BD%B1/">
+            後一篇：臺北國立故宮博物院「避暑山莊：清帝國多元統治的縮影」
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2022-10-04/%E9%80%9F%E8%A9%95-UABB-2022/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2022-10-05/%E8%87%BA%E5%8C%97%E5%9C%8B%E7%AB%8B%E6%95%85%E5%AE%AE%E5%8D%9A%E7%89%A9%E9%99%A2-%E9%81%BF%E6%9A%91%E5%B1%B1%E8%8E%8A-%E6%B8%85%E5%B8%9D%E5%9C%8B%E5%A4%9A%E5%85%83%E7%B5%B1%E6%B2%BB%E7%9A%84%E7%B8%AE%E5%BD%B1/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2022-10-11/%E5%8F%B7%E5%A4%96%E7%AC%AC%E5%9B%9B%E6%9C%9F-%E4%B8%AD%E5%9B%BD%E5%93%AD%E5%A2%99-%E6%9D%8E%E6%96%87%E4%BA%AE%E5%8C%BB%E7%94%9F%E7%9A%84%E7%95%99%E8%A8%80%E6%9D%BF/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2022-09-30/%E7%AC%AC%E4%BA%8C%E5%8D%81%E6%9C%9F-%E5%A5%B3%E6%9D%83%E4%B8%BB%E4%B9%89%E8%80%85%E5%8F%AF%E4%BB%A5%E7%BB%93%E5%A9%9A%E5%90%97/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2022-10-04/%E9%80%9F%E8%A9%95-UABB-2022/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2022-10-05/%E8%87%BA%E5%8C%97%E5%9C%8B%E7%AB%8B%E6%95%85%E5%AE%AE%E5%8D%9A%E7%89%A9%E9%99%A2-%E9%81%BF%E6%9A%91%E5%B1%B1%E8%8E%8A-%E6%B8%85%E5%B8%9D%E5%9C%8B%E5%A4%9A%E5%85%83%E7%B5%B1%E6%B2%BB%E7%9A%84%E7%B8%AE%E5%BD%B1/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<好青年茶话会>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2022-10-11/%E5%8F%B7%E5%A4%96%E7%AC%AC%E5%9B%9B%E6%9C%9F-%E4%B8%AD%E5%9B%BD%E5%93%AD%E5%A2%99-%E6%9D%8E%E6%96%87%E4%BA%AE%E5%8C%BB%E7%94%9F%E7%9A%84%E7%95%99%E8%A8%80%E6%9D%BF/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<好青年茶话会>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2022-09-30/%E7%AC%AC%E4%BA%8C%E5%8D%81%E6%9C%9F-%E5%A5%B3%E6%9D%83%E4%B8%BB%E4%B9%89%E8%80%85%E5%8F%AF%E4%BB%A5%E7%BB%93%E5%A9%9A%E5%90%97/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

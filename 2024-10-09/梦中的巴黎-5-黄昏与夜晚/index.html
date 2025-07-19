@@ -1,0 +1,3470 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>梦中的巴黎（5）：黄昏与夜晚 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+梦中的巴黎（5）：黄昏与夜晚
+——
+" />
+    <meta property="og:description" content="
+梦中的巴黎（5）：黄昏与夜晚
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="梦中的巴黎（5）：黄昏与夜晚" />
+    <meta property="twitter:title" content="梦中的巴黎（5）：黄昏与夜晚" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40tsugaru_strait%2F%25E6%25A2%25A6%25E4%25B8%25AD%25E7%259A%2584%25E5%25B7%25B4%25E9%25BB%258E-5-%25E9%25BB%2584%25E6%2598%258F%25E4%25B8%258E%25E5%25A4%259C%25E6%2599%259A-bafybeidcssbvx2f62buqhomtxli3rdof4njkd6vtfcaynm3jmvyrebxt5e" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A-bafybeidcssbvx2f62buqhomtxli3rdof4njkd6vtfcaynm3jmvyrebxt5e" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A-bafybeidcssbvx2f62buqhomtxli3rdof4njkd6vtfcaynm3jmvyrebxt5e&text=梦中的巴黎（5）：黄昏与夜晚&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A-bafybeidcssbvx2f62buqhomtxli3rdof4njkd6vtfcaynm3jmvyrebxt5e&title=梦中的巴黎（5）：黄昏与夜晚" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A-bafybeidcssbvx2f62buqhomtxli3rdof4njkd6vtfcaynm3jmvyrebxt5e&title=梦中的巴黎（5）：黄昏与夜晚" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=梦中的巴黎（5）：黄昏与夜晚&body=
+梦中的巴黎（5）：黄昏与夜晚
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A-bafybeidcssbvx2f62buqhomtxli3rdof4njkd6vtfcaynm3jmvyrebxt5e" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A-bafybeidcssbvx2f62buqhomtxli3rdof4njkd6vtfcaynm3jmvyrebxt5e&title=梦中的巴黎（5）：黄昏与夜晚&caption=
+梦中的巴黎（5）：黄昏与夜晚
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=梦中的巴黎（5）：黄昏与夜晚&url=https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A-bafybeidcssbvx2f62buqhomtxli3rdof4njkd6vtfcaynm3jmvyrebxt5e" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>梦中的巴黎（5）：黄昏与夜晚</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2024-10-09
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 津轻海峡</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A-bafybeidcssbvx2f62buqhomtxli3rdof4njkd6vtfcaynm3jmvyrebxt5e" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1728505982000-->
+<p><a href="https://matters.news/@tsugaru_strait/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A-bafybeidcssbvx2f62buqhomtxli3rdof4njkd6vtfcaynm3jmvyrebxt5e">梦中的巴黎（5）：黄昏与夜晚</a>
+——</p>
+
+<div>
+  <p><br /></p>
+  <figure class="image">
+<img src="https://imagedelivery.net/kDRCweMmqLnTPNlbum-pYA/prod/embed/00223a45-39fd-4737-a257-2a68169b8163.jpeg/public" referrerpolicy="no-referrer" />    <figcaption>
+巴黎街道，黄昏时分（Photo credit: 津轻海峡）
+    </figcaption>
+  </figure>
+  <p>返回地铁站。返回圣德尼站。</p>
+  <p>抱着逛街找餐馆的目的在街上随便走，同时也是漫无目的地在街上随便走，看哪条街热闹就往哪里走。</p>
+  <p>地地道道的徜徉和漫步。自由自在的感觉真好。</p>
+  <p>仍是沉浸在初到巴黎的欣喜和兴奋中，仅仅在巴黎的街道行走感觉就很好。妹妹说，这也是她的感觉。</p>
+  <p>她对法国、对巴黎感到亲切也是无疑也是一种感情投入。她在法语学习上投入了很多的功夫，上大学期间还差一两门课就可以拿到法语学位毕业。</p>
+  <p>这边对对法国、对巴黎感到亲切该算是什么呐？无疑也是一种感情投入。</p>
+  <p>但这边的投入应当是跟她的投入有差异。这边是小时候，在还没有学法语的时候就对法国情有独钟。多少年来，仅仅是“巴黎”、“香榭丽舍”、“阿维尼翁”、“普罗旺斯”这样的法国地名就足以唤起美好浪漫的憧憬。</p>
+  <p>这种憧憬妹妹不会有。即使是有，因为语言的差异，她的憧憬也一定跟这边有所不同，因为Paris，Les Champs Elysees， Avignon，Provence这些由罗马字拼写出来的地名，它们所唤起的想象乃至视觉形象肯定会跟汉字拼写出来的地名不一样。</p>
+  <p>两种拼写的发音有明显的差别。听话听声，锣鼓听音，不一样的声音所激起的想象也应当是不一样。假如可以把表达地名的话语声理解为音乐，那么，音乐不一样，唤起的感觉也必定不一样。</p>
+  <p>究竟是怎么不一样？这边对法国和法国文化的感情投入又是怎样养成的呐？</p>
+  <p>这一切说起来只能说一言难尽。</p>
+  <p>这种一言难尽主要不是因为想说的太多，一下子说不完（尽管也确实是想说的很多很多，一下子说不完），而是对太多想说的话题始终懵懵懂懂，大致好像知道，但仔细一想又拿不准了。</p>
+  <p>比如说，“巴黎”这个地名。先前对巴黎有很多的想象，那些想象都是既具体又模糊，多是跟文学人物、文学作品连系在一起，跟由电影电视得来的视觉形象连系在一起。因为是得自文学作品和电影电视的形象，下意识里也知道实际的巴黎应当是另一番风景。抵达巴黎这几个小时之后的所见一举取代了几十年来萦绕于脑海中的巴黎形象。</p>
+  <p>实地看到的巴黎与几十年来想象中的巴黎尽管大不相同，但两者似乎也没有大冲突，恰如在梦中见到的人或街景一如实际所见，但梦中的下意识也知道两者不同。于是，实地在巴黎的街道上行走，眼前的景色都似曾相识，感觉就像是在梦游。</p>
+  <p>实际的巴黎，梦中的巴黎，犹如庄周梦蝶你中有我，我中有你，彼此难解难分。</p>
+  <p>***</p>
+  <p>一路走来，一路是餐馆。几乎所有的餐馆外面就餐的人都多。这条街餐馆多，下条街还是多，一家接一家的餐馆，再下一条街也是。左拐右拐，所有的街道都餐馆多，食客多。</p>
+  <p>而且，食客都是一对对、一堆堆地安逸地坐在那里热烈地或静静地聊天。这阵仗，好像是电影中的场景。</p>
+  <p>惊讶怎么会有这么多的餐馆。妹妹也是同样的惊讶。</p>
+  <p>食客当中当然游客众多，但本地人显然也不少。</p>
+  <p>夕阳西下，夜晚清凉。的确适合在外面吃饭、享受大好时光。</p>
+  <p>法国餐馆上菜比较慢。熟悉美国餐馆运作的人会认为这是缺点。但看法国人吃饭的方式可以意识到，上菜慢根本就不是问题，因为出来在餐馆就餐意味着跟人聊天，聊天则需要从容。上菜太快反倒可能是问题。</p>
+  <p>妹妹说，午餐吃的法餐肉太多，感觉需要吃蔬菜。一路走来，她挑选了一家朝鲜餐馆。这边说中午吃得太多，不要吃，等一会儿要是饿了，吃点零食就好。</p>
+  <p>妹妹接过服务员送上的菜单，用看图识字的方式，根据菜单上的图片，要了一个石锅饭。</p>
+  <p>服务员显然是一个朝鲜人。胖胖的女子，法语说得很好，妹妹用法语跟她应答。在这里的餐馆服务员似乎多有双语能力，法语和英语。</p>
+  <p>慢慢喝着服务员送上来的水，旁观周围街景，等待妹妹点的饭菜上来。</p>
+  <p>感觉巴黎的水很好喝。不知确实是很好喝，还是因为对巴黎着迷，感觉好喝只是着迷的一部分。</p>
+  <p>两米多开外的邻桌来了一对男女，一个50多岁的男子，一个接近30岁的女子。他们也在喝水。</p>
+  <p>妹妹点的饭菜上来了，她说很好，有她喜欢吃的蔬菜。她现在要每天吃蔬菜才觉得舒服。这是她上大学之后的饮食变化。先前她喜欢吃垃圾食品，不喜欢吃蔬菜，爹爹威逼利诱她吃蔬菜全无效果。</p>
+  <p>妹妹吃她的饭，这边继续喝这边的水，观这边的街景。</p>
+  <p>用汉语跟妹妹悄声说，旁边那位女子很美。妹妹稍微侧头好似不经意地扫描一下，表示认同爹爹的观点。<br /><br />***</p>
+  <p>美是一种抽象的说法。要是具象地说，具体地说，可以说那女子有一种低调的美，侧脸非常漂亮，正脸非常端庄。她的美就像是法国电影/戏剧演员伊扎贝尔·于佩尔（Isabelle Huppert）的那种美，乍看上去并不抢眼，但非常耐看。</p>
+  <p>猛然想起芥川龙之介——“爱恋的症候之一是，对发现与她相似的面孔这种事情变得极其敏感 / 恋愛の徴候の一つは彼女に似た顔を発見することに極度に鋭敏になることである。”</p>
+  <p>于佩尔在中国也有很多人爱恋。显然，众多的中国人也能欣赏她那种低调耐看的美。几年前在网上看到她到中国上海演出的广告和报道，演出的节目是朗诵法国小说家玛格丽特·杜拉斯（Marguerite Duras）的1984年龚古尔奖获奖作品《情人》，L’Amant。</p>
+  <p>跟妹妹说，爹爹先前下过一番功夫钻研杜拉斯的文学语言，《情人》的语言。那是一种富含低调的诗意的语言，一种看似、听似口语的语言。但有心的读者要是仔细读、慢慢读，会清楚地感到它的隽永诗意。她的诗意因低调而特别有力，能沁人肺腑，撩拨心弦、唤起回忆：</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Un jour, j'étais âgée déjà, dans le hall d'un lieu public, un homme est venu vers moi. Il s'est fait connaître et il m'a dit : « Je vous connais depuis toujours. Tout le monde dit que vous étiez belle lorsque vous étiez jeune, je suis venu pour vous dire que pour moi je vous trouve plus belle maintenant que lorsque vous étiez jeune, j'aimais moins votre visage de jeune femme que celui que vous avez maintenant, dévasté. »</code></pre></div>  </div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>有一天，我已经上了年纪，在一个公共场所的大厅里，一个男子走上前来。他做了自我介绍，接着对我说，“我一直认识你。人都说你年轻的时候美，我来是要跟你说，我觉得你现在比年轻的时候还美；我过去爱你那年轻女人的容颜，但不如爱你现在经受了损毁的面容。”</code></pre></div>  </div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Je pense souvent à cette image que je suis seule à voir encore et dont je n'ai jamais parlé. Elle est toujours là dans le même silence, émerveillante. C'est entre toutes celle qui me plaît de moi-même, celle où je me reconnais, où je m'enchante.</code></pre></div>  </div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>我经常想到那个形象，现在只有我还能看到，但我从来没对人谈起。它总是在那里，在同样的沉默中，它令人惊异。在所有的形象中，它让我感到欣悦，它让我得以认识自己，让我对自己着迷。</code></pre></div>  </div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Très vite dans ma vie il a été trop tard.  A dix-huit ans il était déjà trop tard. Entre dix-huit et vingt-cinq ans mon visage est parti dans une direction imprévue. À dix-huit ans j'ai vieilli. Je ne sais pas si c'est tout le monde, je n'ai jamais demandé.  Il me semble qu'on m'a parlé de cette poussée du temps qui vous frappe quelquefois alors qu'on traverse les âges les plus jeunes, les plus célébrés de la vie.  Ce vieillissement a été brutal.  Je l'ai vu gagner un à un mes traits, changer le rapport qu'il y avait entre eux, faire les yeux plus grands, le regard plus triste, la bouche plus définitive, marquer le front de cassures profondes.  Au contraire d'en être effrayée j'ai vu s'opérer ce vieillissement de mon visage avec l'intérêt que j'aurais pris par exemple au déroulement d'une lecture.</code></pre></div>  </div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>我这一生一切过得太快，那时就太迟了。18岁时就已经太迟了。在18岁和25岁之间，我的面容变化就走向了一种未曾预见的方向。18岁的时候我就老了。我不知道是不是所有的人都是这样，我从来没问过。好像有人跟我说过，时间的这种碾压力有时会在你最年轻的岁月，在你一生中最辉煌的那些时段袭击你。这种衰老过程是残酷的。我眼看着它一个接一个地攻下我的容貌特征，改变了它们彼此间的关系，使我眼睛变得更大，目光更忧郁，嘴唇更棱角分明，在我额头上刻下深深的沟壑。我非但没有被这一切吓到，相反，我饶有兴味地观看我的面容这种衰老过程的发展，就好像是读一本书。</code></pre></div>  </div>
+  <p>杜拉斯的这种独具特色的语言看似非常简单，但也非常难以模仿，显示了她的很简单其实是英文世界所谓的骗人的简单（deceptively simple），好像是魔术师耍手腕变戏法，看上去行云流水简单之至，但没有用心练习过的人耍起来便立即破绽百出，破绽刺眼。这一点只要看看中国目前所能看到的林林总总不知多少种《情人》的翻译就可以看出。</p>
+  <p>尽管有原文在，尽管原文写得清清楚楚且看似非常简单，但那些翻译者都似乎难以完全理解或大致理解、更玩不转这种看似非常简单的语言，结果就是把杜拉斯的这种简单、清楚、流畅的语言给翻译得颠三倒四，不清不楚，诗意大损，把大作家的精致语言变成小学生的拙劣作文。</p>
+  <p>但尽力紧贴原文的翻译可以保留原文原有的诗意。这样的译文无论是默读还是朗诵都可以诗意盎然，令人感动，惆怅，警醒，醒悟，释然，心有不甘，无奈叹息...。</p>
+  <p>善于表现人物心理的于佩尔在上海朗诵《情人》法文原文，有多少听众可以听懂？</p>
+  <p>因为于佩尔是优秀的电影演员和戏剧演员，她在舞台朗诵表演使或许可以配上丰富而微妙的表情或肢体动作。然而，朗诵毕竟是朗诵，她还是要以声音表现/表演为主打，不能表情太丰富，动作太明显，太大。</p>
+  <p>但她朗诵的是法语，她以法语表现/呈现的低调又深邃的诗意在上海有多少中国听众可以得懂？可以充分或大致欣赏？那些听不懂法语的听众能从她的朗诵表演中获得什么？获得日后的谈资，或一睹著名演员风采的满足感？多多少少能直觉地感受到她所表达的诗意？</p>
+  <p>这边尽力紧贴原文的中文翻译要是慢慢地朗读出来，相信中国的听众可以很容易听出原文的那种饱经沧桑的诗意。不要多，只要朗读上面的三小段就足以令听众感受到杜拉斯语言的诗意魅力。</p>
+  <p>***</p>
+  <p>妹妹在大学期间的法文文学课上没有读《情人》，但教授选择和领读了杜拉斯的另一本小说《洛尔·V·斯坦因的喜悦》，Le ravissement de Lol V. Stein。</p>
+  <p>坐邻桌的那个男子开始喝啤酒，女子继续喝水。酒上来时，他们还笑着举起酒杯和水杯，碰杯。</p>
+  <p>在妹妹就餐的时间里，他们一直在热烈交谈。</p>
+  <p>看前后左右餐馆就餐的人，看一路行来每家餐馆外面就餐的人，一个个都是在热烈交谈，无一例外。但这对男女显然是例外。</p>
+  <p>男子一度把女子的手握在手中，两人微笑着对视。这一对不像是夫妻。显然，这是他们难得的聚会或重逢。</p>
+  <p>不禁好奇两人究竟是什么关系。</p>
+  <p>再想起《情人》：</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Que je vous dise encore. J'ai quinze ans et demi.</code></pre></div>  </div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>我还要跟你说什么呢。我15岁半。</code></pre></div>  </div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C'est le passage d'un bac sur le Mékong.</code></pre></div>  </div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>那是渡轮在湄公河上行进。</code></pre></div>  </div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>L'image dure pendant toute la traversée du fleuve.</code></pre></div>  </div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>那个形象延续在整个渡河的过程中。</code></pre></div>  </div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>J'ai quinze ans et demi. Il n'y a pas de saisons dans ce pays là. Nous sommes dans une saison unique, chaude, monotone, nous sommes dans la longue zone chaude de la terre, pas de printemps, pas de renouveau.</code></pre></div>  </div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>我15岁半。那片土地没有四季。我们那里就是单一的季节，炎热，单调，我们是在一个狭长的热带地带，没有春天，没有更新。</code></pre></div>  </div>
+  <p>小说《情人》在这里写的是法属印度支那（越南），那里是在一个狭长的热带地带，永远是单一的季节，炎热，单调。这里是法国，土地足够辽阔，绝不狭长；这里是温带，四季分明，眼下正是春夏之交。</p>
+  <p>这位拥有低调美的女子也是在15岁半的时候认识了这位男子的吗？</p>
+  <p>可以这样对号入座吗？</p>
+  <p>似乎没有什么不可以。想象可以自由，而且可以保密，还可以共享。</p>
+  <p>小说《情人》讲述的是渡河的场景。这世界上所有的人都可以说是在渡河，渡过时间之河，生命之河。每一个人都有自己的经历，自己的冒险，自己的故事。</p>
+  <p>眼前的这一对也不例外。要是能详细写出，无论是如实记录，还是放飞想象力，都完全可以跟《情人》有一拼甚至有过之。</p>
+  <p>文学的写作即使是如实记录，要想写得好也同样需要充足的想象力，强大的想象力。获得“如实”的效果，让读者也能不由自主地感觉身临现场，有赖于写手毫不含糊的想象力。</p>
+  <p>法国现代派文学大师、《追寻逝去的时间》的作者马塞尔·普鲁斯特（Marcel Proust）生前特别喜好读报纸上的社会新闻/八卦。他说，这样的阅读是非常好的想象力锻炼，好写手可以根据一则耸人听闻的八卦充分发挥想象力和创造力，写出有声有色的鸿篇巨制来。</p>
+  <p>《追寻逝去的时间》就是典型的鸿篇巨制。</p>
+  <p>一个写手的才分大小可以有客观的衡量。一件事情用两三句话写出是小学水平，三五十句写出是中学生、大学生水平，三五百句就是专业写手，三五千句就是高手了。这里的句子多少之差就是想象力大小之差，才分大小之差，没别的。</p>
+  <p>好写手可以凭借强大的记忆力和虚构力再造一个有声有色的世界跟现实世界平行。至于造得好不好，写得好不好虽然可以言人人殊，但写作质量的高低优劣还是可以明显看出，而且读者也不难达成共识。好句就是好句，拙劣的句子就是拙劣的句子，好句劣句不难分辨，恰如好的杜拉斯翻译与不好的不难分辨。</p>
+  <p>***</p>
+  <p>妹妹吃过饭，再和她继续转街。</p>
+  <p>边走边跟她一道感叹这里的餐馆这么多，巴黎街道的气氛这么好，这么迷人。随便走，随便徜徉，走过不知多少条街，天色接近黄昏。</p>
+  <p>沿途街道建筑物的墙壁都是干干净净，但有些打烊的店家门头的折叠铁皮门上基本上都有涂鸦。显然，这里不是没有人喷涂鸦，只是喷在建筑物墙壁上的涂鸦被迅速清理掉，但铁皮门上的不容易清理，或不必及时清理。这种情况跟去年在意大利佛罗伦萨见到的一模一样。</p>
+  <p>走了一阵，妹妹又说想吃法国烤薄饼crêpe了，说不是饿，只是想在这里尝试正宗的法国烤薄饼。</p>
+  <p>到底是年轻人，胃口就是好。尝试也要有胃口才行。</p>
+  <p>一路很多餐馆，也有很多烤薄饼店。</p>
+  <p>进入一家店。显然是家很受欢迎的店，要排队。将近10个人的队。顾客多是年轻人。店员三人，也都是年轻人，每人都是既接单，收费，又做饼，一个个忙得不可开交。</p>
+  <p>妹妹去排队，这边坐在店外的餐桌边以逸待劳，欣赏享受在眼前流动的街景。妹妹为了吃到她想吃的东西有足够的耐心。这边有自己的好景可观，好时光不嫌长。</p>
+  <p>妹妹拿到她的crêpe出来了。是一个巧克力crêpe。</p>
+  <p>这边从来没吃过crêpe，只是见过crêpe这个名词，一直不清楚究竟是什么玩意儿。这次终于看到了。品尝了妹妹撕扯下来的一块，感觉跟美国的烤薄饼pancake差不多，只是美国的饼是巴掌大，比较厚，因此不能这么卷。</p>
+  <p>黄昏时分，先前的基本阴天变成了基本晴天，天空中的大块阴云不知什么时候都已散去，剩下小块小块的白云和蓝天。</p>
+  <p>妹妹说，今天是星期二晚上，怎么在外面人这么多，是不是因为中学毕业会考（baccalaureate exams）考试刚刚完成？</p>
+  <p>这倒是一种可能性。</p>
+  <p>在外就餐的年轻人确实是很多。但细看之下，好像也不能说是年轻人更多或占压倒优势。（后来查知，今年的法国中学毕业会考的开始日期是6月15日，是这边和妹妹从巴黎返回美国的翌日。）</p>
+  <p>旁边一个桌子，坐着七八个高中生。他们一边聊天，一边等待他们的饼做出来，拿出来。</p>
+  <p>妹妹小声跟这边说，这些学生都不说法语。</p>
+  <p>显然，是一帮移民家庭的孩子。来自同样的语言和文化背景的孩子，凑在一起使用他们的母语，建立或维持他们的文化认同。法国仍在奋力消化、融化移民，一个正在进行中的过程，而且是艰难进行中。</p>
+  <p>现在的法国至少在名义上追求多元文化，但也需要共同的语言。多元与共同，私人与公共，少数与多数，族裔与族裔，永远的磨合。</p>
+  <p>先前看到不少报道说，很多移民难以适应和融入法国社会、法国文化，尤其是年轻的男性，但女性移民的适应性相对要好得多。这也是移民众多的国家普遍发生的情况。</p>
+  <p>一个胖胖的女孩，分别跟两个男孩说话，眼神满是深情。</p>
+  <p>这些孩子全都是夏天的短打扮，尽管太阳落下去之后（以及白天天阴的时候）明显有些凉甚至有些冷。</p>
+  <p>这边穿一件贴身短衫，一件长袖布衬衣，外加一件北脸（The North Face）单层外套才感觉正好。年轻人到底是年轻人，火力大，能量足。</p>
+  <p>这时节也正是巴黎乱穿衣的季节。在马路上，随处都可以看到有人是冬天的衣着（羽绒服加围脖），有人是一身夏装（短衫短裤背带裙）。无论穿夏装或冬装，所有的人看上去都怡然自得，自适。也真是怪了。人与人之间的冷热感可以差异如此明显，如此极端。</p>
+  <p>这时节巴黎的气温也有趣。白天直接晒着太阳会觉得热，在阳光下多走路会出汗，但太阳一旦被云遮住，几乎马上就觉得气温低下来，不一会儿就会觉得冷，不添加衣服就觉得明显不舒服。以前从来没有过的体验，在这种很短的时间内居然会有这种明显的温差。</p>
+  <p>走到哪里都是路面干净。人群这么密集，道路居然可以打扫和保持得这么干净。一直没见有人打扫。奇怪。</p>
+  <p>但今天在街道上徜徉时，也几次看到垃圾车沿街收垃圾。有工人街道上跟随着走走停停的车，协助车的机械操作，把垃圾桶拖到机械臂可以方便够着的位置，机械臂在把垃圾桶抓住、提起，把个中的垃圾倾倒进垃圾车车斗中。</p>
+  <p>***</p>
+  <p>吃过烤薄饼，循着谷歌地图的指引，边走边看边逛，返回旅馆。</p>
+  <p>夜色在不知不觉间降临。巴黎在这个季节天黑得很晚，到了晚上9点半还能看到残阳。</p>
+  <p>途中，再遇到刚才吃饭时见到的那一对男女并肩走来。跟他们错身而过。显然，他们也一直在这一带转悠。</p>
+  <p>在街道、火车、电影院等公共场所里遇到的人绝大部分在头脑中留下的印象比过眼烟云还淡薄，稀薄。为什么会在某个时段对某个人给予特别注意并留下印象深刻，不能不说这是个迷。</p>
+  <p>路边餐馆的人少了，但还是有人在继续吃饭，喝饮料，继续聊。</p>
+  <p>夜色中走回旅馆。</p>
+  <p>利用旅馆网络，妹妹订了明天下午参观卢浮宫的票。22欧元一人。</p>
+  <p>同是国有博物馆，卢浮宫博物馆收费，大英博物馆免费。考虑到参观人数之大（两个博物馆每年参观者都是数以百万计），大英博物馆为什么不收费，白白损失数额巨大的收入？</p>
+  <p>法国跟英国不同。</p>
+  <p>过去的两三百年来，英国人不是有所谓的小店主构成的国族（a nation of shopkeepers）之称吗？小店主谋生就必须斤斤计较，小店主之国理应是一个斤斤计较之国。英国为什么对这么一笔本可以唾手而得的庞大收入如此大方，如此不计较呐？</p>
+  <p>小店主国族之称据说是来自拿破仑。后来这一所谓拿破仑说被发现是查无实据。但英国人是小店主国族的说法广泛流行。所谓拿破仑说中国是一头睡狮（醒来之后将震撼/震惊世界）的说法后来也被发现是查无实据。</p>
+  <p>妹妹忙着安排筹划明日的游览日程（去卢浮宫之前，也要在塞纳可边走，去看巴黎圣母院附近的Shakespeare and Company书店/莎士比亚书店），这边趁记忆新鲜，赶紧写下今天日记的提要，尽力详细的提要。</p>
+  <p>在巴黎的第一天。</p>
+  <p>准确地说，是头一个半天。</p>
+  <p>半天等于30年。</p>
+  <p><br /></p>
+  <p><br /></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+    
+    
+      <li>
+        <time>2024-09-29</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-09-29/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-4-%E5%9F%83%E8%8F%B2%E5%B0%94%E5%A1%94%E4%B8%8E%E5%A1%9E%E7%BA%B3%E6%B2%B3/">
+          梦中的巴黎（4）：埃菲尔塔与塞纳河
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-09-22</time>
+        <a href="https://nodebe4.github.io/teahouse/2024-09-22/%E5%85%B3%E4%BA%8E%E9%A9%AC%E7%89%B9%E5%B8%82%E7%BB%9F%E6%88%98%E8%B4%B4%E7%9A%84%E7%A7%91%E6%99%AE/">
+          关于马特市统战贴的科普
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2024-09-29/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-4-%E5%9F%83%E8%8F%B2%E5%B0%94%E5%A1%94%E4%B8%8E%E5%A1%9E%E7%BA%B3%E6%B2%B3/">
+            前一篇：梦中的巴黎（4）：埃菲尔塔与塞纳河
+          </a>
+      </span>
+    
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2024-09-29/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-4-%E5%9F%83%E8%8F%B2%E5%B0%94%E5%A1%94%E4%B8%8E%E5%A1%9E%E7%BA%B3%E6%B2%B3/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2024-09-29/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-4-%E5%9F%83%E8%8F%B2%E5%B0%94%E5%A1%94%E4%B8%8E%E5%A1%9E%E7%BA%B3%E6%B2%B3/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2024-09-29/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-4-%E5%9F%83%E8%8F%B2%E5%B0%94%E5%A1%94%E4%B8%8E%E5%A1%9E%E7%BA%B3%E6%B2%B3/">
+      <i>后</i>
+    </a>
+    
+    
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2024-09-29/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-4-%E5%9F%83%E8%8F%B2%E5%B0%94%E5%A1%94%E4%B8%8E%E5%A1%9E%E7%BA%B3%E6%B2%B3/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

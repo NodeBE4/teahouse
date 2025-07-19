@@ -1,0 +1,3458 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>首届津輕海峽小說國際研討會實錄 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+首届津輕海峽小說國際研討會實錄
+——
+" />
+    <meta property="og:description" content="
+首届津輕海峽小說國際研討會實錄
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="首届津輕海峽小說國際研討會實錄" />
+    <meta property="twitter:title" content="首届津輕海峽小說國際研討會實錄" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40tsugaru_strait%2F%25E9%25A6%2596%25E5%25B1%258A%25E6%25B4%25A5%25E8%25BC%2595%25E6%25B5%25B7%25E5%25B3%25BD%25E5%25B0%258F%25E8%25AA%25AA%25E5%259C%258B%25E9%259A%259B%25E7%25A0%2594%25E8%25A8%258E%25E6%259C%2583%25E5%25AF%25A6%25E9%258C%2584-bafybeiemugg5yobpefb4kgogaf3wohycvru5qh2v3eersfuw2447d5noia" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@tsugaru_strait/%E9%A6%96%E5%B1%8A%E6%B4%A5%E8%BC%95%E6%B5%B7%E5%B3%BD%E5%B0%8F%E8%AA%AA%E5%9C%8B%E9%9A%9B%E7%A0%94%E8%A8%8E%E6%9C%83%E5%AF%A6%E9%8C%84-bafybeiemugg5yobpefb4kgogaf3wohycvru5qh2v3eersfuw2447d5noia" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@tsugaru_strait/%E9%A6%96%E5%B1%8A%E6%B4%A5%E8%BC%95%E6%B5%B7%E5%B3%BD%E5%B0%8F%E8%AA%AA%E5%9C%8B%E9%9A%9B%E7%A0%94%E8%A8%8E%E6%9C%83%E5%AF%A6%E9%8C%84-bafybeiemugg5yobpefb4kgogaf3wohycvru5qh2v3eersfuw2447d5noia&text=首届津輕海峽小說國際研討會實錄&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@tsugaru_strait/%E9%A6%96%E5%B1%8A%E6%B4%A5%E8%BC%95%E6%B5%B7%E5%B3%BD%E5%B0%8F%E8%AA%AA%E5%9C%8B%E9%9A%9B%E7%A0%94%E8%A8%8E%E6%9C%83%E5%AF%A6%E9%8C%84-bafybeiemugg5yobpefb4kgogaf3wohycvru5qh2v3eersfuw2447d5noia&title=首届津輕海峽小說國際研討會實錄" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@tsugaru_strait/%E9%A6%96%E5%B1%8A%E6%B4%A5%E8%BC%95%E6%B5%B7%E5%B3%BD%E5%B0%8F%E8%AA%AA%E5%9C%8B%E9%9A%9B%E7%A0%94%E8%A8%8E%E6%9C%83%E5%AF%A6%E9%8C%84-bafybeiemugg5yobpefb4kgogaf3wohycvru5qh2v3eersfuw2447d5noia&title=首届津輕海峽小說國際研討會實錄" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=首届津輕海峽小說國際研討會實錄&body=
+首届津輕海峽小說國際研討會實錄
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@tsugaru_strait/%E9%A6%96%E5%B1%8A%E6%B4%A5%E8%BC%95%E6%B5%B7%E5%B3%BD%E5%B0%8F%E8%AA%AA%E5%9C%8B%E9%9A%9B%E7%A0%94%E8%A8%8E%E6%9C%83%E5%AF%A6%E9%8C%84-bafybeiemugg5yobpefb4kgogaf3wohycvru5qh2v3eersfuw2447d5noia" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@tsugaru_strait/%E9%A6%96%E5%B1%8A%E6%B4%A5%E8%BC%95%E6%B5%B7%E5%B3%BD%E5%B0%8F%E8%AA%AA%E5%9C%8B%E9%9A%9B%E7%A0%94%E8%A8%8E%E6%9C%83%E5%AF%A6%E9%8C%84-bafybeiemugg5yobpefb4kgogaf3wohycvru5qh2v3eersfuw2447d5noia&title=首届津輕海峽小說國際研討會實錄&caption=
+首届津輕海峽小說國際研討會實錄
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=首届津輕海峽小說國際研討會實錄&url=https://matters.news/@tsugaru_strait/%E9%A6%96%E5%B1%8A%E6%B4%A5%E8%BC%95%E6%B5%B7%E5%B3%BD%E5%B0%8F%E8%AA%AA%E5%9C%8B%E9%9A%9B%E7%A0%94%E8%A8%8E%E6%9C%83%E5%AF%A6%E9%8C%84-bafybeiemugg5yobpefb4kgogaf3wohycvru5qh2v3eersfuw2447d5noia" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>首届津輕海峽小說國際研討會實錄</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2023-02-06
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 津轻海峡</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@tsugaru_strait/%E9%A6%96%E5%B1%8A%E6%B4%A5%E8%BC%95%E6%B5%B7%E5%B3%BD%E5%B0%8F%E8%AA%AA%E5%9C%8B%E9%9A%9B%E7%A0%94%E8%A8%8E%E6%9C%83%E5%AF%A6%E9%8C%84-bafybeiemugg5yobpefb4kgogaf3wohycvru5qh2v3eersfuw2447d5noia" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1675724510000-->
+<p><a href="https://matters.news/@tsugaru_strait/%E9%A6%96%E5%B1%8A%E6%B4%A5%E8%BC%95%E6%B5%B7%E5%B3%BD%E5%B0%8F%E8%AA%AA%E5%9C%8B%E9%9A%9B%E7%A0%94%E8%A8%8E%E6%9C%83%E5%AF%A6%E9%8C%84-bafybeiemugg5yobpefb4kgogaf3wohycvru5qh2v3eersfuw2447d5noia">首届津輕海峽小說國際研討會實錄</a>
+——</p>
+
+<div>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/55b3208d-a45c-43be-8aba-524e3880f081.jpeg" data-asset-id="55b3208d-a45c-43be-8aba-524e3880f081" referrerpolicy="no-referrer" />    <figcaption>
+<span>研图片来源：津轻海峡私人摄影收藏</span>
+    </figcaption>
+  </figure>
+  <p>小引：首届津轻海峡小说国际研讨会参加者一致认为，尽管目前尚不清楚津轻海峡小说艺术究竟会发展壮大成为巨树或高山，还是会演变为虎头蛇尾，昙花一现，很快无声无臭无疾而终，但就目前而言，津轻海峡塑造人物、构筑神话的努力确已蔚为大观，被著名世界媒体Matters News多次报道。</p>
+  <p>津轻海峡日前发表短篇小说《津輕海峽與特洛伊首次線下會面（4) 》，推出小说人物埃莱娜（Hélène，又名海伦）姊姊，则更是清晰地展现了他的勃勃雄心。追踪华文小说发展的世界各国读者和研究者为此感到欣喜，并高度评价他力图通过塑造一个活灵活现、有血有肉、有漂亮手指的神话人物从而一举超越自《荷马史诗》以来的西方文学。</p>
+  <p>本次研讨会的讨论即从津轻海峡笔下的神话人物埃莱娜姊姊的塑造开始。</p>
+  <p>参加主场讨论的是小说、诗歌、绘画艺术研究者和创作者<strong>C.Planitia</strong>，以及文学与社会科学研究者<strong>津轻海峡</strong>（注：此津轻海峡与彼小说作者津轻海峡以及喜好在网路上与人打架斗殴的彼津轻海峡并非一人）。</p>
+  <p>这场跨学科的讨论涉及话题广泛，其中包括文艺作品的误读、艺术创作论、艺术与社会、与心理学的关系，艺术生产者的态度与生产质量、艺术形象展示与环境保护的关系等等问题。</p>
+  <p>讨论参加者从实际生活出发，把津轻海峡的艺术创作及解读与读者及社会大众的实际生活、讨论者的个人生活联系起来。这方面的典型讨论话题包括，神话人物埃莱娜姊姊缘何因吃快餐食品而更加光彩照人，希望美颜的美眉是否可如法炮制。相信如此富有理论和实用价值的讨论必将给读者带来充实的愉悦，睿智的启迪。</p>
+  <p>懂英语的读者可以直接阅读以英语进行的讨论记录。英语尚未娴熟的读者可以跳过英语直接读翻译。希望提升自己的英语和汉语表达能力的读者则可以对照阅读这里的英语原文和汉语译文。细心的读者假如看到这里的英语或汉语有什么问题或错误，还请不吝赐教。<br />—------------------------</p>
+  <p><strong>C.Planitia@catplanet</strong></p>
+  <p>I didn’t know a girl could sculpt herself into the babe of the century by eating Big Macs :)</p>
+  <p>我先前还真不知道一个女孩子居然可以通过吃麦当劳汉堡包把自己塑造为世纪美女 :)</p>
+  <p><strong>津轻海峡@tsugaru_strait</strong></p>
+  <p>A wonder babe with a pair of killing hands, isn't she?</p>
+  <p>（埃莱娜的这姐姐）真是个长着一双能勾魂的手的年轻奇女子吧？</p>
+  <p>By the way, the Pillow Book of Sei Shonagon tells us that one of the most wonderful scenes to watch under the sun is a pretty baby eating strawberries. Nowadays Big Macs are apparently in vogue.</p>
+  <p>顺便说一句，（公元十世纪日本平安时代著名女作家）清少纳言的《枕草子》告诉我们，天下最好看的事之一是漂亮的孩童吃草莓。如今显然麦当劳汉堡包正时兴。</p>
+  <p>Another BTW. Such beautiful hands and beautifully long fingers are usually pictured with piano keys. I deliberately bucked or subverted such a cliché, in order to show that beauty can pop up anywhere, against any background, and that you have to capture it pro-actively instead of lazily or blindly following a tried and tired cliché.</p>
+  <p>再顺便说一句。这样的漂亮的手，这样漂亮修长的手指的照片通常是跟钢琴键盘相配的。但津轻海峡特意抛开/颠覆了这种俗套，为的是显示美可以出现在任何地方，在任何背景之下；人们需要主动积极地去捕捉美，而不是懒惰或盲目地跟追随早已烂大街的俗套。</p>
+  <p><strong>C.Planitia@catplanet</strong></p>
+  <p>It’s a great contrast, I wish fast food had that effect on me 😂</p>
+  <p>好美妙的对比。我希望快餐食品能给我带来这种效果😂</p>
+  <p><strong>津轻海峡@tsugaru_strait</strong></p>
+  <p>Well, as I said, beauty, including the beauty of the hands which have so enthralled Mr. Tsugaru Strait, may pop up anywhere any time. It all depends on the eye of the beholder. You got to have the open eye or the open mind. Otherwise beauty would easily escape you.</p>
+  <p>这个嘛，就像我刚才说的，美（包括把津轻海峡弄得五迷三道的那双美手）可以在任何地方任何时间出现。一切全要看有没有审美之眼。必须要有这种开放的眼睛或开放的胸襟。否则，美就很容易跟你擦肩而过。</p>
+  <p><strong>C.Planitia@catplanet</strong></p>
+  <p>I have been following your story, hope you can write a bit more about the women’s personalities too. It’s nice to read about beautiful women with unique qualities these days even if you’re writing a satirical story.</p>
+  <p>我一直在追你的小说，希望你也能多写一点点其中的女子的种种个性。如今能读到富有独特性的漂亮女性人物感觉很好，即使是你写的是讽刺小说。</p>
+  <p><strong>津轻海峡@tsugaru_strait</strong></p>
+  <p>Thanks for your great suggestion.</p>
+  <p>感谢你的绝妙建议。</p>
+  <p>In the next installment, you will see me devote more effort to the delineation and characterization of the two lovely women （Hélène sisters) and that fake woman (who as all signs show is actually a misogynist).</p>
+  <p>在下一回里，你会看到我会花更多的心思描摹刻画那两个可爱的女子（埃莱娜姐妹），以及那个伪女子（有各种迹象显示TA是个厌女者）。</p>
+  <p><strong>C.Planitia@catplanet</strong></p>
+  <p>——beauty…may pop up anywhere any time</p>
+  <p>——美...可以在任何地方任何时间出现</p>
+  <p>No, I was referring to the effect fast food tends to have on the figure 🤭, not the intent behind the photo.</p>
+  <p>我不是那个意思，我指的是快餐食品容易对体型造成的影响 🤭，不是照片背后的意图。</p>
+  <p><strong>津轻海峡@tsugaru_strait</strong></p>
+  <p>May I know what you meant by "No, I was referring to the effect fast food tends to have on the figure 🤭"?</p>
+  <p>我想知道，你所说的 “快餐食品容易对体型造成的影响🤭” 是什么意思？</p>
+  <p>Anyhow, I meant to demolish all stereotypes which come my way. Fast food is everywhere these days, and can be consumed by anybody, beautiful or plain-looking, rich or less than rich, American or non-American.... Therefore I tend to believe that fast food would have no effect at all on beauty. Just like a beauty clad in rags is still a beauty.</p>
+  <p>不管怎么说，我就是想破除我所遇到的所有的刻板印象/看法。快餐食品如今到处都是，消费者可以是任何人，漂亮的或不漂亮的，富人或不那么富的人，美国人或非美国人...。因此，我倾向于认为快餐食品对美不会有什么影响。就像是一个大美人衣衫褴褛照样还是个大美人。</p>
+  <p><strong>C.Planitia@catplanet</strong></p>
+  <p>It was a joke to highlight how lucky the character in your story is, that she could consume Big Macs and still have a jaw dropping figure and lovely skin. I wasn’t commenting on the intent behind your choice of the photo - I actually very much enjoy the the idea of a hot girl digging her lily white hands into a hamburger.</p>
+  <p>我刚才是开玩笑，为的是凸显你小说中的那个人物有多么幸运，她居然吃麦当劳汉堡包仍是身材好得令人垂涎三尺，皮肤很好。我没有评论你选的那幅照片背后的意图。我实际上很喜欢一个辣眼的女孩用纤纤玉手抓着汉堡包的意象。</p>
+  <p><strong>津轻海峡@tsugaru_strait</strong></p>
+  <p>I failed to get your joke, poor me. But I am extremely and hilariously proud that I hit upon the great idea of yours in the process, that is, the beauty looks all the more beautiful for the fast food she is consuming.</p>
+  <p>我没能看出你的玩笑，好可怜呐。但我很欢乐，很骄傲，我居然在此过程中跟你不谋而合英雄所见略同，这就是，那位大美人因为在吃快餐食品而显得更加美得不可方物。</p>
+  <p><strong>C.Planitia@catplanet</strong></p>
+  <p>It’s all right, I know you’re super serious 99% of the time.</p>
+  <p>看不出也没关系啦。我知道你在99%时间都是超认真。</p>
+  <p>——the beauty looks all the more beautiful for the fast food she is consuming</p>
+  <p>——那个大美人因为在吃快餐食品而显得更加美得不可方物。</p>
+  <p>If I were a man, I would definitely want to date a beautiful woman who can get her burger game on, instead of eating rabbit food everywhere she goes. Beauty is amplified by authentic enjoyment - from a good burger to a good song. But I don’t think I’ve ever met a woman who enjoys having five leaves of lettuce and a cherry tomato for a meal.</p>
+  <p>假如我是个男的，我约会的女子肯定是能真吃牛肉汉堡的漂亮女子，而不是跟走到哪里都是吃兔子食的女子。正品的享受，如享受一个好汉堡包，一首好歌，会让美得到放大。但我不认为我约会过喜欢一餐只是吃五片莴笋叶加一个樱桃西红柿的女子。</p>
+  <p><strong>津轻海峡@tsugaru_strait</strong></p>
+  <p>I've just checked with the elder sister, and she told me that on that day her burger did contain ground beef (and she told me to keep it secret, as she doesn't want to get involved in the controversy of whether beef consumption is destroying our environment).</p>
+  <p>我刚刚跟（埃莱娜的）姊姊查对了。她跟我说，她那天吃的汉堡是有牛肉末的（她也跟我说这事要保密，因为她不想被卷入吃牛肉是否是毁坏环境的争议当中）。</p>
+  <p><strong>C.Planitia@catplanet</strong></p>
+  <p>Thank you, I enjoy these little character studies you and the other guy are doing (he’s also putting in more effort into his writing too, meaning he takes it seriously, which in turn means you are kind of reaching your initial goal of getting a more crafted reaction). I don’t always like to admit it but conflict can be a great catalyst for creativity, and ironically makes people congregate.</p>
+  <p>谢谢回复。我很喜欢你和另一位正在进行的人物刻画（他也在写作上更用功了，我的意思是，他写得更认真了，而这就意味着你达到了最初的目标，即获得更用心拟定的反应）。虽然我不是总是喜欢承认这一点，但冲突的确可以是一种良好的创造催化剂，能让冲突的人聚拢起来，很有反讽的味道。</p>
+  <p><strong>津轻海峡@tsugaru_strait</strong></p>
+  <p>I hate boasting, but sometimes for fear of improper modesty causing misleading impressions I feel obliged to take the risk of being perceived as self-boasting and point out some plain fact.</p>
+  <p>我很讨厌说大话 / 吹牛，但有时候出于担心不恰当的谦虚造成误导性的印象，我觉得必须冒着被人认为是自吹自擂的风险指出某些实实在在的事实。</p>
+  <p>Now I have to say, while I have been doing a quite decent job with character studies (that is, characterization), the other guy did a very amateurish, sloppy job, and his/her studies are simply some chaotic, formless, clipped, often nonsensical statements which are haphazardly lumped together, piled up, and then paraded for characterization. Well, in plain English, it's actually called verbal garbage.</p>
+  <p>现在我必须说，我做的小说人物刻画还是相当不错的，但另一位的则很业余，很松懈。TA的人物刻画就是一些乱七八糟、没头没尾没形状、而且常常是没意义的陈述胡乱堆积到一起，然后再陈列出来充当人物刻画。用英语大白话说就是，这实际上是文字垃圾。</p>
+  <p><strong>C.Planitia@catplanet</strong></p>
+  <p>——she told me to keep it secret</p>
+  <p>——她跟我说这事要保密</p>
+  <p>No need to feel guilty. In half a decade we will all be buying lab grown meat from cell farms anyway. She’s just getting the real deal while she still can.</p>
+  <p>不需要感觉有犯罪感。再过五年，我们都会购买细胞生产场的试验室培植的肉类。（那位手比蒙娜丽莎的还漂亮的美女）她只是在还能吃上真牛肉的时候得到真肉而已。</p>
+  <p>——the other guy did a very amateurish, sloppy job</p>
+  <p>——另一位的则很业余，很松懈</p>
+  <p>Actually there’s been a big change in the relative effort and the time put in, like a dramatic increase in the length of postings and now there is a story arc :) The fun of it is not only limited to the quality of writing, it’s interesting to see how attitudes behind the writing change with stimulation.</p>
+  <p>实际上，在相对的功夫和时间投入方面已经有了巨大的变化，如贴出的帖子篇幅大大增加，现在还有了故事的开头、中间和结尾大模样：）这里的乐趣不仅限于写作的质量。看着写作的态度怎样随着刺激而发生变化很有趣。</p>
+  <p><strong>津轻海峡@tsugaru_strait</strong></p>
+  <p>While I believe I do understand what you meant by "there’s been a big change in the relative effort (by the other guy)," I have to point out another unsavory plain fact, frankly, bluntly, candidly, that is, the other guy has a fatal flaw in his/her attitude when it comes to writing or discussing.</p>
+  <p>我想我明白你说的 “（那一位）在相对的功夫和时间投入方面已经有了巨大的变化” 是什么意思。但我不得不坦率地、直言不讳地指出另一个不那么美妙的事实，这就是，在写作和讨论的时候，那一位的态度有致命性缺陷。</p>
+  <p>He/she seems to believe that his/her amateurishness is superior to authentic effort or authentic professionals, because he/she holds the key to authentic supreme knowledge which is called computer science or plumbing. He/she doesn't know that such an attitude is amateurish, childish, or even worse, clownish.</p>
+  <p>TA似乎以为，以其业余就足以超越正经的努力或正经的专业人员，因为TA掌握了被称作电脑科学或管道/下水道施工维修的正经超级知识的钥匙。TA不知道这种态度是业余的，孩子气的，而且，更糟的是，是小丑一样的。</p>
+  <p>Yes, he/she may be putting in more effort recently, but I am afraid his/her efforts might be misguided and therefore basically useless, unless he/she changes his/her attitude. As people say in English, attitude is everything. Yes, it is everything. Without it you will end up with nothing.</p>
+  <p>是的，TA近来或许下了更多的功夫，但我担心TA的功夫只是跟没头苍蝇一样，因此基本上是无用的，除非TA改变态度。常用英语说，态度决定一切。是的，决定一切。没有正确的态度必将一事无成。</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2023-03-22</time>
+        <a href="https://nodebe4.github.io/teahouse/2023-03-22/%E7%94%9F%E6%88%90%E5%BC%8F%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BDAI%E8%88%87%E6%96%87%E5%AD%B8/">
+          生成式人工智能AI與文學
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-03-02</time>
+        <a href="https://nodebe4.github.io/teahouse/2023-03-02/%E9%96%83%E9%9D%88%E6%A8%82%E5%9C%98%E6%96%B0%E5%96%AE%E6%9B%B2%E4%B8%AD%E7%9A%84%E9%99%B3%E6%BE%84%E6%B3%A2%E7%95%AB%E4%BD%9C/">
+          閃靈樂團新單曲中的陳澄波畫作
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-02-04</time>
+        <a href="https://nodebe4.github.io/teahouse/2023-02-04/%E5%B0%8F%E8%AA%AA-%E6%B4%A5%E8%BC%95%E6%B5%B7%E5%B3%BD%E8%88%87%E7%89%B9%E6%B4%9B%E4%BC%8A%E9%A6%96%E6%AC%A1%E7%B7%9A%E4%B8%8B%E6%9C%83%E9%9D%A2-4/">
+          （小說）津輕海峽與特洛伊首次線下會面（4）
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-02-03</time>
+        <a href="https://nodebe4.github.io/teahouse/2023-02-03/%E6%95%99%E8%A8%93%E4%B8%80%E4%BD%8D%E6%9C%83%E7%B7%A8%E7%A8%8B%E7%9A%84%E5%82%BB%E5%A4%A7%E5%A7%90/">
+          教訓一位會編程的傻大姐
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2023-02-04/%E5%B0%8F%E8%AA%AA-%E6%B4%A5%E8%BC%95%E6%B5%B7%E5%B3%BD%E8%88%87%E7%89%B9%E6%B4%9B%E4%BC%8A%E9%A6%96%E6%AC%A1%E7%B7%9A%E4%B8%8B%E6%9C%83%E9%9D%A2-4/">
+            前一篇：（小說）津輕海峽與特洛伊首次線下會面（4）
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2023-03-02/%E9%96%83%E9%9D%88%E6%A8%82%E5%9C%98%E6%96%B0%E5%96%AE%E6%9B%B2%E4%B8%AD%E7%9A%84%E9%99%B3%E6%BE%84%E6%B3%A2%E7%95%AB%E4%BD%9C/">
+            後一篇：閃靈樂團新單曲中的陳澄波畫作
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2023-02-04/%E5%B0%8F%E8%AA%AA-%E6%B4%A5%E8%BC%95%E6%B5%B7%E5%B3%BD%E8%88%87%E7%89%B9%E6%B4%9B%E4%BC%8A%E9%A6%96%E6%AC%A1%E7%B7%9A%E4%B8%8B%E6%9C%83%E9%9D%A2-4/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2023-03-02/%E9%96%83%E9%9D%88%E6%A8%82%E5%9C%98%E6%96%B0%E5%96%AE%E6%9B%B2%E4%B8%AD%E7%9A%84%E9%99%B3%E6%BE%84%E6%B3%A2%E7%95%AB%E4%BD%9C/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2023-03-02/%E9%96%83%E9%9D%88%E6%A8%82%E5%9C%98%E6%96%B0%E5%96%AE%E6%9B%B2%E4%B8%AD%E7%9A%84%E9%99%B3%E6%BE%84%E6%B3%A2%E7%95%AB%E4%BD%9C/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2023-02-04/%E5%B0%8F%E8%AA%AA-%E6%B4%A5%E8%BC%95%E6%B5%B7%E5%B3%BD%E8%88%87%E7%89%B9%E6%B4%9B%E4%BC%8A%E9%A6%96%E6%AC%A1%E7%B7%9A%E4%B8%8B%E6%9C%83%E9%9D%A2-4/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2023-02-04/%E5%B0%8F%E8%AA%AA-%E6%B4%A5%E8%BC%95%E6%B5%B7%E5%B3%BD%E8%88%87%E7%89%B9%E6%B4%9B%E4%BC%8A%E9%A6%96%E6%AC%A1%E7%B7%9A%E4%B8%8B%E6%9C%83%E9%9D%A2-4/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2023-03-02/%E9%96%83%E9%9D%88%E6%A8%82%E5%9C%98%E6%96%B0%E5%96%AE%E6%9B%B2%E4%B8%AD%E7%9A%84%E9%99%B3%E6%BE%84%E6%B3%A2%E7%95%AB%E4%BD%9C/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2023-03-02/%E9%96%83%E9%9D%88%E6%A8%82%E5%9C%98%E6%96%B0%E5%96%AE%E6%9B%B2%E4%B8%AD%E7%9A%84%E9%99%B3%E6%BE%84%E6%B3%A2%E7%95%AB%E4%BD%9C/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2023-02-04/%E5%B0%8F%E8%AA%AA-%E6%B4%A5%E8%BC%95%E6%B5%B7%E5%B3%BD%E8%88%87%E7%89%B9%E6%B4%9B%E4%BC%8A%E9%A6%96%E6%AC%A1%E7%B7%9A%E4%B8%8B%E6%9C%83%E9%9D%A2-4/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

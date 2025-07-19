@@ -1,0 +1,3488 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>分享｜《紅色輪盤》(Red Roulette)懶人包 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+分享｜《紅色輪盤》(Red Roulette)懶人包
+——
+" />
+    <meta property="og:description" content="
+分享｜《紅色輪盤》(Red Roulette)懶人包
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="分享｜《紅色輪盤》(Red Roulette)懶人包" />
+    <meta property="twitter:title" content="分享｜《紅色輪盤》(Red Roulette)懶人包" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40KMnese%2F%25E5%2588%2586%25E4%25BA%25AB-%25E7%25B4%2585%25E8%2589%25B2%25E8%25BC%25AA%25E7%259B%25A4-red-roulette-%25E6%2587%25B6%25E4%25BA%25BA%25E5%258C%2585-bafyreig2433jmsvummhcwyltuyibayuaerwomzvkeichg67b6wjkboyk2i" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@KMnese/%E5%88%86%E4%BA%AB-%E7%B4%85%E8%89%B2%E8%BC%AA%E7%9B%A4-red-roulette-%E6%87%B6%E4%BA%BA%E5%8C%85-bafyreig2433jmsvummhcwyltuyibayuaerwomzvkeichg67b6wjkboyk2i" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@KMnese/%E5%88%86%E4%BA%AB-%E7%B4%85%E8%89%B2%E8%BC%AA%E7%9B%A4-red-roulette-%E6%87%B6%E4%BA%BA%E5%8C%85-bafyreig2433jmsvummhcwyltuyibayuaerwomzvkeichg67b6wjkboyk2i&text=分享｜《紅色輪盤》(Red Roulette)懶人包&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@KMnese/%E5%88%86%E4%BA%AB-%E7%B4%85%E8%89%B2%E8%BC%AA%E7%9B%A4-red-roulette-%E6%87%B6%E4%BA%BA%E5%8C%85-bafyreig2433jmsvummhcwyltuyibayuaerwomzvkeichg67b6wjkboyk2i&title=分享｜《紅色輪盤》(Red Roulette)懶人包" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@KMnese/%E5%88%86%E4%BA%AB-%E7%B4%85%E8%89%B2%E8%BC%AA%E7%9B%A4-red-roulette-%E6%87%B6%E4%BA%BA%E5%8C%85-bafyreig2433jmsvummhcwyltuyibayuaerwomzvkeichg67b6wjkboyk2i&title=分享｜《紅色輪盤》(Red Roulette)懶人包" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=分享｜《紅色輪盤》(Red Roulette)懶人包&body=
+分享｜《紅色輪盤》(Red Roulette)懶人包
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@KMnese/%E5%88%86%E4%BA%AB-%E7%B4%85%E8%89%B2%E8%BC%AA%E7%9B%A4-red-roulette-%E6%87%B6%E4%BA%BA%E5%8C%85-bafyreig2433jmsvummhcwyltuyibayuaerwomzvkeichg67b6wjkboyk2i" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@KMnese/%E5%88%86%E4%BA%AB-%E7%B4%85%E8%89%B2%E8%BC%AA%E7%9B%A4-red-roulette-%E6%87%B6%E4%BA%BA%E5%8C%85-bafyreig2433jmsvummhcwyltuyibayuaerwomzvkeichg67b6wjkboyk2i&title=分享｜《紅色輪盤》(Red Roulette)懶人包&caption=
+分享｜《紅色輪盤》(Red Roulette)懶人包
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=分享｜《紅色輪盤》(Red Roulette)懶人包&url=https://matters.news/@KMnese/%E5%88%86%E4%BA%AB-%E7%B4%85%E8%89%B2%E8%BC%AA%E7%9B%A4-red-roulette-%E6%87%B6%E4%BA%BA%E5%8C%85-bafyreig2433jmsvummhcwyltuyibayuaerwomzvkeichg67b6wjkboyk2i" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>分享｜《紅色輪盤》(Red Roulette)懶人包</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-04-27
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 戰地島民KMnese</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@KMnese/%E5%88%86%E4%BA%AB-%E7%B4%85%E8%89%B2%E8%BC%AA%E7%9B%A4-red-roulette-%E6%87%B6%E4%BA%BA%E5%8C%85-bafyreig2433jmsvummhcwyltuyibayuaerwomzvkeichg67b6wjkboyk2i" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1651119311000-->
+<p><a href="https://matters.news/@KMnese/%E5%88%86%E4%BA%AB-%E7%B4%85%E8%89%B2%E8%BC%AA%E7%9B%A4-red-roulette-%E6%87%B6%E4%BA%BA%E5%8C%85-bafyreig2433jmsvummhcwyltuyibayuaerwomzvkeichg67b6wjkboyk2i">分享｜《紅色輪盤》(Red Roulette)懶人包</a>
+——</p>
+
+<div>
+  <p>2021年9月出版的《紅色輪盤》(Red Roulette)是一本回憶錄。<br /></p>
+  <blockquote>
+沈棟出生於上海，在香港長大，在美國完成大學教育，是前私募基金高層，目前身在英國 …… 沈棟前妻段偉紅與溫家寶及已落馬的原政治局委員、重慶市委書記孫政才關係密切，傳為中共權貴家族擔任白手套，直至四年前段偉紅突然失蹤。(RFA)  </blockquote>
+  <blockquote>
+<a href="https://www.bbc.com/zhongwen/trad/chinese-news-59329579" rel="noopener noreferrer" target="_blank">他也接受過BBC的專訪</a>  </blockquote>
+  <p>由於本書尚未有中文版，在此分享Reddit u/YingAu 所發表的「精彩回顧」(<a href="https://www.reddit.com/r/real_China_irl/comments/pngcln/%E7%BA%A2%E8%89%B2%E8%BD%AE%E7%9B%98_%E7%B2%BE%E5%BD%A9%E5%9B%9E%E9%A1%BE/hd64du5/?context=3" rel="noopener noreferrer" target="_blank">來源</a>)。<br /></p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/9ec8db46-b49d-434c-b672-b9140480b27d.jpeg" data-asset-id="9ec8db46-b49d-434c-b672-b9140480b27d" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><strong><em>(以下內容包含主文及9段「繼續更新」，原發文者與其它網友回覆，可點選上列來源察看)</em></strong></p>
+  <p><br /></p>
+  <hr />
+  <p><br /></p>
+  <p>故事主人公 (Last name, first name)</p>
+  <p><strong>Shen Dong </strong>作者本人，跟着老婆一起做生意，先跑了</p>
+  <p><strong>Duan Weihong （Whitney）</strong>作者老婆，没跑成，被抓了</p>
+  <p><strong>Auntie Zhang </strong>张阿姨，温家宝的老婆</p>
+  <p><br /></p>
+  <p>1.<br />简单来说呢，这个就是一个第三人称叙述的官商勾结的故事。这一类的故事，估计各位看官就算没有听一百，也听过八十。只不过这回调动的资金是几百亿上千亿，牵扯的官员是正国级副国级而已。</p>
+  <p><br /></p>
+  <p>2.<br />Shen Dong算是一个金融高管，但是，很显然，他的能力和胆识都是不如他亲爱的老婆Whitney的。在很大程度上，他的成功（不管是在商业届混、做私募、保险的高管，还是在政界混、做政协委员），百分之八十都是靠着他老婆抓着温家宝老婆张阿姨这条线儿。当然，这的确让他们赚了不少钱。</p>
+  <p><br /></p>
+  <p>3.<br />温家宝的老婆是一个脸上拥有慈祥的微笑的妇人——她会眷恋那种被人群围绕的感觉——和其他的一些中共大官的不甘于完全沉默的夫人一样，他们也需要像Whitney（作者老婆）这样的聪明能干，忠贞不二，总能找到话题，花蝴蝶，社交牛逼，饭局里面少了她就不行，又贼善解人意的白手套来帮他们处理财务。（【点评】这种妇人倒是的确比较常见。她们也要负责给丈夫做一些后勤工作——打造一个“关系库”，把个门儿，看看谁能进来帮他们做事，谁不能——以及指示一下资源如何分配。而诸如此类的环节，温家宝本人并不需要知道分毫（此书中也基本“证实”这一点）。正如温家宝最后自辩的那样。）<br /></p>
+  <p><br /></p>
+  <p>4. <br />在中国经商，无非是处理人际关系，找对门儿，和权贵们（不管是地方上的，还是中央里面的）进行勾兑，如果没有一个太子党红二代或者地方大员甚至小官的亲戚，基本上来说这些商人的endeavor就会卡在一个很小的级别，长不大。老一套的说法叫 “原罪”，不过问题是很多人想犯原罪而不得，因为这些事是毕竟是极其复杂的。</p>
+  <p><br />5. <br />而Whitney不仅能够无师自通，而且还能够做到反哺给张阿姨，给海里面的人出好点子、好意见，这让她们之间的感情迅速“升温”。</p>
+  <p>6. <br />当然，因为这些原罪，也让这些人能够轻易的成为“弃子”，或者用这个Shen dong的话说，叫expendable piece .<br /><br />7. <br />按照Shen Dong的说法，中共的很大一群人，包括邓小平，能够容忍经济改革，容忍他们这些民间商人上位，去搞什么企业家精神，只是因为当时国家破产了。<br />为了救国，党必须让私有制和企业家精神蓬勃发展，然而这只是权宜之计。Shen Dong拿<br />了首都机场物流的项目，和北京机场的“老板”李培英和负责机场周边地区的地方权力掮客李平或“土皇帝”勾勾搭搭，赚了大钱，但是随着国进民退和对“资本”的批判以后，他们也就只能灰溜溜的黯然退出了。<br /><br />8. <br />习近平这一派的红二代们是有光辉的传统和伟大的抱负的（点评：最怕的就是这种红二代了），他是十分喜欢那种大国企的概念的，认为公有制才是国家的基石，对待公有制和私有制的问题，他没有既要、又要，而是直接说了要把国有企业做大做强，而对民有企业是没有的。</p>
+  <p>9. <br />除了像温家宝那样的大人物，Shen Dong还要结交像李培英这样的“土皇帝”。他们在过去也算是一方小诸侯。</p>
+  <p>10. <br />然而2012年以后，习的中央集权，简单的通过几个空降官员，就把这里的权力给 收了上去。Shen Dong这样的“民企”在首都机场这儿的来钱的路子，也就断了。而 大国企迅速填补了这个空儿。公权力动动手指，压死民企易如反掌。<br /></p>
+  <p>11.<br />有人说这本书实际上是在洗白温家宝。根据他这本书的叙述，温家宝是那种极其严谨的理工技术官僚，从来不和他人引起争执的那种人。</p>
+  <p>a.这种随和能够让他在总理的位子起了争执的时候，成为各方都能够接受的人选。</p>
+  <p>b. 但是，同时这种过于绥靖的性格，也让他很难拉起一个山头，也很难真的去实<br /> 现什么政治理想，比如他经常会说的人民民主与政治自由。</p>
+  <p>c. 温好不容易去努力打造派系——结盟收服了孙政才——结果功亏一篑，Whitney<br /> 小姐也因此下落不明。当然这是后话了。<br />12. <br />当然，Whitney的这个精通人性的咨询服务，不仅仅只供给温家宝的老婆一人，她服务于很多红色高官的家庭——当然，温的老婆是最重要的那个。事实上，Shen Dong说他老婆从来不停止connection的脚步，2008年，为了结识更多的高干（子弟），她去上了一个清华的一个月上四天课的博士班（点评：真™讽刺）以结识习近平的助手，胡锦涛的儿子，副部长们，130万人城市的市委书记，etc</p>
+  <p><br /></p>
+  <p>13.<br /> Whitney小姐也曾被王岐山挑中，不过王岐山并不会像其他官员那样去听从Whitney的政治咨询服务。王更看重的，是Whitney的与温家宝（老婆）的关系。</p>
+  <p>14. <br />王会经常找whitney聊天（可能是为了持续的收集温家宝的情报）。Whitney说王很欣赏她的聪明，所以也很健谈。</p>
+  <p>15. <br />王说自己知道很多红色家族实际上是很保守的，他们（像我之前说的）容忍他们这些民间商人仅仅是因为他们能够暂时的帮助红色江山不破产。实际上大量的红色贵族（或者说买办阶层）都是这么想的，尽管他们看起来亲西方。</p>
+  <p>16. <br />而王本人和这些人是不一样的。他给whitney的建议是留好现金，准备好bullets，大规模私有化来临的时刻，Pull the trigger and have ammunition to burn。</p>
+  <p>17. <br />王不仅仅是口头上的赞赏，也会帮助他和他老婆拿项目，比如说中国电信赴美上市，这种轻轻松松几个亿美金净利的easy money。</p>
+  <p>18.<br />有趣的是，王岐山喜欢读《货币战争》，宋鸿兵的那本。对此，Shen Dong感到错愕（他说“Wang Qishan, at least, should’ve known better; he’d worked closely with Westerners for decades.”）</p>
+  <p>19.<br />Whitney也通过张阿姨的引荐，终于和习近平和他的夫人约了饭。Shen Dong先生是去不了的。他说“At a dinner such as this, everyone needed to have a purpose. I was not a necessary participant in this exercise to build another relationship.” （点评，正如我之前所说，他百分之八十都是靠着他老婆，而不是反过来的）。</p>
+  <p>20.<br />Whitney这么一个社交牛逼的人，硬是没和习近平搭上线，整个饭局，习也不说话，话都让彭丽媛说了，这让Whitney感到挫败。</p>
+  <p>21.<br />Whitney必须和孙政才搞好关系，下注。因为她毕竟是温的人。</p>
+  <p>22.<br />孙政才和胡春华的恶斗，反而给了习近平破绽，孙政才入狱，胡春华闭嘴，后面的事儿大家也都知道了。</p>
+  <p>23.<br />在孙倒台之前，Shen Dong就闻到了“事情正在起变化”的味道，于是提前的run到了英国。2015,他和他老婆离了婚，在此之前，他劝他老婆急流勇退，金盆洗手。到了2017年的时候,此时他老婆已经被travel ban了，然而他老婆仍然不以为然，直到一切变得太晚。</p>
+  <p>24.<br />而故事的结局是未知的：</p>
+  <p>25.<br />I’ve heard rumors. A leading Chinese economist told me he believes that Whitney was drugged, probably beaten, and, if she ever emerges alive, the Communist secret police will inject something into her spine that will turn her into a walking zombie. If she comes out, he said, she’ll never be the same. The Chinese businessman turned dissident Guo Wengui announced that Party authorities had killed her, but he’s a gossip and his allegations rarely hold. Even the New York Times reporter David Barboza, in an attempt to get me to talk, passed along rumors that Whitney was dead. Part of me thinks that one reason she hasn’t appeared is that she’s refused to admit guilt. She always used to say, “If you pulled my corpse out of my coffin and whipped it, you’d still find no dirt.” Whitney is (or was) as strongheaded as they come.</p>
+  <p><strong>26.<br />以上只是故事的梗概，大约涵盖了1/10的书的内容，以及1/3的有意思的内容。其他的2/3包括薄温的内斗，令计划的为人以及和周永康的合作，Shen Dong 的香港工作历史，茅台会，许家印的发家史，习王不合等等有机会再更。</strong></p>
+  <p>28.<br />还有一些好玩的是一般书评人和讲书人会忽略掉的细节：比如说他说六四的时候，有红二代已经拿好枪（AK47）准备保卫红色江山，这和我之前听到的故事也差不多。陈说看来还是“我们的子弟要更可靠一些”（大意如此），于是红色家族被加速轰入高层政治结构当中，直到后来逐渐发展成了红色后代+红色工程师共治天下的格局，以及习近平的上台。</p>
+  <p>29 <br />大量的红二代三代，技术官僚的后代，他们成长为类似于“买办”的角色，和西方勾搭，a本来欧美认为这一代人，可以成为他们和中国沟通的桥梁以及中国社会转型的基础。可惜，习让他们知道他们错了。</p>
+  <hr />
+  <p><strong>继续更新：</strong><br /></p>
+  <p>按照书中的说法，温之前虽然对子女和老婆经商有怨言，但是他并不参与到这些活动当中去（至少声称是如此）—— 而Old man Jia (贾庆林）这些人则是亲自出面做生意的。</p>
+  <p>至于说你觉得温家宝是平民总理，有原则；亦或者是影帝，这个就你自己判断吧。</p>
+  <p>当NYT曝光了其家族的财富以后，温家宝暴怒。虽然中共高层因为这篇报道确实兴起了一阵狂风和暴雨，但是党却最终并没有对温家宝进行什么公开层面的惩处。当然了，很显然的，这件事情极大地削弱了温家宝的党内地位以及威信。</p>
+  <p>温家宝要求离婚，甚至一度想出家为僧，看破红尘。而这两个念头最终被“组织”挽救了回来。尤其是后者，一个无神论的党派的最高领导人出去做了和尚，这也太讽刺了。</p>
+  <p><br /></p>
+  <hr />
+  <p><strong>继续更新：</strong><br /></p>
+  <p>温家宝似乎有很强的士大夫情节，这要导致他做出了很多和家族利益不符合的事情，比如说扳倒薄熙来的这件事情。</p>
+  <p>按照一般的说法，薄熙来得罪了一众大佬，包括江泽民，温家宝，胡锦涛，习近平……，也因此最终被拿下。其政治盟友周永康，以及盟友的盟友令计划等人也相继落马。</p>
+  <p>本书给出了更多的细节，当年周永康力保薄熙来，希望事情到王立军为止。而温家宝此时却站出来支持习近平搞掉薄熙来，并说服了胡锦涛这件事。</p>
+  <p>而这成了打破平衡的起点，薄熙来的倒台最后演变成了多米诺骨牌效应开始。共青团、军队、公检法，武警等等部门都一个一个的成为了突破口，最后习的独裁也就不可避免了。</p>
+  <hr />
+  <p><strong>继续更新：</strong></p>
+  <p>温有两个有出息的孩子，“稳重”一些的Rusong Wen (温如松) 以及娇生惯养（spoiled brat）的温如春。 注意这个“稳重”二字加了引号，因为实际上两人都是比较高调的，只不过是相对而言，温如松更加的隐忍一些。尽管如此，Whitney仍然觉得温公子进攻性太强了，高调的让嫉妒他的人有了可乘之机。</p>
+  <p>这两人的"生意"其实谷歌都能查到。比如说温如松利用他老爹的官位赚钱，几个亿几个亿之类的。温如松可能在急于向他老爹老妈证明些什么，然而作者还有作者的老婆都说“he could’ve done even better operating in the shadows”. 这是明摆着的。但是温如松是听不进去的。</p>
+  <p>顺便说，大投行曾经多次因为“违规雇佣中国高官子女获取不正当利益”而被警告，被罚款。尽管中国官方媒体反驳，称其为谣言，然美方调查之后仍然罚了款，警告了，也因此读者心中应当有三审定谳。</p>
+  <p><a href="https://cn.nytimes.com/business/20130821/c21princeling/" rel="noopener noreferrer" target="_blank">https://cn.nytimes.com/business/20130821/c21princeling/</a></p>
+  <p><a href="https://www.bbc.com/zhongwen/simp/chinese-news-44395781" rel="noopener noreferrer" target="_blank">https://www.bbc.com/zhongwen/simp/chinese-news-44395781</a></p>
+  <p>好玩的故事是作者给温家宝的辩护：</p>
+  <p>温的老婆还有孩子在大量的收集豪车珠宝这些东西，但是似乎温家宝不知道，不想管，也没法管（嗯……原文We observed legitimate affection between Auntie and her husband,and our instincts told us that <strong>Wen just didn’t dwell much on his wife’s and children’s business affairs</strong>. He had larger concerns and deep down really did seem to want China to become more open and democratic.）。当温的老婆戴着一个priceless jade bracelet回家的时候，温家宝会从地质学的角度来欣赏这个石头，而不是以市场价值来进行评析。</p>
+  <p>顺便说温如春和徐明的恋情最终无果而终，一定程度上成了这老哥后来覆亡的伏笔。温如春后来嫁给了刘春航，此君在银监会开始了火箭般的蹿升。</p>
+  <p>各位兄弟如果想改变阶级地位的话，走互联网这条路基本上是不行了，还是考虑一下找个红二代的女儿吧……</p>
+  <hr />
+  <p><strong>继续更新：</strong><br /></p>
+  <p>Duan Weihong （Whitney） 从来不相信自由市场，公平交易之类的”西方新自由主义经济学”之类的东西，从本质上来说，现代企业家精神就和这些人不搭边。</p>
+  <p>这些人相信的是关系（she has enormous faith in her guanxi network to boost our business) 这是更具备中国古老传统的商业经营模式（那就是和红色高官们穿针引线，With Wang Qishan, Sun Zhengcai, and other ministers, vice-ministers, and assistants in her Rolodex, Whitney had faith that we’d be able to find a new guardian inside the Party whom we could serve）。红顶商人是最高的梦想。</p>
+  <p>【点评】郭文贵教练也是一样的货色，指望这些人搞什么自由化或者民主化，简直就是痴人说梦了。</p>
+  <p>也正是因为这种对自由市场的恐惧，使得像Whitney这样的“中国企业家”非常不情愿于布局海外，Shen Dong多次向Whitney建议拓展海外业务，但是都被Whitney拒绝了。如我之前更新的时候所说，Shen Dong的成功度是远差于Whitney的，所以尽管他的眼光是高的、观点是对的，他也很带走他们的资产，以进行国际布局（Once we’d made it in Beijing, I naturally thought we could take on the rest of China and the world. Whitney resisted, and because the money was in her name I had to go along. I did so unwillingly.）</p>
+  <hr />
+  <p><strong>继续更新：</strong></p>
+  <p>对于令计划的家庭，作者说令计划是中共的传统意义上的太监总管，醉心于工作，实际上没有时间管家里的事情。</p>
+  <p>当令谷的法拉利出了事故以后，他也是第一时间跑去消灭证据，而不是关心自己的儿子死活（当然了，也可以说反正是死了，人死不能复生，关心了也没有用，本质上来说，这是一个正确的共产党员无神论的态度）。</p>
+  <p>消灭证据需要和周永康合作，于是两个人的勾肩搭背进入了一个新的阶段，直到两人双双被拿下。</p>
+  <p>谷丽萍（令计划的老婆，传说中的“包养”了芮成钢的人，<strong>点评：这就很扯，只能说芮成钢得罪的人太多了，芮和谷的问题主要应该还是泄露国家机密</strong>）实际上是一个很低调的内敛的传统的官员内人的那一种角色，她从来不去什么高档的奢侈品商店。当Whitney打算像贿赂其他官员一样贿赂她的时候，她是不自然的。</p>
+  <p>当她来到香港的奢侈品店，她觉得几万港币的东西已经是离谱的贵了，而whitney （还有后面要登场的许家印等大富商）都是几千万几亿的买。</p>
+  <p>令谷（也就是出车祸撞死的那个），被指控说搞了个阴谋叛党的“秘密学会”（secert political society)， 然而他唯一搞过的类似的东西，就是个读书会而已。</p>
+  <hr />
+  <p><strong>继续更新：</strong></p>
+  <p>温家宝和他的妻子在2013年的时候捐献了所有财产给国家，以此换来保证他们不会被清算。如此以来，他们也不过是在为国为民，保管并创造财富，而不算是贪污了。</p>
+  <p>Rewrite the history and frame the new collective memories.</p>
+  <hr />
+  <p><strong>继续更新：</strong></p>
+  <p>相对于温家宝家族的抠抠搜搜的敛财而言，Shen Dong说贾庆林的敛财则是惊天地，泣鬼神。</p>
+  <blockquote>
+贾庆林留着光滑的后发、有圆圆的脸颊和宽大的肚子，他是一个快乐、善于交际、笑容轻松的人。  </blockquote>
+  <blockquote>
+他的腐败可是一段传奇。他在 1990 年代初担任福建省副省长、省长，省委书记（福建省位于香港北部和台湾对面）的期间，有传言称贾老爷子直接搞了一个巨型走私企业（越看越像赖昌星）。 这是一场规模宏大的走私，涉及数千辆外国汽车、数十亿外国香烟、成吨外国啤酒，以及中国六分之一以上的石油进口，都通过福建沿海的军港流入中国。  </blockquote>
+  <hr />
+  <p><strong>继续更新：</strong></p>
+  <p>贾庆林的女婿David Li（北京昭德投资公司董事长李伯潭）搞了个茅台会。车峰曾任“茅台会”副会长、副理事长。2013年的时候，习还不敢动江泽民，因为他仍需要江的支持。在北京的相关政治俱乐部风声鹤唳，逐个关停的时候，David的茅台会却能安然无恙。</p>
+  <p>出来混总是要还的，茅台会的好日子没有撑过2015年。6月，车峰被中国相关部门带走调查。车峰不仅巨额洗钱，更大的问题是向“西方情报机构出卖情报。车峰的案子牵扯到了马健，也就是郭文贵的老后台。于是Duan Weihong和Guo Wengui这两个故事就可以串起来了。</p>
+  <hr />
+  <p><strong>继续更新：</strong></p>
+  <p>许家印也是茅台会的常客，2011年，许家印和郁国祥终于得偿加入了梦寐以求，有钱也难进的茅台会。</p>
+  <p>在茅台会，几十万贿款换几十亿项目的斗地主牌局经常发生。Shen Dong说，”在中国，政治带来财富，而不是相反（In China, politics is the key to riches, not the other way around）“。</p>
+  <p>在这样的牌局当中，有一次李伯坦曾经扬言，“监狱就是中国商人的黄埔军校“ —— Everybody else nodded in solemn agreement, clinked glasses, and downed a flute of Krug Champagne.</p>
+  <p><br /></p>
+  <p><strong>(作者宣告停更)</strong></p>
+  <hr />
+  <p><br /></p>
+  <p><strong>本系列為圍爐文章，在48小時後便可能上鎖，追蹤我的圍爐或我的帳號以免錯過<br /></strong></p>
+  <p><strong>我的圍爐 </strong><a href="https://matters.news/~frontline" rel="noopener noreferrer" target="_blank"><strong>邊境濁酒路邊攤</strong></a><strong>｜追蹤我 </strong><a href="https://matters.news/@KMnese/%E4%BB%8B%E7%B4%B9%E6%A8%99%E7%B1%A4-%E9%87%91%E9%96%80%E4%BA%BA%E5%9C%A8matters%E5%AF%AB%E4%BB%80%E9%BA%BC-bafyreieniykr5vc4lgtdivo4g46rity3alz7cgmopunh65yemrd4kwox6m" rel="noopener noreferrer" target="_blank"><strong>戰地島民</strong></a><strong>｜追蹤主題 </strong><a href="https://matters.news/tags/VGFnOjI1MDI3" rel="noopener noreferrer" target="_blank"><strong>＃邊緣島民講金門</strong></a><br /></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2022-04-29</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-04-29/%E5%B1%95%E8%A6%BD%E5%88%86%E4%BA%AB-%E5%A4%9A%E5%AA%92%E9%AB%94%E5%B1%95%E6%BC%94%E8%88%87%E6%97%A5%E6%B2%BB%E6%99%82%E6%9C%9F%E8%87%BA%E7%81%A3%E7%BE%8E%E8%A1%93%E4%BD%9C%E5%93%81%E5%9C%A8%E6%95%85%E5%AE%AE-%E8%87%BA%E7%81%A3%E6%84%8F%E8%B1%A1-%E5%B8%9D%E5%9C%8B%E7%9C%BC%E4%B8%AD%E7%9A%84%E8%87%BA%E7%81%A3%E9%A2%A8%E7%89%A9/">
+          【展覽分享】多媒體展演與日治時期臺灣美術作品在故宮：臺灣意象—帝國眼中的臺灣風物
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-04-28</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-04-28/%E8%BD%89%E8%BC%89-23-%E6%BB%9E%E7%95%99%E5%9C%A8%E4%B8%8A%E6%B5%B7%E8%99%B9%E6%A1%A5%E7%AB%99%E7%9A%84%E4%BA%BA%E4%BB%AC-%E6%88%91%E5%8F%AA%E6%83%B3%E5%9B%9E%E5%AE%B6/">
+          轉載#23  滞留在上海虹桥站的人们，“我只想回家”
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-04-27</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-04-27/%E8%BD%89%E8%BC%89-22-%E4%BA%BA%E5%A4%A7%E5%B8%B8%E5%A7%94%E4%BC%9A%E6%B3%95%E5%B7%A5%E5%A7%94%E5%B0%B1%E9%98%B2%E6%8E%A7%E6%B3%95%E5%BE%8B%E9%97%AE%E9%A2%98%E5%8F%91%E5%A3%B0/">
+          轉載#22 人大常委会法工委就防控法律问题发声
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-04-25</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-04-25/%E7%96%AB%E4%B8%AD%E4%BA%BA-%E4%BA%8C-%E5%9C%A8%E7%96%B2%E6%86%8A%E7%9A%84%E6%B7%B1%E5%A4%9C%E7%AD%89%E5%BE%85%E4%B8%8D%E5%8F%AF%E7%9F%A5%E7%9A%84%E6%98%A5%E5%A4%A9-%E5%9C%8D%E7%88%90-CUHK/">
+          疫中人（二）——在疲憊的深夜等待不可知的春天|圍爐·CUHK
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2022-04-27/%E8%BD%89%E8%BC%89-22-%E4%BA%BA%E5%A4%A7%E5%B8%B8%E5%A7%94%E4%BC%9A%E6%B3%95%E5%B7%A5%E5%A7%94%E5%B0%B1%E9%98%B2%E6%8E%A7%E6%B3%95%E5%BE%8B%E9%97%AE%E9%A2%98%E5%8F%91%E5%A3%B0/">
+            前一篇：轉載#22 人大常委会法工委就防控法律问题发声
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2022-04-28/%E8%BD%89%E8%BC%89-23-%E6%BB%9E%E7%95%99%E5%9C%A8%E4%B8%8A%E6%B5%B7%E8%99%B9%E6%A1%A5%E7%AB%99%E7%9A%84%E4%BA%BA%E4%BB%AC-%E6%88%91%E5%8F%AA%E6%83%B3%E5%9B%9E%E5%AE%B6/">
+            後一篇：轉載#23  滞留在上海虹桥站的人们，“我只想回家”
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2022-04-27/%E8%BD%89%E8%BC%89-22-%E4%BA%BA%E5%A4%A7%E5%B8%B8%E5%A7%94%E4%BC%9A%E6%B3%95%E5%B7%A5%E5%A7%94%E5%B0%B1%E9%98%B2%E6%8E%A7%E6%B3%95%E5%BE%8B%E9%97%AE%E9%A2%98%E5%8F%91%E5%A3%B0/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2022-04-28/%E8%BD%89%E8%BC%89-23-%E6%BB%9E%E7%95%99%E5%9C%A8%E4%B8%8A%E6%B5%B7%E8%99%B9%E6%A1%A5%E7%AB%99%E7%9A%84%E4%BA%BA%E4%BB%AC-%E6%88%91%E5%8F%AA%E6%83%B3%E5%9B%9E%E5%AE%B6/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2022-04-28/%E8%BD%89%E8%BC%89-23-%E6%BB%9E%E7%95%99%E5%9C%A8%E4%B8%8A%E6%B5%B7%E8%99%B9%E6%A1%A5%E7%AB%99%E7%9A%84%E4%BA%BA%E4%BB%AC-%E6%88%91%E5%8F%AA%E6%83%B3%E5%9B%9E%E5%AE%B6/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2022-04-27/%E8%BD%89%E8%BC%89-22-%E4%BA%BA%E5%A4%A7%E5%B8%B8%E5%A7%94%E4%BC%9A%E6%B3%95%E5%B7%A5%E5%A7%94%E5%B0%B1%E9%98%B2%E6%8E%A7%E6%B3%95%E5%BE%8B%E9%97%AE%E9%A2%98%E5%8F%91%E5%A3%B0/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2022-04-27/%E8%BD%89%E8%BC%89-22-%E4%BA%BA%E5%A4%A7%E5%B8%B8%E5%A7%94%E4%BC%9A%E6%B3%95%E5%B7%A5%E5%A7%94%E5%B0%B1%E9%98%B2%E6%8E%A7%E6%B3%95%E5%BE%8B%E9%97%AE%E9%A2%98%E5%8F%91%E5%A3%B0/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2022-04-28/%E8%BD%89%E8%BC%89-23-%E6%BB%9E%E7%95%99%E5%9C%A8%E4%B8%8A%E6%B5%B7%E8%99%B9%E6%A1%A5%E7%AB%99%E7%9A%84%E4%BA%BA%E4%BB%AC-%E6%88%91%E5%8F%AA%E6%83%B3%E5%9B%9E%E5%AE%B6/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2022-04-28/%E8%BD%89%E8%BC%89-23-%E6%BB%9E%E7%95%99%E5%9C%A8%E4%B8%8A%E6%B5%B7%E8%99%B9%E6%A1%A5%E7%AB%99%E7%9A%84%E4%BA%BA%E4%BB%AC-%E6%88%91%E5%8F%AA%E6%83%B3%E5%9B%9E%E5%AE%B6/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2022-04-27/%E8%BD%89%E8%BC%89-22-%E4%BA%BA%E5%A4%A7%E5%B8%B8%E5%A7%94%E4%BC%9A%E6%B3%95%E5%B7%A5%E5%A7%94%E5%B0%B1%E9%98%B2%E6%8E%A7%E6%B3%95%E5%BE%8B%E9%97%AE%E9%A2%98%E5%8F%91%E5%A3%B0/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

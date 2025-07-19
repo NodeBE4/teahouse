@@ -1,0 +1,3488 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>藏在「原子朋克」中的拓荒精神 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+藏在「原子朋克」中的拓荒精神
+——
+" />
+    <meta property="og:description" content="
+藏在「原子朋克」中的拓荒精神
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="藏在「原子朋克」中的拓荒精神" />
+    <meta property="twitter:title" content="藏在「原子朋克」中的拓荒精神" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40DunesWorkshop%2F%25E8%2597%258F%25E5%259C%25A8-%25E5%258E%259F%25E5%25AD%2590%25E6%259C%258B%25E5%2585%258B-%25E4%25B8%25AD%25E7%259A%2584%25E6%258B%2593%25E8%258D%2592%25E7%25B2%25BE%25E7%25A5%259E-bafyreiccejqru3myl2nvtbg4bhwa5e2kdxykzx3ccuh3evvf2hzlzen4cm" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@DunesWorkshop/%E8%97%8F%E5%9C%A8-%E5%8E%9F%E5%AD%90%E6%9C%8B%E5%85%8B-%E4%B8%AD%E7%9A%84%E6%8B%93%E8%8D%92%E7%B2%BE%E7%A5%9E-bafyreiccejqru3myl2nvtbg4bhwa5e2kdxykzx3ccuh3evvf2hzlzen4cm" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@DunesWorkshop/%E8%97%8F%E5%9C%A8-%E5%8E%9F%E5%AD%90%E6%9C%8B%E5%85%8B-%E4%B8%AD%E7%9A%84%E6%8B%93%E8%8D%92%E7%B2%BE%E7%A5%9E-bafyreiccejqru3myl2nvtbg4bhwa5e2kdxykzx3ccuh3evvf2hzlzen4cm&text=藏在「原子朋克」中的拓荒精神&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@DunesWorkshop/%E8%97%8F%E5%9C%A8-%E5%8E%9F%E5%AD%90%E6%9C%8B%E5%85%8B-%E4%B8%AD%E7%9A%84%E6%8B%93%E8%8D%92%E7%B2%BE%E7%A5%9E-bafyreiccejqru3myl2nvtbg4bhwa5e2kdxykzx3ccuh3evvf2hzlzen4cm&title=藏在「原子朋克」中的拓荒精神" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@DunesWorkshop/%E8%97%8F%E5%9C%A8-%E5%8E%9F%E5%AD%90%E6%9C%8B%E5%85%8B-%E4%B8%AD%E7%9A%84%E6%8B%93%E8%8D%92%E7%B2%BE%E7%A5%9E-bafyreiccejqru3myl2nvtbg4bhwa5e2kdxykzx3ccuh3evvf2hzlzen4cm&title=藏在「原子朋克」中的拓荒精神" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=藏在「原子朋克」中的拓荒精神&body=
+藏在「原子朋克」中的拓荒精神
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@DunesWorkshop/%E8%97%8F%E5%9C%A8-%E5%8E%9F%E5%AD%90%E6%9C%8B%E5%85%8B-%E4%B8%AD%E7%9A%84%E6%8B%93%E8%8D%92%E7%B2%BE%E7%A5%9E-bafyreiccejqru3myl2nvtbg4bhwa5e2kdxykzx3ccuh3evvf2hzlzen4cm" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@DunesWorkshop/%E8%97%8F%E5%9C%A8-%E5%8E%9F%E5%AD%90%E6%9C%8B%E5%85%8B-%E4%B8%AD%E7%9A%84%E6%8B%93%E8%8D%92%E7%B2%BE%E7%A5%9E-bafyreiccejqru3myl2nvtbg4bhwa5e2kdxykzx3ccuh3evvf2hzlzen4cm&title=藏在「原子朋克」中的拓荒精神&caption=
+藏在「原子朋克」中的拓荒精神
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=藏在「原子朋克」中的拓荒精神&url=https://matters.news/@DunesWorkshop/%E8%97%8F%E5%9C%A8-%E5%8E%9F%E5%AD%90%E6%9C%8B%E5%85%8B-%E4%B8%AD%E7%9A%84%E6%8B%93%E8%8D%92%E7%B2%BE%E7%A5%9E-bafyreiccejqru3myl2nvtbg4bhwa5e2kdxykzx3ccuh3evvf2hzlzen4cm" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>藏在「原子朋克」中的拓荒精神</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-02-28
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 沙丘研究所</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@DunesWorkshop/%E8%97%8F%E5%9C%A8-%E5%8E%9F%E5%AD%90%E6%9C%8B%E5%85%8B-%E4%B8%AD%E7%9A%84%E6%8B%93%E8%8D%92%E7%B2%BE%E7%A5%9E-bafyreiccejqru3myl2nvtbg4bhwa5e2kdxykzx3ccuh3evvf2hzlzen4cm" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1614540374000-->
+<p><a href="https://matters.news/@DunesWorkshop/%E8%97%8F%E5%9C%A8-%E5%8E%9F%E5%AD%90%E6%9C%8B%E5%85%8B-%E4%B8%AD%E7%9A%84%E6%8B%93%E8%8D%92%E7%B2%BE%E7%A5%9E-bafyreiccejqru3myl2nvtbg4bhwa5e2kdxykzx3ccuh3evvf2hzlzen4cm">藏在「原子朋克」中的拓荒精神</a>
+——</p>
+
+<div>
+  <div class="language-plaintext ql-syntax highlighter-rouge"><div class="highlight"><pre class="highlight"><code>这篇文章来自沙丘的新成员Jeff。表面上看，文章像是对某个亚文化流派的科普和介绍，但细读以后，相信大家能够体会出作者实质上想要从“原子朋克”这个词之下牵扯出一些更庞杂的东西，也试图问话我们的未来——这是结合技术主义、科幻叙事和美学表现三个方面的整体反思。</code></pre></div>  </div>
+  <h2 id="section"><br /></h2>
+  <h2 id="section-1">写在前面</h2>
+  <p>“原子朋克”（atompunk）作为一个不为大众熟知的概念，在被提到时大家脑海中很难直接联系到相对应的信息或者标签。缺乏对这个概念的认知下阅读这篇文章很容易产生疑惑，在这里为各位简单介绍一下。</p>
+  <p>首先还需要提到“赛博朋克”（cyberpunk），“cyberpunk”这个词最早于1980年由Bruce Bethke创造（同名小说《cyberpunk》），诸如“atompunk”、“steampunk”、“clockpunk”、“dieselpunk”等都是“cyberpunk”的派生风格。“cyberpunk”直接脱胎于我们现在仍然处在的数字信息时代。而其他的派生的“**punk”文化却几乎都是旧时代的倒影，是对当初已经存在过的文化的追溯。</p>
+  <p>因为篇幅原因，要彻底展开谈“原子朋克”（包括各种派生“朋克”）的话牵扯的要素和信息较为复杂，而且我认为最终的看法会相对主观。这些派生“朋克”文化不像“赛博朋克”本身已经是一个相对成熟的体系，自身就挂带了许多明确的文字图像信息以及广为人知的艺术作品作为支撑，我也认为还需要更多的对于这些派生“朋克”的补充和讨论。这篇文章中提到的“原子朋克”也是我对于这个概念的个人理解，侧重在“原子时代以来人类对于应用技术的情绪变革”。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/6633d8e6-a8fc-4361-92f9-3a804b224bbd.jpeg" data-asset-id="6633d8e6-a8fc-4361-92f9-3a804b224bbd" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <h2 id="section-2">01 技术乐观主义与科幻的黄金时代</h2>
+  <p>二十世纪中叶，由于二战时科技革新以及基础科学理论的厚积薄发，人类迎来了第三次科技革命，应用技术也相应开始飞速发展。随着对原子能技术逐渐成熟的掌握，走在前沿的国家——以美国和前苏联为主——正式进入了原子时代，也由之拉开了太空时代的序幕。那时候的报纸上充斥的字眼满是“人造卫星”、“载人航天”、“商用核电站”、“登月”……一切迹象似乎都昭示着人类文明必然迈向一个新的高度。</p>
+  <p>虽然那时人类的内部有冲突与危机，但人类作为一个整体向外张望时，这个种族是雀跃、乐观、并对未来充满野心的。<strong>技术进步带来的影响很快渗透到了流行文化当中，人们的世界观中充斥着对宇宙探索和太空殖民的狂热幻想。</strong>悬浮汽车、泡泡头罩、机器仆从、核能应用、星际旅行、闪光城市，这些元素在当时的报刊、电视和杂志画报中随处可见。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/1876ceb2-c5df-4802-90f7-2f64b590844d.png" data-asset-id="1876ceb2-c5df-4802-90f7-2f64b590844d" referrerpolicy="no-referrer" />    <figcaption>
+<span>50、60年代对未来交通方式和载具的想象</span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/f83ab6c0-b05b-4ed2-b156-583af74e9e3b.png" data-asset-id="f83ab6c0-b05b-4ed2-b156-583af74e9e3b" referrerpolicy="no-referrer" />    <figcaption>
+<span>50年代美国，未来主义影响下衍生出的“Googie”（多见倾斜的房顶、交错的几何形状，以及霓虹灯等元素）风格建筑。</span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/9a700c80-ba5a-4269-922b-34fce0184f23.png" data-asset-id="9a700c80-ba5a-4269-922b-34fce0184f23" referrerpolicy="no-referrer" />    <figcaption>
+<span>“太空时代”的建筑风格——右上：“科学技术研究所”（Institute of Scientific and Technological），乌克兰；左：“机器人与技术控制论研究所”（The Institute of Robotics and Technical Cybernetics），圣彼得堡；右下：“格鲁吉亚公路部”（The Georgian Ministry of Highways），格鲁吉亚</span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/792180af-af02-4481-89ef-f7b3101e42ed.png" data-asset-id="792180af-af02-4481-89ef-f7b3101e42ed" referrerpolicy="no-referrer" />    <figcaption>
+<span>受西方影响，创刊于1959年的日本书刊《少年杂志》（Shonen magzine），内容渐渐从最初的少年冒险转变为科幻风格。</span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/97adec26-8d9b-49a3-af45-7ef53ac1955d.png" data-asset-id="97adec26-8d9b-49a3-af45-7ef53ac1955d" referrerpolicy="no-referrer" />    <figcaption>
+<span>“太空殖民”的幻想</span>
+    </figcaption>
+  </figure>
+  <p>那个时代也是科幻文学的黄金时期，群星璀璨、杰作涌现。无数大师和经典层见叠出。几十年后的科幻作品或许在复杂程度、媒材、形式上有新的建树，但总的来讲，气场与宏观的想象力上似乎仍然难以追上数十年前的那群巨人们——罗伯特·海因莱因（Robert Heinlein）、伊萨克·阿西莫夫（Isaac Asimov）、罗杰·泽拉兹尼（Roger Zelazny）、阿瑟·卡拉卡（Arthur Clarke）、斯特鲁伽茨基兄弟（Strugatsky Brothers）、奥森·卡尔德（Orson Card）、斯坦尼斯瓦夫·莱姆（Stanislaw Lem）……</p>
+  <p>在这些作家的笔下，科学技术的发展似乎没有瓶颈。很多时候，星际航行在人类未来当中通常扮演着必不可缺的一角。《基地》系列中，人类文明在银河系数百万颗星球上完成了殖民；《与拉玛相会》中，22世纪的人类通过太空航行主动与外星文明进行接触；《2001太空漫游》中，人类早在千禧年到来前就已经成熟掌握了太阳系内的航行技术，行星之间的往返旅行也实现了商业化。</p>
+  <p>在这些作品中，我们可以感受到那个时代所独有的热情与朝气。而同时，大师们在当时就已经跳出了对技术本身的单纯猜演，<strong>他们直接将思维投射到了哲学的领域，对终极问题和混沌本身展开了探索。</strong>群星在他们眼中已经不再是最终目的地。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/ff332e78-2e4b-4108-b256-aa160fb80b5a.png" data-asset-id="ff332e78-2e4b-4108-b256-aa160fb80b5a" referrerpolicy="no-referrer" />    <figcaption>
+<span>前苏联艺术家Nikolai kolchitsky创作的插画</span>
+    </figcaption>
+  </figure>
+  <h1 id="section-3"><strong>02 原子朋克：未来幻想的悲观重现</strong></h1>
+  <p>或许是先驱们在开拓之初走得太过靠前，狂想的势头在之后数十年间开始逐渐放缓。</p>
+  <p>技术乐观主义遭遇了现实的阻挠。随着越南战争、古巴核危机、能源危机、挑战者号航天飞机灾难、切尔诺贝利事件、生态环境恶化等负面事件的冲击，人们开始质疑应用科学是否还会像承诺的那样，通过技术进步造福于人类。加之当时东西方旷日持久的冷战带来意识形态愈发尖锐的对立，以美国为首的西方国家逐渐深陷反共情绪和对红色苏维埃的被迫害恐慌。科技爆发初期<strong>“如果我们能分开原子，我们就能做到任何事情（If we can split the atom, we can do anything.）”</strong>的豪情壮志渐渐淡化成了怀疑和悲观。</p>
+  <p>新的时代状况和群体精神总是与新的艺术流派互为伴奏。就在这段时期，被后世称之为<strong>“原子朋克”（atompunk）</strong>的风格在世界范围内逐渐萌生发芽。</p>
+  <p>原子朋克本身是一个广泛笼统的概念， 它生根于二次世界大战后的“原子时代”（太空时代），继承了原子时代的技术形态和美学风格。而随着原子时代的逐渐落寞，原子朋克作为“复古未来主义”（retro futurism）的一种艺术表现，以新的视角对上世纪中叶的未来主义进行回忆和再造。原子朋克风格涉及到的艺术作品通常被视为对原子时代初期人类对于未来幻想的悲观重现，通常挟带着颓废、叛逆的“朋克式”色彩，探讨着反乌托邦虚构世界中的废墟文化。</p>
+  <p>那些曾经充满昂扬气质的图像找到了一次衰败风格的重生——与旧日的未来主义形成强烈对比的是，在原子朋克的世界图景中，核能的表现只剩下核爆炸后的荒土，悬浮汽车行驶的环境由科幻般的未来城市变为充满放射性物质的昏暗废墟，本是作为太空殖民标志的“泡泡头罩”也变形成了用来隔绝核辐射的防护装置。原子朋克风格的作品中，通常都近乎极端地认定科技（犹指核技术）将最终为人类，或是为生存环境本身带来毁灭。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/85a34e60-ae5c-4aa8-98e9-ac218cf6c71a.gif" data-asset-id="85a34e60-ae5c-4aa8-98e9-ac218cf6c71a" referrerpolicy="no-referrer" />    <figcaption>
+<span>电影片段：库布里克，《奇爱博士》（Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb）</span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/3f3c3778-0ce7-4892-9e56-e2d74b03b121.gif" data-asset-id="3f3c3778-0ce7-4892-9e56-e2d74b03b121" referrerpolicy="no-referrer" />    <figcaption>
+<span>游戏选段，《辐射4》</span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/2f643f55-7c37-4f09-b215-5f3eedfb3df8.png" data-asset-id="2f643f55-7c37-4f09-b215-5f3eedfb3df8" referrerpolicy="no-referrer" />    <figcaption>
+<span>游戏片段拼贴《辐射4》（fallout）系列游戏及其前身《废土》（wasteland）</span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/8aa18ad8-5cba-4f05-81bf-8bdd7b8782f9.jpeg" data-asset-id="8aa18ad8-5cba-4f05-81bf-8bdd7b8782f9" referrerpolicy="no-referrer" />    <figcaption>
+<span>《异形》中人类宇航员设计画稿，Moebius（Jean Henri Gaston Giraud）</span>
+    </figcaption>
+  </figure>
+  <h2 id="section-4">03 电影《潜行者》与小说《路边野餐》</h2>
+  <p>值得玩味的是，有一部电影在谈到原子朋克时常常被提及：由前苏联电影大师安德烈·塔可夫斯基执导的科幻电影《潜行者》（Сталкер, Stalker）。有别于当下观众习惯认知中的科幻电影，《潜行者》几乎没有炫丽宏伟的视觉特效或实物布景，表面上也同原子朋克风格不甚相关。即便存在着污水、沙丘、工业废墟、充满雾气的荒山野岭、破败的混凝土建筑等类原子朋克特征，但电影中的科幻元素却几乎可以忽略不计。这些场景在导演静谧、冗长的运镜下充斥着神秘而晦涩的隐喻，每一道沉默的凝视、每一声潮湿的异响构建了影片中不可计数的怪诞意境。<strong>在塔可夫斯基强烈个人风格的运镜之下，与其说《潜行者》是一部科幻电影，实际上更像是用深刻镜头语言谱写的一首诡异长诗。</strong></p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/9cdd508c-8e00-4152-805d-ddd0c0345cdd.gif" data-asset-id="9cdd508c-8e00-4152-805d-ddd0c0345cdd" referrerpolicy="no-referrer" />    <figcaption>
+<span>塔可夫斯基，《潜行者》（Сталкер），1979 </span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/a4dde903-916e-4af3-a50e-b81218a7552d.gif" data-asset-id="a4dde903-916e-4af3-a50e-b81218a7552d" referrerpolicy="no-referrer" />    <figcaption>
+<span>塔可夫斯基，《潜行者》（Сталкер），1979 </span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/3468ebd8-f1cd-457a-adf4-000cfcf7c703.jpeg" data-asset-id="3468ebd8-f1cd-457a-adf4-000cfcf7c703" referrerpolicy="no-referrer" />    <figcaption>
+<span>塔可夫斯基，《潜行者》（Сталкер），1979 </span>
+    </figcaption>
+  </figure>
+  <p>然而要理解《潜行者》和原子朋克的深层次联系，我们不妨继续追溯前苏联科幻作家斯特鲁伽茨基兄弟创作的原著小说《路边野餐》。这是电影的蓝本。</p>
+  <p><strong>就像电影《潜行者》在很大程度上是反类型的，科幻小说《路边野餐》也独特并难以简单概括。</strong>这部作品以通古斯大爆炸为原型，讲述了外星文明路过地球，在一座小城边缘留下造访遗迹后悄然离去的故事。主人公瑞德是一名外星文化研究所的助理研究员，暗地里干着“潜行者”（stalker）的营生，即私自潜入“造访带”中搜寻外星物件带出倒卖的非法生意。“造访带”（the zone）中遍布着不计其数的外星科技物品：可以自我繁殖的永续电池、环状的永动机（the ring）、可以扭曲空间的“黑雾”（black sparks）、传说能够实现任何愿望的“金球”（golden sphere）。但同时，其中还充斥着许多人类难以理解的诡异陷阱：改变重力的“蚊疥点”（bug trap）、可以渗透几乎任何物质并将其同化的“女巫果冻”（hell slime）、发射致命射线的“死亡油灯”（death lamp）、瞬间使生物扭曲的半透明状的“绞肉机”（grinder）。这样的设定之下，“潜行者”事实上是一份高度危险的职业。因为他们游走的场所既存在希望与惊奇，也充斥着梦魇与危机。“潜行者”瑞德在外星遗迹的先进科技废墟当中穿行探险，干着回报与风险不成比的勾当，周旋在执法机构和致命环境当中。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/d8b2909b-547c-4ea0-8edf-c3496b9b07b6.png" data-asset-id="d8b2909b-547c-4ea0-8edf-c3496b9b07b6" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>可以说，《路边野餐》整个作品的基调是悲观无望的。它的字里行间透露着一种意味——<strong>即便人类已经使用上了超越当代数百年甚至更久的科技，困境和灾厄依旧会与人们如影随形。</strong>主人公瑞德生活拮据，前途迷惘，他凭借着助理研究员的工作和“副业”苦苦维持着家中生计。自己的女儿也如同城市中其他少儿一样受到外星遗迹的影响患上重病。瑞德如同陀思妥耶夫斯基笔下的人物一般，在悲惨、混乱的生活中苦苦挣扎，近乎带着自我毁灭的倾向，一次次潜入“造访带”中探索。<strong>但是，就是在几乎贯穿全文的灰暗基调下，小说最后意外地从缝隙中透出一丝希望的色彩。</strong></p>
+  <blockquote>
+一种奇怪而崭新的感觉压倒了他。但他心里明白，这种感觉其实一点儿也不陌生，已经在他的内心潜伏了很久，只不过现在才觉察到而已，所有的一切都是水到渠成。那些看起来荒谬至极的东西，还有那个精神错乱、满口胡言的疯老头，竟然成了他唯一的希望，他生命仅存的意义。因为他终于明白：<strong>在这个世界上他唯一拥有的，几个月以来他赖以生存的唯一动力，便是对奇迹的期盼。</strong>  </blockquote>
+  <blockquote>
+像他这样的傻瓜，总是把希望拒之门外，践踏它，嘲笑它，借酒消愁，因为过去他就是这样生活的。他在还小的时候，除了自己谁也没法依靠，而童年时代衡量独立能力的标准，就是看他从周遭冷漠混乱的环境里，能够抢占、提取多少金钱一一一直以来都是这样。如果不是他掉进了一个无底洞，再多的钱也不够把他拉出来，靠自己根本无能为力的话，这种情形还会继续下去。<strong>如今，这种期盼一一已经不再是期盼，而是对奇迹发生的信念一一充溢了他的内心，他惊讶于自己在这片没有出路、无法穿越的黑暗中竟生存了如此之久。</strong>  </blockquote>
+  <p><strong>而这段话也几乎直白地揭示了隐藏在“原子朋克”悲观语调下的希望火种。</strong></p>
+  <p><br /></p>
+  <h2 id="section-5">04 希望的火种</h2>
+  <p>“原子朋克”通常以极端的、沉重的作品表现一个贯穿历史的质疑与问话：人类到底能否正确使用应用技术，使技术的发展真正提升而不是加害于我们的福祉？它用消极到极致的绝望情绪浇灭了20世纪中叶对探索和开拓的希望之火。<strong>然而即便是这样，我们仍然能够从一些作品不经意间留下的蛛丝马迹中寻觅到对“未知”的执着。</strong>在原子朋克衍生风格“镭射哥特”的作品中，我们同样能够看得出对远方、对宇宙深处的探知欲望已经深深扎根在人性当中。</p>
+  <p>法国艺术家菲利普·德吕耶（Philippe Druillet）的漫画作品弥漫着一种诡谲、黑暗的氛围，冲撞艳丽的色彩和繁杂丰富的细节为我们展现了一出不同寻常甚至稍显怪异的太空歌剧。而在这种光怪陆离的个人风格下，我们窥到的是被包装成“猎奇”的开拓精神。《六星行》（The 6 Voyages）中，在主人公经历的<strong>奥德修斯式艰难历程之中，蕴含的仍旧是作者对于星空和未来的向往。</strong></p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/e0366abc-5cb9-49dc-87a1-18d6bb557a03.jpeg" data-asset-id="e0366abc-5cb9-49dc-87a1-18d6bb557a03" referrerpolicy="no-referrer" />    <figcaption>
+<span>关联风格“镭射哥特”（Raygun Gothic）：菲利普·德吕耶，《宇宙行者斯隆》（Lone Sloane）， 简体中文版由后浪出版社出版</span>
+    </figcaption>
+  </figure>
+  <p>上世纪八十年代以来，“太空时代”慢慢让渡到了“内向时代”——人类逐渐由外向内地将应用科技的重心从宇宙探索转向数字信息技术，也正是在这个时期，“赛博朋克”（cyberpunk）渐渐走进了主流的视野。事实上，原子朋克与之相较，二者都是以“科技最终将怎样影响文明”为内核。<strong>但是在艺术表现上，赛博朋克多是探寻着人类本身，包括身体和意识与高度发达的技术之间的融合与冲突，是在反乌托邦的艺术幻想中寻求人类的身份定位。赛博朋克是含蓄的、是内向的，它如同长者般以回望的视角式对人类自身和人造物进行审视，小心翼翼并且庄重地寻觅着人类灵魂的实质。</strong>它同样是挟带着消极和悲观的，艺术作品中往往充满了迷惘与困惑。这种颓废、落魄的氛围也是“朋克式”艺术风格的特性。所以在这个角度上，原子朋克与赛博朋克相似、相关但又并不相同——因为那份被压抑在悲观表层下的对拓荒和探知的诉求，是原子朋克所独一无二拥有的。</p>
+  <p>至今，人们对于那个刚登上历史舞台不久便匆忙隐去自己身段的“太空时代”始终心存惋惜和遗憾，但对于星空的狂想却从来不曾熄灭。《永恒的终结》(The End of the Eternity）一书中所描写的“没有星际航行的人类文明终将走向毁灭”这一节或许有些骇人听闻，不过也可以从中看出在科幻大师阿西莫夫的认知中，<strong>人类发自本能的开拓欲望</strong>在人性中占据着无比厚重的分量。</p>
+  <p>遨游群星、探索宇宙始终只是人们开拓精神的具象化表现，这些幻想和憧憬承载着这个时代人们最最奢侈的浪漫。相信大多数人依旧怀抱着对“太空时代”重新归来的期待，但我们毕竟无法将全部感情寄托在外物上，事实上我们也无需这样做。就像《路边野餐》中写道的：</p>
+  <blockquote>
+“你问我什么使人类变得伟大？”  </blockquote>
+  <blockquote>
+“因为他改造了自然？因为他驾驭了宇宙的力量？因他在短的时间内征服了地球，开启了通往宇宙的窗口？不！尽管如此，但真正的原因却在于他生存至今，并且决定在将来继续生存下去。”  </blockquote>
+  <p><br /></p>
+  <p><br /></p>
+  <p><br /></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2021-03-01</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-03-01/%E5%8F%B0%E7%81%A3%E7%B6%93%E9%A9%97-%E4%B8%80%E8%A6%96%E5%90%8C%E4%BB%81%E8%81%B7%E5%A0%B4%E4%B8%AD%E7%9A%84%E7%B2%BE%E7%A5%9E%E7%96%BE%E7%97%85%E8%88%87%E8%BA%AB%E9%AB%94%E6%90%8D%E5%AE%B3/">
+          台灣經驗：一視同仁職場中的精神疾病與身體損害
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-03-01</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-03-01/%E7%84%A1%E8%AA%9E%E5%95%8F%E8%92%BC%E5%A4%A9-3/">
+          無語問蒼天（3）
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-02-28</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-02-28/Matters%E5%85%A9%E5%80%8B%E6%9C%88%E7%B8%BD%E7%B5%90-60%E7%AF%87%E6%96%87%E7%AB%A0-1%E8%90%ACLikeCoin-%E4%BB%A5%E5%8F%8A%E7%B3%BB%E5%88%97%E5%BC%8F%E6%96%87%E7%AB%A0/">
+          【Matters兩個月總結】60篇文章、1萬LikeCoin，以及系列式文章
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-02-26</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-02-26/%E7%8B%82%E8%88%9E%E6%B4%BE3-%E4%BE%86%E5%BE%97%E5%A4%AA%E9%81%B2%E7%9A%84%E6%99%82%E4%BB%A3%E8%BC%93%E6%AD%8C/">
+          《狂舞派3》：來得太遲的時代輓歌
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2021-02-28/Matters%E5%85%A9%E5%80%8B%E6%9C%88%E7%B8%BD%E7%B5%90-60%E7%AF%87%E6%96%87%E7%AB%A0-1%E8%90%ACLikeCoin-%E4%BB%A5%E5%8F%8A%E7%B3%BB%E5%88%97%E5%BC%8F%E6%96%87%E7%AB%A0/">
+            前一篇：【Matters兩個月總結】60篇文章、1萬LikeCoin，以及系列式文章
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2021-02-28/%E6%80%80%E4%BB%81%E5%A0%82%E6%94%BF%E5%8F%98-%E5%8D%8E%E5%9B%BD%E9%94%8B%E8%A2%AB-%E9%80%BC%E5%AE%AB%E9%80%80%E4%BD%8D-%E5%A7%8B%E6%9C%AB-The-Overthrow-of-Hua-Guofeng/">
+            後一篇：怀仁堂政变、华国锋被“逼宫退位”始末  ｜ The Overthrow of Hua Guofeng in 1978 [Eng Sub]
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2021-02-28/Matters%E5%85%A9%E5%80%8B%E6%9C%88%E7%B8%BD%E7%B5%90-60%E7%AF%87%E6%96%87%E7%AB%A0-1%E8%90%ACLikeCoin-%E4%BB%A5%E5%8F%8A%E7%B3%BB%E5%88%97%E5%BC%8F%E6%96%87%E7%AB%A0/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2021-02-28/%E6%80%80%E4%BB%81%E5%A0%82%E6%94%BF%E5%8F%98-%E5%8D%8E%E5%9B%BD%E9%94%8B%E8%A2%AB-%E9%80%BC%E5%AE%AB%E9%80%80%E4%BD%8D-%E5%A7%8B%E6%9C%AB-The-Overthrow-of-Hua-Guofeng/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2021-03-01/%E7%84%A1%E8%AA%9E%E5%95%8F%E8%92%BC%E5%A4%A9-3/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2021-02-28/Matters%E5%85%A9%E5%80%8B%E6%9C%88%E7%B8%BD%E7%B5%90-60%E7%AF%87%E6%96%87%E7%AB%A0-1%E8%90%ACLikeCoin-%E4%BB%A5%E5%8F%8A%E7%B3%BB%E5%88%97%E5%BC%8F%E6%96%87%E7%AB%A0/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2021-02-28/Matters%E5%85%A9%E5%80%8B%E6%9C%88%E7%B8%BD%E7%B5%90-60%E7%AF%87%E6%96%87%E7%AB%A0-1%E8%90%ACLikeCoin-%E4%BB%A5%E5%8F%8A%E7%B3%BB%E5%88%97%E5%BC%8F%E6%96%87%E7%AB%A0/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2021-02-28/%E6%80%80%E4%BB%81%E5%A0%82%E6%94%BF%E5%8F%98-%E5%8D%8E%E5%9B%BD%E9%94%8B%E8%A2%AB-%E9%80%BC%E5%AE%AB%E9%80%80%E4%BD%8D-%E5%A7%8B%E6%9C%AB-The-Overthrow-of-Hua-Guofeng/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2021-03-01/%E7%84%A1%E8%AA%9E%E5%95%8F%E8%92%BC%E5%A4%A9-3/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2021-02-28/Matters%E5%85%A9%E5%80%8B%E6%9C%88%E7%B8%BD%E7%B5%90-60%E7%AF%87%E6%96%87%E7%AB%A0-1%E8%90%ACLikeCoin-%E4%BB%A5%E5%8F%8A%E7%B3%BB%E5%88%97%E5%BC%8F%E6%96%87%E7%AB%A0/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

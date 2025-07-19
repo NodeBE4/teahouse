@@ -1,0 +1,3462 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>捷克迷醉指南 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+捷克迷醉指南
+——
+" />
+    <meta property="og:description" content="
+捷克迷醉指南
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="捷克迷醉指南" />
+    <meta property="twitter:title" content="捷克迷醉指南" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40kaofeelfine%2F%25E6%258D%25B7%25E5%2585%258B%25E8%25BF%25B7%25E9%2586%2589%25E6%258C%2587%25E5%258D%2597-bafyreihlvocudvsgmvji6l3avbqtvdtsjoh4db5wavegew2b6avrr4kmne" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@kaofeelfine/%E6%8D%B7%E5%85%8B%E8%BF%B7%E9%86%89%E6%8C%87%E5%8D%97-bafyreihlvocudvsgmvji6l3avbqtvdtsjoh4db5wavegew2b6avrr4kmne" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@kaofeelfine/%E6%8D%B7%E5%85%8B%E8%BF%B7%E9%86%89%E6%8C%87%E5%8D%97-bafyreihlvocudvsgmvji6l3avbqtvdtsjoh4db5wavegew2b6avrr4kmne&text=捷克迷醉指南&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@kaofeelfine/%E6%8D%B7%E5%85%8B%E8%BF%B7%E9%86%89%E6%8C%87%E5%8D%97-bafyreihlvocudvsgmvji6l3avbqtvdtsjoh4db5wavegew2b6avrr4kmne&title=捷克迷醉指南" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@kaofeelfine/%E6%8D%B7%E5%85%8B%E8%BF%B7%E9%86%89%E6%8C%87%E5%8D%97-bafyreihlvocudvsgmvji6l3avbqtvdtsjoh4db5wavegew2b6avrr4kmne&title=捷克迷醉指南" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=捷克迷醉指南&body=
+捷克迷醉指南
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@kaofeelfine/%E6%8D%B7%E5%85%8B%E8%BF%B7%E9%86%89%E6%8C%87%E5%8D%97-bafyreihlvocudvsgmvji6l3avbqtvdtsjoh4db5wavegew2b6avrr4kmne" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@kaofeelfine/%E6%8D%B7%E5%85%8B%E8%BF%B7%E9%86%89%E6%8C%87%E5%8D%97-bafyreihlvocudvsgmvji6l3avbqtvdtsjoh4db5wavegew2b6avrr4kmne&title=捷克迷醉指南&caption=
+捷克迷醉指南
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=捷克迷醉指南&url=https://matters.news/@kaofeelfine/%E6%8D%B7%E5%85%8B%E8%BF%B7%E9%86%89%E6%8C%87%E5%8D%97-bafyreihlvocudvsgmvji6l3avbqtvdtsjoh4db5wavegew2b6avrr4kmne" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>捷克迷醉指南</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2020-10-02
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 張泰格</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@kaofeelfine/%E6%8D%B7%E5%85%8B%E8%BF%B7%E9%86%89%E6%8C%87%E5%8D%97-bafyreihlvocudvsgmvji6l3avbqtvdtsjoh4db5wavegew2b6avrr4kmne" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1601688402000-->
+<p><a href="https://matters.news/@kaofeelfine/%E6%8D%B7%E5%85%8B%E8%BF%B7%E9%86%89%E6%8C%87%E5%8D%97-bafyreihlvocudvsgmvji6l3avbqtvdtsjoh4db5wavegew2b6avrr4kmne">捷克迷醉指南</a>
+——</p>
+
+<div>
+  <p>很多人對捷克究竟是東歐國家還是中歐國家很拿不準，捷克人一般會告訴你中歐，因為畢竟地理上捷克首都布拉格比奧地利首都維也納更靠西，不過捷克人也無所謂，因為世界大多數人根本就不知道捷克在哪裡，英語國家的人會把捷克（Czech）和車臣（Chechnya）混淆，而至今仍有不少中國人會順口念出“捷克斯洛伐克”這個舊國名。每到此時，捷克人必定會拉著你到酒館裡讓你見識見識自己和東歐那些愛好伏特加的斯拉夫親戚有多麼的不同，就用他們引以為傲的啤酒。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/cf090948-0035-478a-bf46-bfc0eeca0937.jpeg" data-asset-id="cf090948-0035-478a-bf46-bfc0eeca0937" referrerpolicy="no-referrer" />    <figcaption>
+<span>喝多了的時候拍的布拉格 （張泰格 攝影）</span>
+    </figcaption>
+  </figure>
+  <p>說捷克人“黃到金”總是不錯的，因為他們血液裡面流的就是黃澄澄的啤酒。在捷克，會喝啤酒，你基本上就半隻腳踏進當地人的圈子，這是他們民族自豪感的來源，他們不會關心你一個外國人聽沒聽過斯美塔那、德沃夏克、雅納切克；也沒興趣問你讀沒讀過好兵帥克、變形記、不能承受的生命之輕——因為他們自己也未必讀過，他們最關心的是你這外國人拉低了他們最引以為豪的統計數據：“平均每人每天一杯啤酒”的最高國家飲啤酒數據。2018年，捷克人平均年啤酒消費量是191升全球第一，這個數字幾乎是排名第三德國的一倍。</p>
+  <p>捷克人的飲酒時間往往從下午夕陽變得金黃就開始，在街頭相對內斂羞澀的捷克人，願意在這裡花時間專心與人交談，幾乎都是在酒館裡談心、交友。捷克的酒館可以是很寡淡的，燈光暗淡，也未必有音樂，有不少往往僅售賣一種酒，服務員看見你坐下就會話也不說把酒放在你面前；酒館也不太供應食品，更多時候捷克人喝酒就是喝酒，並沒有伴著豬手；喝酒唯一的陪伴就是社交，生意、政治、文學、八卦可以天花亂墜無所不談；一家人往往各有各愛去的酒吧，晚飯後各自呼朋引伴去喝酒，互不相擾。</p>
+  <p>捷克前總統哈維爾關於捷克人啤酒的說法是，“我認為在酒館喝啤酒對捷克社會的風氣有良好的影響。因為啤酒的酒精度比葡萄酒、伏特加或威士忌低，這樣人們在酒館談論政治時不會太瘋狂。”</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/dc067c14-471a-4de6-90c2-2d55b6a15d20.jpeg" data-asset-id="dc067c14-471a-4de6-90c2-2d55b6a15d20" referrerpolicy="no-referrer" />    <figcaption>
+<span>下午時分的Olomouc（張泰格 攝影）</span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>這麼看來，1993年哈維爾答應斯洛伐克從當時捷克斯洛伐克分裂出去的時候，他肯定沒喝啤酒，要不然怎麼會有讓國家半壁江山分離這種挑戰國家主權的決策？不過總統做成這個樣子，也沒有成為歷史罪人。樂天知命的捷克人倒是樂得和斯洛伐克人分手：“斯洛伐克人啤酒喝的不夠，當然要從捷克分出去。”——這個說法是有根有據，因為捷克的第一名真的是從1993年開始的。不喝啤酒就不是是捷克人——斯洛伐克人確實觸碰了捷克人的“紅線”。</p>
+  <p><strong>另類的“民族英雄”帥克</strong></p>
+  <p>沒有啤酒，捷克文學大概會少了半壁江山。在奧匈帝國時期的布拉格，當那個如苦行僧一般戒酒、茹素的卡夫卡，每天與布拉格的窄巷高牆城堡做精神纏鬥的時候，另外一個作家哈謝克（Jaroslav Hašek）正在附近的小酒館醉醺醺的和街坊調笑，為他作品的主人公“好兵帥克”（The Good Soldier Švejk）尋找下一句瘋言瘋語。</p>
+  <p>憨態可掬、紅著鼻子頭有著啤酒肚的帥克某種程度上，定義了標準捷克身材和捷克庶民性格。他是個患有風濕病的狗販子，掙錢的方法就是靠給雜種狗偽造血統證明。趕上費迪南大公在薩拉熱窩遇刺身亡，他在酒館的一陣大放厥詞，不但歪打正著預言了一戰的走勢，也因此被特務逮到了警察局，開始了他顛三倒四的當兵歷程。小說第一章發生在酒館，而之後的每一章也一定無酒不歡。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/8170e1f0-688a-44c5-b9b5-4d5656ff73f7.jpeg" data-asset-id="8170e1f0-688a-44c5-b9b5-4d5656ff73f7" referrerpolicy="no-referrer" />    <figcaption>
+<span>好兵帥克第一幕的插圖</span>
+    </figcaption>
+  </figure>
+  <p>帥克是個“反英雄”的先驅，當讀者跟著帥克的胡言亂語走遍奧匈帝國的官僚體系、法院、軍隊，你會發現帥克整天醉醺醺的精神狀態，遠遠趕不上上流社會的荒誕不經。同樣一種荒誕感，卡夫卡用沉穩的理性描繪，哈謝克卻會用難得糊塗來塗抹。帥克代他在酒館裡面恣意的調笑政府，嘲弄皇帝，他把這些諷刺集結成故事，再換成下一次的酒錢。——這不是那種將進酒式的豪放浪漫，這就是捷克式的天真爛漫。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/c26dfc6c-5b66-4a0a-af7d-9a2aa2f814cf.jpeg" data-asset-id="c26dfc6c-5b66-4a0a-af7d-9a2aa2f814cf" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p>比如帥克說過一句箴言：“哪個政府要是膽敢給啤酒漲價，保準得倒台。”在捷共統治下的1984年，啤酒價格幾乎翻倍（每升從1.7克朗漲到2.5克朗），但哈謝克的這個預言延遲了5年，直到1989年才最終實現。</p>
+  <p>另一個深受啤酒影響的作家，就是捷克前總統哈維爾。布拉格之春後，哈維爾作為異見人士被當局封殺，他本人曾經被發配到啤酒廠工作，做著滾啤酒桶的粗活，也讓他認識了在體制下生存的形形色色的普通民眾，也讓他看清楚意識形態的幽靈是如何滲透進每一個人的骨髓當中。他曾經寫過自己在酒廠的一名上司，一門心思想改良啤酒技術，卻遇上了外行的共產黨員經理，結果幾封投訴信上去，卻把自己變成了“反革命分子”。</p>
+  <p>哈維爾的戲劇自傳性戲劇瓦涅克三部曲，同樣是取自他這一段落難經歷。瓦涅克是個被共產政權發落到啤酒廠工作的「異見者」劇作家，在劇本《謁見》中，木訥的瓦涅克被領導叫到辦公室談話，劇中醉醺醺的領導從一開始便一瓶接一瓶的打開啤酒，自顧自的喝著，演員在舞台上喝到面紅耳赤、口齒不清，絮絮叨叨一番直到最後才告訴瓦涅克他被“朋友”要求監視瓦涅克，他繼續喝，抱怨生活、抱怨領導、抱怨道睡著，醒來，他仍然困在抱怨和酗酒的循環之中。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/e519321b-6992-4a17-85b4-0cfef8e10cc1.jpeg" data-asset-id="e519321b-6992-4a17-85b4-0cfef8e10cc1" referrerpolicy="no-referrer" />    <figcaption>
+<span>哈維爾</span>
+    </figcaption>
+  </figure>
+  <p>對於共產時期的捷克人來說，酒精確實是很有撫慰性的，酗酒某程度上是由於在共產主義社會嚴格管控下的壓抑與單調，它帶給人們的是看不到盡頭的焦慮和絕望。醉酒的酒廠領導清楚的看到自己的境況，只能用不斷飲酒來麻痺。但同時酒精又能讓他說出一些真心話，在酒精的掩映下也能看到一個人的淳樸和良知。這或許就是哈維爾所提到的，良知是對人存在本真的直接把握的一種狀態，當人放棄用理性來算計，直接用直覺體驗人生，酒醉的微醺感覺也許多多少少會有些幫助吧。</p>
+  <p><strong>釀出來的民族精神</strong></p>
+  <p>捷克啤酒大抵是不需要很做廣告的，政客總是願意站出來給捷克啤酒代言。除了哈維爾，捷克現總統澤曼從來就沒有掩飾過自己對杯中物的熱愛，他在總統競選的時候就公然宣稱自己是“千杯不醉”。當選後的2013年，他到出席捷克皇室珠寶展活動的時候，在眾目睽睽之下步履蹣跚，看上去步履蹣跚的他需要靠著墻邊才能站穩。片段傳到網上，全捷克的民眾都認為澤曼是飲醉了，畢竟捷克人是最見過醉漢的。澤曼自知有辱國體，怯生生的找了個“感染病毒”的理由搪塞過去。</p>
+  <figure class="embed-video">
+    <div class="iframe-container">
+      <iframe src="https://www.youtube.com/embed/APXDT9lCyxk?rel=0" frameborder="0" allowfullscreen="true" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+    </div>
+    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>雖然被國民百般嘲諷，但是澤曼卻依然故我，不戒煙也不戒酒滿嘴政治不正確的形象卻有著親民的另一面，到現在已經成功連任的他，表現出來的那種醉後的狀態，對於選民來說可能反而比精於算計的形象庶民一些、也“真誠”一些。——更多時候捷克人自己也不知道自己為什麼會有這樣一個總統。</p>
+  <p>澤曼的好朋友是普京和習近平，當年習近平訪華的時候，澤曼自然免不了假公濟私的請習總飲宴一番。有意思的是，呈給習總的捷克啤酒既不是皮爾森，也不是百威，反倒是一個名不見經傳的牌子“LOBKOWICZ”，登時就覺得澤曼這老賊竟然財神爺來了不拿好酒，著實怠慢了中國客人，辱華的緊。細查之下才發現，原來曾經在中國捷克之間顯赫一時的政治掮客葉簡明，這個捷克總統澤曼私人顧問旗下的華信集團在2015年斥資7800萬美元，已經將這家酒廠70%的股權買下。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/c23aaf00-13cb-4abb-ba2d-89d41f053875.jpeg" data-asset-id="c23aaf00-13cb-4abb-ba2d-89d41f053875" referrerpolicy="no-referrer" />    <figcaption>
+<span>乾了這杯“老博客”</span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>此酒牌的中文名叫“老博客”，實在山寨味濃厚，博客一詞在網絡上出現不過十餘年，如今更是日薄西山，老博客的名字改的很不吉利。果然不出數年，葉簡明便被中國官方調查，旗下的商業帝國華信能源陷入債務違約，在捷克的大量地產、酒店、航空投資都被中信接管，這家“老博客”酒廠，也面臨被轉手賤賣的命運。中國人就這樣給捷克的啤酒業，灌了一杯厚厚的泡沫。</p>
+  <p>當然，既然敢說啤酒是捷克的民族精神，就必然有骨頭硬的啤酒廠的故事。這就是捷克百威啤酒，百威二字源自捷克西南小城České Budějovice的德語名字Budweis，這裡曾經是神聖羅馬帝國的皇家釀酒廠所在地，於是這裡的啤酒一度被尊稱作“國王的啤酒”，是經典的全麥芽釀造捷克金色啤酒風格。不過在美國獨立後，這個帶著波西米亞風格的啤酒就被當地的德國人山寨了過去，而原料也加入大量澱粉類物質，使得整個製作變得相當的美式工業化，口味也比較寡淡。而資本主義和全球化的助推，美國百威迅速佔領了全球市場，處在計劃經濟下的捷克百威卻只能守得住國內市場。</p>
+  <p>雖然美國百威已經擁有了強大的商業能力，數次提出要高溢價收購捷克的百威酒廠，但捷克方面始終不賣，兩家的商標官司就這樣打了幾十年。所以各位看官要是想買捷克百威，最簡單的方法就是認住白底紅字的Budějovický、拉丁文上有幾個勾勾的商標，就來自捷克。買白底黑字，你懲罰的就是美國百威。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/0550ddb7-5805-4f24-93f7-288138cfaaf1.jpeg" data-asset-id="0550ddb7-5805-4f24-93f7-288138cfaaf1" referrerpolicy="no-referrer" />    <figcaption>
+<span>左邊白底黑字是美國百威，右邊白底紅字是捷克百威</span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>談了百威，當然就要聊另外一個定義啤酒的捷克城市皮爾森，捷克名字Plzeň，德國名字是Pilsen。縱是不愛喝啤酒的人，大概也會對這個詞有印象，至少是在香港大排檔常出現的“藍妹”啤酒上，就印著Pilsner Lager的字樣，貿貿然買來喝，你也懲罰不到捷克。正經的捷克牌子是“Pilsner Urquell”，市場上頗為常見，如今是日本朝日啤酒旗下的品牌了。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/a818fa69-17aa-474c-89d9-80547ce465b5.jpeg" data-asset-id="a818fa69-17aa-474c-89d9-80547ce465b5" referrerpolicy="no-referrer" />    <figcaption>
+<span>港人愛喝的藍妹</span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>正如茶餐廳的瑞士雞翼只能在香港吃得到、天津飯只在日本有一樣，一般啤酒樽上標註的所謂Pilsner實際是源自當地的啤酒製造方式。二百多年前，捷克皮爾森的市民突然無法承受酒廠渾濁難喝的啤酒，隨揭竿而起鬧“啤酒革命”，他們請來德國巴伐利亞的釀酒師， 再使用淡色麥芽、捷克特產的薩茲（Saaz）啤酒花、波希米亞當地的軟泉水， 並採用下層發酵的方式所釀造出了工業化始祖的皮爾森啤酒。這種發酵方式被稱為拉格Lager釀造法，由於便於大規模工業化生產，當下市面上的大部分啤酒都屬於拉格釀造法。捷克啤酒“黃到金”的原因便是使用了皮爾森拉格的釀造方法，而其味道則是一種夾著苦澀的淸凜。當下很多年輕人頗為推崇味道更為複雜多元的精釀啤酒，張口閉口就會拿工業啤酒來貶低一番，其實很多時候，好麥好水的清澈味道還沒品仔細，太多花哨反而會亂了人的眼。</p>
+  <p><strong>感受從專制到自由的順滑</strong></p>
+  <p>如果你本不愛喝啤酒，卻被捷克人邀約去酒吧，千萬不能用感冒傷風肚子痛這種小病來搪塞，因為捷克人治病的良藥還是啤酒，大概和啤酒花的殺菌作用有些關係吧。尤其是胃痛肚子痛，捷克人會特意拉你去酒吧，給你點一杯叫做“Mlíko”的飲品，超市裡你能把這個詞彙和牛奶對應，但在酒吧，這就是一杯整杯白色啤酒泡的啤酒。他們會真誠的告訴你，啤酒泡對胃好，對應成中文大概就是“和胃”。在捷克人真切眼神中喝下這杯柔和“牛奶”，你一定會理解為什麼中國這麼願意把“雙黃連口服液”真誠的輸出給飽受新冠病毒困擾的歐洲國家。喝下去吧，其實你的捷克朋友未必那麼關心你的胃痛，他們關心的是你保住了今天的飲酒量。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/51f39dab-39fd-4d77-9d46-b43106bfbf7c.jpeg" data-asset-id="51f39dab-39fd-4d77-9d46-b43106bfbf7c" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>所以捷克人形容自己1989年的政權更替是“Sametová revoluce”，英文是Velvet Revolution，雖然可能是致敬美國的地下絲絨樂隊(Velvet Underground)對捷克樂隊太空塑膠人（Plastic People of the Universe）以及整個抗爭歷史的影響，可聽上去總覺得離地，索性叫做“啤酒泡革命”的話，倒是很有“味道”。其實現在捷克是有叫做“Sametová”和“Velvet”的酒，有機會可以試試點一杯半啤酒泡（řezané）或全啤酒泡（Mlíko），品一下從專制到自由的順滑味道。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/c028f8c0-da1a-4c8b-8b77-aebb05abc7fc.jpeg" data-asset-id="c028f8c0-da1a-4c8b-8b77-aebb05abc7fc" referrerpolicy="no-referrer" />    <figcaption>
+<span>曾誤打誤撞進了一家老年人活動站酒吧，裡面的常客自彈自唱、載歌載舞。（張泰格 攝）</span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>走筆至此，我似乎還要解答一個關鍵問題，哪種捷克啤酒最好喝？這個問題似乎難以解答，因為在香港市場你能喝到的幾乎只有Budějovický Budvar和Pilsner Urquell兩款，香港人是知道的，被篩選過的自由的滋味，總不過爾爾；而到了捷克，你將面對的是超市上近百種捷克產的啤酒，最好的方式當然是悠閒的走過捷克的村村鎮鎮，隨便撞進一家酒館，無論是大廠生產也好，小廠精釀也好，醉醺醺和當地人攀談吹噓一番，總是能過好春風沉醉的一天，那杯酒便是最好喝的捷克啤酒。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/72a057de-ce6a-4228-adda-8c231228420f.jpeg" data-asset-id="72a057de-ce6a-4228-adda-8c231228420f" referrerpolicy="no-referrer" />    <figcaption>
+<span>其實在捷克最常去的還是茶館。（張泰格 攝）</span>
+    </figcaption>
+  </figure>
+  <p>首發於《別字》第二十三期：<a href="https://zihua.org.hk/magazine/issue-32/article/golden-beer-of-czech/" target="_blank">從專制到自由的滋味——捷克啤酒指南</a></p>
+  <p><br /></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2020-10-03</time>
+        <a href="https://nodebe4.github.io/teahouse/2020-10-03/%E6%96%B0%E6%97%B6%E4%BB%A3%E7%9A%84%E4%B8%80%E5%A4%B4%E5%81%B6%E5%83%8F%E4%B8%8E%E4%B8%80%E7%BE%A4%E9%98%BFQ/">
+          新时代的一头偶像与一群阿Q
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2020-10-03</time>
+        <a href="https://nodebe4.github.io/teahouse/2020-10-03/%E5%B7%9D%E6%99%AECOVID-19%E9%98%B3%E6%80%A7%E7%9A%84%E6%B6%88%E6%81%AF%E4%BC%A0%E5%87%BA%E5%90%8E-%E4%B8%8D%E5%A6%A8%E6%9A%82%E6%97%B6%E5%88%AB%E6%89%93%E5%BC%80%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93/">
+          川普COVID-19阳性的消息传出后，不妨暂时别打开社交媒体
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2020-09-25</time>
+        <a href="https://nodebe4.github.io/teahouse/2020-09-25/%E8%BF%98%E7%8F%A0-20%E5%B9%B4-%E5%B0%8F%E7%87%95%E5%AD%90%E5%8F%98%E5%A4%A7%E9%B3%84-%E9%87%91%E9%94%81%E4%B8%8A%E6%9E%B7%E9%94%81-%E5%91%A8%E6%9D%B0%E5%8D%B4%E6%B4%BB%E7%9A%84%E6%9C%80%E6%98%8E%E7%99%BD/">
+          《还珠》20年，小燕子变大鳄、金锁上枷锁、周杰却活的最明白
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2020-09-22</time>
+        <a href="https://nodebe4.github.io/teahouse/2020-09-22/%E5%85%B3%E4%BA%8E%E4%B8%8D%E7%88%B1%E5%9B%BD%E7%9A%84-%E5%85%AC%E7%9F%A5-%E4%B8%80%E6%AE%B580%E5%90%8E%E4%B8%8E00%E5%90%8E%E7%9A%84%E5%AF%B9%E8%AF%9D/">
+          关于不爱国的“公知”，一段80后与00后的对话
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2020-09-29/%E9%82%93%E6%97%B6%E4%BB%A3-%E7%9A%84%E9%BC%8E%E7%9B%9B%E4%B8%8E%E7%BB%88%E7%BB%93-The-Boom-and-Bust-of-Deng-Xiaoping/">
+            前一篇：“邓时代”的鼎盛与终结 |  The Boom and Bust of Deng Xiaoping‘s Era [Eng Sub]
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2020-10-03/%E5%B7%9D%E6%99%AECOVID-19%E9%98%B3%E6%80%A7%E7%9A%84%E6%B6%88%E6%81%AF%E4%BC%A0%E5%87%BA%E5%90%8E-%E4%B8%8D%E5%A6%A8%E6%9A%82%E6%97%B6%E5%88%AB%E6%89%93%E5%BC%80%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93/">
+            後一篇：川普COVID-19阳性的消息传出后，不妨暂时别打开社交媒体
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2020-09-29/%E9%82%93%E6%97%B6%E4%BB%A3-%E7%9A%84%E9%BC%8E%E7%9B%9B%E4%B8%8E%E7%BB%88%E7%BB%93-The-Boom-and-Bust-of-Deng-Xiaoping/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2020-10-03/%E5%B7%9D%E6%99%AECOVID-19%E9%98%B3%E6%80%A7%E7%9A%84%E6%B6%88%E6%81%AF%E4%BC%A0%E5%87%BA%E5%90%8E-%E4%B8%8D%E5%A6%A8%E6%9A%82%E6%97%B6%E5%88%AB%E6%89%93%E5%BC%80%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2020-10-03/%E5%B7%9D%E6%99%AECOVID-19%E9%98%B3%E6%80%A7%E7%9A%84%E6%B6%88%E6%81%AF%E4%BC%A0%E5%87%BA%E5%90%8E-%E4%B8%8D%E5%A6%A8%E6%9A%82%E6%97%B6%E5%88%AB%E6%89%93%E5%BC%80%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2020-09-25/%E8%BF%98%E7%8F%A0-20%E5%B9%B4-%E5%B0%8F%E7%87%95%E5%AD%90%E5%8F%98%E5%A4%A7%E9%B3%84-%E9%87%91%E9%94%81%E4%B8%8A%E6%9E%B7%E9%94%81-%E5%91%A8%E6%9D%B0%E5%8D%B4%E6%B4%BB%E7%9A%84%E6%9C%80%E6%98%8E%E7%99%BD/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2020-09-29/%E9%82%93%E6%97%B6%E4%BB%A3-%E7%9A%84%E9%BC%8E%E7%9B%9B%E4%B8%8E%E7%BB%88%E7%BB%93-The-Boom-and-Bust-of-Deng-Xiaoping/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2020-10-03/%E5%B7%9D%E6%99%AECOVID-19%E9%98%B3%E6%80%A7%E7%9A%84%E6%B6%88%E6%81%AF%E4%BC%A0%E5%87%BA%E5%90%8E-%E4%B8%8D%E5%A6%A8%E6%9A%82%E6%97%B6%E5%88%AB%E6%89%93%E5%BC%80%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2020-10-03/%E5%B7%9D%E6%99%AECOVID-19%E9%98%B3%E6%80%A7%E7%9A%84%E6%B6%88%E6%81%AF%E4%BC%A0%E5%87%BA%E5%90%8E-%E4%B8%8D%E5%A6%A8%E6%9A%82%E6%97%B6%E5%88%AB%E6%89%93%E5%BC%80%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2020-09-25/%E8%BF%98%E7%8F%A0-20%E5%B9%B4-%E5%B0%8F%E7%87%95%E5%AD%90%E5%8F%98%E5%A4%A7%E9%B3%84-%E9%87%91%E9%94%81%E4%B8%8A%E6%9E%B7%E9%94%81-%E5%91%A8%E6%9D%B0%E5%8D%B4%E6%B4%BB%E7%9A%84%E6%9C%80%E6%98%8E%E7%99%BD/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

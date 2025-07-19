@@ -1,0 +1,3451 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>精神健康是勞工應有的權利：職業健康及安全的新戰線 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+精神健康是勞工應有的權利：職業健康及安全的新戰線
+——
+" />
+    <meta property="og:description" content="
+精神健康是勞工應有的權利：職業健康及安全的新戰線
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="精神健康是勞工應有的權利：職業健康及安全的新戰線" />
+    <meta property="twitter:title" content="精神健康是勞工應有的權利：職業健康及安全的新戰線" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40LabourChina%2F%25E7%25B2%25BE%25E7%25A5%259E%25E5%2581%25A5%25E5%25BA%25B7%25E6%2598%25AF%25E5%258B%259E%25E5%25B7%25A5%25E6%2587%2589%25E6%259C%2589%25E7%259A%2584%25E6%25AC%258A%25E5%2588%25A9-%25E8%2581%25B7%25E6%25A5%25AD%25E5%2581%25A5%25E5%25BA%25B7%25E5%258F%258A%25E5%25AE%2589%25E5%2585%25A8%25E7%259A%2584%25E6%2596%25B0%25E6%2588%25B0%25E7%25B7%259A-bafyreia3nio32qttc5vwwl6gvq4thvciuy7fxmxgphok5k7wtrer4mesta" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@LabourChina/%E7%B2%BE%E7%A5%9E%E5%81%A5%E5%BA%B7%E6%98%AF%E5%8B%9E%E5%B7%A5%E6%87%89%E6%9C%89%E7%9A%84%E6%AC%8A%E5%88%A9-%E8%81%B7%E6%A5%AD%E5%81%A5%E5%BA%B7%E5%8F%8A%E5%AE%89%E5%85%A8%E7%9A%84%E6%96%B0%E6%88%B0%E7%B7%9A-bafyreia3nio32qttc5vwwl6gvq4thvciuy7fxmxgphok5k7wtrer4mesta" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@LabourChina/%E7%B2%BE%E7%A5%9E%E5%81%A5%E5%BA%B7%E6%98%AF%E5%8B%9E%E5%B7%A5%E6%87%89%E6%9C%89%E7%9A%84%E6%AC%8A%E5%88%A9-%E8%81%B7%E6%A5%AD%E5%81%A5%E5%BA%B7%E5%8F%8A%E5%AE%89%E5%85%A8%E7%9A%84%E6%96%B0%E6%88%B0%E7%B7%9A-bafyreia3nio32qttc5vwwl6gvq4thvciuy7fxmxgphok5k7wtrer4mesta&text=精神健康是勞工應有的權利：職業健康及安全的新戰線&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@LabourChina/%E7%B2%BE%E7%A5%9E%E5%81%A5%E5%BA%B7%E6%98%AF%E5%8B%9E%E5%B7%A5%E6%87%89%E6%9C%89%E7%9A%84%E6%AC%8A%E5%88%A9-%E8%81%B7%E6%A5%AD%E5%81%A5%E5%BA%B7%E5%8F%8A%E5%AE%89%E5%85%A8%E7%9A%84%E6%96%B0%E6%88%B0%E7%B7%9A-bafyreia3nio32qttc5vwwl6gvq4thvciuy7fxmxgphok5k7wtrer4mesta&title=精神健康是勞工應有的權利：職業健康及安全的新戰線" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@LabourChina/%E7%B2%BE%E7%A5%9E%E5%81%A5%E5%BA%B7%E6%98%AF%E5%8B%9E%E5%B7%A5%E6%87%89%E6%9C%89%E7%9A%84%E6%AC%8A%E5%88%A9-%E8%81%B7%E6%A5%AD%E5%81%A5%E5%BA%B7%E5%8F%8A%E5%AE%89%E5%85%A8%E7%9A%84%E6%96%B0%E6%88%B0%E7%B7%9A-bafyreia3nio32qttc5vwwl6gvq4thvciuy7fxmxgphok5k7wtrer4mesta&title=精神健康是勞工應有的權利：職業健康及安全的新戰線" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=精神健康是勞工應有的權利：職業健康及安全的新戰線&body=
+精神健康是勞工應有的權利：職業健康及安全的新戰線
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@LabourChina/%E7%B2%BE%E7%A5%9E%E5%81%A5%E5%BA%B7%E6%98%AF%E5%8B%9E%E5%B7%A5%E6%87%89%E6%9C%89%E7%9A%84%E6%AC%8A%E5%88%A9-%E8%81%B7%E6%A5%AD%E5%81%A5%E5%BA%B7%E5%8F%8A%E5%AE%89%E5%85%A8%E7%9A%84%E6%96%B0%E6%88%B0%E7%B7%9A-bafyreia3nio32qttc5vwwl6gvq4thvciuy7fxmxgphok5k7wtrer4mesta" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@LabourChina/%E7%B2%BE%E7%A5%9E%E5%81%A5%E5%BA%B7%E6%98%AF%E5%8B%9E%E5%B7%A5%E6%87%89%E6%9C%89%E7%9A%84%E6%AC%8A%E5%88%A9-%E8%81%B7%E6%A5%AD%E5%81%A5%E5%BA%B7%E5%8F%8A%E5%AE%89%E5%85%A8%E7%9A%84%E6%96%B0%E6%88%B0%E7%B7%9A-bafyreia3nio32qttc5vwwl6gvq4thvciuy7fxmxgphok5k7wtrer4mesta&title=精神健康是勞工應有的權利：職業健康及安全的新戰線&caption=
+精神健康是勞工應有的權利：職業健康及安全的新戰線
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=精神健康是勞工應有的權利：職業健康及安全的新戰線&url=https://matters.news/@LabourChina/%E7%B2%BE%E7%A5%9E%E5%81%A5%E5%BA%B7%E6%98%AF%E5%8B%9E%E5%B7%A5%E6%87%89%E6%9C%89%E7%9A%84%E6%AC%8A%E5%88%A9-%E8%81%B7%E6%A5%AD%E5%81%A5%E5%BA%B7%E5%8F%8A%E5%AE%89%E5%85%A8%E7%9A%84%E6%96%B0%E6%88%B0%E7%B7%9A-bafyreia3nio32qttc5vwwl6gvq4thvciuy7fxmxgphok5k7wtrer4mesta" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>精神健康是勞工應有的權利：職業健康及安全的新戰線</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-02-22
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 中國勞動透視</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@LabourChina/%E7%B2%BE%E7%A5%9E%E5%81%A5%E5%BA%B7%E6%98%AF%E5%8B%9E%E5%B7%A5%E6%87%89%E6%9C%89%E7%9A%84%E6%AC%8A%E5%88%A9-%E8%81%B7%E6%A5%AD%E5%81%A5%E5%BA%B7%E5%8F%8A%E5%AE%89%E5%85%A8%E7%9A%84%E6%96%B0%E6%88%B0%E7%B7%9A-bafyreia3nio32qttc5vwwl6gvq4thvciuy7fxmxgphok5k7wtrer4mesta" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1614054842000-->
+<p><a href="https://matters.news/@LabourChina/%E7%B2%BE%E7%A5%9E%E5%81%A5%E5%BA%B7%E6%98%AF%E5%8B%9E%E5%B7%A5%E6%87%89%E6%9C%89%E7%9A%84%E6%AC%8A%E5%88%A9-%E8%81%B7%E6%A5%AD%E5%81%A5%E5%BA%B7%E5%8F%8A%E5%AE%89%E5%85%A8%E7%9A%84%E6%96%B0%E6%88%B0%E7%B7%9A-bafyreia3nio32qttc5vwwl6gvq4thvciuy7fxmxgphok5k7wtrer4mesta">精神健康是勞工應有的權利：職業健康及安全的新戰線</a>
+——</p>
+
+<div>
+  <p>陳家偉</p>
+  <p>2021年2月3日</p>
+  <blockquote>
+隨著新型冠狀病毒肺炎（簡稱為“新冠肺炎”）所帶來的社會問題，精神健康已經成為了企業緊迫面對的首要事情。因著疫情而來的不確定以及壓力，及廣泛地在家工作加劇個人的疏離，嚴重威脅工人的精神健康。(<a href="https://www.weforum.org/agenda/2021/01/6-global-employers-on-how-to-improve-workplace-mental-health/" target="_blank">達沃斯議程2021, 世界經濟論壇, 2021年1月25至29日</a>)  </blockquote>
+  <p>在全球經濟中，精神健康已經成為了一個迫切的問題。<a href="https://www.weforum.org/agenda/2021/01/6-global-employers-on-how-to-improve-workplace-mental-health/" target="_blank">世界經濟領袖</a>曾共同表達，現今工作所造成的精神損害已經對世界經濟造成嚴峻的影響。「因為精神疾病所造成的生產力減弱、職員告假與轉職，全球預估每年估計有約2.5萬億美元的經濟損失。」</p>
+  <p>商界的專家也已不再堅持過去的看法，只視精神健康為一個個人的康健問題。實際上，它是一個全球性的結構問題，並且與全球貧困議題與社會經濟發展密切關聯，而最終的解決方案則取決於各國政府與國際社會，什麼才是他們政治優先要解決的問題。在貧窮經濟體系生活的人民明顯比在富裕經濟體系生活的人民，更容易罹患精神與情緒疾病。根據<a href="https://www.weforum.org/agenda/2021/01/poverty-mental-health-covid-intervention/" target="_blank">商業傳媒人汪時(Katharine Rooney) </a>的研究：</p>
+  <p>1. 低收入的組群患抑鬱與焦慮的情況，相比其他入息的組群要高三倍</p>
+  <p>2. 55%的女性表示新冠肺炎對其收入降低帶來了巨大的影響</p>
+  <p>3. 相比在職者，無業者在精神與身體上擁有較低的抗逆性</p>
+  <p>在疫情爆發前，世界衛生組織（簡稱“世衛”）也發出了同樣的警報。世衛指出：「精神健康是健康有機且必要的組成部分。」 精神健康不僅僅意味著沒有精神疾患或精神殘障，<a href="https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response" target="_blank">世衛</a>在《憲章》中清楚指出：</p>
+  <blockquote>
+健康不僅爲疾病或羸弱之消除，而是體格、精神與社會之完全康健及康泰的狀態。  </blockquote>
+  <p>工作中的精神健康是個人整全精神健康狀態中關鍵的組成部分，而工作相關的壓力也已成為了一個重要議題。<a href="https://www.who.int/news-room/q-a-detail/ccupational-health-stress-at-the-workplace" target="_blank">世衛</a>曾將工作中與壓力相關的有害因素分為兩個類別，包括：工作內容中的有害因素與工作環境中的有害因素。</p>
+  <p>工作內容中的有害因素包括：</p>
+  <p>1. 工作任務：單調、缺乏激勵、任務無意義、缺少多樣性等</p>
+  <p>2. 工作負擔與環境：過多或過少的工作、在時間緊迫下工作等</p>
+  <p>3. 工作時間：規範太嚴或沒有彈性、長時間且缺乏溝通、工作時間沒法預知、大量的輪班工作等</p>
+  <p>4. 參與和控制：在決策中缺乏參與、對工作的過程、節奏、時間、方式、環境缺乏掌控</p>
+  <p>工作環境中的風險因素包括：</p>
+  <p>1. 職業發展、狀況與工資：工作沒有保障、缺乏晉升機會、晉升跟個人條件不配 (過低或過高)、工作缺乏社會價值、按件計算工資、不清晰或不公平的績效評估系統、技能跟工作不匹配</p>
+  <p>2. 職工在企業架構中的角色：角色不清晰、不同角色間的衝突；人際關係：不足夠、不體諒人的或不具有支持性的督導、糟糕的同事關係、霸凌/騷擾與暴力、被孤立或獨自工作等</p>
+  <p>3. 機構文化：糟糕的溝通或領導方式、缺乏行為守則、缺乏明確的機構目標、結構和策略</p>
+  <p>4. 工作與生活的平衡：工作與家庭的需求互相衝突、工作中缺乏支持家庭問題的彈性、家庭中缺乏支持工作問題的可能、機構章程與政策缺乏支持工作與生活的平衡。</p>
+  <p>香港民意研究所聯同香港基督教工業委員會於2021年1月在香港進行的一項<a href="https://develo.pori.hk/wp-content/uploads/2021/01/PORI_PC_20210129_vhkr_eng.pdf" target="_blank">創新性的調查</a>。調查同樣採用了世衛上述工作壓力相關的有害因素的分類。這調查是香港少數 (若不是第一個) 的全港就工作中的精神健康的研究調查。大致上，該項研究結果所顯示的趨勢，跟其他國家有關研究調查的結果趨勢是相近的。在4538名受訪對象中，35%因為工作而感到精神痛苦。若根據此比例做預估，有1,740,000名香港勞工在工作中感到痛苦。</p>
+  <p>有所不同的是，在香港這次研究中，工作壓力相關的風險因素被分成三類，分別為工作內容、工作環境以及工作倫理（比世衛的框架多出一個維度）。工作倫理維度包括了，工作與個人信念、專業倫理以及政治取向間分別存在的張力，這一問題在當下的香港尤為嚴重[1]。納入新的緯度，讓這一研究更全面反映職場中精神健康有害因素。</p>
+  <p>2020年的世界精神健康日（10月9日），國際勞工組織總幹事<a href="https://www.ilo.org/global/about-the-ilo/how-the-ilo-works/ilo-director-general/statements-and-speeches/WCMS_757595/lang--en/index.htm" target="_blank">韋達 (Guy Ryder) </a>強調在新冠肺炎導致壓力叢生的當下，保持精神健康是重要的。他指出：</p>
+  <blockquote>
+在過去的幾個月里，許多親歷巨大變化的勞工都曾感到無助。線上工作帶來了新的壓力，因為勞工們意識到自身是孤單的。當工作與個人生活界限變得模糊，他們要在家庭與工作責任間斡旋。那些無法線上工作的人，則為暴露在感染新冠肺炎的風險下感到不公與焦慮。  </blockquote>
+  <p>相比國際經濟領袖與世衛所提出的建議，韋達在其文章中提出了更為全面的建議。世衛將精神健康視為是一個公共衛生的問題，它旨在恢復個人健康，并幫助個人處理在工作中所面對的問題。所以，<a href="https://www.who.int/occupational_health/topics/recognitionrespect140207.pdf" target="_blank">世衛</a>通常把這一問題簡化為是一個個人心理適應能力的問題。而解決之道便是加強個人應對工作相關壓力的能力。</p>
+  <p>國際經濟領袖意識到，精神健康問題根植于全球貧困問題。<a href="https://www.weforum.org/agenda/2021/01/6-global-employers-on-how-to-improve-workplace-mental-health/" target="_blank">他們推動對貧困家庭的經濟支持，尤其是那些失業或缺乏工作穩定的人們。</a>在這裡，工作中的精神健康問題成為了一個如何提供社會保障的問題。</p>
+  <p><a href="https://www.ilo.org/global/about-the-ilo/how-the-ilo-works/ilo-director-general/statements-and-speeches/WCMS_757595/lang--en/index.htm" target="_blank">韋達 (Guy Ryder) </a>則從勞工的視角，從以下四個領域推動精神健康保障的措施：</p>
+  <p>1. 法律與社會的措施保障弱勢群體免遭職場上不同形式的歧視</p>
+  <p>2. 對無業者、工作不穩定的人提供社會保障，進行全球財富再分配</p>
+  <p>3. 提供家庭支持與個人精神的舒緩</p>
+  <p>4. 在工作中提供職場保障</p>
+  <p>然而，韋達並沒有清晰闡明，如何通過職場保障促進工作中的精神健康。</p>
+  <p> </p>
+  <p><strong>一、工作的個體化、非正式化與非常規化</strong></p>
+  <p><a href="https://www.ilo.org/wcmsp5/groups/public/---ed_emp/---ifp_skills/documents/publication/wcms_108152.pdf" target="_blank">國際勞工組織2000年的一項研究</a>，為促進工作中的精神健康及預防潛在傷害提出了非常全面的應對措施。然而，這項研究所提出的措施似乎並不能回應到經濟領袖與世衛在前文中所提到的新問題。雖然他們的分析強調了勞工在疫情中面臨的困境，但是造成問題最根源的因素已經存在了很長的一段時間。在世界具有領導性的<a href="https://www.weforum.org/agenda/2021/01/6-global-employers-on-how-to-improve-workplace-mental-health/" target="_blank">石油公司BP</a>，曾指出了四個勞工在疫情中面對的工作問題：</p>
+  <p>1. 對工作的穩定而增加焦慮（56%）</p>
+  <p>2. 因工作日常和機構變動而產生的焦慮（55%）</p>
+  <p>3. 因為在家辦公而感到孤獨和疏離（49%）</p>
+  <p>4. 難以實現工作與生活的平衡（50%）</p>
+  <p>韋達 (Guy Ryder) 的分析是與BP提出的第1、3、4點問題相對應的：線上工作帶來的劇烈變化讓年長的勞工難以適應新的發展，并為工作穩定而感到擔憂。線上工作讓在家工作變得更有可能，也讓勞工感到疏離和孤獨。同時，在家工作也模糊了工作與個人生活的界限，讓勞工「難以實現工作與生活的平衡」。</p>
+  <p>在過去的三十年里，信息技術的革新加速了個人間和社群間的交流，並且從空間和時間上衝擊了工作的界限。在家工作，以及在全球各地工作變得可能，並且廣泛存在在不同的行業中，比如信息技術、金融、銀行、設計等。這一趨勢給工作帶來了三個關鍵性的改變，包括工作的個體化（individualization），工作的非正式化（informalization），以及工作的非常規化（irregularity），所謂的三個「I」。</p>
+  <p>在家工作與在全球各地工作使工作變得靈活，並不斷強化工作的靈活性。同時，它也削弱勞工之間的情感支持與團結。它讓勞工更容易感到孤單及疏離，在面對困難時也更容易感到挫敗及無助。</p>
+  <p>另外，這兩個現象也加速和強化了工作的非正式化，即使工作的非正式化不一定是這兩個現象的必然結果。在許多情景下，勞工，尤其是年輕的勞工，想要擺脫正式的工作關係，同時也為工作不穩定而感到憂慮，并喪失了各種各樣的勞動保障。</p>
+  <p>在家工作以及工作的非正式化也讓工作與生活缺乏區分，而後者正讓勞工在一種非常規的情景下工作，且讓工作模式變得更不規範。長工時是工作的非常規化的一個通常體現。</p>
+  <p>因為信息交流的急促變化，這三個 “I” 的問題至少已經存在了10到15年的時間。它們在疫情前就已經存在，但疫情使這些問題更加惡化。在過去，這三個問題更多局限出現在企業管理人員、信息技術人員以及金融從業者等專業及高學歷人群身上。然而，由於信息交流的革新，這三個問題最近也開始出現在普通勞工身上。</p>
+  <p> </p>
+  <p><strong>二、快遞：一個快速發展的行業</strong></p>
+  <p>在過去的十年里，電子商務在全球快速發展，而快遞行業以高度靈活的工作模式吸引了大規模的勞動力，尤其是年輕一代勞工。另外，因為工作不需要高學歷和掌握高超技術，這讓人們很容易就能進入這一行業。<a href="https://www.scmp.com/video/scmp-originals/3106982/millions-new-blue-collar-jobs-are-piling-pressure-many-workers-china" target="_blank">通過長時間工作，員工也可以獲得相對具有吸引力的工資。</a>在疫情底下，線上購物以及線上下外賣訂單在各個現代都市廣泛流行。因為競爭激烈，產品運輸的速度也成為了考量企業成功與否的唯一因素。在中國，食品配送所花費的平均時間從2016年的38分鐘，降低到了2019年的26分鐘。<a href="https://www.scmp.com/video/scmp-originals/3106982/millions-new-blue-collar-jobs-are-piling-pressure-many-workers-china" target="_blank">在巨大的壓力下，勞工抱怨工作時常感到頭疼。</a></p>
+  <p>在今天，長工時與「工作狂」在數碼產業是常見的，這一狀況已經不再只是存在於硅谷，還存在於孟買、首爾、深圳、上海以及北京。然而，今日，長工時同時存在於普通產業，比如快遞、物流、零售等。在中國，（自願或非自願的）長時間工作被視為是員工榮譽的體現。</p>
+  <p>馬雲，中國電子商務的巨頭，阿里巴巴的創辦人，曾稱長工時是員工「修來的福報」。運營京東網的劉強東，則稱「<a href="https://www.nytimes.com/2019/04/29/technology/china-996-jack-ma.html" target="_blank">混日子的人不是我的兄弟</a>」。「996」這一工作模式（即每天從早上9點工作到晚上9點，每週工作6天）在中國廣泛推廣，它不僅在企業管理人員、信息技術人員、金融專家中流行，同時廣泛存在於普通勞工的工作中。</p>
+  <p>越來越多的新聞報道圍繞過勞死和因工作負擔重而自殺的個案。2020年10月，首爾的一名48歲的快遞員，疑似死於過多的工作負擔。這位快遞員已經從事這一行業超過20年，每天都要從早上六點半工作到晚上差不多十點，工作超過十四個小時。<a href="http://m.koreatimes.co.kr/pages/article.asp?newsIdx=297512" target="_blank">這是2020年，在首爾發生的第八個疑似過勞死案例。</a></p>
+  <p>另外兩個新聞報道了<a href="https://finance.sina.com.cn/chanjing/gsnews/2021-01-13/doc-ikftpnnx6486442.shtml" target="_blank">拼多多的一名女性員工的突然死亡及一位員工的自殺</a>。拼多多是中國最大的農業產品線上平台。這兩個死亡案件都懷疑與過大的工作負擔相關。在這兩件悲劇發生后，拼多多的一位員工表示，他需要每個月工作約三百個小時，每天要從早上十一點工作到晚上的十一點，並且每週要工作六天。另一篇<a href="https://www.cbnweek.com/articles/normal/25501" target="_blank">線上文章</a>指出，拼多多希望擴大市場份額，這是員工長時間勞動的一個原因。而短時間並準時的貨物運輸已經成為了一個吸引更多市場的方式。只是，這一策略是以犧牲勞工的健康乃至生命作為代價的。</p>
+  <p>另一個新聞報道了，一位食物派送員疑似死於過勞。這位派送員生前在「餓了麼」工作，是阿里巴巴旗下的一個線上外賣平台。更糟糕的是，由於這位派送員與「餓了麼」並不存在正式的勞動關係，這一死亡案例並沒有被視為是工傷，<a href="https://finance.sina.com.cn/tech/2021-01-07/doc-iiznezxt1000016.shtml" target="_blank">平台也僅給其家人提供了2000元人民幣為撫恤</a>。4天后，因遭到來自公眾猛烈的譴責，<a href="https://www.bjnews.com.cn/detail/161010558615022.html" target="_blank">平台將撫恤款額增加到了六十萬人民幣。</a></p>
+  <p>餓了麼的案例很好的闡釋了本文在第二部分提及的三個問題：</p>
+  <p>1. 個體化：這位派送員獨自一人工作，沒有同事與工作伙伴</p>
+  <p>2. 非正式化：他與快遞公司沒有正式的勞動關係</p>
+  <p>3. 非常規化：為了獲得更高的收入，他需要長時間工作</p>
+  <p> </p>
+  <p><strong>三、精神健康是一個職業安全與健康的議題</strong></p>
+  <p>由於技術和電子通訊發展的幫助，個體化、非正式化、非常規化，這三個問題深植于現代經濟發展中。造成這三個問題的主要因素是當今的商業模式與結構。因此，這些問題無法僅僅通過世衛與經濟領袖所提出的個人輔導、壓力疏導與經濟援助解決。</p>
+  <p>國際經濟領袖不想觸及存在於商業模式與結構中的問題，相反，他們將問題轉向如何減少因工作不穩所帶來的抑鬱和焦慮，即使他們自身的研究已經指出當下商業模式和結構存在的問題。</p>
+  <p>韋達 (Guy Ryder) 在他的文章中，從勞工的視角提出了四個領域，以保障勞工精神健康的權益。工作中的職業保護是其中一個領域。然而，可惜的是，他沒有花費很多筆墨在討論如何通過職業保護來促進精神健康。雖然如此，他仍將重點重新轉回到勞動關係議題上。工作中的精神健康議題不再僅僅只是一個個人的心理問題，也不再只是一個社會支援的問題，相反，它是一個職業傷害，一個勞工權益的問題。</p>
+  <p>如果這三個 “I” 的問題在工作中持續存在，工作中的精神痛苦也會繼續存在并會惡化。作為一個勞工權益問題，這一問題應該通過兩個勞工傳統途徑解決，即集體談判和法律保障。現實上，現今為止，在工作中的精神健康議題中，法律緯度是少人去討論。在國際勞工組織機制中 (雖然它並不是一個法律實體) ， 有關的公約仍然能夠鼓勵、推動其成員國的法律變革。然而，除了創傷後遺症，國際勞工組織尚未將各種工作相關的精神健康問題明確列明在職業病目錄中，以正式回應日益增長的需求。取而代之的是，國際勞工組織的<a href="https://www.ilo.org/wcmsp5/groups/public/---ed_protect/---protrav/---safework/documents/publication/wcms_125137.pdf" target="_blank">職業病目錄（2010年修訂本）</a>的第2.4.2條規定，以「囊括所有」 (catch-all) 的方式，讓成員國自行處理精神疾病的問題。</p>
+  <p>以上條目中未列出的其他精神和行為障礙，條件是經科學認定或者以適合于國情與國家慣例的方法確定工作活動中接觸有害因素與工人所罹患的精神和行為障礙之間存在著直接的關聯。[2]</p>
+  <p>這一「囊括所有」的條目制訂方式無疑為成員國在正式承認精神疾病為職業病提供了餘地。然而，它並沒有解決以下兩個重要問題：</p>
+  <p>1. 在什麼情況下，一項精神疾病會被視為是與職業相關的？</p>
+  <p>2. 在判斷某一精神疾病與工作的影響之間「直接的關聯」，其標準如何建立？</p>
+  <p>用以診斷工作相關的精神疾病的關鍵要素似乎是，證明勞工曾接觸有關的「有害因素」。然而，該項條目並沒有說明哪些因素是有害因素，以及暴露在特定有害因素的相應強度應為如何。</p>
+  <p>法律在保障勞工的精神健康權利上是關鍵的。在此前提到的研究中，<a href="http://https/www.hkcic.org.hk/video" target="_blank">香港基督教工業委員會</a>極力推動現有勞工規定的變革，倡導將工作導致的精神疾病納入到職業病條例中。這對於勞工捍衛其精神健康權利、向僱主索取賠償有極大的幫助。工委會也呼籲香港政府推動公眾教育，教育內容包括工作中的精神疾病的預防、治療與康復。工作中的精神健康成為勞工權益與職業安全健康的新戰線。</p>
+  <p> </p>
+  <p>注釋：</p>
+  <p>[1] 實際上，政治立場似乎是影響工作中的精神健康的一個具有顯著性的變量。簡單而言，建制派的受訪對象更多在工作內容層面上指出導致其精神痛苦的危害因素，民主派支持者則更多指出工作環境層面上的危害因素。在工作倫理層面上並沒有顯示出很大的差異。點擊<a href="http://https/www.hkcic.org.hk/video" target="_blank">此處</a>閱讀完整報告：香港民意研究所，「我們香港人」第四十二號研究報告，2021年1月29日。</p>
+  <p>[2] 加粗部分為作者所添加。中文翻譯參照<a href="https://www.ilo.org/wcmsp5/groups/public/---ed_protect/---protrav/---safework/documents/publication/wcms_187448.pdf" target="_blank">官方版本</a>。</p>
+  <p> </p>
+  <p>English version: <a href="https://www.lac.org.hk/en/node/320" target="_blank">Workers Deserve the Right to Mental Well-beings: A New Battle on Occupational Health and Safety</a></p>
+  <p><br /></p>
+  <hr />
+  <p><strong>關於我們</strong></p>
+  <p>中國勞動透視是一家關注中國勞工權益的香港非政府組織，成立於二零零五年六月，主力研究中國南方基層勞工的工作環境及勞動關係，致力爭取和維護勞工權益，推動中國勞動法的完善和執行。</p>
+  <p>網頁：<a href="https://www.lac.org.hk/" target="_blank">https://www.lac.org.hk/</a></p>
+  <p>Facebook：@<a href="https://www.facebook.com/LabourActionChina/" target="_blank">LabourActionChina </a></p>
+  <p>Email：lac@lac.hk.org</p>
+  <p>點擊<a href="https://lac.us17.list-manage.com/subscribe?u=36b5b651e1e0e38f726cba0e3&amp;id=427133f77e" target="_blank">此處</a>訂閱我們的英文單月刊Change</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2021-02-24</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-02-24/%E5%86%8D%E8%AB%87%E5%9D%82%E5%8F%A3%E5%AE%89%E5%90%BE%E7%9A%84%E8%A9%B1%E9%A2%A8%E5%8F%8A%E5%85%B6%E5%95%8F%E9%A1%8C/">
+          再談坂口安吾的話風及其問題
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-02-23</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-02-23/%E6%AD%B7%E5%8F%B2%E6%95%99%E7%A7%91%E6%9B%B8%E6%B2%92%E6%95%99%E7%9A%84%E4%BA%8B-%E5%9C%B0%E4%B8%8B%E6%8A%B5%E6%8A%97%E9%81%8B%E5%8B%95-%E6%B3%A2%E8%98%AD%E5%9C%B0%E4%B8%8B%E5%9C%8B-1939-1945-%E6%B3%A2%E8%98%AD%E6%95%91%E5%9C%8B%E8%BB%8D-%E5%9C%B0%E4%B8%8B%E6%8A%97%E6%88%B0-%E7%B4%8D%E7%B2%B9%E5%BE%B7%E8%BB%8D/">
+          【歷史教科書沒教的事】地下抵抗運動：波蘭地下國（1939-1945）｜波蘭救國軍｜地下抗戰｜納粹德軍｜蘇聯紅軍｜暴風雨行動
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-02-22</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-02-22/%E5%9D%82%E5%8F%A3%E5%AE%89%E5%90%BE%E7%9A%84%E5%B0%8F%E8%AA%AA%E8%A7%80%E5%8F%8A%E5%85%B6%E5%95%8F%E9%A1%8C/">
+          坂口安吾的小說觀及其問題
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-02-17</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-02-17/%E5%B5%90%E9%9F%B3%E7%A4%BE-%E6%89%8B%E5%B7%A5%E9%9B%BB%E9%9F%B3%E5%B0%88%E8%BC%AF-%E6%B2%92%E6%9C%89%E7%BD%90%E9%A0%AD%E6%84%9F-%E4%B9%9F%E8%83%BD%E6%9C%89%E5%BC%9B%E6%94%BE%E8%99%9B%E5%B9%BB%E6%84%9F-Star-Hits/">
+          嵐音社：手工電音專輯！沒有罐頭感，也能有弛放虛幻感！《Star Hits》
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2021-02-22/%E5%9D%82%E5%8F%A3%E5%AE%89%E5%90%BE%E7%9A%84%E5%B0%8F%E8%AA%AA%E8%A7%80%E5%8F%8A%E5%85%B6%E5%95%8F%E9%A1%8C/">
+            前一篇：坂口安吾的小說觀及其問題
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2021-02-23/%E6%AD%B7%E5%8F%B2%E6%95%99%E7%A7%91%E6%9B%B8%E6%B2%92%E6%95%99%E7%9A%84%E4%BA%8B-%E5%9C%B0%E4%B8%8B%E6%8A%B5%E6%8A%97%E9%81%8B%E5%8B%95-%E6%B3%A2%E8%98%AD%E5%9C%B0%E4%B8%8B%E5%9C%8B-1939-1945-%E6%B3%A2%E8%98%AD%E6%95%91%E5%9C%8B%E8%BB%8D-%E5%9C%B0%E4%B8%8B%E6%8A%97%E6%88%B0-%E7%B4%8D%E7%B2%B9%E5%BE%B7%E8%BB%8D/">
+            後一篇：【歷史教科書沒教的事】地下抵抗運動：波蘭地下國（1939-1945）｜波蘭救國軍｜地下抗戰｜納粹德軍｜蘇聯紅軍｜暴風雨行動
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2021-02-22/%E5%9D%82%E5%8F%A3%E5%AE%89%E5%90%BE%E7%9A%84%E5%B0%8F%E8%AA%AA%E8%A7%80%E5%8F%8A%E5%85%B6%E5%95%8F%E9%A1%8C/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2021-02-23/%E6%AD%B7%E5%8F%B2%E6%95%99%E7%A7%91%E6%9B%B8%E6%B2%92%E6%95%99%E7%9A%84%E4%BA%8B-%E5%9C%B0%E4%B8%8B%E6%8A%B5%E6%8A%97%E9%81%8B%E5%8B%95-%E6%B3%A2%E8%98%AD%E5%9C%B0%E4%B8%8B%E5%9C%8B-1939-1945-%E6%B3%A2%E8%98%AD%E6%95%91%E5%9C%8B%E8%BB%8D-%E5%9C%B0%E4%B8%8B%E6%8A%97%E6%88%B0-%E7%B4%8D%E7%B2%B9%E5%BE%B7%E8%BB%8D/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2021-02-23/%E6%AD%B7%E5%8F%B2%E6%95%99%E7%A7%91%E6%9B%B8%E6%B2%92%E6%95%99%E7%9A%84%E4%BA%8B-%E5%9C%B0%E4%B8%8B%E6%8A%B5%E6%8A%97%E9%81%8B%E5%8B%95-%E6%B3%A2%E8%98%AD%E5%9C%B0%E4%B8%8B%E5%9C%8B-1939-1945-%E6%B3%A2%E8%98%AD%E6%95%91%E5%9C%8B%E8%BB%8D-%E5%9C%B0%E4%B8%8B%E6%8A%97%E6%88%B0-%E7%B4%8D%E7%B2%B9%E5%BE%B7%E8%BB%8D/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2021-02-22/%E5%9D%82%E5%8F%A3%E5%AE%89%E5%90%BE%E7%9A%84%E5%B0%8F%E8%AA%AA%E8%A7%80%E5%8F%8A%E5%85%B6%E5%95%8F%E9%A1%8C/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2021-02-22/%E5%9D%82%E5%8F%A3%E5%AE%89%E5%90%BE%E7%9A%84%E5%B0%8F%E8%AA%AA%E8%A7%80%E5%8F%8A%E5%85%B6%E5%95%8F%E9%A1%8C/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2021-02-23/%E6%AD%B7%E5%8F%B2%E6%95%99%E7%A7%91%E6%9B%B8%E6%B2%92%E6%95%99%E7%9A%84%E4%BA%8B-%E5%9C%B0%E4%B8%8B%E6%8A%B5%E6%8A%97%E9%81%8B%E5%8B%95-%E6%B3%A2%E8%98%AD%E5%9C%B0%E4%B8%8B%E5%9C%8B-1939-1945-%E6%B3%A2%E8%98%AD%E6%95%91%E5%9C%8B%E8%BB%8D-%E5%9C%B0%E4%B8%8B%E6%8A%97%E6%88%B0-%E7%B4%8D%E7%B2%B9%E5%BE%B7%E8%BB%8D/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2021-02-23/%E6%AD%B7%E5%8F%B2%E6%95%99%E7%A7%91%E6%9B%B8%E6%B2%92%E6%95%99%E7%9A%84%E4%BA%8B-%E5%9C%B0%E4%B8%8B%E6%8A%B5%E6%8A%97%E9%81%8B%E5%8B%95-%E6%B3%A2%E8%98%AD%E5%9C%B0%E4%B8%8B%E5%9C%8B-1939-1945-%E6%B3%A2%E8%98%AD%E6%95%91%E5%9C%8B%E8%BB%8D-%E5%9C%B0%E4%B8%8B%E6%8A%97%E6%88%B0-%E7%B4%8D%E7%B2%B9%E5%BE%B7%E8%BB%8D/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2021-02-22/%E5%9D%82%E5%8F%A3%E5%AE%89%E5%90%BE%E7%9A%84%E5%B0%8F%E8%AA%AA%E8%A7%80%E5%8F%8A%E5%85%B6%E5%95%8F%E9%A1%8C/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

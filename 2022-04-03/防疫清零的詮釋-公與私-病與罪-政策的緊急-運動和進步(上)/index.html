@@ -1,0 +1,3472 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>防疫清零的詮釋｜公與私，病與罪，政策的緊急、運動和進步(上) – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+防疫清零的詮釋｜公與私，病與罪，政策的緊急、運動和進步(上)
+——
+" />
+    <meta property="og:description" content="
+防疫清零的詮釋｜公與私，病與罪，政策的緊急、運動和進步(上)
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="防疫清零的詮釋｜公與私，病與罪，政策的緊急、運動和進步(上)" />
+    <meta property="twitter:title" content="防疫清零的詮釋｜公與私，病與罪，政策的緊急、運動和進步(上)" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40KMnese%2F%25E9%2598%25B2%25E7%2596%25AB%25E6%25B8%2585%25E9%259B%25B6%25E7%259A%2584%25E8%25A9%25AE%25E9%2587%258B-%25E5%2585%25AC%25E8%2588%2587%25E7%25A7%2581-%25E7%2597%2585%25E8%2588%2587%25E7%25BD%25AA-%25E6%2594%25BF%25E7%25AD%2596%25E7%259A%2584%25E7%25B7%258A%25E6%2580%25A5-%25E9%2581%258B%25E5%258B%2595%25E5%2592%258C%25E9%2580%25B2%25E6%25AD%25A5-%25E4%25B8%258A-bafyreidovtjr3rht2egwwllqsbdprwd4774hdzk6mdb3iinx5lavp2kxay" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@KMnese/%E9%98%B2%E7%96%AB%E6%B8%85%E9%9B%B6%E7%9A%84%E8%A9%AE%E9%87%8B-%E5%85%AC%E8%88%87%E7%A7%81-%E7%97%85%E8%88%87%E7%BD%AA-%E6%94%BF%E7%AD%96%E7%9A%84%E7%B7%8A%E6%80%A5-%E9%81%8B%E5%8B%95%E5%92%8C%E9%80%B2%E6%AD%A5-%E4%B8%8A-bafyreidovtjr3rht2egwwllqsbdprwd4774hdzk6mdb3iinx5lavp2kxay" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@KMnese/%E9%98%B2%E7%96%AB%E6%B8%85%E9%9B%B6%E7%9A%84%E8%A9%AE%E9%87%8B-%E5%85%AC%E8%88%87%E7%A7%81-%E7%97%85%E8%88%87%E7%BD%AA-%E6%94%BF%E7%AD%96%E7%9A%84%E7%B7%8A%E6%80%A5-%E9%81%8B%E5%8B%95%E5%92%8C%E9%80%B2%E6%AD%A5-%E4%B8%8A-bafyreidovtjr3rht2egwwllqsbdprwd4774hdzk6mdb3iinx5lavp2kxay&text=防疫清零的詮釋｜公與私，病與罪，政策的緊急、運動和進步(上)&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@KMnese/%E9%98%B2%E7%96%AB%E6%B8%85%E9%9B%B6%E7%9A%84%E8%A9%AE%E9%87%8B-%E5%85%AC%E8%88%87%E7%A7%81-%E7%97%85%E8%88%87%E7%BD%AA-%E6%94%BF%E7%AD%96%E7%9A%84%E7%B7%8A%E6%80%A5-%E9%81%8B%E5%8B%95%E5%92%8C%E9%80%B2%E6%AD%A5-%E4%B8%8A-bafyreidovtjr3rht2egwwllqsbdprwd4774hdzk6mdb3iinx5lavp2kxay&title=防疫清零的詮釋｜公與私，病與罪，政策的緊急、運動和進步(上)" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@KMnese/%E9%98%B2%E7%96%AB%E6%B8%85%E9%9B%B6%E7%9A%84%E8%A9%AE%E9%87%8B-%E5%85%AC%E8%88%87%E7%A7%81-%E7%97%85%E8%88%87%E7%BD%AA-%E6%94%BF%E7%AD%96%E7%9A%84%E7%B7%8A%E6%80%A5-%E9%81%8B%E5%8B%95%E5%92%8C%E9%80%B2%E6%AD%A5-%E4%B8%8A-bafyreidovtjr3rht2egwwllqsbdprwd4774hdzk6mdb3iinx5lavp2kxay&title=防疫清零的詮釋｜公與私，病與罪，政策的緊急、運動和進步(上)" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=防疫清零的詮釋｜公與私，病與罪，政策的緊急、運動和進步(上)&body=
+防疫清零的詮釋｜公與私，病與罪，政策的緊急、運動和進步(上)
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@KMnese/%E9%98%B2%E7%96%AB%E6%B8%85%E9%9B%B6%E7%9A%84%E8%A9%AE%E9%87%8B-%E5%85%AC%E8%88%87%E7%A7%81-%E7%97%85%E8%88%87%E7%BD%AA-%E6%94%BF%E7%AD%96%E7%9A%84%E7%B7%8A%E6%80%A5-%E9%81%8B%E5%8B%95%E5%92%8C%E9%80%B2%E6%AD%A5-%E4%B8%8A-bafyreidovtjr3rht2egwwllqsbdprwd4774hdzk6mdb3iinx5lavp2kxay" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@KMnese/%E9%98%B2%E7%96%AB%E6%B8%85%E9%9B%B6%E7%9A%84%E8%A9%AE%E9%87%8B-%E5%85%AC%E8%88%87%E7%A7%81-%E7%97%85%E8%88%87%E7%BD%AA-%E6%94%BF%E7%AD%96%E7%9A%84%E7%B7%8A%E6%80%A5-%E9%81%8B%E5%8B%95%E5%92%8C%E9%80%B2%E6%AD%A5-%E4%B8%8A-bafyreidovtjr3rht2egwwllqsbdprwd4774hdzk6mdb3iinx5lavp2kxay&title=防疫清零的詮釋｜公與私，病與罪，政策的緊急、運動和進步(上)&caption=
+防疫清零的詮釋｜公與私，病與罪，政策的緊急、運動和進步(上)
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=防疫清零的詮釋｜公與私，病與罪，政策的緊急、運動和進步(上)&url=https://matters.news/@KMnese/%E9%98%B2%E7%96%AB%E6%B8%85%E9%9B%B6%E7%9A%84%E8%A9%AE%E9%87%8B-%E5%85%AC%E8%88%87%E7%A7%81-%E7%97%85%E8%88%87%E7%BD%AA-%E6%94%BF%E7%AD%96%E7%9A%84%E7%B7%8A%E6%80%A5-%E9%81%8B%E5%8B%95%E5%92%8C%E9%80%B2%E6%AD%A5-%E4%B8%8A-bafyreidovtjr3rht2egwwllqsbdprwd4774hdzk6mdb3iinx5lavp2kxay" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>防疫清零的詮釋｜公與私，病與罪，政策的緊急、運動和進步(上)</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-04-03
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 戰地島民KMnese</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@KMnese/%E9%98%B2%E7%96%AB%E6%B8%85%E9%9B%B6%E7%9A%84%E8%A9%AE%E9%87%8B-%E5%85%AC%E8%88%87%E7%A7%81-%E7%97%85%E8%88%87%E7%BD%AA-%E6%94%BF%E7%AD%96%E7%9A%84%E7%B7%8A%E6%80%A5-%E9%81%8B%E5%8B%95%E5%92%8C%E9%80%B2%E6%AD%A5-%E4%B8%8A-bafyreidovtjr3rht2egwwllqsbdprwd4774hdzk6mdb3iinx5lavp2kxay" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1649044581000-->
+<p><a href="https://matters.news/@KMnese/%E9%98%B2%E7%96%AB%E6%B8%85%E9%9B%B6%E7%9A%84%E8%A9%AE%E9%87%8B-%E5%85%AC%E8%88%87%E7%A7%81-%E7%97%85%E8%88%87%E7%BD%AA-%E6%94%BF%E7%AD%96%E7%9A%84%E7%B7%8A%E6%80%A5-%E9%81%8B%E5%8B%95%E5%92%8C%E9%80%B2%E6%AD%A5-%E4%B8%8A-bafyreidovtjr3rht2egwwllqsbdprwd4774hdzk6mdb3iinx5lavp2kxay">防疫清零的詮釋｜公與私，病與罪，政策的緊急、運動和進步(上)</a>
+——</p>
+
+<div>
+  <p>歡迎追蹤：<a href="https://matters.news/@KMnese/%E4%BB%8B%E7%B4%B9%E6%A8%99%E7%B1%A4-%E9%87%91%E9%96%80%E4%BA%BA%E5%9C%A8matters%E5%AF%AB%E4%BB%80%E9%BA%BC-bafyreieniykr5vc4lgtdivo4g46rity3alz7cgmopunh65yemrd4kwox6m" rel="noopener noreferrer" target="_blank">戰地島民</a>｜<a href="https://matters.news/tags/VGFnOjI1MDI3" rel="noopener noreferrer" target="_blank">＃邊緣島民講金門</a>｜<a href="https://matters.news/~frontline" rel="noopener noreferrer" target="_blank">圍爐：邊境濁酒路邊攤</a><br /></p>
+  <p><br /></p>
+  <h2 id="section">0</h2>
+  <p>在Covid-19疫情爆發至今，中國大陸除最初在武漢爆發疫情的慘況，在兩年多以來，近</p>
+  <p>期，以Omicron變種引發的疫情可能是規模最大的流行。頗受爭議的是，在世界範圍，由於</p>
+  <p>疫苗研發有成並已實施大規模接種，Covid-19的Omicron變種造成的公衛危機已大為降低，</p>
+  <p>因此，有多國均實施「與病毒共存」的防疫政策。但是，台海兩岸特別是中國當局堅持以</p>
+  <p>「清零」為目標的防疫政策，就格外引人注目。<br /></p>
+  <p>藉著在中國方興未艾的疫情與防疫措施，我既回顧過去兩年多的疫情特徵，對應當前中國</p>
+  <p>防疫的現況，甚至連結到金門當年的防鼠疫政策，從不同關鍵字去發掘疫病、防疫與清零</p>
+  <p>牽涉到的相關現象，以及其底下的隱喻。<br /></p>
+  <hr />
+  <h2 id="section-1"><br /></h2>
+  <h2 id="section-2">1  軍事隱喻傳達的「公與私」</h2>
+  <p>傳染病，顯然是一個涉及公共利益，而公共利益多數是以國家強制力實現的。在現代民主</p>
+  <p>政治下，國家強制力實施的公權力通常代表最多數人的利益，可是，人皆有基本人權，且</p>
+  <p><strong>民主不只服從多數也應尊重少數。</strong>公權力的強制力與私領域的自由，通常遵照憲法去規範</p>
+  <p>此間的份際，而應對疫情最普遍的爭論之一，便是：<strong>「為了在傳染病危機下保存公共利</strong></p>
+  <p><strong>益，會侵犯多少個人私領域的自由呢？」</strong><br /></p>
+  <p><a href="https://law.moj.gov.tw/LawClass/ExContent.aspx?ty=C&amp;CC=D&amp;CNO=690" rel="noopener noreferrer" target="_blank">台灣大法官第690號解釋文，即是針對「傳染病為理由是否可以限制人身自由」</a>解釋。<br /></p>
+  <p>我無意也無能解說這些法學主題。</p>
+  <p><br /></p>
+  <p><strong>不過，關於「公與私」的爭辯我注意到的是，在疫情期間時常提到的軍事隱喻：</strong>「防疫視</p>
+  <p>同作戰」這類用戰爭作為隱喻，就值得考究為什麼「防疫『是』戰爭」呢？</p>
+  <p>疫病與戰爭很明顯的共通特質就是「受傷與死亡」，就算不是傳染病我們也會使用「對抗</p>
+  <p>病魔入侵」這類軍事語言。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/6e623593-91a0-4ce4-afe7-3af4f58019dc.png" data-asset-id="6e623593-91a0-4ce4-afe7-3af4f58019dc" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p><br /></p>
+  <p>不過，說防疫就是作戰我認為表達的還有「戰時制度」的特定價值觀：<strong><br /><br />其一，戰爭是著眼於「全體的勝負」的，</strong>因此，戰爭中的群體最大利益最為重要，連帶就</p>
+  <p>暗示個體自由有所犧牲是可接受且必然的; <strong><br /><br />其二，戰爭也暗示著一種軍事化的治理架構</strong>，由「指揮官」領導防疫，民眾如軍隊各有任</p>
+  <p>務，且彼此「不必然享有平等權利」。</p>
+  <p><strong>軍事隱喻就是傳達出群體優先於個體、個體的自由當然受限的價值觀。</strong><br /></p>
+  <p><br /></p>
+  <p><em>我們鮮少想到，這場戰爭並沒有具體的敵人，作為敵人的病毒是以人體為宿主的，我們無法實際的「作戰」或「擊潰」敵人，以致於，我們反將可能傳播病毒的行為者或染疫的受害者當作敵人。</em></p>
+  <h2 id="section-3"><br /></h2>
+  <p><br /></p>
+  <p><br /></p>
+  <h2 id="section-4">2 病與罪：懲罰與管控</h2>
+  <p><br /></p>
+  <p>套用傅科的論述，傳統對疾病的處置與現代對犯罪的懲戒有高的相似性，我們對罪犯的作</p>
+  <p>法就是放逐、監禁，以隔絕於社會群體之外。<br /></p>
+  <p>上段提到，染疫者其實是受害者，但卻可能被當「敵人」看待，同理，染疫是與健康不同</p>
+  <p>的「異常」，更糟的是異常還會傳染，因此，感染肺炎不僅不受群體接納，甚至群體還會</p>
+  <p>視其存在為一種錯誤：染疫者應該接受監禁般的隔離而不該在外「傷害他人」、阻絕國外</p>
+  <p>留學生回國則是「放逐於原生社會外」這種古老的懲罰……PCR檢測成了法律認證為良民的</p>
+  <p>證明、染疫者將牽連周遭相關人受隔絕的待遇宛如「連坐」……</p>
+  <p><br /></p>
+  <p><em>現代法律其實認定的「犯罪」是有動機的行為，不過，前現代只管你做了什麼、該處以何種懲罰，在這波疫情中，染疫者就像前現代的罪犯般：只要你傳播或有可能傳播給他人，你就必須承受「懲罰」：隔絕於社會之外。</em></p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/290785fc-fc89-417d-8245-e792092a3323.jpeg" data-asset-id="290785fc-fc89-417d-8245-e792092a3323" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>值得一提的是，能將防疫、染疫與法律、罪犯類比的還有其管制方式，中國當局常用「嚴</p>
+  <p>防死守」來描述對疫情的管控，但這個成語其實也很適合用於防範犯罪。而在「大有為」</p>
+  <p>政府由上至下的防控施政，「無罪推定」的原則已經蕩然無存，每個民眾有義務在被要求</p>
+  <p>時「證明」自己並非異常、不會對社會有害，而一旦發現染疫、有染疫的疑慮就會遭受隔<br /></p>
+  <p>絕於群體的懲罰：這「懲罰」是前現代按照「行為與後果」的模式判斷，其實不相容於現</p>
+  <p>代法律。於是，我們發現人們開始將「染疫」、「不配合檢測、隔離」詮釋為不道德的行</p>
+  <p>為，就像犯罪般「有錯」。<br /></p>
+  <p><br /></p>
+  <p><em>有鑑於染疫的管控與處制與犯罪的偵辦與刑罰在實踐上如此相近，我們實在有理由懷疑：防疫措施，無論有疫或無意，都已經成為一套「管制」人民的模式。</em><br /></p>
+  <p><br /></p>
+  <p><br /></p>
+  <h2 id="section-5"><strong>3 防疫政策的「緊急」</strong></h2>
+  <p>傳染病有其危害公益的緊急性，因此，所有防疫政策幾乎都可說是「緊急處理」，但是，</p>
+  <p>是否有一正常程序去規範如何制訂「緊急」的相關政策呢？</p>
+  <p><br /></p>
+  <blockquote>
+<strong><em>一個社會的文明程度，取決於對正當程序的堅持與實踐能力。緊急危險不能成為正當<br />程序的例外。愈緊急，愈應該嚴謹有效地遵守正當程序，因為緊急情況最容易出現致<br />命的悲劇。</em><br />      -<em>-許玉秀，《釋字609號》不同意見書</em></strong><br />  </blockquote>
+  <p><br /></p>
+  <p>《中華民國憲法》的某一條文就曾是明顯的悖論： <br /></p>
+  <p>憲法應是最高位階的法律，但是，憲法中有「實施緊急法律」的條文這就等於憲法包含</p>
+  <p>「取消自身最高地位」的條文……這個由憲法授權高於自身的，就是兩蔣時期的《動員戡亂</p>
+  <p>條例》。<br /></p>
+  <p>同理，如今中國政府因遭逢疫情的緊急危機，實施應對緊急事態的政策和法規，可是，如</p>
+  <p>同上面引文所言，這是經過正常程序的「緊急政策」嗎？<strong>如果缺乏正常程序，那麼雖然法</strong></p>
+  <p><strong>規的施行的確應對緊急的疫情危害，問題在於，誰來宣布「緊急」已經解除？</strong></p>
+  <p><br /></p>
+  <p>我想，有個防疫愛好者笑話可當作上篇的結尾：<br /></p>
+  <blockquote>
+<em>「我預約了護照辦理的業務，請問需要等多久？」<br />「從今天算起，正好十年。」<br />「請問是十年後的上午還是下午？」<br />「反正都十年後了，這兩個還有區別嗎？」<br />「剛社區的防疫愛好者通知我，十年後的那天上午，我們家還要去做次核酸。」</em><br />  </blockquote>
+  <p><br />這笑話看似荒謬。<br /></p>
+  <p>不過，在兩岸前線的金門，在沒有鼠疫危害的狀況下卻持續了超過30年的滅鼠政策……</p>
+  <hr />
+  <p><br /></p>
+  <p>金門鼠疫防疫動員提供一個可對照的案例：防疫可以是一種管制權威的建立、可以攀附政治目標與宣傳的意涵、甚至，還可以作為分析當時執政者價值觀的中介……而透過上述這些面向，或許也能用以詮釋甚至超譯中國當前的防疫政策。</p>
+  <p>在下一篇，我就想從「緊急防疫的政治目的」、「動員式政策」乃至精神面的「現代化的進步」的概念繼續討論中國當前的防疫清零。<br /></p>
+  <h2 id="section-6"><br /><br />延伸閱讀：<br /></h2>
+  <p>👉 我在Matters寫什麼？<a href="https://matters.news/@KMnese/%E9%98%B2%E7%96%AB%E6%B8%85%E9%9B%B6%E7%9A%84%E8%A9%AE%E9%87%8B-%E5%85%AC%E8%88%87%E7%A7%81-%E7%97%85%E8%88%87%E7%BD%AA-%E6%94%BF%E7%AD%96%E7%9A%84%E7%B7%8A%E6%80%A5-%E9%81%8B%E5%8B%95%E5%92%8C%E9%80%B2%E6%AD%A5-%E4%B8%8A-bafyreidovtjr3rht2egwwllqsbdprwd4774hdzk6mdb3iinx5lavp2kxay" rel="noopener noreferrer" target="_blank"> 可以看這篇介紹。</a></p>
+  <p>👉 「金門的防疫」共三篇：<a href="https://matters.news/@KMnese/%E9%98%B2%E7%96%AB-%E5%89%8D%E7%B7%9A-%E9%87%91%E9%96%80%E7%9A%84%E8%B1%AC-%E8%80%81%E9%BC%A0%E8%88%87%E8%92%BC%E8%A0%85-%E4%B8%8A-zdpuAusbrftCRaopKAgebmSHA9XYC36Lu5pSSB6tUT8JcBYcH" rel="noopener noreferrer" target="_blank">豬、老鼠與蒼蠅</a>、 <a href="https://matters.news/@KMnese/%E9%98%B2%E7%96%AB-%E5%89%8D%E7%B7%9A-%E9%87%91%E9%96%80%E7%9A%84%E8%B1%AC-%E8%80%81%E9%BC%A0%E8%88%87%E8%92%BC%E8%A0%85-%E4%B8%8A-zdpuAusbrftCRaopKAgebmSHA9XYC36Lu5pSSB6tUT8JcBYcH" rel="noopener noreferrer" target="_blank">滅鼠運動</a>、 <a href="https://matters.news/@KMnese/%E9%87%91%E9%96%80-l-%E4%BB%A5%E9%BC%A0%E7%96%AB%E7%82%BA%E5%90%8D%E7%9A%84%E5%8B%95%E5%93%A1%E8%88%87-%E7%B7%8A%E6%80%A5%E7%8B%80%E6%85%8B-zdpuAuTKGQhrispcZz9Dg9gzsi6pFM1tG3bkZwMo9m5hRnNE9" rel="noopener noreferrer" target="_blank">鼠疫為名的緊急狀態</a><br /></p>
+  <p>👉<a href="https://matters.news/@KMnese/%E6%AD%A6%E6%BC%A2%E8%82%BA%E7%82%8E%E5%92%8C%E7%97%85%E6%AF%92%E7%9A%84%E9%9A%B1%E5%96%BB-%E4%BB%96%E8%99%95-%E6%87%B2%E7%BD%B0%E5%92%8C%E6%88%B0%E7%88%AD-bafyreig4nmtyxwzy7txec5a3tijltwq2a22gai24f7y6kfjbxwpjazzdn4" rel="noopener noreferrer" target="_blank"> 武漢肺炎和病毒的隱喻：他處、懲罰和戰爭</a></p>
+  <p><br />歡迎追蹤：<a href="https://matters.news/@KMnese/%E4%BB%8B%E7%B4%B9%E6%A8%99%E7%B1%A4-%E9%87%91%E9%96%80%E4%BA%BA%E5%9C%A8matters%E5%AF%AB%E4%BB%80%E9%BA%BC-bafyreieniykr5vc4lgtdivo4g46rity3alz7cgmopunh65yemrd4kwox6m" rel="noopener noreferrer" target="_blank">戰地島民</a>｜<a href="https://matters.news/tags/VGFnOjI1MDI3" rel="noopener noreferrer" target="_blank">＃邊緣島民講金門</a>｜<a href="https://matters.news/~frontline" rel="noopener noreferrer" target="_blank">圍爐：邊境濁酒路邊攤</a><br /></p>
+  <p><br /><br /></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2022-04-04</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-04-04/%E5%A5%B3%E5%A5%B9-%E5%B0%8E%E6%BC%94%E5%80%AA%E5%8C%96%E8%BB%92-%E6%AF%8F%E5%80%8B%E4%BA%BA%E9%83%BD%E6%9C%89%E6%AF%8F%E5%80%8B%E4%BA%BA%E7%9A%84%E6%B7%B1%E6%B7%B5-%E5%9C%8D%E7%88%90-JointU/">
+          《女她》導演倪化軒：每個人都有每個人的深淵|圍爐•JointU
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-04-04</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-04-04/%E5%B0%8D%E8%A9%B1%E8%91%89%E7%B6%AD%E6%98%8C-%E4%BA%BA%E9%81%93%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E5%B9%B3%E8%A1%A1%E8%97%9D%E8%A1%93-%E5%9C%8D%E7%88%90-CUHK/">
+          對話葉維昌：人道工作中的平衡藝術 | 圍爐 · CUHK
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-04-02</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-04-02/%E6%9C%89%E9%A9%9A%E7%84%A1%E9%9A%AA%E7%9A%84-2022-%E6%B2%99%E5%B6%BA%E8%A1%8C/">
+          有驚無險的 2022 沙嶺行
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-04-01</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-04-01/%E7%88%90%E5%AD%90%E5%85%A7%E5%A4%96-%E6%9C%89%E6%99%82-%E6%88%91%E5%B8%8C%E6%9C%9B%E5%BA%B7%E5%A5%88%E7%88%BE%E6%B2%92%E6%9C%89%E9%8C%84%E5%8F%96%E4%BD%A0/">
+          爐子內外 | 「有時，我希望康奈爾沒有錄取你」
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2022-04-02/%E6%9C%89%E9%A9%9A%E7%84%A1%E9%9A%AA%E7%9A%84-2022-%E6%B2%99%E5%B6%BA%E8%A1%8C/">
+            前一篇：有驚無險的 2022 沙嶺行
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2022-04-04/%E5%B0%8D%E8%A9%B1%E8%91%89%E7%B6%AD%E6%98%8C-%E4%BA%BA%E9%81%93%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E5%B9%B3%E8%A1%A1%E8%97%9D%E8%A1%93-%E5%9C%8D%E7%88%90-CUHK/">
+            後一篇：對話葉維昌：人道工作中的平衡藝術 | 圍爐 · CUHK
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2022-04-02/%E6%9C%89%E9%A9%9A%E7%84%A1%E9%9A%AA%E7%9A%84-2022-%E6%B2%99%E5%B6%BA%E8%A1%8C/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2022-04-04/%E5%B0%8D%E8%A9%B1%E8%91%89%E7%B6%AD%E6%98%8C-%E4%BA%BA%E9%81%93%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E5%B9%B3%E8%A1%A1%E8%97%9D%E8%A1%93-%E5%9C%8D%E7%88%90-CUHK/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2022-04-04/%E5%B0%8D%E8%A9%B1%E8%91%89%E7%B6%AD%E6%98%8C-%E4%BA%BA%E9%81%93%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E5%B9%B3%E8%A1%A1%E8%97%9D%E8%A1%93-%E5%9C%8D%E7%88%90-CUHK/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2022-04-02/%E6%9C%89%E9%A9%9A%E7%84%A1%E9%9A%AA%E7%9A%84-2022-%E6%B2%99%E5%B6%BA%E8%A1%8C/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2022-04-02/%E6%9C%89%E9%A9%9A%E7%84%A1%E9%9A%AA%E7%9A%84-2022-%E6%B2%99%E5%B6%BA%E8%A1%8C/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2022-04-04/%E5%B0%8D%E8%A9%B1%E8%91%89%E7%B6%AD%E6%98%8C-%E4%BA%BA%E9%81%93%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E5%B9%B3%E8%A1%A1%E8%97%9D%E8%A1%93-%E5%9C%8D%E7%88%90-CUHK/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2022-04-04/%E5%B0%8D%E8%A9%B1%E8%91%89%E7%B6%AD%E6%98%8C-%E4%BA%BA%E9%81%93%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E5%B9%B3%E8%A1%A1%E8%97%9D%E8%A1%93-%E5%9C%8D%E7%88%90-CUHK/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2022-04-02/%E6%9C%89%E9%A9%9A%E7%84%A1%E9%9A%AA%E7%9A%84-2022-%E6%B2%99%E5%B6%BA%E8%A1%8C/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

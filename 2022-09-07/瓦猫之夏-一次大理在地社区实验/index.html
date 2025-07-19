@@ -1,0 +1,3740 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>瓦猫之夏，一次大理在地社区实验 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+瓦猫之夏，一次大理在地社区实验
+——
+" />
+    <meta property="og:description" content="
+瓦猫之夏，一次大理在地社区实验
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="瓦猫之夏，一次大理在地社区实验" />
+    <meta property="twitter:title" content="瓦猫之夏，一次大理在地社区实验" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40706youthspace%2F%25E7%2593%25A6%25E7%258C%25AB%25E4%25B9%258B%25E5%25A4%258F-%25E4%25B8%2580%25E6%25AC%25A1%25E5%25A4%25A7%25E7%2590%2586%25E5%259C%25A8%25E5%259C%25B0%25E7%25A4%25BE%25E5%258C%25BA%25E5%25AE%259E%25E9%25AA%258C-bafyreidzipvvghlye3fjlo7uxivbotxjaznj6vqkwwrfxjpxvvuvjp4zwm" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@706youthspace/%E7%93%A6%E7%8C%AB%E4%B9%8B%E5%A4%8F-%E4%B8%80%E6%AC%A1%E5%A4%A7%E7%90%86%E5%9C%A8%E5%9C%B0%E7%A4%BE%E5%8C%BA%E5%AE%9E%E9%AA%8C-bafyreidzipvvghlye3fjlo7uxivbotxjaznj6vqkwwrfxjpxvvuvjp4zwm" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@706youthspace/%E7%93%A6%E7%8C%AB%E4%B9%8B%E5%A4%8F-%E4%B8%80%E6%AC%A1%E5%A4%A7%E7%90%86%E5%9C%A8%E5%9C%B0%E7%A4%BE%E5%8C%BA%E5%AE%9E%E9%AA%8C-bafyreidzipvvghlye3fjlo7uxivbotxjaznj6vqkwwrfxjpxvvuvjp4zwm&text=瓦猫之夏，一次大理在地社区实验&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@706youthspace/%E7%93%A6%E7%8C%AB%E4%B9%8B%E5%A4%8F-%E4%B8%80%E6%AC%A1%E5%A4%A7%E7%90%86%E5%9C%A8%E5%9C%B0%E7%A4%BE%E5%8C%BA%E5%AE%9E%E9%AA%8C-bafyreidzipvvghlye3fjlo7uxivbotxjaznj6vqkwwrfxjpxvvuvjp4zwm&title=瓦猫之夏，一次大理在地社区实验" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@706youthspace/%E7%93%A6%E7%8C%AB%E4%B9%8B%E5%A4%8F-%E4%B8%80%E6%AC%A1%E5%A4%A7%E7%90%86%E5%9C%A8%E5%9C%B0%E7%A4%BE%E5%8C%BA%E5%AE%9E%E9%AA%8C-bafyreidzipvvghlye3fjlo7uxivbotxjaznj6vqkwwrfxjpxvvuvjp4zwm&title=瓦猫之夏，一次大理在地社区实验" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=瓦猫之夏，一次大理在地社区实验&body=
+瓦猫之夏，一次大理在地社区实验
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@706youthspace/%E7%93%A6%E7%8C%AB%E4%B9%8B%E5%A4%8F-%E4%B8%80%E6%AC%A1%E5%A4%A7%E7%90%86%E5%9C%A8%E5%9C%B0%E7%A4%BE%E5%8C%BA%E5%AE%9E%E9%AA%8C-bafyreidzipvvghlye3fjlo7uxivbotxjaznj6vqkwwrfxjpxvvuvjp4zwm" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@706youthspace/%E7%93%A6%E7%8C%AB%E4%B9%8B%E5%A4%8F-%E4%B8%80%E6%AC%A1%E5%A4%A7%E7%90%86%E5%9C%A8%E5%9C%B0%E7%A4%BE%E5%8C%BA%E5%AE%9E%E9%AA%8C-bafyreidzipvvghlye3fjlo7uxivbotxjaznj6vqkwwrfxjpxvvuvjp4zwm&title=瓦猫之夏，一次大理在地社区实验&caption=
+瓦猫之夏，一次大理在地社区实验
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=瓦猫之夏，一次大理在地社区实验&url=https://matters.news/@706youthspace/%E7%93%A6%E7%8C%AB%E4%B9%8B%E5%A4%8F-%E4%B8%80%E6%AC%A1%E5%A4%A7%E7%90%86%E5%9C%A8%E5%9C%B0%E7%A4%BE%E5%8C%BA%E5%AE%9E%E9%AA%8C-bafyreidzipvvghlye3fjlo7uxivbotxjaznj6vqkwwrfxjpxvvuvjp4zwm" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>瓦猫之夏，一次大理在地社区实验</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-09-07
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 706青年空间</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@706youthspace/%E7%93%A6%E7%8C%AB%E4%B9%8B%E5%A4%8F-%E4%B8%80%E6%AC%A1%E5%A4%A7%E7%90%86%E5%9C%A8%E5%9C%B0%E7%A4%BE%E5%8C%BA%E5%AE%9E%E9%AA%8C-bafyreidzipvvghlye3fjlo7uxivbotxjaznj6vqkwwrfxjpxvvuvjp4zwm" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1662529489000-->
+<p><a href="https://matters.news/@706youthspace/%E7%93%A6%E7%8C%AB%E4%B9%8B%E5%A4%8F-%E4%B8%80%E6%AC%A1%E5%A4%A7%E7%90%86%E5%9C%A8%E5%9C%B0%E7%A4%BE%E5%8C%BA%E5%AE%9E%E9%AA%8C-bafyreidzipvvghlye3fjlo7uxivbotxjaznj6vqkwwrfxjpxvvuvjp4zwm">瓦猫之夏，一次大理在地社区实验</a>
+——</p>
+
+<div>
+  <h2 id="section">一次跌宕起伏的旅程</h2>
+  <p>如果在 1 个月前，我们习惯性地认为 Web3 这样的活动应该发生在北京上海杭州深圳这些一线城市；大理和科技、尤其是 Web3 是完全不相关的。</p>
+  <p>可是一切来的都那么突然。大约 7 月初时，在 706 青年空间（大理版）的几个小伙伴一拍脑门的提议之下，他们打算搞一个大理版的 Web3 聚会。经过“十日谈”预热和几位 DAO 的伙伴陆续加入，他们自发形成了约百人的策划、执行团队，从 7 月中到现在陆续组建起各种主题预热群与预热活动；线下706青年空间里面同样也热火朝天，Web3 派的氛围压倒了文艺派，无论吃饭还是聊天，大家嘴里蹦出来的永远都是 NFT、DAO、SBT、Defi等等。不知道是因为大理福尼亚之称，还是几个圈内 KOL 朋友的推荐，又或者大家太需要线下聚会真人面基，反正经过口口相传，整个国内Web3圈都知道了大理即将迎来的 Web3 盛会：瓦猫之夏。</p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/cc3701a1-8d6b-4b08-b420-07c6428924c2.jpeg" data-asset-id="cc3701a1-8d6b-4b08-b420-07c6428924c2" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p><br /></p>
+  <p>如果说以这种去中心和共创的协作模式所进行的活动筹备，经过早期磨合后慢慢渐入佳境，在有关报备、留档和疫情方面的不可控因素，则一直让筹备团队忐忑不安。经过反复的材料递交、修改、再递交、 再修改，8 月初好不容易审批通过，眼看着还有 3 天街会就要开始，议程确定、物资到位、场地布置和帐篷搭建即将开展，一切已经就绪的最关键时刻，最终还是出了问题。所以就有了以下一幕：</p>
+  <h2 id="web3-">大理 Web3 街会取消</h2>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/caa25c02-1cb2-4dc8-a3a2-21f65213e454.jpeg" data-asset-id="caa25c02-1cb2-4dc8-a3a2-21f65213e454" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p> </p>
+  <blockquote>
+各位“瓦猫之夏”的共建者和参与者，大家好。非常抱歉地通知大家，因8月16日中午12点大会主办方接到通知，考虑到疫情风险，云南省防疫指挥部门要求关停一切大型活动，原定于8月 19 日和 20 日在大理举办的“瓦猫之夏——大理Web3街会”因不可抗力取消。  </blockquote>
+  <h2 id="planb">主题营地分会场PlanB</h2>
+  <p>“瓦猫之夏”千人主会场取消后的第一天，我们就进入了主题营地分会场PlanB模式了，各个主题营地分会场的主理人都开始了自发地行动。大家开始寻找其他合适场地，并在第一天快速各自就位</p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/b126f030-460d-4c80-9fe9-5a179cc466d5.jpeg" data-asset-id="b126f030-460d-4c80-9fe9-5a179cc466d5" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>下面这些是19日第一天各个主题营地，包括NFT营地、DAO营地、亚非拉营地、DeSoc营地的活动场景</p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/b24adf6c-ef11-4a6b-9bb7-239a5b7e5e46.jpeg" data-asset-id="b24adf6c-ef11-4a6b-9bb7-239a5b7e5e46" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/33da6bda-2e9d-4858-b702-dab7c7f3cd1b.jpeg" data-asset-id="33da6bda-2e9d-4858-b702-dab7c7f3cd1b" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/2e2a1dc8-6d43-428c-baa0-e80b0744d9e4.jpeg" data-asset-id="2e2a1dc8-6d43-428c-baa0-e80b0744d9e4" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/e59e7d54-aa09-4a38-bd2f-3114f445632c.jpeg" data-asset-id="e59e7d54-aa09-4a38-bd2f-3114f445632c" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/7a7178fa-250b-4207-9d5b-df206a5e7d68.jpeg" data-asset-id="7a7178fa-250b-4207-9d5b-df206a5e7d68" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/2183dfdd-9c90-4d20-b6e8-9ab0342a14f3.jpeg" data-asset-id="2183dfdd-9c90-4d20-b6e8-9ab0342a14f3" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/3f34e6f4-6537-4895-8bae-c78697f08aea.jpeg" data-asset-id="3f34e6f4-6537-4895-8bae-c78697f08aea" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/88ce666a-71c4-4212-af66-4c3a60475d8e.jpeg" data-asset-id="88ce666a-71c4-4212-af66-4c3a60475d8e" referrerpolicy="no-referrer" />    <figcaption>
+<span>亚非拉营地</span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/1c37188f-1c9f-4392-bc0f-30087b5adec4.jpeg" data-asset-id="1c37188f-1c9f-4392-bc0f-30087b5adec4" referrerpolicy="no-referrer" />    <figcaption>
+<span>数字游民营地</span>
+    </figcaption>
+  </figure>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/26fef7e8-db8e-4d18-ba0f-55d84452861f.jpeg" data-asset-id="26fef7e8-db8e-4d18-ba0f-55d84452861f" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/5102baf8-f66a-495b-9bf4-0729c28385e0.jpeg" data-asset-id="5102baf8-f66a-495b-9bf4-0729c28385e0" referrerpolicy="no-referrer" />    <figcaption>
+<span>DeSoc营地</span>
+    </figcaption>
+  </figure>
+  <p> </p>
+  <h2 id="section-1">彻底的去中心化尝试</h2>
+  <p>8 月 19 日深夜 11 点，街会的各个预热群陆陆续续传来各个主题营地相继遭到因疫情等不可控因素关停的消息。</p>
+  <p> 可能恰恰就是在这时，彻底打散了这次大理 Web3 街会的中心节点。不光是组织层面的去中心化，包括活动场所、包括所有来到大理的参与者甚至是活动发起机制，一切可被目睹的显性层面都进入了去中心状态。原本负责瓦猫之夏场地会务的伙伴高呼：我们被去中心了！</p>
+  <p>你可以看到这样一种新的场景：</p>
+  <p>各个项目方和投资方，乃至于个人，都自发地建立了各式各样的分散群组，自发整理活动信息资料，自发地大理的各个客栈、民宿组建线下聚会。这是一场真正由每个人参与的共创实验，在经历了主会场和主题营地陆续取消后，人们迸发出的全新创造力，使众人重新攒起了一波又一波的“分布式去中心化”聚会和自组织协作。 </p>
+  <p>就像有位伙伴所说的：</p>
+  <p>“后面几天的大理就像一次大型游戏副本，一群人进了地图，自由组队，访问不用的NPC，完成任务，升级装备。”</p>
+  <p>有人整理微信群</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/a2d8e39a-21ab-4c95-a3b7-2b70da3b6d1b.png" data-asset-id="a2d8e39a-21ab-4c95-a3b7-2b70da3b6d1b" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <h4 id="section-2"><br /></h4>
+  <p>有人梳理各种信息帖</p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/2a00f947-fc13-41ce-8a49-d8e96945e8ba.jpeg" data-asset-id="2a00f947-fc13-41ce-8a49-d8e96945e8ba" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p> 所有共创活动的海报汇总</p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/93993927-11a2-4a0c-85f9-26f4743db460.jpeg" data-asset-id="93993927-11a2-4a0c-85f9-26f4743db460" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p> 没有主会场，没有主题营地，没有音乐表演，没有high玩营地。无所谓，我们已经在大理了，我们可以在大理的各个场所流动起来，在客栈里，在洱海边，在人民路，在民宿，在酒吧，在咖啡厅，在苍山上，我们将整个大理变成Web3街会</p>
+  <p>  </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/1ef5b28c-3f2c-4063-ac8b-9ba64d34d897.jpeg" data-asset-id="1ef5b28c-3f2c-4063-ac8b-9ba64d34d897" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/114d605e-d3f1-4de3-b35a-b713adbe221f.jpeg" data-asset-id="114d605e-d3f1-4de3-b35a-b713adbe221f" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/32eb2806-f097-41f6-9f4e-7cb1710d895a.jpeg" data-asset-id="32eb2806-f097-41f6-9f4e-7cb1710d895a" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/aa9f354b-2eeb-4524-aa7a-9730482a95c0.jpeg" data-asset-id="aa9f354b-2eeb-4524-aa7a-9730482a95c0" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/c6ba1ffe-3aad-4137-9b7c-efded3ac2a20.jpeg" data-asset-id="c6ba1ffe-3aad-4137-9b7c-efded3ac2a20" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/8524180a-5279-4924-8a3d-cfb93cedd9ed.jpeg" data-asset-id="8524180a-5279-4924-8a3d-cfb93cedd9ed" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p> 十三维在自发组织的沙龙中，分享了加密朋克，嬉皮士和Web3的关联</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/5e5bf21f-bd44-48a8-a5e2-b00fd5ce0c40.jpeg" data-asset-id="5e5bf21f-bd44-48a8-a5e2-b00fd5ce0c40" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/362f8782-aabd-478b-9d78-c65300d22821.jpeg" data-asset-id="362f8782-aabd-478b-9d78-c65300d22821" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>在desoc论坛中，现场伙伴已经在conflux链用15分钟从零开始mint了200枚DESCO徽章</p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/8db5b81b-04e7-468d-88fe-985eb5e330a2.jpeg" data-asset-id="8db5b81b-04e7-468d-88fe-985eb5e330a2" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>一次即兴的聚会，定慧也在主持 DAO 的发言中，碰撞出了新的认知框架。“离开体制意味着自由，我们都需要学会如何承担自由带来的生命之重”</p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/d05c7d7d-9779-40e9-aa60-22144b53535f.jpeg" data-asset-id="d05c7d7d-9779-40e9-aa60-22144b53535f" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/d2c0b451-cb61-41b3-a1ca-143de4146bc1.jpeg" data-asset-id="d2c0b451-cb61-41b3-a1ca-143de4146bc1" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p> </p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/520e6739-e913-4631-9e82-2301981e18b9.jpeg" data-asset-id="520e6739-e913-4631-9e82-2301981e18b9" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/7e7bea7b-de5f-4577-bfb8-1f77e71256d4.jpeg" data-asset-id="7e7bea7b-de5f-4577-bfb8-1f77e71256d4" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>嘉宾在DAO Spacee分享DID去中心化身份系统，这个可能是通往Web3的护照</p>
+  <p> </p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/352507f5-864f-4be0-a0e3-ac84ebbd4f9f.png" data-asset-id="352507f5-864f-4be0-a0e3-ac84ebbd4f9f" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p><br /></p>
+  <p> </p>
+  <p> </p>
+  <p>SeeDAO 艺术工会「附近艺术」和 SpaceDAO 发起了“用 1 万颗 NFT 确保 Web3 ”的在线创作项目，为「流产」的活动主办方筹款。在 The Space 中，所有用以创作的像素 NFT 都能够在智能合约实现的激进市场规则下流通，这是结合哈伯格稅和 ubi 实验的模型，很有意思。</p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/0159a01f-04dd-4a53-a34f-6dc4e824d399.jpeg" data-asset-id="0159a01f-04dd-4a53-a34f-6dc4e824d399" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>我们在706青年空间（大理）、DAO Space、Dali Hub、See Shore、浪费时间等流动空间游荡；我们在这些客厅吃饭、喝酒、探讨NFT、DAO、DeSoc、Defi……</p>
+  <p> </p>
+  <h2 id="section-3">有酒有故事</h2>
+  <p> </p>
+  <p>除了参与各种各样的分享、讨论、工作坊和讲座沙龙，最精彩的部分还有各种各样自发的酒局、饭局、街头夜聊、客栈聊天、甚至706青年空间（大理版）的深夜德扑局……</p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/50924b8d-2546-4f9c-a25a-1f975c862b83.jpeg" data-asset-id="50924b8d-2546-4f9c-a25a-1f975c862b83" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/80d47030-0de7-4af9-ae98-f848398f0460.jpeg" data-asset-id="80d47030-0de7-4af9-ae98-f848398f0460" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/8e6ff5a6-db86-48aa-a87a-74b00b6e7de8.jpeg" data-asset-id="8e6ff5a6-db86-48aa-a87a-74b00b6e7de8" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/66b02797-60f0-49b1-b572-c55296583461.jpeg" data-asset-id="66b02797-60f0-49b1-b572-c55296583461" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/11e0870e-5d1a-44d8-9acf-d1903ac99319.jpeg" data-asset-id="11e0870e-5d1a-44d8-9acf-d1903ac99319" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/c78e6726-c163-459e-9e9d-3fca2105e4f8.jpeg" data-asset-id="c78e6726-c163-459e-9e9d-3fca2105e4f8" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p> </p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/db7a9fad-7336-4dfc-9c70-8abfeaaa2616.jpeg" data-asset-id="db7a9fad-7336-4dfc-9c70-8abfeaaa2616" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/ebc69703-e1c2-4208-b17c-fa883013afab.jpeg" data-asset-id="ebc69703-e1c2-4208-b17c-fa883013afab" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/3fdb6142-723b-496b-ae05-68c8eb01baac.jpeg" data-asset-id="3fdb6142-723b-496b-ae05-68c8eb01baac" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/1fb9ab34-dccd-49ae-a31c-6af897c7ec71.jpeg" data-asset-id="1fb9ab34-dccd-49ae-a31c-6af897c7ec71" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p>  无数场景发生在街头巷尾的觥筹交错中，这里是独树一帜的大理版流觞曲水，既有地摊夜聊、露营酒局，还有路边酒馆、PPT制作局，social 小酒局</p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/37de9e02-40bd-48a0-8b50-cee3a12af61a.jpeg" data-asset-id="37de9e02-40bd-48a0-8b50-cee3a12af61a" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/8e93818a-abd4-47c6-9483-51f679802d98.jpeg" data-asset-id="8e93818a-abd4-47c6-9483-51f679802d98" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/e28bb769-0e85-4853-ba28-7cefa96b1a25.jpeg" data-asset-id="e28bb769-0e85-4853-ba28-7cefa96b1a25" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/b3062504-e7b7-42b0-9d5b-451b322c25e3.jpeg" data-asset-id="b3062504-e7b7-42b0-9d5b-451b322c25e3" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/6015f4f9-c9d7-49ec-98ee-8d4500897c90.jpeg" data-asset-id="6015f4f9-c9d7-49ec-98ee-8d4500897c90" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/f4b7dd3f-954d-4298-975a-1f9a1d0685d4.jpeg" data-asset-id="f4b7dd3f-954d-4298-975a-1f9a1d0685d4" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <h2 id="web3"> Web3街会带来了什么？</h2>
+  <p>所有人都奔着 Web3 来到大理。大理的新移民和在地居民都很困惑，Web3 到底是什么？其实我也很困惑，Web3 是什么？前来参加这次 Web3 街会的每个人，似乎都有不同的理解。有人说去中心化，有人说给内容创造者赋权，有人说这是一套新的叙事，也有人说个人数据主权……</p>
+  <p>沙漏在朋友圈说：“其实，我也困惑 Web3。新叙事常是旧陷阱，周而复始，极少例外。</p>
+  <p>此次建立实体飞地的「共同记忆」反倒是对在数字空间构建场景的有力回应。这并非宣告数字化的失败，而是帮助摆脱非黑即白的思考，或是把技术置于人性对立面的偏见。” </p>
+  <p>这个大理实体飞地的「共同记忆」基于在短短19日，20日两天内产生的无数的聚会，交流，夜聊，酒局，饭局中形成的，我在想，这次Web3街会到底还给我们带来了什么？</p>
+  <p>可能是对自组织，对去中心化真正的认识。这个是我们在大理真真实实，实实在在的组织方式。</p>
+  <p>虽然说这次街会由706青年空间（大理）发起，不过在街会发布停止举办公告的那一刻起，交接棒就转移到了街会的每个参与者手里了。</p>
+  <p>在大理这短短2天所看到，听到和感受到的一切，都让我真真切切的体验到，共识和自组织的力量是多么强大。这个是Web3社群固有的文化属性，也是我们所有人共同的社会实验。从大理Web3街会自组织开始的一刻起，我就知道，我们成了，我们做到了，我们参与了，我们见证了。</p>
+  <h2 id="section-4"> 大理的后续可能性</h2>
+  <p> 既然是为期2天的短暂的社区实验，那必然有结束的那一刻，或许，我们可以对大理有新的想象，可以在这个无论是气候，地理，文化都可以媲美 California 的西南城市，衍生更多的可能性，真正成为国内数字游民，前沿科技和文化从业者的据点。</p>
+  <p>我们可以基于大理这个在地社区，逐步衍生到世界各地，上海，北京，成都，杭州，旧金山，新加坡，纽约，形成一个最有在地性，也最具备国际化的一个社区网络。</p>
+  <p>大理，是我们出发的起点，期待每一位来过大理Web3的小伙伴都可以在这条路上相互依靠，继续探索。</p>
+  <p>最后，特别感谢本次大理瓦猫之夏的发起方706青年空间（大理），以及 GreenPill，SeeDAO社区支持伙伴，还有总统筹漓江，协作高手大松，外联负责夏凯等团队成员，以及所有为止付出的共建者们，以及19，20日所有大理 Web3 参与伙伴们，没有你们的努力，就不会有如此的Web3街会，下面是所有共建者名单，如有遗漏也欢迎补充</p>
+  <hr />
+  <p><br /></p>
+  <p>瓦猫之夏是一次去中心化的尝试，是一次非商业性的活动，所有共建者均为志愿参与协作。大会的组织结构是以DAO的方式进行的，是一次自组织精神下的协作、互信和共创的实验与探索，这让我们与之前在中国举办的任何大会都截然不同。</p>
+  <p> <strong>共建者</strong></p>
+  <p>Aiboo | Amagi | Andrew | Audrey Tang | 阿泰| 阿树 | 阿元 | Bei | Bella | Beryl_hfm | Bingxue | Carol | 潮汐 | cejay | 岑小岑 | 春杨 | 程东 | 陈晨兆阳Charlie | 陈玲玲 | 储奎 | Chris | 大曹 | 大夏 | Dane | Daniel | 大瑶 | 东翼EasternWings | 大松 | Davion | 定慧 | 段少 | 而已 | Fiona | 付航 | 付一茗 | flower | 咕咕咕 | 管付为模Luc_Kuanfu | 何骆 | 海绵 | Jack | Jazzy | Jean Chen | jia jiang | 嘉俊 | Joran | 江江 | 鸡蛋 | 浚源 | K | Kayla Wang | 老王 | Larri | 林可 | lilin | 刘浚源 | Lujie Wang | 吕一一 | Lynn | Meta | Milky Way_银河 | 麦兜 | Money | Nicholas.Hu | MXX | 牛市女王 | Old Wang | 庞晓杰 | Pablo | 潘致雄 | 皮卡 | Rain | Ren | Ryan | 三原 | Sen | Senxum | 胜楠 | 师北辰 | Sherry | SLOW Seals | Sunny | Survivor | 酸菜鱼 | 师瑜 | 唐晗 | 唐漓江 | 陶然 | 陶子 | 豚 | 加菲众 | 王筱纾 | Walton | 乌鸦 | 曦雨 | 夏凯 | 夏小玲 | 夏萌人 | 小电池 | xiaoli | 小蘿蔔丁 | 晓芮 | 小威 | 孝羽 | 西西 | 西格 | 雪儿 | 洋仔 | Yaojia | yeye | 姚翔 | 叶萌 | 杨熹 | 越陌 | 张弛 | 张曼 | Zhiwei | 洲洲 | 周欢 | 6th-town | (持续增加中……)</p>
+  <p> <strong>关注我们</strong></p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/60e844ac-c55f-4291-86d3-f99374ca98f2.png" data-asset-id="60e844ac-c55f-4291-86d3-f99374ca98f2" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p> </p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2022-09-12</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-09-12/%E8%A2%AB%E5%89%B2%E8%A3%82%E5%92%8C%E8%AE%8A%E6%88%90%E7%A2%8E%E7%89%87%E7%9A%84%E5%85%AC%E6%B0%91%E7%A4%BE%E6%9C%83/">
+          被割裂和變成碎片的公民社會
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-09-11</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-09-11/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-%E4%B8%80%E5%80%8B%E5%85%A9%E4%BB%A3%E4%BA%BA%E7%9A%84%E6%95%85%E4%BA%8B-%E4%B8%AD%E8%8B%B1%E8%A1%971%E8%99%9F-%E4%B8%8A-%E7%A4%BE%E6%9C%83%E9%81%8B%E5%8B%95-%E5%85%AD%E4%B8%83%E6%9A%B4%E5%8B%95-%E8%8F%9C%E5%9C%92%E6%9D%91%E4%BA%8B%E4%BB%B6-%E4%BD%94%E9%A0%98%E4%B8%AD%E7%92%B0-%E5%91%BD%E9%81%8B/">
+          【電影與現實】一個兩代人的故事：《中英街1號》（上）｜社會運動｜六七暴動｜菜園村事件｜佔領中環｜命運自決
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-09-05</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-09-05/%E5%88%AA%E7%A6%81%E6%96%87%E7%AB%A0-%E5%9C%B0%E9%9C%87%E6%98%AF%E4%B8%80%E6%AC%A1%E6%8F%90%E9%86%92-%E6%88%90%E9%83%BD-%E8%B5%B6%E7%B4%A7%E6%8A%8A%E6%B6%88%E9%98%B2%E9%80%9A%E9%81%93%E9%83%BD%E6%89%93%E5%BC%80%E5%90%A7/">
+          刪禁文章 ｜地震是一次提醒：成都，赶紧把消防通道都打开吧
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-09-02</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-09-02/%E4%BD%9C%E4%B8%BA%E6%94%BF%E6%B2%BB%E8%BF%90%E5%8A%A8%E7%9A%84%E9%98%B2%E7%96%AB-%E5%8A%A8%E6%80%81%E6%B8%85%E9%9B%B6%E4%B8%8E%E5%A4%A7%E9%A5%A5%E8%8D%92/">
+          作为政治运动的防疫——动态清零与大饥荒
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2022-09-05/%E5%88%AA%E7%A6%81%E6%96%87%E7%AB%A0-%E5%9C%B0%E9%9C%87%E6%98%AF%E4%B8%80%E6%AC%A1%E6%8F%90%E9%86%92-%E6%88%90%E9%83%BD-%E8%B5%B6%E7%B4%A7%E6%8A%8A%E6%B6%88%E9%98%B2%E9%80%9A%E9%81%93%E9%83%BD%E6%89%93%E5%BC%80%E5%90%A7/">
+            前一篇：刪禁文章 ｜地震是一次提醒：成都，赶紧把消防通道都打开吧
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2022-09-08/%E5%BE%9E%E5%B7%B4%E9%BB%8E%E8%B2%9D%E7%94%9C%E4%BA%8B%E4%BB%B6%E7%9C%8B%E4%B8%AD%E5%9C%8B%E7%A4%BE%E6%9C%83%E7%9A%84%E5%BA%95%E5%B1%A4%E9%82%8F%E8%BC%AF-%E5%B7%B4%E9%BB%8E%E8%B2%9D%E7%94%9C%E8%A2%AB%E7%BD%B0%E7%9A%84%E7%9C%9F%E6%AD%A3%E5%8E%9F%E5%9B%A0-PARIS-BAGUETTE-%E7%91%AA%E5%8A%9B%E5%86%8D%E8%AA%AA/">
+            後一篇：從巴黎貝甜事件看中國社會的底層邏輯｜巴黎貝甜被罰的真正原因｜PARIS BAGUETTE｜瑪力再說
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2022-09-05/%E5%88%AA%E7%A6%81%E6%96%87%E7%AB%A0-%E5%9C%B0%E9%9C%87%E6%98%AF%E4%B8%80%E6%AC%A1%E6%8F%90%E9%86%92-%E6%88%90%E9%83%BD-%E8%B5%B6%E7%B4%A7%E6%8A%8A%E6%B6%88%E9%98%B2%E9%80%9A%E9%81%93%E9%83%BD%E6%89%93%E5%BC%80%E5%90%A7/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2022-09-08/%E5%BE%9E%E5%B7%B4%E9%BB%8E%E8%B2%9D%E7%94%9C%E4%BA%8B%E4%BB%B6%E7%9C%8B%E4%B8%AD%E5%9C%8B%E7%A4%BE%E6%9C%83%E7%9A%84%E5%BA%95%E5%B1%A4%E9%82%8F%E8%BC%AF-%E5%B7%B4%E9%BB%8E%E8%B2%9D%E7%94%9C%E8%A2%AB%E7%BD%B0%E7%9A%84%E7%9C%9F%E6%AD%A3%E5%8E%9F%E5%9B%A0-PARIS-BAGUETTE-%E7%91%AA%E5%8A%9B%E5%86%8D%E8%AA%AA/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2022-09-11/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-%E4%B8%80%E5%80%8B%E5%85%A9%E4%BB%A3%E4%BA%BA%E7%9A%84%E6%95%85%E4%BA%8B-%E4%B8%AD%E8%8B%B1%E8%A1%971%E8%99%9F-%E4%B8%8A-%E7%A4%BE%E6%9C%83%E9%81%8B%E5%8B%95-%E5%85%AD%E4%B8%83%E6%9A%B4%E5%8B%95-%E8%8F%9C%E5%9C%92%E6%9D%91%E4%BA%8B%E4%BB%B6-%E4%BD%94%E9%A0%98%E4%B8%AD%E7%92%B0-%E5%91%BD%E9%81%8B/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2022-09-05/%E5%88%AA%E7%A6%81%E6%96%87%E7%AB%A0-%E5%9C%B0%E9%9C%87%E6%98%AF%E4%B8%80%E6%AC%A1%E6%8F%90%E9%86%92-%E6%88%90%E9%83%BD-%E8%B5%B6%E7%B4%A7%E6%8A%8A%E6%B6%88%E9%98%B2%E9%80%9A%E9%81%93%E9%83%BD%E6%89%93%E5%BC%80%E5%90%A7/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2022-09-05/%E5%88%AA%E7%A6%81%E6%96%87%E7%AB%A0-%E5%9C%B0%E9%9C%87%E6%98%AF%E4%B8%80%E6%AC%A1%E6%8F%90%E9%86%92-%E6%88%90%E9%83%BD-%E8%B5%B6%E7%B4%A7%E6%8A%8A%E6%B6%88%E9%98%B2%E9%80%9A%E9%81%93%E9%83%BD%E6%89%93%E5%BC%80%E5%90%A7/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2022-09-08/%E5%BE%9E%E5%B7%B4%E9%BB%8E%E8%B2%9D%E7%94%9C%E4%BA%8B%E4%BB%B6%E7%9C%8B%E4%B8%AD%E5%9C%8B%E7%A4%BE%E6%9C%83%E7%9A%84%E5%BA%95%E5%B1%A4%E9%82%8F%E8%BC%AF-%E5%B7%B4%E9%BB%8E%E8%B2%9D%E7%94%9C%E8%A2%AB%E7%BD%B0%E7%9A%84%E7%9C%9F%E6%AD%A3%E5%8E%9F%E5%9B%A0-PARIS-BAGUETTE-%E7%91%AA%E5%8A%9B%E5%86%8D%E8%AA%AA/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2022-09-11/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-%E4%B8%80%E5%80%8B%E5%85%A9%E4%BB%A3%E4%BA%BA%E7%9A%84%E6%95%85%E4%BA%8B-%E4%B8%AD%E8%8B%B1%E8%A1%971%E8%99%9F-%E4%B8%8A-%E7%A4%BE%E6%9C%83%E9%81%8B%E5%8B%95-%E5%85%AD%E4%B8%83%E6%9A%B4%E5%8B%95-%E8%8F%9C%E5%9C%92%E6%9D%91%E4%BA%8B%E4%BB%B6-%E4%BD%94%E9%A0%98%E4%B8%AD%E7%92%B0-%E5%91%BD%E9%81%8B/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2022-09-05/%E5%88%AA%E7%A6%81%E6%96%87%E7%AB%A0-%E5%9C%B0%E9%9C%87%E6%98%AF%E4%B8%80%E6%AC%A1%E6%8F%90%E9%86%92-%E6%88%90%E9%83%BD-%E8%B5%B6%E7%B4%A7%E6%8A%8A%E6%B6%88%E9%98%B2%E9%80%9A%E9%81%93%E9%83%BD%E6%89%93%E5%BC%80%E5%90%A7/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

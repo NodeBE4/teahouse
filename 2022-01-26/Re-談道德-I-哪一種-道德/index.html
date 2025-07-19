@@ -1,0 +1,3483 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Re:  談道德 I ｜ 哪一種「道德」？ – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+Re:  談道德 I ｜ 哪一種「道德」？
+——
+" />
+    <meta property="og:description" content="
+Re:  談道德 I ｜ 哪一種「道德」？
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="Re:  談道德 I ｜ 哪一種「道德」？" />
+    <meta property="twitter:title" content="Re:  談道德 I ｜ 哪一種「道德」？" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40KMnese%2Fre-%25E8%25AB%2587%25E9%2581%2593%25E5%25BE%25B7-i-%25E5%2593%25AA%25E4%25B8%2580%25E7%25A8%25AE-%25E9%2581%2593%25E5%25BE%25B7-bafyreiba7wyust6yvwqndkhihpnx42ytouninikx2xxjb2no4n5xje3pti" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@KMnese/re-%E8%AB%87%E9%81%93%E5%BE%B7-i-%E5%93%AA%E4%B8%80%E7%A8%AE-%E9%81%93%E5%BE%B7-bafyreiba7wyust6yvwqndkhihpnx42ytouninikx2xxjb2no4n5xje3pti" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@KMnese/re-%E8%AB%87%E9%81%93%E5%BE%B7-i-%E5%93%AA%E4%B8%80%E7%A8%AE-%E9%81%93%E5%BE%B7-bafyreiba7wyust6yvwqndkhihpnx42ytouninikx2xxjb2no4n5xje3pti&text=Re:  談道德 I ｜ 哪一種「道德」？&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@KMnese/re-%E8%AB%87%E9%81%93%E5%BE%B7-i-%E5%93%AA%E4%B8%80%E7%A8%AE-%E9%81%93%E5%BE%B7-bafyreiba7wyust6yvwqndkhihpnx42ytouninikx2xxjb2no4n5xje3pti&title=Re:  談道德 I ｜ 哪一種「道德」？" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@KMnese/re-%E8%AB%87%E9%81%93%E5%BE%B7-i-%E5%93%AA%E4%B8%80%E7%A8%AE-%E9%81%93%E5%BE%B7-bafyreiba7wyust6yvwqndkhihpnx42ytouninikx2xxjb2no4n5xje3pti&title=Re:  談道德 I ｜ 哪一種「道德」？" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=Re:  談道德 I ｜ 哪一種「道德」？&body=
+Re:  談道德 I ｜ 哪一種「道德」？
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@KMnese/re-%E8%AB%87%E9%81%93%E5%BE%B7-i-%E5%93%AA%E4%B8%80%E7%A8%AE-%E9%81%93%E5%BE%B7-bafyreiba7wyust6yvwqndkhihpnx42ytouninikx2xxjb2no4n5xje3pti" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@KMnese/re-%E8%AB%87%E9%81%93%E5%BE%B7-i-%E5%93%AA%E4%B8%80%E7%A8%AE-%E9%81%93%E5%BE%B7-bafyreiba7wyust6yvwqndkhihpnx42ytouninikx2xxjb2no4n5xje3pti&title=Re:  談道德 I ｜ 哪一種「道德」？&caption=
+Re:  談道德 I ｜ 哪一種「道德」？
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=Re:  談道德 I ｜ 哪一種「道德」？&url=https://matters.news/@KMnese/re-%E8%AB%87%E9%81%93%E5%BE%B7-i-%E5%93%AA%E4%B8%80%E7%A8%AE-%E9%81%93%E5%BE%B7-bafyreiba7wyust6yvwqndkhihpnx42ytouninikx2xxjb2no4n5xje3pti" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>Re:  談道德 I ｜ 哪一種「道德」？</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-01-26
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 戰地島民KMnese</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@KMnese/re-%E8%AB%87%E9%81%93%E5%BE%B7-i-%E5%93%AA%E4%B8%80%E7%A8%AE-%E9%81%93%E5%BE%B7-bafyreiba7wyust6yvwqndkhihpnx42ytouninikx2xxjb2no4n5xje3pti" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1643207932000-->
+<p><a href="https://matters.news/@KMnese/re-%E8%AB%87%E9%81%93%E5%BE%B7-i-%E5%93%AA%E4%B8%80%E7%A8%AE-%E9%81%93%E5%BE%B7-bafyreiba7wyust6yvwqndkhihpnx42ytouninikx2xxjb2no4n5xje3pti">Re:  談道德 I ｜ 哪一種「道德」？</a>
+——</p>
+
+<div>
+  <p>讀了<a class="mention" href="https://matters.news/@sunli" target="_blank" data-display-name="孙李" data-user-name="sunli" data-id="VXNlcjo1NDg0Nw">﻿<span>@孙李</span>﻿</a> 寫的 <a href="https://matters.news/@sunli/%E8%B0%88%E9%81%93%E5%BE%B7-bafyreif2vlprehw7okrkvvera4kghdt3td6apnjjugp2dorehkhjewmu4e" rel="noopener noreferrer" target="_blank">談道德</a>，一直想留言回應卻又命不好直當機，姑且就發表成文。<br /></p>
+  <p>(溫馨提醒：</p>
+  <p>研究顯示，Moral Judgment [道德判斷]總是情緒先於理性，所以請讀到有反映的觀點時，先等待30秒--60秒才不會被情緒引導思考)</p>
+  <hr />
+  <figure class="image">
+<img src="https://assets.matters.news/embed/534610d2-feff-40ad-a56a-c8d8e3dc5209.jpeg" data-asset-id="534610d2-feff-40ad-a56a-c8d8e3dc5209" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>孫李兄的文章寫得讓我不由得說：「真是經典的Eassay結構！」，因此，我也就引用他的結論就好：</p>
+  <blockquote>
+经过以上的讨论，可以总结我的道德观了。我不相信存在绝对的道德；<br />道德不是一成不变的，需要自我演化；道德天生是多元的；评判正误的首要标准是法律而非道德。如果承认了以上几点，不难得出另外一个结论：道德是不是用来律人的，而是用来律己的。道德不应该是攻击性的，不应该以道德来约束他人。既然道德是相对的、多元的，我就不能用自己的道德观去抨击他人的道德观。  </blockquote>
+  <p>如果順著整理文章裡回答的問題，大致條列為：<br /></p>
+  <p><strong>道德是否一成不變，放諸四海皆準？ </strong>也對……也不對。<br /><strong>評斷別人的標準應該是法律還是道德？</strong> 大致同意。<strong><br class="smart" />道德是不是用来律人的，而是用来律己的。 </strong>不同意。<br /><strong>道德不应该是攻击性的，不应该以道德来约束他人。</strong> 同意。<strong><br />既然道德是相对的多元的，就不能用自己的道德观抨击他人的道德观。</strong>大部份同意。<br /></p>
+  <hr />
+  <p><br />我的答案有好幾個模擬兩可，絕不是我騎牆派或鄉愿，而是這些題目提到的「道德」一詞的指涉，通常混雜了2-3組概念。</p>
+  <blockquote>
+Morality(道德），"ethics"(倫理學，有時也譯為道德），另外，就是"Law"(法律)<br />  </blockquote>
+  <p>在這幾個主要問題中，我答得模擬兩可的恰恰是「道德」一詞顯然有雙種意涵的時候。我覺得這三個詞的區辨恰恰能幫助我們回答上述的問題意識。<br /></p>
+  <p><strong>道德是否一成不變，放諸四海皆準？</strong><br /></p>
+  <p>我之所以回答：對，也不對。<br />因為Morality、Ethics在中文翻作「道德」都適用，但並非都是不變的、跨文化相通的。<br /><br />Morality(道德)算是從自身感受去判斷好壞、好惡。大致上，我認為算是一成不變的甚至連放諸四海皆準的：<strong><br /></strong></p>
+  <p><strong>我們都厭惡褻瀆宗教亡靈，讚揚關愛厭惡自私、崇尚公平而厭惡背叛……。此外，在moral judgments（道德判斷）中，有很大一部份取決於感受而非理性，這我會在末段再說明。</strong><br /></p>
+  <p>Ethics，是「倫理學」這門學問，多半譯為「倫理」但有時也會翻譯為「道德」。<strong><br />相較之下，這裡的「倫理」一詞就偏向社會常規、社會化程度、人與人人與群體的關係……<br /></strong>這自然就不會一成不變，也很難放諸四海皆準。</p>
+  <blockquote>
+<strong>在我唸書的時候，「公民」這個學科在小學就叫做「倫理與道德」，中學才變成「公民與道德」，顯然，編教科書的人腦中也有 倫理、道德、法律這三個概念劃分。</strong>  </blockquote>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/1785779d-de73-4812-a84d-1ca822180cf9.jpeg" data-asset-id="1785779d-de73-4812-a84d-1ca822180cf9" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <h2 id="morality"><strong>Morality判斷的是「好與壞、喜歡和討厭」：</strong><br /></h2>
+  <p>炫富：討厭; 仗勢欺人：討厭; <br />幫助弱勢：好; 性關係複雜：錯<br />讓座他人：對; 一言不合就動手：錯。</p>
+  <h2 id="ethics"><strong>Ethics，倫理規範，涉及的是社會秩序下的「對與錯」：</strong><br /></h2>
+  <p>對長輩頂嘴：錯的、    <s>不孝順父母：錯的</s>
+、 隨意插隊：錯的、不戴口罩：錯的。    <s><br /></s>
+</p>
+  <p>    <s>污辱祖先：錯的</s>
+、    <s>不愛國：錯的</s>
+、亂丟垃圾：錯的、禮讓行人：對的<br /><br />未婚生子：歐美對的/中國有對有錯/    <s>印度：你說誰未婚生子（毆）……，顯然，這有跨文化差異。而且：</s>
+<br /></p>
+  <p>公共場所大聲說話：中國人就是沒禮貌是錯的，韓國人很熱情直爽，是對的; <br /></p>
+  <p>應對進退很客氣：台灣人假惺惺作樣子很虛偽，錯的，日本人禮貌周到舉止幽雅，對的。<br /></p>
+  <h2 id="section"><br /></h2>
+  <h2 id="law">Law，中譯「法律」，它有一連串嚴禁的原則：<br /></h2>
+  <p>法律條文對犯罪行為需有明確定義、依循「罪刑法定原則」，有程序正義才有實質正義，</p>
+  <p>有好幾種創造公平審判的原則與形式， 還有，無罪推定原則、證據的毒樹讀果理論/ 認罪自</p>
+  <p>白採用原則………</p>
+  <hr />
+  <p>再換另一個角度說，「道德」、「倫理」和「法律」，也可能有更好、更在地的翻譯。<br /></p>
+  <p><strong>像華人文化中的「情、理、法」就滿適合作為Morality/Ethics/Law的區分。</strong><br />所以，我雖同意評斷他人應以法律，畢竟，法律之外，<strong>「於情於理」的判斷本在所難免</strong>。</p>
+  <p>"Difference between morality and ethics" 算是個常見的課堂討論題，肯定諸多見解各有道理，我就不多提了。<br /></p>
+  <p>我唯獨好奇在轉換為中文時，兩個詞各自側重哪些中文詞呢？<br />除了「法理情」之外，我覺得Morality翻成「良心/品行」也算準確，相對地，Ethics則翻作「規矩、教養」甚至「三觀」，前者看中「心」後者看中「行為舉止」。<br /></p>
+  <p>那說明了「道德」一詞關聯的兩個概念區分，我就順著回覆孫李的其它論點了：<br /></p>
+  <p><strong>道德是不是用来律人的，而是用来律己的， </strong><br />我覺得，道德的確要求自律，但包含控制自己與融入群體都要有。<br /></p>
+  <p><strong>道德不应该是攻击性的，不应该以道德来约束他人。</strong><br /> 一方面，攻擊或約束都是難以自律、強求他人的表現，的確不道德，但是，一個人的作法究竟是攻擊性還是太熱情？是約束他人還是仗義直言？也不好判斷。</p>
+  <p>不過，我認為兩種道德的詞彙，都沒有只管自己無關他人的意思，尤其是美國價值中，參與眾人與主動說和做對的事都被視為正面的表現，相比之下華人社會就過於獨善其身了。<strong><br /></strong></p>
+  <p><strong>既然道德是相对的多元的，就不能用自己的道德观抨击他人的道德观。</strong><br />前面我提到了，與Morality有關的Judgmets可能是不變且普世的，這就牽涉到Jonathon Haidt對「政治與宗教中的道德判斷」的研究了。</p>
+  <p>這是本從我來Matters看到政治文滿版時就想介紹的內容(結果拖了3年)，不知不覺這篇文也寫了不少內容(還好沒用留言的)，關於道德判斷我就先給出下面的題目，在下篇文章再繼續寫好了。</p>
+  <hr />
+  <p>小結：</p>
+  <p>先跟<a class="mention" href="https://matters.news/@sunli" target="_blank" data-display-name="孙李" data-user-name="sunli" data-id="VXNlcjo1NDg0Nw">﻿<span>@孙李</span>﻿</a> 說，我寫這篇也不是要反駁你，只是恰好藉著你超工整的結構整理自己的想法而已，也歡迎大家留言互動。 <br /></p>
+  <p>對於"morality and ethics"的差異，不知大家如何理解呢？(也歡迎指正)<br />如果延伸為"Virtue, Morality, Ethics and Law" 在中文又可以怎麼區分呢？</p>
+  <p>另，我本文說的"morality"(道德)是判斷「好與壞」，這有點考量到下半篇文章對「道德」的定義。<strong>不然，Morality好像也很適合套用為判斷"good or evil"：善良或邪惡/善與惡，也更貼切等同於中文的「良心、品性」。</strong></p>
+  <p><br /></p>
+  <h2 id="section-1">(待續)</h2>
+  <hr />
+  <h2 id="section-2">以下，擷取心理學實驗的部份問題。</h2>
+  <p><strong>原實驗設計應以問答方式進行，所以讀者可以先不要看題目，交由朋友發問自己回答。<br />如果自己以閱讀方式作答，請儘量模擬流程與時限，且結果恐大誤差。</strong><br /></p>
+  <p>每個題目都先有一段關於事件或行為的敘述，並以<strong>「你認為是對的嗎？」</strong>結尾。</p>
+  <p><strong>聽到「你認為是對的嗎？」受試者請立即作出肯定或否定的回應，最遲不超過2秒，接著，提問者會問：「為什麼？」。受試者請說明對或錯的理由，說明時長不拘。</strong><br /></p>
+  <p><br />(以下問題都寫在照片的說明欄裡，請務必一次只看一題)<br /></p>
+  <p><br /></p>
+  <hr />
+  <h2 id="section-3">1<br /></h2>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/444113b7-8e73-4120-be4d-ba457e03ffc3.jpeg" data-asset-id="444113b7-8e73-4120-be4d-ba457e03ffc3" referrerpolicy="no-referrer" />    <figcaption>
+<span>第一題：有一對年輕男女彼此相愛，他們知道兩人如果有下一代，高機率會罹患嚴重遺傳疾病， 因此，他們做非常完備的避孕措施並發生性關係。</span>
+    </figcaption>
+  </figure>
+  <h2 id="section-4">這是對的嗎？為什麼？</h2>
+  <h2 id="section-5"><br /></h2>
+  <h2 id="section-6">2</h2>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/92f7a51c-67a7-4b0c-9212-4f870c7ee38b.jpeg" data-asset-id="92f7a51c-67a7-4b0c-9212-4f870c7ee38b" referrerpolicy="no-referrer" />    <figcaption>
+<span>ˇ第二題：人可能有各種特殊的行為，只要行為不造成任何傷害，且無人知道他的行為，不會使人不舒服，那他的行為就不違反道德，</span>
+    </figcaption>
+  </figure>
+  <h2 id="section-7">這是對的嗎？<br />為什麼？</h2>
+  <h2 id="section-8">3</h2>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/b5c84326-e448-48a7-8d1d-119dfa9e137c.jpeg" data-asset-id="b5c84326-e448-48a7-8d1d-119dfa9e137c" referrerpolicy="no-referrer" />    <figcaption>
+<span>第四題：有一家人養了一隻狗好幾年了，這天，在家門口狗被車輛意外撞死了， 他們聽哾狗肉的味道很好吃，於是就把狗的屍體處理好煮成晚餐吃掉了。</span>
+    </figcaption>
+  </figure>
+  <h2 id="section-9">這是對的嗎？<br /></h2>
+  <h2 id="section-10">為什麼？</h2>
+  <p><br /></p>
+  <h2 id="section-11">4<br /></h2>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/93f1af9a-9629-44d3-a769-d2781191c845.jpeg" data-asset-id="93f1af9a-9629-44d3-a769-d2781191c845" referrerpolicy="no-referrer" />    <figcaption>
+<span>第五題：有一對已成年的兄妹深愛著彼此。 於是，他們採取完備的避孕措施後，在無他人知道的情況下發生了性行為。</span>
+    </figcaption>
+  </figure>
+  <h2 id="section-12">這是對的嗎？<br /></h2>
+  <h2 id="section-13">為什麼？<br /></h2>
+  <hr />
+  <p><br /><strong>在以上四題，你是否能在兩秒內就作出肯定/否定的回應呢？ <br />你認為對與錯的題目間，是否有明顯的矛盾呢？</strong><br /></p>
+  <p><br /></p>
+  <p><br /></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2022-01-26</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-01-26/%E5%A5%B3%E7%BD%91%E7%95%8C%E7%9C%9F%E5%8E%89%E5%AE%B3-%E5%BD%AD%E5%B8%85%E4%BA%8B%E6%B2%A1%E6%9C%89%E5%AE%8C/">
+          女网界真厉害  彭帅事没有完
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-01-26</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-01-26/%E8%AC%9D%E5%BE%B7%E6%85%B6-%E5%9C%A8%E8%97%9D%E8%A1%93%E7%9A%84%E6%99%82%E9%96%93-%E5%81%9A%E6%99%82%E9%96%93%E7%9A%84%E8%97%9D%E8%A1%93/">
+          謝德慶 -- 在藝術的時間，做時間的藝術
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-01-26</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-01-26/%E6%AD%B7%E5%8F%B2%E6%95%99%E7%A7%91%E6%9B%B8%E6%B2%92%E6%95%99%E7%9A%84%E4%BA%8B-%E8%BB%8D%E5%9C%8B%E4%B8%BB%E7%BE%A9%E7%9A%84%E7%AC%A6%E8%99%9F-%E6%97%A5%E8%BB%8D%E6%88%B0%E7%88%AD%E7%BD%AA%E8%A1%8C%E8%88%87%E9%9D%96%E5%9C%8B%E7%A5%9E%E7%A4%BE-%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%B8%AD%E6%97%A5%E6%88%B0%E7%88%AD-%E4%B8%AD%E6%97%A5%E9%97%9C%E4%BF%82-%E5%A4%AA%E5%B9%B3%E6%B4%8B%E6%88%B0%E7%88%AD/">
+          【歷史教科書沒教的事】軍國主義的符號：日軍戰爭罪行與靖國神社｜第二次中日戰爭｜中日關係｜太平洋戰爭｜右翼主義者｜神道教｜文化符號
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-01-26</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-01-26/%E5%85%B3%E4%BA%8E%E6%B1%89%E8%AF%AD%E7%AC%AC%E4%B8%89%E4%BA%BA%E7%A7%B0%E9%97%AE%E9%A2%98%E7%9A%84%E6%99%BA%E5%8A%9B%E6%B8%B8%E6%88%8F/">
+          关于汉语第三人称问题的智力游戏
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2022-01-26/%E6%AD%B7%E5%8F%B2%E6%95%99%E7%A7%91%E6%9B%B8%E6%B2%92%E6%95%99%E7%9A%84%E4%BA%8B-%E8%BB%8D%E5%9C%8B%E4%B8%BB%E7%BE%A9%E7%9A%84%E7%AC%A6%E8%99%9F-%E6%97%A5%E8%BB%8D%E6%88%B0%E7%88%AD%E7%BD%AA%E8%A1%8C%E8%88%87%E9%9D%96%E5%9C%8B%E7%A5%9E%E7%A4%BE-%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%B8%AD%E6%97%A5%E6%88%B0%E7%88%AD-%E4%B8%AD%E6%97%A5%E9%97%9C%E4%BF%82-%E5%A4%AA%E5%B9%B3%E6%B4%8B%E6%88%B0%E7%88%AD/">
+            前一篇：【歷史教科書沒教的事】軍國主義的符號：日軍戰爭罪行與靖國神社｜第二次中日戰爭｜中日關係｜太平洋戰爭｜右翼主義者｜神道教｜文化符號
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2022-01-26/%E8%AC%9D%E5%BE%B7%E6%85%B6-%E5%9C%A8%E8%97%9D%E8%A1%93%E7%9A%84%E6%99%82%E9%96%93-%E5%81%9A%E6%99%82%E9%96%93%E7%9A%84%E8%97%9D%E8%A1%93/">
+            後一篇：謝德慶 -- 在藝術的時間，做時間的藝術
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2022-01-26/%E6%AD%B7%E5%8F%B2%E6%95%99%E7%A7%91%E6%9B%B8%E6%B2%92%E6%95%99%E7%9A%84%E4%BA%8B-%E8%BB%8D%E5%9C%8B%E4%B8%BB%E7%BE%A9%E7%9A%84%E7%AC%A6%E8%99%9F-%E6%97%A5%E8%BB%8D%E6%88%B0%E7%88%AD%E7%BD%AA%E8%A1%8C%E8%88%87%E9%9D%96%E5%9C%8B%E7%A5%9E%E7%A4%BE-%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%B8%AD%E6%97%A5%E6%88%B0%E7%88%AD-%E4%B8%AD%E6%97%A5%E9%97%9C%E4%BF%82-%E5%A4%AA%E5%B9%B3%E6%B4%8B%E6%88%B0%E7%88%AD/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2022-01-26/%E8%AC%9D%E5%BE%B7%E6%85%B6-%E5%9C%A8%E8%97%9D%E8%A1%93%E7%9A%84%E6%99%82%E9%96%93-%E5%81%9A%E6%99%82%E9%96%93%E7%9A%84%E8%97%9D%E8%A1%93/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2022-01-26/%E8%AC%9D%E5%BE%B7%E6%85%B6-%E5%9C%A8%E8%97%9D%E8%A1%93%E7%9A%84%E6%99%82%E9%96%93-%E5%81%9A%E6%99%82%E9%96%93%E7%9A%84%E8%97%9D%E8%A1%93/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2022-01-26/%E6%AD%B7%E5%8F%B2%E6%95%99%E7%A7%91%E6%9B%B8%E6%B2%92%E6%95%99%E7%9A%84%E4%BA%8B-%E8%BB%8D%E5%9C%8B%E4%B8%BB%E7%BE%A9%E7%9A%84%E7%AC%A6%E8%99%9F-%E6%97%A5%E8%BB%8D%E6%88%B0%E7%88%AD%E7%BD%AA%E8%A1%8C%E8%88%87%E9%9D%96%E5%9C%8B%E7%A5%9E%E7%A4%BE-%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%B8%AD%E6%97%A5%E6%88%B0%E7%88%AD-%E4%B8%AD%E6%97%A5%E9%97%9C%E4%BF%82-%E5%A4%AA%E5%B9%B3%E6%B4%8B%E6%88%B0%E7%88%AD/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2022-01-26/%E6%AD%B7%E5%8F%B2%E6%95%99%E7%A7%91%E6%9B%B8%E6%B2%92%E6%95%99%E7%9A%84%E4%BA%8B-%E8%BB%8D%E5%9C%8B%E4%B8%BB%E7%BE%A9%E7%9A%84%E7%AC%A6%E8%99%9F-%E6%97%A5%E8%BB%8D%E6%88%B0%E7%88%AD%E7%BD%AA%E8%A1%8C%E8%88%87%E9%9D%96%E5%9C%8B%E7%A5%9E%E7%A4%BE-%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%B8%AD%E6%97%A5%E6%88%B0%E7%88%AD-%E4%B8%AD%E6%97%A5%E9%97%9C%E4%BF%82-%E5%A4%AA%E5%B9%B3%E6%B4%8B%E6%88%B0%E7%88%AD/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2022-01-26/%E8%AC%9D%E5%BE%B7%E6%85%B6-%E5%9C%A8%E8%97%9D%E8%A1%93%E7%9A%84%E6%99%82%E9%96%93-%E5%81%9A%E6%99%82%E9%96%93%E7%9A%84%E8%97%9D%E8%A1%93/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2022-01-26/%E8%AC%9D%E5%BE%B7%E6%85%B6-%E5%9C%A8%E8%97%9D%E8%A1%93%E7%9A%84%E6%99%82%E9%96%93-%E5%81%9A%E6%99%82%E9%96%93%E7%9A%84%E8%97%9D%E8%A1%93/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2022-01-26/%E6%AD%B7%E5%8F%B2%E6%95%99%E7%A7%91%E6%9B%B8%E6%B2%92%E6%95%99%E7%9A%84%E4%BA%8B-%E8%BB%8D%E5%9C%8B%E4%B8%BB%E7%BE%A9%E7%9A%84%E7%AC%A6%E8%99%9F-%E6%97%A5%E8%BB%8D%E6%88%B0%E7%88%AD%E7%BD%AA%E8%A1%8C%E8%88%87%E9%9D%96%E5%9C%8B%E7%A5%9E%E7%A4%BE-%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%B8%AD%E6%97%A5%E6%88%B0%E7%88%AD-%E4%B8%AD%E6%97%A5%E9%97%9C%E4%BF%82-%E5%A4%AA%E5%B9%B3%E6%B4%8B%E6%88%B0%E7%88%AD/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

@@ -1,0 +1,3454 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>译解魏尔伦的名诗 “月光” – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+译解魏尔伦的名诗 “月光”
+——
+" />
+    <meta property="og:description" content="
+译解魏尔伦的名诗 “月光”
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="译解魏尔伦的名诗 “月光”" />
+    <meta property="twitter:title" content="译解魏尔伦的名诗 “月光”" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40tsugaru_strait%2F%25E8%25AF%2591%25E8%25A7%25A3%25E9%25AD%258F%25E5%25B0%2594%25E4%25BC%25A6%25E7%259A%2584%25E5%2590%258D%25E8%25AF%2597-%25E6%259C%2588%25E5%2585%2589-bafybeidhdhlknz4bcv4ptstn3fnq3bymlisvlc7zaotvmmyduq6kib25wa" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@tsugaru_strait/%E8%AF%91%E8%A7%A3%E9%AD%8F%E5%B0%94%E4%BC%A6%E7%9A%84%E5%90%8D%E8%AF%97-%E6%9C%88%E5%85%89-bafybeidhdhlknz4bcv4ptstn3fnq3bymlisvlc7zaotvmmyduq6kib25wa" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@tsugaru_strait/%E8%AF%91%E8%A7%A3%E9%AD%8F%E5%B0%94%E4%BC%A6%E7%9A%84%E5%90%8D%E8%AF%97-%E6%9C%88%E5%85%89-bafybeidhdhlknz4bcv4ptstn3fnq3bymlisvlc7zaotvmmyduq6kib25wa&text=译解魏尔伦的名诗 “月光”&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@tsugaru_strait/%E8%AF%91%E8%A7%A3%E9%AD%8F%E5%B0%94%E4%BC%A6%E7%9A%84%E5%90%8D%E8%AF%97-%E6%9C%88%E5%85%89-bafybeidhdhlknz4bcv4ptstn3fnq3bymlisvlc7zaotvmmyduq6kib25wa&title=译解魏尔伦的名诗 “月光”" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@tsugaru_strait/%E8%AF%91%E8%A7%A3%E9%AD%8F%E5%B0%94%E4%BC%A6%E7%9A%84%E5%90%8D%E8%AF%97-%E6%9C%88%E5%85%89-bafybeidhdhlknz4bcv4ptstn3fnq3bymlisvlc7zaotvmmyduq6kib25wa&title=译解魏尔伦的名诗 “月光”" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=译解魏尔伦的名诗 “月光”&body=
+译解魏尔伦的名诗 “月光”
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@tsugaru_strait/%E8%AF%91%E8%A7%A3%E9%AD%8F%E5%B0%94%E4%BC%A6%E7%9A%84%E5%90%8D%E8%AF%97-%E6%9C%88%E5%85%89-bafybeidhdhlknz4bcv4ptstn3fnq3bymlisvlc7zaotvmmyduq6kib25wa" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@tsugaru_strait/%E8%AF%91%E8%A7%A3%E9%AD%8F%E5%B0%94%E4%BC%A6%E7%9A%84%E5%90%8D%E8%AF%97-%E6%9C%88%E5%85%89-bafybeidhdhlknz4bcv4ptstn3fnq3bymlisvlc7zaotvmmyduq6kib25wa&title=译解魏尔伦的名诗 “月光”&caption=
+译解魏尔伦的名诗 “月光”
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=译解魏尔伦的名诗 “月光”&url=https://matters.news/@tsugaru_strait/%E8%AF%91%E8%A7%A3%E9%AD%8F%E5%B0%94%E4%BC%A6%E7%9A%84%E5%90%8D%E8%AF%97-%E6%9C%88%E5%85%89-bafybeidhdhlknz4bcv4ptstn3fnq3bymlisvlc7zaotvmmyduq6kib25wa" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>译解魏尔伦的名诗 “月光”</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-08-28
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 津轻海峡</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@tsugaru_strait/%E8%AF%91%E8%A7%A3%E9%AD%8F%E5%B0%94%E4%BC%A6%E7%9A%84%E5%90%8D%E8%AF%97-%E6%9C%88%E5%85%89-bafybeidhdhlknz4bcv4ptstn3fnq3bymlisvlc7zaotvmmyduq6kib25wa" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1661682556000-->
+<p><a href="https://matters.news/@tsugaru_strait/%E8%AF%91%E8%A7%A3%E9%AD%8F%E5%B0%94%E4%BC%A6%E7%9A%84%E5%90%8D%E8%AF%97-%E6%9C%88%E5%85%89-bafybeidhdhlknz4bcv4ptstn3fnq3bymlisvlc7zaotvmmyduq6kib25wa">译解魏尔伦的名诗 “月光”</a>
+——</p>
+
+<div>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/498559b6-87b8-400f-ac7c-e9b1da307006.jpeg" data-asset-id="498559b6-87b8-400f-ac7c-e9b1da307006" referrerpolicy="no-referrer" />    <figcaption>
+<span>诗人魏尔伦，作曲家德彪西</span>
+    </figcaption>
+  </figure>
+  <p><a href="https://www.youtube.com/watch?v=CvFH_6DNRCY" rel="noopener noreferrer" target="_blank">CLAUDE DEBUSSY: CLAIR DE LUNE - YouTube</a></p>
+  <p>法国象征派诗人保尔·魏尔仑（Paul Verlaine，1844 - 96）的诗歌至今仍有众多的读者爱读。他的名诗 “月光” 则更是借助著名作曲家克劳德·德彪西（Claude Debussy）创作的钢琴曲《月光》而名闻遐迩。</p>
+  <p>德彪西的钢琴曲《月光》给人的听觉感受或许也可以用苏轼在其 “前赤壁赋” 中写出的句子来形容——如怨如慕，如泣如诉；余音袅袅，不绝如缕；舞幽壑之潜蛟，泣孤舟之嫠（lí，二声）妇。</p>
+  <p>有人说，音乐也是一种语言。但音乐语言有它的特殊性，这就是，它所表现、所呈现的通常是难以言喻的情绪或心境，也就是难以言说的东西。要想说明难以言说的东西，就只能勉为其难诉诸比喻，就像苏轼那样。</p>
+  <p>但德彪西的钢琴曲《月光》是基于魏尔伦的诗歌 “月光” 给他的灵感，这就使音乐和诗歌获得了相互发明、相得益彰的机运，使读者和古典音乐爱好者可以由德彪西的著名乐曲更好地理解魏尔伦的著名诗歌，由魏尔伦的诗歌更好地理解德彪西的这首著名钢琴曲。</p>
+  <p>这种相互发明、相得益彰是一个持续不断的过程，是每一个人（音乐欣赏者、诗歌爱读者）、每一代人都可以参与并从中获得属于自己的新感悟、新发现的过程。</p>
+  <p>作为一个文学和文学翻译研究者，我要在这里陈述一点我对这首诗的解读，以及由此而来的我对诗歌语言的新发现和感悟。</p>
+  <p>***</p>
+  <p> “月光” 这首诗所展示的是月光下的奇幻景色。这种景色可以是诗人亲眼所见或亲耳所闻的，也可以是诗人的想象——在一个月亮高悬的夜间，这首诗的说话人（诗的说话人不一定是诗人本人，有可能是诗人想象中的一个人）在一个有喷泉高高喷射和大理石雕像四处散落的花园里，听着水声，看着月光和喷射到天空中的水流，不禁魂魄出窍，进入如梦如幻的境界。</p>
+  <p>诗人所呈现的意象似真似幻，再现了月光、喷泉、雕像所引发的感觉和幻觉。顺便说一句，作为一个诗人，魏尔伦生前一直有意识地追求诗歌与音乐的合一。在这首诗中，他更是明确地说出和展示了这种追求。基于这种追求写出的诗歌也跟音乐一样，它所表达的更多的是一种难以言喻的情绪，心境（mood）。</p>
+  <p>以下是我尽力紧贴原文的翻译。我坚信一般的读者可以通过忠实于原文的翻译清楚地窥见或感受到 “月光” 一诗原文的魅力和力道。</p>
+  <blockquote>
+<strong>Clair de lune<br />月光</strong>  </blockquote>
+  <blockquote>
+Votre âme est un paysage choisi<br />你的心灵是一片拣选来的风景<br />Que vont charmant masques et bergamasques<br />假面舞曲和伯格诺民乐多么迷人<br />Jouant du luth et dansant et quasi<br />悠扬的笛声和舞蹈，还有在<br />Tristes sous leurs déguisements fantasques.<br />迷幻的戏装下似非而是的忧伤。  </blockquote>
+  <blockquote>
+Tout en chantant sur le mode mineur<br />众人都在轻唱讴歌<br />L'amour vainqueur et la vie opportune,<br />爱情的胜利，生活的可喜<br />Ils n'ont pas l'air de croire à leur bonheur<br />他们似乎不相信他们的福分<br />Et leur chanson se mêle au clair de lune,<br />他们的歌曲跟月光相融，  </blockquote>
+  <blockquote>
+Au calme clair de lune triste et beau,<br />月色明静，忧伤，美丽，<br />Qui fait rêver les oiseaux dans les arbres<br />令树中的群鸟做起了梦<br />Et sangloter d'extase les jets d'eau,<br />也使喷水，那些细长的喷水<br />Les grands jets d'eau sveltes parmi les marbres.<br />在四围的大理石像中发出欢喜的啜泣。  </blockquote>
+  <p>这首诗的第一句 “Votre âme est un paysage choisi / 你的心灵是一片拣选来的风景” 是一个惊人的陈述句。它不但是这首诗的的提要、关键、精髓，而且也可以说是魏尔伦的一种艺术观和人生观的宣言。作为一个象征派诗人，魏尔伦在这里把心灵和风景等量齐观，使读者脑洞大开——风景就是心灵，心灵就是风景，而且，是一片拣选来的风景。</p>
+  <p>有了这一句关键句在，接下来的其他诗行就是它的延申、铺陈、演绎、演示、解说了。</p>
+  <p>一般说来，月光在汉语世界代表亲情和乡愁，在西语世界中则代表神秘。魏尔伦的这首诗的标题 “月光” 和诗中出现的月光也是代表神秘。在这样的月光下，在这样的一片月下风景和情景中，舞蹈、乐声、歌声、水声，一切的一切都像梦幻，都是梦幻，亦真亦幻，难以捉摸，令人难以置信又流连忘返。</p>
+  <p>***</p>
+  <p>显然，读这首诗的原文对理解德彪西依据这首诗所作的钢琴曲很有帮助。至少，人们可以由此一目了然地理解为什么这首钢琴曲的演奏要如此轻柔，平静，还带有若隐若现的忧伤（因为诗人在诗中已经做出了这样的指示——众人都在轻唱讴歌 / Tout en chantant sur le mode mineur；月色明静，忧伤，美丽；/ Au calme clair de lune triste et beau ；“忧伤” 一词在诗中出现了两次）。</p>
+  <p>先前没有很仔细地读过魏尔伦的这首诗，更没有想到翻译。之所以发生了翻译兴趣并决心把它翻译出来，是因为看到了一种让我感到非常不满意的英文翻译，这翻译来自诺尔曼·夏皮洛（Norman Shapiro）：</p>
+  <blockquote>
+Your soul is like a landscape fantasy,<br />Where masks and Bergamasks, in charming wise,<br />Strum lutes and dance, just a bit sad to be<br />Hidden beneath their fanciful disguise.   </blockquote>
+  <blockquote>
+Singing in minor mode of life’s largesse<br />And all-victorious love, they yet seem quite<br />Reluctant to believe their happiness,<br />And their song mingles with the pale moonlight,  </blockquote>
+  <blockquote>
+The calm, pale moonlight, whose sad beauty, beaming,<br />Sets the birds softly dreaming in the trees,<br />And makes the marbled fountains, gushing, streaming—<br />Slender jet-fountains—sob their ecstasies.  </blockquote>
+  <p>我之所以不满意主要因为看到夏皮洛显然是走了一条我非常不以为然的诗歌翻译之路，这就是，为了追求译诗的诗句押韵而不惜任意创作乃至编造即添油加醋，使译文跟原文南辕北辙，变得面目全非，让读者难以揣摩原文的修辞、比喻、造句，无以领略原文的妙处和机杼。</p>
+  <p>这样的翻译应当说确实是跟翻译的宗旨背道而驰，但这样的翻译居然是芝加哥大学出版社1999年出版的。这一点令我感到非常意外。在亚马逊网站上，读者罗杰·斯特拉霍夫（<a href="https://www.amazon.com/gp/profile/amzn1.account.AH2BDZ3POOMWNVRKJBOVXBQEOXHQ/ref=cm_cr_srp_d_gw_btm?ie=UTF8" rel="noopener noreferrer" target="_blank">Roger Strukhoff</a>）留下的评语在我看来相当中肯：</p>
+  <blockquote>
+His translations are, in effect, new poems of his own, loosely based on the work of Verlaine. As such they are anachronistic and out of place. There is some limited comic value to them, I suppose. But this is not what I expected or wanted; I wanted someone to guide me through unfamiliar words and expressions, not someone to foist their own poems upon me.  </blockquote>
+  <blockquote>
+他（夏皮洛）的翻译实际上是他粗略依据魏尔伦的作品写出的他自己的新诗。因此，他的翻译是时代错乱的，不当的。我想，这种翻译有一些搞笑的价值。但这不是我希望的或想要的。我想要的是有人引领我理解陌生的词语和表现方式，而不是有人把他自己的诗硬塞给我。  </blockquote>
+  <p>***</p>
+  <p>我要说，斯特拉霍夫说出了我的心里话。他说得非常生动形象，又非常精准。</p>
+  <p>如何精准？不妨看一下夏皮洛翻译的原文第一行，Votre âme est un paysage choisi。绝对忠实的谷歌机器翻译是，Your soul is a chosen landscape。与之旗鼓相当的汉语翻译可以是，“你的心灵是一种拣选来的景色”。</p>
+  <p>这一行诗句可以说是中国最优秀的诗人杜甫所赞美和追求的 “语不惊人死不休” 的那种好句，妙句，绝妙好句。它开宗明义，一上来就把主观和客观融为一体，把读者一举带入诗人所要营造的诗境中。</p>
+  <p>而且，“拣选来的 / choisi” 一词在西方语文中也有明显的宗教意味。《圣经》说，以色列人是被神拣选的人，即神的选民，因此，这个词跟 “心灵 /âme” 一词一道使这一诗句染上了宗教色彩。对魏尔伦（以及他的先辈诗人波德莱尔）来说，艺术就是他的宗教。</p>
+  <p>此外，“拣选来的 / choisi (英文对应词是 chosen)” 这个关键词在这里也有二十世纪英语世界著名批评家和诗人燕卜逊（William Empson）所赞美的诗歌好写手所善用和惯用的多义含混（ambiguity），可以开启读者的思绪和想象空间——拣选既可以解释为自主的，也可以是非自主的，既成事实的；两种解释皆通，但通向两种不同的风景；两种不同的风景可以大异其趣，也可以是彼此相通。</p>
+  <p>可以毫不夸张地说，魏尔伦这种诗句让有文学修养的人一听、一看就会不禁感到震撼，振聋发聩，不禁思绪飞扬，幻想起飞。</p>
+  <p>从这个意义上说，夏皮洛的翻译 “Your soul is like a landscape fantasy（你的心灵就像一个风景的幻想）” 应当说是明显的败笔。</p>
+  <p>从最简单的诗歌修辞或一般文句修辞的角度说，“你的心灵是什么” 跟 “你的心灵像什么” 之间的力道相差十万八千里。随便编一个例子来说，“在我身心都感到寒冷时，你就是通红的炉火” 是一个好句， “在我身心都感到寒冷时，你就像通红的炉火” 则是一个烂句。</p>
+  <p> 以上是从最简单的修辞的角度来说。从原文的选词（diction）来说，为了拼凑韵脚，夏皮洛硬生生地把不见于原文的 “幻想 / fantasy” 给硬塞进来，再把原文明明摆在那里的关键词 “被拣选的 / choisi” 给任意丢弃。如此精致精炼的诗句经过如此粗暴的增删减会变成什么不问可知。</p>
+  <p>翻译诗歌就把人家开头第一行的好句弄成一个烂句，甚至还不如机器翻译来得好，这样的译文不能不说是标准的败笔。要命的是，夏皮洛的翻译是纯粹的误导，每一行都是这种生硬粗暴得吓人的操作。读者由他的翻译被导入迷魂阵和烂泥坑，跟诗人魏尔伦所呈现的景色和境界相距十万八千里还不止。</p>
+  <p>令人难以置信的是，夏皮洛的翻译出现在芝加哥大学出版社出版的《魏尔伦诗歌一百零一首：双语对照版》（One Hundred and One Poems by Paul Verlaine: A Bilingual Edition）中。这样的双语对照好像是恶作剧，也好像是对读者的智力侮辱。</p>
+  <p>相比之下，另一位英译者克里斯·劳特利奇（Chris Routledge）自称的 “简单质朴的英语翻译 / a simple English translation” 就强多了，甚至可以说完美——Your soul is a select landscape（你的心灵是一种精选的景观）。（劳特利奇的译文全文贴在下面）。</p>
+  <p>***</p>
+  <p>一行一行地讨论夏皮洛翻译的种种不是就属于翻译学术讨论了，因此不适宜在这里展开。但仅凭这首诗第一行的翻译就可以下一个靠谱的结论：夏皮洛不懂诗，尽管他竭力追求押韵；但劳特利奇懂诗，尽管他不竭力追求押韵。懂诗的人的翻译让读者可以感受到原文的诗意的力量，不懂诗的人的翻译让读者得到的则是温吞水，走了气的啤酒，隔夜的凉茶，甚至是浑浊的泥浆。</p>
+  <p>在我看来，翻译外国诗歌竭力准求押韵几乎总是以辞害义，本末倒置。这种误导读者乃至恶心读者的翻译在英文世界和中文世界都非常常见。所以，我对明显追求押韵的诗歌翻译总是抱有高度的警惕和怀疑。</p>
+  <p>懂英文又喜好读诗、或对维尔伦这首堪称世界文学名作的诗歌感到好奇的读者可以逐行对照这里列出的我的翻译、劳特利奇的翻译以及夏皮洛的翻译，逐行对各种翻译进行对比推敲。</p>
+  <p>严肃认真的、可以不断上进的文学阅读（无论是读诗还是读散文，无论是读外国文学原文，还是读译文，或者是读原作就是中文的文学作品）有赖于这样的推敲。</p>
+  <p>非常希望有读者在这样的推敲阅读中发现并指出我的译文的不妥或失误。</p>
+  <p>从根本的意义上说，阅读总是一种翻译，而翻译则总是一种永无止境的过程和进程，没有最好，只有更好；每一个读者则都可以有自己的言之成理的翻译。当然，不同的翻译会有巧拙高下之分。为巧拙高下的分别提出合情合理的理由就是深入细致的阅读解析，正经正宗的文学研究。</p>
+  <p>实际上，音乐的演奏和演唱也同样是一种翻译，是不同的演奏家和歌者根据自己的理解和经验通过演奏和演唱对同一篇乐谱进行的阐释和再现。内行的音乐爱好者喜欢听不同的演奏家和歌者对同一首乐曲作品的演奏或演唱，就是因为喜欢听不同的翻译，并从中发现原作更多的奥妙。</p>
+  <p>—--------------</p>
+  <p>附 </p>
+  <p>克里斯·劳特利奇（Chris Routledge）的翻译：</p>
+  <blockquote>
+<strong>Moonlight</strong>  </blockquote>
+  <blockquote>
+Your soul is a select landscape<br />Where charming masqueraders and bergamaskers go<br />Playing the lute and dancing and almost<br />Sad beneath their fantastic disguises.  </blockquote>
+  <blockquote>
+All sing in a minor key<br />Of victorious love and the opportune life,<br />They do not seem to believe in their happiness<br />And their song mingles with the moonlight,  </blockquote>
+  <blockquote>
+With the still moonlight, sad and beautiful,<br />That sets the birds dreaming in the trees<br />And the fountains sobbing in ecstasy,<br />The tall slender fountains among marble statues.  </blockquote>
+  <p>附注：</p>
+  <p>先前之所以迟迟没有把这首诗翻译出来，主要是给第二行 “Que vont charmant masques et bergamasques” 给绊住了，不知怎样翻译是好。尽管读了不少网上能够找到的英文和法文的解释，但读得懵懵懂懂，似懂非懂。不敢确信自己真懂了，也就翻译不下去了。直到有一天看到乔舒亚·恩格尔（Joshua Engel）提供的在我看来很是言之成理、言简意赅l的解释。我的翻译所依据的就是恩格尔的解释：</p>
+  <blockquote>
+The line is a bit of a pun. A "<a href="https://en.wikipedia.org/wiki/Masque" rel="noopener noreferrer" target="_blank">masque</a>" is a masked ball, and in this case refers to the kind of music played at masques. The name actually has a somewhat convoluted history, originally referring to a masked drama in France, then to a stylized dance in Elizabethan England, and that use re-exported back to France.  </blockquote>
+  <blockquote>
+Despite the name a "bergamasque" is not a kind of masque. The name comes from Bergamo, a city in Italy. It refers to the kind of music there, based on a folk dance. That dance is thus Bergamo-esque (bergamasco in Italian, and bergamasque in French, giving rise to <a href="https://en.wikipedia.org/wiki/Bergamask" rel="noopener noreferrer" target="_blank">Bergamask</a> in English).  </blockquote>
+  <blockquote>
+So "masques and bergamasques" puts together two styles of dance and music, both of which have Renaissance origins, even though the names are not actually related.（见，<a href="https://literature.stackexchange.com/questions/6232/what-exactly-are-masques-and-bergamasques" rel="noopener noreferrer" target="_blank">poetry - What exactly are masques and bergamasques? - Literature Stack Exchange</a>）  </blockquote>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2022-08-30</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-08-30/%E7%B7%AC%E7%94%B8-KK%E5%9C%92%E5%8D%80-%E6%98%AF%E4%BB%80%E9%BA%BC%E6%A8%A3%E7%9A%84%E5%AD%98%E5%9C%A8-%E6%AD%A6%E8%A3%9D%E8%A1%9D%E7%AA%81-%E7%B6%93%E6%BF%9F%E5%88%A9%E7%9B%8A%E8%88%87%E6%94%BF%E6%B2%BB%E5%A6%A5%E5%8D%94%E4%B8%8B%E7%9A%84%E7%94%A2%E7%89%A9/">
+          緬甸「KK園區」是什麼樣的存在？武裝衝突、經濟利益與政治妥協下的產物
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-08-30</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-08-30/%E4%BD%A0%E7%82%BA%E4%BB%80%E9%BA%BC%E4%B8%8D%E5%91%8A%E8%A8%B4%E6%88%91%E5%80%91-%E9%80%99%E6%98%AF%E6%9C%80%E5%BE%8C%E4%B8%80%E6%AC%A1%E8%A6%8B%E9%9D%A2-%E9%AE%AE%E7%82%BA%E4%BA%BA%E7%9F%A5%E7%9A%84%E6%8A%97%E7%88%AD%E8%80%85%E8%88%87%E6%94%BF%E6%B2%BB%E7%8A%AF%E5%AE%B6%E5%B1%AC/">
+          「你為什麼不告訴我們，這是最後一次見面？」－鮮為人知的抗爭者與政治犯家屬
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-08-25</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-08-25/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-%E5%B8%8C%E6%9C%9B%E8%88%87%E5%8F%8D%E6%8A%97-%E5%B8%9D%E5%9C%8B%E5%A4%A7%E5%AF%A9%E5%88%A4-%E7%B4%8D%E7%B2%B9%E5%BE%B7%E5%9C%8B-%E7%99%BD%E7%8E%AB%E7%91%B0%E5%8F%8D%E6%8A%97%E9%81%8B%E5%8B%95-%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2-%E6%89%AD%E6%9B%B2%E7%9A%84%E6%B3%95%E5%BE%8B-%E5%B9%B3%E5%BA%B8%E4%B9%8B%E6%83%A1/">
+          【電影與現實】希望與反抗：《帝國大審判》｜納粹德國｜白玫瑰反抗運動｜人民法院｜扭曲的法律｜平庸之惡
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-08-14</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-08-14/2022-%E5%B9%B4%E4%BA%86-%E7%82%BA%E4%BD%95%E9%82%84%E8%A6%81%E8%A8%8E%E8%AB%96%E6%98%8E%E6%97%A5%E5%A4%A7%E5%B6%BC/">
+          2022 年了，為何還要討論明日大嶼？
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2022-08-25/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-%E5%B8%8C%E6%9C%9B%E8%88%87%E5%8F%8D%E6%8A%97-%E5%B8%9D%E5%9C%8B%E5%A4%A7%E5%AF%A9%E5%88%A4-%E7%B4%8D%E7%B2%B9%E5%BE%B7%E5%9C%8B-%E7%99%BD%E7%8E%AB%E7%91%B0%E5%8F%8D%E6%8A%97%E9%81%8B%E5%8B%95-%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2-%E6%89%AD%E6%9B%B2%E7%9A%84%E6%B3%95%E5%BE%8B-%E5%B9%B3%E5%BA%B8%E4%B9%8B%E6%83%A1/">
+            前一篇：【電影與現實】希望與反抗：《帝國大審判》｜納粹德國｜白玫瑰反抗運動｜人民法院｜扭曲的法律｜平庸之惡
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2022-08-29/%E4%B8%8D%E7%94%A9%E5%85%A9%E5%B2%B8%E4%BA%A4%E6%B5%81-%E4%B8%AD%E5%85%B1%E5%AE%A3%E5%B8%83%E5%86%8D%E8%BB%8D%E6%BC%94-shorts/">
+            後一篇：不甩兩岸交流 中共宣布再軍演 #shorts
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2022-08-25/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-%E5%B8%8C%E6%9C%9B%E8%88%87%E5%8F%8D%E6%8A%97-%E5%B8%9D%E5%9C%8B%E5%A4%A7%E5%AF%A9%E5%88%A4-%E7%B4%8D%E7%B2%B9%E5%BE%B7%E5%9C%8B-%E7%99%BD%E7%8E%AB%E7%91%B0%E5%8F%8D%E6%8A%97%E9%81%8B%E5%8B%95-%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2-%E6%89%AD%E6%9B%B2%E7%9A%84%E6%B3%95%E5%BE%8B-%E5%B9%B3%E5%BA%B8%E4%B9%8B%E6%83%A1/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2022-08-29/%E4%B8%8D%E7%94%A9%E5%85%A9%E5%B2%B8%E4%BA%A4%E6%B5%81-%E4%B8%AD%E5%85%B1%E5%AE%A3%E5%B8%83%E5%86%8D%E8%BB%8D%E6%BC%94-shorts/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2022-08-30/%E4%BD%A0%E7%82%BA%E4%BB%80%E9%BA%BC%E4%B8%8D%E5%91%8A%E8%A8%B4%E6%88%91%E5%80%91-%E9%80%99%E6%98%AF%E6%9C%80%E5%BE%8C%E4%B8%80%E6%AC%A1%E8%A6%8B%E9%9D%A2-%E9%AE%AE%E7%82%BA%E4%BA%BA%E7%9F%A5%E7%9A%84%E6%8A%97%E7%88%AD%E8%80%85%E8%88%87%E6%94%BF%E6%B2%BB%E7%8A%AF%E5%AE%B6%E5%B1%AC/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2022-08-25/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-%E5%B8%8C%E6%9C%9B%E8%88%87%E5%8F%8D%E6%8A%97-%E5%B8%9D%E5%9C%8B%E5%A4%A7%E5%AF%A9%E5%88%A4-%E7%B4%8D%E7%B2%B9%E5%BE%B7%E5%9C%8B-%E7%99%BD%E7%8E%AB%E7%91%B0%E5%8F%8D%E6%8A%97%E9%81%8B%E5%8B%95-%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2-%E6%89%AD%E6%9B%B2%E7%9A%84%E6%B3%95%E5%BE%8B-%E5%B9%B3%E5%BA%B8%E4%B9%8B%E6%83%A1/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2022-08-25/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-%E5%B8%8C%E6%9C%9B%E8%88%87%E5%8F%8D%E6%8A%97-%E5%B8%9D%E5%9C%8B%E5%A4%A7%E5%AF%A9%E5%88%A4-%E7%B4%8D%E7%B2%B9%E5%BE%B7%E5%9C%8B-%E7%99%BD%E7%8E%AB%E7%91%B0%E5%8F%8D%E6%8A%97%E9%81%8B%E5%8B%95-%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2-%E6%89%AD%E6%9B%B2%E7%9A%84%E6%B3%95%E5%BE%8B-%E5%B9%B3%E5%BA%B8%E4%B9%8B%E6%83%A1/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2022-08-29/%E4%B8%8D%E7%94%A9%E5%85%A9%E5%B2%B8%E4%BA%A4%E6%B5%81-%E4%B8%AD%E5%85%B1%E5%AE%A3%E5%B8%83%E5%86%8D%E8%BB%8D%E6%BC%94-shorts/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2022-08-30/%E4%BD%A0%E7%82%BA%E4%BB%80%E9%BA%BC%E4%B8%8D%E5%91%8A%E8%A8%B4%E6%88%91%E5%80%91-%E9%80%99%E6%98%AF%E6%9C%80%E5%BE%8C%E4%B8%80%E6%AC%A1%E8%A6%8B%E9%9D%A2-%E9%AE%AE%E7%82%BA%E4%BA%BA%E7%9F%A5%E7%9A%84%E6%8A%97%E7%88%AD%E8%80%85%E8%88%87%E6%94%BF%E6%B2%BB%E7%8A%AF%E5%AE%B6%E5%B1%AC/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2022-08-25/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-%E5%B8%8C%E6%9C%9B%E8%88%87%E5%8F%8D%E6%8A%97-%E5%B8%9D%E5%9C%8B%E5%A4%A7%E5%AF%A9%E5%88%A4-%E7%B4%8D%E7%B2%B9%E5%BE%B7%E5%9C%8B-%E7%99%BD%E7%8E%AB%E7%91%B0%E5%8F%8D%E6%8A%97%E9%81%8B%E5%8B%95-%E4%BA%BA%E6%B0%91%E6%B3%95%E9%99%A2-%E6%89%AD%E6%9B%B2%E7%9A%84%E6%B3%95%E5%BE%8B-%E5%B9%B3%E5%BA%B8%E4%B9%8B%E6%83%A1/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

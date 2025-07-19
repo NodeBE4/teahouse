@@ -1,0 +1,3539 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>大选之前，关于加州立法的几个谣言 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+大选之前，关于加州立法的几个谣言
+——
+" />
+    <meta property="og:description" content="
+大选之前，关于加州立法的几个谣言
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="大选之前，关于加州立法的几个谣言" />
+    <meta property="twitter:title" content="大选之前，关于加州立法的几个谣言" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40ahyong%2F%25E5%25A4%25A7%25E9%2580%2589%25E4%25B9%258B%25E5%2589%258D-%25E5%2585%25B3%25E4%25BA%258E%25E5%258A%25A0%25E5%25B7%259E%25E7%25AB%258B%25E6%25B3%2595%25E7%259A%2584%25E5%2587%25A0%25E4%25B8%25AA%25E8%25B0%25A3%25E8%25A8%2580-bafyreigoo7qkrnnkrxx2tpmbzequercvpmhjwhxch3ckn6masz27xl5fqi" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@ahyong/%E5%A4%A7%E9%80%89%E4%B9%8B%E5%89%8D-%E5%85%B3%E4%BA%8E%E5%8A%A0%E5%B7%9E%E7%AB%8B%E6%B3%95%E7%9A%84%E5%87%A0%E4%B8%AA%E8%B0%A3%E8%A8%80-bafyreigoo7qkrnnkrxx2tpmbzequercvpmhjwhxch3ckn6masz27xl5fqi" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@ahyong/%E5%A4%A7%E9%80%89%E4%B9%8B%E5%89%8D-%E5%85%B3%E4%BA%8E%E5%8A%A0%E5%B7%9E%E7%AB%8B%E6%B3%95%E7%9A%84%E5%87%A0%E4%B8%AA%E8%B0%A3%E8%A8%80-bafyreigoo7qkrnnkrxx2tpmbzequercvpmhjwhxch3ckn6masz27xl5fqi&text=大选之前，关于加州立法的几个谣言&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@ahyong/%E5%A4%A7%E9%80%89%E4%B9%8B%E5%89%8D-%E5%85%B3%E4%BA%8E%E5%8A%A0%E5%B7%9E%E7%AB%8B%E6%B3%95%E7%9A%84%E5%87%A0%E4%B8%AA%E8%B0%A3%E8%A8%80-bafyreigoo7qkrnnkrxx2tpmbzequercvpmhjwhxch3ckn6masz27xl5fqi&title=大选之前，关于加州立法的几个谣言" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@ahyong/%E5%A4%A7%E9%80%89%E4%B9%8B%E5%89%8D-%E5%85%B3%E4%BA%8E%E5%8A%A0%E5%B7%9E%E7%AB%8B%E6%B3%95%E7%9A%84%E5%87%A0%E4%B8%AA%E8%B0%A3%E8%A8%80-bafyreigoo7qkrnnkrxx2tpmbzequercvpmhjwhxch3ckn6masz27xl5fqi&title=大选之前，关于加州立法的几个谣言" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=大选之前，关于加州立法的几个谣言&body=
+大选之前，关于加州立法的几个谣言
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@ahyong/%E5%A4%A7%E9%80%89%E4%B9%8B%E5%89%8D-%E5%85%B3%E4%BA%8E%E5%8A%A0%E5%B7%9E%E7%AB%8B%E6%B3%95%E7%9A%84%E5%87%A0%E4%B8%AA%E8%B0%A3%E8%A8%80-bafyreigoo7qkrnnkrxx2tpmbzequercvpmhjwhxch3ckn6masz27xl5fqi" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@ahyong/%E5%A4%A7%E9%80%89%E4%B9%8B%E5%89%8D-%E5%85%B3%E4%BA%8E%E5%8A%A0%E5%B7%9E%E7%AB%8B%E6%B3%95%E7%9A%84%E5%87%A0%E4%B8%AA%E8%B0%A3%E8%A8%80-bafyreigoo7qkrnnkrxx2tpmbzequercvpmhjwhxch3ckn6masz27xl5fqi&title=大选之前，关于加州立法的几个谣言&caption=
+大选之前，关于加州立法的几个谣言
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=大选之前，关于加州立法的几个谣言&url=https://matters.news/@ahyong/%E5%A4%A7%E9%80%89%E4%B9%8B%E5%89%8D-%E5%85%B3%E4%BA%8E%E5%8A%A0%E5%B7%9E%E7%AB%8B%E6%B3%95%E7%9A%84%E5%87%A0%E4%B8%AA%E8%B0%A3%E8%A8%80-bafyreigoo7qkrnnkrxx2tpmbzequercvpmhjwhxch3ckn6masz27xl5fqi" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>大选之前，关于加州立法的几个谣言</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2020-12-22
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: moreless</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@ahyong/%E5%A4%A7%E9%80%89%E4%B9%8B%E5%89%8D-%E5%85%B3%E4%BA%8E%E5%8A%A0%E5%B7%9E%E7%AB%8B%E6%B3%95%E7%9A%84%E5%87%A0%E4%B8%AA%E8%B0%A3%E8%A8%80-bafyreigoo7qkrnnkrxx2tpmbzequercvpmhjwhxch3ckn6masz27xl5fqi" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1608690494000-->
+<p><a href="https://matters.news/@ahyong/%E5%A4%A7%E9%80%89%E4%B9%8B%E5%89%8D-%E5%85%B3%E4%BA%8E%E5%8A%A0%E5%B7%9E%E7%AB%8B%E6%B3%95%E7%9A%84%E5%87%A0%E4%B8%AA%E8%B0%A3%E8%A8%80-bafyreigoo7qkrnnkrxx2tpmbzequercvpmhjwhxch3ckn6masz27xl5fqi">大选之前，关于加州立法的几个谣言</a>
+——</p>
+
+<div>
+  <p><strong>俗话说得好，事出反常必有妖。随着大选的临近，关于加州立法的各种不实陈述比比皆是，在华人微信圈广为流传，我们来看看近期几个“经典”的谣言都是什么。</strong></p>
+  <h2 id="section"><strong>一.加州通过法案，每名非裔要赔偿35万?</strong></h2>
+  <p>随手在微信里搜一下，你看到的是：</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/5dd1624e-ac42-462a-a76d-115af7796f0d.png" data-asset-id="5dd1624e-ac42-462a-a76d-115af7796f0d" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p>然而，对于非洲裔因为种族隔离期间遭受到的不公正待遇发起赔偿，是一个长期的话题，并不是今年才出现。只是因为今年George Floyd在警察暴力中身亡的事件，对非裔赔偿的议题又再次成为了热点。关于要不要赔偿，怎么赔偿，以及赔偿多少的讨论也不是从今年才开始。</p>
+  <p>比如2008年，黑人反酷刑组织（BPAPT）就开始要求针对警察酷刑受害者的赔偿。2015年芝加哥通过了决议，成立赔偿基金，对具体赔偿有了框架协议。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/93d5554d-91a2-471f-9b05-3432fa934c45.png" data-asset-id="93d5554d-91a2-471f-9b05-3432fa934c45" referrerpolicy="no-referrer" />    <figcaption>
+<span>图片来源：https://chicagotorture.org/reparations/</span>
+    </figcaption>
+  </figure>
+  <p>因为今年发生了针对特定族群的事件，所以对赔偿的关注度提高了不少，在相关的立法程序的推动上有了显著的进展。</p>
+  <p>加州这个讨论赔偿方案的法案AB3121，6月11号就在加州众议院以56比5通过了，最近由纽森签署成为为法律。要求在2021年之前成立特别工作组，研究如何决定哪些人有资格得到赔偿，以及赔偿的方式。这个法案本身并没有提及任何赔偿金额的问题。</p>
+  <blockquote>
+According to an estimate by Mullen and Darity, the historian and economist at Duke University, the cost of compensating Americans descended from slaves for the legacy of bondage and subsequent racial oppression could be as much as $13 trillion.  </blockquote>
+  <p><br /></p>
+  <p>关于每人赔偿现金美元的说法，我们查到一个可能的来源是杜克大学的历史经济学家的一份报告。核心内容如上引用的英文所示，报告用两种方法，一是消除目前种族歧视造成的社会阶级差异需要的钱（14 trillion）；二核算美国种种不公平的土地和工资政策给黑人带来的经济损失，折现(10–12 trillion) ，里面还提了其他不少计算方法的数字，和其他国家不同赔偿金标准比对。</p>
+  <p>但这份报告花大量篇幅来讨论说，赔偿金额应当是联邦政府层面出一个系统的赔偿方案，不应该由州政府或更小的地方政府承担。加州的法案AB3121没有在任何时候引用过，或者提到过会采用这份研究报告的数字，而且这份报告也是强调即便要有具体赔偿金额，也要求由联邦政府牵头赔偿，而不是由各个州来实施。</p>
+  <p>加州目前通过的法律AB3121是要求研究出一个赔偿方案，考虑的方式就目前透露的可能性包括：现金支付，学生贷款减免，公共项目或职业培训等。但具体怎么赔，赔多少，赔给谁，一切都还不得而知。</p>
+  <p>然后就有造谣公号把这个法案和不相关的赔偿估算联系在一起。他们的信息来源连杜克大学的研究都没有提到，直接说是一个开赌场的非裔亿万富翁提议，赔偿黑人14万亿，摊在每个人头上就是每个人35万。他就算提议一个人赔偿1亿，也跟加州的立法没有任何关系，甚至还有谣言说拜登上台就要每个黑人赔偿35万美元。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/13425275-4c01-4e0e-b3c1-00146cb85afc.png" data-asset-id="13425275-4c01-4e0e-b3c1-00146cb85afc" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/bd126786-bd06-4296-8f33-cc726ea2dd99.png" data-asset-id="bd126786-bd06-4296-8f33-cc726ea2dd99" referrerpolicy="no-referrer" />    <figcaption>
+<span>图片来源：某自媒体公号截屏</span>
+    </figcaption>
+  </figure>
+  <p>研究估算的金额跟加州通过的立法是两条不相关的新闻。把两则新闻硬拉在一起，并且强烈暗示35万的金额，是一种耍流氓的行为。而且这35万也不是加州立法的进展。</p>
+  <p>不少公众号的做法，其实就是把两项完全不相关的事情硬联系在一起，通过标题党误导读者，制造焦虑，吓唬人，从而影响投票。</p>
+  <p>其实，在AB3121没有签署之前，我们已经针对大量“加州毁了，赶快逃离吧”这些针对该提案的不实信息进行了澄清，详见：<a href="http://mp.weixin.qq.com/s?__biz=MzU0NDk0MzI4NA==&amp;mid=2247484225&amp;idx=1&amp;sn=d71acd3101b9c855eb8e78ee0fce7717&amp;chksm=fb753e9acc02b78cd3ca7733a824477c8269c6eddc4a780a59735102b6189aa9c16c43ccd5a7&amp;scene=21#wechat_redirect" target="_blank"><strong>加州高票通过向黑人赔款法导致华人大逃离？假的！两招教你识破谣言</strong></a></p>
+  <h2 id="section-1">二、偷窃950元以下不入罪?</h2>
+  <p>Kamala Harris（中文翻译成贺锦丽）被提名为民主党副总统候选人以后，很多右翼自媒体上（比如罗文和建民）就流传一种说法，说Harris是加州偷窃950元以下无罪这个恶法的始作俑者，因为这项加州Prop 47法案就是在Harris担任加州总检察长的时候通过的，从而导致加州治安恶化。</p>
+  <p>这些都不是事实。</p>
+  <p>首先这个法案说得是盗窃金额在950以下不算重罪（felony），而算轻罪（misdemeanor）。并不是950以下就无罪。而且这个划分轻罪重罪的界限各个州都有。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/dc7fffd5-9748-47b1-aed3-6ef25b41f264.png" data-asset-id="dc7fffd5-9748-47b1-aed3-6ef25b41f264" referrerpolicy="no-referrer" />    <figcaption>
+<span>来源：https://www.pewtrusts.org/~/media/assets/2017/04/pspp_the_effects_of_changing_felony_theft_thresholds.pdf</span>
+    </figcaption>
+  </figure>
+  <p>从这个图可以看出，在加州把felony theft（盗窃的重罪线）从$400提到$950之后，被广泛认为是共和党占优的保守州德克萨斯州，把它的重罪线从$1500提到了$2500。德州这个界限是2500。也就是说在德州盗窃2500元以下都是轻罪，为什么没有人说德州治安恶化呢？所以别有用心搞煽动的人，根本不会告诉你德州也有类似的法律。</p>
+  <p>量刑轻罪化是近年来的一个趋势，而且加州的监狱也人满为患，所以执法者想要减少监狱的负担。至于量刑轻罪化是增加还是降低了犯罪率，这个课题有很多人研究，但是结论并不一致。</p>
+  <p>Harris作为当时的加州总检察长，受加州议会指派，负责起草和推动Prop 47的通过，只是做了她职责范围内的事，根本谈不上是她的一项罪状。</p>
+  <p>这条有几个加州公号后来都进行了辟谣，我们转载过一篇，想了解更多详见的，可查看：<a href="http://mp.weixin.qq.com/s?__biz=MzU0NDk0MzI4NA==&amp;mid=2247484193&amp;idx=1&amp;sn=20ba2f73a436e76bf6abc0ff2de30c06&amp;chksm=fb753efacc02b7ece99ec29d88c386d8841f238486c4ad4e8c15dd1714eae01257056362ab78&amp;scene=21#wechat_redirect" target="_blank">加州偷窃950美元不算犯罪？假的。可华人圈为什么爱传？</a></p>
+  <h2 id="sb145"><strong>三、SB145是鼓励恋童癖？</strong></h2>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/72d73933-0625-40fa-9d34-6dfe3d50b51b.png" data-asset-id="72d73933-0625-40fa-9d34-6dfe3d50b51b" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p>9月初的时候加州的参议院和众议院分别通过了145号法案（Senate Bill №145），9月11号加州州长签署通过了这项法案。此项法案引起了广泛争议。这个法案的意思是说如果被告性侵的年龄相差在10岁以内的话，如果罪名成立，由法官决定是否将被告计入性侵者记录系统（类似于中国的进档案跟一辈子）。</p>
+  <p>以前的情况是如果罪名成立，会自动计入性侵者记录系统。值得一提的是，这个性侵者登记系统，就是加州首先实行并推广到全美的,法律要求特定的性侵者强制登记。</p>
+  <p>加州的性同意年龄是18岁，同意年龄是指一个人可以合法同意性行为的年龄。 比如，一个18岁成年人和一个14岁未成年人发生性关系属于非法，因为他违反了同意年龄的法律界定。</p>
+  <p>之所以有了这种新规定,是因为制定法律者的初衷是针对诸如类似这样的情况：如果青年男女之间，比如17岁和19岁的青年之间发生性关系，虽然17岁是未成年人的年龄，两者年龄差在10岁以内，但如果一方属自愿，法官可以考虑不把跟未成年发生性关系者计入性侵者系统。但是，与年龄不满14岁的人发生性关系，则是一定会记入性侵者系统的。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/060c9689-9b60-4b3c-bfca-2fd8ebf4cf28.png" data-asset-id="060c9689-9b60-4b3c-bfca-2fd8ebf4cf28" referrerpolicy="no-referrer" />    <figcaption>
+<span>来自曹长青推特截图</span>
+    </figcaption>
+  </figure>
+  <p>另外加的一条是除去传统性交方式以外的其他性交方式如Kou Jiao，也不会自动计入性侵者系统，也是由法官来决定。据法案的提案者说，这项修改是为了照顾LGBT人士，因为传统的性交方式可以由法官来决定是否计入性侵者系统，而对于性少数的性爱方式，如果自动计入性侵者系统的话，对性少数是不公平对待。</p>
+  <p>所以这项法案的内容，无关对minor的性侵算不算性侵，无关于把性侵定成是felony还是misdemeanor，只在于是否把特定情况下的性犯罪记录自动计入系统，还是交由法官决定。</p>
+  <p>右翼网站和网上的各种谣棍就造谣说是纵容恋童癖，或者是说强奸不算罪，其实是对这个法案的完全误读，其目的在于煽动对民主党的仇恨。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/c9da9328-32ae-45de-9b67-48a16577ff0e.png" data-asset-id="c9da9328-32ae-45de-9b67-48a16577ff0e" referrerpolicy="no-referrer" />    <figcaption>
+<span>路透社做的事实核查</span>
+    </figcaption>
+  </figure>
+  <p>另外比如说强奸12岁合法，则完全是毫无根据的胡说八道，除了拉仇恨没有一点意义。凭常识也知道，一个国家，或者一个地方的政府，怎么可能合法化强奸和恋童行为呢？</p>
+  <p>其他事实核查网站snopes，对SB145进行的事实核查，也证实这样的行为不入罪的说法是不实的。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/ee7bc38c-155d-4a86-b0b6-8507a2eaff14.png" data-asset-id="ee7bc38c-155d-4a86-b0b6-8507a2eaff14" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <h2 id="section-2"><strong>别这么容易就被吓着了</strong></h2>
+  <p>不少造谣自媒体公众号就是个内容农场，通常都是七拼八凑一些英文媒体似是而非的信息，通过谷歌翻译一下就把文章发出来。内容粗制滥造，错误很多，上面这几个近期经典谣言多都是这些号炮制出来的。</p>
+  <p>美国各州因为base 不同，确实会在立法上有倾向性区别。比如红州比较喜欢限制堕胎权方面的立法，蓝州倾向LGBT权利保护等。</p>
+  <p>但是，这种简单粗暴把某个法律完全归咎于党派原因，且直接做道德归因的，更要注意它的信息质量。法律本身就是专业领域，有自身复杂性。但很多公号文章，会无视其中的专业部分，混淆偷换概念，比如把注册制度直接和强奸犯定罪等同，然后再夸大恐吓等，而忽略掉了注册制度本身的区域差异，和立法平衡。</p>
+  <p>一些华人本身接触的英文信息就很有限，对地方法律也缺乏了解，主要的信息源就是微信公众号和油管自媒体，这上面有充斥着各种谣言。天天都是这种恐吓类信息，比如加州强奸幼童都合法了，加州偷窃950元以下不抓了，还有搞平权法案（AA)以后华人小孩就上不了大学了（详情参见<a href="http://mp.weixin.qq.com/s?__biz=MzU0NDk0MzI4NA==&amp;mid=2247483862&amp;idx=1&amp;sn=87a1d63bf3fcca37c9bcb6d4040f11ef&amp;chksm=fb753c0dcc02b51be40a6b1b41822ba16c86b44d0b6a6a4fcb071e157bd63adc6092e9e58a1c&amp;scene=21#wechat_redirect" target="_blank">加州“ACA5”议案参议院顺利推进，背后的恐惧，阴谋与谣言浮出水面</a>）总之，万能句式就是你再不怎么怎么样你就完蛋了。</p>
+  <p>越临近大选，这类把社会问题党派化恐吓的文章会越多，阅读的时候要注意甄别，远离这些操纵恐惧情绪的造谣公众号和自媒体。</p>
+  <p>以下是第二部分：</p>
+  <h2 id="sb1322"><strong>四、SB1322鼓励青少年卖淫</strong></h2>
+  <blockquote>
+📌未成年賣淫合法SB1322。此法案是由洛杉磯民主黨參議員霍莉·米切爾（Holly Mitchell）提出並於2017年開始執行。並且是打著保護青少年的大旗而殘害他們。  </blockquote>
+  <p>鼓励青少年卖淫是陈年老谣了，源起于2016年通过的SB1322。<a href="https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201520160SB1322" target="_blank">Senate Bill 1322</a>由加州民主党籍的议员Holly Mitchell提出，在2016年通过，由当时的州长Brown签署通过成为法案。此项法案因为共和党籍议员Travis Allen在右翼媒体the Washington Examiner上发表了一篇题目为《<a href="https://www.washingtonexaminer.com/california-democrats-legalize-child-prostitution#.WGXbufGlVZ4.facebook" target="_blank">加州的民主党合法化儿童卖淫</a>》op-ed而引发广泛争议。Allen的文章称，民主党占多数的议会通过此法案，严重破坏法治。</p>
+  <p>此法案的初衷是为了保护未成年人，认为参与性交易的未成年人是受害者，而不是罪犯。加州的性同意年龄是18岁，成年人与未满18岁的青少年发生性行为，不管少年是否同意。均属违法。而法案的提出者认为，既然未满18岁的青少年未到性同意年龄，自己同意或不同意发生性行为都不会导致不同的法律后果。那么成年人与未满18岁的未成年人发生性交易，未成年人也不应该承担法律后果。</p>
+  <p>根据新法规，从事性交易的未成年人，不会被逮捕，就是所谓的非罪化。但是警察有权打电话，将未成年人拘留，或者是联系社会救助组织，实行帮助，避免他们再流落街头或者被迫从事性交易。</p>
+  <p>而且在加州，和18岁以下未成年人发生性行为，不管对方是否同意依然是罪行。同时拉皮条，卖淫，或者介绍卖淫扔均属违法。所以买春的一方依然要受到法律制裁。不存在什么鼓励卖淫的实践。</p>
+  <p>不过也有批评的人认为，因为社会资源有限，社会救助组织不一定能跟得上，来提供必要的社会帮助。但是这个绝对表示如传闻所说的鼓励青少年从事性交易。</p>
+  <p><br /></p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/fb65d000-c7dd-4212-8263-ffb5e1d26809.png" data-asset-id="fb65d000-c7dd-4212-8263-ffb5e1d26809" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/c103d3e3-04a8-46b5-9ce9-f905fcabe47d.png" data-asset-id="c103d3e3-04a8-46b5-9ce9-f905fcabe47d" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <h2 id="ap-fact-check-child-prostitution-not-legal-in-california"><a href="https://apnews.com/article/488129335aef4757bfb94cafb4a610c6" target="_blank"><strong>AP FACT CHECK: Child prostitution not legal in California</strong></a></h2>
+  <h2 id="politifact---pants-on-fire-for-claim-california-legalized-child-prostitution"><a href="https://www.politifact.com/factchecks/2017/jan/04/travis-allen/lawmakers-claim-about-california-legalizing-child-/" target="_blank"><strong>PolitiFact - Pants On Fire for claim California legalized child prostitution</strong></a></h2>
+  <h2 id="ab329"><strong>五、AB329过激性教育</strong></h2>
+  <blockquote>
+📌AB329 過激性教育和變性教育，已經通過在公立學校實施，教孩子變性有理，鼓勵孩子變性。過激性教育完全誤導孩子。以前以為是高中開始，現在是初中生就開始接受這種教育。男女，男男，女女怎麼性愛。  </blockquote>
+  <p>2015年通过的加州性教育提案AB329，只是对学校性教育提供一个指引。原有的法案叫做加州通识性健康和防止艾滋病教育法案（California Comprehensive Sexual Health and HIV/AIDS Prevention Education Act，名字好长），对从K到12年纪的性教育都做了框架指引，目的之一是防止艾滋病传播。新法案将原法案改名为加州青年健康法案（ California Healthy Youth Act）。规定了中学生从7到12年级要接受性健康教育，和防止艾滋病的知识。</p>
+  <p><em>The bill would instead require school districts to ensure that all pupils in grades 7 to 12, inclusive, receive comprehensive sexual health education and HIV prevention education, as specified. By imposing additional requirements on school districts, this bill would impose a state-mandated local program.</em></p>
+  <p>首先，法律只是要求学校要进行必要的性教育。美国的教育系统又不像中国，有统一颁发的教材。各个学校自己选定教材。法案不可能硬性规定学校里要教什么，怎么可能在法律里面规定“教孩子變性有理，鼓勵孩子變性”？通过常识判断，也知道这是完全不可能的事情。这完全就是一些家长对性教育不理解而自己夸大其词的结果。</p>
+  <p>其次，法律规定，家长有权不让自己的孩子不接受这样的性教育。或者不适用学校指定的教材。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/e90ecaec-0e38-4c0f-8fa3-82211944f0e8.png" data-asset-id="e90ecaec-0e38-4c0f-8fa3-82211944f0e8" referrerpolicy="no-referrer" />    <figcaption>
+<span></span><br />
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/e242e6aa-cbdf-4b2d-a4de-23827869901f.png" data-asset-id="e242e6aa-cbdf-4b2d-a4de-23827869901f" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <h2 id="questions---and-answers---about-the-california-healthy-youth-act"><a href="https://newsroom.ocde.us/six-questions-and-answers-about-the-california-healthy-youth-act/" target="_blank"><strong>6 questions - and answers - about the California Healthy Youth Act</strong></a></h2>
+  <h3 id="the-california-healthy-youth-act-which-took-effect-on-jan-1-2016-requires-school-districts-throughout-the-state-to"><a href="https://newsroom.ocde.us/six-questions-and-answers-about-the-california-healthy-youth-act/" target="_blank"><strong>The California Healthy Youth Act, which took effect on Jan. 1, 2016, requires school districts throughout the state to…</strong></a></h3>
+  <h4 id="section-3"><br /></h4>
+  <p>第三，性教育教材来加入一些对性少数群体的理解，不要歧视他们，这又有什么不可以。</p>
+  <p>而且回过头想一想，现在网络，社交媒体这么发达，学校里不教，小孩就接触不到这些内容吗？通过学校里的正规教育得到应该掌握的性知识，比如如何采取措施避孕，如何防止性传播疾病。怎么也比从网上不知道哪个犄角旮旯里看来的强。通过porn是学不到正确的性知识的。要想孩子接触不到这些信息，除非拔掉网线，禁用手机，搬到深山老林里去，不过目前这种做法不太现实。</p>
+  <p>根据皮尤研究pewrearch的<a href="https://www.pewsocialtrends.org/2018/04/25/the-changing-profile-of-unmarried-parents/" target="_blank">调查</a>，未婚父母的比例是逐年上升的，现在有四分之一的父母是未婚的。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/004731f6-ff05-4314-bca9-e4b7bd11b8bc.png" data-asset-id="004731f6-ff05-4314-bca9-e4b7bd11b8bc" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p>而同时，来自CDC<a href="https://www.cdc.gov/nchs/pressroom/sosmap/unmarried/unmarried.htm" target="_blank">官方数据</a>（<a href="https://www.cdc.gov/nchs/pressroom/sosmap/unmarried/unmarried.htm" target="_blank">https://www.cdc.gov/nchs/pressroom/sosmap/unmarried/unmarried.htm</a>），未婚妈妈的比例，南部的像密西西比，阿拉巴马这样的保守州是远高于加州这样偏自由派的州的。德克萨斯州也是高于加州的。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/7c1b8966-c4f4-4567-bf20-46e2957bb298.png" data-asset-id="7c1b8966-c4f4-4567-bf20-46e2957bb298" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/f83b3996-5be6-44c9-9b87-4e9bb8a2541f.png" data-asset-id="f83b3996-5be6-44c9-9b87-4e9bb8a2541f" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/316f367e-d295-4ea8-8409-f72b229aef78.png" data-asset-id="316f367e-d295-4ea8-8409-f72b229aef78" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p>所以反对学校普及性教育，天天说加州太白左的家长们，是否会为了自己孩子的“纯洁无暇”搬到不普及性教育，也不让堕胎的保守州去呢？</p>
+  <h2 id="prop64"><strong>六、Prop64娱乐大麻合法化是民主党的堕落</strong></h2>
+  <blockquote>
+📌64號法案大麻合法，學校里drug free而校園外要建大麻店。  </blockquote>
+  <p>这条部分真实，学校里不允许拥有大麻。校外建大麻店也是全民公投通过的才允许的，得到了多数民众的支持。</p>
+  <p>从前在加州，拥有和使用娱乐用大麻是不合法的。1996年，在加州通过了医用大麻合法的法案Prop215。Prop 64在2016年大选的时候，经过全民公投通过。此前支持Prop 64和反对Prop 64的团体，募集的款项比例是12比1，2500万对2百万。全民公投通过法案的比例是57%对42%。可见这个法案是有广泛的民意基础，不能单单算在民主党头上。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/47caca6c-688b-493a-b31a-ae3016f34d7e.png" data-asset-id="47caca6c-688b-493a-b31a-ae3016f34d7e" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p>Prop64规定，21岁以上的成人使用大麻合法，但是必须在自己家里或者有商用许可牌照的地方使用。在开车或者任何禁止吸烟的地方，和其他的公共地方使用都不合法。成年人可以合法拥有1盎司（28.5克）的大麻或者是8可的浓缩大麻。但是在学校，daycare，或者青少年中心这些有未成年人的地方不允许拥有大麻。每一个个人可以在自己家中种6株大麻，但是要上锁不能让公众见到。</p>
+  <p>关于娱乐用大麻是否应该合法化，一直存在争议。但是之前在音乐会，学校里面，学生party使用大麻是半地下行为，比较普遍。与其在地下流行，禁也禁不掉，而且很多研究表明，大麻这种软性毒品，其危害并不比吸烟大。所以不如就像抽烟一样，由政府监管起来，比起地下流行，有很多灰色地带，要好很多。目前美国有11个州，娱乐用大麻合法化。而且也是一个趋势，越来越多的州会推动大麻合法化。</p>
+  <p>总结：</p>
+  <p>如前文所述，各项法律条文，因为篇幅长且比较晦涩难懂，一般人也不会去仔细阅读，这就给不良公号趁机借题发挥，曲解原意从而煽动公众情绪制造了机会。而在美国的华人第一代移民，平时很少关注政治议题，也不太看英文媒体和报纸，日常信息的主要来源就是社交媒体，基本上就是靠微信公众号或者微信群获取信息。一方面政治冷感，一方面只关心跟自己一亩三分地有关的议题。这些议题无非就是子女教育，入学以及升学就业方面的问题。所以一有人拿不实信息来煽动，比如被歪曲成男女共厕的无性别厕所议题啦，或者说升学要按种族配额了，入学要取消SAT成绩作为考量了之类的问题。尽管说了很多遍按种族配额招工和大学录取都是违宪的，是不可能实行的。他们基本上也是不会采信的，还只相信自已愿意相信的东西，就是那些被别有用心的公众号有意歪曲从而用来进行恐吓和煽动的内容。</p>
+  <p>如果民主黨當選，加州的現在就是未來的美囯。以上這些提議看了氣不氣？</p>
+  <p>通常用的话术就是这样，一些不实指控加上情绪化的文字，连骗带吓（好像很多中国家长教育自己孩子的方式），不怕你不中招。“加州鼓励恋童癖，加州偷窃950元不入罪，加州强奸12岁少女无罪，加州要给每个黑人赔偿35万，这些都是民主党的错，民主党上台你怕不怕，怕你还选不选民主党？”一般这种半真半假，操弄读者情绪，兼带恐吓性质的文字，都可以直接忽略。</p>
+  <p><strong>附：文中参考的Fact check 链接：</strong></p>
+  <p><strong>1.</strong><a href="https://www.usatoday.com/story/news/factcheck/2020/09/03/fact-check-california-law-does-not-decriminalize-sex-minors/3456171001/" target="_blank"><strong>https://www.usatoday.com/story/news/factcheck/2020/09/03/fact-check-california-law-does-not-decriminalize-sex-minors/3456171001/</strong></a></p>
+  <p><strong>2.</strong><a href="https://www.reuters.com/article/uk-factcheck-sb-145-does-not-legalize-pe/fact-check-california-bill-does-not-legalize-pedophilia-idUSKBN25V222" target="_blank"><strong>https://www.reuters.com/article/uk-factcheck-sb-145-does-not-legalize-pe/fact-check-california-bill-does-not-legalize-pedophilia-idUSKBN25V222</strong></a></p>
+  <p><strong>3.</strong><a href="https://www.snopes.com/fact-check/ca-democrats-lgbtq-bill-pedophiles/" target="_blank"><strong>https://www.snopes.com/fact-check/ca-democrats-lgbtq-bill-pedophiles/</strong></a></p>
+  <p><strong>4.</strong><a href="https://www.usatoday.com/story/news/world/2020/07/10/slavery-reparations-bill-spurs-new-debate-other-nations-model/5396340002/" target="_blank"><strong>https://www.usatoday.com/story/news/world/2020/07/10/slavery-reparations-bill-spurs-new-debate-other-nations-model/5396340002/</strong></a></p>
+  <p><strong>5.AB3121法案原文：</strong><a href="https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201920200AB3121" target="_blank"><strong>https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201920200AB3121</strong></a></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2020-12-26</time>
+        <a href="https://nodebe4.github.io/teahouse/2020-12-26/%E5%85%A9%E5%B2%B8%E5%9B%9B%E5%9C%B0%E8%B7%A8%E5%9F%9F%E6%B5%AE%E7%94%9F%E9%8C%84-%E7%AC%AC19%E7%AB%A0-%E5%9D%A6%E5%85%8B%E7%A2%BE%E7%A2%8E%E6%88%91%E7%9A%84%E5%BF%83(%E4%B8%8A)/">
+          【兩岸四地跨域浮生錄】第19章：坦克碾碎我的心(上)
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2020-12-24</time>
+        <a href="https://nodebe4.github.io/teahouse/2020-12-24/2020Matters%E5%B9%B4%E5%BA%A6%E5%95%8F%E5%8D%B7-%E7%B9%BE%E7%B6%A3%E4%BA%BA%E7%94%9F/">
+          【2020Matters年度問卷】---繾綣人生
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2020-12-17</time>
+        <a href="https://nodebe4.github.io/teahouse/2020-12-17/Metoo%E5%9B%B0%E5%A2%83-%E6%9C%AA%E5%AE%8C%E6%88%90%E7%9A%84%E6%AD%A3%E7%95%B6%E6%80%A7%E6%A7%8B%E5%BB%BA/">
+          Metoo困境：未完成的正當性構建
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2020-12-13</time>
+        <a href="https://nodebe4.github.io/teahouse/2020-12-13/%E8%81%B7%E6%A5%AD%E7%97%85%E5%AE%B6%E5%BA%AD%E5%AD%90%E5%A5%B3%E6%94%9D%E5%BD%B1-%E6%88%91%E5%80%91%E6%89%80%E6%9C%9F%E8%A8%B1%E7%9A%84%E6%9C%AA%E4%BE%86/">
+          職業病家庭子女攝影｜我們所期許的未來
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2020-12-22/12-22-%E8%80%B3%E6%9C%B5%E5%80%9F%E6%88%91-%E6%9F%AF%E6%B3%AF%E8%96%B0%E8%AB%87-%E7%95%AB%E8%A9%B1-+-mini-live-%E7%A9%BA%E4%B8%AD%E7%8F%BE%E5%A0%B4/">
+            前一篇：12/22 耳朵借我：柯泯薰談《畫話》+ mini live 空中現場
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2020-12-24/2020Matters%E5%B9%B4%E5%BA%A6%E5%95%8F%E5%8D%B7-%E7%B9%BE%E7%B6%A3%E4%BA%BA%E7%94%9F/">
+            後一篇：【2020Matters年度問卷】---繾綣人生
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2020-12-22/12-22-%E8%80%B3%E6%9C%B5%E5%80%9F%E6%88%91-%E6%9F%AF%E6%B3%AF%E8%96%B0%E8%AB%87-%E7%95%AB%E8%A9%B1-+-mini-live-%E7%A9%BA%E4%B8%AD%E7%8F%BE%E5%A0%B4/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2020-12-24/2020Matters%E5%B9%B4%E5%BA%A6%E5%95%8F%E5%8D%B7-%E7%B9%BE%E7%B6%A3%E4%BA%BA%E7%94%9F/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2020-12-24/2020Matters%E5%B9%B4%E5%BA%A6%E5%95%8F%E5%8D%B7-%E7%B9%BE%E7%B6%A3%E4%BA%BA%E7%94%9F/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2020-12-17/Metoo%E5%9B%B0%E5%A2%83-%E6%9C%AA%E5%AE%8C%E6%88%90%E7%9A%84%E6%AD%A3%E7%95%B6%E6%80%A7%E6%A7%8B%E5%BB%BA/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2020-12-22/12-22-%E8%80%B3%E6%9C%B5%E5%80%9F%E6%88%91-%E6%9F%AF%E6%B3%AF%E8%96%B0%E8%AB%87-%E7%95%AB%E8%A9%B1-+-mini-live-%E7%A9%BA%E4%B8%AD%E7%8F%BE%E5%A0%B4/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2020-12-24/2020Matters%E5%B9%B4%E5%BA%A6%E5%95%8F%E5%8D%B7-%E7%B9%BE%E7%B6%A3%E4%BA%BA%E7%94%9F/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2020-12-24/2020Matters%E5%B9%B4%E5%BA%A6%E5%95%8F%E5%8D%B7-%E7%B9%BE%E7%B6%A3%E4%BA%BA%E7%94%9F/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2020-12-17/Metoo%E5%9B%B0%E5%A2%83-%E6%9C%AA%E5%AE%8C%E6%88%90%E7%9A%84%E6%AD%A3%E7%95%B6%E6%80%A7%E6%A7%8B%E5%BB%BA/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
