@@ -1,0 +1,3561 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>【電影與現實】Still Human, Still Dream：淪落人｜香港獨居長者｜主僕情懷｜追夢者｜予夢者｜互相扶持 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+【電影與現實】Still Human, Still Dream：淪落人｜香港獨居長者｜主僕情懷｜追夢者｜予夢者｜互相扶持
+——
+" />
+    <meta property="og:description" content="
+【電影與現實】Still Human, Still Dream：淪落人｜香港獨居長者｜主僕情懷｜追夢者｜予夢者｜互相扶持
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="【電影與現實】Still Human, Still Dream：淪落人｜香港獨居長者｜主僕情懷｜追夢者｜予夢者｜互相扶持" />
+    <meta property="twitter:title" content="【電影與現實】Still Human, Still Dream：淪落人｜香港獨居長者｜主僕情懷｜追夢者｜予夢者｜互相扶持" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40movistoryhk%2F%25E9%259B%25BB%25E5%25BD%25B1%25E8%2588%2587%25E7%258F%25BE%25E5%25AF%25A6-still-human-still-dream-%25E6%25B7%25AA%25E8%2590%25BD%25E4%25BA%25BA-%25E9%25A6%2599%25E6%25B8%25AF%25E7%258D%25A8%25E5%25B1%2585%25E9%2595%25B7%25E8%2580%2585-%25E4%25B8%25BB%25E5%2583%2595%25E6%2583%2585%25E6%2587%25B7-%25E8%25BF%25BD%25E5%25A4%25A2%25E8%2580%2585-%25E4%25BA%2588%25E5%25A4%25A2%25E8%2580%2585-%25E4%25BA%2592%25E7%259B%25B8%25E6%2589%25B6%25E6%258C%2581-bafyreibtcg7edbywgjvo77brhrpdeklfdhoppddvox4sr64ynuaahsueey" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@movistoryhk/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-still-human-still-dream-%E6%B7%AA%E8%90%BD%E4%BA%BA-%E9%A6%99%E6%B8%AF%E7%8D%A8%E5%B1%85%E9%95%B7%E8%80%85-%E4%B8%BB%E5%83%95%E6%83%85%E6%87%B7-%E8%BF%BD%E5%A4%A2%E8%80%85-%E4%BA%88%E5%A4%A2%E8%80%85-%E4%BA%92%E7%9B%B8%E6%89%B6%E6%8C%81-bafyreibtcg7edbywgjvo77brhrpdeklfdhoppddvox4sr64ynuaahsueey" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@movistoryhk/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-still-human-still-dream-%E6%B7%AA%E8%90%BD%E4%BA%BA-%E9%A6%99%E6%B8%AF%E7%8D%A8%E5%B1%85%E9%95%B7%E8%80%85-%E4%B8%BB%E5%83%95%E6%83%85%E6%87%B7-%E8%BF%BD%E5%A4%A2%E8%80%85-%E4%BA%88%E5%A4%A2%E8%80%85-%E4%BA%92%E7%9B%B8%E6%89%B6%E6%8C%81-bafyreibtcg7edbywgjvo77brhrpdeklfdhoppddvox4sr64ynuaahsueey&text=【電影與現實】Still Human, Still Dream：淪落人｜香港獨居長者｜主僕情懷｜追夢者｜予夢者｜互相扶持&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@movistoryhk/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-still-human-still-dream-%E6%B7%AA%E8%90%BD%E4%BA%BA-%E9%A6%99%E6%B8%AF%E7%8D%A8%E5%B1%85%E9%95%B7%E8%80%85-%E4%B8%BB%E5%83%95%E6%83%85%E6%87%B7-%E8%BF%BD%E5%A4%A2%E8%80%85-%E4%BA%88%E5%A4%A2%E8%80%85-%E4%BA%92%E7%9B%B8%E6%89%B6%E6%8C%81-bafyreibtcg7edbywgjvo77brhrpdeklfdhoppddvox4sr64ynuaahsueey&title=【電影與現實】Still Human, Still Dream：淪落人｜香港獨居長者｜主僕情懷｜追夢者｜予夢者｜互相扶持" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@movistoryhk/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-still-human-still-dream-%E6%B7%AA%E8%90%BD%E4%BA%BA-%E9%A6%99%E6%B8%AF%E7%8D%A8%E5%B1%85%E9%95%B7%E8%80%85-%E4%B8%BB%E5%83%95%E6%83%85%E6%87%B7-%E8%BF%BD%E5%A4%A2%E8%80%85-%E4%BA%88%E5%A4%A2%E8%80%85-%E4%BA%92%E7%9B%B8%E6%89%B6%E6%8C%81-bafyreibtcg7edbywgjvo77brhrpdeklfdhoppddvox4sr64ynuaahsueey&title=【電影與現實】Still Human, Still Dream：淪落人｜香港獨居長者｜主僕情懷｜追夢者｜予夢者｜互相扶持" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=【電影與現實】Still Human, Still Dream：淪落人｜香港獨居長者｜主僕情懷｜追夢者｜予夢者｜互相扶持&body=
+【電影與現實】Still Human, Still Dream：淪落人｜香港獨居長者｜主僕情懷｜追夢者｜予夢者｜互相扶持
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@movistoryhk/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-still-human-still-dream-%E6%B7%AA%E8%90%BD%E4%BA%BA-%E9%A6%99%E6%B8%AF%E7%8D%A8%E5%B1%85%E9%95%B7%E8%80%85-%E4%B8%BB%E5%83%95%E6%83%85%E6%87%B7-%E8%BF%BD%E5%A4%A2%E8%80%85-%E4%BA%88%E5%A4%A2%E8%80%85-%E4%BA%92%E7%9B%B8%E6%89%B6%E6%8C%81-bafyreibtcg7edbywgjvo77brhrpdeklfdhoppddvox4sr64ynuaahsueey" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@movistoryhk/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-still-human-still-dream-%E6%B7%AA%E8%90%BD%E4%BA%BA-%E9%A6%99%E6%B8%AF%E7%8D%A8%E5%B1%85%E9%95%B7%E8%80%85-%E4%B8%BB%E5%83%95%E6%83%85%E6%87%B7-%E8%BF%BD%E5%A4%A2%E8%80%85-%E4%BA%88%E5%A4%A2%E8%80%85-%E4%BA%92%E7%9B%B8%E6%89%B6%E6%8C%81-bafyreibtcg7edbywgjvo77brhrpdeklfdhoppddvox4sr64ynuaahsueey&title=【電影與現實】Still Human, Still Dream：淪落人｜香港獨居長者｜主僕情懷｜追夢者｜予夢者｜互相扶持&caption=
+【電影與現實】Still Human, Still Dream：淪落人｜香港獨居長者｜主僕情懷｜追夢者｜予夢者｜互相扶持
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=【電影與現實】Still Human, Still Dream：淪落人｜香港獨居長者｜主僕情懷｜追夢者｜予夢者｜互相扶持&url=https://matters.news/@movistoryhk/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-still-human-still-dream-%E6%B7%AA%E8%90%BD%E4%BA%BA-%E9%A6%99%E6%B8%AF%E7%8D%A8%E5%B1%85%E9%95%B7%E8%80%85-%E4%B8%BB%E5%83%95%E6%83%85%E6%87%B7-%E8%BF%BD%E5%A4%A2%E8%80%85-%E4%BA%88%E5%A4%A2%E8%80%85-%E4%BA%92%E7%9B%B8%E6%89%B6%E6%8C%81-bafyreibtcg7edbywgjvo77brhrpdeklfdhoppddvox4sr64ynuaahsueey" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>【電影與現實】Still Human, Still Dream：淪落人｜香港獨居長者｜主僕情懷｜追夢者｜予夢者｜互相扶持</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-07-05
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Movistory HK</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@movistoryhk/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-still-human-still-dream-%E6%B7%AA%E8%90%BD%E4%BA%BA-%E9%A6%99%E6%B8%AF%E7%8D%A8%E5%B1%85%E9%95%B7%E8%80%85-%E4%B8%BB%E5%83%95%E6%83%85%E6%87%B7-%E8%BF%BD%E5%A4%A2%E8%80%85-%E4%BA%88%E5%A4%A2%E8%80%85-%E4%BA%92%E7%9B%B8%E6%89%B6%E6%8C%81-bafyreibtcg7edbywgjvo77brhrpdeklfdhoppddvox4sr64ynuaahsueey" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1625487510000-->
+<p><a href="https://matters.news/@movistoryhk/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-still-human-still-dream-%E6%B7%AA%E8%90%BD%E4%BA%BA-%E9%A6%99%E6%B8%AF%E7%8D%A8%E5%B1%85%E9%95%B7%E8%80%85-%E4%B8%BB%E5%83%95%E6%83%85%E6%87%B7-%E8%BF%BD%E5%A4%A2%E8%80%85-%E4%BA%88%E5%A4%A2%E8%80%85-%E4%BA%92%E7%9B%B8%E6%89%B6%E6%8C%81-bafyreibtcg7edbywgjvo77brhrpdeklfdhoppddvox4sr64ynuaahsueey">【電影與現實】Still Human, Still Dream：淪落人｜香港獨居長者｜主僕情懷｜追夢者｜予夢者｜互相扶持</a>
+——</p>
+
+<div>
+  <p>不知，你有沒有曾經為了一個夢想而努力奮鬥</p>
+  <p>即使身邊的人如何反對你都好</p>
+  <p>總會有一群人</p>
+  <p>在你背後默默地鼓勵你，支持你去做自己認為對的事</p>
+  <p>過自己想過的生活，追求自己的夢想</p>
+  <p>在其他人眼中，這件事可能看起來遙不可及</p>
+  <p>但原來，只要我們願意踏出第一步</p>
+  <p>拉近與身邊的人的距離，互相幫助</p>
+  <p>我們就有機會，成就自己與別人的夢想</p>
+  <p>大家好，我是Movistory</p>
+  <p>這個頻道主要會通過電影解說</p>
+  <p>和大家探討下電影背後帶出的議題與啟示</p>
+  <p>同時，我亦會不時個別討論一些歷史議題</p>
+  <p>和大家分享多點過往發生過的事</p>
+  <p>如何影響我們現在身處的世界</p>
+  <p>而今日，我會和大家講下香港電影《淪落人》</p>
+  <p>故事的開頭，先講述男主角梁昌榮因為工傷意外</p>
+  <p>而半身不遂，下半世要在坐輪椅上渡過餘生</p>
+  <p>禍不單行的是，他因為這次的意外而妻離子散、前路灰暗</p>
+  <p>只能單靠視訊與兒子團聚</p>
+  <p>甚至自己個妹亦因為自己反對她與家境不好的人來往</p>
+  <p>而對他心懷怨恨</p>
+  <p>所以他的日常生活，都需要依靠女傭與他的好友阿輝照顧</p>
+  <p>同時，女主角菲律賓人Evelyn在生活的壓力下</p>
+  <p>亦被迫拒絕大學取錄的機會</p>
+  <p>以及一直以來的攝影夢想</p>
+  <p>離鄉別井來到昌榮家中當家務助理</p>
+  <p>在初次的見面，這兩個「淪落人」就因為語言障礙</p>
+  <p>而無辦法溝通</p>
+  <p>而昌榮亦因為以往不愉快的經歷（家務助理突然辭職）</p>
+  <p>對Evelyn充滿偏見，要她將護照交給他</p>
+  <p>同時，Evelyn亦對這個陌生地方無任何好感</p>
+  <p>而當Evelyn的朋友聽到她要照顧行動不便的人時</p>
+  <p>亦即刻叫她換第二個地方工作</p>
+  <p>不久，Evelyn有一次因為不小心</p>
+  <p>而令到昌榮跌倒入院</p>
+  <p>但亦因為這一次</p>
+  <p>昌榮見到Evelyn很盡力地改善自己</p>
+  <p>而對她漸漸改觀，主動去學英文與Evelyn溝通</p>
+  <p>甚至教她講一些地道的廣東話</p>
+  <p>而他們亦靠著中英夾雜的的語言</p>
+  <p>不斷拉近彼此間的距離</p>
+  <p>而經過與Evelyn日積月累的相處</p>
+  <p>昌榮亦開始從跌跌碰碰的低谷中走出來</p>
+  <p>漸漸地打破與Evelyn之間的隔膜</p>
+  <p>而Evelyn</p>
+  <p>亦彷彿成為他唯一一個值得依靠的「家人」</p>
+  <p>無時無刻都會給予他最大的鼓勵</p>
+  <p>令他在困境中振作</p>
+  <p>而同時，昌榮亦在Evelyn最無助的時候扶她一把</p>
+  <p>當他知道Evelyn想成為攝影師的夢想時</p>
+  <p>他即刻買左一部專業相機，作為她的生日禮物</p>
+  <p>鼓勵她堅持自己的夢想</p>
+  <p>而兩個人亦因為在人生低谷中互相扶持</p>
+  <p>而發展出一段難以言喻的感情</p>
+  <p>即使後來Evelyn因為急事</p>
+  <p>被迫退回相機滙錢過去鄉下</p>
+  <p>但昌榮亦無責怪Evelyn</p>
+  <p>反而認為Evelyn因為有苦衷才這樣做</p>
+  <p>再託呀輝，幫他去買多部相機回來</p>
+  <p>鼓勵她報名公開的攝影比賽</p>
+  <p>甚至幫她重新報讀攝影學校</p>
+  <p>不久，Evelyn亦不負眾望</p>
+  <p>憑著作品——予夢者 (Dream Giver)</p>
+  <p>成功入圍得獎</p>
+  <p>而這份作品，亦正正捕捉到昌榮拿著氣球那一刻</p>
+  <p>彷彿昌榮一直陪伴著Evelyn</p>
+  <p>成就她追求夢想</p>
+  <p>而一直認為自己一無是處的昌榮</p>
+  <p>望着自己張相的時候</p>
+  <p>亦開始探索到屬於他的夢想</p>
+  <p>而他的夢想，其實好簡單</p>
+  <p>就是能夠與自己兒子去當初沒有去到的畢業旅行</p>
+  <p>而Evelyn在幫昌榮訂花慶祝兒子畢業時</p>
+  <p>亦暗中轉達昌榮想同他去畢業旅行的夢想</p>
+  <p>幫他實現了一直以來的心願</p>
+  <p>而昌榮亦知道是時候，要放Evelyn自由</p>
+  <p>為她製作了一本相冊，爭取了攝影助理的工作</p>
+  <p>讓她可以前往英國追尋自己的夢想</p>
+  <p>電影的最後</p>
+  <p>四季交替，木棉花開</p>
+  <p>這兩個「淪落人」又再回到最初相遇的起點</p>
+  <p>作最後的告別</p>
+  <p>而木棉花亦承載著Evelyn的夢想，隨風遠去</p>
+  <p>在第二個地方植根生長</p>
+  <p>香港電影，《淪落人》/ Still Human</p>
+  <p>作為一部以少數族群為題材的溫情電影</p>
+  <p>由新晉導演陳小娟執導，在2018年上映</p>
+  <p>當時的導演憑著《淪落人》的劇本</p>
+  <p>參加「首部劇情電影計劃」，獲得政府撥款四百萬</p>
+  <p>以及影帝黃秋生答允無酬參演，才得以開拍電影</p>
+  <p>後來《淪落人》在香港上映後，隨即得到大眾的熱烈好評</p>
+  <p>成為2019年上半年頭3甲的最高票房港產片</p>
+  <p>並一舉獲得多項亞洲電影大獎與電影金像獎</p>
+  <p>其中飾演男主角的黃秋生更憑著這套電影</p>
+  <p>第三次獲得香港電影金像獎最佳男主角獎</p>
+  <p>而主演女主角的菲律賓人姬素．孔尚治</p>
+  <p>亦榮獲最佳新演員的殊榮</p>
+  <p>電影《淪落人》，的而且確是香港近年來</p>
+  <p>不可多得的高質本土電影</p>
+  <p>電影取景於何文田愛民邨</p>
+  <p>拍出公屋的壓抑與草根的感覺</p>
+  <p>帶出現時香港獨居老人的生活與心理狀況</p>
+  <p>而男主角昌榮，正正就是香港典型的獨居老人</p>
+  <p>長期被困在充滿壓迫的井型公屋</p>
+  <p>默默承受著孤獨與無助</p>
+  <p>但另一方面，導演以四季貫穿整個故事的脈絡</p>
+  <p>不但透過木棉的生長變化，展現時間的推移</p>
+  <p>同時亦突顯關係親疏的變化</p>
+  <p>以輕柔的純音樂，營造淡淡的溫情</p>
+  <p>刻畫出樸素的人情味</p>
+  <p>從電影中食飯的情節，我們就可以看到</p>
+  <p>他們兩個初時分別在客廳和廚房用餐，彼此並無交流</p>
+  <p>當隨著相處的日子漸久，昌榮開始與Evelyn在客廳進食</p>
+  <p>後來發生誤會後，兩人再度分開進食</p>
+  <p>彼此間心存鬱結</p>
+  <p>但冰釋前嫌之後，兩人的關係變得更加親密</p>
+  <p>昌榮甚至帶Evelyn去自己最鍾意的大排檔食飯</p>
+  <p>彼此互訴心事</p>
+  <p>即使在過程中，他們兩個曾經言語不通</p>
+  <p>但後來都願意各自行出第一步，拉近雙方的距離</p>
+  <p>創造出屬於他們兩個的溝通語言（多撚謝、黐乸線）</p>
+  <p>而他們彼此之間亦以真誠相待</p>
+  <p>而這種真誠亦打破了昌榮與Evelyn之間的隔閡</p>
+  <p>兩人的關係已經超越僱傭，但卻不是戀人的感情</p>
+  <p>而是家人的那一份「愛」（我「黐乸線」你）</p>
+  <p>正因為這份愛，他們先想令大家活得開心</p>
+  <p>追尋自己想要的東西</p>
+  <p>所以為何昌榮先後為Evelyn買相機</p>
+  <p>鼓勵她參加攝影比賽，甚至為她尋求攝影的工作</p>
+  <p>而Evelyn亦不斷拉近昌榮與妹妹和兒子的距離</p>
+  <p>到最後，昌榮為了 Evelyn的未來著想</p>
+  <p>將護照交還給她，讓她可以追逐自己的夢想</p>
+  <p>為她留下一條家的鑰匙，以作道別</p>
+  <p>而整個電影情節的進展</p>
+  <p>其實不但止顯露人與人之間的相處與互信</p>
+  <p>同時亦探討人的生命價值，以及現實與夢想之間的距離</p>
+  <p>在電影中，昌榮曾經說過菲傭不配有夢想</p>
+  <p>而自己亦同樣是廢人一個，不值得有夢想</p>
+  <p>但後來昌榮才發現，其實夢想不一定是要什麼宏大的志願</p>
+  <p>哪怕是可以見到自己想念的人，都可以是一個夢想</p>
+  <p>而他亦一直以為，他的人生已經完結</p>
+  <p>但他發現，原來還有事值得他期待</p>
+  <p>而其實，只要一個人能夠活出屬於自己的價值</p>
+  <p>就已經足夠，並不需要其他人去賦予任何的意義</p>
+  <p>即使有再多的物質生活</p>
+  <p>如果不能夠豁達地追求自己想要的東西</p>
+  <p>所有的一切其實亦只會徒然</p>
+  <p>而這套電影亦告訴我們</p>
+  <p>即使經歷再淪落的生活都好，亦應該抱有希望</p>
+  <p>或者，我們就好像昌榮一樣</p>
+  <p>被現實逼到無法動彈 (Still Human＝無法動彈的人)</p>
+  <p>無辦法追求自己的人生</p>
+  <p>但我們卻依然有追夢的權利</p>
+  <p>依然可以選擇如何過活 (Still Human＝依然是人)</p>
+  <p>亦即是電影名的意義，Still Human</p>
+  <p>只要我們願意踏出第一步追尋，即使看似遙不可及的夢</p>
+  <p>其實都比我們想像中還要接近</p>
+  <p>而我們亦會在黑暗中望見曙光</p>
+  <p>更重要的是，我們不一定單純扮演追夢者的角色</p>
+  <p>同時亦可以成為一個夢的推手</p>
+  <p>幫助又或者代替其他人，實現他們一直渴求的夢想</p>
+  <p>而你與我的夢想，亦將會好像木棉花開一樣</p>
+  <p>帶隨種子四處飄散，然後到另外一個地方繼續生長</p>
+  <p><br /></p>
+  <p>不知，正在看影片的你，還是否仍然堅持我們的夢想呢？</p>
+  <p><br /></p>
+  <p>影片如下：</p>
+  <figure class="embed-video">
+    <div class="iframe-container">
+      <iframe src="https://www.youtube.com/embed/SYUTbt-_o_c?rel=0" frameborder="0" allowfullscreen="true" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+    </div>
+    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>Patreon (課金):</p>
+  <p><a href="https://www.patreon.com/movistoryhk" target="_blank">https://www.patreon.com/movistoryhk</a></p>
+  <p><br /></p>
+  <p>LBRY: <a href="https://lbry.tv/@MovistoryHK:b" target="_blank">https://lbry.tv/@MovistoryHK:b</a></p>
+  <p>YouTube: <a href="https://www.youtube.com/channel/UCNJLkyS-CZ3cp6JWpe_B9Ug" target="_blank">https://www.youtube.com/channel/UCNJLkyS-CZ3cp6JWpe_B9Ug</a></p>
+  <p>Instagram: <a href="https://www.instagram.com/movistory.hk/" target="_blank">https://www.instagram.com/movistory.hk/</a></p>
+  <p>MeWe: <a href="https://mewe.com/i/movistoryhk" target="_blank">https://mewe.com/i/movistoryhk</a></p>
+  <p>Facebook: <a href="https://www.facebook.com/Movistory-HK..." target="_blank">https://www.facebook.com/Movistory-HK...</a></p>
+  <p>Twitter: <a href="https://twitter.com/Movistory_HK" target="_blank">https://twitter.com/Movistory_HK</a></p>
+  <p><br /></p>
+  <p>🎬📚</p>
+  <p><a href="https://www.youtube.com/hashtag/%E6%B7%AA%E8%90%BD%E4%BA%BA" target="_blank">#淪落人</a> <a href="https://www.youtube.com/hashtag/%E8%BF%BD%E5%A4%A2" target="_blank">#追夢</a> <a href="https://www.youtube.com/hashtag/%E7%8D%A8%E5%B1%85%E8%80%81%E4%BA%BA" target="_blank">#獨居老人</a> <a href="https://www.youtube.com/hashtag/%E4%B8%BB%E5%83%95%E6%83%85%E6%87%B7" target="_blank">#主僕情懷</a> <a href="https://www.youtube.com/hashtag/%E8%BF%BD%E5%A4%A2%E8%80%85" target="_blank">#追夢者</a> <a href="https://www.youtube.com/hashtag/%E4%BA%88%E5%A4%A2%E8%80%85" target="_blank">#予夢者</a> <a href="https://www.youtube.com/hashtag/%E4%BA%92%E7%9B%B8%E6%89%B6%E6%8C%81" target="_blank">#互相扶持</a> <a href="https://www.youtube.com/hashtag/%E5%9B%9B%E5%AD%A3%E4%BA%A4%E6%9B%BF" target="_blank">#四季交替</a> <a href="https://www.youtube.com/hashtag/%E6%9C%A8%E6%A3%89%E8%8A%B1%E9%96%8B" target="_blank">#木棉花開</a> <a href="https://www.youtube.com/hashtag/%E9%BB%91%E6%9A%97%E4%B8%AD%E7%9A%84%E6%9B%99%E5%85%89" target="_blank">#黑暗中的曙光</a> <a href="https://www.youtube.com/hashtag/%E9%A6%99%E6%B8%AF%E9%9B%BB%E5%BD%B1" target="_blank">#香港電影</a></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2021-07-09</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-07-09/%E8%BF%BD%E5%8A%87%E6%8C%87%E5%8D%97-Netflix-%E6%80%A7-%E7%94%9F%E6%B4%BB-%E9%82%84%E6%9C%89%E5%BD%B1%E9%9B%865%E9%83%A8%E5%8F%AF%E6%8E%A8%E8%96%A6/">
+          追劇指南｜Netflix： 性/生活，還有影集5部可推薦……
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-07-08</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-07-08/%E8%BD%89%E8%BC%89%E6%96%87%E7%AB%A0-11-%E4%BB%8A%E6%99%9A%E6%88%91%E4%BB%AC%E9%83%BD%E6%98%AF-%E6%9C%AA%E5%91%BD%E5%90%8D%E5%85%AC%E4%BC%97%E5%8F%B7/">
+          轉載文章 #11 今晚我们都是“未命名公众号”
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-07-03</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-07-03/%E9%92%B1%E9%94%BA%E4%B9%A6%E4%B8%8E%E6%96%87%E8%A8%80%E6%96%87%E7%9A%84%E9%97%AE%E9%A2%98%E5%86%8D%E6%80%9D%E8%80%83/">
+          钱锺书与文言文的问题再思考
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-07-03</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-07-03/%E5%A4%A2-Maestro-%E7%82%BA%E6%82%A8%E6%BC%94%E5%A5%8F%E4%B8%80%E6%9B%B2%E8%AE%8A%E8%AA%BF%E7%9A%84%E5%BF%AB%E6%A8%82%E9%A0%8C/">
+          夢｜Maestro，為您演奏一曲變調的快樂頌
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2021-07-03/%E9%92%B1%E9%94%BA%E4%B9%A6%E4%B8%8E%E6%96%87%E8%A8%80%E6%96%87%E7%9A%84%E9%97%AE%E9%A2%98%E5%86%8D%E6%80%9D%E8%80%83/">
+            前一篇：钱锺书与文言文的问题再思考
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2021-07-08/%E8%BD%89%E8%BC%89%E6%96%87%E7%AB%A0-11-%E4%BB%8A%E6%99%9A%E6%88%91%E4%BB%AC%E9%83%BD%E6%98%AF-%E6%9C%AA%E5%91%BD%E5%90%8D%E5%85%AC%E4%BC%97%E5%8F%B7/">
+            後一篇：轉載文章 #11 今晚我们都是“未命名公众号”
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2021-07-03/%E9%92%B1%E9%94%BA%E4%B9%A6%E4%B8%8E%E6%96%87%E8%A8%80%E6%96%87%E7%9A%84%E9%97%AE%E9%A2%98%E5%86%8D%E6%80%9D%E8%80%83/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2021-07-08/%E8%BD%89%E8%BC%89%E6%96%87%E7%AB%A0-11-%E4%BB%8A%E6%99%9A%E6%88%91%E4%BB%AC%E9%83%BD%E6%98%AF-%E6%9C%AA%E5%91%BD%E5%90%8D%E5%85%AC%E4%BC%97%E5%8F%B7/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2021-07-08/%E8%BD%89%E8%BC%89%E6%96%87%E7%AB%A0-11-%E4%BB%8A%E6%99%9A%E6%88%91%E4%BB%AC%E9%83%BD%E6%98%AF-%E6%9C%AA%E5%91%BD%E5%90%8D%E5%85%AC%E4%BC%97%E5%8F%B7/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2021-07-03/%E9%92%B1%E9%94%BA%E4%B9%A6%E4%B8%8E%E6%96%87%E8%A8%80%E6%96%87%E7%9A%84%E9%97%AE%E9%A2%98%E5%86%8D%E6%80%9D%E8%80%83/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2021-07-03/%E9%92%B1%E9%94%BA%E4%B9%A6%E4%B8%8E%E6%96%87%E8%A8%80%E6%96%87%E7%9A%84%E9%97%AE%E9%A2%98%E5%86%8D%E6%80%9D%E8%80%83/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2021-07-08/%E8%BD%89%E8%BC%89%E6%96%87%E7%AB%A0-11-%E4%BB%8A%E6%99%9A%E6%88%91%E4%BB%AC%E9%83%BD%E6%98%AF-%E6%9C%AA%E5%91%BD%E5%90%8D%E5%85%AC%E4%BC%97%E5%8F%B7/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2021-07-08/%E8%BD%89%E8%BC%89%E6%96%87%E7%AB%A0-11-%E4%BB%8A%E6%99%9A%E6%88%91%E4%BB%AC%E9%83%BD%E6%98%AF-%E6%9C%AA%E5%91%BD%E5%90%8D%E5%85%AC%E4%BC%97%E5%8F%B7/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2021-07-03/%E9%92%B1%E9%94%BA%E4%B9%A6%E4%B8%8E%E6%96%87%E8%A8%80%E6%96%87%E7%9A%84%E9%97%AE%E9%A2%98%E5%86%8D%E6%80%9D%E8%80%83/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
