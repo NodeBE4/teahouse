@@ -1,0 +1,3500 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>写在联合国通过第2758号决议五十周年 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+写在联合国通过第2758号决议五十周年
+——
+" />
+    <meta property="og:description" content="
+写在联合国通过第2758号决议五十周年
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="写在联合国通过第2758号决议五十周年" />
+    <meta property="twitter:title" content="写在联合国通过第2758号决议五十周年" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40xhbzqhd%2F%25E5%2586%2599%25E5%259C%25A8%25E8%2581%2594%25E5%2590%2588%25E5%259B%25BD%25E9%2580%259A%25E8%25BF%2587%25E7%25AC%25AC2758%25E5%258F%25B7%25E5%2586%25B3%25E8%25AE%25AE%25E4%25BA%2594%25E5%258D%2581%25E5%2591%25A8%25E5%25B9%25B4-bafyreidncoce3hyhlepshhaz4fhadqcxislgxlrgatibko3gchn4xr6vbe" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@xhbzqhd/%E5%86%99%E5%9C%A8%E8%81%94%E5%90%88%E5%9B%BD%E9%80%9A%E8%BF%87%E7%AC%AC2758%E5%8F%B7%E5%86%B3%E8%AE%AE%E4%BA%94%E5%8D%81%E5%91%A8%E5%B9%B4-bafyreidncoce3hyhlepshhaz4fhadqcxislgxlrgatibko3gchn4xr6vbe" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@xhbzqhd/%E5%86%99%E5%9C%A8%E8%81%94%E5%90%88%E5%9B%BD%E9%80%9A%E8%BF%87%E7%AC%AC2758%E5%8F%B7%E5%86%B3%E8%AE%AE%E4%BA%94%E5%8D%81%E5%91%A8%E5%B9%B4-bafyreidncoce3hyhlepshhaz4fhadqcxislgxlrgatibko3gchn4xr6vbe&text=写在联合国通过第2758号决议五十周年&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@xhbzqhd/%E5%86%99%E5%9C%A8%E8%81%94%E5%90%88%E5%9B%BD%E9%80%9A%E8%BF%87%E7%AC%AC2758%E5%8F%B7%E5%86%B3%E8%AE%AE%E4%BA%94%E5%8D%81%E5%91%A8%E5%B9%B4-bafyreidncoce3hyhlepshhaz4fhadqcxislgxlrgatibko3gchn4xr6vbe&title=写在联合国通过第2758号决议五十周年" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@xhbzqhd/%E5%86%99%E5%9C%A8%E8%81%94%E5%90%88%E5%9B%BD%E9%80%9A%E8%BF%87%E7%AC%AC2758%E5%8F%B7%E5%86%B3%E8%AE%AE%E4%BA%94%E5%8D%81%E5%91%A8%E5%B9%B4-bafyreidncoce3hyhlepshhaz4fhadqcxislgxlrgatibko3gchn4xr6vbe&title=写在联合国通过第2758号决议五十周年" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=写在联合国通过第2758号决议五十周年&body=
+写在联合国通过第2758号决议五十周年
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@xhbzqhd/%E5%86%99%E5%9C%A8%E8%81%94%E5%90%88%E5%9B%BD%E9%80%9A%E8%BF%87%E7%AC%AC2758%E5%8F%B7%E5%86%B3%E8%AE%AE%E4%BA%94%E5%8D%81%E5%91%A8%E5%B9%B4-bafyreidncoce3hyhlepshhaz4fhadqcxislgxlrgatibko3gchn4xr6vbe" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@xhbzqhd/%E5%86%99%E5%9C%A8%E8%81%94%E5%90%88%E5%9B%BD%E9%80%9A%E8%BF%87%E7%AC%AC2758%E5%8F%B7%E5%86%B3%E8%AE%AE%E4%BA%94%E5%8D%81%E5%91%A8%E5%B9%B4-bafyreidncoce3hyhlepshhaz4fhadqcxislgxlrgatibko3gchn4xr6vbe&title=写在联合国通过第2758号决议五十周年&caption=
+写在联合国通过第2758号决议五十周年
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=写在联合国通过第2758号决议五十周年&url=https://matters.news/@xhbzqhd/%E5%86%99%E5%9C%A8%E8%81%94%E5%90%88%E5%9B%BD%E9%80%9A%E8%BF%87%E7%AC%AC2758%E5%8F%B7%E5%86%B3%E8%AE%AE%E4%BA%94%E5%8D%81%E5%91%A8%E5%B9%B4-bafyreidncoce3hyhlepshhaz4fhadqcxislgxlrgatibko3gchn4xr6vbe" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>写在联合国通过第2758号决议五十周年</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-10-25
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 胡平</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@xhbzqhd/%E5%86%99%E5%9C%A8%E8%81%94%E5%90%88%E5%9B%BD%E9%80%9A%E8%BF%87%E7%AC%AC2758%E5%8F%B7%E5%86%B3%E8%AE%AE%E4%BA%94%E5%8D%81%E5%91%A8%E5%B9%B4-bafyreidncoce3hyhlepshhaz4fhadqcxislgxlrgatibko3gchn4xr6vbe" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1635179616000-->
+<p><a href="https://matters.news/@xhbzqhd/%E5%86%99%E5%9C%A8%E8%81%94%E5%90%88%E5%9B%BD%E9%80%9A%E8%BF%87%E7%AC%AC2758%E5%8F%B7%E5%86%B3%E8%AE%AE%E4%BA%94%E5%8D%81%E5%91%A8%E5%B9%B4-bafyreidncoce3hyhlepshhaz4fhadqcxislgxlrgatibko3gchn4xr6vbe">写在联合国通过第2758号决议五十周年</a>
+——</p>
+
+<div>
+  <blockquote>
+<strong>写在联合国通过第2758号决议五十周年</strong>  </blockquote>
+  <blockquote>
+胡平（《北京之春》荣誉主编）  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+今天是2021年10月25日。50年前的这一天，联合国通过了《关于恢复中华人民共和国在联合国的合法权利》的 第2758号决议，同一天，中华民国政府宣布退出联合国。  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+众所周知，中华民国原本是联合国的创始国，也是联合国安理会五大常任理事国之一，可这时却失去了在联合国的席位，被中华人民共和国取而代之。用当时一些台湾人的说法就是：从“汉贼不两立”到“贼立汉不立”。这一变化是怎样发生的呢？  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+2002年，台湾退休外交官陆以正写了一本回忆录《微臣无力可回天》，其中讲到台湾当年退出联合国以及和美国断交等事件的详情内幕，值得我们认真解读。  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+<strong>1、从“汉贼不两立”到“贼立汉不立”</strong>  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+1949年，中共夺得大陆，成立中华人民共和国，但并未马上进入联合国；中华民国政府退守台湾，仍保有联合国席位及安理会常任理事国地位。由此，两岸即爲联合国席位问题展开了一场旷日持久的攻防战。由于双方都认定只有一个中国，而只有自己才是中国的唯一合法代表，双方都摆出“有我无他，有他无我”，“汉贼不两立”的架式。这就使得联合国相当爲难。  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+以美国爲首的西方国家本来大多是支持台湾，反对中共政权的，但是随著时间的推移，他们越来越认爲，把占有整个大陆的中共政权排除在联合国之外，让只占有台湾的国民党政权继续代表全中国，是不现实的，是不恰当的；同时，他们又都认爲不能听任中共武力“解放”台湾。于是有不少西方国家主张让中华人民共和国进入联合国，并且成爲安理会常任理事，同时保留中华民国的会员国资格；或者是让台湾人民举行公民投票，决定台湾到底是和中华人民共和国合并，还是独立，或者是接受联合国的托管。如果台湾和大陆两方面有一方愿意接受这种安排，那麽上述提议还有实行的可能，但问题是在当时，当事者双方，台湾政府和大陆政府都坚决反对这种安排，所以西方国家的这些提议就都宣告流産。  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+据陆以正说，在1966年，美国感到支持中共的国家越来越多，于是开始放出“两个中国”的试探气球。意大利等国提议成立特别委员会研究中共进入联合国问题。然而那时大陆文革狂飙突起，“大陆乱成一团，无人敢在台湾问题上表现任何弹性”；而台湾方面“当时也误以爲中共政权真有可能垮台，所以动员友邦反对，造成台北与北京双方联手，打击怀有诚意的中间派的荒谬现象”。这一次试图让两岸都成爲联合国会员国的努力遂告流産。  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+从1950年到1970年，在接连好几次联大会议上，都有苏联等国家提议恢复中华人民共和国在联合国的席位。起先，美国联合其盟友，以“延期审议“的名义将此提议排除于议程之外，后来又以中国代表权属于“重大问题”，必须联大三分之二多数才能决定为理由，否决了这一提议。但是到了1970年，形势发生变化，有更多的国家支持恢复中国代表权，再加上一系列亚非拉国家进入联合国，而这些国家大多是支持中国代表权的。在联合国大会上，支持中国代表权的票数（51票）首次超过了反对票（49票），不过因为没有达到重大问题案所需要的三分之二多数而没有通过。因此，美国等国要阻止就越来越困难。等到了1971年，国际形势的演变更加有利于北京。在这一年的第26届联大会议上，阿尔巴尼亚等国再次提议恢复中共在联合国的代表权并出任安理会常任理事以及驱除台湾。当时，中共在联合国内已经获得广泛支持，美国估计已经无力阻挡中共进入联合国，于是与台湾当局磋商，“变更策略，改以‘双重代表权’爲目标，希望一方面让中共进入联合国，并取得安理会常任理事席次，另一方面保全我国（指中华民国──引者）在联合国的会籍，仍能留在联大。”陆以正透露：“双方经过多次密商，直到最后一刻，蒋中正总统才勉强同意”。  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+陆以正写道：“回顾1971年那段经过，就事论事，我国当时已经准备接受与大陆并存于联合国的安排。”这说明，早在1971年，蒋介石就已经准备接受“两个中国”了──当然，是被动的，不情愿的。  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+陆以正透露的这一内幕消息十分重要。以前，人们总以爲蒋介石是始终坚持一个中国原则的，毫不妥协。为什么蒋介石如此顽固呢？对此有两种解释。一派人认爲，蒋介石坚持一个中国原则实际上是爲了维护国民党在台湾的专制统治。因爲如果蒋介石放弃了中华民国是全中国唯一合法政府之说，接受了两个中国，那麽，他就没有理由在台湾继续“动员戡乱”，继续“暂停行宪”，他就不得不在台湾开放民主，回归宪政。爲了维护国民党在台湾的专制统治以及自己的独裁地位，所以蒋介石才始终坚持他的一个中国原则。另一派人则认爲，蒋介石坚持一个中国原则是因爲他有根深蒂固的大一统思想，有强烈的反共复国的使命感。不过根据陆以正透露的事实，还可以加上第三种解释。你还可以说，蒋介石之所以坚持一个中国的原则，那也是因爲他低估了中共政权的稳定性。蒋介石以爲中共暴政断然不可能长久，所以他在台湾所做的一切都是爲了有朝一日反攻大陆，根本没有在台湾偏安一隅的长期打算。殊不知中共政权固然十分残暴──这一点不出老蒋所料，但是并不短寿，中共政权的稳定性远远超出老蒋的预估（尽管共産制度注定是历史上最短命的制度，但相比之下，对共産政权而言，越残暴者反而越长命。不赘）。到后来，反攻大陆渺不可期，台湾自身的存在反倒陷入困境。就这样，当蒋介石发现继续坚持一个中国原则会导致台湾在国际社会上自我放逐和自我孤立，他也只好放弃这一原则。  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+按照陆以正的记敍，在1971年的26届联大上，美国征得蒋介石同意后提出临时动议，要求把阿尔巴尼亚等国提案分成两段表决，先表决是否接纳北京，然后再表决是否驱除台湾。美国估计，因爲赞成接纳北京的国家不一定都赞成驱除台湾，因此这就有可能保住台湾的席位。可是美国的这一临时动议被否决，台湾代表知道败局已定，不可挽回，便以程序问题要求发言，宣布退出联合国，离开会议大厅。接下来，阿国提案被一揽子通过。从此，北京占据了台湾原来占据的位置，台湾被迫离开联合国。  </blockquote>
+  <p> </p>
+  <blockquote>
+说明：在表决阿国提案时，76票赞成、35票反对、17票弃权。其中，美国和日本、澳大利亚等国投的是反对票。  </blockquote>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/3bd1a886-b6f6-4da9-892b-78b5dbaf8981.gif" data-asset-id="3bd1a886-b6f6-4da9-892b-78b5dbaf8981" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+由于在这一回合中，美国的策略未获成功，台湾方面无从表示他们对双重代表权到底接受不接受，外人也就无从得知蒋介石已经同意放弃其一个中国立场。如果不是陆以正透露这段秘辛，我们还都以爲老蒋始终坚持“汉贼不两立”没商量呢。其实反过来一想，事情本来是清楚的，如果美国事先没有征得老蒋的同意，它何必煞费苦心地搞什麽临时动议，要把阿国提案分成两段呢？  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+不过，陆以正补充说：“假如那年双重代表权案获得通过，中共肯定拒绝加入。顶多再拖个一两年，在西瓜靠大边的情势下，我国仍然会被赶出联合国，反而更加窝囊。”问题是，如果不是等到1971年，而是早在1966年或更早一些，台湾就接受双重代表权，不阻拦中共进入联合国，台湾是不是能保住它自己在联合国的席位呢？对于这个问题，陆以正没有明确回答；但是读者可以感觉到，陆以正对台湾当局在1966年没有支持、而是反对意大利等国关于让台海双方都成爲联合国会员国的提议这种做法是不以爲然的（他把“台北与北京双方联手”反对意大利等国的提议称之爲“打击怀有诚意的中间派的荒谬现象”）。这似乎是暗示，假如台湾当局能在早一些或更早一些的时候放弃一个中国、汉贼不两立的立场，台湾就不会落到后来那麽孤立的地步。  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+陆以正还告诉我们，在1977年中美建交前夕，他曾擅作主张，私下向美国方面试探有无可能采取两个德国模式，也就是既承认中华人民共和国，又承认中华民国。美方表示无可能。卡特总统的东亚事务顾问奥克森伯格说卡特总统已经表态支持上海公报（上海公报是尼克森签署的，上面提到美国认知到两岸均认爲只有一个中国），无法更改。奥克森伯格还调侃地说：“零起点预算制度或许可行，但零起点外交政策就太不象话了。”意思是说，你们台湾若早同意让美国承认两个中国还好办，但你们先前一直不肯。现在才想起要从头来过，要美国承认两个中国，那就爲时已晚，办不到了。  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+<strong>2、争取“贼立汉也立”</strong>  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+美台断交对台湾打击甚大，一时间，台湾的邦交国纷纷效仿，抛弃台湾，转而承认大陆。台湾的外交部连连接到外国的断交通知，被人讥爲“绝交部”。台湾成了国际弃儿。到了这时，台湾想实行两个中国原则以换取国际承认已不可得，于是只好硬著头皮继续坚持一个中国原则，但这毕竟不是长久之计。因此到了蒋经国时代后期，国民党政府就开始推行务实外交，力图重返国际社会。  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+晚年蒋经国的务实外交主要是发展与无邦交国的非官方关系即经济文化等实质性交流，同时也默认以“中国台湾”或“中华台北”的名义参加某些国际活动，在国际体育比赛中不再坚持升中华民国的国旗，等等。1988年1月，蒋经国去世，李登辉接任总统。很快地，台湾就提出争取双重承认，突破外交困局的主张。当时，李登辉刚上任，其实权尚不足以主导决策；所以，这种转变似不应看成李登辉的个人意志，而应看成国民党上层的主流意见。联想到当年蒋介石也打算接受在联合国里的双重代表权，我们就必须说，争取双重承认的主张正所谓其来有自，不足爲奇。  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+蒋经国是1988年1月13日去世的，我手头恰好留有一份1988年3月24日的台湾《中国时报》的影印件（因此页有该报记者对我的采访，所以保留了下来），上面有一篇社论和一篇专论，题目分别是“‘双重承认’与外交困局的突破”和“‘不两立’与‘孤立’会是邻居吗？──从西德南韩经验看外交双重承认的可行性”（《中国时报》当时的老板是余纪忠，名列国民党中常委）。社论引用行政院研考会主任委员魏镛的讲话，声称“我国政府从未排除‘双重承认’；西德与南韩将‘统一’与‘承认’分开处理，是突破承认问题的关键”。社论说：“中共政权在大陆行使有效管辖权已达四十年，在相当期间内，我们无法光复大陆，中国也不可能统一，则爲客观的现实。我们制定政策，固然不能不重原则与理想，但也不能不顾及政治现实。”眼下采取弹性的双重承认政策并不妨碍未来实现统一的长远目标。  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+社论委婉地承认，假如在若干年前，在台湾还有许多邦交国以及在联合国等一系列国际组织中占有席位的时候，当局就准备接受双重承认的政策，效果一定会更好。社论也清醒地意识到，希望国际社会按照东西德模式或南北韩模式对待两岸关系是有困难的，因爲台湾和大陆大小悬殊，在国际事务中的重要性也相差太大，你台湾单方面放弃你的一个中国原则，不再坚持汉贼不两立，人家大陆却不肯放弃它的一个中国原则，大陆还要坚持大陆的那套汉贼不两立，逼得外国政府只好在台湾与大陆二中择一，到头来国际社会还是会取大陆而弃台湾，台湾还是摆脱不了被封锁被孤立的境地。也就是说，台湾单方面地放弃一个中国原则未必就能突破困境；但问题是，你叫台湾怎麽办才好呢？再回到汉贼不两立的立场上去，那不是更没有出路吗？  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+历史的演变就是如此：当初，国民党坚持“汉贼不两立”，爲的是“汉立贼不立”，殊不料后来形势逆转，倒成了“贼立汉不立”，于是只好改变政策，争取“贼立汉也立”；然而等到这时，共产党却又用它的那套“汉贼不两立”全面封杀台湾，使得台湾想“贼立汉也立”而不可得；于是台湾就陷入极大的困境。  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+<strong>3、美台建交是可行的</strong>  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+我们知道，台湾（中华民国）之所以得不到国际社会的广泛承认，是因为中共的封杀。说来中共的杀手锏也就一招，那就是：谁承认中华民国，我中华人民共和国就跟谁断交。本来，许多国家是愿意既承认中华人民共和国，又承认中华民国的，台湾自然欢迎别人采取双重承认，可是大陆却摆出“有他无我、有我无他”的架式，逼迫外国二者择一，由于大陆和台湾在国际交往中的重要性不可同日而语，外国政府觉得和大陆断交的代价太大，便纷纷选择大陆而抛弃台湾。  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+唯有美国可以打破这种局面。因为断交是柄双刃剑，你和别人断交，你也要付出代价。如果美国在保持和中华人民共和国邦交的同时，也承认中华民国，中共将如何反应？宣布和美国断交吗？中共自己也要付出沉重代价。是不是肯付，是不是上算呢？如果美国还能拉到几个重要国家一道和中华民国建交，中共就更难办了。假如中共不敢和美国断交，其他国家就可能接二连三地效仿，这样，台湾就可以获得更多的国家的承认，获得应有的国际人格了。  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+如果美国直接和台湾建交，中共顶多只能和美国断交，不可能采取更激烈的反应。这是有先例的。例如尼加拉瓜、圣露西亚和诺鲁，本来都和中华人民共和国有正式邦交，后来又宣布承认中华民国，中华人民共和国政府随即宣布与之断交；但也仅只是断交而已。中共不可能因此就去打台湾，因为台湾没有做任何改变现状的事，中共要动武师出无名；万一动武，美国依据台湾关系法出面保护台湾则是天经地义，顺理成章。中共也不可能对美国做出什么激烈的行动，毕竟，别国调整自己的外交政策纯属其内部事务，中共除了和别国断绝来往，还能拿别国怎么样呢？  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+<strong>4、中共自己已经修改了它的“一个中国”原则</strong>  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+众所周知，中共之所以要和与台湾建交的国家断交，其依据无非是它的一个中国原则。然而我要指出的是，在台湾维持中华民国宪政体制的法理现状的前提下，如果美国政府决定和中华民国政府建交，那其实并没有违反“一个中国”的原则。美国可以明确告诉中共：美国的政策是“一个中国，两个政府”，因此仍然属于“一个中国”。美国可以理直气壮地反问中共：你们不是也早就不反对“一个中国，两个政府”了吗？  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+毕竟，50年来，两岸各自都发生了重大变化，两岸关系也发生了重大变化，两岸政府对彼此的定位也发生了重大的变化。事实上，中共自己早已经修改了它的一个中国原则。所谓不可逾越的一个中国这条红线，中共自己早已经移动了。我相信，只要美国政界普遍意识到中共自己都已经早不反对“一个中国，两个政府”了，他们就会发现，和台湾建交或复交，其实要比他们原来想象的容易得多。有关这一点的论述，我先前已经写过很多（注），这里就不再重复了。  </blockquote>
+  <p><br /></p>
+  <p>——————</p>
+  <p>（注）胡平：《美台建交，此其时也》。台湾《上报》2019年5月14日。链接：<a href="https://www./" target="_blank">https://www.</a><a href="https://www.upmedia.mg/news_info.php?SerialNo=63154" target="_blank">upmedia.mg/news_info.php?SerialNo=63154</a></p>
+  <p>胡平：《看到了吗？国台办不反对“一中两府”》。台湾《上报》2020年10月19日。链接：<a href="https://www./" target="_blank">https://www.</a><a href="https://www.upmedia.mg/news_info.php?SerialNo=98302" target="_blank">upmedia.mg/news_info.php?SerialNo=98302</a></p>
+  <p>《光传媒》首发。</p>
+  <p>链接：https://ipkmedia.com/?p=103184</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2021-10-28</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-10-28/%E9%80%81%E7%B5%A6%E5%AE%88%E8%AD%B7%E8%91%97%E9%80%99%E5%80%8B%E5%AE%B6%E7%9A%84%E4%BD%A0-%E7%9B%B8%E8%AD%98-%E7%9B%B8%E5%88%A5-%E8%A2%AB%E9%81%AE%E8%94%BD%E7%9A%84%E8%B7%AF-%E9%BB%8E%E6%98%8E%E5%88%B0%E4%BE%86%E7%9A%84%E9%82%A3%E4%B8%80%E5%A4%A9-%E9%9F%93%E5%9C%8B%E6%B0%91%E4%B8%BB%E5%8C%96%E9%81%8B%E5%8B%95-%E5%85%89%E5%B7%9E%E4%BA%8B%E4%BB%B6/">
+          【送給守護著這個家的你】相識 ── 相別 - 被遮蔽的路｜黎明到來的那一天｜韓國民主化運動｜光州事件｜朴鍾哲事件｜六月民主運動
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-10-27</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-10-27/%E7%94%B0%E8%AA%BF%E6%99%82%E5%85%89%E7%9A%84%E6%9B%AC%E5%82%B7%E8%88%87%E9%9D%92%E6%98%A5%E6%AD%B2%E6%9C%88/">
+          田調時光的曬傷與青春歲月
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-10-25</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-10-25/%E7%95%B6%E5%B9%B4%E4%BB%8A%E6%97%A5-%E7%95%A2%E5%8A%A0%E7%B4%A2140%E6%AD%B2%E5%86%A5%E5%A3%BD-%E5%9B%9E%E9%A1%A7%E4%BA%94%E5%BC%B5%E7%B6%93%E5%85%B8%E7%85%A7%E7%89%87/">
+          【當年今日】畢加索140歲冥壽 回顧五張經典照片
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-10-22</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-10-22/%E7%BE%85%E9%A6%AC%E5%B8%9D%E5%9C%8B%EF%BC%B8%E5%9F%BA%E7%9D%A3%E6%95%99%EF%BC%B8%E6%97%A5%E6%9C%AC%E6%B0%B4%E5%BD%A9%E7%95%AB%E5%AE%B6-%E4%B8%89%E5%AE%85%E5%85%8B%E5%B7%B1-%E5%90%9B%E5%A3%AB%E5%9D%A6%E4%B8%81%E5%87%B1%E6%97%8B%E9%96%80/">
+          羅馬帝國Ｘ基督教Ｘ日本水彩畫家：三宅克己《君士坦丁凱旋門》
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2021-10-25/%E7%95%B6%E5%B9%B4%E4%BB%8A%E6%97%A5-%E7%95%A2%E5%8A%A0%E7%B4%A2140%E6%AD%B2%E5%86%A5%E5%A3%BD-%E5%9B%9E%E9%A1%A7%E4%BA%94%E5%BC%B5%E7%B6%93%E5%85%B8%E7%85%A7%E7%89%87/">
+            前一篇：【當年今日】畢加索140歲冥壽 回顧五張經典照片
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2021-10-27/%E7%94%B0%E8%AA%BF%E6%99%82%E5%85%89%E7%9A%84%E6%9B%AC%E5%82%B7%E8%88%87%E9%9D%92%E6%98%A5%E6%AD%B2%E6%9C%88/">
+            後一篇：田調時光的曬傷與青春歲月
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2021-10-25/%E7%95%B6%E5%B9%B4%E4%BB%8A%E6%97%A5-%E7%95%A2%E5%8A%A0%E7%B4%A2140%E6%AD%B2%E5%86%A5%E5%A3%BD-%E5%9B%9E%E9%A1%A7%E4%BA%94%E5%BC%B5%E7%B6%93%E5%85%B8%E7%85%A7%E7%89%87/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2021-10-27/%E7%94%B0%E8%AA%BF%E6%99%82%E5%85%89%E7%9A%84%E6%9B%AC%E5%82%B7%E8%88%87%E9%9D%92%E6%98%A5%E6%AD%B2%E6%9C%88/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2021-10-27/%E7%94%B0%E8%AA%BF%E6%99%82%E5%85%89%E7%9A%84%E6%9B%AC%E5%82%B7%E8%88%87%E9%9D%92%E6%98%A5%E6%AD%B2%E6%9C%88/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2021-10-25/%E7%95%B6%E5%B9%B4%E4%BB%8A%E6%97%A5-%E7%95%A2%E5%8A%A0%E7%B4%A2140%E6%AD%B2%E5%86%A5%E5%A3%BD-%E5%9B%9E%E9%A1%A7%E4%BA%94%E5%BC%B5%E7%B6%93%E5%85%B8%E7%85%A7%E7%89%87/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2021-10-25/%E7%95%B6%E5%B9%B4%E4%BB%8A%E6%97%A5-%E7%95%A2%E5%8A%A0%E7%B4%A2140%E6%AD%B2%E5%86%A5%E5%A3%BD-%E5%9B%9E%E9%A1%A7%E4%BA%94%E5%BC%B5%E7%B6%93%E5%85%B8%E7%85%A7%E7%89%87/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2021-10-27/%E7%94%B0%E8%AA%BF%E6%99%82%E5%85%89%E7%9A%84%E6%9B%AC%E5%82%B7%E8%88%87%E9%9D%92%E6%98%A5%E6%AD%B2%E6%9C%88/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2021-10-27/%E7%94%B0%E8%AA%BF%E6%99%82%E5%85%89%E7%9A%84%E6%9B%AC%E5%82%B7%E8%88%87%E9%9D%92%E6%98%A5%E6%AD%B2%E6%9C%88/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2021-10-25/%E7%95%B6%E5%B9%B4%E4%BB%8A%E6%97%A5-%E7%95%A2%E5%8A%A0%E7%B4%A2140%E6%AD%B2%E5%86%A5%E5%A3%BD-%E5%9B%9E%E9%A1%A7%E4%BA%94%E5%BC%B5%E7%B6%93%E5%85%B8%E7%85%A7%E7%89%87/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

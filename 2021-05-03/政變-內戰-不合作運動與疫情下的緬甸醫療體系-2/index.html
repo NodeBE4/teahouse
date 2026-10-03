@@ -1,0 +1,3458 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>政變、內戰、不合作運動與疫情下的緬甸醫療體系（2） – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+政變、內戰、不合作運動與疫情下的緬甸醫療體系（2）
+——
+" />
+    <meta property="og:description" content="
+政變、內戰、不合作運動與疫情下的緬甸醫療體系（2）
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="政變、內戰、不合作運動與疫情下的緬甸醫療體系（2）" />
+    <meta property="twitter:title" content="政變、內戰、不合作運動與疫情下的緬甸醫療體系（2）" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40reprily%2F%25E6%2594%25BF%25E8%25AE%258A-%25E5%2585%25A7%25E6%2588%25B0-%25E4%25B8%258D%25E5%2590%2588%25E4%25BD%259C%25E9%2581%258B%25E5%258B%2595%25E8%2588%2587%25E7%2596%25AB%25E6%2583%2585%25E4%25B8%258B%25E7%259A%2584%25E7%25B7%25AC%25E7%2594%25B8%25E9%2586%25AB%25E7%2599%2582%25E9%25AB%2594%25E7%25B3%25BB-2-bafyreierdbuebczfijyg7nu7oqxjbktgq6iginzhrd6tfz46wyztlj6ue4" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@reprily/%E6%94%BF%E8%AE%8A-%E5%85%A7%E6%88%B0-%E4%B8%8D%E5%90%88%E4%BD%9C%E9%81%8B%E5%8B%95%E8%88%87%E7%96%AB%E6%83%85%E4%B8%8B%E7%9A%84%E7%B7%AC%E7%94%B8%E9%86%AB%E7%99%82%E9%AB%94%E7%B3%BB-2-bafyreierdbuebczfijyg7nu7oqxjbktgq6iginzhrd6tfz46wyztlj6ue4" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@reprily/%E6%94%BF%E8%AE%8A-%E5%85%A7%E6%88%B0-%E4%B8%8D%E5%90%88%E4%BD%9C%E9%81%8B%E5%8B%95%E8%88%87%E7%96%AB%E6%83%85%E4%B8%8B%E7%9A%84%E7%B7%AC%E7%94%B8%E9%86%AB%E7%99%82%E9%AB%94%E7%B3%BB-2-bafyreierdbuebczfijyg7nu7oqxjbktgq6iginzhrd6tfz46wyztlj6ue4&text=政變、內戰、不合作運動與疫情下的緬甸醫療體系（2）&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@reprily/%E6%94%BF%E8%AE%8A-%E5%85%A7%E6%88%B0-%E4%B8%8D%E5%90%88%E4%BD%9C%E9%81%8B%E5%8B%95%E8%88%87%E7%96%AB%E6%83%85%E4%B8%8B%E7%9A%84%E7%B7%AC%E7%94%B8%E9%86%AB%E7%99%82%E9%AB%94%E7%B3%BB-2-bafyreierdbuebczfijyg7nu7oqxjbktgq6iginzhrd6tfz46wyztlj6ue4&title=政變、內戰、不合作運動與疫情下的緬甸醫療體系（2）" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@reprily/%E6%94%BF%E8%AE%8A-%E5%85%A7%E6%88%B0-%E4%B8%8D%E5%90%88%E4%BD%9C%E9%81%8B%E5%8B%95%E8%88%87%E7%96%AB%E6%83%85%E4%B8%8B%E7%9A%84%E7%B7%AC%E7%94%B8%E9%86%AB%E7%99%82%E9%AB%94%E7%B3%BB-2-bafyreierdbuebczfijyg7nu7oqxjbktgq6iginzhrd6tfz46wyztlj6ue4&title=政變、內戰、不合作運動與疫情下的緬甸醫療體系（2）" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=政變、內戰、不合作運動與疫情下的緬甸醫療體系（2）&body=
+政變、內戰、不合作運動與疫情下的緬甸醫療體系（2）
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@reprily/%E6%94%BF%E8%AE%8A-%E5%85%A7%E6%88%B0-%E4%B8%8D%E5%90%88%E4%BD%9C%E9%81%8B%E5%8B%95%E8%88%87%E7%96%AB%E6%83%85%E4%B8%8B%E7%9A%84%E7%B7%AC%E7%94%B8%E9%86%AB%E7%99%82%E9%AB%94%E7%B3%BB-2-bafyreierdbuebczfijyg7nu7oqxjbktgq6iginzhrd6tfz46wyztlj6ue4" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@reprily/%E6%94%BF%E8%AE%8A-%E5%85%A7%E6%88%B0-%E4%B8%8D%E5%90%88%E4%BD%9C%E9%81%8B%E5%8B%95%E8%88%87%E7%96%AB%E6%83%85%E4%B8%8B%E7%9A%84%E7%B7%AC%E7%94%B8%E9%86%AB%E7%99%82%E9%AB%94%E7%B3%BB-2-bafyreierdbuebczfijyg7nu7oqxjbktgq6iginzhrd6tfz46wyztlj6ue4&title=政變、內戰、不合作運動與疫情下的緬甸醫療體系（2）&caption=
+政變、內戰、不合作運動與疫情下的緬甸醫療體系（2）
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=政變、內戰、不合作運動與疫情下的緬甸醫療體系（2）&url=https://matters.news/@reprily/%E6%94%BF%E8%AE%8A-%E5%85%A7%E6%88%B0-%E4%B8%8D%E5%90%88%E4%BD%9C%E9%81%8B%E5%8B%95%E8%88%87%E7%96%AB%E6%83%85%E4%B8%8B%E7%9A%84%E7%B7%AC%E7%94%B8%E9%86%AB%E7%99%82%E9%AB%94%E7%B3%BB-2-bafyreierdbuebczfijyg7nu7oqxjbktgq6iginzhrd6tfz46wyztlj6ue4" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>政變、內戰、不合作運動與疫情下的緬甸醫療體系（2）</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-05-03
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 翁婉瑩</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@reprily/%E6%94%BF%E8%AE%8A-%E5%85%A7%E6%88%B0-%E4%B8%8D%E5%90%88%E4%BD%9C%E9%81%8B%E5%8B%95%E8%88%87%E7%96%AB%E6%83%85%E4%B8%8B%E7%9A%84%E7%B7%AC%E7%94%B8%E9%86%AB%E7%99%82%E9%AB%94%E7%B3%BB-2-bafyreierdbuebczfijyg7nu7oqxjbktgq6iginzhrd6tfz46wyztlj6ue4" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1620071078000-->
+<p><a href="https://matters.news/@reprily/%E6%94%BF%E8%AE%8A-%E5%85%A7%E6%88%B0-%E4%B8%8D%E5%90%88%E4%BD%9C%E9%81%8B%E5%8B%95%E8%88%87%E7%96%AB%E6%83%85%E4%B8%8B%E7%9A%84%E7%B7%AC%E7%94%B8%E9%86%AB%E7%99%82%E9%AB%94%E7%B3%BB-2-bafyreierdbuebczfijyg7nu7oqxjbktgq6iginzhrd6tfz46wyztlj6ue4">政變、內戰、不合作運動與疫情下的緬甸醫療體系（2）</a>
+——</p>
+
+<div>
+  <p>53歲的Ma Moe罹患癌症三期，政變前，每隔三週他必須在曼德勒綜合醫院接受放射線治療。但2月1日政變後，他的醫院關閉了。</p>
+  <p>原本在醫院工作的醫護人員參與公民不合作運動（Civil Disobedience Movement, CDM），沒有回到醫院上班，而Ma Moe負擔不起私人醫院700美元的放射線治療費用，而如果不接受癌症治療，他將只剩下一年的壽命。</p>
+  <p>但他告訴《BBC Burmese》，他不怪罪參加罷工的醫生，「即使我死於癌症，我也很高興緬甸人民得到應得的民主。」</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/cef8f067-39f4-4d53-b397-bdd572ef0561.jpeg" data-asset-id="cef8f067-39f4-4d53-b397-bdd572ef0561" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <h2 id="section">崩潰的醫療系統、醫生誓言與參與公民不合作運動的醫生</h2>
+  <p>自2月1日政變引發公民不合作運動以來，數千名醫療人員一直走在抗議最前線，但醫療保健系統卻也是受影響最大的領域。</p>
+  <p>為緬甸5400多萬人口提供醫療服務的醫院與診所，有80%為於公立系統下，而醫護人員拒絕在強奪民意的軍事政府下工作時，幾乎沒有醫院正常運作。醫護人員的罷工有效地削弱國家基礎設施，但在新冠肺炎疫情威脅下，總部位於仰光的無國界醫生組織，Mitchell Sanmar醫師對《BBC Burmese》證實：「整個公共衛生保健系統都處於崩潰的邊緣。」</p>
+  <p>《The Irrawaddy》估計，緬甸大約有3萬名醫生，約有2萬人在公立醫院工作，而其中75%的醫生參與公民不合作運動而罷工。</p>
+  <p>醫護人員的罷工並不少見，在已發展國家中，醫護人員透過罷工爭取勞動權益、改善醫院環境，儘管病患的死亡率並不因此發生巨大變化，但仍存在道德上緊張關係。然而，緬甸醫護人員的公民不合作運動，受到民眾廣泛支持，但對分娩、緊急手術、嚴重慢性病與癌症的患者，有限的流動診所無法滿足病患的需求，而緬甸是全世界醫療系統最脆弱的國家之一。</p>
+  <p>來自曼德勒的傳染病專家，Maung醫師*對《外交家》（The Diplomat）解釋醫護人員參與不合作運動的原理，「如果沒有人在你的領導下工作，你就不能稱自己是『合法政府』。」</p>
+  <p>參加反軍政抗議的網路設群領袖Win*表示：「看到醫生罷工非常令人振奮，因為在我們的文化中，醫生是最受尊重的專業人士，他們是知識份子，而醫護罷工讓我們知道，醫生與我們同一陣線。」他對《外交家》說。</p>
+  <p>另一位匿名的W醫生*則說：「現在民眾與醫生是一體的，人民支持我們。」</p>
+  <p>救治病患是醫生的誓言與承諾，但他們不願意在軍政府統治下的醫院工作。「我們需要一個可以安全治療病人的地方。」一位匿名的醫師對《BBC Burmese》說。</p>
+  <p>醫護人員在醫院停車場和醫院範圍之外提供基本醫療服務，Kyi Kyi醫生*在政變後前往一家私人醫院提供免費諮詢，但有天維安部隊來到他的醫院周圍時，「這個工作對我來說太危險了。」他對《BBC Burmese》說。</p>
+  <p>W醫生對《外交家》說明他在政變的工作。他花了幾天時間將符合條件的患者送回家中休養，部分患者轉送私人醫院，並推遲非緊急手術；他也建立了流動診所，和數家私人醫院達成協議，以免費或最低收費的方式提供醫療服務。</p>
+  <p>為了取代公立醫院，Maung醫生組織了「<a href="https://www.facebook.com/mdymedicalcover/" target="_blank">Mandalay Medical Cover</a>」，持續照護慢性病患者，與因武力鎮壓而受傷的患者。志工將原本因應新冠肺炎所設置的臨時診所，改造為提供免費藥物與諮詢的一般診所；Maung醫生也協調私人醫院，為他的病患進行電腦斷層或核磁共振檢查。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/14e636c1-5439-46a6-91d3-adbf8600e9e7.jpeg" data-asset-id="14e636c1-5439-46a6-91d3-adbf8600e9e7" referrerpolicy="no-referrer" />    <figcaption>
+<span>曼德勒「Mandalay Medical Cover」的義診中心</span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>「民眾並未因為我們關閉醫院而生氣。」Maung醫生對《外交家》說，「但他們對造成這種情況的軍方感到憤怒。」</p>
+  <p>儘管軍政府協調病患前往軍醫院就醫，但成效不彰。「一位病人告訴我，她寧願病死也不要在軍醫院進行治療。」Maung醫生說。「我們活在新冠肺炎嚴重威脅生命的當下，但人們更恐懼軍事統治的未來。」</p>
+  <h2 id="section-1">國家暴力威脅下的醫護人員</h2>
+  <p>自4月13日以來，緬甸軍方電視台每天至少公布20名被通緝的醫生名單，他們被指控煽動其他醫護人員進行不合作運動，面臨三年有期徒刑。目前至少300名醫生遭到通緝。</p>
+  <p>《RFA Burmese》統計，軍政府逮捕了30多名參與不合作運動的醫生，殺害3名醫護人員與一名醫科大學學生。</p>
+  <p>罷工的醫護人員加入了反軍政抗議的隊伍，提供醫療援助，儘管在服裝上標記自己的身份，但依舊成為維安部隊的目標。</p>
+  <p>Maung醫生對《外交家》表示，他與救護團隊試圖在曼德勒街上搶救一名遭超車輛撞擊，多處骨折的騎士時，維安部隊發射實彈驅離抗議民眾，他們正試圖將病人帶進救護車，而他們是街上唯一可以救他的人。「我聽到子彈擊中救護車的聲音。」他說。</p>
+  <p>維安部隊襲擊義診的診所與醫生。另一段被廣為流傳的<a href="https://www.rfa.org/english/news/myanmar/emergency-care-workers-03042021172046.html" target="_blank">影片</a>，記錄軍警對救護車人員殘暴致命的攻擊。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/f0a45f31-da2e-46b7-be9b-49d1ab6c7b25.jpeg" data-asset-id="f0a45f31-da2e-46b7-be9b-49d1ab6c7b25" referrerpolicy="no-referrer" />    <figcaption>
+<span>遭到攻擊的慈善團體救護車</span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>一位不願透露名字的醫生對《RFA Burmese》表示，「我們被迫在槍口下出具虛假的死亡證明。一位抗議者在摩托車上被子彈打死，我們在死亡證明上註明車禍死亡。」</p>
+  <p>「一位被虐打到肋骨骨折的病人，我們被迫出具證明他是從梯子上跌落。」他說。</p>
+  <p>而緬甸醫療體系停止運作近3個月，軍政府以各種手段脅迫醫護人員返回工作崗位，包括刑法第505條A款煽動叛亂罪。</p>
+  <p>根據《BBC Burmese》4月30日的報導，仰光公立醫院的管理人員表示，如果罷工的醫護人員未在4月30前返回工作單位，他們將向衛生部提出缺勤名單；而有些醫院以正式或間接管道發布通知，如果醫護人員不復工的話，將會被依刑法第505條A款逮捕，將被吊銷執照，列入黑名單。</p>
+  <p>軍政府更將壓力施加予醫護人員的家庭。</p>
+  <p>一位不願具名的民眾告訴《Myanmar Now》，仰光南奧卡拉帕鎮（South Okkalapa）的醫師Yu Sandar Moe遭到通緝，4月27日軍方前往她家逮捕不成，便拘留了她的父親與妹妹。</p>
+  <p>參與不合作運動的Kyi Kyi醫師自2月以來便沒有收入，她靠自己的積蓄與父母的援助生活。</p>
+  <p>而平行於軍政府，代表全民盟與其他反對勢力的緬甸民族團結政府（National Unity Government, NUG），人道事務與災難管理部部長Win Myat Aye 4月29日在網路社群公布，NUG已編列預算，將為參與公民不合作的政府雇員定期支付薪水。</p>
+  <h2 id="section-2">更糟糕的狀況</h2>
+  <p>自政變以來，緬甸暴露在新冠肺炎的高度風險下，而其他流行病也正在蔓延。</p>
+  <p>過去20年，因國際援助與政府醫療政策配合，原本傳播速度趨緩，死亡人數減少的肺結核與愛滋病，卻因為政變將導致疾病復甦。</p>
+  <p>「政變的後果是讓這些計畫幾乎終止。」無國界醫師組織的Pablo Kolovs說，「看到這些對緬甸有益的醫療計畫迅速消失，讓人傷心與震驚。」</p>
+  <p>「因為國際援助機構不願意繼續與政變後的緬甸衛生部合作，這些國際捐助者正在削減照顧數百萬患者的計畫資金。」Pablo Kolovs解釋。</p>
+  <p>一位不願透露名字的仰光醫生對《RFA Burmese》表示，醫院甚至沒有足夠的醫務人員確保疫苗妥善保存。</p>
+  <p>「麻疹和小兒麻痺疫苗施打已經全部停止，我們不知道什麼時候可以重新開始。」他說。「軍方沒收了所有新冠肺炎疫苗，沒有人知道這些疫苗是否有效。」</p>
+  <h2 id="section-3">寫下遺囑的醫生</h2>
+  <p>曼德勒的醫生兼抗議領袖Tay Za San告訴《RFA Burmese》，「我們不是坐在家裡罷工，醫生和其他醫護人員參加反軍事抗議，並盡一切可能幫助需要醫療援助的人。」</p>
+  <p>「他們甚至加入了抗議者的行列，醫療傷者，安置罹難者的遺體。」他說。</p>
+  <p>《BBC Burmese》報導了26歲曼德勒醫師Thiha Tin Tun的故事。</p>
+  <p>他在3月27日建軍節的鎮壓屠殺中，頭部遭到槍擊，被拖上軍用卡車，他的母親至今尚未取回他的遺體。</p>
+  <p>在緬甸社會的青年族群，少有「寫遺書」的文化，但在Thiha Tin Tun的遺書中，卻預見了獨裁者的暴行。</p>
+  <p>他的女友Ne Win在網路社群公布了他的遺書。</p>
+  <p>「讓我們透過一切手段進行反擊，恢復人民的權力。」Thiha Tin Tun在2月9日寫下遺書。</p>
+  <p>「我們將持續戰鬥，直到軍事獨裁統治被徹底擊敗。」「我們不只是和平抗議，我們將會使用武器。」Thiha Tin Tun寫道。</p>
+  <p>「Thiha Tin Tun非常擔心，人民會因傷亡人數眾多而停止抗議獨裁統治。」Ne Win說。</p>
+  <p>Thiha Tin Tun在遺書中寫下，「我們必須竭盡全力，為一起戰鬥到最後的戰友們奮鬥。」「 只有人民重新掌握權力時，才能停止戰鬥。」</p>
+  <p>「我很高興我必須先走。我們必須讓軍事獨裁者挫敗，願人民的力量能長時間持續。」Thiha Tin Tun說。</p>
+  <p>政變後第二天，Thiha Tin Tun就加入了公民不合作運動，儘管曼德勒的武力鎮壓導致傷亡人數增加，但Thiha Tin Tun依舊參與每天的反軍政抗議。</p>
+  <p>3月27日早上9點，Thiha Tin Tun協助第42街抗議者逃離鎮壓時，被維安部隊射中手臂。路邊民眾為他開門，想協助他避難，但他沒有逃入民宅，因為民宅已經收容許多抗議者，他的加入將引來更多軍警追擊。當他持續向前奔跑時，左腦遭射擊而摔倒。</p>
+  <p>《BBC Burmese》取得網路社群影片，被槍殺的Thiha Tin Tun被4名軍警拖行，但在影片中仍可看到他持續呼吸，並嘗試取下臉上的防護面罩。</p>
+  <p>另一支影片中的Thiha Tin Tun，他的身體已經靜止，被維安部隊拖上軍用卡車，從此再也沒有人看到他。</p>
+  <p>他的親友在曼德勒到處尋找，隔天才在上述影片發現Thiha Tin Tun的身影，但他的母親至今仍未取回他的遺體，喪禮也沒有舉行。</p>
+  <p>Thiha Tin Tun出身自一個普通僱員的家庭，儘管遭遇種種困難，他還是成為了一名醫生。</p>
+  <p>「他討厭不公正的事情，並希望軍隊成為一支沒有黨派，真正保護人民的軍隊。」他的友人表示。</p>
+  <p>正因如此，政變後他堅決地舉起武器。「如果聯邦軍出現，Thiha Tin Tun會想加入。」 他的同學對《BBC Burmese》說，「他將為那些生命和財產被侵害的人們而戰。」</p>
+  <p>Thiha Tin Tun的母親沒有嘗試阻止自己的兒子，他知道兒子在緬甸春天革命中的直覺與毅力。「我的兒子是革命者，我不應該成為他的後顧之憂，我必須以最大的能量支持他。」</p>
+  <p>「我必須把母親的自我放到最後，並為可能發生的事情做好準備。就像每個革命者的父母一樣，我們除了待在家裡等待，什麼都不能做。」Thiha Tin Tun的母親說。</p>
+  <p>「如果緬甸的春天革命成功了，我會為我的兒子做些事情，一座紀念碑和一所他理想中的圖書館。」</p>
+  <p>42街居民與當時躲藏的抗議者因Thiha Tin Tun的一念之間，沒有遭到維安部隊進一步追擊而獲得自由。目睹整個過程的人說，「我的眼淚停不下來，醫生不是來自這個區域，但他拯救了所有的人。」</p>
+  <p>曼德勒42街被改名為「Thiha Road」，紀念Thiha Tin Tun的犧牲。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/e6ed04b7-31a1-4811-8fed-20fa97bcc701.jpeg" data-asset-id="e6ed04b7-31a1-4811-8fed-20fa97bcc701" referrerpolicy="no-referrer" />    <figcaption>
+<span>26歲的曼德勒醫生Thiha Tin Tun</span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/69557a7f-000c-49f9-bbb7-6a4489ed3cd6.png" data-asset-id="69557a7f-000c-49f9-bbb7-6a4489ed3cd6" referrerpolicy="no-referrer" />    <figcaption>
+<span>Thiha Tin Tun的遺書</span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>* 為匿名</p>
+  <p>Photos from <a href="https://www.facebook.com/BBCnewsBurmese/?__cft__[0]=AZUVWVrFork9Ij1Gd96U3Gi-vHZHJI_fcqlEn_H-ROeOXJ6GqgwdJs6rqg1Dw_12DQhgrbD2nCUOOnRcqQNloDF3x6AYqoOTZroeezom7vQvj5js2af2e6tejsjqLQYhRW7cV3kyt90CF3IjuT03OSV8&amp;__tn__=kK-R" target="_blank">BBC Burmese</a> <a href="https://www.facebook.com/myanmarnownews/?__cft__[0]=AZUVWVrFork9Ij1Gd96U3Gi-vHZHJI_fcqlEn_H-ROeOXJ6GqgwdJs6rqg1Dw_12DQhgrbD2nCUOOnRcqQNloDF3x6AYqoOTZroeezom7vQvj5js2af2e6tejsjqLQYhRW7cV3kyt90CF3IjuT03OSV8&amp;__tn__=kK-R" target="_blank">Myanmar Now</a> <a href="https://www.facebook.com/theirrawaddyburmese/?__cft__[0]=AZUVWVrFork9Ij1Gd96U3Gi-vHZHJI_fcqlEn_H-ROeOXJ6GqgwdJs6rqg1Dw_12DQhgrbD2nCUOOnRcqQNloDF3x6AYqoOTZroeezom7vQvj5js2af2e6tejsjqLQYhRW7cV3kyt90CF3IjuT03OSV8&amp;__tn__=kK-R" target="_blank">The Irrawaddy - Burmese Edition</a> <a href="https://www.facebook.com/rfaburmese/?__cft__[0]=AZUVWVrFork9Ij1Gd96U3Gi-vHZHJI_fcqlEn_H-ROeOXJ6GqgwdJs6rqg1Dw_12DQhgrbD2nCUOOnRcqQNloDF3x6AYqoOTZroeezom7vQvj5js2af2e6tejsjqLQYhRW7cV3kyt90CF3IjuT03OSV8&amp;__tn__=kK-R" target="_blank">RFA Burmese</a></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2021-05-04</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-05-04/%E9%96%92%E7%95%AB%E5%AE%B6%E5%B8%B8-%E5%B0%8F%E6%97%A9%E5%B7%9D%E7%AF%A4%E5%9B%9B%E9%83%8E-%E7%86%B1%E8%98%AD%E9%81%AE%E5%9F%8E%E6%99%A8%E6%99%AF/">
+          【閒畫家常】小早川篤四郎《熱蘭遮城晨景》
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-05-04</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-05-04/%E6%AD%A5%E5%85%B5%E6%89%8B%E8%A8%9804-%E5%B9%B3%E5%8F%B0%E7%B6%93%E6%BF%9F%E8%AE%93%E6%88%91%E5%BE%9E%E6%80%A7%E5%B0%8F%E7%9C%BE%E8%BA%AB%E4%BB%BD%E4%B8%AD%E8%A7%A3%E6%94%BE-%E4%BD%86%E6%88%91%E4%BB%8D%E5%9C%A8%E5%B0%8D%E6%8A%97%E6%80%A7%E5%88%A5%E5%81%8F%E8%A6%8B/">
+          步兵手記04｜平台經濟讓我從性小眾身份中解放，但我仍在對抗性別偏見
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-05-03</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-05-03/%E5%8F%AA%E4%B8%8D%E8%BF%87%E6%83%B3%E8%A6%81%E4%B8%80%E4%B8%AA%E4%B8%8D%E9%82%A3%E4%B9%88%E5%86%B7%E9%85%B7%E7%9A%84%E4%B8%96%E7%95%8C/">
+          只不过想要一个不那么冷酷的世界
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-05-03</time>
+        <a href="https://nodebe4.github.io/teahouse/2021-05-03/%E5%81%87%E8%87%AA%E5%83%B1-%E7%9C%9F%E5%89%9D%E5%89%8A-%E5%BE%9EFoodpanda%E8%87%AA%E5%83%B1%E9%80%81%E9%81%9E%E5%9C%98%E9%9A%8A%E8%A8%88%E5%8A%83%E8%AA%AA%E8%B5%B7/">
+          假自僱？真剝削？從Foodpanda自僱送遞團隊計劃說起
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2021-05-03/%E5%8F%AA%E4%B8%8D%E8%BF%87%E6%83%B3%E8%A6%81%E4%B8%80%E4%B8%AA%E4%B8%8D%E9%82%A3%E4%B9%88%E5%86%B7%E9%85%B7%E7%9A%84%E4%B8%96%E7%95%8C/">
+            前一篇：只不过想要一个不那么冷酷的世界
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2021-05-03/%E5%8A%B3%E5%8A%A8%E8%8A%82%E4%B9%8B%E9%99%85-%E8%AF%B4%E8%AF%B4%E4%B8%89%E4%B8%AA%E5%8A%B3%E6%A8%A1-%E8%BF%87%E8%8A%82%E4%BA%86-%E5%90%83%E9%A1%BF%E5%A5%BD%E7%9A%84-%E5%96%9D%E7%82%B9%E6%88%91%E5%81%9A%E7%9A%84%E9%85%A3%E8%B5%8F%E9%85%92-%E5%8A%B3%E5%8A%A8%E8%80%85%E6%9C%80%E5%85%89%E8%8D%A3-%E6%95%AC%E6%82%A8%E4%B8%80%E6%9D%AF/">
+            後一篇：劳动节之际，说说三个劳模……。过节了，吃顿好的，喝点我做的酣赏酒。劳动者最光荣，敬您一杯！
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2021-05-03/%E5%8F%AA%E4%B8%8D%E8%BF%87%E6%83%B3%E8%A6%81%E4%B8%80%E4%B8%AA%E4%B8%8D%E9%82%A3%E4%B9%88%E5%86%B7%E9%85%B7%E7%9A%84%E4%B8%96%E7%95%8C/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2021-05-03/%E5%8A%B3%E5%8A%A8%E8%8A%82%E4%B9%8B%E9%99%85-%E8%AF%B4%E8%AF%B4%E4%B8%89%E4%B8%AA%E5%8A%B3%E6%A8%A1-%E8%BF%87%E8%8A%82%E4%BA%86-%E5%90%83%E9%A1%BF%E5%A5%BD%E7%9A%84-%E5%96%9D%E7%82%B9%E6%88%91%E5%81%9A%E7%9A%84%E9%85%A3%E8%B5%8F%E9%85%92-%E5%8A%B3%E5%8A%A8%E8%80%85%E6%9C%80%E5%85%89%E8%8D%A3-%E6%95%AC%E6%82%A8%E4%B8%80%E6%9D%AF/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2021-05-04/%E6%AD%A5%E5%85%B5%E6%89%8B%E8%A8%9804-%E5%B9%B3%E5%8F%B0%E7%B6%93%E6%BF%9F%E8%AE%93%E6%88%91%E5%BE%9E%E6%80%A7%E5%B0%8F%E7%9C%BE%E8%BA%AB%E4%BB%BD%E4%B8%AD%E8%A7%A3%E6%94%BE-%E4%BD%86%E6%88%91%E4%BB%8D%E5%9C%A8%E5%B0%8D%E6%8A%97%E6%80%A7%E5%88%A5%E5%81%8F%E8%A6%8B/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2021-05-03/%E5%8F%AA%E4%B8%8D%E8%BF%87%E6%83%B3%E8%A6%81%E4%B8%80%E4%B8%AA%E4%B8%8D%E9%82%A3%E4%B9%88%E5%86%B7%E9%85%B7%E7%9A%84%E4%B8%96%E7%95%8C/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2021-05-03/%E5%8F%AA%E4%B8%8D%E8%BF%87%E6%83%B3%E8%A6%81%E4%B8%80%E4%B8%AA%E4%B8%8D%E9%82%A3%E4%B9%88%E5%86%B7%E9%85%B7%E7%9A%84%E4%B8%96%E7%95%8C/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2021-05-03/%E5%8A%B3%E5%8A%A8%E8%8A%82%E4%B9%8B%E9%99%85-%E8%AF%B4%E8%AF%B4%E4%B8%89%E4%B8%AA%E5%8A%B3%E6%A8%A1-%E8%BF%87%E8%8A%82%E4%BA%86-%E5%90%83%E9%A1%BF%E5%A5%BD%E7%9A%84-%E5%96%9D%E7%82%B9%E6%88%91%E5%81%9A%E7%9A%84%E9%85%A3%E8%B5%8F%E9%85%92-%E5%8A%B3%E5%8A%A8%E8%80%85%E6%9C%80%E5%85%89%E8%8D%A3-%E6%95%AC%E6%82%A8%E4%B8%80%E6%9D%AF/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2021-05-04/%E6%AD%A5%E5%85%B5%E6%89%8B%E8%A8%9804-%E5%B9%B3%E5%8F%B0%E7%B6%93%E6%BF%9F%E8%AE%93%E6%88%91%E5%BE%9E%E6%80%A7%E5%B0%8F%E7%9C%BE%E8%BA%AB%E4%BB%BD%E4%B8%AD%E8%A7%A3%E6%94%BE-%E4%BD%86%E6%88%91%E4%BB%8D%E5%9C%A8%E5%B0%8D%E6%8A%97%E6%80%A7%E5%88%A5%E5%81%8F%E8%A6%8B/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2021-05-03/%E5%8F%AA%E4%B8%8D%E8%BF%87%E6%83%B3%E8%A6%81%E4%B8%80%E4%B8%AA%E4%B8%8D%E9%82%A3%E4%B9%88%E5%86%B7%E9%85%B7%E7%9A%84%E4%B8%96%E7%95%8C/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
