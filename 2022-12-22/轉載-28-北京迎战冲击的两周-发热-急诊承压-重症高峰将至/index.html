@@ -1,0 +1,3559 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>轉載#28| 北京迎战冲击的两周：发热、急诊承压，重症高峰将至 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+轉載#28| 北京迎战冲击的两周：发热、急诊承压，重症高峰将至
+——
+" />
+    <meta property="og:description" content="
+轉載#28| 北京迎战冲击的两周：发热、急诊承压，重症高峰将至
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="轉載#28| 北京迎战冲击的两周：发热、急诊承压，重症高峰将至" />
+    <meta property="twitter:title" content="轉載#28| 北京迎战冲击的两周：发热、急诊承压，重症高峰将至" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40KMnese%2F%25E8%25BD%2589%25E8%25BC%2589-28-%25E5%258C%2597%25E4%25BA%25AC%25E8%25BF%258E%25E6%2588%2598%25E5%2586%25B2%25E5%2587%25BB%25E7%259A%2584%25E4%25B8%25A4%25E5%2591%25A8-%25E5%258F%2591%25E7%2583%25AD-%25E6%2580%25A5%25E8%25AF%258A%25E6%2589%25BF%25E5%258E%258B-%25E9%2587%258D%25E7%2597%2587%25E9%25AB%2598%25E5%25B3%25B0%25E5%25B0%2586%25E8%2587%25B3-bafybeidgrsen3laakvcx3xrr2lqbb6wkjanqyhrmev25qfofnq4zkbeszi" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@KMnese/%E8%BD%89%E8%BC%89-28-%E5%8C%97%E4%BA%AC%E8%BF%8E%E6%88%98%E5%86%B2%E5%87%BB%E7%9A%84%E4%B8%A4%E5%91%A8-%E5%8F%91%E7%83%AD-%E6%80%A5%E8%AF%8A%E6%89%BF%E5%8E%8B-%E9%87%8D%E7%97%87%E9%AB%98%E5%B3%B0%E5%B0%86%E8%87%B3-bafybeidgrsen3laakvcx3xrr2lqbb6wkjanqyhrmev25qfofnq4zkbeszi" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@KMnese/%E8%BD%89%E8%BC%89-28-%E5%8C%97%E4%BA%AC%E8%BF%8E%E6%88%98%E5%86%B2%E5%87%BB%E7%9A%84%E4%B8%A4%E5%91%A8-%E5%8F%91%E7%83%AD-%E6%80%A5%E8%AF%8A%E6%89%BF%E5%8E%8B-%E9%87%8D%E7%97%87%E9%AB%98%E5%B3%B0%E5%B0%86%E8%87%B3-bafybeidgrsen3laakvcx3xrr2lqbb6wkjanqyhrmev25qfofnq4zkbeszi&text=轉載#28| 北京迎战冲击的两周：发热、急诊承压，重症高峰将至&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@KMnese/%E8%BD%89%E8%BC%89-28-%E5%8C%97%E4%BA%AC%E8%BF%8E%E6%88%98%E5%86%B2%E5%87%BB%E7%9A%84%E4%B8%A4%E5%91%A8-%E5%8F%91%E7%83%AD-%E6%80%A5%E8%AF%8A%E6%89%BF%E5%8E%8B-%E9%87%8D%E7%97%87%E9%AB%98%E5%B3%B0%E5%B0%86%E8%87%B3-bafybeidgrsen3laakvcx3xrr2lqbb6wkjanqyhrmev25qfofnq4zkbeszi&title=轉載#28| 北京迎战冲击的两周：发热、急诊承压，重症高峰将至" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@KMnese/%E8%BD%89%E8%BC%89-28-%E5%8C%97%E4%BA%AC%E8%BF%8E%E6%88%98%E5%86%B2%E5%87%BB%E7%9A%84%E4%B8%A4%E5%91%A8-%E5%8F%91%E7%83%AD-%E6%80%A5%E8%AF%8A%E6%89%BF%E5%8E%8B-%E9%87%8D%E7%97%87%E9%AB%98%E5%B3%B0%E5%B0%86%E8%87%B3-bafybeidgrsen3laakvcx3xrr2lqbb6wkjanqyhrmev25qfofnq4zkbeszi&title=轉載#28| 北京迎战冲击的两周：发热、急诊承压，重症高峰将至" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=轉載#28| 北京迎战冲击的两周：发热、急诊承压，重症高峰将至&body=
+轉載#28| 北京迎战冲击的两周：发热、急诊承压，重症高峰将至
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@KMnese/%E8%BD%89%E8%BC%89-28-%E5%8C%97%E4%BA%AC%E8%BF%8E%E6%88%98%E5%86%B2%E5%87%BB%E7%9A%84%E4%B8%A4%E5%91%A8-%E5%8F%91%E7%83%AD-%E6%80%A5%E8%AF%8A%E6%89%BF%E5%8E%8B-%E9%87%8D%E7%97%87%E9%AB%98%E5%B3%B0%E5%B0%86%E8%87%B3-bafybeidgrsen3laakvcx3xrr2lqbb6wkjanqyhrmev25qfofnq4zkbeszi" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@KMnese/%E8%BD%89%E8%BC%89-28-%E5%8C%97%E4%BA%AC%E8%BF%8E%E6%88%98%E5%86%B2%E5%87%BB%E7%9A%84%E4%B8%A4%E5%91%A8-%E5%8F%91%E7%83%AD-%E6%80%A5%E8%AF%8A%E6%89%BF%E5%8E%8B-%E9%87%8D%E7%97%87%E9%AB%98%E5%B3%B0%E5%B0%86%E8%87%B3-bafybeidgrsen3laakvcx3xrr2lqbb6wkjanqyhrmev25qfofnq4zkbeszi&title=轉載#28| 北京迎战冲击的两周：发热、急诊承压，重症高峰将至&caption=
+轉載#28| 北京迎战冲击的两周：发热、急诊承压，重症高峰将至
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=轉載#28| 北京迎战冲击的两周：发热、急诊承压，重症高峰将至&url=https://matters.news/@KMnese/%E8%BD%89%E8%BC%89-28-%E5%8C%97%E4%BA%AC%E8%BF%8E%E6%88%98%E5%86%B2%E5%87%BB%E7%9A%84%E4%B8%A4%E5%91%A8-%E5%8F%91%E7%83%AD-%E6%80%A5%E8%AF%8A%E6%89%BF%E5%8E%8B-%E9%87%8D%E7%97%87%E9%AB%98%E5%B3%B0%E5%B0%86%E8%87%B3-bafybeidgrsen3laakvcx3xrr2lqbb6wkjanqyhrmev25qfofnq4zkbeszi" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>轉載#28| 北京迎战冲击的两周：发热、急诊承压，重症高峰将至</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-12-22
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 戰地島民KMnese</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@KMnese/%E8%BD%89%E8%BC%89-28-%E5%8C%97%E4%BA%AC%E8%BF%8E%E6%88%98%E5%86%B2%E5%87%BB%E7%9A%84%E4%B8%A4%E5%91%A8-%E5%8F%91%E7%83%AD-%E6%80%A5%E8%AF%8A%E6%89%BF%E5%8E%8B-%E9%87%8D%E7%97%87%E9%AB%98%E5%B3%B0%E5%B0%86%E8%87%B3-bafybeidgrsen3laakvcx3xrr2lqbb6wkjanqyhrmev25qfofnq4zkbeszi" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1671721041000-->
+<p><a href="https://matters.news/@KMnese/%E8%BD%89%E8%BC%89-28-%E5%8C%97%E4%BA%AC%E8%BF%8E%E6%88%98%E5%86%B2%E5%87%BB%E7%9A%84%E4%B8%A4%E5%91%A8-%E5%8F%91%E7%83%AD-%E6%80%A5%E8%AF%8A%E6%89%BF%E5%8E%8B-%E9%87%8D%E7%97%87%E9%AB%98%E5%B3%B0%E5%B0%86%E8%87%B3-bafybeidgrsen3laakvcx3xrr2lqbb6wkjanqyhrmev25qfofnq4zkbeszi">轉載#28| 北京迎战冲击的两周：发热、急诊承压，重症高峰将至</a>
+——</p>
+
+<div>
+  <h1 id="section">北京迎战冲击的两周：发热、急诊承压，重症高峰将至</h1>
+  <p>自12月7日“新十条”标志性地取消核酸检测，两周来新冠感染如海啸般席卷北京——这里成为国内第一个与大规模感染正面交手的超大“战场”。</p>
+  <p><br /></p>
+  <p>疾控人士透露，可能早在11月初，此轮疫情高峰已奔袭北京。12月7日防控政策的放开，延续并进一步放大了感染的速度和规模。</p>
+  <p><br /></p>
+  <p>即便是高据中国医疗资源之最的北京，从急救到发热门诊，从急诊到院感，两周来一直传递着吃紧的信号：</p>
+  <p><br /></p>
+  <p>12月9日那天，北京市120急救电话遇到了历史最高呼入量——一天3.1万次，是平常的6倍；</p>
+  <p><br /></p>
+  <p>三甲医院的发热门诊里，上午排队有500个号；</p>
+  <p><br /></p>
+  <p>急诊科医生在阳性发病期间，依然穿梭在深夜的急诊科里，处理那些远比平日危急的患者，“以前来的急诊的患者，还有些轻的，现在来的大多数都是老年人和病重的，有的血氧都掉下来了”；</p>
+  <p><br /></p>
+  <p>一周前感染倒下的一批医护正在快速回到岗位，但医护依旧不足，多家医院发出号召，动员返聘、退休医务人员重回医疗救治一线；外地医护已相继进京支援……</p>
+  <p><br /></p>
+  <p>新防控政策导致短期内难以准确统计感染数据和死亡数据，但有疾控、医院的一线人士判断，此轮感染高峰或许已经过去，体现为全市120呼入量已从峰值滑落，部分医院的发热门诊拥挤程度稍有缓解，民众恐慌情绪亦渐次平息……</p>
+  <p><br /></p>
+  <p>感染高峰只是前奏，重症高峰才是下一步真正的考验。就在12月的第三个周末，一批北京呼吸危重症专业的专家聚在一起开会，并达成了共识，认可重症高峰的苗头已经显现并且即将到来，各家医疗机构开始积极准备应对。</p>
+  <p><br /></p>
+  <p>12月19日，北京市新闻发布会上提到，北京医疗资源正处在“紧平衡”中。经过一段时间来的紧张调度、艰苦工作，群众就医用药需求保障虽整体吃紧，但已出现趋稳向好明显态势。</p>
+  <p><br /></p>
+  <p>按照国际经验，超大城市从正面受袭到度过感染高峰，往往需要2到3个月的时间。此次北京的半月过峰是无经验可参的全新情形。未来会否有新一轮感染高峰？“紧平衡”的弦会绷多久？一切仍有待观察和应对。</p>
+  <p><br /></p>
+  <p>而作为全国第一个迎接疫情冲击的超大城市，北京此番能否顺利“过峰”，将为未来陆续卷入疫情高峰的众多城市和广大民众所关注。</p>
+  <p><br /></p>
+  <p><strong>不乐观的急救体系和发热门诊</strong></p>
+  <p><br /></p>
+  <p>在12月19日的北京市新闻发布会上，北京市政府新闻发言人徐和建强调，救死扶伤是医疗机构的天职，任何情况下对待患者都不得拒运、不得拒诊、不得拒救。</p>
+  <p><br /></p>
+  <p>伴随着海啸般的感染狂潮，在12月的北京，这个要求虽天经地义，但也无比严格和困难。</p>
+  <p><br /></p>
+  <p>12月9日，北京市120急救电话达到历史最高呼入量的3.1万次之后，到12月16日，每日接听量虽有所下降，但仍有2.3万次。</p>
+  <p><br /></p>
+  <p>北京急救中心数据信息科主任张进军在接受央广网采访时表示，急救人员也受疫情影响，急救车出车能力不比以往。</p>
+  <p><br /></p>
+  <p>“只能鞠躬尽瘁，只能咬牙坚持。”困境之下，一位北京急救系统的工作人员向八点健闻欲言又止。</p>
+  <p><br /></p>
+  <p>急救运力的紧张，也直接传导到了市民那里。</p>
+  <p><br /></p>
+  <p>这周，北京市民张斌（化名）就经历了一次急救车“苦等不来”。</p>
+  <p><br /></p>
+  <p>12月19日凌晨1点左右，张斌感染阳性后高烧不退，感觉肺部喘不过气来。拨打了120急救后，告知需要排队等待，结果等待近10个小时，120回电说，“由于运力不足，无法派遣救护车。”</p>
+  <p><br /></p>
+  <p>在等待急救车的10个小时里，张斌和妻子没敢一直在家里坐等救援，而是自行前往了一家三甲医院的发热门诊。如此折腾了12个小时，在第二天下午，张斌终于在人头攒动的发热门诊里确诊了肺炎，需要吸氧、打点滴。</p>
+  <p><br /></p>
+  <p>急救运力不足的压力，也间接引起了养老院的焦虑。最近，北京的一些养老院发现，120救护车的服务时效不再稳定。</p>
+  <p><br /></p>
+  <p>一位北京市望京地区的养老院院长向八点健闻回忆，此前拨打120后，救护车会在5分钟之内派出，总的等待时间都不会很久。但最近随着感染冲击的到来，社会面对120的需求暴涨，现在拨打120后常常需要等待很长时间，才能有车前来接走老人，“有时也会准时，但现在都说不准了。”</p>
+  <p><br /></p>
+  <p>也有老人的确因急救不到而离世。有知情人士告诉八点健闻，北京某家高校一位80岁的老教授，因感染新冠病毒，高烧多日不退，引发脏器衰竭。当日120救护车迟迟未到，抢救时已回天乏术，于近日凌晨2时30分左右逝世。</p>
+  <p><br /></p>
+  <p>八点健闻注意到，由于全城急救需求过载，北京市西城区、海淀区、门头沟区在近日都加开了专线电话，为急危重症患者提供救助服务。</p>
+  <p><br /></p>
+  <p><strong>急诊在高位焦灼</strong></p>
+  <p><br /></p>
+  <p>与急救体系紧密关联的医院急诊科，情况也正在焦灼的高位，几周来未见缓解。</p>
+  <p><br /></p>
+  <p>“这两周，急诊已经爆仓了。”北京一家三级医院的医生向八点健闻感叹。</p>
+  <p><br /></p>
+  <p>北京一家三甲医院急诊科医生王冠（化名）表示，跟日常相比，最近急诊科的人流量暴涨，能达到过去的2~3倍，尤其是发热咳嗽的病人，以及由于发热和咳嗽、把基础病带起来的老年人。</p>
+  <p><br /></p>
+  <p>“不仅人多了，病人的病情也重了。”王冠说，在以往，急诊科就诊的患者处理相对比较简单，“做个检查就可以回家的比较多，1个患者3、5分钟就解决了。”</p>
+  <p><br /></p>
+  <p>而最近两周，急诊科的里就诊的人症状严重，动辄需要吸氧和挂点滴。“现在来的患者基本情况都不太好，有的甚至血氧都掉下来了，一处理要一晚上。”医护需要处理的事情变多、变重，急诊里更忙碌了。</p>
+  <p><br /></p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/d77dc252-e191-49b3-a789-57d6c5b9f3cc.jpeg" data-asset-id="d77dc252-e191-49b3-a789-57d6c5b9f3cc" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+  <p>△ 12月19日晚11点左右，北京某三甲医院急诊科。摄影：严雨程。</p>
+  <p><br /></p>
+  <p>在朝阳区，另一家三甲医院急诊科的深夜，座位被坐得严严实实，走廊和过道上铺满了折叠床，躺着男女老幼各式各样的病人。</p>
+  <p><br /></p>
+  <p>一位头发雪白的老人裹得严严实实，嘴上戴着氧气罩，呼出的水蒸气把氧气罩覆盖上氤氲、白茫茫一片。他垂着头倚坐在一张小小的木头椅子上，氧气罐就近摆放在座位旁边。</p>
+  <p><br /></p>
+  <p>北京12月隆冬的深夜里，像他这样的患者还有好几位，大家都一样的虚弱而沉默。</p>
+  <p><br /></p>
+  <p>深夜11点多，急诊科墙上的电子屏显示已经叫到了100余号，分诊台负责挂号的医护人员明显有些烦躁，她语速极快地对一个个挂号的患者家属解释，“如果（患者）症状比较稳定的话，现在挂号可能要等6~7个小时才能看上。”</p>
+  <p><br /></p>
+  <p>在不少医院的急诊科，弥漫着一种烦闷和焦躁的不稳定感。</p>
+  <p><br /></p>
+  <p>感染过的医护人员浑身不适，嗓子也又哑又痛，还是不得不大声呼喊着患者的姓名，叮嘱需要服用的药物和注意事项。本就不够高亢的声音，经过N95口罩、呼吸面屏的双重阻隔，再传到患者的耳朵里，音量再次降低。不少患者年事已高又身体虚弱，经常听不清。“你说什么？”“我听不见！”的反问重复上演。</p>
+  <p><br /></p>
+  <p>所有人就这样在急诊这个小小的科室里，呼来喊去，引得更多人心情烦躁。</p>
+  <p><br /></p>
+  <p>一位医生发着烧，出着门诊，还不得不自己背着清洁桶打扫诊室。当有人问他时，他无奈地说，“保洁员？这都什么时候了，保洁员也病了，没人给你打扫卫生。”</p>
+  <p><br /></p>
+  <p>12月19日，在北京市新冠疫情防控工作新闻发布会上，市政府新闻发言人徐和建介绍，当前，北京市疫情快速发展、发烧感染者数量持续高位增加，对全市药品供应保障、医疗救治资源带来的压力持续加大。</p>
+  <p><br /></p>
+  <p>北京是放开后迎接新冠疫情冲击的第一个超大城市，但由于已经不再上报无症状感染者数据，感染者自查阳性也不用强制报告，所以目前北京处于大规模感染的哪个阶段，多名流行病学家和公卫人士均向八点健闻表示难以判断。</p>
+  <p><br /></p>
+  <p>不过，流行病学专家的共识是，粗略估计，第一波感染高峰可能已经过去了。</p>
+  <p><br /></p>
+  <p>八点健闻近日走访发现，目前部分公立医院的发热门诊已不再“紧俏”，相比放开后一到两周看病需要大排长龙的局面已经缓和了不少，居民对于感染后的恐慌情绪也松弛了一些。</p>
+  <p><br /></p>
+  <p>一位中疾控人士向八点健闻表示，或许早在11月初，北京疫情就已经面临失控的局面，放开进一步助长了感染的速度和规模。</p>
+  <p><br /></p>
+  <p>但是需要强调的是，不能因为所谓的第一波感染高峰已经过去就放松警惕和防护，感染者仍会持续增加，感染者的实际数量仍会持续处于高位。</p>
+  <p><br /></p>
+  <p><strong>医护人员持续苦撑</strong></p>
+  <p><br /></p>
+  <p>多位医护人员告诉八点健闻，这一波北京在放开之前，很多医护人员没有收到任何通知。</p>
+  <p><br /></p>
+  <p>急诊科医生王冠告诉八点健闻，医院此前完全不知道要“放开”，也没有做任何预先部署，还一直在严格遵循三天两检等要求，直到“新十条”等规定忽然出台，核酸阴性准入等防控措施被要求不再执行，大家措手不及。</p>
+  <p><br /></p>
+  <p>后来在不到一周之间，放开的社会面像是撕开了一道口子，如同海啸一般，巨量的患者涌入急诊、发热门诊，医护只能兵来将挡、水来土屯。</p>
+  <p><br /></p>
+  <p>王冠所在急诊科原有将近200名医护，刨除阳性休息的、外派支援的，现在只剩1/3-1/2人员在一线，“只能不断倒班”。王冠上周也阳了，但他没休息，“那天没人替我的班，我想着自己多注意着点，能多撑一会是一会，虽然这样有点危险”。</p>
+  <p><br /></p>
+  <p>就在这周，为了应对人手不足，王冠和同事进行了新医生的面试、招聘。</p>
+  <p><br /></p>
+  <p>“医护不够，急诊或者和发热都缺人，医生也倒下了，没办法。”这家三甲医院急诊科已经多年没招人，这次准备招的医生，计划长期使用。</p>
+  <p><br /></p>
+  <p>上个礼拜，北京一家三级医院举全院医护之力，支撑急诊和发热门诊。</p>
+  <p><br /></p>
+  <p>“急诊的护士原本已经全部阳了一遍，但因为部分人员没休息够、没养好，带病上岗后又出现了病情的加重，所以医院不断增派医护支援急诊和发热门诊，以保证24小时不停诊。”一位内部人士透露说。</p>
+  <p><br /></p>
+  <p>情况糟糕的是，由于急诊节奏快、情况偏危重、工作量又繁重，不是所有支援人手的体力都能跟得上。跟不上的，很快容易感染新冠病毒，于是出现了“支援一批就倒下一批”的现状。</p>
+  <p><br /></p>
+  <p>这样下去不是长久之计，疫情海啸引发的医疗资源紧张，暂时也还看不到尽头。</p>
+  <p><br /></p>
+  <p>有医院采取暂时合并科室、病区的办法“自救”，把病人数、护士数、医生数都较少的科室合并在一起，“坚持住这段时间就好，我们预计到了1月份，医院的护士基本可以做到全部到位”。</p>
+  <p><br /></p>
+  <p>还有多家医院号召，轻症或无症状医护带病上岗，同时动员、返聘退休医务人员重新回到医疗救治一线。</p>
+  <p><br /></p>
+  <p>不过，据八点健闻了解，目前北京很多医院尚未新增返岗的退休人员。“别说返聘新的退休人员，我们医院之前返聘回来出门诊的医生，最近都不来了，说是儿子不让他干了，”上述内部人士说，“他快70了，加上多多少少有些基础病，就算自己不担心，孩子也担心。”</p>
+  <p><br /></p>
+  <p>不过也有一些好消息。</p>
+  <p><br /></p>
+  <p>进入12月的倒数第2个礼拜以来，一些医院医护人手短缺的高峰已经过去。比如北京美中爱瑞肿瘤医院，由于早期的防疫抓得比较紧，实现了医护人员的错峰感染，目前医护到岗率回到了85%左右。</p>
+  <p><br /></p>
+  <p>北京一家三级医院的医生也告诉八点健闻，他们医院有1300人，大家感染和回到岗位的速度都比较快，从这周一（12月19日）开始，“感觉最灰暗的时期已经扛过去了”。</p>
+  <p><br /></p>
+  <p>但对于人数在几千人上下的大三甲医院来说，人手紧缺的难题可能还会存续一阵。</p>
+  <p><br /></p>
+  <p>好在，北京的方舱医院也在陆续关闭，此前从各医院抽调进方舱、定点医院的医护在陆续返回原工作岗位。也有外省的重症医疗队在陆续驰援北京。</p>
+  <p><br /></p>
+  <p>据八点健闻多方核实，目前至少已有山东、湖南、江苏3地派医护支援北京，人数不下千人。</p>
+  <p><br /></p>
+  <p><strong>在未来，迎接重症高峰</strong></p>
+  <p><br /></p>
+  <p>感染高峰只是前奏，重症高峰或许才是下一步真正的考验，将随后而至。</p>
+  <p><br /></p>
+  <p>八点健闻了解到，在12月的第三个周末，一批北京呼吸危重症专业的专家，认可重症高峰的苗头已经显现并且即将到来，各家医疗机构开始积极准备应对。</p>
+  <p><br /></p>
+  <p>目前北京部分区政府已经开始在本区有实力的医疗机构里建立“新冠普通病房”和“新冠重症病房”，后者用于收治新冠重症病例，前者主要用于接收那些病情相对稳定、尚不需要使用有创机械通气的新冠肺炎患者，“区里让医院尽可能提要求，要药、器械，什么都行”。</p>
+  <p><br /></p>
+  <p>12月19日，北京大学第一医院呼吸和危重症医学科主任王广发接受“医学界”采访时表示，新冠病毒感染不会一来就是重症，而是在感染5-7天后出现重症，所以重症的高峰会比感染高峰晚。综合分析，未来1~2周将会迎来重症的高峰。</p>
+  <p> </p>
+  <p>此前广州疫情暴发时，在海珠区出现大量感染的情况下，官方发布消息称危重症患者数量只有不到十人。这种现象为人们宽了心，似乎奥秘克戎变异株的确温和了不少，“放开“也是有据可循。</p>
+  <p> </p>
+  <p>然而，在寒冷的北方，北京的新冠定点医院们为“放开”迅速做起了准备，一家定点医院为了收治患者甚至腾空了一整栋楼，而这栋楼也已经迅速住满了人。</p>
+  <p><br /></p>
+  <p>一家北京公立医院呼吸与危重症科的医务人员表示，从上周开始，科室已经在陆续接收新冠感染患者，目前已经占据了病区人数的一半以上。不过这些都是新冠普通患者，根据近期的发病态，新冠感染的重症病例会逐渐增多。</p>
+  <p><br /></p>
+  <p>12月20日，在国务院联防联控机制新闻发布会上，北京大学第一医院感染疾病科主任王贵强表示，为了科学、实事求是反映新冠疫情造成的死亡情况，（国家）卫健委最近组织专家进行了论证，印发了相应的通知，明确对相关死亡病例进行判断。</p>
+  <p><br /></p>
+  <p>主要是两个方面，由于新冠病毒导致的肺炎，呼吸衰竭导致的死亡归类为新冠病毒感染导致的死亡，以其他疾病，基础病，比如心脑血管疾病，心梗等疾病导致的死亡不把它归类为新冠导致的死亡。</p>
+  <p><br /></p>
+  <p>疫情三年，这是极为罕见的公开对新冠感染导致死亡的标准进行明确。疫情发生以来，对于感染者的死因的判断一直都是模糊地带，对于die with和die of的争论也曾甚嚣尘上。</p>
+  <p><br /></p>
+  <p>这样的标准，或将从新冠感染死亡数据中，排除掉大量因基础疾病而死，却感染了新冠病毒的人群。</p>
+  <p><br /></p>
+  <p>一名中疾控人士表示，此举虽然可能会让新冠感染死亡数据大大降低，但却并不能改变新冠感染后因种种原因导致基础疾病恶化，高龄和有基础疾病的感染者继续扎堆急诊、重症等科室的事实，医疗挤兑的现象也不会因此发生改变。</p>
+  <p><br /></p>
+  <p>铁索连环，牵一发而动全身。该名中疾控人士表示，希望民众尤其是脆弱人群能够继续提高警惕和做好防护，积极接种疫苗。而感染过的北京居民应该也有深切体会，其症状和表现并不似一场小感冒般“人畜无害”。</p>
+  <p><br /></p>
+  <p>北京作为医疗资源最丰富的城市，应对重症高峰仍需要这样紧锣密鼓的准备，其他城市又该如何？</p>
+  <p><br /></p>
+  <p>“盲目乐观不可取，应对感染冲击，并且为整个社会兜底的，仍然是医疗系统。”</p>
+  <p><br /></p>
+  <p>（汪雨卉对本文亦有贡献。）</p>
+  <p><br /></p>
+  <p>严雨程丨撰稿 微信号：March_YYC</p>
+  <p>田为｜撰稿 微信号：sweet-wii</p>
+  <p>李琳丨撰稿 微信号：lilin5117</p>
+  <p>李琳｜责编 微信号：lilin5117</p>
+  <p><br /></p>
+  <p> </p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/dc908810-ad1b-4340-be4b-cbe30feee987.jpeg" data-asset-id="dc908810-ad1b-4340-be4b-cbe30feee987" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2022-12-29</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-12-29/%E8%AA%B0%E7%9A%84%E5%85%AB-%E8%AA%B0%E7%9A%84%E5%85%A9%E7%99%BE%E5%B9%B4-%E8%A9%95%E8%AB%96%E5%B0%8D%E4%B8%80%E6%AA%94%E5%B1%95%E8%A6%BD%E8%88%87%E4%B8%80%E5%A5%97%E6%9B%B8%E7%9A%84%E8%A9%95%E8%AB%96/">
+          誰的八〇，誰的兩百年：評論對一檔展覽與一套書的評論
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-12-22</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-12-22/%E6%97%A5%E6%9C%AC%E5%9C%8B%E7%AB%8B%E5%9C%8B%E6%9C%83%E5%9C%96%E6%9B%B8%E9%A4%A8%E5%85%B8%E8%97%8F%E7%9A%84%E9%A1%8F%E6%B0%B4%E9%BE%8D%E8%A3%9D%E5%B9%80%E6%9B%B8%E7%B1%8D/">
+          日本國立國會圖書館典藏的顏水龍裝幀書籍
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-12-17</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-12-17/2022-%E9%96%B1%E8%AE%80%E7%AF%80%E9%81%B8/">
+          2022 閱讀節選
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-12-13</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-12-13/%E9%A6%99%E6%B8%AF%E4%BA%BA%E5%BF%85%E9%A0%88%E8%A6%81%E7%9F%A5%E7%9A%84%E6%AD%B7%E5%8F%B2-%E9%81%A0%E6%9D%B1%E8%B6%B3%E7%90%83%E7%8E%8B%E5%9C%8B-%E9%A6%99%E6%B8%AF%E8%B6%B3%E7%90%83%E5%8F%B2-%E9%A6%99%E6%B8%AF%E8%B6%B3%E7%90%83%E6%9C%83-%E5%8D%97%E8%8F%AF%E9%AB%94%E8%82%B2%E6%9C%83-%E9%81%A0%E6%9D%B1%E9%81%8B%E5%8B%95%E6%9C%83-%E8%B6%B3%E7%90%83%E8%81%B7%E6%A5%AD%E5%8C%96-%E8%BA%AB/">
+          【香港人必須要知的歷史】遠東足球王國：香港足球史｜香港足球會｜南華體育會｜遠東運動會｜足球職業化｜身份認同｜ 凝聚力
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2022-12-21/%E9%87%8D%E5%95%93%E6%88%BF%E5%9C%B0%E7%94%A2%E6%94%AF%E6%9F%B1%E7%94%A2%E6%A5%AD-%E7%97%85%E6%80%A5%E4%BA%82%E6%8A%95%E9%86%AB-%E9%99%B3%E5%B9%B3%E6%9C%89%E8%A9%B1%E8%AA%AA20221221/">
+            前一篇：重啓房地產支柱產業 病急亂投醫！【陳平有話說20221221】
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2022-12-22/%E6%97%A5%E6%9C%AC%E5%9C%8B%E7%AB%8B%E5%9C%8B%E6%9C%83%E5%9C%96%E6%9B%B8%E9%A4%A8%E5%85%B8%E8%97%8F%E7%9A%84%E9%A1%8F%E6%B0%B4%E9%BE%8D%E8%A3%9D%E5%B9%80%E6%9B%B8%E7%B1%8D/">
+            後一篇：日本國立國會圖書館典藏的顏水龍裝幀書籍
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2022-12-21/%E9%87%8D%E5%95%93%E6%88%BF%E5%9C%B0%E7%94%A2%E6%94%AF%E6%9F%B1%E7%94%A2%E6%A5%AD-%E7%97%85%E6%80%A5%E4%BA%82%E6%8A%95%E9%86%AB-%E9%99%B3%E5%B9%B3%E6%9C%89%E8%A9%B1%E8%AA%AA20221221/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2022-12-22/%E6%97%A5%E6%9C%AC%E5%9C%8B%E7%AB%8B%E5%9C%8B%E6%9C%83%E5%9C%96%E6%9B%B8%E9%A4%A8%E5%85%B8%E8%97%8F%E7%9A%84%E9%A1%8F%E6%B0%B4%E9%BE%8D%E8%A3%9D%E5%B9%80%E6%9B%B8%E7%B1%8D/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2022-12-22/%E6%97%A5%E6%9C%AC%E5%9C%8B%E7%AB%8B%E5%9C%8B%E6%9C%83%E5%9C%96%E6%9B%B8%E9%A4%A8%E5%85%B8%E8%97%8F%E7%9A%84%E9%A1%8F%E6%B0%B4%E9%BE%8D%E8%A3%9D%E5%B9%80%E6%9B%B8%E7%B1%8D/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2022-12-17/2022-%E9%96%B1%E8%AE%80%E7%AF%80%E9%81%B8/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2022-12-21/%E9%87%8D%E5%95%93%E6%88%BF%E5%9C%B0%E7%94%A2%E6%94%AF%E6%9F%B1%E7%94%A2%E6%A5%AD-%E7%97%85%E6%80%A5%E4%BA%82%E6%8A%95%E9%86%AB-%E9%99%B3%E5%B9%B3%E6%9C%89%E8%A9%B1%E8%AA%AA20221221/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2022-12-22/%E6%97%A5%E6%9C%AC%E5%9C%8B%E7%AB%8B%E5%9C%8B%E6%9C%83%E5%9C%96%E6%9B%B8%E9%A4%A8%E5%85%B8%E8%97%8F%E7%9A%84%E9%A1%8F%E6%B0%B4%E9%BE%8D%E8%A3%9D%E5%B9%80%E6%9B%B8%E7%B1%8D/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2022-12-22/%E6%97%A5%E6%9C%AC%E5%9C%8B%E7%AB%8B%E5%9C%8B%E6%9C%83%E5%9C%96%E6%9B%B8%E9%A4%A8%E5%85%B8%E8%97%8F%E7%9A%84%E9%A1%8F%E6%B0%B4%E9%BE%8D%E8%A3%9D%E5%B9%80%E6%9B%B8%E7%B1%8D/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2022-12-17/2022-%E9%96%B1%E8%AE%80%E7%AF%80%E9%81%B8/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

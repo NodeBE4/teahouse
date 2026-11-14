@@ -1,0 +1,3523 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>岛崎藤村·日本现代抒情诗的先驱 – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+岛崎藤村·日本现代抒情诗的先驱
+——
+" />
+    <meta property="og:description" content="
+岛崎藤村·日本现代抒情诗的先驱
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="岛崎藤村·日本现代抒情诗的先驱" />
+    <meta property="twitter:title" content="岛崎藤村·日本现代抒情诗的先驱" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40tsugaru_strait%2F%25E5%25B2%259B%25E5%25B4%258E%25E8%2597%25A4%25E6%259D%2591-%25E6%2597%25A5%25E6%259C%25AC%25E7%258E%25B0%25E4%25BB%25A3%25E6%258A%2592%25E6%2583%2585%25E8%25AF%2597%25E7%259A%2584%25E5%2585%2588%25E9%25A9%25B1-bafyreia3yhw2r3xrrqwdfojhd6adtoqcmyxguotys5hfseaikhqyu5psxm" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@tsugaru_strait/%E5%B2%9B%E5%B4%8E%E8%97%A4%E6%9D%91-%E6%97%A5%E6%9C%AC%E7%8E%B0%E4%BB%A3%E6%8A%92%E6%83%85%E8%AF%97%E7%9A%84%E5%85%88%E9%A9%B1-bafyreia3yhw2r3xrrqwdfojhd6adtoqcmyxguotys5hfseaikhqyu5psxm" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@tsugaru_strait/%E5%B2%9B%E5%B4%8E%E8%97%A4%E6%9D%91-%E6%97%A5%E6%9C%AC%E7%8E%B0%E4%BB%A3%E6%8A%92%E6%83%85%E8%AF%97%E7%9A%84%E5%85%88%E9%A9%B1-bafyreia3yhw2r3xrrqwdfojhd6adtoqcmyxguotys5hfseaikhqyu5psxm&text=岛崎藤村·日本现代抒情诗的先驱&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@tsugaru_strait/%E5%B2%9B%E5%B4%8E%E8%97%A4%E6%9D%91-%E6%97%A5%E6%9C%AC%E7%8E%B0%E4%BB%A3%E6%8A%92%E6%83%85%E8%AF%97%E7%9A%84%E5%85%88%E9%A9%B1-bafyreia3yhw2r3xrrqwdfojhd6adtoqcmyxguotys5hfseaikhqyu5psxm&title=岛崎藤村·日本现代抒情诗的先驱" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@tsugaru_strait/%E5%B2%9B%E5%B4%8E%E8%97%A4%E6%9D%91-%E6%97%A5%E6%9C%AC%E7%8E%B0%E4%BB%A3%E6%8A%92%E6%83%85%E8%AF%97%E7%9A%84%E5%85%88%E9%A9%B1-bafyreia3yhw2r3xrrqwdfojhd6adtoqcmyxguotys5hfseaikhqyu5psxm&title=岛崎藤村·日本现代抒情诗的先驱" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=岛崎藤村·日本现代抒情诗的先驱&body=
+岛崎藤村·日本现代抒情诗的先驱
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@tsugaru_strait/%E5%B2%9B%E5%B4%8E%E8%97%A4%E6%9D%91-%E6%97%A5%E6%9C%AC%E7%8E%B0%E4%BB%A3%E6%8A%92%E6%83%85%E8%AF%97%E7%9A%84%E5%85%88%E9%A9%B1-bafyreia3yhw2r3xrrqwdfojhd6adtoqcmyxguotys5hfseaikhqyu5psxm" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@tsugaru_strait/%E5%B2%9B%E5%B4%8E%E8%97%A4%E6%9D%91-%E6%97%A5%E6%9C%AC%E7%8E%B0%E4%BB%A3%E6%8A%92%E6%83%85%E8%AF%97%E7%9A%84%E5%85%88%E9%A9%B1-bafyreia3yhw2r3xrrqwdfojhd6adtoqcmyxguotys5hfseaikhqyu5psxm&title=岛崎藤村·日本现代抒情诗的先驱&caption=
+岛崎藤村·日本现代抒情诗的先驱
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=岛崎藤村·日本现代抒情诗的先驱&url=https://matters.news/@tsugaru_strait/%E5%B2%9B%E5%B4%8E%E8%97%A4%E6%9D%91-%E6%97%A5%E6%9C%AC%E7%8E%B0%E4%BB%A3%E6%8A%92%E6%83%85%E8%AF%97%E7%9A%84%E5%85%88%E9%A9%B1-bafyreia3yhw2r3xrrqwdfojhd6adtoqcmyxguotys5hfseaikhqyu5psxm" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>岛崎藤村·日本现代抒情诗的先驱</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-03-08
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 津轻海峡</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@tsugaru_strait/%E5%B2%9B%E5%B4%8E%E8%97%A4%E6%9D%91-%E6%97%A5%E6%9C%AC%E7%8E%B0%E4%BB%A3%E6%8A%92%E6%83%85%E8%AF%97%E7%9A%84%E5%85%88%E9%A9%B1-bafyreia3yhw2r3xrrqwdfojhd6adtoqcmyxguotys5hfseaikhqyu5psxm" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1646743730000-->
+<p><a href="https://matters.news/@tsugaru_strait/%E5%B2%9B%E5%B4%8E%E8%97%A4%E6%9D%91-%E6%97%A5%E6%9C%AC%E7%8E%B0%E4%BB%A3%E6%8A%92%E6%83%85%E8%AF%97%E7%9A%84%E5%85%88%E9%A9%B1-bafyreia3yhw2r3xrrqwdfojhd6adtoqcmyxguotys5hfseaikhqyu5psxm">岛崎藤村·日本现代抒情诗的先驱</a>
+——</p>
+
+<div>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/66c6f4eb-c852-4a31-896e-1086b03b0c48.jpeg" data-asset-id="66c6f4eb-c852-4a31-896e-1086b03b0c48" referrerpolicy="no-referrer" />    <figcaption>
+<span>島崎藤村（1872 - 1943）</span>
+    </figcaption>
+  </figure>
+  <p>看一个诗人是不是真正的好手，一个最简单的测试方式就是看他写的诗是否能跨越时代打动人心，撩拨读者的心弦，其诗歌语言和意象是否跨越时代还能保鲜。</p>
+  <p>毫无疑问，日本十九世纪末、二十世纪初的浪漫派诗人岛崎藤村（Shimazaki Tōson，1872 - 1943）可以轻松愉快地通过这样的测试。收入1897年发表的诗集《嫩菜集》（若菜集 / wakana shū）中的情诗短诗 “初恋” 就是一个很好的例子。</p>
+  <p>以下是 “初恋” （hatsu koi）的原文和我的尽力紧贴原文的翻译。我相信尽力紧贴原文的翻译能让不懂日语的读者也可以感觉到原文跨时代的生猛新鲜：</p>
+  <blockquote>
+まだあげ初めし前髮の  </blockquote>
+  <blockquote>
+林檎のもとに見えしとき  </blockquote>
+  <blockquote>
+前にさしたる花櫛の  </blockquote>
+  <blockquote>
+花ある君と思ひけり  </blockquote>
+  <blockquote>
+你刚梳起的前额的头发  </blockquote>
+  <blockquote>
+出现在那棵苹果树下  </blockquote>
+  <blockquote>
+插在前头的花梳  </blockquote>
+  <blockquote>
+让我觉得你那里是花  </blockquote>
+  <blockquote>
+やさしく白き手をのべて  </blockquote>
+  <blockquote>
+林檎をわれにあたへしは  </blockquote>
+  <blockquote>
+薄紅の秋の實に  </blockquote>
+  <blockquote>
+人こひ初めしはじめなり  </blockquote>
+  <blockquote>
+你温柔地伸出白皙的手  </blockquote>
+  <blockquote>
+递给我一个苹果  </blockquote>
+  <blockquote>
+在这淡红的秋天果实里  </blockquote>
+  <blockquote>
+我的恋情初次萌发  </blockquote>
+  <blockquote>
+わがこゝろなきためいきの  </blockquote>
+  <blockquote>
+その髮の毛にかゝるとき  </blockquote>
+  <blockquote>
+たのしき恋の盃を  </blockquote>
+  <blockquote>
+君が情に酌みしかな  </blockquote>
+  <blockquote>
+无意中发出叹息  </blockquote>
+  <blockquote>
+吹到了你的发丝  </blockquote>
+  <blockquote>
+在欢欣爱恋的酒杯里  </blockquote>
+  <blockquote>
+我品酌了你的情意  </blockquote>
+  <blockquote>
+林檎畑の樹の下に  </blockquote>
+  <blockquote>
+おのづからなる細道は  </blockquote>
+  <blockquote>
+誰たが踏みそめしかたみぞと  </blockquote>
+  <blockquote>
+問ひたまふこそうれしけれ  </blockquote>
+  <blockquote>
+在苹果园的树下  </blockquote>
+  <blockquote>
+兀自有一条小径  </blockquote>
+  <blockquote>
+这是谁踏出来的吆  </blockquote>
+  <blockquote>
+你问得可真欢乐  </blockquote>
+  <p>***</p>
+  <p>日本现代文学、新文学随着日本明治维新而兴起。岛崎藤村作为日本诗歌新时代的开创者之一可谓生逢其时。</p>
+  <p>在那个时期，日本有上千年历史的传统诗歌（和歌）已是强弩之末，充斥着了无新意的陈词滥调。岛崎藤村的原创诗歌跟夏目漱石在东京帝国大学的同事上田敏翻译的西方诗歌一道给诗坛带来了新的语言，新的意象，实际上是给日本诗歌开辟了一片新天地，尽管岛崎藤村和上田敏使用的诗歌语言还常常不是纯粹的口语而是浅显的文言。</p>
+  <p> “初恋” 这首情诗所使用的就是这种文言。但这首诗所呈现的意象至今新鲜可喜——一对情窦初开的农村少男少女，有一天在往日约会的一棵苹果树下再相会；约会地点没变，苹果树没变，但少女的发型变了，原先是少女的散发，现在额头的发挽起向后梳，像成年女子那样了；少女发型的变化让少年感觉异样，心情因此而迷乱，一时不知说什么是好。</p>
+  <p>此时此刻，“无意中发出叹息 / 吹动了你的发丝”，这两行诗句看似极端写实，但可以说是货真价实的神来之笔。它们既是活灵活现的电影画面，也是丝丝入扣的心理动态的外在表现，活脱脱地展示了少年实时的感觉，展示了他在空间距离和心理距离上跟少女的贴近。</p>
+  <p>需要注意的是，基本的情理和常识告诉我们，日语虽然没有可以表示特指的定冠词，但这里所说的苹果树必须是一棵特指的而不是任意一棵苹果树。因此我这里的翻译是 “那棵苹果树”。试想在十九世纪末，手机还要过一百年才会出现、人们那时还不能进行实时的联络，因此约会必须是事先讲好具体的位置，具体的地标。此外，这首诗最后一节所说的 “小径” 也必定是通向那一棵特定的苹果树才有意义。</p>
+  <p>这首诗的说话人 “我” 是一个青涩少年，刚刚有了自觉的男女爱恋的意识。相对而言，“我” 所呈现的对方少女则更成熟，因此更主动。从她一开始伸手递送苹果给 “我” ，到后来调皮地问 “我” 果园中那条通向那棵苹果树的小径是谁踏出来的， 问得 “我” 心醉心痒， 这首16行的短诗就这样呈现了初恋的青春少年之间的微妙互动。</p>
+  <p>这种描绘少男少女微妙的肢体、语言和心理互动的妙笔正是二十世纪上半叶英语世界著名诗人和批评家托·斯·艾略特（T.S. Eliot）所推崇的 “将思想转换为感觉，将一种观察转化为一种心态”（transmuting ideas into sensations, ... transforming an observation into a state of mind ）。</p>
+  <p>可以说，“初恋”这首诗通篇都展示了这样的巧妙操作和手腕。</p>
+  <p>岛崎藤村所讴歌的那种互动转瞬即逝又可以回味恒久，犹如十九世纪上半叶著名的英国浪漫派诗人约翰·济慈（John Keats）的名诗 “希腊古瓮颂”（Ode on a Grecian Urn） 所讴歌的画在希腊古瓮上的青春少年的恋爱美景。</p>
+  <p>那些本来是转瞬即逝的古希腊青春少年恋爱的美景因为变成了古瓮上的图画，因此获得了永恒。岛崎藤村所讴歌的那对青春少年那些本来是转瞬即逝的美妙互动也因为变成了他的电影和绘画般的诗歌语言获得了永恒。</p>
+  <p>顺便说一句，岛崎藤村的英语非常好。他在写这首诗的时候很可能读过济慈的那首名诗，因此他的写作很可能有跟济慈一别苗头的意图。</p>
+  <p>***</p>
+  <p>“初恋”是日本现代文学史上的一首著名的抒情诗。如今中国绝大多数读者看到的中文翻译来自罗兴典：</p>
+  <blockquote>
+当初相遇苹果林，  </blockquote>
+  <blockquote>
+你才挽起少女的发型。  </blockquote>
+  <blockquote>
+前鬓插着如花的彩梳，  </blockquote>
+  <blockquote>
+映衬着你的娟娟玉容。  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+你脉脉地伸出白净的手，  </blockquote>
+  <blockquote>
+捧起苹果向我相赠。  </blockquote>
+  <blockquote>
+淡红秋实溢清香啊！  </blockquote>
+  <blockquote>
+正如你我的一片初衷。  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+我因痴情犹入梦境，  </blockquote>
+  <blockquote>
+一声叹息把你的青丝拂动。  </blockquote>
+  <blockquote>
+此时似饮合欢杯啊！  </blockquote>
+  <blockquote>
+杯中斟满了你的恋情。  </blockquote>
+  <blockquote>
+<br />  </blockquote>
+  <blockquote>
+苹果林中树荫下，  </blockquote>
+  <blockquote>
+何时有了弯弯的小径？  </blockquote>
+  <blockquote>
+心中“宝塔”谁踏基？  </blockquote>
+  <blockquote>
+耳边犹响着你的细语声声……   </blockquote>
+  <p>应当说，罗兴典的翻译是粗糙的甚至是粗劣的。这种翻译更多的是于原文无据的脑补和零敲碎打的创作而不是翻译。</p>
+  <p>以罗译的头两节为例。“当初相遇苹果林，/ 你才挽起少女的发型”，这种翻译在多个层面上把原文的意思给弄反了，弄乱了。原文在这里说的并不是他们 “当初相遇”，而是说少女初次梳起少年先前没见过的发型（あげ初めし前髮）。</p>
+  <p>再具体地说就是，有一天他们在通常约会的苹果树那里见面，少女头一次把额头的头发梳起来拢向后边，梳成成年女子的发型（即所谓的 “日本髪 / Nihongami”）。此外，这对少男少女也不是在 “苹果林里” 而是在 “那棵苹果树下” （林檎のもとに）。</p>
+  <p>“前鬓插着如花的彩梳，/ 映衬着你的娟娟玉容”，但这里的原文没有说 “如花的彩梳”，没有说 “映衬着”，也没有说 “你的娟娟玉容”，这都是罗译的不必要的创作和脑补。原文只是说 “插在前面的花梳让我想到有花的你（前にさしたる花櫛の / 花ある君と思ひけり）”。</p>
+  <p>显然，罗译不清楚原文的基本字面意思，对相关背景知识以及叙事脉络也不清楚，于是便用脑补来填空。在填空之外，他的翻译还包括随意的丢弃。如，原文第一节最后明明有 “...想到（...と思ひけり）”，但罗显然是因为没看懂这句话的脉络，因此不知道该在译文中任何处理它、安放它，于是就把它丢弃了。</p>
+  <p>稍微仔细一点读罗译的 “初恋” 可以看到这种于原文无据的脑补和丢弃随处可见。如，原文并没有说 “捧起苹果向我相赠”，而只是说 “伸手给了我一个苹果（...手をのべて / 林檎をわれにあたへしは）。</p>
+  <p>又，“捧起” 必须是两只手，但原文显然说的是一只手——想想也是，两个熟人在一个私人的、隐私的、亲昵的场合，其中一个向另一个示好，递给对方一只苹果，必定是伸出一只手来递，不会是两只手捧着递，因为毕竟不是什么正式的赠送仪式，要摆姿态给人照相留念。</p>
+  <p>再例如，原文并没有说 “淡红秋实溢清香啊！/ 正如你我的一片初衷”，而是说 “在这淡红的秋天果实里 / 我的（有了男女意识的）恋情初次萌发（薄紅の秋の實に / 人こひ初めしはじめなり）。</p>
+  <p>罗译的这种脑补加创作式的翻译跟原文相距甚远，甚至可以说是南辕北辙，或者说完全不搭界。例如，罗译的所谓 “初衷” ——两个人有了男女意识的恋情初次萌发跟两个人之间最初的共同追求目标即初衷根本就扯不到一起，两者完全不是一回事。</p>
+  <p>***</p>
+  <p>以上只是简短地讨论了罗译的头两节的问题。读这首著名情诗的日文原文的后两节或尽力忠实于原文的译文，还可以看出罗译的更多的明显脱离原文的脑补加创作式的翻译问题。</p>
+  <p>而且，由于在后两节里诗人的情景描写更加微妙，罗译的脑补加创作式的翻译问题也因此而更加明显和离谱，几乎进入完全脱离原文另起炉灶生编乱造的境界。</p>
+  <p>例如，罗译最后两行，“心中 ‘宝塔’ 谁踏基？/ 耳边犹响着你的细语声声…… ”，但原文这里只是说 “这（小径）是谁踏出来的吆？你问得让人真乐（誰たが踏みそめしかたみぞと / 問ひたまふこそうれしけれ）”，没有提心中，没有提宝塔，没有提踏基，没有提耳朵，没有提响着，没有提细语声声。所有这些词语都是罗译成问题的创作或脑补。</p>
+  <p>根据这样的严重脱离原文的翻译来赏析岛崎藤村的这首名诗，被误导便是必然。</p>
+  <p>公平地说，罗兴典当年在翻译这首诗的时候，或者是因为日语能力不济，或者是因为参考资料阙如，弄出上述的种种问题都是可以理解的，可以原谅的。</p>
+  <p>但从一个学习者和研究者的角度来说，罗译的很多问题是来自太粗心大意。例如，在这首诗里出现的 “苹果树下（林檎のもとに）”、“苹果园的树下（林檎畑の樹の下に），这里的原文理解起来对大学一年级的学生没有任何困难，但罗译却两次译错，一次错译为 “苹果林”，一次错译为 “苹果林中树荫下”。</p>
+  <p>（这里需要补充一句：粗心大意是翻译以及其他任何行业的常见病，多发病，善于挑别人粗心大意毛病的津轻海峡也不能免俗。这是翻译永远需要竭尽全力予以警惕的问题。但竭尽全力还是会有力所不逮的时候。）</p>
+  <p>鉴于这里不是深入细致讨论翻译的技术性细节的场所，本文就不一一评析罗译的问题了。</p>
+  <p>但愿意认真阅读的读者总是可以自己对照原文或尽力忠实于原文的译文看出罗译的明显问题。这样的对照阅读并不需要高技术或超高级的日语阅读能力，只是需要耐心和认真。</p>
+  <p>***</p>
+  <p>最后应当说，以上指出流行广泛的罗译的问题并予以讨论的主要目的并不是要展示先前的罗译多么成问题。假如我们阅读翻译的外国诗歌的目的仅仅是发现先前的翻译多么成问题，那就没有多少意义了——成问题的翻译车载斗量，数不胜数，过去有，现在有，将来还要有，何必在不好的译文上浪费宝贵的时间呐？</p>
+  <p>然而，换一种思维，把有问题的翻译当作一种参考，由成问题的翻译去追溯原文，查看原文说的是什么，是怎么说的，查看成问题的翻译如何脱离原文的字面意思和实际意思，这样的追溯和查看则可以是认真的文学阅读和研究的基础。假如没有这样的基础，相关的阅读和研究就只能是空中楼阁乃至自欺欺人了。</p>
+  <p>此外，这样的追溯和查看也可以让我们认识到，许多外国文学经典的翻译还有大片的有待开垦的广阔天地。以岛崎藤村的这首在日本文学史上大名鼎鼎的情诗为例。大多数读者读到的都是罗兴典的翻译，而罗译跟原文、跟忠实于原文的翻译相距甚远甚至南辕北辙。</p>
+  <p>也就是说，在跟我们只有一衣带水之隔的日本，那里的还有大量的美妙的现代诗歌（以及散文）经典有待于我们去发现、认识、品尝、欣赏。</p>
+  <p>参考资料：</p>
+  <p><a href="http://poemculture.main.jp/touson01.html" rel="noopener noreferrer" target="_blank">誤解された初恋 (main.jp)</a></p>
+  <p><a href="https://musaotaro.hatenablog.com/entry/2020/01/09/000449" rel="noopener noreferrer" target="_blank">島崎藤村「初恋」を連ごとに細かく分析・解説する【深読み文学】 - ちしきや (hatenablog.com)</a></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-10-09/%E6%A2%A6%E4%B8%AD%E7%9A%84%E5%B7%B4%E9%BB%8E-5-%E9%BB%84%E6%98%8F%E4%B8%8E%E5%A4%9C%E6%99%9A/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2018-10-10/%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89%E7%B3%9C-%E7%9A%84%E5%8A%89%E7%91%9C-%E8%87%AA%E7%94%B1%E6%B4%BE%E5%85%AC%E7%9F%A5%E7%9A%84%E8%A1%B0%E8%90%BD/">最早</a>--</span>
+    
+      <li>
+        <time>2022-03-10</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-03-10/%E9%9B%BB%E5%BD%B1%E8%88%87%E7%8F%BE%E5%AF%A6-%E8%87%AA%E7%94%B1%E8%88%87%E5%B0%8A%E5%9A%B4-%E5%87%9C%E5%86%AC%E7%83%88%E7%81%AB-%E7%83%8F%E5%85%8B%E8%98%AD%E8%87%AA%E7%94%B1%E4%B9%8B%E6%88%B0-%E6%A9%99%E8%89%B2%E9%9D%A9%E5%91%BD-%E7%83%8F%E5%85%8B%E8%98%AD%E9%9D%A9%E5%91%BD-%E4%BA%9E%E5%8A%AA%E7%A7%91%E7%B6%AD%E5%A5%87-%E4%BF%84%E7%BE%85%E6%96%AF-%E9%A1%98/">
+          【電影與現實】自由與尊嚴：《凜冬烈火：烏克蘭自由之戰》｜橙色革命｜烏克蘭革命｜亞努科維奇｜俄羅斯｜願榮光歸烏克蘭
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-03-10</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-03-10/5Mao-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1-%E5%AE%98%E6%96%B9%E6%96%B0%E8%81%9E%E8%88%87%E8%AA%8D%E7%9F%A5%E4%BD%9C%E6%88%B0-(%E4%B8%8B)/">
+          5Mao| 言論自由、官方新聞與認知作戰 (下)
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-03-04</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-03-04/5Mow-%E8%A8%80%E8%AB%96%E6%B1%A1%E6%9F%93-%E8%AB%87PTT-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1%E5%92%8C%E8%B3%87%E8%A8%8A%E6%88%B0(%E4%B8%8A)/">
+          5Mow | 言論污染……談PTT、言論自由和資訊戰(上)
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-03-04</time>
+        <a href="https://nodebe4.github.io/teahouse/2022-03-04/%E8%AE%80-%E7%B9%AA%E7%95%AB%E7%8D%A8%E7%AB%8B-%E4%B8%8D%E6%98%AF%E5%AE%A3%E8%A8%80%E7%9A%84%E5%AE%A3%E8%A8%80-%E6%88%91%E5%80%91%E6%89%80%E7%9F%A5%E7%9A%84%E8%97%9D%E8%A1%93%E4%B8%96%E7%95%8C%E6%98%AF%E5%A6%82%E4%BD%95%E8%A2%AB%E5%BD%A2%E5%A1%91%E7%9A%84/">
+          讀《繪畫獨立：不是宣言的宣言》，我們所知的藝術世界是如何被形塑的？
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2022-03-04/5Mow-%E8%A8%80%E8%AB%96%E6%B1%A1%E6%9F%93-%E8%AB%87PTT-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1%E5%92%8C%E8%B3%87%E8%A8%8A%E6%88%B0(%E4%B8%8A)/">
+            前一篇：5Mow | 言論污染……談PTT、言論自由和資訊戰(上)
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2022-03-10/5Mao-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1-%E5%AE%98%E6%96%B9%E6%96%B0%E8%81%9E%E8%88%87%E8%AA%8D%E7%9F%A5%E4%BD%9C%E6%88%B0-(%E4%B8%8B)/">
+            後一篇：5Mao| 言論自由、官方新聞與認知作戰 (下)
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2022-03-04/5Mow-%E8%A8%80%E8%AB%96%E6%B1%A1%E6%9F%93-%E8%AB%87PTT-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1%E5%92%8C%E8%B3%87%E8%A8%8A%E6%88%B0(%E4%B8%8A)/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2022-03-10/5Mao-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1-%E5%AE%98%E6%96%B9%E6%96%B0%E8%81%9E%E8%88%87%E8%AA%8D%E7%9F%A5%E4%BD%9C%E6%88%B0-(%E4%B8%8B)/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2022-03-10/5Mao-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1-%E5%AE%98%E6%96%B9%E6%96%B0%E8%81%9E%E8%88%87%E8%AA%8D%E7%9F%A5%E4%BD%9C%E6%88%B0-(%E4%B8%8B)/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2022-03-04/5Mow-%E8%A8%80%E8%AB%96%E6%B1%A1%E6%9F%93-%E8%AB%87PTT-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1%E5%92%8C%E8%B3%87%E8%A8%8A%E6%88%B0(%E4%B8%8A)/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2022-03-04/5Mow-%E8%A8%80%E8%AB%96%E6%B1%A1%E6%9F%93-%E8%AB%87PTT-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1%E5%92%8C%E8%B3%87%E8%A8%8A%E6%88%B0(%E4%B8%8A)/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2022-03-10/5Mao-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1-%E5%AE%98%E6%96%B9%E6%96%B0%E8%81%9E%E8%88%87%E8%AA%8D%E7%9F%A5%E4%BD%9C%E6%88%B0-(%E4%B8%8B)/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2022-03-10/5Mao-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1-%E5%AE%98%E6%96%B9%E6%96%B0%E8%81%9E%E8%88%87%E8%AA%8D%E7%9F%A5%E4%BD%9C%E6%88%B0-(%E4%B8%8B)/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2022-03-04/5Mow-%E8%A8%80%E8%AB%96%E6%B1%A1%E6%9F%93-%E8%AB%87PTT-%E8%A8%80%E8%AB%96%E8%87%AA%E7%94%B1%E5%92%8C%E8%B3%87%E8%A8%8A%E6%88%B0(%E4%B8%8A)/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
