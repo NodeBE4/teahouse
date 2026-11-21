@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>談談私隱：私隱大家都很在意，但真有這種權利嗎？ – 茶馆 – 杂谈闲聊</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+談談私隱：私隱大家都很在意，但真有這種權利嗎？
+——
+" />
+    <meta property="og:description" content="
+談談私隱：私隱大家都很在意，但真有這種權利嗎？
+——
+" />
+    
+    <meta name="author" content="茶馆" />
+
+    
+    <meta property="og:title" content="談談私隱：私隱大家都很在意，但真有這種權利嗎？" />
+    <meta property="twitter:title" content="談談私隱：私隱大家都很在意，但真有這種權利嗎？" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/teahouse/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="茶馆 - 杂谈闲聊" href="/teahouse/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/teahouse/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/teahouse/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/teahouse/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/teahouse/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/teahouse/">茶馆</a></h1>
+        <i class="site-description" style="font-size: 12px;">杂谈闲聊</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/teahouse/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (1001)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/teahouse/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/teahouse/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmedium.com%2F%40corrupttheyouth%2F%25E8%25AB%2587%25E8%25AB%2587%25E7%25A7%2581%25E9%259A%25B1-%25E7%25A7%2581%25E9%259A%25B1%25E5%25A4%25A7%25E5%25AE%25B6%25E9%2583%25BD%25E5%25BE%2588%25E5%259C%25A8%25E6%2584%258F-%25E4%25BD%2586%25E7%259C%259F%25E6%259C%2589%25E9%2580%2599%25E7%25A8%25AE%25E6%25AC%258A%25E5%2588%25A9%25E5%2597%258E-55eed49a1252%3Fsource%3Drss-85307064eb48------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://medium.com/@corrupttheyouth/%E8%AB%87%E8%AB%87%E7%A7%81%E9%9A%B1-%E7%A7%81%E9%9A%B1%E5%A4%A7%E5%AE%B6%E9%83%BD%E5%BE%88%E5%9C%A8%E6%84%8F-%E4%BD%86%E7%9C%9F%E6%9C%89%E9%80%99%E7%A8%AE%E6%AC%8A%E5%88%A9%E5%97%8E-55eed49a1252?source=rss-85307064eb48------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://medium.com/@corrupttheyouth/%E8%AB%87%E8%AB%87%E7%A7%81%E9%9A%B1-%E7%A7%81%E9%9A%B1%E5%A4%A7%E5%AE%B6%E9%83%BD%E5%BE%88%E5%9C%A8%E6%84%8F-%E4%BD%86%E7%9C%9F%E6%9C%89%E9%80%99%E7%A8%AE%E6%AC%8A%E5%88%A9%E5%97%8E-55eed49a1252?source=rss-85307064eb48------2&text=談談私隱：私隱大家都很在意，但真有這種權利嗎？&hashtags=茶馆" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://medium.com/@corrupttheyouth/%E8%AB%87%E8%AB%87%E7%A7%81%E9%9A%B1-%E7%A7%81%E9%9A%B1%E5%A4%A7%E5%AE%B6%E9%83%BD%E5%BE%88%E5%9C%A8%E6%84%8F-%E4%BD%86%E7%9C%9F%E6%9C%89%E9%80%99%E7%A8%AE%E6%AC%8A%E5%88%A9%E5%97%8E-55eed49a1252?source=rss-85307064eb48------2&title=談談私隱：私隱大家都很在意，但真有這種權利嗎？" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://medium.com/@corrupttheyouth/%E8%AB%87%E8%AB%87%E7%A7%81%E9%9A%B1-%E7%A7%81%E9%9A%B1%E5%A4%A7%E5%AE%B6%E9%83%BD%E5%BE%88%E5%9C%A8%E6%84%8F-%E4%BD%86%E7%9C%9F%E6%9C%89%E9%80%99%E7%A8%AE%E6%AC%8A%E5%88%A9%E5%97%8E-55eed49a1252?source=rss-85307064eb48------2&title=談談私隱：私隱大家都很在意，但真有這種權利嗎？" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=談談私隱：私隱大家都很在意，但真有這種權利嗎？&body=
+談談私隱：私隱大家都很在意，但真有這種權利嗎？
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://medium.com/@corrupttheyouth/%E8%AB%87%E8%AB%87%E7%A7%81%E9%9A%B1-%E7%A7%81%E9%9A%B1%E5%A4%A7%E5%AE%B6%E9%83%BD%E5%BE%88%E5%9C%A8%E6%84%8F-%E4%BD%86%E7%9C%9F%E6%9C%89%E9%80%99%E7%A8%AE%E6%AC%8A%E5%88%A9%E5%97%8E-55eed49a1252?source=rss-85307064eb48------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://medium.com/@corrupttheyouth/%E8%AB%87%E8%AB%87%E7%A7%81%E9%9A%B1-%E7%A7%81%E9%9A%B1%E5%A4%A7%E5%AE%B6%E9%83%BD%E5%BE%88%E5%9C%A8%E6%84%8F-%E4%BD%86%E7%9C%9F%E6%9C%89%E9%80%99%E7%A8%AE%E6%AC%8A%E5%88%A9%E5%97%8E-55eed49a1252?source=rss-85307064eb48------2&title=談談私隱：私隱大家都很在意，但真有這種權利嗎？&caption=
+談談私隱：私隱大家都很在意，但真有這種權利嗎？
+——
+&tags=茶馆" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=談談私隱：私隱大家都很在意，但真有這種權利嗎？&url=https://medium.com/@corrupttheyouth/%E8%AB%87%E8%AB%87%E7%A7%81%E9%9A%B1-%E7%A7%81%E9%9A%B1%E5%A4%A7%E5%AE%B6%E9%83%BD%E5%BE%88%E5%9C%A8%E6%84%8F-%E4%BD%86%E7%9C%9F%E6%9C%89%E9%80%99%E7%A8%AE%E6%AC%8A%E5%88%A9%E5%97%8E-55eed49a1252?source=rss-85307064eb48------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/teahouse/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/teahouse/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>談談私隱：私隱大家都很在意，但真有這種權利嗎？</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2020-01-23
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 好青年荼毒室 — 哲學部</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/teahouse/categories/#好青年荼毒室">
+          好青年荼毒室
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://medium.com/@corrupttheyouth/%E8%AB%87%E8%AB%87%E7%A7%81%E9%9A%B1-%E7%A7%81%E9%9A%B1%E5%A4%A7%E5%AE%B6%E9%83%BD%E5%BE%88%E5%9C%A8%E6%84%8F-%E4%BD%86%E7%9C%9F%E6%9C%89%E9%80%99%E7%A8%AE%E6%AC%8A%E5%88%A9%E5%97%8E-55eed49a1252?source=rss-85307064eb48------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="好青年荼毒室的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#好青年荼毒室 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1579786261000-->
+<p><a href="https://medium.com/@corrupttheyouth/%E8%AB%87%E8%AB%87%E7%A7%81%E9%9A%B1-%E7%A7%81%E9%9A%B1%E5%A4%A7%E5%AE%B6%E9%83%BD%E5%BE%88%E5%9C%A8%E6%84%8F-%E4%BD%86%E7%9C%9F%E6%9C%89%E9%80%99%E7%A8%AE%E6%AC%8A%E5%88%A9%E5%97%8E-55eed49a1252?source=rss-85307064eb48------2">談談私隱：私隱大家都很在意，但真有這種權利嗎？</a>
+——</p>
+
+<div>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*uKvzhIYQGcUoBkVRFO56cQ.png" />
+  </figure>
+  <p><strong>作者：李吝嘉</strong></p>
+  <p><strong>難度：★★★☆☆</strong></p>
+  <p>電影《斯諾登風暴》（Snowden）不是驚慄片，但卻會令觀眾產生一種不安感，惟恐在手機電腦的攝像鏡頭的另一端正有人在窺探記錄着我們的一舉一動。這種恐懼並非來自任何驚嚇的鬼怪內容，而是電影中所描繪美國政府在 2007 年秘密啟動的「稜鏡（PRISM）」計畫。稜鏡計劃賦權美國國家安全局人員，令他們可隨時啟動你的手機和電腦鏡頭作監視攝錄，或開啟麥克峰收音監聽，甚至肆意窺看你手機中任何短訊、電郵和通訊錄。整個過程毋須向法庭申請許可，亦不受限於你是否美國公民，甚至連美國盟國的元首一樣也在被監聽之列。斯諾登本來受僱於美國政府，後冒死將稜鏡計劃的資料外洩予公眾，揭發了這宗或許是史上最大規模的私隱侵犯事件。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/260/0*uxSX8LRFS7fmlZmh" />
+  </figure>
+  <p>稜鏡計劃曝光令全球嘩然。私隱向被視為普世的基本權利之一，即使以國家安全或反恐之名亦不可肆意剝奪。然而，如何拿捏私隱權利與公眾利益之間的平衡一直是個難以解決的難題 ── 在甚麼條件下才容許犧牲個人私隱以成就其他價值？要衡量私隱與國家安全孰重孰輕，我們首先要弄清楚一個根本問題：甚麼是私隱權？</p>
+  <p>這個問題看似簡單，但其實一個多世紀以來，法律與哲學各範疇的學者始終都未能給出一個圓滿的答案。如果參考私隱相關的法例，你會發現各國對私隱的界定都不盡相同，對私隱所應保障的範圍的理解更是南轅北轍。在香港大家較留意的《個人資料（私隱）條例》主要保障個人資料不被濫用。但在太平洋彼岸，美國聯邦最高法院卻在 1973 裁定婦女墮胎權是美國憲法中隱私權的一部份。從個人資料到墮胎權利，我們似乎很難為私隱權找到一個統一共通的理解。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/640/0*Tdp9GFXEr35lR7-R" />
+  </figure>
+  <p>對此，美國道德哲學大師 Judith Jarvis Thomson 在上世紀 70 年代提供了一個出乎意料的答案：私隱權根本就不是一種基本道德權利。按這個說法，「私隱權」其實只是一堆不同的權益集結而成的統稱，非但這些權益本身並無關連，且與私隱權外的其他權利亦沒有真正的差別，故亦難怪大家一直無法找到不同私隱議題間的共有定義。我們平常認為是侵犯私隱的行為之所以不道德，其實不是因為背後有「私隱權」這種基本權利，而是因為這些行為本身就侵犯了我們本來就有的一些其他權利。</p>
+  <p>甚麼叫做「沒有私隱權這種基本權利」？如果私隱權不是一種基本權利，那我們平常認為是屬於私隱權範疇的又會是那些其他權利？在解釋 Thomson 的立場之先，讓我們先去除一些對私隱議題常見的誤解。</p>
+  <p><strong>私隱不是個人資料</strong></p>
+  <p>「私隱」是一個日常都會運用到的概念。因為日常，我們很容易以為私隱是樣簡單易懂的東西。一般理解下，私隱就是一些不願意與他人分享的個人私密。而當這些私密被他人窺探得悉，我們的私隱就受到侵犯。</p>
+  <p>香港法例中開宗明義與私隱有關的《個人資料（私隱）條例》呼應了上述的簡單日常印象。《個人資料（私隱）條例》旨在保障個人身份相關的資料（如姓名、電話號碼、地址、身份證號碼、相片、病歷和受僱紀錄），確保這些個人資料不會被他人濫用。既然<em>私隱就是這些個人資訊</em>，所謂侵犯私隱不就是</p>
+  <p>未經我們同意下得到了我們的<em>個人資料</em> 嗎？</p>
+  <p>Thomson 認為這個理解大有斟酌空間。私隱顯然不限於<em>個人資料</em>。試想像你有一位很喜歡窺探別人秘密的同事（這應該不難想像吧）。有一天，他乘你去了洗手間時翻看你的包包。由於錢包甚麼的你都帶在身上，結果他甚麼都沒有找到。雖然他最終沒有窺探到你任何個人私密信息，但顯然亦是侵犯了你的私隱。私隱不能單純以個人資料來理解。</p>
+  <p>私隱並不等於個人資料。以上例子可見，決定私隱是否被侵犯的重點不在於個人資料<em>有否</em>外泄，而是在於<em>如何</em>外泄。嚴格來說，世上沒有人有對資訊（或知識）本身的擁有權，即使關於你自己的個人資訊也並不真的屬你所有。所以侵犯私隱不是有人得到了只有你才可以知道的資訊，而是他得到資訊的方法侵犯了你的權利。私隱權的作用是保障你的資訊不會被他人以不道德方式獲得。</p>
+  <p><strong>私隱權不是一種權利，而是一堆權利</strong></p>
+  <p>回到 Thomson 認為私隱權不是基本道德權利的觀點。私隱權不是基本道德權利的意思，就是指私隱權所代表的權益其實早已被其他道德權利所涵蓋。私隱權背後所保障的權益不但不統一（如個人資訊與墮胎），而且也不獨特。</p>
+  <p>看看以下的假想例子：</p>
+  <blockquote>
+<em>喜愛拍寫真照的李煙煙在手機中收藏了一些自己的私密照片。因為照片還沒有 PS 過，所以她不希望被任何人看到。一天，李煙煙把手機拿去更換屏幕保護貼，而店員則乘她不注意擅自打開了她沒有密碼保護的手機，偷看了那張照片。</em>  </blockquote>
+  <p>店員的行為顯然是不道德的。為甚麼？Thomson 認為不用訴諸私隱，以其他既有的權利已經可以充分解釋其不道德之處。重溫前述，問題在於取得資訊的方式。不論相片本身是否私密照，擅自使用李煙煙的手機和偷看她的照片本身已是對她財產擁有權的侵犯。財產擁有權已保障了李煙煙的手機和相片不可以被店員以這種方式觀看，再強調她的私隱被侵犯其實只是疊床架屋。Thomson 認為所有私隱權的議題其實都可以用這種方式理解，完全毋須訴諸私隱權這個模糊的概念。</p>
+  <p>可能你仍會有懷疑，上面的例子只是碰巧跟財產擁有權重疊，不能就此斷定所有私隱權議題都可以還原成其他權利去理解。你可能會問，假如店員不是偷看李煙煙的照片，而是偷窺她更衣呢？又假如是盜用她的個人資料呢？難道這些都不是侵犯私隱而又能夠以其他權利被侵犯作解釋嗎？</p>
+  <p>有如財產擁有權，Thomson 會回應偷窺別人更衣是侵犯了他人對自己身體的擁有權。而盜用個人資料，則在侵犯財產擁有權外再涉及欺騙的問題。回顧惡名昭彰的稜鏡計劃，除了上述權利更涉及政權濫權。美國憲法保障墮胎權，不少學者都認為應屬個人自由而非私隱範疇。私隱權議題中涉及的眾多權益似乎都已被包括在財產擁有權、身體擁有權、個人自由等我們既有的權利當中，所以私隱權其不是一種權利，而只是許多這些權利混雜而成的產物。</p>
+  <p>如果 Thomson 的見解正確，那我們可能須改變過往在公共議題上「個人私隱權 vs. 公眾知情權」的思考模式。這並不是說保障私隱權不重要。關鍵是，與其受限於「私隱權」這個模糊且邊界不清的概念，也許我們更應就個別議題思考背後涉及的各種真正基本道德價值。或許這不但能推進爭持已久的公共討論，更能助我們在個人權利與國家安全間作更合理的取捨。</p>
+  <p><strong>續篇︰</strong>〈<a href="https://corrupttheyouth.net/2017/05/24/what-privacy-actually-is/">再談私隱權：比起個人資料，展現自我的自由才重要</a>〉</p>
+  <p><strong>編按︰在下面點擊「拍手」就可以支持我們繼續寫作！分享開去就更好～</strong></p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=55eed49a1252" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#好青年荼毒室 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/teahouse/2024-07-11/%E5%AE%97%E6%95%99%E5%90%8C%E5%93%B2%E5%AD%B8%E5%94%94%E4%BF%82%E5%94%94%E5%95%B1%E5%98%85%E5%92%A9-%E4%BB%B2%E8%A6%81%E5%8A%A0%E5%9F%8B%E5%80%AB%E7%90%86-%E6%B5%B8%E5%A4%A7%E5%AE%97%E5%93%B2%E7%B3%BB%E7%89%B9%E7%B4%84/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/teahouse/2019-11-06/%E8%8D%BC%E6%AF%92%E5%AE%A4%E5%91%88%E7%8D%BB-%E5%93%B2%E5%AD%B8%E5%AE%B6-Stickers-WhatsApp-Telegram-WeChat/">最早</a>--</span>
+    
+      <li>
+        <time>2020-02-06</time>
+        <a href="https://nodebe4.github.io/teahouse/2020-02-06/%E6%95%98%E4%BA%8B%E8%88%87%E4%BA%BA%E7%94%9F/">
+          敘事與人生
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2020-01-31</time>
+        <a href="https://nodebe4.github.io/teahouse/2020-01-31/%E5%A6%82%E6%9E%9C%E6%BC%94%E5%8C%96%E8%AB%96%E8%A7%A3%E9%87%8B%E4%BA%86%E9%81%93%E5%BE%B7%E7%9A%84%E5%87%BA%E7%8F%BE-%E9%82%A3%E9%BA%BC%E9%82%84%E6%9C%89%E9%81%93%E5%BE%B7%E7%9C%9F%E7%90%86%E5%8F%AF%E8%A8%80%E5%97%8E/">
+          如果演化論解釋了道德的出現，那麼還有道德真理可言嗎？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2020-01-15</time>
+        <a href="https://nodebe4.github.io/teahouse/2020-01-15/%E6%9C%89%E7%94%A8%E7%84%A1%E7%94%A8%E4%BD%A0%E6%87%82%E4%B8%8D%E6%87%82-%E8%8E%8A%E5%AD%90%E5%93%B2%E5%AD%B8%E4%B8%AD%E7%9A%84%E5%95%9F%E7%99%BC/">
+          有用無用你懂不懂？ — — 莊子哲學中的啟發
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2019-11-28</time>
+        <a href="https://nodebe4.github.io/teahouse/2019-11-28/%E7%BE%8E%E5%9C%8B%E7%8D%A8%E7%AB%8B-%E7%82%BA%E4%BA%86%E4%B8%8D%E5%8F%97%E5%AE%B0%E5%88%B6%E7%9A%84%E8%87%AA%E7%94%B1/">
+          美國獨立︰為了不受宰制的自由
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/teahouse/2020-01-15/%E6%9C%89%E7%94%A8%E7%84%A1%E7%94%A8%E4%BD%A0%E6%87%82%E4%B8%8D%E6%87%82-%E8%8E%8A%E5%AD%90%E5%93%B2%E5%AD%B8%E4%B8%AD%E7%9A%84%E5%95%9F%E7%99%BC/">
+            前一篇：有用無用你懂不懂？ — — 莊子哲學中的啟發
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/teahouse/2020-01-29/%E4%BB%8E%E5%A4%A7%E4%BA%8C%E7%9A%84%E4%B8%80%E5%9C%BA%E7%BE%BD%E6%AF%9B%E7%90%83%E8%80%83%E8%AF%95%E8%81%94%E6%83%B3%E5%88%B0%E5%AE%98%E5%83%9A%E4%BD%93%E7%B3%BB%E7%9A%84%E5%86%85%E5%9C%A8%E8%BF%90%E8%BD%AC%E9%80%BB%E8%BE%91/">
+            後一篇：从大二的一场羽毛球考试联想到官僚体系的内在运转逻辑
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/teahouse/2020-01-15/%E6%9C%89%E7%94%A8%E7%84%A1%E7%94%A8%E4%BD%A0%E6%87%82%E4%B8%8D%E6%87%82-%E8%8E%8A%E5%AD%90%E5%93%B2%E5%AD%B8%E4%B8%AD%E7%9A%84%E5%95%9F%E7%99%BC/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/teahouse/2020-01-29/%E4%BB%8E%E5%A4%A7%E4%BA%8C%E7%9A%84%E4%B8%80%E5%9C%BA%E7%BE%BD%E6%AF%9B%E7%90%83%E8%80%83%E8%AF%95%E8%81%94%E6%83%B3%E5%88%B0%E5%AE%98%E5%83%9A%E4%BD%93%E7%B3%BB%E7%9A%84%E5%86%85%E5%9C%A8%E8%BF%90%E8%BD%AC%E9%80%BB%E8%BE%91/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/teahouse/2020-01-31/%E5%A6%82%E6%9E%9C%E6%BC%94%E5%8C%96%E8%AB%96%E8%A7%A3%E9%87%8B%E4%BA%86%E9%81%93%E5%BE%B7%E7%9A%84%E5%87%BA%E7%8F%BE-%E9%82%A3%E9%BA%BC%E9%82%84%E6%9C%89%E9%81%93%E5%BE%B7%E7%9C%9F%E7%90%86%E5%8F%AF%E8%A8%80%E5%97%8E/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/teahouse/2020-01-15/%E6%9C%89%E7%94%A8%E7%84%A1%E7%94%A8%E4%BD%A0%E6%87%82%E4%B8%8D%E6%87%82-%E8%8E%8A%E5%AD%90%E5%93%B2%E5%AD%B8%E4%B8%AD%E7%9A%84%E5%95%9F%E7%99%BC/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/teahouse/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/teahouse/2020-01-15/%E6%9C%89%E7%94%A8%E7%84%A1%E7%94%A8%E4%BD%A0%E6%87%82%E4%B8%8D%E6%87%82-%E8%8E%8A%E5%AD%90%E5%93%B2%E5%AD%B8%E4%B8%AD%E7%9A%84%E5%95%9F%E7%99%BC/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/teahouse/2020-01-29/%E4%BB%8E%E5%A4%A7%E4%BA%8C%E7%9A%84%E4%B8%80%E5%9C%BA%E7%BE%BD%E6%AF%9B%E7%90%83%E8%80%83%E8%AF%95%E8%81%94%E6%83%B3%E5%88%B0%E5%AE%98%E5%83%9A%E4%BD%93%E7%B3%BB%E7%9A%84%E5%86%85%E5%9C%A8%E8%BF%90%E8%BD%AC%E9%80%BB%E8%BE%91/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<好青年荼毒室>上一篇(热键 ins)" href="https://nodebe4.github.io/teahouse/2020-01-31/%E5%A6%82%E6%9E%9C%E6%BC%94%E5%8C%96%E8%AB%96%E8%A7%A3%E9%87%8B%E4%BA%86%E9%81%93%E5%BE%B7%E7%9A%84%E5%87%BA%E7%8F%BE-%E9%82%A3%E9%BA%BC%E9%82%84%E6%9C%89%E9%81%93%E5%BE%B7%E7%9C%9F%E7%90%86%E5%8F%AF%E8%A8%80%E5%97%8E/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<好青年荼毒室>下一篇(热键 del)" href="https://nodebe4.github.io/teahouse/2020-01-15/%E6%9C%89%E7%94%A8%E7%84%A1%E7%94%A8%E4%BD%A0%E6%87%82%E4%B8%8D%E6%87%82-%E8%8E%8A%E5%AD%90%E5%93%B2%E5%AD%B8%E4%B8%AD%E7%9A%84%E5%95%9F%E7%99%BC/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/teahouse/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/3ZQyBCh.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/teahouse" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/teahouse/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
